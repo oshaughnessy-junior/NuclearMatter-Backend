@@ -92,15 +92,34 @@ For each EOS and a grid of central densities, compare our solver to the referenc
 5. Add the Zhu δ-TOV cross-check for AD sensitivities (once licensed).
 6. Record results and the pre/post-adaptive error reduction in a dev-log entry.
 
-## 7. Status checklist
+## 7. Results so far (2026-06-02)
 
-- [ ] RePrimAnd reference harness (reuse `EOSManager.make_mr_lambda_reprimand`).
+The plan already paid off.  Adding an **independent in-process reference**
+(`nmbackend.reference.scipy_tov`: radius-domain SciPy RK45 + (H,β) tidal) immediately
+revealed that the original **fixed-step RK4-in-h** default (`n_steps=800`) was badly
+under-resolved: **M off ~5%, Λ off ~25%** — convergence was only ~1st order, the
+error localized at the crude central boundary start, *not* the RK4 interior.
+
+Fix: switched the default to an **adaptive diffrax (Dopri5 + PID) backend**, which
+auto-resolves both stiff ends.  It now agrees with the SciPy reference to
+**M < 0.05%, R < 0.02%, Λ < 0.1%** in ~250 adaptive steps, and forward-mode AD flows
+through it (`diffrax.ForwardMode`), matching FD to ~1e-4.  The fixed-step scan is
+retained as a lightweight backend and is shown to *converge* to the reference.
+Tests: `tests/test_validation_reference.py`.
+
+## 8. Status checklist
+
+- [x] In-process independent reference (SciPy radius-domain + (H,β) tidal).
+- [x] Adaptive (diffrax) backend behind `solve_structure`, validated to <0.1%.
+- [x] Convergence study in `n_steps` (scan → reference).
+- [x] RePrimAnd reference **scaffold** (`reference/reprimand.py`) + env files
+      (`env/`, `docs/environment.md`) — runs on the user's workstation.
+- [ ] RePrimAnd cross-check actually executed (needs the build env; API drift vs
+      RIFT's old interface to reconcile — lines marked `# VERIFY`).
 - [ ] Analytic Tolman-VII / constant-density unit test.
-- [ ] Smooth-EOS validation (SLy/APR/MPA1) to §4 targets.
-- [ ] Hybrid phase-transition EOS generator (Maxwell) + twin-star case.
-- [ ] Convergence (Richardson) study in `n_steps`.
-- [ ] Adaptive (diffrax) backend behind `solve_structure`.
-- [ ] Tidal junction-condition handling at discontinuities.
+- [ ] Smooth-EOS validation against lalsim named EOS (SLy/APR/MPA1).
+- [ ] Hybrid phase-transition EOS generator (Maxwell) + twin-star case — **the
+      real stress test** for adaptive stepping + tidal junction conditions.
+- [ ] Tidal junction-condition handling at density discontinuities.
 - [ ] SLy/BPS crust.
 - [ ] Zhu δ-TOV cross-check of M/R/Λ and `dΛ/dparam`.
-- [ ] Dev-log writeup with error tables.

@@ -23,9 +23,11 @@ nuclear params  ─►  physical EOS (metamodel + causal tail)  ─►  AD TOV s
                                        (lambda_from_m, P(ρ), mMax)     sensitivities
 ```
 
-Validated numbers for the default parameters (`pytest`, 17 tests):
-`M_max ≈ 2.11 M⊙`, `R(1.4) ≈ 11.7 km`, `Λ(1.4) ≈ 449`, `dR/dL_sym ≈ +0.027 km/MeV`
-(reproducing the known L_sym–R(1.4) correlation).
+Validated numbers for the default parameters (`pytest`, 20 tests):
+`M_max ≈ 2.08 M⊙`, `R(1.4) ≈ 11.7 km`, `Λ(1.4) ≈ 443`, `dR/dL_sym ≈ +0.027 km/MeV`
+(reproducing the known L_sym–R(1.4) correlation).  The adaptive solver is
+cross-validated against an independent radius-domain reference to **<0.1%** in
+M, R, and Λ (see Validation status below).
 
 ## Install / run
 
@@ -69,13 +71,18 @@ src/nmbackend/
     metamodel.py          nuclear empirical-parameter EOS + causal (CSS) tail
     polytrope.py          analytic polytrope (solver validation)
   tov/
-    solver.py             JAX RK4 TOV-in-enthalpy + tidal y -> k2, Λ  (backend seam)
+    solver.py             TOV-in-enthalpy + tidal y -> k2, Λ; backends: diffrax
+                          (adaptive, default) and scan (fixed-step) behind one seam
     family.py             M-R-Λ sequences, stable/unstable branches, dM/dh_c, dh_c/dM
   adapters/
     rift.py               RIFT EOSConcrete-compatible adapter
-tests/                    units, EOS, TOV, RIFT adapter, AD-vs-finite-difference
-examples/quickstart.py
-docs/architecture.md
+  reference/
+    scipy_tov.py          independent radius-domain SciPy reference (cross-check)
+    reprimand.py          RePrimAnd reference adapter (optional; pyreprimand)
+tests/                    units, EOS, TOV, RIFT adapter, AD-vs-FD, reference-validation
+examples/quickstart.py    scripts/validate_against_reprimand.py
+env/                      pixi.toml + environment.yml for the validation env
+docs/                     architecture.md, validation-plan.md, environment.md
 ```
 
 ## Gradients: use forward-mode
@@ -89,16 +96,20 @@ count and reproduces the perturbation ("delta-TOV") equations.  Reverse-mode
 
 ## Validation status (important)
 
-The v0.0.1 tests check *sanity*, not *accuracy*. The fixed-step RK4-in-`h`
-integrator is most exposed at **phase transitions / soft segments where cs² → 0**:
-`dh = dp/(ε+p)` collapses there, linear-in-`h` nodes under-sample the transition,
-and the tidal term `(ε+p)/cs²` blows up. The current table also clips cs² and
-`cummax`-smears pressure, which is fine for a smooth metamodel but **wrong for a
-real phase-transition EOS**. Before this is trusted for inference it must be
-cross-validated against **RePrimAnd** and **Zhu's δ-TOV**, almost certainly moving
-to **adaptive stepping** (diffrax) with transition-aware junction handling. The
-concrete plan, test ladder, and acceptance metrics are in
-[`docs/validation-plan.md`](docs/validation-plan.md).
+Cross-validation already changed the design. An independent radius-domain reference
+(`nmbackend.reference.scipy_tov`, SciPy RK45 + (H,β) tidal) showed the original
+fixed-step RK4-in-`h` default was under-resolved (**M off ~5%, Λ off ~25%**), so the
+default is now an **adaptive diffrax (Dopri5+PID) backend**, which agrees with the
+reference to **<0.1%** in M, R, Λ and carries clean forward-mode AD
+(`tests/test_validation_reference.py`).
+
+Still **open** (do not trust for these yet): **strong first-order phase transitions /
+soft segments where cs² → 0**. There `dh=dp/(ε+p)` collapses, the tidal term
+`(ε+p)/cs²` blows up, and the EOS table currently clips cs² and `cummax`-smears
+pressure — wrong for a real hybrid EOS. These need the tidal junction condition and
+an external **RePrimAnd**/**Zhu δ-TOV** cross-check (the sandbox can't build them; see
+[`docs/environment.md`](docs/environment.md) to run them on your workstation, and
+[`docs/validation-plan.md`](docs/validation-plan.md) for the ladder + metrics).
 
 ## Roadmap (see `docs/architecture.md`)
 

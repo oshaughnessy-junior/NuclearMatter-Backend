@@ -59,15 +59,24 @@ and gives a clean low-dimensional state `(r, m, y)`.  Central density is then
 parameterized by `h_c`, directly satisfying the "model vs central variable, not
 mass" requirement; `tov/family.py` exposes `dM/dh_c` (by AD) and `dh_c/dM`.
 
-**JAX `lax.scan` RK4, forward-mode AD.** The whole `params → EOS → TOV → observable`
-chain is `jit`/`vmap`/`grad`-able. We use **forward-mode** sensitivities: efficient
-for the small EOS parameter count and *mathematically identical* to the hand-derived
-perturbation ("δ-TOV") equations (cf. Zhu `delta_tt`). This is why we chose a
-JAX-native solver over an FFI bridge to compiled C++: in an inference loop the
-throughput bottleneck is `jit`/`vmap`/GPU batching of the *whole* likelihood
-(gwkokab is JAX), and an FFI boundary per sample would break that fusion. The C++
-δ-TOV remains valuable as a fast specialized backend behind the seam once Z. Zhu is
-formally a repo developer and the code is licensed.
+**JAX, forward-mode AD; adaptive (diffrax) default.** The whole
+`params → EOS → TOV → observable` chain is `jit`/`vmap`/`grad`-able. We use
+**forward-mode** sensitivities: efficient for the small EOS parameter count and
+*mathematically identical* to the hand-derived perturbation ("δ-TOV") equations
+(cf. Zhu `delta_tt`). This is why we chose a JAX-native solver over an FFI bridge to
+compiled C++: in an inference loop the throughput bottleneck is `jit`/`vmap`/GPU
+batching of the *whole* likelihood (gwkokab is JAX), and an FFI boundary per sample
+would break that fusion. The C++ δ-TOV remains valuable as a fast specialized backend
+behind the seam once Z. Zhu is formally a repo developer and the code is licensed.
+
+The default integrator is **adaptive diffrax (Dopri5 + PID)**, not the original
+fixed-step RK4. Cross-validation against an independent radius-domain reference
+(§4) showed the fixed grid was under-resolved (M ~5%, Λ ~25%) because the central
+boundary start and the surface need very different step densities; adaptive stepping
+resolves both automatically (and is the natural place to add phase-transition
+handling). Forward-mode AD flows through diffrax via `diffrax.ForwardMode`. The
+fixed-step `scan` backend is retained (lightweight, reverse-mode-capable for
+structure-only) behind the same `solve_structure` seam.
 
 **Tidal integration is optional.** Reverse-mode `grad` seeds a zero cotangent on
 `y`, whose near-center `1/r²` terms then give `0*inf → nan`. `solve_structure(...,

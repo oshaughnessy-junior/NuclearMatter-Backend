@@ -20,6 +20,7 @@ dependencies = [
     "scipy>=1.7",
     "jax>=0.4.20",
     "jaxlib>=0.4.20",
+    "diffrax>=0.5",     # adaptive (accurate) TOV backend; default solver
 ]
 
 [project.optional-dependencies]

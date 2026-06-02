@@ -15,6 +15,8 @@ group convention, any module that reuses or re-implements an idea carries a
 | **RIFT** `EOSManager.py` | The `EOSConcrete` interface we adapt to | RIFT/RIT internal (no per-file header) | We target its public interface; no code copied. |
 | **Zhu** `delta_tt` (`zzhu-astro/delta_tt`) and **fisher_eos** (LIGO GitLab `zhenyu.zhu/fisher_eos`) | Forward-mode (perturbation / "delta") TOV for tidal sensitivities; RMF nuclear parameterization (Esym, K0, Lsym, M*, J0); Fisher-matrix EOS application | **No LICENSE file present** | **Motivated by only.** No code copied. A compiled-C++ delta-TOV backend (Zhu) is planned behind `nmbackend.tov` once Z. Zhu is formally linked into this repository as a developer and a license is set. |
 | **gwkokab** | Population-inference target (numpyro Distributions) | **Apache-2.0** | Compatible downstream; we provide adapters, not forks. |
+| **diffrax** (Kidger) | Adaptive ODE backend for the default TOV solver | **Apache-2.0** | Core dependency; used as a library (not vendored). |
+| **JAX** | Autodiff + array backend | **Apache-2.0** | Core dependency. |
 | **MUSES** | Modern physical-EOS modules (RMFT, CompOSE) explored for the EOS layer | see project | Reference; integration planned. |
 
 ## Key scientific references

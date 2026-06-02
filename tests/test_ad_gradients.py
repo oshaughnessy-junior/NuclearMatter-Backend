@@ -51,8 +51,10 @@ def test_fwd_grad_lambda_finite_and_right_order():
 
 
 def test_reverse_grad_structure_only():
+    # reverse-mode is supported on the lightweight scan backend, structure-only.
     t = mm.eos_table()
     def Mof(hc):
-        return solve_structure(t, hc, n_steps=400, tidal=False).M_msun
+        return solve_structure(t, hc, backend="scan", n_steps=2000,
+                               tidal=False).M_msun
     g = float(jax.grad(Mof)(0.6 * float(t.h[-1])))
     assert np.isfinite(g)

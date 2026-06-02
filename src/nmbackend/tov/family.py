@@ -34,14 +34,18 @@ def default_hc_grid(table: EOSTable, n_models: int = 120, frac_lo: float = 0.02,
     return jnp.linspace(frac_lo * hmax, frac_hi * hmax, n_models)
 
 
-def build_family(table: EOSTable, h_c_grid=None, n_steps: int = 800) -> Family:
+def build_family(table: EOSTable, h_c_grid=None, *, backend: str = "diffrax",
+                 rtol: float = 1e-7, atol: float = 1e-9,
+                 n_steps: int = 2000) -> Family:
     if h_c_grid is None:
         h_c_grid = default_hc_grid(table)
 
-    def M_of_hc(hc):
-        return solve_structure(table, hc, n_steps=n_steps).M_msun
+    kw = dict(backend=backend, rtol=rtol, atol=atol, n_steps=n_steps)
 
-    solve_all = jax.vmap(lambda hc: solve_structure(table, hc, n_steps=n_steps))
+    def M_of_hc(hc):
+        return solve_structure(table, hc, **kw).M_msun
+
+    solve_all = jax.vmap(lambda hc: solve_structure(table, hc, **kw))
     pts: TOVPoint = solve_all(h_c_grid)
 
     # forward-mode along the sequence (clean through the tidal variable)
