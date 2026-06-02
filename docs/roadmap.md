@@ -93,8 +93,15 @@ Keep the fast **NEP metamodel** as the lightweight inference model; add a faithf
    trigger module workflows via the API and **mount the resulting CompOSE-format
    tables** (from the MinIO/volume outputs) into the backend.  It is an EOS
    *provider* and reference, never in the inference hot path.
-3. **CompOSE / tabular ingestion** to parity with `EOSFromTabularData`, so any MUSES-
-   or community-generated table flows through the hardened solver.
+3. **CompOSE / tabular ingestion — DONE.** `eos.compose`: reads the CompOSE
+   ``eos.nb`` + ``eos.thermo`` pair (p = Q1 n_B, eps = (Q7+1) n_B m_n) and a simple
+   3-column table into the standard `EOSTable` (`load_compose`, `load_simple`,
+   `TabularEOS`); `write_compose` exports.  **Round-trip exact**: RMFT(GM1) ->
+   CompOSE files -> table -> TOV reproduces M_max/R/Lambda identically (~1e-11), and
+   the ingested table cross-codes (diffrax vs SciPy) at the internal floor -- i.e.
+   the thermodynamically consistent h(mu) interpolation handles real tabular EOS.
+   (Verify column conventions against a real CompOSE download; self-consistent with
+   the writer and round-trip tested.)
 4. Re-run the Phase-1 reference matrix on the RMFT and tabular EOS.
 
 ## Phase 3 — Wire to RIFT (after physics)
