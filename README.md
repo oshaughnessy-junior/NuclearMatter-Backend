@@ -118,7 +118,15 @@ don't yet split twin branches); a real SLy/BPS crust; and the external
 [`docs/environment.md`](docs/environment.md)). Plan + metrics:
 [`docs/validation-plan.md`](docs/validation-plan.md).
 
-## Roadmap (see `docs/architecture.md`)
+## Roadmap (see `docs/roadmap.md` and `docs/architecture.md`)
+
+Forward plan: **harden the solver first** (close the ~200 m RePrimAnd-vs-ours R
+discrepancy to the ≲10 m level demanded by 3G/stacked measurements, using the
+independent (H,β), RePrimAnd, and MUSES `qlimr` references), **then add RMFT
+physics** (informed by MUSES `cmf_solver`/`crust_dft`), **then wire to RIFT**; that
+is the proof-of-concept. Crust is treated as a documented systematic. Surrogates
+only if acceleration is needed. Full detail in [`docs/roadmap.md`](docs/roadmap.md).
+
 
 CompOSE/tabular ingestion · proper SLy/BPS crust · self-consistent RMFT Lagrangian
 solver · NN surrogates (Zhu 2604.05428) · rotating NS (RNS) · gwkokab population
