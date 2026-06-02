@@ -136,16 +136,24 @@ surrogate/acceleration work.
    n_min≈3e-4 fm⁻³ **raises R(1.4) by ~114 m** (converged by n_surf~1e-7), with Λ
    stable to <0.2% — i.e. most of the ~200 m RePrimAnd gap was surface convention.
    AD still flows (dR/dL_sym matches FD to ~1e-3). Disable with `n_surface=None`.
-   - **Still to do in action #2: the cs² representation.** The surface extension
-     exposed that the thin, stiff low-cs² surface shell *materially* affects Λ (so
-     its true small cs² must be kept — clipping it corrupts Λ by ≥10%), but the
-     current finite-difference cs² + clip makes the forward-mode **Λ gradient**
-     under-resolved near the surface (~25% at rtol=1e-9). Fix: monotone,
-     thermodynamically consistent cs²(h) (PCHIP / analytic in the polytrope tail),
-     which should restore Λ-gradient precision and further tighten R.
-3. Re-measure the RePrimAnd-vs-ours R/Λ spread (now expect ≲~80 m residual after
-   surface); attribute the remainder (interpolation, crust Γ, RePrimAnd low-density
-   handling) and drive toward ≲10 m.
+   - **Thermodynamically consistent interpolation — DONE.** `eos.base.at_h` now
+     uses a **cubic-Hermite of p(h) with node slopes set to the exact dp/dh = ε+p**,
+     so ε = dp/dh − p is *derived* and the enthalpy-formulation structure equations
+     are consistent by construction. cs² is interpolated from accurate node values
+     (consistent at nodes) and **left free to be non-monotone** — never monotonized
+     (it dips to ~3e-5 at a transition and the solver handles it). The natural
+     parameter is h ≡ ln(μ/μ_surface); the baryon chemical potential μ = (ε+p)/n is
+     exposed (`EOSTable.mu`) so realistic tabulated EOS can be driven by μ or h.
+     Effect: Λ *value* accuracy improved ~25× (0.109%→0.004% vs SciPy); R values
+     ~1–3 m. **Gradient note:** the stiff low-cs² surface shell makes forward-mode
+     *tangents* tolerance-sensitive — Λ-gradient converges to FD as rtol tightens
+     (1e-8: ~90%, 1e-10: ~16%, 1e-12: ~3%); R-gradient has a ~0.5% interpolation-
+     tangent residual (hand-rolled Hermite is less smooth under AD than jnp.interp).
+     **Use rtol ≲ 1e-10 for gradient/Fisher work**; default tol is fine for values.
+     Future: a smoother differentiable interpolation primitive to tighten gradients.
+3. **RePrimAnd residual: surface fix already lands R within ~3–10 m** of RePrimAnd
+   (was ~200 m) and Λ within <0.1% — i.e. at the ≲10 m budget. Remaining attribution
+   (interpolation, crust Γ, RePrimAnd low-density handling) is the last ≲10 m.
 
 > Note on MUSES `qlimr`: its source is not on disk (only the Docker image at
 > `registry.gitlab.com/nsf-muses/calculation-engine`) and its license is unverified,

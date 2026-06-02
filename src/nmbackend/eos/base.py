@@ -44,19 +44,78 @@ class EOSTable(NamedTuple):
     def h_max(self) -> jnp.ndarray:
         return self.h[-1]
 
-    # --- differentiable interpolation as a function of pseudo-enthalpy ---
-    def at_h(self, h_query):
-        """Return (eps, p, cs2) interpolated at pseudo-enthalpy ``h_query``.
+    @property
+    def mu(self) -> jnp.ndarray:
+        """Baryon chemical potential mu = (eps+p)/n (geometric km^-1 * ... ); the
+        pseudo-enthalpy is h = ln(mu/mu_surface), so mu = mu[0] * exp(h).  Either
+        h or mu can be used as the (equivalent) thermodynamic parameter."""
+        return (self.eps + self.p) / self.n
 
-        Log-linear in (eps, p) vs h; linear (clamped) in cs2.  ``jnp.interp`` is
-        differentiable, so this is safe inside the TOV scan.
-        """
+    # --- thermodynamically consistent interpolation in pseudo-enthalpy ---
+    def at_h(self, h_query):
+        """Return (eps, p, cs2) at pseudo-enthalpy ``h_query``, thermodynamically
+        consistent in the *structure* sector: p and eps come from a Hermite of p(h)
+        with node slopes dp/dh = eps + p, so eps = dp/dh - p and dp/dh = eps + p
+        hold by construction.  cs2 is interpolated from accurate node values (it is
+        consistent at table resolution and free to be NON-MONOTONE -- never
+        monotonized).  See :func:`hermite_eos_at_h`."""
+        return hermite_eos_at_h(self.h, self.p, self.eps, self.cs2, h_query)
+
+    def at_h_loglinear(self, h_query):
+        """Legacy independent log-linear interpolation (NOT thermodynamically
+        consistent: dp/dh != eps+p between nodes; cs2 interpolated+clipped).  Kept
+        for regression comparison only."""
         h = self.h
         logeps = jnp.interp(h_query, h, jnp.log(self.eps))
         logp = jnp.interp(h_query, h, jnp.log(self.p))
-        cs2 = jnp.interp(h_query, h, self.cs2)
-        cs2 = jnp.clip(cs2, 1e-8, 1.0)
+        cs2 = jnp.clip(jnp.interp(h_query, h, self.cs2), 1e-8, 1.0)
         return jnp.exp(logeps), jnp.exp(logp), cs2
+
+
+def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query):
+    """Thermodynamically consistent EOS evaluation at pseudo-enthalpy ``h_query``.
+
+    The *structure* sector uses a cubic-Hermite interpolation of p(h) whose node
+    slopes are set to the EXACT thermodynamic value dp/dh = eps + p.  Hence, by
+    construction:
+
+      * dp/dh = eps + p exactly at the nodes and smoothly (C^1) between them, so the
+        enthalpy-formulation TOV equations are evaluated consistently;
+      * eps(h) = dp/dh - p is *derived*, not independently interpolated.
+
+    cs^2 is interpolated from the (accurate) node values ``cs2_nodes`` -- it is
+    consistent at the table nodes and is left free to be NON-MONOTONE (e.g. dipping
+    toward zero at a phase transition); we never monotonize it.  We deliberately do
+    NOT take cs^2 from d^2p/dh^2: a second derivative of a C^1 interpolant is far too
+    noisy, especially for parameter gradients.
+
+    This uses h (equivalently the baryon chemical potential mu = mu0 e^h) as the
+    parameter, which is the natural variable for realistic tabulated EOS.  Fully
+    JAX-differentiable; the integer interval index is piecewise-constant (standard
+    for interpolation) while gradients flow through the gathered node values.
+    """
+    h_nodes = jnp.asarray(h_nodes)
+    N = h_nodes.shape[0]
+    i = jnp.clip(jnp.searchsorted(h_nodes, h_query), 1, N - 1)
+    h0, h1 = h_nodes[i - 1], h_nodes[i]
+    p0, p1 = p_nodes[i - 1], p_nodes[i]
+    e0, e1 = eps_nodes[i - 1], eps_nodes[i]
+    s0, s1 = e0 + p0, e1 + p1                      # exact slopes dp/dh = eps + p
+    dh = h1 - h0
+    t = (h_query - h0) / dh
+    t2, t3 = t * t, t * t * t
+
+    H00, H10 = 2*t3 - 3*t2 + 1, t3 - 2*t2 + t
+    H01, H11 = -2*t3 + 3*t2, t3 - t2
+    p = H00*p0 + H10*dh*s0 + H01*p1 + H11*dh*s1
+
+    dH00, dH10 = 6*t2 - 6*t, 3*t2 - 4*t + 1
+    dH01, dH11 = -6*t2 + 6*t, 3*t2 - 2*t
+    dpdh = (dH00*p0 + dH01*p1) / dh + dH10*s0 + dH11*s1
+    eps = dpdh - p                                  # derived: dp/dh = eps + p
+
+    cs2 = jnp.clip(jnp.interp(h_query, h_nodes, cs2_nodes), 1e-10, 1.0)
+    return jnp.maximum(eps, 1e-300), jnp.maximum(p, 1e-300), cs2
 
 
 def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None):
