@@ -114,8 +114,10 @@ Tests: `tests/test_validation_reference.py`.
 - [x] Convergence study in `n_steps` (scan → reference).
 - [x] RePrimAnd reference **scaffold** (`reference/reprimand.py`) + env files
       (`env/`, `docs/environment.md`) — runs on the user's workstation.
-- [ ] RePrimAnd cross-check actually executed (needs the build env; API drift vs
-      RIFT's old interface to reconcile — lines marked `# VERIFY`).
+- [x] RePrimAnd reference adapter updated to the **modern (1.7) API**
+      (`reference/reprimand.py`; same fix applied to RIFT `EOSManager`), with legacy
+      fallbacks.  Cross-check ready to run in the validation env (`pip install
+      reprimand` on Linux); execution on the user's workstation still pending.
 - [ ] Analytic Tolman-VII / constant-density unit test.
 - [ ] Smooth-EOS validation against lalsim named EOS (SLy/APR/MPA1).
 - [x] Hybrid phase-transition EOS generator (Maxwell), `eos/hybrid.py` — hadronic

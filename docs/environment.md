@@ -56,16 +56,17 @@ fails with "No matching distribution found".
    Zenodo 10617510 (release 1.6/1.7).
 
 3. **Reuse what you already have.**  If `junior_tools` (or your RIFT env) already
-   provides a working `pyreprimand`, just run the validation script there.  *(I
-   couldn't see `junior_tools` from the sandbox; point me at it / paste
-   `pydoc pyreprimand` and I'll match the reference adapter to your exact version.)*
+   provides a working `pyreprimand`, just run the validation script there.
 
-> **API drift:** RePrimAnd's Python API changed across releases and **RIFT's
-> `EOSManager.EOSReprimand` targets an old one**.  `src/nmbackend/reference/
-> reprimand.py` mirrors that old interface with the version-sensitive calls marked
-> `# VERIFY`.  After installing, run the validation script; if it errors, adjust
-> those lines to your installed version (`help(pyreprimand.make_eos_barotr_spline)`)
-> — or hand me the output of `pydoc pyreprimand` and I'll update the adapter.
+> **API: now modern (1.7).**  Both `src/nmbackend/reference/reprimand.py` and RIFT's
+> `EOSManager` (branch `rift_O4d_junior_calmarg_in_loop_nm_backend`) were updated to
+> the current pyreprimand API and verified against the 1.7 docs.  The two breaking
+> changes that bit the old code: `tov_acc_simple` -> `star_acc_simple` (now takes
+> two leading bool flags `need_deform, need_bulk`), and `make_tov_branch_stable`
+> (`num_samp`/`mgrav_min` -> `mg_cut_low_rel`/`mg_cut_low_abs`/`gm1_step`).
+> `make_eos_barotr_spline` and the sequence accessors are unchanged.  Both adapters
+> include shims that fall back to the legacy API, so they work on either version.
+> If a call still errors on your build, paste `pydoc pyreprimand` and I'll adjust.
 
 ## Zhu δ-TOV (sensitivity cross-check)
 
