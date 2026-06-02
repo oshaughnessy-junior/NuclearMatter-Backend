@@ -30,24 +30,28 @@ dΛ/dθ, dR/dθ, dM_max/dθ and are sensitive to gradient accuracy/smoothness.
 **Acceptance:** dΛ/dθ and dR/dθ within ~0.1% of FD at default tolerance, smooth
 enough for HMC step-size adaptation.
 
-## RMF continuation solver (for strongly nonlinear sets, e.g. NL3)
+## Additional RMF parameter sets (verified couplings; metastable c<0 potentials)
 
-**What:** the self-consistent scalar gap equation `Phi/C_sigma + bM Phi^2 + cPhi^3 =
-rho_s(M-Phi)` is convex and easily Newton-solved for well-behaved sets (GM1, b>0),
-but for sets with `b, c < 0` (NL3 and many modern RMF parameterizations) it is
-**non-convex** — `resid < 0` at both ends of the physical m* bracket, with multiple
-roots. The physical branch must be tracked by **continuation**: solve at low density
-(m* ≈ M) and step up in density using the previous solution as the initial guess.
+**Done:** the scalar gap solve is now a robust, vectorized **first-root** bracketed
+bisection (`_solve_phi`): it locates the lowest-Phi (physical) root — the one
+continuously connected from m*=M at zero density — for *any* set, replacing the
+fragile Newton. GM1 is exact through it across all six saturation properties + M_max.
 
-**Why deferred:** GM1 (the default) is fully validated across all six saturation
-properties (n0, B/A, K, m*/M, E_sym, L) plus M_max/R, so the *engine* is proven; the
-continuation solver is needed only to unlock NL3-class sets.
+**Open:** adding a *new* published set is gated by **coupling-normalization
+verification**, not the solver. A naive conversion of NL3's (g_sigma, g2, g3) to our
+(g/m)^2 + b,c convention failed: the gap equation had **no root** at NL3's known
+physical point (m*/M=0.595 @ n0=0.148) — meson terms ~2x too small vs rho_s — a
+convention/normalization mismatch. Two things to nail before shipping any set:
+1. **Verify each set's couplings against its own saturation point** (run
+   `saturation_properties` and require it reproduces the published n0, B/A, K, m*/M,
+   E_sym, L) before exposing it.
+2. **c < 0 sets** (NL3 and many modern parameterizations) have a nonlinear scalar
+   potential **unbounded below** → the physical EOS is a *metastable* branch; the
+   first-root pick is correct *if* the root exists, but selection/robustness for
+   these needs explicit care.
 
-**Fix:** build the EOS table by a `jax.lax.scan` over the (increasing) density grid
-that carries Phi as the running initial guess (a few damped-Newton steps per
-density), rather than the current per-density independent solve. This is naturally
-robust and stays differentiable. Then validate NL3 (n0=0.148, B/A=-16.3, K=272,
-m*/M=0.595, E_sym=37.4, L=118; M_max~2.77, R(1.4)~14.6).
+**Why deferred:** GM1 (default) is fully validated, so the engine is proven; this is
+about breadth of parameter sets, best done with a reference table in hand.
 
 ## Muons in beta-equilibrium
 

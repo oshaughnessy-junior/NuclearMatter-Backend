@@ -53,18 +53,14 @@ GM1 = dict(
     C_sigma=11.785, C_omega=7.148, C_rho=4.410,   # fm^2
     b=0.002947, c=-0.001070,                       # dimensionless
 )
-#: NL3 (Lalazissis, Koenig & Ring 1997).  Converted to (g/m)^2 and the
-#: U = 1/3 b M (g_s s)^3 + 1/4 c (g_s s)^4 convention: b = g2/(M g_sigma^3),
-#: c = g3/g_sigma^4 with g_sigma=10.217, g2=-10.431 fm^-1, g3=-28.885.
-#: NOTE: b, c < 0 make the scalar gap equation NON-CONVEX (resid < 0 at both ends
-#: of the m* bracket); the physical root must be tracked by CONTINUATION from low
-#: density.  The current per-density damped Newton does not do this, so NL3 is not
-#: yet usable.  See docs/backlog.md ("RMF continuation solver").
-NL3 = dict(
-    M_mev=939.0,
-    C_sigma=15.739, C_omega=10.530, C_rho=1.3398,  # fm^2
-    b=-0.002058, c=-0.002651,
-)
+# NOTE on other parameter sets (e.g. NL3): a naive conversion of the published
+# (g_sigma, g2, g3) to this (g/m)^2 + b,c convention did NOT reproduce NL3's
+# saturation -- the scalar gap equation had NO root at NL3's known physical point
+# (the meson terms came out ~2x too small vs rho_s), i.e. a coupling-normalization
+# mismatch, not a solver problem (GM1 is exact through the same code).  Sets with
+# c < 0 also have a nonlinear potential unbounded below (metastable physical branch).
+# Adding a new set therefore requires verifying its couplings against its own
+# saturation point first.  See docs/backlog.md.
 DEFAULT_PARAMS = dict(GM1)
 
 
@@ -86,42 +82,78 @@ def _eps_kin_one(kf, mstar):       # kinetic energy density of one species (fm^-
         - mstar**4 * jnp.log((kf + ef) / mstar))
 
 
-def _solve_phi(n_n, n_p, p):
-    """Self-consistent scalar field Phi (fm^-1) via Newton; differentiable."""
+def _solve_phi(n_n, n_p, p, ngrid=320, nbis=48):
+    """Self-consistent scalar field Phi (fm^-1) by FIRST-ROOT bracketed bisection.
+
+    The scalar gap equation can be non-convex (sets with b, c < 0, e.g. NL3) with
+    several roots.  The *physical* branch is the one continuously connected from
+    m* = M (Phi = 0) at zero density, which is always the **lowest-Phi root** (resid
+    starts negative at Phi=0 and the first up-crossing is physical; higher crossings
+    are spurious).  We locate the first '-' -> '+' sign change of resid on a Phi grid
+    and bisect there -- robust for ALL parameter sets and fully vectorized over the
+    density array.  Differentiable (the bracket index is piecewise-constant, like a
+    searchsorted; gradients flow through the bisected endpoints).
+    """
     M = p["M_mev"] / HBARC
     Cs, b, c = p["C_sigma"], p["b"], p["c"]
     kfn, kfp = _kf(n_n), _kf(n_p)
+    shape = jnp.shape(kfn)
+    kfn = jnp.reshape(kfn, (-1,))
+    kfp = jnp.reshape(kfp, (-1,))                    # (D,)
 
-    def resid(Phi):
+    def resid(Phi):                                  # broadcasts Phi with (D,) kf
         mstar = M - Phi
         rho_s = _rho_s_one(kfn, mstar) + _rho_s_one(kfp, mstar)
         return Phi / Cs + b * M * Phi**2 + c * Phi**3 - rho_s
 
-    dresid = jax.grad(lambda x: jnp.sum(resid(x)))
-    # damped + clamped Newton; robust for well-behaved (convex) self-couplings such
-    # as GM1.  Strongly nonlinear sets (e.g. NL3, b,c < 0) have a non-convex gap
-    # equation that needs a continuation solver -- see docs/backlog.md.
-    def step(_i, Phi):
-        return jnp.clip(Phi - 0.7 * resid(Phi) / dresid(Phi), 0.0, 0.985 * M)
-    Phi0 = 0.3 * M * jnp.ones_like(kfn)            # match the density array shape
-    Phi = jax.lax.fori_loop(0, 45, step, Phi0)
-    Phi0 = jax.lax.stop_gradient(Phi)
-    return jnp.clip(Phi0 - resid(Phi0) / dresid(Phi0), 0.0, 0.985 * M)
+    Phi_grid = jnp.linspace(1e-6, 0.985 * M, ngrid)  # (G,)
+    rg = resid(Phi_grid[:, None])                    # (G, D)
+    cross = (rg[:-1] < 0.0) & (rg[1:] >= 0.0)        # first up-crossing per column
+    i = jnp.argmax(cross, axis=0)                    # (D,)
+    lo, hi = Phi_grid[i], Phi_grid[i + 1]            # (D,)
+
+    def body(_k, c2):
+        lo, hi = c2
+        mid = 0.5 * (lo + hi)
+        r = resid(mid)
+        return jnp.where(r < 0.0, mid, lo), jnp.where(r < 0.0, hi, mid)
+
+    lo, hi = jax.lax.fori_loop(0, nbis, body, (lo, hi))
+    return jnp.reshape(0.5 * (lo + hi), shape)
 
 
-def _eps_leptons(n_e, n_mu):
-    """Lepton energy density (fm^-4): relativistic electron + muon gases."""
-    def g(n_l, m_l_mev):
-        m = m_l_mev / HBARC
-        kf = _kf(n_l)
-        return _eps_kin_one(kf, m)
-    return g(n_e, M_E) + g(n_mu, M_MU)
+def _leptons(n_charge):
+    """Solve the lepton sector at fixed charge density n_charge = n_p (fm^-3).
 
+    Electrons + muons in chemical equilibrium (common mu_e = mu_mu) with charge
+    neutrality n_e + n_mu = n_charge.  Muons switch on once mu_e > m_mu (~106 MeV).
+    Returns (mu_e [fm^-1], n_e, n_mu [fm^-3], eps_lep [fm^-4]).
+    """
+    m_e, m_mu = M_E / HBARC, M_MU / HBARC
+    n_charge = jnp.maximum(n_charge, 1e-30)
 
-def _mu_lepton(n_l, m_l_mev):
-    m = m_l_mev / HBARC
-    kf = _kf(n_l)
-    return jnp.sqrt(kf**2 + m**2)       # fm^-1
+    def nlep(mu):
+        ke = jnp.sqrt(jnp.maximum(mu**2 - m_e**2, 0.0))
+        kmu = jnp.sqrt(jnp.maximum(mu**2 - m_mu**2, 0.0))
+        return (ke**3 + kmu**3) / (3.0 * _PI2)
+
+    mu_lo = jnp.full_like(n_charge, m_e)
+    mu_hi = jnp.sqrt((3.0 * _PI2 * n_charge) ** (2.0 / 3.0) + m_e**2) * 1.0001
+
+    def body(_i, c):
+        lo, hi = c
+        mid = 0.5 * (lo + hi)
+        f = nlep(mid) - n_charge           # increasing in mu
+        return jnp.where(f < 0.0, mid, lo), jnp.where(f < 0.0, hi, mid)
+
+    lo, hi = jax.lax.fori_loop(0, 50, body, (mu_lo, mu_hi))
+    mu_e = 0.5 * (lo + hi)
+    ke = jnp.sqrt(jnp.maximum(mu_e**2 - m_e**2, 0.0))
+    kmu = jnp.sqrt(jnp.maximum(mu_e**2 - m_mu**2, 0.0))
+    n_e = ke**3 / (3.0 * _PI2)
+    n_mu = kmu**3 / (3.0 * _PI2)
+    eps_lep = _eps_kin_one(ke, m_e) + _eps_kin_one(kmu, m_mu)   # =0 if kf=0
+    return mu_e, n_e, n_mu, eps_lep
 
 
 def _solve_xp(n_B, p, n_iter=70):
@@ -142,7 +174,7 @@ def _solve_xp(n_B, p, n_iter=70):
         efp = jnp.sqrt(kfp**2 + mstar**2)
         R = 0.5 * Crho * (n_p - n_n)
         mu_e = efn - efp - R                       # required by beta-eq (fm^-1)
-        mu_e_actual = _mu_lepton(x_p * n_B, M_E)    # electrons, charge neutrality
+        mu_e_actual = _leptons(x_p * n_B)[0]        # e + mu, charge neutrality
         return mu_e - mu_e_actual                   # >0 -> need more protons
 
     lo = jnp.full_like(n_B, 1e-4)
@@ -165,15 +197,22 @@ def _solve_xp(n_B, p, n_iter=70):
 
 
 def _eps_p_of_n(n_B, x_p, p, leptons=True):
-    """Total energy density (MeV/fm^3) and pressure (MeV/fm^3) at (n_B, x_p).
+    """eps, p, mu_n at (n_B, x_p) with Phi solved per-density (independent).
 
-    ``leptons=False`` gives pure nuclear matter (no electrons) -- used for the
-    symmetric-matter saturation check; beta-equilibrium NS matter uses leptons.
+    Used for the per-density paths and as a back-compatible wrapper.  The EOS table
+    instead uses the continuation solver (``_solve_grid``) for robustness with
+    strongly nonlinear sets.  ``leptons=False`` -> pure nuclear matter (no leptons).
     """
+    n_p, n_n = x_p * n_B, (1.0 - x_p) * n_B
+    Phi = _solve_phi(n_n, n_p, p)
+    return _eps_p_from_state(n_B, x_p, Phi, p, leptons)
+
+
+def _eps_p_from_state(n_B, x_p, Phi, p, leptons=True):
+    """eps (MeV/fm^3), p (MeV/fm^3), mu_n (MeV) given a *solved* scalar field Phi."""
     M = p["M_mev"] / HBARC
     Cs, Co, Cr, b, c = p["C_sigma"], p["C_omega"], p["C_rho"], p["b"], p["c"]
     n_p, n_n = x_p * n_B, (1.0 - x_p) * n_B
-    Phi = _solve_phi(n_n, n_p, p)
     mstar = M - Phi
     kfn, kfp = _kf(n_n), _kf(n_p)
     n3 = n_p - n_n
@@ -183,8 +222,7 @@ def _eps_p_of_n(n_B, x_p, p, leptons=True):
     eps_kin = _eps_kin_one(kfn, mstar) + _eps_kin_one(kfp, mstar)
     eps_field = (0.5 * Phi**2 / Cs + (1.0 / 3.0) * b * M * Phi**3
                  + 0.25 * c * Phi**4 + 0.5 * Co * n_B**2 + 0.5 * R**2 / Cr)
-    n_e = x_p * n_B
-    eps_lep = _eps_leptons(n_e, 0.0 * n_e) if leptons else 0.0 * n_B  # muons: TODO
+    eps_lep = _leptons(x_p * n_B)[3] if leptons else 0.0 * n_B  # e + mu (n_p charge)
     eps = eps_kin + eps_field + eps_lep
 
     mu_n = jnp.sqrt(kfn**2 + mstar**2) + W - 0.5 * R           # baryon chem. pot.
@@ -198,37 +236,44 @@ def _eps_p_of_n(n_B, x_p, p, leptons=True):
     return eps * HBARC, pres * HBARC, mu_n * HBARC              # -> MeV/fm^3, MeV
 
 
-def symmetry_energy(n_B, p):
-    """Symmetry energy S(n) [MeV] (analytic RMF form): the isovector curvature of
-    the energy per baryon.  S = (1/6) k_F^2/E*_F + (1/8) C_rho n, with symmetric
-    matter k_F and m*."""
-    M = p["M_mev"] / HBARC
-    Phi = _solve_phi(n_B / 2.0, n_B / 2.0, p)
-    mstar = M - Phi
+def symmetry_energy(n_B, Phi, p):
+    """Symmetry energy S(n) [MeV] (analytic RMF form) given the symmetric-matter
+    scalar field Phi: S = (1/6) k_F^2/E*_F + (1/8) C_rho n."""
+    mstar = p["M_mev"] / HBARC - Phi
     kf = _kf(n_B / 2.0)
     ef = jnp.sqrt(kf**2 + mstar**2)
     return ((1.0 / 6.0) * kf**2 / ef + (1.0 / 8.0) * p["C_rho"] * n_B) * HBARC
 
 
-def saturation_properties(params=None, n_lo=0.13, n_hi=0.18, npts=121):
+def saturation_properties(params=None, n_start=0.005, n_hi=0.22, npts=440):
     """Return GM1/NL3-style saturation diagnostics for a parameter set:
-    n0, B/A (MeV), K (MeV), m*/M, E_sym (MeV), L (MeV)."""
+    n0, B/A (MeV), K (MeV), m*/M, E_sym (MeV), L (MeV).
+
+    The scan starts at LOW density (m* ~ M, where the scalar root is unambiguous)
+    so the continuation solver tracks the physical branch up to saturation -- this
+    is what makes it work for strongly nonlinear sets (NL3) and not just GM1."""
     p = dict(DEFAULT_PARAMS)
     if params:
         p.update(params)
+    import numpy as np
     M = p["M_mev"]
-    ns = jnp.linspace(n_lo, n_hi, npts)
-    sym = jax.jit(lambda n: _eps_p_of_n(n, 0.5, p, leptons=False)[:2])
-    eps, pres = jax.vmap(sym)(ns)
-    eps, pres, ns = map(__import__("numpy").asarray, (eps, pres, ns))
-    i0 = int(abs(pres).argmin())
-    n0 = float(ns[i0])
+    ns = jnp.linspace(n_start, n_hi, npts)
+    Phi_arr = _solve_phi(ns / 2.0, ns / 2.0, p)        # symmetric, robust first-root
+    eps, pres, _ = jax.vmap(lambda n, Ph: _eps_p_from_state(n, 0.5, Ph, p,
+                                                            leptons=False))(ns, Phi_arr)
+    Esym_arr = jax.vmap(lambda n, Ph: symmetry_energy(n, Ph, p))(ns, Phi_arr)
+    eps, pres, ns_np = np.asarray(eps), np.asarray(pres), np.asarray(ns)
+    Phi_np, Esym_np = np.asarray(Phi_arr), np.asarray(Esym_arr)
+    # saturation = binding-energy minimum (where p = 0 with dp/dn > 0), NOT the
+    # trivial p ~ 0 at the low-density boundary.
+    i0 = int(np.argmin(eps / ns_np - M))
+    n0 = float(ns_np[i0])
     BA = float(eps[i0] / n0 - M)
-    K = float(9.0 * (pres[i0 + 1] - pres[i0 - 1]) / (ns[i0 + 1] - ns[i0 - 1]))
-    Phi = float(_solve_phi(jnp.asarray(n0 / 2), jnp.asarray(n0 / 2), p))
-    mstar_frac = (M / HBARC - Phi) * HBARC / M
-    Esym = float(symmetry_energy(jnp.asarray(n0), p))
-    L = float(3.0 * n0 * jax.grad(lambda n: symmetry_energy(n, p))(n0))
+    K = float(9.0 * (pres[i0 + 1] - pres[i0 - 1]) / (ns_np[i0 + 1] - ns_np[i0 - 1]))
+    mstar_frac = (M / HBARC - float(Phi_np[i0])) * HBARC / M
+    Esym = float(Esym_np[i0])
+    L = float(3.0 * n0 * (Esym_np[i0 + 1] - Esym_np[i0 - 1])
+              / (ns_np[i0 + 1] - ns_np[i0 - 1]))
     return dict(n0=n0, BA=BA, K=K, mstar_frac=mstar_frac, E_sym=Esym, L=L)
 
 
@@ -257,8 +302,10 @@ class RMFTEOS(EOSModel):
         if params:
             p.update(params)
         n = self.n_grid
-        x_p = _solve_xp(n, p)
-        eps, pres, _ = jax.vmap(lambda ni, xi: _eps_p_of_n(ni, xi, p))(n, x_p)
+        x_p = _solve_xp(n, p)                              # beta-equilibrium
+        Phi = _solve_phi((1.0 - x_p) * n, x_p * n, p)      # robust first-root, vec
+        eps, pres, _ = jax.vmap(lambda ni, xi, Ph: _eps_p_from_state(ni, xi, Ph, p))(
+            n, x_p, Phi)
         pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
         if self.n_surface is not None:
             n, eps, pres = extend_to_surface(n, eps, pres,

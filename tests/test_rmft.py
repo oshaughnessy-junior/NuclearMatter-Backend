@@ -33,6 +33,16 @@ def test_beta_eq_proton_fraction_physical():
     assert xp[0] < 0.1                       # neutron-rich at low density
 
 
+def test_muons_switch_on_at_high_density():
+    from nmbackend.eos.rmft import _leptons
+    rm = RMFTEOS()
+    xp = np.array(_solve_xp(jnp.asarray(rm.n_grid), dict(DEFAULT_PARAMS)))
+    n = np.array(rm.n_grid)
+    nmu_lo = float(_leptons(jnp.asarray(xp[20] * n[20]))[2])    # low density
+    nmu_hi = float(_leptons(jnp.asarray(xp[-1] * n[-1]))[2])    # high density
+    assert nmu_lo == 0.0 and nmu_hi > 1e-4                      # muons turn on
+
+
 def test_eos_table_monotone_causal():
     t = RMFTEOS().eos_table()
     assert np.all(np.diff(np.asarray(t.n)) > 0)
