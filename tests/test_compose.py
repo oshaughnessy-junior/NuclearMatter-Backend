@@ -55,6 +55,22 @@ def test_ingested_table_cross_code():
     assert abs(float(a.Lambda) - b.Lambda) / b.Lambda < 0.01
 
 
+def test_cmf_csv_column_mapping():
+    # a MUSES CMF-format CSV (n_B col 5, eps col 8, p col 9, 1-based) must map
+    # exactly and give the same TOV as the source EOS.
+    import os
+    from nmbackend.eos.compose import read_cmf_csv, load_cmf
+    n, eps, p = _rmft_arrays()
+    M = np.zeros((len(n), 21))
+    M[:, 4], M[:, 7], M[:, 8] = n, eps, p              # cols 5, 8, 9
+    f = os.path.join(tempfile.mkdtemp(), "CMF_output_stable.csv")
+    np.savetxt(f, M, delimiter=",", header="x" * 1, comments="")
+    n2, e2, p2 = read_cmf_csv(f)
+    assert np.allclose(n2, n) and np.allclose(e2, eps) and np.allclose(p2, p)
+    t = load_cmf(f)
+    assert np.all(np.diff(np.asarray(t.h)) > 0)
+
+
 def test_load_simple_columns():
     n, eps, p = _rmft_arrays()
     import os

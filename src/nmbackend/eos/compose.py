@@ -59,6 +59,27 @@ def read_compose(path_dir, thermo="eos.thermo", nb="eos.nb"):
     return n[order], eps[order], p[order], m_n
 
 
+def read_cmf_csv(path, col_nb=5, col_eps=8, col_p=9, sep=",", skip_header=1):
+    """Read a MUSES CMF (or CompOSE-style) CSV EOS table -> (n, eps, p).
+
+    The MUSES CMF output schema (CMF_output_stable.csv / _for_Lepton_*.csv) has, in
+    1-based columns: ... 5=baryon density [1/fm^3], 8=energy density [MeV/fm^3],
+    9=pressure [MeV/fm^3] (Cruz-Camacho et al. 2409.06837; docs/muses-integration.md).
+    The CMF grid runs over (mu_B, mu_S, mu_Q), so n_B can repeat / be non-monotone;
+    we keep the physical, sorted, strictly-increasing-density points (for the cold
+    beta-eq NS EOS, point CMF at its Lepton/Synthesis output along the NS line).
+    """
+    d = np.genfromtxt(path, delimiter=sep, skip_header=skip_header)
+    d = np.atleast_2d(d)
+    n, eps, p = d[:, col_nb - 1], d[:, col_eps - 1], d[:, col_p - 1]
+    ok = (n > 0) & (eps > 0) & np.isfinite(n) & np.isfinite(eps) & np.isfinite(p)
+    n, eps, p = n[ok], eps[ok], p[ok]
+    o = np.argsort(n)
+    n, eps, p = n[o], eps[o], p[o]
+    keep = np.concatenate([[True], np.diff(n) > 1e-12])     # dedupe repeated n_B
+    return n[keep], eps[keep], p[keep]
+
+
 def read_simple(path):
     """Read a 3-column n_B[fm^-3] eps[MeV/fm^3] p[MeV/fm^3] table -> (n, eps, p)."""
     d = np.loadtxt(path, comments="#", ndmin=2)
@@ -105,6 +126,11 @@ def load_compose(path_dir, **kw) -> EOSTable:
 
 def load_simple(path, **kw) -> EOSTable:
     return eos_table_from_arrays(*read_simple(path), **kw)
+
+
+def load_cmf(path, **kw) -> EOSTable:
+    """Load a MUSES CMF CSV EOS table into an EOSTable (see :func:`read_cmf_csv`)."""
+    return eos_table_from_arrays(*read_cmf_csv(path), **kw)
 
 
 class TabularEOS(EOSModel):
