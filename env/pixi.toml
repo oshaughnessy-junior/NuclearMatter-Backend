@@ -1,0 +1,41 @@
+# Pixi project for NuclearMatter-Backend + validation references.
+#   cd env && pixi install && pixi run tests
+#   pixi run validate           # diffrax vs SciPy reference (+ RePrimAnd if built)
+#
+# Mirrors RIFT's pixi conventions (conda-forge, lalsuite 7.25). RePrimAnd is built
+# from source via the build deps below; see ../docs/environment.md.
+[project]
+name = "nmbackend-validate"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64"]
+
+[dependencies]
+python = ">=3.11,<3.13"
+pip = "*"
+numpy = ">=1.24,<2.3"
+scipy = ">=1.10"
+jax = ">=0.4.20"
+jaxlib = ">=0.4.20"
+diffrax = ">=0.5"
+equinox = ">=0.11"
+h5py = "*"
+matplotlib = "*"
+corner = "*"
+pytest = "*"
+lalsuite = "==7.25"
+# build deps for RePrimAnd / pyreprimand from source
+meson = "*"
+ninja = "*"
+pybind11 = "*"
+boost-cpp = "*"
+gsl = "*"
+hdf5 = "*"
+cxx-compiler = "*"
+
+[pypi-dependencies]
+nmbackend = { path = "..", editable = true }
+
+[tasks]
+tests = "cd .. && PYTHONPATH=src pytest"
+validate = "cd .. && PYTHONPATH=src python scripts/validate_against_reprimand.py"
+quickstart = "cd .. && PYTHONPATH=src python examples/quickstart.py"

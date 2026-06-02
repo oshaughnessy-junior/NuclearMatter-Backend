@@ -221,3 +221,8 @@ __marimo__/
 .pytmp/
 .jaxcache/
 .t/
+
+# nmbackend: keep our environment CONFIG dir (overrides the ENV/ venv ignore above)
+!env/
+!env/pixi.toml
+!env/environment.yml

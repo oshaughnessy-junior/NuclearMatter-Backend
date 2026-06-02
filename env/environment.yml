@@ -1,0 +1,37 @@
+# Conda/mamba environment for NuclearMatter-Backend + external validation refs.
+#
+#   mamba env create -f env/environment.yml      # (or conda)
+#   conda activate nmbackend-validate
+#   pip install -e .
+#   PYTHONPATH=src pytest
+#
+# RePrimAnd (pyreprimand) is usually NOT on conda-forge; build it from source in
+# this env (deps below: meson/ninja/boost/gsl/hdf5/pybind11) per docs/environment.md.
+name: nmbackend-validate
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=1.24,<2.3
+  - scipy>=1.10
+  - jax>=0.4.20
+  - jaxlib>=0.4.20
+  - diffrax>=0.5
+  - equinox>=0.11
+  - h5py
+  - matplotlib
+  - corner
+  - pytest
+  # --- external reference: RIFT (its EOSManager has the (old) RePrimAnd wiring) ---
+  - lalsuite=7.25
+  # --- build deps for RePrimAnd / pyreprimand from source ---
+  - meson
+  - ninja
+  - pybind11
+  - boost-cpp
+  - gsl
+  - hdf5
+  - cxx-compiler
+  - pip:
+      - pyreprimand   # try PyPI first; if it fails, build from source (docs)
