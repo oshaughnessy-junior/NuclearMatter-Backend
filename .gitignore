@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# nmbackend local test/jax scratch
+.pytmp/
+.jaxcache/
+.t/

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nmbackend"
+version = "0.0.1"
+description = "NuclearMatter-Backend: differentiable EOS + TOV tools for neutron-star EOS inference, interfacing RIFT and gwkokab."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "R. O'Shaughnessy" },
+    { name = "RIT CCRG nuclear-matter group" },
+]
+keywords = ["neutron-star", "equation-of-state", "TOV", "tidal-deformability",
+            "gravitational-waves", "automatic-differentiation", "jax", "RIFT", "gwkokab"]
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.7",
+    "jax>=0.4.20",
+    "jaxlib>=0.4.20",
+]
+
+[project.optional-dependencies]
+# Heavier / external reference backends, kept optional so the core stays light.
+reprimand = []          # pyreprimand (high-accuracy reference TOV); install separately
+rift = []               # RIFT / lalsuite for downstream inference
+gwkokab = ["numpyro"]   # population-inference target
+test = ["pytest>=7.0"]
+docs = ["sphinx", "myst-parser"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
