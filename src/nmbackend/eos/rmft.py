@@ -53,6 +53,18 @@ GM1 = dict(
     C_sigma=11.785, C_omega=7.148, C_rho=4.410,   # fm^2
     b=0.002947, c=-0.001070,                       # dimensionless
 )
+#: NL3 (Lalazissis, Koenig & Ring 1997).  Converted to (g/m)^2 and the
+#: U = 1/3 b M (g_s s)^3 + 1/4 c (g_s s)^4 convention: b = g2/(M g_sigma^3),
+#: c = g3/g_sigma^4 with g_sigma=10.217, g2=-10.431 fm^-1, g3=-28.885.
+#: NOTE: b, c < 0 make the scalar gap equation NON-CONVEX (resid < 0 at both ends
+#: of the m* bracket); the physical root must be tracked by CONTINUATION from low
+#: density.  The current per-density damped Newton does not do this, so NL3 is not
+#: yet usable.  See docs/backlog.md ("RMF continuation solver").
+NL3 = dict(
+    M_mev=939.0,
+    C_sigma=15.739, C_omega=10.530, C_rho=1.3398,  # fm^2
+    b=-0.002058, c=-0.002651,
+)
 DEFAULT_PARAMS = dict(GM1)
 
 
@@ -85,17 +97,16 @@ def _solve_phi(n_n, n_p, p):
         rho_s = _rho_s_one(kfn, mstar) + _rho_s_one(kfp, mstar)
         return Phi / Cs + b * M * Phi**2 + c * Phi**3 - rho_s
 
-    Phi = 0.3 * M                      # initial guess (m*/M ~ 0.7)
-    for _ in range(40):                # robust forward solve
-        f = resid(Phi)
-        df = jax.grad(lambda x: jnp.sum(resid(x)))(Phi)
-        Phi = Phi - f / df
-        Phi = jnp.clip(Phi, 0.0, 0.98 * M)   # keep m* = M - Phi positive
-    # one differentiable Newton step at the converged root (implicit diff)
-    Phi = jax.lax.stop_gradient(Phi)
-    f = resid(Phi)
-    df = jax.grad(lambda x: jnp.sum(resid(x)))(Phi)
-    return Phi - f / df
+    dresid = jax.grad(lambda x: jnp.sum(resid(x)))
+    # damped + clamped Newton; robust for well-behaved (convex) self-couplings such
+    # as GM1.  Strongly nonlinear sets (e.g. NL3, b,c < 0) have a non-convex gap
+    # equation that needs a continuation solver -- see docs/backlog.md.
+    def step(_i, Phi):
+        return jnp.clip(Phi - 0.7 * resid(Phi) / dresid(Phi), 0.0, 0.985 * M)
+    Phi0 = 0.3 * M * jnp.ones_like(kfn)            # match the density array shape
+    Phi = jax.lax.fori_loop(0, 45, step, Phi0)
+    Phi0 = jax.lax.stop_gradient(Phi)
+    return jnp.clip(Phi0 - resid(Phi0) / dresid(Phi0), 0.0, 0.985 * M)
 
 
 def _eps_leptons(n_e, n_mu):
@@ -185,6 +196,40 @@ def _eps_p_of_n(n_B, x_p, p, leptons=True):
         mu_p = jnp.sqrt(kfp**2 + mstar**2) + W + 0.5 * R
         pres = mu_n * n_n + mu_p * n_p - eps
     return eps * HBARC, pres * HBARC, mu_n * HBARC              # -> MeV/fm^3, MeV
+
+
+def symmetry_energy(n_B, p):
+    """Symmetry energy S(n) [MeV] (analytic RMF form): the isovector curvature of
+    the energy per baryon.  S = (1/6) k_F^2/E*_F + (1/8) C_rho n, with symmetric
+    matter k_F and m*."""
+    M = p["M_mev"] / HBARC
+    Phi = _solve_phi(n_B / 2.0, n_B / 2.0, p)
+    mstar = M - Phi
+    kf = _kf(n_B / 2.0)
+    ef = jnp.sqrt(kf**2 + mstar**2)
+    return ((1.0 / 6.0) * kf**2 / ef + (1.0 / 8.0) * p["C_rho"] * n_B) * HBARC
+
+
+def saturation_properties(params=None, n_lo=0.13, n_hi=0.18, npts=121):
+    """Return GM1/NL3-style saturation diagnostics for a parameter set:
+    n0, B/A (MeV), K (MeV), m*/M, E_sym (MeV), L (MeV)."""
+    p = dict(DEFAULT_PARAMS)
+    if params:
+        p.update(params)
+    M = p["M_mev"]
+    ns = jnp.linspace(n_lo, n_hi, npts)
+    sym = jax.jit(lambda n: _eps_p_of_n(n, 0.5, p, leptons=False)[:2])
+    eps, pres = jax.vmap(sym)(ns)
+    eps, pres, ns = map(__import__("numpy").asarray, (eps, pres, ns))
+    i0 = int(abs(pres).argmin())
+    n0 = float(ns[i0])
+    BA = float(eps[i0] / n0 - M)
+    K = float(9.0 * (pres[i0 + 1] - pres[i0 - 1]) / (ns[i0 + 1] - ns[i0 - 1]))
+    Phi = float(_solve_phi(jnp.asarray(n0 / 2), jnp.asarray(n0 / 2), p))
+    mstar_frac = (M / HBARC - Phi) * HBARC / M
+    Esym = float(symmetry_energy(jnp.asarray(n0), p))
+    L = float(3.0 * n0 * jax.grad(lambda n: symmetry_energy(n, p))(n0))
+    return dict(n0=n0, BA=BA, K=K, mstar_frac=mstar_frac, E_sym=Esym, L=L)
 
 
 class RMFTEOS(EOSModel):

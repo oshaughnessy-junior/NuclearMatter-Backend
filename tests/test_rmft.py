@@ -14,23 +14,16 @@ M_N = 939.0
 
 
 def test_gm1_saturation_properties():
-    """Symmetric nuclear matter reproduces GM1 saturation (n0, B/A, m*/M, K)."""
-    p = dict(DEFAULT_PARAMS)
-    sym = jax.jit(lambda n: _eps_p_of_n(n, 0.5, p, leptons=False)[:2])
-    ns = jnp.linspace(0.13, 0.18, 51)
-    eps, pres = jax.vmap(sym)(ns)
-    eps, pres, ns = np.array(eps), np.array(pres), np.array(ns)
-    i0 = int(np.argmin(np.abs(pres)))            # p = 0 -> saturation
-    n0 = ns[i0]
-    BA = eps[i0] / n0 - M_N
-    Phi = float(_solve_phi(jnp.asarray(n0 / 2), jnp.asarray(n0 / 2), p))
-    mstar_frac = (M_N / HBARC - Phi) * HBARC / M_N
-    K = 9.0 * (pres[i0 + 1] - pres[i0 - 1]) / (ns[i0 + 1] - ns[i0 - 1])
-
-    assert abs(n0 - 0.153) < 0.005          # fm^-3
-    assert abs(BA + 16.3) < 0.5             # MeV
-    assert abs(mstar_frac - 0.70) < 0.02
-    assert abs(K - 300.0) < 20.0            # MeV
+    """Symmetric matter reproduces ALL six GM1 saturation properties, incl. the
+    isovector sector (E_sym, L)."""
+    from nmbackend.eos.rmft import saturation_properties, GM1
+    s = saturation_properties(GM1)
+    assert abs(s["n0"] - 0.153) < 0.005        # fm^-3
+    assert abs(s["BA"] + 16.3) < 0.5           # MeV
+    assert abs(s["K"] - 300.0) < 20.0          # MeV
+    assert abs(s["mstar_frac"] - 0.70) < 0.02
+    assert abs(s["E_sym"] - 32.5) < 1.0        # MeV  (isovector)
+    assert abs(s["L"] - 94.0) < 8.0            # MeV  (isovector slope)
 
 
 def test_beta_eq_proton_fraction_physical():
