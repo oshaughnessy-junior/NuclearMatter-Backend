@@ -103,13 +103,20 @@ default is now an **adaptive diffrax (Dopri5+PID) backend**, which agrees with t
 reference to **<0.1%** in M, R, Λ and carries clean forward-mode AD
 (`tests/test_validation_reference.py`).
 
-Still **open** (do not trust for these yet): **strong first-order phase transitions /
-soft segments where cs² → 0**. There `dh=dp/(ε+p)` collapses, the tidal term
-`(ε+p)/cs²` blows up, and the EOS table currently clips cs² and `cummax`-smears
-pressure — wrong for a real hybrid EOS. These need the tidal junction condition and
-an external **RePrimAnd**/**Zhu δ-TOV** cross-check (the sandbox can't build them; see
-[`docs/environment.md`](docs/environment.md) to run them on your workstation, and
-[`docs/validation-plan.md`](docs/validation-plan.md) for the ladder + metrics).
+**First-order phase transitions** are now handled: `eos/hybrid.py` builds a
+Maxwell hadron–quark EOS (density jump at constant pressure), and
+`tov.solve_hybrid` integrates each phase adaptively and applies the **tidal junction
+condition** at the discontinuity (Damour–Nagar 2009 / Takátsy–Kovács 2020). It is
+cross-validated against an independent radius-domain (H,β) junction solver to
+**<0.1%** in M, R, Λ (`tests/test_phase_transition.py`). The hybrid sequence shows
+the expected softening (quark cores → smaller R, Λ).
+
+Still **open**: twin-star/disconnected-branch bookkeeping in `build_family` (the
+hybrid M(h_c) is non-monotonic; `solve_hybrid` is per-`h_c` but the family/adapter
+don't yet split twin branches); a real SLy/BPS crust; and the external
+**RePrimAnd**/**Zhu δ-TOV** cross-checks (the sandbox can't build them — see
+[`docs/environment.md`](docs/environment.md)). Plan + metrics:
+[`docs/validation-plan.md`](docs/validation-plan.md).
 
 ## Roadmap (see `docs/architecture.md`)
 

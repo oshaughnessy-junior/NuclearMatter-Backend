@@ -133,3 +133,71 @@ def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
 
 def reference_sequence(table: EOSTable, h_c_array):
     return [solve_reference(table, float(hc)) for hc in np.asarray(h_c_array)]
+
+
+def _hbeta_rhs(r, s, eos):
+    """(m, p, H, beta) radius-domain TOV + tidal rhs for a given EOS interp."""
+    m, p, H, beta = s
+    p = max(p, eos.p_min)
+    eps = float(eos.eps_of_p(p))
+    cs2 = float(eos.cs2_of_p(p))
+    one_minus = 1.0 - 2.0 * m / r
+    dm = _FOURPI * r**2 * eps
+    dp = -(eps + p) * (m + _FOURPI * r**3 * p) / (r**2 * one_minus)
+    term_a = (2.0 / one_minus) * (
+        -2.0 * math.pi * (5.0 * eps + 9.0 * p + (eps + p) / cs2)
+        + 3.0 / r**2
+        + 2.0 / one_minus * ((m + _FOURPI * r**3 * p) / r**2) ** 2
+    )
+    term_b = (2.0 * beta / r) / one_minus * (
+        -1.0 + m / r + 2.0 * math.pi * r**2 * (eps - p)
+    )
+    dbeta = term_a * H + term_b
+    return [dm, dp, beta, dbeta]
+
+
+def solve_reference_hybrid(hybrid, h_c, rtol=1e-8, atol=1e-10, r0=1e-4,
+                           r_max=60.0):
+    """Independent radius-domain reference for a HybridEOS, with the tidal
+    junction applied at the density discontinuity (different formulation from the
+    production enthalpy solver -> a genuine cross-check of the junction code)."""
+    inner, outer = hybrid.segments
+    tr = hybrid.transition
+    if h_c <= tr.h_t:                       # purely hadronic
+        return solve_reference(outer, h_c, rtol=rtol, atol=atol)
+
+    ei_in, ei_out = _EOSInterp(inner), _EOSInterp(outer)
+    eps_c, p_c = ei_in.central_from_hc(h_c)
+    m0 = (4.0 / 3.0) * math.pi * eps_c * r0**3
+    s0 = [m0, p_c, r0**2, 2.0 * r0]
+
+    def hit_pt(r, s, eos):
+        return s[1] - tr.p_t
+    hit_pt.terminal = True
+    hit_pt.direction = -1
+    s1 = solve_ivp(_hbeta_rhs, (r0, r_max), s0, args=(ei_in,), method="RK45",
+                   rtol=rtol, atol=atol, events=hit_pt, max_step=r_max)
+    r_d = float(s1.t[-1])
+    m_d, p_d, H_d, beta_d = s1.y[:, -1]
+
+    # junction: y = r beta / H ; Delta y = -4 pi r^3 (eps_out - eps_in)/(m+4pi r^3 p)
+    dy = -_FOURPI * r_d**3 * (tr.eps_out - tr.eps_in) / (
+        m_d + _FOURPI * r_d**3 * tr.p_t)
+    beta_d = beta_d + (H_d / r_d) * dy
+
+    def hit_surface(r, s, eos):
+        return s[1] - ei_out.p_min
+    hit_surface.terminal = True
+    hit_surface.direction = -1
+    s2 = solve_ivp(_hbeta_rhs, (r_d, r_max), [m_d, p_d, H_d, beta_d],
+                   args=(ei_out,), method="RK45", rtol=rtol, atol=atol,
+                   events=hit_surface, max_step=r_max)
+    R = float(s2.t[-1])
+    m, _, H, beta = s2.y[:, -1]
+    M = float(m)
+    C = M / R
+    y = R * beta / H
+    k2 = _k2_from_y_C(y, C)
+    Lam = (2.0 / 3.0) * k2 / C**5
+    return RefPoint(h_c=float(h_c), R_km=R, M_km=M, M_msun=M / GMSUN_KM,
+                    C=C, y=float(y), k2=float(k2), Lambda=float(Lam))

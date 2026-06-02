@@ -118,8 +118,20 @@ Tests: `tests/test_validation_reference.py`.
       RIFT's old interface to reconcile — lines marked `# VERIFY`).
 - [ ] Analytic Tolman-VII / constant-density unit test.
 - [ ] Smooth-EOS validation against lalsim named EOS (SLy/APR/MPA1).
-- [ ] Hybrid phase-transition EOS generator (Maxwell) + twin-star case — **the
-      real stress test** for adaptive stepping + tidal junction conditions.
-- [ ] Tidal junction-condition handling at density discontinuities.
+- [x] Hybrid phase-transition EOS generator (Maxwell), `eos/hybrid.py` — hadronic
+      + density jump + CSS quark branch; produces hybrid-star sequences.
+- [x] Tidal **junction condition** at density discontinuities
+      (`tov/phase_transition.solve_hybrid`), cross-validated against an independent
+      radius-domain (H,β) junction solver (`reference.solve_reference_hybrid`) to
+      **<0.1% in M, R, Λ**.  Junction formula: Damour–Nagar 2009 / Takátsy–Kovács 2020.
+- [ ] Twin-star / disconnected-branch bookkeeping in `build_family` (the hybrid
+      M(h_c) is non-monotonic; `solve_hybrid` is per-`h_c`, but the family/adapter
+      do not yet split twin branches).
+- [ ] Phase-transition cross-check against **RePrimAnd** (external arbiter).
 - [ ] SLy/BPS crust.
 - [ ] Zhu δ-TOV cross-check of M/R/Λ and `dΛ/dparam`.
+
+> Note: the sharp-jump+junction result is the width→0 limit of a finite-width
+> crossover, but a clean monotone smeared-convergence test is hampered by
+> under-resolution at tiny width and by twin-star non-monotonicity at fixed mass;
+> the independent (H,β) junction reference is the decisive in-sandbox check.

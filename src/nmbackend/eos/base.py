@@ -58,12 +58,16 @@ class EOSTable(NamedTuple):
         return jnp.exp(logeps), jnp.exp(logp), cs2
 
 
-def build_h_and_cs2(n, eps_mevfm3, p_mevfm3):
+def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None):
     """Given (n, eps, p) build the geometric ``EOSTable`` with h and cs2.
 
     Parameters in MeV/fm^3 (eps, p) and fm^-3 (n).  Pseudo-enthalpy is computed
     by cumulative trapezoid integration of dp/(eps+p) in geometric units; cs2 by
     finite difference dp/deps on the grid.  All JAX-differentiable.
+
+    ``h_base`` : if given, the pseudo-enthalpy at the lowest grid point is set to
+    this value instead of the small self-consistent offset.  Used to continue the
+    enthalpy of an inner (e.g. quark) segment above a phase-transition enthalpy.
     """
     eps = eps_mevfm3 * MEVFM3_TO_GEOM            # km^-2
     p = p_mevfm3 * MEVFM3_TO_GEOM                # km^-2
@@ -77,7 +81,7 @@ def build_h_and_cs2(n, eps_mevfm3, p_mevfm3):
     dp = jnp.diff(p)
     seg = 0.5 * (integrand[1:] + integrand[:-1]) * dp
     h_rel = jnp.concatenate([jnp.zeros((1,)), jnp.cumsum(seg)])
-    h0 = p[0] / (eps[0] + p[0])                  # small offset at base of grid
+    h0 = (p[0] / (eps[0] + p[0])) if h_base is None else h_base
     h = h_rel + h0
 
     return EOSTable(
