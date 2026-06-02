@@ -120,8 +120,20 @@ surrogate/acceleration work.
 
 ## Near-term next actions
 
-1. Build the Phase-1 reference matrix harness (diffrax / SciPy(H,β) / RePrimAnd /
-   `qlimr` / lalsim) and the error tables.
+1. ~~Build the Phase-1 reference matrix harness~~ **DONE** —
+   `nmbackend/validation/reference_matrix.py` (+ `scripts/reference_matrix.py`).
+   Compares at fixed gravitational mass across an adversarial ladder (3 metamodel
+   variants + L_sym variant + hybrid); guarded columns for `diffrax`, `scipy_hbeta`,
+   `reprimand` (auto when installed), with `lalsim`/`qlimr` slots reserved; ΔR in
+   metres, ΔΛ in %, optional CSV for tracking vs the budget. Today it shows the
+   internal floor: diffrax vs SciPy (H,β) agree to **~1–2 m in R, ~0.1–0.4% in Λ**.
+   RePrimAnd lights up the column where the ~200 m gap appears.
 2. Replace log-linear interpolation + cs² clipping with a monotone,
    thermodynamically consistent EOS reconstruction; unify the surface convention.
 3. Re-measure the RePrimAnd-vs-ours R/Λ spread; attribute and drive toward ≲10 m.
+
+> Note on MUSES `qlimr`: its source is not on disk (only the Docker image at
+> `registry.gitlab.com/nsf-muses/calculation-engine`) and its license is unverified,
+> so it is **not yet vendored**. The harness reserves a `qlimr` slot; to wire it we
+> either clone the repo and extract the TOV kernel (license permitting) or run it
+> via the local Docker stack and ingest its output tables.
