@@ -36,7 +36,7 @@ import jax
 import jax.numpy as jnp
 
 from ..constants import HBARC, M_N, M_P, M_E, N_SAT_DEFAULT
-from .base import EOSModel, build_h_and_cs2
+from .base import EOSModel, build_h_and_cs2, extend_to_surface
 
 jax.config.update("jax_enable_x64", True)
 
@@ -128,11 +128,15 @@ class MetaModelEOS(EOSModel):
     name = "MetaModelEOS"
 
     def __init__(self, n_min=3e-4, n_points_low=240, n_points_tail=160,
-                 eps_max_fac=14.0):
+                 eps_max_fac=14.0, n_surface=1e-7, gamma_crust=1.3):
         self.n_min = n_min
         self.n_points_low = n_points_low
         self.n_points_tail = n_points_tail
         self.eps_max_fac = eps_max_fac
+        # surface continuation (see eos.base.extend_to_surface); set n_surface=None
+        # to disable and recover the old truncated-at-n_min behaviour.
+        self.n_surface = n_surface
+        self.gamma_crust = gamma_crust
 
     def _low_density(self, p):
         """Taylor metamodel part on n in [n_min, n_match]; MeV/fm^3, fm^-3."""
@@ -180,4 +184,9 @@ class MetaModelEOS(EOSModel):
         pres = jnp.concatenate([p_lo, p_t])
         pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
 
+        # surface convention: continue to p -> 0 so R is integrated to the surface
+        if self.n_surface is not None:
+            n, eps, pres = extend_to_surface(n, eps, pres,
+                                             n_surface=self.n_surface,
+                                             gamma_crust=self.gamma_crust)
         return build_h_and_cs2(n, eps, pres)

@@ -11,6 +11,7 @@ Motivated by ``jester`` (MIT) and RIFT ``EOSManager``; see ATTRIBUTION.md.
 """
 from __future__ import annotations
 
+import math
 from typing import NamedTuple
 import jax
 import jax.numpy as jnp
@@ -88,6 +89,37 @@ def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None):
         n=n, eps=eps, p=p, h=h, cs2=cs2,
         eps_mevfm3=eps_mevfm3, p_mevfm3=p_mevfm3,
     )
+
+
+def extend_to_surface(n, eps_mevfm3, p_mevfm3, n_surface=1e-7, gamma_crust=1.3,
+                      n_pts=120):
+    """Prepend a thermodynamically consistent low-density tail down to ``n_surface``.
+
+    The TOV radius depends on integrating the star out to (near) zero pressure.  A
+    table that stops at, e.g., n_min ~ 3e-4 fm^-3 (just below neutron drip)
+    truncates the outer crust/atmosphere and **underestimates R by ~100 m** -- a
+    surface *convention* mismatch with reference solvers (RePrimAnd) that integrate
+    closer to p -> 0.  Here we continue the EOS below its base point as a single
+    polytrope p = p0 (n/n0)^gamma_crust, with the energy density fixed by the cold
+    first law dε/dn = (ε+p)/n, whose closed-form solution
+        ε(n) = A n + p/(gamma_crust - 1),   A = (ε0 - p0/(gamma_crust-1))/n0
+    is continuous at the base point n0.
+
+    This is a *surface continuation*, NOT a physical crust (no composition / pasta);
+    ``gamma_crust`` and ``n_surface`` are the documented systematic knobs.  All
+    JAX-differentiable (the tail tracks the base point, which depends on EOS params).
+    """
+    n = jnp.asarray(n)
+    eps = jnp.asarray(eps_mevfm3)
+    p = jnp.asarray(p_mevfm3)
+    n0, e0, p0 = n[0], eps[0], p[0]
+    A = (e0 - p0 / (gamma_crust - 1.0)) / n0
+    n_lo = jnp.exp(jnp.linspace(math.log(n_surface), jnp.log(n0), n_pts))[:-1]
+    p_lo = p0 * (n_lo / n0) ** gamma_crust
+    e_lo = A * n_lo + p_lo / (gamma_crust - 1.0)
+    return (jnp.concatenate([n_lo, n]),
+            jnp.concatenate([e_lo, eps]),
+            jnp.concatenate([p_lo, p]))
 
 
 class EOSModel:

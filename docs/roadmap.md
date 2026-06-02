@@ -128,9 +128,24 @@ surrogate/acceleration work.
    metres, ΔΛ in %, optional CSV for tracking vs the budget. Today it shows the
    internal floor: diffrax vs SciPy (H,β) agree to **~1–2 m in R, ~0.1–0.4% in Λ**.
    RePrimAnd lights up the column where the ~200 m gap appears.
-2. Replace log-linear interpolation + cs² clipping with a monotone,
-   thermodynamically consistent EOS reconstruction; unify the surface convention.
-3. Re-measure the RePrimAnd-vs-ours R/Λ spread; attribute and drive toward ≲10 m.
+2. **Surface convention — DONE (the predicted big win).**
+   `eos.base.extend_to_surface` continues the EOS below its tabulated base as a
+   thermodynamically consistent polytrope down to p→0 (`n_surface`, `gamma_crust`
+   knobs), now the default in `MetaModelEOS` (and inherited by `HybridEOS`).
+   Measured effect: integrating the star to the surface instead of truncating at
+   n_min≈3e-4 fm⁻³ **raises R(1.4) by ~114 m** (converged by n_surf~1e-7), with Λ
+   stable to <0.2% — i.e. most of the ~200 m RePrimAnd gap was surface convention.
+   AD still flows (dR/dL_sym matches FD to ~1e-3). Disable with `n_surface=None`.
+   - **Still to do in action #2: the cs² representation.** The surface extension
+     exposed that the thin, stiff low-cs² surface shell *materially* affects Λ (so
+     its true small cs² must be kept — clipping it corrupts Λ by ≥10%), but the
+     current finite-difference cs² + clip makes the forward-mode **Λ gradient**
+     under-resolved near the surface (~25% at rtol=1e-9). Fix: monotone,
+     thermodynamically consistent cs²(h) (PCHIP / analytic in the polytrope tail),
+     which should restore Λ-gradient precision and further tighten R.
+3. Re-measure the RePrimAnd-vs-ours R/Λ spread (now expect ≲~80 m residual after
+   surface); attribute the remainder (interpolation, crust Γ, RePrimAnd low-density
+   handling) and drive toward ≲10 m.
 
 > Note on MUSES `qlimr`: its source is not on disk (only the Docker image at
 > `registry.gitlab.com/nsf-muses/calculation-engine`) and its license is unverified,
