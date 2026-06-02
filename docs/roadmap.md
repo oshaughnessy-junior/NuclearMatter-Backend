@@ -72,9 +72,17 @@ residual attributed.
 Keep the fast **NEP metamodel** as the lightweight inference model; add a faithful
 **relativistic mean-field** sibling under the same `EOSModel`/`EOSTable` interface.
 
-1. **Self-consistent RMFT Lagrangian solver** (σ-ω-ρ with nonlinear self-couplings;
-   optional δ, hyperons).  Solve the meson field equations + β-equilibrium at each
-   density (differentiable root-find, as we already do for the proton fraction).
+1. **Self-consistent RMFT Lagrangian solver — DONE.** `eos.rmft.RMFTEOS`: σ-ω-ρ
+   mean-field with nonlinear scalar (Boguta–Bodmer) self-couplings; the scalar field
+   Φ = g_σσ is solved self-consistently (Newton on its gap equation) and β-equilibrium
+   with leptons fixes the proton fraction — both differentiable (AD flows through the
+   nested solves). Pressure from the Gibbs relation p = μ_n n_B − ε (thermodynamically
+   consistent). **Validated against GM1**: saturation reproduced essentially exactly
+   (n₀=0.153, B/A=−16.3, m*/M=0.70, K≈300) and the NS branch gives M_max=2.39 M⊙
+   (lit. ~2.36), R(1.4)=13.3 km (lit. ~13.7). Slots into all tooling (RIFT adapter,
+   reference matrix) via the standard `EOSTable`. *Next within this item:* fit
+   couplings from NEPs (vs fixed sets), optional δ-meson/hyperons, density-dependent
+   couplings.
 2. **Reuse MUSES `cmf_solver`** (Chiral Mean Field — RMFT-class, with hyperons) as a
    *reference EOS generator* and a validation target; cross-check our RMFT against it.
    MUSES `eos_taylor_4d` validates the metamodel branch; `njl`/quark modules feed the

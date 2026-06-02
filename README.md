@@ -67,8 +67,10 @@ eos = EOSConcreteNMB(mm, params)                 # .lambda_from_m, .pressure_den
 src/nmbackend/
   constants.py            units (geometric km; MeV/fm^3 <-> km^-2; SI for RIFT)
   eos/
-    base.py               EOSModel ABC, EOSTable, pseudo-enthalpy build
+    base.py               EOSModel ABC, EOSTable, thermo-consistent at_h, surface
     metamodel.py          nuclear empirical-parameter EOS + causal (CSS) tail
+    rmft.py               self-consistent sigma-omega-rho RMFT (GM1-validated)
+    hybrid.py             Maxwell hadron-quark EOS (first-order phase transition)
     polytrope.py          analytic polytrope (solver validation)
   tov/
     solver.py             TOV-in-enthalpy + tidal y -> k2, Λ; backends: diffrax

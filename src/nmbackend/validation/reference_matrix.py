@@ -23,7 +23,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from ..eos import MetaModelEOS, HybridEOS
+from ..eos import MetaModelEOS, HybridEOS, RMFTEOS
 from ..tov import build_family, solve_hybrid
 from ..tov.family import default_hc_grid
 from ..reference.scipy_tov import solve_reference, solve_reference_hybrid
@@ -106,6 +106,7 @@ def build_ladder():
         ("MetaModel(stiff cs2_tail=0.6)", "smooth", mm.eos_table({"cs2_tail": 0.6}), None),
         ("MetaModel(soft  cs2_tail=0.3)", "smooth", mm.eos_table({"cs2_tail": 0.3}), None),
         ("MetaModel(L40)", "smooth", mm.eos_table({"L_sym": 40.0}), None),
+        ("RMFT(GM1)", "smooth", RMFTEOS().eos_table(), None),
         ("Hybrid(pt=80, de=250, cs2q=1)", "hybrid",
          HybridEOS(p_trans_mev=80.0, delta_eps_mev=250.0, cs2_quark=1.0), None),
     ]
