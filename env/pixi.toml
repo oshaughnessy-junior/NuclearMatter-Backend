@@ -34,6 +34,10 @@ cxx-compiler = "*"
 
 [pypi-dependencies]
 nmbackend = { path = "..", editable = true }
+# RePrimAnd Python interface (PyPI distribution "reprimand"; import "pyreprimand").
+# Linux has a binary wheel. On macOS/HPC remove this and build from source
+# (docs/environment.md) -- the meson/boost/gsl/hdf5 build deps are above.
+reprimand = "*"
 
 [tasks]
 tests = "cd .. && PYTHONPATH=src pytest"

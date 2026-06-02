@@ -26,25 +26,39 @@ PYTHONPATH=src pytest
 PYTHONPATH=src python scripts/validate_against_reprimand.py
 ```
 
-## RePrimAnd (`pyreprimand`)
+## RePrimAnd (PyPI distribution `reprimand`, import module `pyreprimand`)
 
-RePrimAnd is usually **not** a turnkey conda/pip package.  In order of preference:
+The PyPI **distribution is named `reprimand`** (not `pyreprimand`); the importable
+**module is `pyreprimand`**.  Using the wrong name is why `pip install pyreprimand`
+fails with "No matching distribution found".
 
-1. **Reuse what you already have.**  If `junior_tools` (or your RIFT env) already
-   provides a working `pyreprimand`, just run the validation script in that env —
-   `import pyreprimand` is the only requirement.  *(I could not see `junior_tools`
-   from the sandbox; point me at it and I'll wire the reference adapter to match
-   exactly what you have.)*
-2. **Build from source** (the `env/*` files install the build deps —
-   meson/ninja/boost/gsl/hdf5/pybind11/compiler):
+1. **Linux (easiest)** — a binary wheel exists, so just:
+   ```bash
+   pip install reprimand
+   python -c "import pyreprimand; print(pyreprimand.__file__)"
+   ```
+   The `env/` files already list `reprimand` for the pip/PyPI step.
+
+2. **macOS / HPC (no wheel)** — build from source (the `env/*` files provide the
+   build deps: meson/ninja/boost-cpp/gsl/hdf5/pybind11/compiler):
    ```bash
    git clone https://github.com/wokast/RePrimAnd && cd RePrimAnd
-   meson build -Dbuildtype=release -Dpython=true   # see RePrimAnd docs for flags
-   ninja -C build && ninja -C build install
+   # C++ library first (in a conda env, point meson at it):
+   BOOST_ROOT=$CONDA_PREFIX meson setup --prefix=$CONDA_PREFIX mbuild --buildtype=release
+   ninja -C mbuild && ninja -C mbuild install
+   # then the Python bindings:
+   cd bindings/python && pip install .
    python -c "import pyreprimand; print('ok')"
    ```
-   Reference: RePrimAnd docs (https://wokast.github.io/RePrimAnd/), Zenodo
-   10617510 (release 1.6+).
+   HDF5 tip from the README: if meson/hdf5 misbehave in conda, prefix
+   `LD_LIBRARY_PATH` with `$CONDA_PREFIX/lib`.  Reference: RePrimAnd README
+   (https://github.com/wokast/RePrimAnd), docs (https://wokast.github.io/RePrimAnd/),
+   Zenodo 10617510 (release 1.6/1.7).
+
+3. **Reuse what you already have.**  If `junior_tools` (or your RIFT env) already
+   provides a working `pyreprimand`, just run the validation script there.  *(I
+   couldn't see `junior_tools` from the sandbox; point me at it / paste
+   `pydoc pyreprimand` and I'll match the reference adapter to your exact version.)*
 
 > **API drift:** RePrimAnd's Python API changed across releases and **RIFT's
 > `EOSManager.EOSReprimand` targets an old one**.  `src/nmbackend/reference/

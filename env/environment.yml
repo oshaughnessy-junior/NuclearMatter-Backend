@@ -5,8 +5,10 @@
 #   pip install -e .
 #   PYTHONPATH=src pytest
 #
-# RePrimAnd (pyreprimand) is usually NOT on conda-forge; build it from source in
-# this env (deps below: meson/ninja/boost/gsl/hdf5/pybind11) per docs/environment.md.
+# RePrimAnd's Python interface: PyPI distribution is named "reprimand" (the import
+# module is "pyreprimand"); a binary wheel exists for Linux, so `pip install
+# reprimand` works there.  On macOS/HPC build from source with the meson/ninja/
+# boost/gsl/hdf5/pybind11 deps below.  See docs/environment.md.
 name: nmbackend-validate
 channels:
   - conda-forge
@@ -34,4 +36,6 @@ dependencies:
   - hdf5
   - cxx-compiler
   - pip:
-      - pyreprimand   # try PyPI first; if it fails, build from source (docs)
+      # Linux binary wheel available. On macOS/HPC remove this line and build from
+      # source (docs/environment.md); the build deps above are already provided.
+      - reprimand     # PyPI distribution name; import as `pyreprimand`
