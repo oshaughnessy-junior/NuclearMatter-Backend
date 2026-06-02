@@ -129,6 +129,11 @@ def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None):
     this value instead of the small self-consistent offset.  Used to continue the
     enthalpy of an inner (e.g. quark) segment above a phase-transition enthalpy.
     """
+    # force jnp so every EOSTable is uniform (numpy inputs -- hybrid combined table,
+    # ingested CompOSE/CMF tables -- otherwise break the jit-traced Hermite at_h)
+    n = jnp.asarray(n)
+    eps_mevfm3 = jnp.asarray(eps_mevfm3)
+    p_mevfm3 = jnp.asarray(p_mevfm3)
     eps = eps_mevfm3 * MEVFM3_TO_GEOM            # km^-2
     p = p_mevfm3 * MEVFM3_TO_GEOM                # km^-2
 

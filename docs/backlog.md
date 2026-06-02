@@ -53,6 +53,29 @@ convention/normalization mismatch. Two things to nail before shipping any set:
 **Why deferred:** GM1 (default) is fully validated, so the engine is proven; this is
 about breadth of parameter sets, best done with a reference table in hand.
 
+## Enthalpy-parameterized, multi-branch EOS inference (RIFT framing)
+
+**What:** RIFT's tabular EOS inference (and our drop-in legacy emitter) reduce each
+EOS to a **single stable branch** ordered by Lambda(m_ref), then sample that 1-D
+ordering and look up Lambda(m1), Lambda(m2). This **throws away disconnected stable
+branches** (twin stars from a strong first-order phase transition) and forces a
+single-valued M->Lambda map.
+
+**Better framing (RO):** the low-level sequence parameter is the **central
+pseudo-enthalpy h_c**, which is monotone. Parameterize the inference *directly* along
+h_c (a path integral in enthalpy) rather than along Lambda(m_ref). M(h_c), R(h_c),
+Lambda(h_c) are single-valued in h_c, so all branches — including disconnected twin
+branches — are represented natively; the binary's component masses select the
+branch(es) consistently, and the likelihood integrates over h_c (per star) instead of
+over a collapsed 1-D Lambda ordering.
+
+**Why deferred / status:** the new `NSSequence` format already stores everything vs
+h_c (the substrate for this), and `write_landry_legacy` keeps today's RIFT working
+(single branch). Implementing the enthalpy-path-integral likelihood is a change to
+the RIFT inference driver (`util_ConstructIntrinsicPosterior_GenericCoordinates.py`)
++ the EOS-marginalization, which we can develop against our own source copy. Pairs
+naturally with the twin-star/`build_family` branch bookkeeping item.
+
 ## Muons in beta-equilibrium
 
 **What:** beta-equilibrium NS matter contains muons once mu_e > m_mu (~106 MeV,
