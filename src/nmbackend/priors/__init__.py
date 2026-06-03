@@ -8,7 +8,9 @@ perturbative-QCD limit. See :mod:`nmbackend.priors.bridge`.
 from .bridge import (kk_volume, sample_point_in_volume, fractal_refine,
                      diffuse_mu_of_n, draw_bridge_eos, draw_prior_ensemble,
                      pqcd_anchor, PQCD_TABLE)
+from .gp_pca import CoefficientPrior, write_pca_draws, iterative_refinement
 
 __all__ = ["kk_volume", "sample_point_in_volume", "fractal_refine",
            "diffuse_mu_of_n", "draw_bridge_eos", "draw_prior_ensemble",
-           "pqcd_anchor", "PQCD_TABLE"]
+           "pqcd_anchor", "PQCD_TABLE",
+           "CoefficientPrior", "write_pca_draws", "iterative_refinement"]
