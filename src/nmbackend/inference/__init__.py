@@ -6,6 +6,8 @@ consumer of the backend's differentiability.
 """
 from .fisher import (eos_observables, sensitivity_matrix, fisher_matrix,
                      fisher_covariance, GRADIENT_RTOL, GRADIENT_ATOL)
+from .synthetic import lambda_tilde, draw_bns_events, SyntheticTidalEvents
 
 __all__ = ["eos_observables", "sensitivity_matrix", "fisher_matrix",
-           "fisher_covariance", "GRADIENT_RTOL", "GRADIENT_ATOL"]
+           "fisher_covariance", "GRADIENT_RTOL", "GRADIENT_ATOL",
+           "lambda_tilde", "draw_bns_events", "SyntheticTidalEvents"]

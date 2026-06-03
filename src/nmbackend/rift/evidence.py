@@ -81,6 +81,119 @@ def remap_net_index_column(net_in, net_out, n_eos, index_col=11):
     return net_out
 
 
+#: MARG-style argument template for the exact per-EOS ("painful") mode: one full
+#: CIP evidence per fixed EOS realization, EOS supplied via --using-eos nmbseq:…
+PAINFUL_CIP_ARGS = (
+    "--fname {net} --parameter mc --parameter delta_mc --parameter-implied xi "
+    "--parameter-implied chiMinus --parameter-nofit s1z --parameter-nofit s2z "
+    "--parameter-implied LambdaTilde --input-tides "
+    "--using-eos nmbseq:{seq}:{index} "
+    "--lambda-max 20000 --fit-method rf --no-plots "
+    "--mc-range [1.197,1.1985] --eta-range [0.2,0.249999] "
+    "--downselect-parameter m1 --downselect-parameter-range [1,3] "
+    "--downselect-parameter m2 --downselect-parameter-range [1,3] "
+    "--sampler-method default --aligned-prior alignedspin_zprior --chi-max 0.05"
+)
+
+
+def strip_index_column(net_in, net_out, index_col=11):
+    """Remove the EOS-index column from a tabular composite (for fixed-EOS runs:
+    without ``--input-eos-index`` CIP expects no index column after lambda2)."""
+    dat = np.loadtxt(net_in)
+    np.savetxt(net_out, np.delete(dat, index_col, axis=1))
+    return net_out
+
+
+class CIPPerEOSEvidence:
+    """EXACT per-EOS evidence: one full CIP run per EOS realization (MARG-style).
+
+    This is the reference ("painful") computation: for each draw, CIP is run with
+    the EOS held FIXED (``--using-eos nmbseq:<draws.h5>:<e>``, requiring the
+    patched RIFT with ``EOSSequenceSingleIndex``), and the per-EOS lnZ is read
+    from ``integral_result.dat``.  No ordering-statistic approximation -- use it
+    to VALIDATE :class:`CIPTabularEvidence` (the Vilkha grid method, which treats
+    the posterior over the sequence index as robust) and for referee-grade runs.
+
+    Cost: n_draws CIP jobs per round (× n_events for multi-event); ~30 s each at
+    demo settings -- i.e. 10^4 draws ≈ 80+ core-hours per generation per event.
+    ``n_parallel`` runs that many subprocesses concurrently on one host; for real
+    campaigns drive via condor.
+    """
+
+    def __init__(self, cip_exe, net_file, workdir, rift_code=None,
+                 python_exe=None, args_template=PAINFUL_CIP_ARGS, extra_args="",
+                 n_max=150000, n_eff=10, strip_net_index=True, index_col=11,
+                 n_parallel=2, timeout=3600, verbose=False):
+        self.cip_exe = str(cip_exe)
+        self.net_file = str(net_file)
+        self.workdir = str(workdir)
+        self.rift_code = rift_code
+        self.python_exe = python_exe or sys.executable
+        self.args_template = args_template
+        self.extra_args = extra_args
+        self.n_max = int(n_max)
+        self.n_eff = int(n_eff)
+        self.strip_net_index = strip_net_index
+        self.index_col = index_col
+        self.n_parallel = max(1, int(n_parallel))
+        self.timeout = timeout
+        self.verbose = verbose
+        self._net_stripped = None
+
+    def _net(self):
+        if not self.strip_net_index:
+            return self.net_file
+        if self._net_stripped is None:
+            os.makedirs(self.workdir, exist_ok=True)
+            self._net_stripped = strip_index_column(
+                self.net_file, os.path.join(self.workdir, "net_noindex.dat"),
+                index_col=self.index_col)
+        return self._net_stripped
+
+    def _one(self, seq, e, rdir):
+        os.makedirs(rdir, exist_ok=True)
+        cmd = ([self.python_exe, self.cip_exe]
+               + self.args_template.format(net=self._net(), seq=seq,
+                                           index=e).split()
+               + ["--n-max", str(self.n_max), "--n-eff", str(self.n_eff)]
+               + (self.extra_args.split() if self.extra_args else []))
+        env = dict(os.environ)
+        if self.rift_code:
+            env["PYTHONPATH"] = (str(self.rift_code) + ":"
+                                 + env.get("PYTHONPATH", ""))
+        return subprocess.Popen(cmd, cwd=rdir, env=env,
+                                stdout=subprocess.DEVNULL,
+                                stderr=subprocess.DEVNULL)
+
+    def __call__(self, prior, coeffs):
+        n_eos = len(coeffs)
+        gen = prior.generation
+        base = os.path.join(self.workdir, f"gen_{gen}_painful")
+        os.makedirs(base, exist_ok=True)
+        seq = os.path.join(base, "draws.pca.h5")
+        write_pca_draws(seq, prior, coeffs)
+
+        lnZ = np.full(n_eos, np.nan)
+        pending = list(range(n_eos))
+        running = {}
+        while pending or running:
+            while pending and len(running) < self.n_parallel:
+                e = pending.pop(0)
+                running[e] = self._one(seq, e, os.path.join(base, f"eos_{e}"))
+            done = [e for e, p in running.items() if p.poll() is not None]
+            for e in done:
+                running.pop(e)
+                f = os.path.join(base, f"eos_{e}", "integral_result.dat")
+                if os.path.exists(f):
+                    lnZ[e] = float(np.loadtxt(f))
+                if self.verbose:
+                    print(f"[gen {gen}] painful eos_{e}: lnZ={lnZ[e]}")
+            if running:
+                import time
+                time.sleep(2.0)
+        return lnZ
+
+
 class CIPTabularEvidence:
     """``evidence_fn(prior, coeffs) -> lnZ`` running one CIP job per round.
 
