@@ -1,5 +1,34 @@
 # Overnight status — EOS backend (post RIFT-integration smoke test)
 
+## Session 2 addendum (own prior + docs)
+
+Per direction ("generate our own prior… Gorda-style GP priors with QCD consistency"
+and the pointer to arXiv:2512.18044):
+
+1. **Constrained Brownian-bridge prior** (`nmbackend.priors.bridge`,
+   `scripts/draw_bridge_prior.py`) — full implementation of
+   Gorda-Komoltsev-Kurkela-Sunde 2025: KK 3-volume (verified against the
+   2111.05350 formulas and Table I anchors), exact uniform sampling in the
+   (μ,n,p) volume, self-similar fractal refinement, diffusion smoothing.
+   One deliberate reformulation: the diffusion is done as constant-D smoothing of
+   ln μ vs ln n — equivalent to the paper's D∝n² (σ/n = const) but with an exact
+   maximum principle for cs², after the paper's μ(n) form produced cs² up to ~8
+   under a tapered D (taper violates their App. C condition). Result: cs² ∈ [0,1]
+   exactly, μ/p monotone, dε/dn=μ to machine precision, μ anchors exact, pQCD
+   pressure endpoint within a few % (inside the X band). Draws make physical stars
+   (M_max 1.5–1.9, R(1.4) ≈ 11–12 km). 5 tests in `tests/test_bridge_prior.py`.
+   Low anchor = our metamodel band (NEPs sampled per draw) → the prior is OURS.
+2. **LCEHL recovery** (`scripts/convert_landry_to_nss.py`) — repackage the
+   published files into NSS (verified on the real 10⁴-EOS PSR+GW+NICER file), or
+   re-solve their microphysical tables with our TOV (`--mode resolve`).
+3. **Sphinx/readthedocs site** (`docs/` + `.readthedocs.yaml`) — user guide
+   (installation/quickstart/physics/priors/representations/RIFT/inference), API
+   autodoc with mocked heavy deps, design notes + devlog in toctrees; builds clean
+   (21 pages) with `sphinx-build`.
+
+Commits: `1f1258d` (bridge prior), `c495d63` (LCEHL converter), `d1dc4fe` (docs).
+
+
 Picking up after `SMOKE TEST PASS`. Three deliverables landed, each committed with
 tests; the full suite is green (every test file run, no regressions). Summary below.
 
