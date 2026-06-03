@@ -122,25 +122,64 @@ def open_sequence(fname):
         "(reserved for future GP / interpolant representations)")
 
 
+# ---------------- parallel sequence builds ----------------
+def _one_eos_worker(args):
+    """Subprocess worker: rebuild the EOSTable from numpy and run _one_eos."""
+    arrays, n_points = args
+    from ..eos.base import EOSTable
+    t = EOSTable(*[jnp.asarray(a) for a in arrays])
+    return _one_eos(t, n_points)
+
+
+def _build_rows(tables, n_points, n_jobs=None, progress=False, desc="TOV sequences"):
+    """Per-EOS sequence rows, parallel across EOS (process pool, spawn context).
+
+    ``n_jobs=None`` -> max(5, cpu_count-1) workers (sequential for tiny batches,
+    where spawn+jax-init overhead would dominate).  Workers are separate
+    processes, so per-EOS numerics are identical to the sequential path
+    (verified bitwise).  NOTE: the spawn context requires the CALLING script to
+    use the standard ``if __name__ == "__main__":`` guard (all our CLIs do).
+    """
+    import os as _os
+    if n_jobs is None:
+        n_jobs = max(5, (_os.cpu_count() or 5) - 1)
+    bar = None
+    if progress:
+        from ..priors.bridge import _pbar
+        bar = _pbar(len(tables), desc)
+    rows = [None] * len(tables)
+    if n_jobs <= 1 or len(tables) < max(8, n_jobs):
+        for k, t in enumerate(tables):
+            rows[k] = _one_eos(t, n_points)
+            if bar:
+                bar.update(1)
+    else:
+        import multiprocessing as mp
+        ctx = mp.get_context("spawn")          # jax-safe (no fork-after-init)
+        payload = [(tuple(np.asarray(x) for x in t), n_points) for t in tables]
+        with ctx.Pool(min(n_jobs, len(tables))) as pool:
+            for k, row in enumerate(pool.imap(_one_eos_worker, payload)):
+                rows[k] = row
+                if bar:
+                    bar.update(1)
+    if bar:
+        bar.close()
+    return rows
+
+
 # ---------------- new self-describing format (tabular representation) ----------------
-def write_nss(fname, tables, params=None, n_points=80, progress=False):
+def write_nss(fname, tables, params=None, n_points=80, progress=False,
+              n_jobs=None):
     """Write the robust ``NSSequence`` HDF5 (tabular_hc representation) from EOSTables.
 
-    ``progress=True`` shows a per-EOS bar (the TOV family builds dominate runtime).
+    The per-EOS TOV family builds (the dominant cost) run across ``n_jobs``
+    worker processes (default: max(5, cpu_count-1); sequential for small
+    batches).  ``progress=True`` shows a per-EOS bar.
     """
     if not _HAVE_H5PY:
         raise ImportError("write_nss requires h5py")
-    if progress:
-        from ..priors.bridge import _pbar
-        bar = _pbar(len(tables), "TOV sequences")
-        rows = []
-        for t in tables:
-            rows.append(_one_eos(t, n_points))
-            bar.update(1)
-        bar.close()
-        seq = np.stack(rows, axis=0)
-    else:
-        seq = np.stack([_one_eos(t, n_points) for t in tables], axis=0)
+    seq = np.stack(_build_rows(tables, n_points, n_jobs=n_jobs,
+                               progress=progress), axis=0)
     with h5py.File(fname, "w") as f:
         f.attrs["schema_version"] = "nmbackend.nss/1"
         f.attrs["representation"] = "tabular_hc/1"      # dispatch tag (see open_sequence)
@@ -199,7 +238,8 @@ class NSSequence(SequenceRepresentation):
 
 
 # ---------------- legacy EOSSequenceLandry format (drop-in for RIFT) ----------------
-def write_landry_legacy(fname, tables, eos_tables=None, n_points=120):
+def write_landry_legacy(fname, tables, eos_tables=None, n_points=120,
+                        n_jobs=None, progress=False):
     """Write the exact ``EOSSequenceLandry`` HDF5 (id, ns/<name>{M,R,Lambda},
     eos/<name>{pressurec2,energy_densityc2,baryon_density} in g/cm^3).
 
@@ -213,8 +253,10 @@ def write_landry_legacy(fname, tables, eos_tables=None, n_points=120):
         f.create_dataset("id", data=np.arange(len(tables)))
         gns = f.create_group("ns")
         geos = f.create_group("eos") if eos_tables is not None else None
+        rows = _build_rows(tables, n_points, n_jobs=n_jobs, progress=progress,
+                           desc="TOV sequences (legacy)")
         for k, t in enumerate(tables):
-            seq = _one_eos(t, n_points)
+            seq = rows[k]
             M, R, Lam = _stable_rising(seq[:, 1], seq[:, 2], seq[:, 3], seq[:, 8])
             ns = np.zeros(M.size, dtype=[("M", "f8"), ("R", "f8"), ("Lambda", "f8")])
             ns["M"], ns["R"], ns["Lambda"] = M, R, Lam
