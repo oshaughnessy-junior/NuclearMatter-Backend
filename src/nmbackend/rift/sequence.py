@@ -114,6 +114,9 @@ def open_sequence(fname):
         rep = str(f.attrs.get("representation", "tabular_hc/1"))
     if rep.startswith("tabular"):
         return NSSequence(fname)
+    if rep.startswith("pca"):
+        from .compressed import PCASequence
+        return PCASequence(fname)
     raise NotImplementedError(
         f"sequence representation {rep!r} not yet supported "
         "(reserved for future GP / interpolant representations)")

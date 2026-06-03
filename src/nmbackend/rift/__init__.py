@@ -11,7 +11,11 @@ everything vs h_c, so it is the substrate for that.  See docs/backlog.md.
 from .sequence import (write_nss, NSSequence, write_landry_legacy,
                        open_sequence, SequenceRepresentation,
                        NSS_FIELDS, NSS_UNITS)
+from .compressed import (write_pca, write_pca_from_nss, PCASequence,
+                         fit_sequence_pca, compression_ratio, PCA_FIELDS)
 
 __all__ = ["write_nss", "NSSequence", "write_landry_legacy",
            "open_sequence", "SequenceRepresentation",
-           "NSS_FIELDS", "NSS_UNITS"]
+           "NSS_FIELDS", "NSS_UNITS",
+           "write_pca", "write_pca_from_nss", "PCASequence",
+           "fit_sequence_pca", "compression_ratio", "PCA_FIELDS"]
