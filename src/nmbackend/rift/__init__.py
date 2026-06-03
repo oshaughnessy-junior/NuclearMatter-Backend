@@ -9,7 +9,9 @@ of reducing to a single Lambda(m_ref) ordering.  The NSSequence format already s
 everything vs h_c, so it is the substrate for that.  See docs/backlog.md.
 """
 from .sequence import (write_nss, NSSequence, write_landry_legacy,
+                       open_sequence, SequenceRepresentation,
                        NSS_FIELDS, NSS_UNITS)
 
 __all__ = ["write_nss", "NSSequence", "write_landry_legacy",
+           "open_sequence", "SequenceRepresentation",
            "NSS_FIELDS", "NSS_UNITS"]

@@ -18,6 +18,7 @@ Two layers:
 """
 from __future__ import annotations
 
+import abc
 import json
 import datetime
 import numpy as np
@@ -72,14 +73,61 @@ def _stable_rising(M, R, Lam, stable):
     return M[o], R[o], Lam[o]
 
 
-# ---------------- new self-describing format ----------------
+# ---------------- representation-agnostic accessor protocol ----------------
+class SequenceRepresentation(abc.ABC):
+    """Accessor protocol any EOS-sequence representation must provide.
+
+    A 'sequence' is an indexed family of EOS.  Consumers (RIFT inference) depend ONLY
+    on these methods -- NOT on how the family is stored.  Today's representation is
+    **tabular draws** stored vs central enthalpy (:class:`NSSequence`,
+    ``representation='tabular_hc/1'``).  The interface is deliberately storage-agnostic
+    so the internal representation can later be a **compressed / functional** form --
+    a Gaussian process over the EOS function space, PCA / spectral / empirical
+    interpolants, etc. -- modelling functional spaces rather than pure draws, without
+    changing any consumer.  ``open_sequence`` dispatches on the ``representation`` tag.
+    """
+    n_eos: int = 0
+    params = None
+
+    @abc.abstractmethod
+    def lambda_of_m(self, m, e): ...
+    @abc.abstractmethod
+    def radius_of_m(self, m, e): ...
+    @abc.abstractmethod
+    def m_max(self, e): ...
+
+    def ordering_values(self, m_ref, kind="Lambda"):
+        """Ordering statistic (Lambda or R at m_ref) for every EOS."""
+        fn = self.lambda_of_m if kind.lower() == "lambda" else self.radius_of_m
+        return np.array([fn(m_ref, e) for e in range(self.n_eos)])
+
+
+def open_sequence(fname):
+    """Open an EOS sequence, dispatching on its stored ``representation`` tag.
+
+    Returns a :class:`SequenceRepresentation`.  Future compressed representations
+    (GP / interpolant) register here; today only 'tabular_hc' is implemented.
+    """
+    if not _HAVE_H5PY:
+        raise ImportError("open_sequence requires h5py")
+    with h5py.File(fname, "r") as f:
+        rep = str(f.attrs.get("representation", "tabular_hc/1"))
+    if rep.startswith("tabular"):
+        return NSSequence(fname)
+    raise NotImplementedError(
+        f"sequence representation {rep!r} not yet supported "
+        "(reserved for future GP / interpolant representations)")
+
+
+# ---------------- new self-describing format (tabular representation) ----------------
 def write_nss(fname, tables, params=None, n_points=80):
-    """Write the robust ``NSSequence`` HDF5 from a list of EOSTables."""
+    """Write the robust ``NSSequence`` HDF5 (tabular_hc representation) from EOSTables."""
     if not _HAVE_H5PY:
         raise ImportError("write_nss requires h5py")
     seq = np.stack([_one_eos(t, n_points) for t in tables], axis=0)
     with h5py.File(fname, "w") as f:
         f.attrs["schema_version"] = "nmbackend.nss/1"
+        f.attrs["representation"] = "tabular_hc/1"      # dispatch tag (see open_sequence)
         f.attrs["generator"] = f"nmbackend {_NMB_VERSION}"
         f.attrs["created"] = datetime.datetime.utcnow().isoformat()
         f.attrs["fields"] = json.dumps(NSS_FIELDS)
@@ -90,8 +138,8 @@ def write_nss(fname, tables, params=None, n_points=80):
     return fname
 
 
-class NSSequence:
-    """Reader for the ``NSSequence`` format; branch-aware, vectorized accessors."""
+class NSSequence(SequenceRepresentation):
+    """Tabular EOS sequence stored vs central enthalpy; branch-aware accessors."""
 
     def __init__(self, fname):
         if not _HAVE_H5PY:
