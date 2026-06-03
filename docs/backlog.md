@@ -4,6 +4,19 @@ Tracked items intentionally deferred, with the context for when they matter.
 
 ## Gradient tightening (forward-mode tangent precision)
 
+> **UPDATE (resolved for Fisher/forecasting via IFT).** The catastrophic case was not
+> the solver tangent but differentiating through the *family interpolation* at fixed
+> mass: the dominant term is the central-enthalpy reparameterization as the mass target
+> shifts, and the coarse interpolation got it wrong (flipping the sign of
+> dLambda/dcs2_tail). `nmbackend.inference.fisher.sensitivity_matrix` now computes
+> fixed-mass sensitivities by the **implicit-function theorem** and M_max by the
+> **envelope theorem**, using only the (accurate) single-star tangents. Validated vs
+> FD: dM_max ~0.1%, dR ~0.3%, dLambda ~4% (down from 137% wrong-sign). The single-star
+> Lambda tangent still carries the ~3-5% residual below; the n-mu interpolation item
+> would shave that further but is no longer blocking. See tests/test_fisher.py.
+
+
+
 **What:** the thermodynamically consistent Hermite interpolation (`eos.base.at_h`)
 gives excellent EOS/TOV *values* but the forward-mode AD *tangents* are
 tolerance-sensitive and have a small interpolation-tangent residual:
