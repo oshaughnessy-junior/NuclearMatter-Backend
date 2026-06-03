@@ -4,16 +4,22 @@ Tracked items intentionally deferred, with the context for when they matter.
 
 ## Gradient tightening (forward-mode tangent precision)
 
-> **UPDATE (resolved for Fisher/forecasting via IFT).** The catastrophic case was not
-> the solver tangent but differentiating through the *family interpolation* at fixed
-> mass: the dominant term is the central-enthalpy reparameterization as the mass target
-> shifts, and the coarse interpolation got it wrong (flipping the sign of
-> dLambda/dcs2_tail). `nmbackend.inference.fisher.sensitivity_matrix` now computes
-> fixed-mass sensitivities by the **implicit-function theorem** and M_max by the
-> **envelope theorem**, using only the (accurate) single-star tangents. Validated vs
-> FD: dM_max ~0.1%, dR ~0.3%, dLambda ~4% (down from 137% wrong-sign). The single-star
-> Lambda tangent still carries the ~3-5% residual below; the n-mu interpolation item
-> would shave that further but is no longer blocking. See tests/test_fisher.py.
+> **RESOLVED (via IFT; validated against a re-rooted fixed-mass FD).** The catastrophic
+> case was never the solver tangent -- it was differentiating through the *family
+> interpolation* at fixed mass. The dominant term is the central-enthalpy
+> reparameterization as the mass target shifts; the coarse interpolation got it wrong
+> (flipping the sign of dLambda/dcs2_tail). `nmbackend.inference.fisher.sensitivity_matrix`
+> now uses the **implicit-function theorem** for fixed-mass observables and the
+> **envelope theorem** for M_max, from accurate single-star tangents only.
+>
+> Crucially, the "13%/137%" residuals we first saw were *artifacts of the noisy
+> family-interpolation FD reference*, not the method. Against the correct reference --
+> a fixed-mass FD that **re-roots h_c (Newton-polished) for each perturbed EOS** -- the
+> IFT sensitivities are: **dLambda/dcs2_tail 0.0%, dLambda/dL_sym 2.5%, dR ~0.3%,
+> dM_max ~0.1%** (tests/test_fisher.py). The only residual is the ~2.5% single-star
+> Lambda tidal tangent at tight tolerance (the documented item below), which is fine
+> for Fisher/HMC. **The n-mu interpolation rewrite is therefore NOT needed** for this;
+> keep it only as an optional future smoothing of the last ~2.5%.
 
 
 
