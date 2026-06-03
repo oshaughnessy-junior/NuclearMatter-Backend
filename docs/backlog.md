@@ -76,6 +76,29 @@ the RIFT inference driver (`util_ConstructIntrinsicPosterior_GenericCoordinates.
 + the EOS-marginalization, which we can develop against our own source copy. Pairs
 naturally with the twin-star/`build_family` branch bookkeeping item.
 
+## lalsuite NS-sequence structure: drop-in / comparison
+
+**What:** recent lalsuite moved toward an NS-sequence data structure (analogous to our
+`NSSequence`). We should add a reader/writer pairing so the same generated sequence can
+feed both RIFT (via `EOSSequenceNMB` / legacy `EOSSequenceLandry`, done) and the
+lalsuite NS-sequence path, enabling cross-code comparison of M(h_c), R, Lambda on
+identical EOS input.
+
+**Status / hook:** the representation abstraction is in place
+(`rift.SequenceRepresentation` + `open_sequence` dispatching on the HDF5
+`representation` attr), so a `lalsuite_nsseq/1` representation can register as another
+backend without touching consumers. Pin the exact lalsuite struct/fields before
+implementing the adapter.
+
+**Compression / functional representations (design mandate):** the same abstraction is
+the seam for moving off pure tabular draws to *compressed / functional* internal
+representations — empirical/spectral interpolants, PCA, or a Gaussian process over the
+EOS function space (modelling functional spaces rather than draws). These register as
+new `representation` tags (e.g. `gp_hc/1`, `pca_hc/1`) implementing the same
+`SequenceRepresentation` accessor protocol; `write_nss`/`open_sequence` already carry
+and dispatch on the tag. No consumer (RIFT, generator CLI) changes when the storage
+changes.
+
 ## Muons in beta-equilibrium
 
 **What:** beta-equilibrium NS matter contains muons once mu_e > m_mu (~106 MeV,
