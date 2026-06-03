@@ -10,7 +10,7 @@ uniform; sigma is fixed self-consistently by its gap equation while omega and rh
 are algebraic in the densities.
 
 Conventions (Glendenning; ``Phi = g_sigma * sigma``, working in hbar*c = 1, momenta
-and masses in fm^-1, densities in fm^-3, energy density in fm^-4 -> MeV/fm^3):
+and masses in fm^-1, densities in fm^-3, energy density in fm^-4 -> MeV/fm^3)::
 
     m* = M - Phi
     Phi/C_sigma + b M Phi^2 + c Phi^3 = rho_s(m*)         (self-consistent)
@@ -18,7 +18,7 @@ and masses in fm^-1, densities in fm^-3, energy density in fm^-4 -> MeV/fm^3):
     R   = (1/2) C_rho  n_3            (= g_rho   rho ; n_3 = n_p - n_n)
     mu_i = sqrt(kF_i^2 + m*^2) + W + t3_i R   (t3 = +1/2 p, -1/2 n)
 
-with C_x = (g_x/m_x)^2.  Energy density and pressure:
+with C_x = (g_x/m_x)^2.  Energy density and pressure::
 
     eps = sum_i eps_kin(kF_i, m*) + (1/2)Phi^2/C_sigma + (1/3)b M Phi^3
           + (1/4)c Phi^4 + (1/2)C_omega n_B^2 + (1/2)R^2/C_rho + eps_leptons

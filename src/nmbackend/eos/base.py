@@ -165,8 +165,10 @@ def extend_to_surface(n, eps_mevfm3, p_mevfm3, n_surface=1e-7, gamma_crust=1.3,
     surface *convention* mismatch with reference solvers (RePrimAnd) that integrate
     closer to p -> 0.  Here we continue the EOS below its base point as a single
     polytrope p = p0 (n/n0)^gamma_crust, with the energy density fixed by the cold
-    first law dε/dn = (ε+p)/n, whose closed-form solution
-        ε(n) = A n + p/(gamma_crust - 1),   A = (ε0 - p0/(gamma_crust-1))/n0
+    first law deps/dn = (eps+p)/n, whose closed-form solution::
+
+        eps(n) = A n + p/(gamma_crust - 1),   A = (eps0 - p0/(gamma_crust-1))/n0
+
     is continuous at the base point n0.
 
     This is a *surface continuation*, NOT a physical crust (no composition / pasta);
