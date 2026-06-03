@@ -79,6 +79,42 @@ def test_adaptive_refinement_concentrates_on_target(pca_file):
     assert all(np.isfinite(h["ess"]) and h["ess"] > 1 for h in hist)
 
 
+def test_basis_adaptation_stage2(pca_file):
+    from nmbackend.priors.gp_pca import adapt_basis
+    prior = CoefficientPrior.from_pca_file(pca_file)
+    rng = np.random.default_rng(5)
+    coeffs, _ = prior.sample_sequences(80, rng)
+    lams = np.array([_lambda14(prior, c) for c in coeffs])
+    lnZ = -0.5 * ((lams - 400.0) / 30.0) ** 2
+    new, diag = adapt_basis(prior, coeffs, lnZ)
+    # draws are in-span: the adapted basis must capture (essentially) all weighted
+    # variance; angles finite; mean shifts toward the target region
+    assert np.all(diag["captured"] > 0.999)
+    assert np.all(np.isfinite(diag["principal_angles"]))
+    assert new.generation == prior.generation + 1
+    lam_new_mean = _lambda14(new, np.zeros_like(coeffs[0]))   # mean curve
+    lam_old_mean = _lambda14(prior, np.zeros_like(coeffs[0]))
+    assert abs(lam_new_mean - 400.0) < abs(lam_old_mean - 400.0)
+
+
+def test_loop_with_periodic_basis_adaptation(pca_file):
+    prior0 = CoefficientPrior.from_pca_file(pca_file)
+    rng = np.random.default_rng(9)
+
+    def evidence_fn(prior, coeffs):
+        lams = np.array([_lambda14(prior, c) for c in coeffs])
+        return -0.5 * ((lams - 400.0) / 30.0) ** 2
+
+    prior, hist = iterative_refinement(prior0, evidence_fn, rng, n_rounds=4,
+                                       n_per_round=80, adapt_basis_every=2)
+    assert any("basis_diag" in h for h in hist)
+    # final prior still concentrated near the target
+    coeffs, _ = prior.sample_sequences(60, rng)
+    lams = np.array([_lambda14(prior, c) for c in coeffs])
+    lams = lams[np.isfinite(lams)]
+    assert abs(np.mean(lams) - 400.0) < 60.0
+
+
 def test_draws_roundtrip_as_pca_file(pca_file, tmp_path):
     prior = CoefficientPrior.from_pca_file(pca_file)
     rng = np.random.default_rng(3)

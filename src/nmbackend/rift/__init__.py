@@ -14,8 +14,12 @@ from .sequence import (write_nss, NSSequence, write_landry_legacy,
 from .compressed import (write_pca, write_pca_from_nss, PCASequence,
                          fit_sequence_pca, compression_ratio, PCA_FIELDS)
 
+from .evidence import (CIPTabularEvidence, posterior_mass_lnZ,
+                       read_eos_indices_xml)
+
 __all__ = ["write_nss", "NSSequence", "write_landry_legacy",
            "open_sequence", "SequenceRepresentation",
            "NSS_FIELDS", "NSS_UNITS",
            "write_pca", "write_pca_from_nss", "PCASequence",
-           "fit_sequence_pca", "compression_ratio", "PCA_FIELDS"]
+           "fit_sequence_pca", "compression_ratio", "PCA_FIELDS",
+           "CIPTabularEvidence", "posterior_mass_lnZ", "read_eos_indices_xml"]
