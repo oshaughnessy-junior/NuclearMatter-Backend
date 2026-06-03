@@ -341,11 +341,36 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
                           n_L=n_L, p_end_mismatch=float(p_end_mismatch)))
 
 
+def _pbar(total, desc):
+    """tqdm if available, else a quiet stderr ticker; .update(k)/.close()."""
+    try:
+        from tqdm import tqdm
+        return tqdm(total=total, desc=desc, unit="eos")
+    except Exception:
+        import sys
+
+        class _T:
+            def __init__(self):
+                self.k = 0
+
+            def update(self, j=1):
+                self.k += j
+                if self.k % max(1, total // 20) == 0 or self.k == total:
+                    print(f"  {desc}: {self.k}/{total}", file=sys.stderr,
+                          flush=True)
+
+            def close(self):
+                pass
+        return _T()
+
+
 def draw_prior_ensemble(n_draws, seed=0, corr_range=(0.2, 0.4),
-                        nep_sampler=None, **kw):
+                        nep_sampler=None, progress=False, **kw):
     """Draw an ensemble; returns (tables, records).  Hierarchical corr_frac per
-    GKKS Sec. 4 (uniform over ``corr_range``); NEPs via ``nep_sampler(rng)``."""
+    GKKS Sec. 4 (uniform over ``corr_range``); NEPs via ``nep_sampler(rng)``.
+    ``progress=True`` shows a bar (tqdm if installed)."""
     rng = np.random.default_rng(seed)
+    bar = _pbar(n_draws, "bridge draws") if progress else None
     tables, records = [], []
     attempts = 0
     while len(tables) < n_draws and attempts < 20 * n_draws:
@@ -360,4 +385,8 @@ def draw_prior_ensemble(n_draws, seed=0, corr_range=(0.2, 0.4),
         rec = dict(corr_frac=c, **{f"nep_{k}": v for k, v in nep.items()})
         rec.update({k: d["meta"][k] for k in ("X", "p_end_mismatch")})
         records.append(rec)
+        if bar:
+            bar.update(1)
+    if bar:
+        bar.close()
     return tables, records

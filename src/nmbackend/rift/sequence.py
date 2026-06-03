@@ -123,11 +123,24 @@ def open_sequence(fname):
 
 
 # ---------------- new self-describing format (tabular representation) ----------------
-def write_nss(fname, tables, params=None, n_points=80):
-    """Write the robust ``NSSequence`` HDF5 (tabular_hc representation) from EOSTables."""
+def write_nss(fname, tables, params=None, n_points=80, progress=False):
+    """Write the robust ``NSSequence`` HDF5 (tabular_hc representation) from EOSTables.
+
+    ``progress=True`` shows a per-EOS bar (the TOV family builds dominate runtime).
+    """
     if not _HAVE_H5PY:
         raise ImportError("write_nss requires h5py")
-    seq = np.stack([_one_eos(t, n_points) for t in tables], axis=0)
+    if progress:
+        from ..priors.bridge import _pbar
+        bar = _pbar(len(tables), "TOV sequences")
+        rows = []
+        for t in tables:
+            rows.append(_one_eos(t, n_points))
+            bar.update(1)
+        bar.close()
+        seq = np.stack(rows, axis=0)
+    else:
+        seq = np.stack([_one_eos(t, n_points) for t in tables], axis=0)
     with h5py.File(fname, "w") as f:
         f.attrs["schema_version"] = "nmbackend.nss/1"
         f.attrs["representation"] = "tabular_hc/1"      # dispatch tag (see open_sequence)
