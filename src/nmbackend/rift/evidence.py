@@ -33,7 +33,11 @@ import sys
 
 import numpy as np
 
-from ..priors.gp_pca import write_pca_draws
+def _write_pca_draws(*a, **kw):
+    # deferred to avoid a circular import (priors.gp_pca imports rift.compressed,
+    # whose package init pulls in this module before gp_pca finishes loading)
+    from ..priors.gp_pca import write_pca_draws
+    return write_pca_draws(*a, **kw)
 
 #: CIP argument template for the GW170817-style tabular run; {net} and {seq} are
 #: filled per round.  Override via ``extra_args`` / constructor knobs as needed.
@@ -171,7 +175,7 @@ class CIPPerEOSEvidence:
         base = os.path.join(self.workdir, f"gen_{gen}_painful")
         os.makedirs(base, exist_ok=True)
         seq = os.path.join(base, "draws.pca.h5")
-        write_pca_draws(seq, prior, coeffs)
+        _write_pca_draws(seq, prior, coeffs)
 
         lnZ = np.full(n_eos, np.nan)
         pending = list(range(n_eos))
@@ -236,7 +240,7 @@ class CIPTabularEvidence:
         rdir = os.path.join(self.workdir, f"gen_{gen}")
         os.makedirs(rdir, exist_ok=True)
         seq = os.path.join(rdir, "draws.pca.h5")
-        write_pca_draws(seq, prior, coeffs)
+        _write_pca_draws(seq, prior, coeffs)
 
         net = self.net_file
         if self.remap_index_mod:
