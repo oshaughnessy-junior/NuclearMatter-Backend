@@ -135,9 +135,10 @@ def sample_point_in_volume(rng, bL, bH, n_cdf=256):
                   out=np.zeros_like(m2), where=(m2 - mL2) > 0),
     )
     dens = np.clip(dens, 0.0, None)
+    dens[~np.isfinite(dens)] = 0.0         # singular slice edge (den->0): no weight
     cdf = np.concatenate([[0.0], np.cumsum(0.5 * (dens[1:] + dens[:-1])
                                            * np.diff(m2))])
-    if cdf[-1] <= 0.0:                      # degenerate slice; midpoint fallback
+    if not (np.isfinite(cdf[-1]) and cdf[-1] > 0.0):  # degenerate/singular -> midpoint
         mu = math.sqrt(0.5 * (mL2 + mH2))
     else:
         mu = math.sqrt(float(np.interp(rng.uniform(0.0, cdf[-1]), cdf, m2)))
@@ -379,7 +380,7 @@ def draw_prior_ensemble(n_draws, seed=0, corr_range=(0.2, 0.4),
         nep = nep_sampler(rng) if nep_sampler else {}
         try:
             d = draw_bridge_eos(rng, nep_params=nep, corr_frac=c, **kw)
-        except (ValueError, FloatingPointError):
+        except (ValueError, FloatingPointError, OverflowError):
             continue
         tables.append(d["table"])
         rec = dict(corr_frac=c, **{f"nep_{k}": v for k, v in nep.items()})
