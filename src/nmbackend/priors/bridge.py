@@ -38,8 +38,6 @@ from __future__ import annotations
 import math
 import numpy as np
 
-from ..eos.compose import eos_table_from_arrays
-
 N_SAT = 0.16                      # fm^-3
 MU_H = 2600.0                     # MeV; pQCD matching point (KK 2022)
 
@@ -333,11 +331,14 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     n_all = np.concatenate([n_lo, grid[sel]])
     eps_all = np.concatenate([eps_lo, eps_b[sel]])
     p_all = np.concatenate([p_lo, p_b[sel]])
+    # lazy import: keeps this module importable without the (JAX) table machinery
+    from ..eos.compose import eos_table_from_arrays
     table = eos_table_from_arrays(n_all, eps_all, p_all, n_surface=None)
 
     cs2 = np.diff(np.log(mu_s)) / np.diff(np.log(grid))
     return dict(table=table, n=n_all, eps=eps_all, p=p_all,
-                bridge=dict(n=grid, mu=mu_s, p=p_b, eps=eps_b, cs2=cs2),
+                bridge=dict(n=grid, mu=mu_s, mu0=mu_grid, p=p_b, eps=eps_b,
+                            cs2=cs2),
                 meta=dict(X=X, corr_frac=corr_frac, mu_L=mu_L, p_L=p_L,
                           n_L=n_L, p_end_mismatch=float(p_end_mismatch)))
 
