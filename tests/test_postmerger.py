@@ -53,6 +53,47 @@ def test_mthresh_koeppel_lowest_order():
     assert k == pytest.approx(1.415, abs=0.02)
 
 
+def test_mthresh_koeppel_nonlin_lowest_order():
+    # Koeppel Eq. (4) passes through their lowest-order quote
+    # Mth/M_TOV ~ 1.415 (their Eq. 3) near C_TOV ~ 0.29
+    from nmbackend.postmerger import KOEPPEL2019_NONLIN
+    assert KOEPPEL2019_NONLIN.k(0.288) == pytest.approx(1.415, abs=0.01)
+
+
+def test_mthresh_koeppel_nonlin_bh_limit():
+    # a = 2b/(2-c) enforces the black-hole limit Mth/M_TOV -> 0 at C = 1/2
+    from nmbackend.postmerger import KOEPPEL2019_NONLIN
+    assert KOEPPEL2019_NONLIN.k(0.5) == pytest.approx(0.0, abs=1e-9)
+    assert KOEPPEL2019_NONLIN.a == pytest.approx(3.0606, abs=1e-3)
+
+
+def test_mthresh_koeppel_nonlin_monotonic():
+    # monotonically decreasing over the neutron-star compactness range
+    from nmbackend.postmerger import KOEPPEL2019_NONLIN
+    C = np.linspace(0.24, 0.35, 40)
+    k = KOEPPEL2019_NONLIN.k(C)
+    assert np.all(np.diff(k) < 0)
+
+
+def test_mthresh_koeppel_nonlin_agrees_with_linear():
+    # paper: nonlinear within "8% at most" of the linear variant over the
+    # NS range, and within a few percent near C_TOV ~ 0.30
+    from nmbackend.postmerger import KOEPPEL2019_NONLIN, KOEPPEL2019_LIN
+    C = np.linspace(0.24, 0.35, 12)
+    knl = KOEPPEL2019_NONLIN.k(C)
+    kl = KOEPPEL2019_LIN.k(C)
+    assert np.all(np.abs(knl - kl) / kl < 0.08)
+    rel_030 = abs(KOEPPEL2019_NONLIN.k(0.30) - KOEPPEL2019_LIN.k(0.30)) \
+        / KOEPPEL2019_LIN.k(0.30)
+    assert rel_030 < 0.04
+
+
+def test_stroud_sigma_lnf_measured():
+    # residual refit (Tab. I sim M*f_pk spread + Tab. II R^2 = 0.811);
+    # pins the field to the measured ~0.05, not the bare placeholder
+    assert STROUD2026_EXP.sigma_lnf == pytest.approx(0.051, abs=0.005)
+
+
 def test_mthresh_lnlike_behavior():
     # GW170817-like Mtot=2.73, no prompt collapse: favors draws whose
     # threshold is ABOVE Mtot (stiffer/larger Mmax)
