@@ -22,7 +22,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
-__all__ = ["MSUN_S", "dtilde", "FPeakFit", "STROUD2026_EXP", "fpeak_lnlike",
+__all__ = ["MSUN_S", "GMSUN_KM", "dtilde", "FPeakFit", "STROUD2026_EXP",
+           "fpeak_lnlike", "MthreshFit", "BAUSWEIN2013", "KOEPPEL2019_LIN",
            "mthresh_lnlike"]
 
 #: G Msun / c^3 in seconds.
@@ -95,14 +96,81 @@ def fpeak_lnlike(f_obs_hz, sigma_obs_hz, f_pred_hz, sigma_lnf):
     return -0.5 * z**2 - np.log(sig_ln) - 0.5 * np.log(2.0 * np.pi)
 
 
-def mthresh_lnlike(*args, **kwargs):
-    """Prompt-collapse threshold-mass likelihood — not yet implemented.
+#: G Msun / c^2 in km.
+GMSUN_KM = 1.4766
 
-    This is the channel that carries TOV-scale information (the paper-4
-    structural argument).  Implementation requires verifying a published
-    M_thresh fit (e.g. the Bauswein et al. threshold-mass relations)
-    against the source PDFs; coefficients MUST NOT be entered from memory
-    or LLM extraction without an anchor check.
+
+@dataclass(frozen=True)
+class MthreshFit:
+    """Linear prompt-collapse threshold fit M_thresh = k * M_max with
+    k = slope * C + intercept, where C is a compactness built from
+    TOV-scale statics.  ``sigma_k`` is the fit residual scale in k.
     """
-    raise NotImplementedError(
-        "verify a published M_thresh fit against its PDF first; see docstring")
+    name: str
+    slope: float
+    intercept: float
+    sigma_k: float
+    compactness: str          # "C*_1.6" (G Mmax / c^2 R_1.6) or "C_TOV"
+    reference: str
+
+    def k(self, C):
+        return self.slope * np.asarray(C, float) + self.intercept
+
+    def mthresh(self, mmax_msun, radius_km):
+        """Threshold total mass [Msun]; ``radius_km`` is R_1.6 or R_TOV
+        per ``compactness``."""
+        C = GMSUN_KM * np.asarray(mmax_msun, float) / np.asarray(radius_km, float)
+        return self.k(C) * np.asarray(mmax_msun, float)
+
+
+#: Bauswein, Baumgarte & Janka, PRL 111, 131101 (2013), verified against
+#: the arXiv:1307.5191 PDF 2026-07-24: k = -3.606 C*_1.6 + 2.380 with
+#: C*_1.6 = G Mmax / (c^2 R_1.6); maximum residual 0.025 in k.  Anchor
+#: check against their table: TMA (Mmax 2.02, R_1.6 13.73) -> 3.23 vs
+#: simulated 3.25; IUF (1.95, 12.57) -> 3.03 vs 3.05.
+BAUSWEIN2013 = MthreshFit(
+    name="bauswein2013-C16", slope=-3.606, intercept=2.380, sigma_k=0.025,
+    compactness="C*_1.6",
+    reference="Bauswein, Baumgarte & Janka, PRL 111, 131101 (2013)",
+)
+
+#: Koeppel, Bovard & Rezzolla, ApJL 872, L16 (2019) linear variant:
+#: k = -3.38 C_TOV + 2.43.  CAUTION: the PDF text layer drops the minus
+#: sign; the sign is fixed here by their own lowest-order quote
+#: Mth/M_TOV ~ 1.415 at C_TOV ~ 0.30 and by physical monotonicity.
+#: Their nonlinear fit (their Eq. 4) is preferred at extreme compactness
+#: and is NOT yet implemented.  sigma_k from their Delta Mth ~ 0.05 Msun
+#: at Mmax ~ 2 -> ~0.025.
+KOEPPEL2019_LIN = MthreshFit(
+    name="koeppel2019-linear-CTOV", slope=-3.38, intercept=2.43, sigma_k=0.025,
+    compactness="C_TOV",
+    reference="Koeppel, Bovard & Rezzolla, ApJL 872, L16 (2019)",
+)
+
+
+def _norm_cdf(x):
+    from math import erf
+    x = np.asarray(x, float)
+    return 0.5 * (1.0 + np.vectorize(erf)(x / np.sqrt(2.0)))
+
+
+def mthresh_lnlike(prompt_collapse, mtot_msun, sigma_mtot_msun,
+                   mmax_msun, radius_km, fit=BAUSWEIN2013):
+    """ln L of observing prompt collapse (or not) at total mass ``mtot``.
+
+    This is the postmerger channel that carries TOV-scale information
+    (paper-4 structural argument): M_thresh is keyed to (Mmax, R) of the
+    maximum-mass configuration, which inspiral leaves undetermined.
+
+    Parameters broadcast over draw arrays in ``mmax_msun``/``radius_km``.
+    ``prompt_collapse`` True: L = P(Mtot > M_thresh); False: 1 - that.
+    The threshold uncertainty combines the fit residual (sigma_k * Mmax)
+    and the measurement error on Mtot in quadrature.
+    """
+    mth = fit.mthresh(mmax_msun, radius_km)
+    sigma = np.hypot(fit.sigma_k * np.asarray(mmax_msun, float),
+                     float(sigma_mtot_msun))
+    z = (float(mtot_msun) - mth) / sigma
+    p = _norm_cdf(z)
+    p = np.clip(p if prompt_collapse else 1.0 - p, 1e-300, 1.0)
+    return np.log(p)
