@@ -1,4 +1,5 @@
 """RIFT EOS-sequence I/O: robust NSSequence + legacy EOSSequenceLandry drop-in."""
+import json
 import os
 import tempfile
 import numpy as np
@@ -8,6 +9,7 @@ h5py = pytest.importorskip("h5py")
 
 from nmbackend.eos import MetaModelEOS, HybridEOS
 from nmbackend.rift import write_nss, NSSequence, write_landry_legacy
+from nmbackend.rift.sequence import NSS_FIELDS, NSS_UNITS, _stable_branches
 from nmbackend.tov.family import build_family, default_hc_grid, lambda_of_mass, m_max
 
 
@@ -62,3 +64,34 @@ def test_legacy_stored_branch_is_single_valued_for_hybrid():
         dat = np.array(f["ns"][sorted(f["ns"].keys())[0]])
     assert np.all(np.diff(np.sort(dat["M"])) >= 0)
     assert np.all(np.diff(dat["M"]) > -1e-9)        # stored already M-increasing
+
+
+def test_nss_primary_branch_does_not_mix_disconnected_stable_branches(tmp_path):
+    rows = np.full((1, 5, len(NSS_FIELDS)), np.nan)
+    col = {name: i for i, name in enumerate(NSS_FIELDS)}
+    rows[0, :, col["hc"]] = np.arange(1, 6) / 10
+    rows[0, :, col["M"]] = [1.0, 2.0, 1.8, 1.6, 2.1]
+    rows[0, :, col["R"]] = [13.0, 11.0, 10.8, 10.0, 9.0]
+    rows[0, :, col["Lambda"]] = [600.0, 100.0, 80.0, 60.0, 20.0]
+    rows[0, :, col["stable"]] = [1.0, 1.0, 0.0, 1.0, 1.0]
+    fn = tmp_path / "twins.nss.h5"
+    with h5py.File(fn, "w") as f:
+        f.attrs["representation"] = "tabular_hc/1"
+        f.attrs["schema_version"] = "nmbackend.nss/1"
+        f.attrs["fields"] = json.dumps(NSS_FIELDS)
+        f.attrs["units"] = json.dumps(NSS_UNITS)
+        f.create_dataset("sequence", data=rows)
+
+    seq = NSSequence(fn)
+    assert seq.n_stable_branches(0) == 2
+    assert seq.stable_branch_counts.tolist() == [2]
+    assert seq.m_max(0) == pytest.approx(2.0)
+    assert seq.radius_of_m(1.8, 0) == pytest.approx(11.4)
+    expected_lambda = np.exp(np.interp(1.8, [1.0, 2.0], np.log([600.0, 100.0])))
+    assert seq.lambda_of_m(1.8, 0) == pytest.approx(expected_lambda)
+
+    branches = _stable_branches(
+        rows[0, :, col["M"]], rows[0, :, col["R"]],
+        rows[0, :, col["Lambda"]], rows[0, :, col["stable"]]
+    )
+    assert [branch[0].tolist() for branch in branches] == [[1.0, 2.0], [1.6, 2.1]]

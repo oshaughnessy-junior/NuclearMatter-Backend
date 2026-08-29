@@ -5,6 +5,7 @@ M_max of the tabular sequence to good accuracy with a handful of components, and
 ``open_sequence`` must dispatch to it transparently.  We build the (expensive) tabular
 sequence ONCE, then compress it without re-running TOV via ``write_pca_from_nss``.
 """
+import json
 import numpy as np
 import pytest
 
@@ -64,3 +65,26 @@ def test_pca_ordering_statistic(seqs):
 
 def test_compression_ratio_grows_with_neos():
     assert compression_ratio(10000, 80, 6) > compression_ratio(100, 80, 6) > 1.0
+
+
+def test_pca_primary_branch_does_not_mix_disconnected_stable_branches(tmp_path):
+    h5py = pytest.importorskip("h5py")
+    path = tmp_path / "twins.pca.h5"
+    mass = np.array([1.0, 2.0, 1.8, 1.6, 1.9, 2.1])
+    radius = np.array([13.0, 11.0, 10.8, 10.0, 9.5, 9.0])
+    lam = np.array([600.0, 100.0, 80.0, 60.0, 35.0, 20.0])
+    with h5py.File(path, "w") as f:
+        f.attrs["representation"] = "pca_hc/1"
+        f.attrs["schema_version"] = "nmbackend.pca/1"
+        f.attrs["channels"] = json.dumps(["M", "R", "logLambda"])
+        f.create_dataset("mean", data=np.stack([mass, radius, np.log(lam)]))
+        f.create_dataset("components", data=np.zeros((3, 1, mass.size)))
+        f.create_dataset("coeffs", data=np.zeros((1, 3, 1)))
+
+    seq = PCASequence(path)
+    assert seq.n_stable_branches(0) == 2
+    assert seq.stable_branch_counts.tolist() == [2]
+    assert seq.m_max(0) == pytest.approx(2.0)
+    assert seq.radius_of_m(1.8, 0) == pytest.approx(11.4)
+    expected_lambda = np.exp(np.interp(1.8, [1.0, 2.0], np.log([600.0, 100.0])))
+    assert seq.lambda_of_m(1.8, 0) == pytest.approx(expected_lambda)
