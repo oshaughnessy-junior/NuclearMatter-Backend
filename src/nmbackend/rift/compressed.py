@@ -37,7 +37,7 @@ try:
 except Exception:  # pragma: no cover
     _HAVE_H5PY = False
 
-from .sequence import (SequenceRepresentation, _one_eos, _stable_rising,
+from .sequence import (SequenceRepresentation, _one_eos, _stable_branches,
                        NSS_FIELDS, _MEVFM3_TO_GCM3, _NB_TO_GCM3)
 from .. import __version__ as _NMB_VERSION
 
@@ -163,6 +163,9 @@ class PCASequence(SequenceRepresentation):
         self._iM, self._iR, self._iL = (self.channels.index("M"),
                                         self.channels.index("R"),
                                         self.channels.index("logLambda"))
+        self.stable_branch_counts = np.array([
+            len(self._branches(e)) for e in range(self.n_eos)
+        ], dtype=int)
 
     def reconstruct(self, e):
         """Reconstruct (M, R, Lambda) curves on the u grid for EOS index ``e``."""
@@ -172,10 +175,17 @@ class PCASequence(SequenceRepresentation):
         return M, R, np.exp(logL)
 
     def _branch(self, e):
+        branches = self._branches(e)
+        if branches:
+            return branches[0]
+        empty = np.array([], dtype=float)
+        return empty, empty.copy(), empty.copy()
+
+    def _branches(self, e):
         M, R, Lam = self.reconstruct(e)
         # rising branch: stable where dM/du > 0 (u monotone in central enthalpy)
         stable = np.concatenate([[True], np.diff(M) > 0]).astype(float)
-        return _stable_rising(M, R, Lam, stable)
+        return _stable_branches(M, R, Lam, stable)
 
     def lambda_of_m(self, m, e):
         M, R, Lam = self._branch(e)
@@ -191,6 +201,5 @@ class PCASequence(SequenceRepresentation):
         return float(np.interp(m, M, R, left=np.nan, right=np.nan))
 
     def m_max(self, e):
-        M, _, _ = self.reconstruct(e)
-        stable = np.concatenate([[True], np.diff(M) > 0])
-        return float(np.max(np.where(stable, M, -np.inf)))
+        M, _, _ = self._branch(e)
+        return float(np.max(M)) if M.size else -np.inf

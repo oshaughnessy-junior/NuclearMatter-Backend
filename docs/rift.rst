@@ -19,6 +19,15 @@ one run sweeps the whole sequence. The full call chain is documented in
 Any of the three sequence formats (:doc:`representations`) can be passed; CIP
 auto-detects via ``EOSSequenceFromFile``.
 
+The v1 scalar accessors deliberately retain the historical **primary-branch**
+contract.  ``NSSequence`` and ``PCASequence`` split central-coordinate samples into
+contiguous stable, mass-rising runs and use the first run for ``lambda_of_m``,
+``radius_of_m``, and ``m_max``; they never bridge an unstable interval into a later
+twin-star branch.  ``n_stable_branches(e)`` (and the cached
+``stable_branch_counts`` array) exposes discarded topology so callers can reject or
+route multi-branch EOS explicitly.  Marginalizing over all branches requires the
+central-enthalpy inference described below.
+
 Live smoke test
 ---------------
 

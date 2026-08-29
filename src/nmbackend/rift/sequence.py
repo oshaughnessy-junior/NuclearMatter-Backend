@@ -61,16 +61,48 @@ def _one_eos(table, n_points=80, frac_lo=0.04, frac_hi=0.95):
     return np.stack([hc, M, R, Lam, nan, nan, rho_c, cs2_c, stable], axis=1)
 
 
+def _stable_branches(M, R, Lam, stable):
+    """Return contiguous stable, mass-rising branches in central-coordinate order.
+
+    A disconnected (twin-star) family can become stable again after an unstable
+    interval.  Selecting every row before the global stable maximum mixes that
+    interval and the later branch into the primary ``M -> (R, Lambda)`` map.  A
+    branch therefore ends whenever a row is invalid/unstable or mass ceases to
+    rise.  Runs shorter than two samples cannot support interpolation and are
+    omitted.
+    """
+    M = np.asarray(M)
+    R = np.asarray(R)
+    Lam = np.asarray(Lam)
+    valid = (np.isfinite(M) & np.isfinite(R) & np.isfinite(Lam)
+             & (M > 0) & (np.asarray(stable) > 0.5))
+    branches = []
+    start = None
+    for k in range(len(M)):
+        continues = (valid[k] and start is not None and k > 0
+                     and valid[k - 1] and M[k] > M[k - 1])
+        if valid[k] and start is None:
+            start = k
+        elif valid[k] and not continues:
+            if k - start >= 2:
+                branches.append((M[start:k], R[start:k], Lam[start:k]))
+            start = k
+        elif not valid[k] and start is not None:
+            if k - start >= 2:
+                branches.append((M[start:k], R[start:k], Lam[start:k]))
+            start = None
+    if start is not None and len(M) - start >= 2:
+        branches.append((M[start:], R[start:], Lam[start:]))
+    return branches
+
+
 def _stable_rising(M, R, Lam, stable):
-    """Stable, mass-increasing branch up to M_max, sorted by mass."""
-    ok = np.isfinite(M) & (M > 0)
-    M, R, Lam, st = M[ok], R[ok], Lam[ok], stable[ok] > 0.5
-    if M.size < 2:
-        return M, R, Lam
-    imax = int(np.argmax(np.where(st, M, -np.inf)))
-    M, R, Lam = M[:imax + 1], R[:imax + 1], Lam[:imax + 1]
-    o = np.argsort(M)
-    return M[o], R[o], Lam[o]
+    """Return the primary stable branch used by the NMB v1 RIFT contract."""
+    branches = _stable_branches(M, R, Lam, stable)
+    if branches:
+        return branches[0]
+    empty = np.array([], dtype=float)
+    return empty, empty.copy(), empty.copy()
 
 
 # ---------------- representation-agnostic accessor protocol ----------------
@@ -100,6 +132,15 @@ class SequenceRepresentation(abc.ABC):
         """Ordering statistic (Lambda or R at m_ref) for every EOS."""
         fn = self.lambda_of_m if kind.lower() == "lambda" else self.radius_of_m
         return np.array([fn(m_ref, e) for e in range(self.n_eos)])
+
+    def n_stable_branches(self, e):
+        """Number of resolved stable branches for EOS ``e``.
+
+        Scalar v1 accessors intentionally continue to use the primary branch.
+        This topology query lets consumers detect when that reduction discards
+        additional stable branches.
+        """
+        return int(self.stable_branch_counts[e])
 
 
 def open_sequence(fname):
@@ -207,6 +248,13 @@ class NSSequence(SequenceRepresentation):
             self.seq = f["sequence"][:]                 # (n_eos, n_pts, n_fields)
         self._i = {k: j for j, k in enumerate(self.fields)}
         self.n_eos = self.seq.shape[0]
+        self.stable_branch_counts = np.array([
+            len(_stable_branches(
+                s[:, self._i["M"]], s[:, self._i["R"]],
+                s[:, self._i["Lambda"]], s[:, self._i["stable"]]
+            ))
+            for s in self.seq
+        ], dtype=int)
 
     def _branch(self, e):
         s = self.seq[e]
@@ -227,9 +275,8 @@ class NSSequence(SequenceRepresentation):
         return float(np.interp(m, M, R, left=np.nan, right=np.nan))
 
     def m_max(self, e):
-        M = self.seq[e, :, self._i["M"]]
-        st = self.seq[e, :, self._i["stable"]] > 0.5
-        return float(np.max(np.where(st, M, -np.inf)))
+        M, _, _ = self._branch(e)
+        return float(np.max(M)) if M.size else -np.inf
 
     def ordering_values(self, m_ref, kind="Lambda"):
         """Ordering statistic (Lambda or R at m_ref) for every EOS -- vectorized."""
