@@ -6,6 +6,7 @@ inference).  See README.md and docs/architecture.md.
 """
 from . import constants
 from . import ipad
+from . import lab_likelihood
 from . import postmerger
 from .eos import MetaModelEOS, PolytropeEOS, EOSModel, EOSTable
 from .tov import solve_structure, build_family, m_max
@@ -13,7 +14,7 @@ from .tov import solve_structure, build_family, m_max
 __version__ = "0.0.1"
 
 __all__ = [
-    "constants",
+    "constants", "lab_likelihood",
     "MetaModelEOS", "PolytropeEOS", "EOSModel", "EOSTable",
     "solve_structure", "build_family", "m_max",
 ]

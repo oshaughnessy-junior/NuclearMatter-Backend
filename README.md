@@ -76,6 +76,10 @@ src/nmbackend/
     solver.py             TOV-in-enthalpy + tidal y -> k2, Λ; backends: diffrax
                           (adaptive, default) and scan (fixed-step) behind one seam
     family.py             M-R-Λ sequences, stable/unstable branches, dM/dh_c, dh_c/dM
+  lab_likelihood.py       density-tagged P_sym(n) lab likelihoods (MB-N2):
+                          marginalizable transport-model systematic floor,
+                          correlated (E_sym, L_sym) Gaussian, FRIB scenario ladder
+  data/                   packaged copy (with provenance) of the FRIB scenario ladder
   adapters/
     rift.py               RIFT EOSConcrete-compatible adapter
   reference/

@@ -21,6 +21,7 @@ dependencies = [
     "jax>=0.4.20",
     "jaxlib>=0.4.20",
     "diffrax>=0.5",     # adaptive (accurate) TOV backend; default solver
+    "pyyaml>=5.0",      # packaged FRIB scenario-ladder data (lab_likelihood)
 ]
 
 [project.optional-dependencies]
@@ -33,6 +34,9 @@ docs = ["sphinx", "myst-parser"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+nmbackend = ["data/*.yaml"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
