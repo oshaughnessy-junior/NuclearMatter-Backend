@@ -89,7 +89,12 @@ def _stable_branch_sort(family: Family):
 
 
 def lambda_of_mass(family: Family, m_msun):
-    """Interpolate Lambda(M) on the stable rising branch (0 above M_max)."""
+    """Interpolate Lambda(M) on the stable rising branch.
+
+    Above M_max the off-branch sentinel makes the interpolant HOLD near
+    Lambda(M_max) (reaching 0 only beyond the sentinel mass) -- callers must
+    range-guard m <= m_max(family) themselves.
+    """
     Ms, srt, _ = _stable_branch_sort(family)
     Ls = family.Lambda[srt]
     return jnp.interp(m_msun, Ms, Ls, left=Ls[0], right=0.0)
