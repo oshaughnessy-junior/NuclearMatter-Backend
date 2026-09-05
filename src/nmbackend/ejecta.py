@@ -148,10 +148,16 @@ class EjectaInputs(NamedTuple):
         return (jnp.maximum(self.m1, self.m2) / jnp.minimum(self.m1, self.m2))
 
     def light(self):
-        """(mass, compactness) of the lighter star, differentiably selected."""
-        swap = self.m2 > self.m1
-        m = jnp.where(swap, self.m1, self.m2)
-        c = jnp.where(swap, self.c1, self.c2)
+        """(mass, compactness) of the lighter star, differentiably selected.
+
+        The equal-mass tie is broken on compactness (more compact counts as
+        "lighter"), so the selection is invariant under swapping star labels
+        even for the EOS-inconsistent input m1 == m2 with r1 != r2.
+        """
+        one_is_light = ((self.m1 < self.m2)
+                        | ((self.m1 == self.m2) & (self.c1 >= self.c2)))
+        m = jnp.where(one_is_light, self.m1, self.m2)
+        c = jnp.where(one_is_light, self.c1, self.c2)
         return m, c
 
 
@@ -301,12 +307,15 @@ def kf2020_mdisk(x: EjectaInputs):
 
     M_disk = M_light * max(5e-4, (a C_light + c)^d), with the compactness of
     the LIGHTER star (their M1).  Anchor (their Table I): C1 = 0.167,
-    M1 = 1.5 -> M_disk = 0.037 Msun.
+    M1 = 1.5 -> M_disk = 0.037 Msun.  The (a C + c)^d factor exceeds 1 for
+    C < 0.06 (far outside the C in [0.135, 0.219] calibration); we cap it at
+    1 -- i.e. M_disk <= M_light, a generous baryon-budget ceiling that is OUR
+    regularization, not the paper's.
     """
     p = _KF20_MDISK
     m_light, c_light = x.light()
     base = jnp.maximum(p["a"] * c_light + p["c"], 0.0)
-    return m_light * jnp.maximum(base ** p["d"], 5.0e-4)
+    return m_light * jnp.clip(base ** p["d"], 5.0e-4, 1.0)
 
 
 # ----------------------------------------------------------------------------
@@ -335,8 +344,14 @@ def nedora2021_mej(x: EjectaInputs):
 
 
 def nedora2021_vej(x: EjectaInputs):
-    """Mean asymptotic ejecta velocity [c] = P_2^2(q, Lt), Nedora et al."""
-    return jnp.maximum(_p22(_N21_VEJ, x.q_heavy, x.lam_tilde), 0.0)
+    """Mean asymptotic ejecta velocity [c] = P_2^2(q, Lt), Nedora et al.
+
+    The polynomial grows quadratically in Lambda-tilde beyond its calibration
+    ceiling (~1440) and turns superluminal near Lt ~ 2700; we clip to [0, 1)
+    -- the exact kinematic bound, OUR regularization -- but any value beyond
+    ~0.35 c already signals extrapolation far outside the fit.
+    """
+    return jnp.clip(_p22(_N21_VEJ, x.q_heavy, x.lam_tilde), 0.0, 0.99)
 
 
 def nedora2021_ye(x: EjectaInputs):
@@ -352,10 +367,16 @@ def nedora2021_ye(x: EjectaInputs):
 def nedora2021_mdisk(x: EjectaInputs):
     """Remnant disk mass [Msun] = P_2^2(q, Lt), Nedora et al. Table VI.
 
-    The disk fit is performed as log10(data) vs log10(P_2^2) with a -3.0
-    floor, i.e. the polynomial gives the mass directly, floored at 1e-3 Msun.
+    The calibration is performed as log10(data) vs log10(P_2^2), i.e. the
+    polynomial gives the mass directly.  Their P22 fit publishes NO floor
+    (the -3.0 floor in their Eqs. 11-12 belongs to the tanh-form rewrites,
+    which they note P22 is "free from"); the [1e-3 Msun, M_light] clip here
+    is OUR gradient-safe regularization: the polynomial goes negative for
+    compact binaries and grows past the binary's own mass beyond the
+    Lambda-tilde ~ 1440 calibration ceiling.
     """
-    return jnp.maximum(_p22(_N21_MDISK, x.q_heavy, x.lam_tilde), 1.0e-3)
+    return jnp.clip(_p22(_N21_MDISK, x.q_heavy, x.lam_tilde),
+                    1.0e-3, x.light()[0])
 
 
 # ----------------------------------------------------------------------------
@@ -415,11 +436,14 @@ MDISK_FAMILIES = {
 # electron fraction, lanthanide proxy, prompt collapse
 # ----------------------------------------------------------------------------
 
-# Component Ye constants: see module docstring for the exact quotes.
-YE_TIDAL = UQ(jnp.asarray(0.10), jnp.asarray(0.05), jnp.asarray(0.0))
-YE_SHOCKED = UQ(jnp.asarray(0.30), jnp.asarray(0.08), jnp.asarray(0.0))
+# Component Ye constants: see module docstring for the exact quotes.  Kept as
+# Python floats (not jnp arrays) so no dtype is baked in at import time --
+# import-time jnp.asarray would stamp float32 whenever this module is imported
+# before jax x64 is enabled, silently perturbing results at the 1e-8 level.
+YE_TIDAL = UQ(0.10, 0.05, 0.0)
+YE_SHOCKED = UQ(0.30, 0.08, 0.0)
 # Lippuner & Roberts 2015: lanthanide-free for Ye >~ 0.22-0.30 (s, tau dep.).
-YE_LANTHANIDE_CRIT = UQ(jnp.asarray(0.26), jnp.asarray(0.04), jnp.asarray(0.0))
+YE_LANTHANIDE_CRIT = UQ(0.26, 0.04, 0.0)
 # Smoothing width of the lanthanide step in Ye: OUR regularization choice
 # (comparable to the s,tau-induced blurring of the threshold), not published.
 _LAN_WIDTH = 0.03
@@ -438,8 +462,15 @@ def prompt_collapse_disk_factor(m_tot, m_thresh, width=0.06):
     state that a binary with "M_tot >= 0.95 M_thr will not result in a
     significant accretion disk"; the tanh width of that fit is d = 0.05957 in
     M_tot/M_thr.  Encoded as a sigmoid centered at 0.95 M_thr with that
-    width.  Coarse gate, applied only when a threshold mass is supplied; its
-    location uncertainty is at least the M_thresh fit systematics
+    width -- note this is STRICTER than the underlying Coughlin fit (whose
+    tanh is centered at c = 1.0474; the 0.95 quote is roughly its ~2-sigma
+    point), i.e. conservative on the disk.  Coarse gate, applied only when a
+    threshold mass is supplied, and applied to the DISK ONLY: dynamical
+    ejecta and the Ye split are deliberately left ungated (the KF20
+    compactness form already sends M_dyn -> 0 for very compact stars, but
+    the Nedora M_ej and <Ye> fits are not collapse-aware -- near-threshold
+    blue-component predictions inherit that bias).  The gate's location
+    uncertainty is at least the M_thresh fit systematics
     (see ``postmerger.MthreshFit``).
     """
     return 1.0 / (1.0 + jnp.exp(-(0.95 - m_tot / m_thresh) / width))
@@ -451,14 +482,21 @@ def prompt_collapse_disk_factor(m_tot, m_thresh, width=0.06):
 
 def _combine(families: dict, x: EjectaInputs):
     """Evaluate a family registry: mean value, RMS sigma_fit, population
-    spread across families.  Returns (UQ, {name: value})."""
+    spread across families.  Returns (UQ, {name: value}).
+
+    The spread uses a where-guarded sqrt so that a single-family registry
+    (variance identically zero) gives sigma_formula = 0 with a zero -- not
+    NaN -- gradient, keeping the differentiability contract for registry
+    overrides.
+    """
     by = {name: fam.predict(x) for name, fam in families.items()}
     vals = jnp.stack(list(by.values()))
     sigs = jnp.stack([jnp.broadcast_to(families[n].sigma(by[n], x),
                                        jnp.shape(vals[0])) for n in by])
-    return UQ(jnp.mean(vals, axis=0),
-              jnp.sqrt(jnp.mean(sigs ** 2, axis=0)),
-              jnp.std(vals, axis=0)), by
+    mean = jnp.mean(vals, axis=0)
+    var = jnp.mean((vals - mean) ** 2, axis=0)
+    spread = jnp.where(var > 0.0, jnp.sqrt(jnp.where(var > 0.0, var, 1.0)), 0.0)
+    return UQ(mean, jnp.sqrt(jnp.mean(sigs ** 2, axis=0)), spread), by
 
 
 def ejecta_conditions(m1, m2, lambda1, lambda2, r1_km, r2_km,
@@ -493,10 +531,16 @@ def ejecta_conditions(m1, m2, lambda1, lambda2, r1_km, r2_km,
         m_disk, mdisk_by = _combine(mdisk_reg, x)
     else:
         gate = prompt_collapse_disk_factor(x.m1 + x.m2, m_thresh)
+        # Gated sigma is floored at 5e-4 Msun (the Radice/KF20 published disk
+        # floors): deep in prompt collapse the papers assert "no SIGNIFICANT
+        # disk", not a disk known to better than its floor -- without the
+        # floor the gate would shrink the error bar to ~0 exactly where the
+        # prediction is least trustworthy.
         gated = {
             n: FitFamily(f.name, f.cite,
                          (lambda xx, _f=f: gate * _f.predict(xx)),
-                         (lambda v, xx, _f=f: gate * _f.sigma(v, xx)),
+                         (lambda v, xx, _f=f:
+                          jnp.maximum(gate * _f.sigma(v, xx), 5.0e-4)),
                          f.notes)
             for n, f in mdisk_reg.items()}
         m_disk, mdisk_by = _combine(gated, x)
@@ -512,6 +556,11 @@ def ejecta_conditions(m1, m2, lambda1, lambda2, r1_km, r2_km,
     # Tidal mass fraction from inverting the two-component Ye mixture:
     # <Ye> = f * Ye_tidal + (1 - f) * Ye_shocked.  Clip to [0, 1]; the clip's
     # zero gradient outside the branch is the physically saturated case.
+    # KNOWN DEAD ZONE: for q >~ 1.6 at low Lambda-tilde the Nedora <Ye>
+    # falls below Ye_tidal = 0.10, the inversion saturates at f = 1 (mixture
+    # no longer reproduces <Ye>), and d(f, x_lan)/d(inputs) vanish -- the
+    # component split is meaningful only while <Ye> lies inside
+    # [Ye_tidal, Ye_shocked]; ye_dyn itself remains valid throughout.
     span = YE_SHOCKED.value - YE_TIDAL.value
     f = jnp.clip((YE_SHOCKED.value - ye) / span, 0.0, 1.0)
     df = jnp.sqrt((ye_dyn.sigma_fit / span) ** 2
@@ -548,6 +597,14 @@ def ejecta_from_family(family, m1, m2, m_thresh=None, **kw) -> EjectaConditions:
     jax.jacfwd of any output with respect to the nuclear empirical parameters
     flows through metamodel -> TOV -> here (see tests/test_ejecta.py).
     Extra keyword arguments pass through to :func:`ejecta_conditions`.
+
+    DOMAIN: valid only for m1, m2 <= m_max(family).  Above M_max the
+    stable-branch interpolators HOLD near their last stable values (the
+    off-branch sentinel in ``tov.family``), so a star that should be a black
+    hole silently yields plausible-looking BNS ejecta with no warning and a
+    smooth-but-wrong NEP gradient.  Callers scanning nuclear parameters that
+    move M_max (the bridge use case) must guard against m > m_max(family)
+    themselves.
     """
     from .tov.family import lambda_of_mass, radius_of_mass
     return ejecta_conditions(

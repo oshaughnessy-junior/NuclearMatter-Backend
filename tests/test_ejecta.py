@@ -98,6 +98,55 @@ def test_nedora2021_ye_paper_anchor():
     assert float(nedora2021_ye(x)) == pytest.approx(0.20, abs=0.04)
 
 
+def test_asymmetric_pinned_anchors():
+    # pinned (self-computed after PDF verification; jax 0.10.1 float64):
+    # closes the equal-mass blind spot -- at q=1 the mass-ratio exponents
+    # (Radice n=-0.773, KF20 n=1.5465) and all Nedora q-coefficients are
+    # invisible to the other anchors, so a wrong sign/row there would pass.
+    from nmbackend.ejecta import (nedora2021_vej, nedora2021_mdisk)
+    x = _inputs(m1=1.50, m2=1.15, lambda1=250.0, lambda2=900.0,
+                r1_km=11.5, r2_km=12.0)     # q=1.3043, Lt=466.26
+    assert float(radice2018_mej(x)) == pytest.approx(8.97442575e-04, rel=1e-6)
+    assert float(radice2018_vej(x)) == pytest.approx(2.09410824e-01, rel=1e-6)
+    assert float(kf2020_mdyn(x)) == pytest.approx(1.05719335e-02, rel=1e-6)
+    assert float(kf2020_mdisk(x)) == pytest.approx(1.60880132e-01, rel=1e-6)
+    assert float(nedora2021_mej(x)) == pytest.approx(3.68737158e-03, rel=1e-6)
+    assert float(nedora2021_vej(x)) == pytest.approx(1.79986160e-01, rel=1e-6)
+    assert float(nedora2021_ye(x)) == pytest.approx(1.80874554e-01, rel=1e-6)
+    assert float(nedora2021_mdisk(x)) == pytest.approx(1.79224185e-01, rel=1e-6)
+    assert float(radice2018_mdisk(x)) == pytest.approx(5.30252607e-02, rel=1e-6)
+
+
+def test_physical_ceilings_under_extrapolation():
+    # OUR regularizations (documented in the docstrings): velocity respects
+    # the kinematic bound where the Nedora polynomial turns superluminal,
+    # and disk masses cannot exceed the lighter star.
+    from nmbackend.ejecta import nedora2021_vej, nedora2021_mdisk
+    x_stiff = _inputs(m1=1.4, m2=1.4, lambda1=3000.0, lambda2=3000.0)
+    assert float(nedora2021_vej(x_stiff)) <= 0.99
+    x_big = _inputs(m1=1.1, m2=1.1, lambda1=2500.0, lambda2=2500.0,
+                    r1_km=13.5, r2_km=13.5)
+    assert float(nedora2021_mdisk(x_big)) <= 1.1
+    assert float(kf2020_mdisk(_inputs(r1_km=25.0, r2_km=25.0))) <= 1.35
+
+
+def test_equal_mass_unequal_radius_tiebreak_symmetric():
+    # EOS-inconsistent but accepted input: the light() tie-break on
+    # compactness must make the disk invariant under label swap.
+    a = kf2020_mdisk(_inputs(m1=1.35, m2=1.35, r1_km=11.0, r2_km=12.5))
+    b = kf2020_mdisk(_inputs(m1=1.35, m2=1.35, r1_km=12.5, r2_km=11.0))
+    assert float(a) == pytest.approx(float(b), rel=1e-12)
+
+
+def test_single_family_registry_grad_finite():
+    # sigma_formula is identically 0 for a one-family registry; its gradient
+    # must be 0, not NaN (where-guarded sqrt in _combine).
+    reg = {"radice2018": MEJ_FAMILIES["radice2018"]}
+    g = jax.grad(lambda m: ejecta_conditions(
+        m, 1.35, 400.0, 400.0, 11.9, 11.9, mej_families=reg).m_dyn.sigma)(1.35)
+    assert np.isfinite(float(g))
+
+
 def test_nedora2021_mej_band():
     # paper-quoted band: dynamical ejecta O(1e-4 - 1e-2) Msun
     assert 1.0e-4 < float(nedora2021_mej(_inputs())) < 1.0e-2
@@ -147,6 +196,9 @@ def test_prompt_collapse_gate():
     ec_gated = ejecta_conditions(**_FID, m_thresh=2.30)   # Mtot/Mthr ~ 1.17
     ec_free = ejecta_conditions(**_FID)
     assert float(ec_gated.m_disk.value) < 0.1 * float(ec_free.m_disk.value)
+    # deep in collapse the gated sigma stays at least the published disk
+    # floors -- the papers assert "no significant disk", not a precise zero
+    assert float(ec_gated.m_disk.sigma_fit) >= 5.0e-4
 
 
 def test_spin_accepted_and_inert():
