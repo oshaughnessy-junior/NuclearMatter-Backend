@@ -53,3 +53,12 @@ Inference
 
 .. automodule:: nmbackend.inference.fisher
    :members: eos_observables, sensitivity_matrix, fisher_matrix, fisher_covariance
+
+Laboratory likelihoods (MB-N2)
+------------------------------
+
+.. automodule:: nmbackend.lab_likelihood
+   :members: psym, DensityTaggedConstraint, SigmaModelPrior,
+             DensityTaggedPressureLikelihood, CorrelatedSymGaussian,
+             load_scenario_ladder, scenario_by_name, gaussian_from_scenario,
+             density_tagged_from_scenario

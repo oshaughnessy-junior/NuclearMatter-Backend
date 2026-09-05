@@ -23,7 +23,7 @@ nuclear params  ─►  physical EOS (metamodel + causal tail)  ─►  AD TOV s
                                        (lambda_from_m, P(ρ), mMax)     sensitivities
 ```
 
-Validated numbers for the default parameters (`pytest`, 20 tests):
+Validated numbers for the default parameters (`pytest`):
 `M_max ≈ 2.08 M⊙`, `R(1.4) ≈ 11.7 km`, `Λ(1.4) ≈ 443`, `dR/dL_sym ≈ +0.027 km/MeV`
 (reproducing the known L_sym–R(1.4) correlation).  The adaptive solver is
 cross-validated against an independent radius-domain reference to **<0.1%** in
@@ -32,9 +32,9 @@ M, R, and Λ (see Validation status below).
 ## Install / run
 
 ```bash
-pip install -e .            # core deps: numpy, scipy, jax
+pip install -e .            # core deps: numpy, scipy, jax, diffrax, pyyaml
 PYTHONPATH=src python examples/quickstart.py
-PYTHONPATH=src pytest        # 17 tests
+PYTHONPATH=src pytest        # full test suite
 ```
 
 ## Quickstart

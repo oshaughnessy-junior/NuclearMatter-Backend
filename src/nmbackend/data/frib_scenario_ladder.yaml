@@ -9,6 +9,13 @@
 #
 # EVERY NUMBER IN THIS FILE IS AN ASSUMPTION, not a literature value: no
 # published paper commits to "sigma_L = +/-X by year Y" for FRIB.
+#
+# Interpretation carried by this copy: nmbackend.lab_likelihood applies
+# psym2n0_frac to the SYMMETRY pressure P_sym = n^2 dS/dn, not to the
+# neutron-matter pressure P_PNM = n^2 (de_sat/dn + dS/dn); the two differ at
+# 2 n_sat by the isoscalar term.  Encoding choice flagged for RO review; if
+# the source ladder later pins the other convention, update the module.
+#
 # The original header follows.
 #
 # ---------------------------------------------------------------------------

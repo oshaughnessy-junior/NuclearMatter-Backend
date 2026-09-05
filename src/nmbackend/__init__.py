@@ -6,15 +6,16 @@ inference).  See README.md and docs/architecture.md.
 """
 from . import constants
 from . import ipad
-from . import lab_likelihood
 from . import postmerger
+# lab_likelihood, priors, inference, rift, adapters are add-ons imported
+# explicitly (from nmbackend import lab_likelihood), not eagerly here.
 from .eos import MetaModelEOS, PolytropeEOS, EOSModel, EOSTable
 from .tov import solve_structure, build_family, m_max
 
 __version__ = "0.0.1"
 
 __all__ = [
-    "constants", "lab_likelihood",
+    "constants",
     "MetaModelEOS", "PolytropeEOS", "EOSModel", "EOSTable",
     "solve_structure", "build_family", "m_max",
 ]

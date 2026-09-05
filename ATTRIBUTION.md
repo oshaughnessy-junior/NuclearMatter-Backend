@@ -18,6 +18,7 @@ group convention, any module that reuses or re-implements an idea carries a
 | **diffrax** (Kidger) | Adaptive ODE backend for the default TOV solver | **Apache-2.0** | Core dependency; used as a library (not vendored). |
 | **JAX** | Autodiff + array backend | **Apache-2.0** | Core dependency. |
 | **MUSES** | Modern physical-EOS modules (RMFT, CompOSE) explored for the EOS layer | see project | Reference; integration planned. |
+| **Huth et al.** (Nature 606 (2022) 276, arXiv:2107.06229) & **Tsang et al.** (arXiv:2310.11588) | Density-tagged pressure-likelihood encoding of laboratory constraints (`lab_likelihood.py`) | published methods (papers; Huth samples on Zenodo not used) | **Motivated by only.** Encodings re-implemented from the papers; no code or data copied. |
 
 ## Key scientific references
 
@@ -35,6 +36,10 @@ The physics implemented or planned here draws on (non-exhaustive):
 - **GP / nonparametric EOS:** Landry & Essick; Essick, Landry & Holz;
   Gorda et al. (e.g. arXiv:2605.18560).
 - **JAX AD tooling:** `jester` (Wouters, Pang et al.).
+- **Laboratory-likelihood encodings** (`lab_likelihood.py`): Huth et al.,
+  *Nature* 606 (2022) 276 (arXiv:2107.06229) and Tsang et al.
+  (arXiv:2310.11588) — density-tagged P(n) likelihoods; Biswas et al. /
+  Margueron-line (S0, L) Gaussian priors as the parameter-space alternative.
 
 ## What is original here
 
