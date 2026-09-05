@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/oshaughnessy-junior/NuclearMatter-Backend/schemas/x1_ejecta_conditions.schema.json",
+  "title": "X1 ejecta-conditions boundary artifact",
+  "description": "Downstream boundary artifact of the X1 cross-sequence bridge: one file per scenario, published by NuclearMatter-Backend for the n2n / Genesis_LANL side. Contract source: n2n_paper scoping/X1-BRIDGE.md section 4. Design notes and ambiguity resolutions: docs/x1-interface.md in this repo. Version v0.",
+  "type": "object",
+  "required": ["schema_version", "provenance", "scenario", "nep_names", "components"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0",
+      "description": "Version of this schema the file conforms to."
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Required provenance header, same convention as the frib_scenarios ladder: a file without a complete header is invalid.",
+      "required": ["repo", "commit", "generator", "date", "citations"],
+      "additionalProperties": false,
+      "properties": {
+        "repo": { "type": "string", "description": "Generating repository, e.g. oshaughnessy-junior/NuclearMatter-Backend." },
+        "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$", "description": "Git commit of the generating repo." },
+        "generator": { "type": "string", "description": "Path of the generator script within the repo, e.g. scripts/export_x1_ejecta.py." },
+        "date": { "type": "string", "format": "date", "description": "Generation date (ISO 8601)." },
+        "citations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" },
+          "description": "Upstream data citations: which NR fitting formulae and simulation sets (e.g. 'Radice et al. 2018, ApJ 869, 130, arXiv:1809.11161, Eqs. 18-25')."
+        },
+        "notes": { "type": "string", "description": "Free-form caveats (e.g. clamp-active fiducial warnings, assumption flags for scenario-level s/tau)." }
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "description": "Scenario definition: fiducial binary and fiducial NEPs at which everything (values and Jacobians) is evaluated. No binary marginalization in v0 (docs/x1-interface.md A5).",
+      "required": ["name", "binary", "nep_fiducial", "eos_family"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "description": "Short scenario identifier, unique within the exchange." },
+        "binary": {
+          "type": "object",
+          "required": ["m1_msun", "m2_msun"],
+          "additionalProperties": false,
+          "properties": {
+            "m1_msun": { "type": "number", "exclusiveMinimum": 0 },
+            "m2_msun": { "type": "number", "exclusiveMinimum": 0 },
+            "chi1": { "type": "number", "minimum": -1, "maximum": 1, "description": "Aligned spin, primary. Informational in v0: implemented fit families ignore spin." },
+            "chi2": { "type": "number", "minimum": -1, "maximum": 1 }
+          }
+        },
+        "nep_fiducial": {
+          "type": "object",
+          "description": "Fiducial NEP values (MeV where dimensional), keyed by the same names as nep_names.",
+          "additionalProperties": { "type": "number" }
+        },
+        "eos_family": { "type": "string", "description": "Which EOS family produced Lambda(m), R(m), e.g. 'nmbackend MetaModelEOS + causal tail, build_family'." }
+      }
+    },
+    "nep_names": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Ordered NEP parameter names (e.g. E_sym, L_sym, K_sat, cs2_tail). All Jacobian rows in this file are aligned with this order. Consumers must index by name, never by assumed position (docs/x1-interface.md A4)."
+    },
+    "components": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/component" },
+      "description": "Labeled ejecta components (fitting formulae differ per component). The Y_e quadrature is per-component in v0 (docs/x1-interface.md A3)."
+    }
+  },
+  "definitions": {
+    "uq": {
+      "type": "object",
+      "description": "Uncertainty-carrying quantity, matching nmbackend.ejecta.UQ: never a bare number. sigma = quadrature sum of sigma_fit and sigma_formula (docs/x1-interface.md A1).",
+      "required": ["value", "sigma_fit", "sigma_formula", "sigma"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "number" },
+        "sigma_fit": { "type": "number", "minimum": 0, "description": "Calibration papers' own residual scatter." },
+        "sigma_formula": { "type": "number", "minimum": 0, "description": "Spread across independent fit families on the same inputs." },
+        "sigma": { "type": "number", "minimum": 0, "description": "Combined systematic: sqrt(sigma_fit^2 + sigma_formula^2)." }
+      }
+    },
+    "ranged_value": {
+      "type": "object",
+      "description": "Scenario-level quantity with a stated range (used for s, tau when the surrogate does not resolve them per node; every number an assumption, flagged in provenance.notes).",
+      "required": ["value", "range"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "number" },
+        "range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "[low, high]."
+        }
+      }
+    },
+    "jacobian_row": {
+      "type": "array",
+      "items": { "type": "number" },
+      "description": "d(quantity)/d(NEP) for each entry of nep_names, in order, evaluated at the fiducial binary and fiducial NEPs. Exact zeros are stated, not omitted (including the identically-zero rows for scenario-level s, tau in v0)."
+    },
+    "node": {
+      "type": "object",
+      "description": "One Y_e quadrature node discretizing P(Y_e | binary, EOS) for this component.",
+      "required": ["ye", "weight", "d_ye_dnep", "d_weight_dnep"],
+      "additionalProperties": false,
+      "properties": {
+        "ye": { "type": "number", "minimum": 0, "maximum": 0.65 },
+        "weight": { "type": "number", "minimum": 0, "description": "Quadrature weight; weights sum to 1 within the component (mass scale carried by m_ej)." },
+        "s_kb_per_baryon": { "type": "number", "exclusiveMinimum": 0, "description": "Per-node entropy, only if the surrogate resolves it; else omit and use the component-level s." },
+        "tau_ms": { "type": "number", "exclusiveMinimum": 0, "description": "Per-node expansion timescale (density e-folding time of the exponential phase, X1-BRIDGE section 3 convention; docs/x1-interface.md A7). Only if resolved per node." },
+        "d_ye_dnep": { "$ref": "#/definitions/jacobian_row" },
+        "d_weight_dnep": { "$ref": "#/definitions/jacobian_row" },
+        "d_s_dnep": { "$ref": "#/definitions/jacobian_row" },
+        "d_tau_dnep": { "$ref": "#/definitions/jacobian_row" }
+      }
+    },
+    "component": {
+      "type": "object",
+      "required": ["label", "m_ej_msun", "d_mej_dnep", "ye_quadrature"],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "enum": ["dynamical", "disk_wind", "secular", "other"],
+          "description": "Ejecta component label; the fitting formulae differ per component."
+        },
+        "fit_families": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Registry names of the fit families combined for this component (e.g. radice2018, kf2020, nedora2021)."
+        },
+        "m_ej_msun": { "$ref": "#/definitions/uq", "description": "Component ejecta mass in solar masses." },
+        "v_ej_c": { "$ref": "#/definitions/uq", "description": "Optional mass-weighted ejecta velocity in units of c." },
+        "d_mej_dnep": { "$ref": "#/definitions/jacobian_row" },
+        "s_kb_per_baryon": { "$ref": "#/definitions/ranged_value", "description": "Component-level entropy with range; required in v0 unless every node carries s_kb_per_baryon." },
+        "tau_ms": { "$ref": "#/definitions/ranged_value", "description": "Component-level expansion timescale with range; required in v0 unless every node carries tau_ms." },
+        "ye_quadrature": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/node" },
+          "description": "Nodes {Y_e,k} with weights {w_k}; weights sum to 1 within this component. Node placement should bracket the lanthanide turn-on (Y_e,crit ~ 0.26)."
+        }
+      }
+    }
+  }
+}
