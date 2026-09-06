@@ -8,6 +8,8 @@ from . import constants
 from . import ejecta
 from . import ipad
 from . import postmerger
+# lab_likelihood, priors, inference, rift, adapters are add-ons imported
+# explicitly (from nmbackend import lab_likelihood), not eagerly here.
 from .eos import MetaModelEOS, PolytropeEOS, EOSModel, EOSTable
 from .tov import solve_structure, build_family, m_max
 

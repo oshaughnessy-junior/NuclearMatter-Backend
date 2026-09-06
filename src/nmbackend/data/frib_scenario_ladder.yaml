@@ -1,0 +1,100 @@
+# PROVENANCE: this file is a COPY, carried in NuclearMatter-Backend so the
+# package has no live cross-repo dependency (per the FRIB-SCOPING section 8
+# infrastructure decision: scenario data is shared as small files copied with
+# provenance headers).
+#
+#   origin : nmb-papers (matter-backend-papers) scoping/frib_scenario_ladder.yaml
+#            -- the single source of truth; update THERE first, then re-copy.
+#   copied : 2026-09-05 (origin version 1, dated 2026-08-27)
+#
+# EVERY NUMBER IN THIS FILE IS AN ASSUMPTION, not a literature value: no
+# published paper commits to "sigma_L = +/-X by year Y" for FRIB.
+#
+# Interpretation carried by this copy: nmbackend.lab_likelihood applies
+# psym2n0_frac to the SYMMETRY pressure P_sym = n^2 dS/dn, not to the
+# neutron-matter pressure P_PNM = n^2 (de_sat/dn + dS/dn); the two differ at
+# 2 n_sat by the isoscalar term.  Encoding choice flagged for RO review; if
+# the source ladder later pins the other convention, update the module.
+#
+# The original header follows.
+#
+# ---------------------------------------------------------------------------
+# FRIB scenario ladder — single source of truth for laboratory-prior
+# scenarios used across the nmb-papers FRIB track (paper-1 frib_scenarios
+# analysis, p5-crossover forecasts; the MB-N2 nmbackend module consumes a
+# copy with a provenance header when it lands there).
+#
+# EVERY NUMBER IN THIS FILE IS AN ASSUMPTION, not a literature value: no
+# published paper commits to "sigma_L = ±X by year Y" for FRIB
+# (scoping/FRIB-SCOPING.md §1).  Program-scope citations:
+# arXiv:2301.13253, arXiv:2410.06144, arXiv:2606.29588; density-sensitivity
+# assignments after Tsang et al. arXiv:2310.11588.
+#
+# sigma values are lab-prior REPLACEMENT widths in MeV (matching
+# ad_symmetry.py PRIOR_SD semantics); absent keys keep the current prior.
+
+version: 1
+date: 2026-08-27
+provenance: "scoping/FRIB-SCOPING.md sections 1-2 and the section 8 decision log"
+
+scenarios:
+  - name: "GW-only"
+    tag: "Gw"
+    epoch: "baseline"
+    assumption: true
+    lab_sigma: {}
+    basis: >-
+      Baseline: hero-catalogue GW measurement alone, current prior
+      (reproduces committed symmetry_energy_results.json posterior_N and
+      ad_symmetry_results.json ad_posterior_sd).
+
+  - name: "+FRIB-2028"
+    tag: "Near"
+    epoch: "2026-2028"
+    assumption: true
+    lab_sigma: {L_sym: 22.0, E_sym: 2.0}
+    basis: >-
+      Near-term (now-2028) FRIB structure campaigns: masses/IAS/dipole-response
+      give S0 to ±(1-2) MeV while L stays ±15-25 MeV (FRIB-SCOPING.md §1,
+      after Tsang et al. arXiv:2310.11588 sensitivity assignments; program
+      scope arXiv:2301.13253, 2410.06144).  sigma_L=22 sits mid-range of the
+      near-term band; ASSUMED ladder value, no citable "±X by year Y" exists.
+
+  - name: "+FRIB400"
+    tag: "Four"
+    epoch: "post-2031 (FRIB400 has no CD-0)"
+    assumption: true
+    lab_sigma: {L_sym: 15.0, E_sym: 1.5}
+    basis: >-
+      FRIB400 era (post-2031, no CD-0 yet): TPC pion program targets L toward
+      ±15-20 MeV if transport UQ succeeds; FRIB400 reaches E_sym(2n0)
+      ±10-15 MeV (FRIB-SCOPING.md §1; whitepapers arXiv:2301.13253,
+      2606.29588).  sigma_L=15, sigma_S0=1.5 ASSUMED as the optimistic end of
+      that ladder.
+
+  - name: "+FRIB400+Ksym"
+    tag: "FourK"
+    epoch: "post-2031 (FRIB400 has no CD-0)"
+    assumption: true
+    lab_sigma: {L_sym: 15.0, E_sym: 1.5, K_sym: 80.0}
+    psym2n0_frac: 0.30
+    basis: >-
+      Machinery-capability variant: FRIB400 P(2n0) to ~±30% mapped
+      heuristically onto a curvature width sigma_Ksym=80 MeV (prior 114).
+      ILLUSTRATIVE assumption only — a pressure-at-density likelihood
+      (Huth arXiv:2107.06229 / Tsang arXiv:2310.11588 encoding) is the honest
+      form and is deferred to the crossover paper.
+
+# Calendar axis for the p5-crossover epoch mapping.  Coarse, ASSUMED, and
+# revisable in one place; the crossover paper's Methods must cite this block
+# as its epoch assumption set.
+gw_epochs:
+  assumption: true
+  note: >-
+    Detector-era assumptions for the crossover paper's calendar axis.  Spans
+    and event counts are planning assumptions, not schedule commitments; the
+    3G start in particular is a placeholder pending real observatory
+    schedules.
+  entries:
+    - {epoch: "O5",       span: "2028-2030", reference: "catalogue growth at O5 sensitivity; rates per population assumptions in paper-3 machinery"}
+    - {epoch: "3G-early", span: "2035-",     reference: "ET+CE; paper-3 tracer-SMC 3G study used 1.2e4 events; Fisher-I used ~2.5e5/yr at an optimistic 1000 Gpc^-3 yr^-1"}
