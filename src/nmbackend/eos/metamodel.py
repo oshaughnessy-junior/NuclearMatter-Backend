@@ -97,14 +97,16 @@ def _eps_total(n, x_p, p, muons=False):
     return eps_b + eps_l
 
 
-def _solve_xp(n, p, n_iter=70, muons=False):
+def _solve_xp(n, p, n_iter=70, muons=False, S=None):
     """beta-equilibrium proton fraction x_p(n), differentiable w.r.t. params.
 
     The forward solve is a robust vectorized bisection (non-differentiable); we
     then take a single Newton step at the converged root so that AD recovers the
     correct implicit derivative dx_p/dparam = -(dg/dparam)/(dg/dx_p).
+    ``S`` overrides the Taylor symmetry energy on ``n`` if given.
     """
-    _, S = _esat_S(n, p)
+    if S is None:
+        _, S = _esat_S(n, p)
 
     def g(x_p):
         delta = 1.0 - 2.0 * x_p
@@ -141,8 +143,11 @@ class MetaModelEOS(EOSModel):
 
     def __init__(self, n_min=3e-4, n_points_low=240, n_points_tail=160,
                  eps_max_fac=14.0, n_surface=1e-7, gamma_crust=1.3,
-                 muons=False):
+                 muons=False, s_high="taylor"):
+        if s_high not in ("taylor", "power", "power_matched"):
+            raise ValueError(f"unknown s_high={s_high!r}")
         self.muons = muons
+        self.s_high = s_high
         self.n_min = n_min
         self.n_points_low = n_points_low
         self.n_points_tail = n_points_tail
@@ -194,6 +199,12 @@ class MetaModelEOS(EOSModel):
         x_p is the beta-equilibrium solution of the Taylor S(n) extrapolated past
         n_match.  That is a modelling choice (as in MetaModel+CSE dUrca studies),
         not a property of the tail.  Leptons follow ``self.muons``.
+
+        ``s_high`` (constructor) replaces the Taylor S(n) above n_match by a
+        bounded power law S(n_match) (n/n_match)^g.  For "power",
+        g = params["gamma_S"] (default 0.5); for "power_matched", g is the
+        slope-matched n S'/S at n_match, clipped to [0, 1].  The pressure is
+        unchanged (it comes from the tail).
         """
         p = dict(DEFAULT_PARAMS)
         if params:
@@ -201,7 +212,18 @@ class MetaModelEOS(EOSModel):
         n_lo, eps_lo, p_lo = self._low_density(p)
         n_t, _, _ = self._css_tail(n_lo[-1], eps_lo[-1], p_lo[-1], p)
         n = jnp.concatenate([n_lo, n_t])
-        x_p = jnp.clip(_solve_xp(n, p, muons=self.muons), 0.0, 0.5)
+        S = None
+        if self.s_high != "taylor":
+            n_m = n_lo[-1]
+            _, S = _esat_S(n, p)
+            S_m = _esat_S(n_m, p)[1]
+            if self.s_high == "power":
+                g = p.get("gamma_S", 0.5)
+            else:
+                dS = jax.grad(lambda x: _esat_S(x, p)[1])(n_m)
+                g = jnp.clip(n_m * dS / S_m, 0.0, 1.0)
+            S = jnp.where(n <= n_m, S, S_m * (n / n_m) ** g)
+        x_p = jnp.clip(_solve_xp(n, p, muons=self.muons, S=S), 0.0, 0.5)
         if self.muons:
             _, n_e, n_mu, _ = lepton_sector(x_p * n, muons=True)
             x_e, x_mu = n_e / n, n_mu / n
