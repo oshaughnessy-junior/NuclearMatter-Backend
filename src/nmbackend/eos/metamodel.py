@@ -27,8 +27,8 @@ causal segment with dp/deps = cs2_tail.  ``cs2_tail`` thus becomes a physical
 stiffness parameter controlling the maximum mass -- a natural inference knob.
 
 This is the empirical-parameter ("physical") nuclear-matter model emphasized in the
-project notes.  A self-consistent RMFT Lagrangian solver and a proper crust
-(SLy/BPS) are planned siblings under the same EOSModel interface.
+project notes.  Below n_t the table uses the SLy crust (``eos.crust``); the
+legacy polytrope surface continuation is ``crust="polytrope"``.
 
 Motivated by: Margueron, Hoffmann Casali & Gulminelli PRC 97 (2018) 025805; the
 ``jester`` MetaModel (MIT); the RMF parameterization in Z. Zhu's ``fisher_eos``
@@ -41,8 +41,9 @@ import jax
 import jax.numpy as jnp
 
 from ..constants import HBARC, M_N, M_P, M_E, N_SAT_DEFAULT
-from .base import EOSModel, build_h_and_cs2, extend_to_surface, Composition
+from .base import EOSModel, Composition
 from .leptons import lepton_sector
+from .crust import N_T_DEFAULT, check_crust, finish_table
 
 jax.config.update("jax_enable_x64", True)
 
@@ -143,7 +144,7 @@ class MetaModelEOS(EOSModel):
 
     def __init__(self, n_min=3e-4, n_points_low=240, n_points_tail=160,
                  eps_max_fac=14.0, n_surface=1e-7, gamma_crust=1.3,
-                 muons=False, s_high="taylor"):
+                 muons=False, s_high="taylor", crust="sly", n_t=N_T_DEFAULT):
         if s_high not in ("taylor", "power", "power_matched"):
             raise ValueError(f"unknown s_high={s_high!r}")
         self.muons = muons
@@ -152,15 +153,20 @@ class MetaModelEOS(EOSModel):
         self.n_points_low = n_points_low
         self.n_points_tail = n_points_tail
         self.eps_max_fac = eps_max_fac
-        # surface continuation (see eos.base.extend_to_surface); set n_surface=None
-        # to disable and recover the old truncated-at-n_min behaviour.
+        # low-density completion (eos.crust.finish_table): the SLy crust below
+        # n_t, or with crust="polytrope" the legacy surface continuation
+        # (n_surface, gamma_crust).  n_surface=None disables both and recovers
+        # the old truncated-at-n_min behaviour.
         self.n_surface = n_surface
         self.gamma_crust = gamma_crust
+        self.crust = check_crust(crust)
+        self.n_t = n_t
 
-    def _low_density(self, p):
+    def _low_density(self, p, n_min=None):
         """Taylor metamodel part on n in [n_min, n_match]; MeV/fm^3, fm^-3."""
         n_match = p["n_match_fac"] * p["n_sat"]
-        n = jnp.exp(jnp.linspace(math.log(self.n_min), jnp.log(n_match),
+        n_min = self.n_min if n_min is None else n_min
+        n = jnp.exp(jnp.linspace(math.log(n_min), jnp.log(n_match),
                                  self.n_points_low))
         # x_p is differentiable w.r.t. params; the inner pressure derivative below
         # differentiates only w.r.t. n, so x_p is correctly held fixed there.
@@ -236,7 +242,9 @@ class MetaModelEOS(EOSModel):
         if params:
             p.update(params)
 
-        n_lo, eps_lo, p_lo = self._low_density(p)
+        sly = self.crust == "sly" and self.n_surface is not None
+        n_lo, eps_lo, p_lo = self._low_density(
+            p, n_min=self.n_t * (1.0 + 1e-3) if sly else None)
         n_t, eps_t, p_t = self._css_tail(n_lo[-1], eps_lo[-1], p_lo[-1], p)
 
         n = jnp.concatenate([n_lo, n_t])
@@ -244,9 +252,5 @@ class MetaModelEOS(EOSModel):
         pres = jnp.concatenate([p_lo, p_t])
         pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
 
-        # surface convention: continue to p -> 0 so R is integrated to the surface
-        if self.n_surface is not None:
-            n, eps, pres = extend_to_surface(n, eps, pres,
-                                             n_surface=self.n_surface,
-                                             gamma_crust=self.gamma_crust)
-        return build_h_and_cs2(n, eps, pres)
+        return finish_table(n, eps, pres, self.crust, self.n_t,
+                            self.n_surface, self.gamma_crust)

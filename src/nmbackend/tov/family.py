@@ -50,7 +50,14 @@ def build_family(table: EOSTable, h_c_grid=None, *, backend: str = "diffrax",
 
     # forward-mode along the sequence (clean through the tidal variable)
     dM_dhc = jax.vmap(jax.jacfwd(M_of_hc))(h_c_grid)
-    stable = dM_dhc > 0.0
+    # the neutron-star branch runs from the minimum-mass star to M_max; with a
+    # crust table the lowest h_c can lie below the minimum-mass star, on the
+    # extended (R ~ 10^3 km) configurations that also have dM/dh_c > 0
+    rising = dM_dhc > 0.0
+    order = jnp.arange(h_c_grid.shape[0])
+    i_max = jnp.argmax(jnp.where(rising, pts.M_msun, -jnp.inf))
+    i_min = jnp.argmin(jnp.where(order <= i_max, pts.M_msun, jnp.inf))
+    stable = rising & (order >= i_min)
 
     return Family(
         h_c=h_c_grid, M_msun=pts.M_msun, R_km=pts.R_km, Lambda=pts.Lambda,
