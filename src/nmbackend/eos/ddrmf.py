@@ -24,9 +24,11 @@ beta equilibrium and charge neutrality use npe-mu leptons
 (:func:`nmbackend.eos.leptons.lepton_sector`).
 
 ``couplings_from_saturation_dd`` maps (n0, B/A, K, m*/M, J, L) to couplings,
-with the shape parameters d_sigma, d_omega held at their DD2 values and
-c_i = 1/(3 d_i^2) (f''(0) = 0).  DD2 is a member of that family.  The rho
-decay a_rho follows from L at fixed J.
+with c_i = 1/(3 d_i^2) (f''(0) = 0).  The shape parameters d_sigma, d_omega
+default to their DD2 values and may be passed freely.  DD2 is a member of
+that family.  The rho decay a_rho follows from L at fixed J; a_rho < 0 (rho
+coupling growing with density, L above its a_rho = 0 value) is rejected
+unless ``allow_negative_arho=True``.
 """
 from __future__ import annotations
 
@@ -238,7 +240,8 @@ def _tw_from_b(b, d):
 def couplings_from_saturation_dd(n0=0.149065, BA=-16.02, K=242.7,
                                  mstar_frac=0.5628, J=31.7, L=55.0,
                                  M_mev=938.9187, d_s=DD2["d_s"],
-                                 d_w=DD2["d_w"], b_start=(DD2["b_s"], DD2["b_w"])):
+                                 d_w=DD2["d_w"], b_start=(DD2["b_s"], DD2["b_w"]),
+                                 allow_negative_arho=False):
     """DD-RMF couplings reproducing a saturation point.
 
     n0 in fm^-3; BA, K, J, L in MeV.  C_sigma(n0) from m*/M, C_omega(n0) from
@@ -246,8 +249,8 @@ def couplings_from_saturation_dd(n0=0.149065, BA=-16.02, K=242.7,
     and a_rho from L.  Single nucleon mass ``M_mev``.
 
     Raises ValueError if no solution exists, if a coupling function turns
-    negative or singular on 0 <= x <= 12, or if a_rho < 0 (a rho coupling
-    that grows with density; outside the DD family used here).
+    negative or singular on 0 <= x <= 12, or (unless ``allow_negative_arho``)
+    if a_rho < 0, a rho coupling that grows with density.
     """
     from scipy.optimize import fsolve
 
@@ -295,7 +298,7 @@ def couplings_from_saturation_dd(n0=0.149065, BA=-16.02, K=242.7,
     S = np.asarray(symmetric_matter(grid, p)["S"])       # a_r = 0 here
     L_a0 = 3.0 * n0 * (S[2] - S[0]) / (2 * h)            # L at a_rho = 0
     a_r = (L_a0 - L) / (6.0 * Srho * HBARC)               # dL/da_rho = -6 S_rho
-    if a_r < 0.0:
+    if a_r < 0.0 and not allow_negative_arho:
         raise ValueError(f"L={L} above the a_rho = 0 value {L_a0:.1f}")
     p["a_r"] = float(a_r)
     p.update(L0=float(L_a0))

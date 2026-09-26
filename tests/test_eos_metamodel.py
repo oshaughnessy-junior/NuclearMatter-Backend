@@ -32,3 +32,16 @@ def test_stiffness_knob_increases_mmax():
     mmax_soft = float(m_max(build_family(mm.eos_table({"cs2_tail": 0.3}), n_steps=500)))
     mmax_stiff = float(m_max(build_family(mm.eos_table({"cs2_tail": 0.7}), n_steps=500)))
     assert mmax_stiff > mmax_soft
+
+
+def test_bounded_symmetry_energy_above_match():
+    """s_high='power*' keeps x_p below n_match and bounds S above it."""
+    par = {"Q_sym": 800.0, "gamma_S": 0.5}
+    tay = MetaModelEOS(muons=True).composition(par)
+    for mode in ("power", "power_matched"):
+        c = MetaModelEOS(muons=True, s_high=mode).composition(par)
+        n, xp, xt = np.asarray(c.n), np.asarray(c.x_p), np.asarray(tay.x_p)
+        n_m = 2.0 * N_SAT_DEFAULT
+        lo = n <= n_m * (1 - 1e-9)
+        np.testing.assert_allclose(xp[lo], xt[lo], rtol=1e-10)
+        assert np.all(xp[n > 2 * n_m] < xt[n > 2 * n_m])  # cubic S is steeper

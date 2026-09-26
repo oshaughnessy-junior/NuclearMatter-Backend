@@ -97,3 +97,22 @@ def test_mdu_falls_as_L_rises():
     """Smaller a_rho (larger L at fixed J) raises x_p at high density."""
     ms = [_star(couplings_from_saturation_dd(L=L))[2] for L in (60.0, 75.0, 90.0)]
     assert ms[2] < 2.0 and ms[2] < ms[1] <= ms[0]
+
+
+def test_negative_arho_optional():
+    """a_rho < 0 is allowed on request, and the saturation point is kept."""
+    c = couplings_from_saturation_dd(L=110.0, allow_negative_arho=True)
+    assert c["a_r"] < 0.0
+    s = saturation_properties(c)
+    assert abs(s["L"] - 110.0) < 0.2 and abs(s["E_sym"] - 31.7) < 0.05
+
+
+def test_free_shape_parameters():
+    """Non-DD2 (d_sigma, d_omega) still reproduce the requested saturation
+    point and change the high-density stiffness."""
+    c = couplings_from_saturation_dd(d_s=0.45, d_w=0.50)
+    s = saturation_properties(c)
+    for k, v in dict(n0=0.149065, BA=-16.02, K=242.7, E_sym=31.7, L=55.0).items():
+        assert abs(s[k] - v) < 0.01 * max(1.0, abs(v)), k
+    c0 = couplings_from_saturation_dd()
+    assert abs(_star(c)[0] - _star(c0)[0]) > 0.02
