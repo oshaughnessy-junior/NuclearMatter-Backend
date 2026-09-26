@@ -28,10 +28,16 @@ class Family(NamedTuple):
 
 
 def default_hc_grid(table: EOSTable, n_models: int = 120, frac_lo: float = 0.02,
-                    frac_hi: float = 0.92):
-    """A central-enthalpy grid spanning low-mass to near-maximum central density."""
+                    frac_hi: float = 0.92, n_c_min: float = 0.07):
+    """A central-enthalpy grid spanning low-mass to near-maximum central density.
+
+    The grid starts at the larger of ``frac_lo`` h_max and h(n = ``n_c_min``
+    fm^-3).  With a crust table, frac_lo h_max alone can fall deep in the
+    crust, on extended configurations far below the minimum-mass star."""
     hmax = table.h[-1]
-    return jnp.linspace(frac_lo * hmax, frac_hi * hmax, n_models)
+    h_lo = jnp.maximum(frac_lo * hmax,
+                       jnp.interp(jnp.log(n_c_min), jnp.log(table.n), table.h))
+    return jnp.linspace(h_lo, frac_hi * hmax, n_models)
 
 
 def build_family(table: EOSTable, h_c_grid=None, *, backend: str = "diffrax",

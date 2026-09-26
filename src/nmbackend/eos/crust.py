@@ -29,7 +29,8 @@ import numpy as np
 import jax.numpy as jnp
 
 N_T_DEFAULT = 0.055       # fm^-3, 0.34 n_sat (paper 1, GKKS arXiv:2512.18044)
-N_FLOOR = 1e-10           # fm^-3, lowest crust node (surface enthalpy ~ 1e-5)
+N_FLOOR = 3e-10           # fm^-3, lowest crust node: p = 4e-12 MeV fm^-3, above
+                          # the 1e-12 floor of compose.eos_table_from_arrays
 BRIDGE = 1.25             # power-law segment ends at >= BRIDGE * n_t
 GAMMA_MIN = 1.1           # minimum power-law index on that segment
 N_CRUST_PTS = 150

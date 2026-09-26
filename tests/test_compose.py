@@ -12,7 +12,7 @@ from nmbackend.reference.scipy_tov import solve_reference
 
 
 def _rmft_arrays():
-    t = RMFTEOS().eos_table()
+    t = RMFTEOS(crust="polytrope").eos_table()
     n = np.asarray(t.n)
     m = n > 3e-4
     return n[m], np.asarray(t.eps_mevfm3)[m], np.asarray(t.p_mevfm3)[m]
@@ -30,7 +30,7 @@ def test_compose_roundtrip_arrays_exact():
 
 def test_compose_roundtrip_tov_matches():
     # an ingested CompOSE table must give the SAME M-R-Lambda as the original EOS
-    rm = RMFTEOS()
+    rm = RMFTEOS(crust="polytrope")    # the table reload adds this surface
     t0 = rm.eos_table()
     n, eps, p = _rmft_arrays()
     d = tempfile.mkdtemp()

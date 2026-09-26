@@ -93,8 +93,7 @@ def test_bskg3_saturation():
 
 def test_bskg3_star_and_durca():
     """arXiv:2307.14276, Table 4: M_max = 2.26, M_dUrca = 1.38 Msun.  R_1.4
-    (12.73 km there) is not pinned: without a crust, R_1.4 here is ~0.45 km
-    smaller."""
+    (12.73 km there) is pinned in test_crust.py."""
     mmax, _, _, mdu, _ = _star(BSKG3)
     assert abs(mmax - 2.26) < 0.01 and abs(mdu - 1.38) < 0.01
 
