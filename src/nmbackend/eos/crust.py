@@ -7,10 +7,12 @@ crust+cEFT ensemble (n_t = 0.055 fm^-3 = 0.34 n_sat).
 
 Join (the P(rho) matching of Fortin et al. 2016, arXiv:1604.01944, Sec. II.B):
 
-* Core nodes (n, eps, p) at and above the first node n_j >= ``bridge`` * n_t
-  whose pressure exceeds p_t (eps_j/eps_t)^GAMMA_MIN are kept unchanged.
-* Between the crust point (eps_t, p_t) and (eps_j, p_j), p is a power law in
-  eps, so p is continuous and strictly increasing in eps.
+* Core nodes (n, eps, p) at and above n_j are kept unchanged.  n_j is
+  ``bridge`` * n_t, or, if the core pressure there lies below
+  p_t (eps/eps_t)^GAMMA_MIN, the first density above it where it reaches that
+  curve.  n_j moves continuously with the core parameters.
+* Between the crust point (eps_t, p_t) and the core at n_j, p is a power law
+  in eps, so p is continuous and strictly increasing in eps.
 * n follows the first law, d ln n = d eps/(eps + p), along the crust and the
   power-law segment.  It then misses the core n_j by a constant factor f
   (|f - 1| is 1e-3 to 1e-2).  We rescale the crust and segment n by f
@@ -71,12 +73,25 @@ def attach_crust(n, eps, p, n_t=N_T_DEFAULT, bridge=BRIDGE, gamma_min=GAMMA_MIN,
     n, eps, p = jnp.asarray(n), jnp.asarray(eps), jnp.asarray(p)
     nc, ec, pc = crust_nodes(n_t, n_floor, n_crust_pts)
     et, pt = ec[-1], pc[-1]
-    # first core node past the bridge start that a power law p(eps) reaches
-    ok = (n >= bridge * n_t) & (eps > et) & (p >= pt * (eps / et) ** gamma_min)
-    j = jnp.argmax(ok)
-    ej, pj, nj = eps[j], p[j], n[j]
+    # segment end n_j: the first density >= bridge * n_t at which the core
+    # pressure lies on or above p_t (eps/eps_t)^gamma_min, found by linear
+    # interpolation in ln n so that the table is continuous in the core
+    # parameters; (eps_j, p_j) are the core values there (log-log interpolation)
+    ln = jnp.log(n)
+    g = jnp.log(p / pt) - gamma_min * jnp.log(eps / et)
+    lnb = math.log(bridge * n_t)
+    gb = jnp.interp(lnb, ln, g)
+    up = (ln > lnb) & (g >= 0.0)
+    k = jnp.argmax(up)                         # first node above, on the curve
+    ln0 = jnp.maximum(ln[jnp.maximum(k - 1, 0)], lnb)
+    g0 = jnp.where(ln[jnp.maximum(k - 1, 0)] > lnb, g[jnp.maximum(k - 1, 0)], gb)
+    lnx = ln0 + (0.0 - g0) * (ln[k] - ln0) / jnp.where(g[k] > g0, g[k] - g0, 1.0)
+    lnj = jnp.where(gb >= 0.0, lnb, jnp.clip(lnx, ln0, ln[k]))
+    nj = jnp.exp(lnj)
+    ej = jnp.exp(jnp.interp(lnj, ln, jnp.log(eps)))
+    pj = jnp.exp(jnp.interp(lnj, ln, jnp.log(p)))
     gam = jnp.log(pj / pt) / jnp.log(ej / et)
-    # segment nodes: the core slots i < j, placed at eps_t (eps_j/eps_t)^s
+    # segment nodes: the core slots below n_j, placed at eps_t (eps_j/eps_t)^s
     s = jnp.clip((jnp.log(n) - math.log(n_t)) / (jnp.log(nj) - math.log(n_t)),
                  0.0, 1.0)
     e_br = et * (ej / et) ** s
@@ -89,7 +104,7 @@ def attach_crust(n, eps, p, n_t=N_T_DEFAULT, bridge=BRIDGE, gamma_min=GAMMA_MIN,
         0.5 * (integrand[1:] + integrand[:-1]) * jnp.diff(sq))])
     f = nj / (n_t * jnp.exp(cum[-1]))            # rescales crust + segment n
     n_br = f * n_t * jnp.exp(jnp.interp(s, sq, cum))
-    below = jnp.arange(n.shape[0]) < j
+    below = n < nj
     return (jnp.concatenate([f * jnp.asarray(nc), jnp.where(below, n_br, n)]),
             jnp.concatenate([jnp.asarray(ec), jnp.where(below, e_br, eps)]),
             jnp.concatenate([jnp.asarray(pc), jnp.where(below, p_br, p)]))
