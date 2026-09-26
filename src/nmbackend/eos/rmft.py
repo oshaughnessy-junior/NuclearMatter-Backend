@@ -16,15 +16,25 @@ and masses in fm^-1, densities in fm^-3, energy density in fm^-4 -> MeV/fm^3)::
     Phi/C_sigma + b M Phi^2 + c Phi^3 = rho_s(m*)         (self-consistent)
     W   = C_omega n_B                 (= g_omega omega)
     R   = (1/2) C_rho  n_3            (= g_rho   rho ; n_3 = n_p - n_n)
+    (with an omega-rho coupling Lambda_v, W and R solve the coupled pair
+     n_B = W/C_omega + 2 Lambda_v W R^2,  n_3/2 = R/C_rho + 2 Lambda_v W^2 R)
     mu_i = sqrt(kF_i^2 + m*^2) + W + t3_i R   (t3 = +1/2 p, -1/2 n)
 
 with C_x = (g_x/m_x)^2.  Energy density and pressure::
 
     eps = sum_i eps_kin(kF_i, m*) + (1/2)Phi^2/C_sigma + (1/3)b M Phi^3
-          + (1/4)c Phi^4 + (1/2)C_omega n_B^2 + (1/2)R^2/C_rho + eps_leptons
+          + (1/4)c Phi^4 + (1/2)W^2/C_omega + (1/2)R^2/C_rho
+          + 3 Lambda_v W^2 R^2 + eps_leptons
     p   = mu_n n_B - eps             (Gibbs at T=0; thermodynamically consistent)
 
-beta-equilibrium + charge neutrality fix the proton fraction (electrons, muons).
+beta-equilibrium (mu_n - mu_p = mu_e = mu_mu) + charge neutrality
+(n_p = n_e + n_mu) fix the proton fraction; see :meth:`RMFTEOS.composition`.
+
+The optional isoscalar-isovector coupling ``Lambda_v`` (Horowitz & Piekarewicz,
+PRL 86, 5647 (2001); the FSU family) softens the symmetry energy at fixed
+saturation point and E_sym.  ``couplings_from_saturation`` maps (n0, B/A, K,
+m*/M, E_sym, L) to couplings, so an RMF family can be sampled in saturation
+properties.
 
 Default couplings: GM1 (Glendenning & Moszkowski 1991), whose saturation point is
 n0~0.153 fm^-3, B/A~16.3 MeV, K~300 MeV, m*/M~0.70, a_sym~32.5 MeV -- used to
@@ -39,8 +49,9 @@ import math
 import jax
 import jax.numpy as jnp
 
-from ..constants import HBARC, M_E, M_MU
-from .base import EOSModel, build_h_and_cs2, extend_to_surface
+from ..constants import HBARC
+from .base import EOSModel, build_h_and_cs2, extend_to_surface, Composition
+from .leptons import lepton_sector
 
 jax.config.update("jax_enable_x64", True)
 
@@ -123,47 +134,42 @@ def _solve_phi(n_n, n_p, p, ngrid=320, nbis=48):
 
 
 def _leptons(n_charge):
-    """Solve the lepton sector at fixed charge density n_charge = n_p (fm^-3).
+    """Electrons + muons at charge density n_charge = n_p (fm^-3); see
+    :func:`nmbackend.eos.leptons.lepton_sector`.
+    Returns (mu_e [fm^-1], n_e, n_mu [fm^-3], eps_lep [fm^-4])."""
+    return lepton_sector(n_charge, muons=True)
 
-    Electrons + muons in chemical equilibrium (common mu_e = mu_mu) with charge
-    neutrality n_e + n_mu = n_charge.  Muons switch on once mu_e > m_mu (~106 MeV).
-    Returns (mu_e [fm^-1], n_e, n_mu [fm^-3], eps_lep [fm^-4]).
+
+def _vector_fields(n_B, n3, p, n_iter=40):
+    """Mean vector fields W = g_omega omega, R = g_rho rho (fm^-1).
+
+    Without the omega-rho coupling they are algebraic.  With ``Lambda_v`` they
+    solve n_B = W/C_omega + 2 Lambda_v W R^2 and n3/2 = R/C_rho + 2 Lambda_v W^2 R,
+    by fixed-point iteration (a contraction: 2 Lambda_v R^2 << 1/C_omega).
     """
-    m_e, m_mu = M_E / HBARC, M_MU / HBARC
-    n_charge = jnp.maximum(n_charge, 1e-30)
-
-    def nlep(mu):
-        ke = jnp.sqrt(jnp.maximum(mu**2 - m_e**2, 0.0))
-        kmu = jnp.sqrt(jnp.maximum(mu**2 - m_mu**2, 0.0))
-        return (ke**3 + kmu**3) / (3.0 * _PI2)
-
-    mu_lo = jnp.full_like(n_charge, m_e)
-    mu_hi = jnp.sqrt((3.0 * _PI2 * n_charge) ** (2.0 / 3.0) + m_e**2) * 1.0001
+    Co, Cr = p["C_omega"], p["C_rho"]
+    lam = p.get("Lambda_v", 0.0)
+    W, R = Co * n_B, 0.5 * Cr * n3
+    if isinstance(lam, (int, float)) and lam == 0.0:
+        return W, R
 
     def body(_i, c):
-        lo, hi = c
-        mid = 0.5 * (lo + hi)
-        f = nlep(mid) - n_charge           # increasing in mu
-        return jnp.where(f < 0.0, mid, lo), jnp.where(f < 0.0, hi, mid)
+        W, R = c
+        W = n_B / (1.0 / Co + 2.0 * lam * R**2)
+        R = 0.5 * n3 / (1.0 / Cr + 2.0 * lam * W**2)
+        return W, R
 
-    lo, hi = jax.lax.fori_loop(0, 50, body, (mu_lo, mu_hi))
-    mu_e = 0.5 * (lo + hi)
-    ke = jnp.sqrt(jnp.maximum(mu_e**2 - m_e**2, 0.0))
-    kmu = jnp.sqrt(jnp.maximum(mu_e**2 - m_mu**2, 0.0))
-    n_e = ke**3 / (3.0 * _PI2)
-    n_mu = kmu**3 / (3.0 * _PI2)
-    eps_lep = _eps_kin_one(ke, m_e) + _eps_kin_one(kmu, m_mu)   # =0 if kf=0
-    return mu_e, n_e, n_mu, eps_lep
+    return jax.lax.fori_loop(0, n_iter, body, (W, R))
 
 
 def _solve_xp(n_B, p, n_iter=70):
-    """beta-equilibrium proton fraction (electrons only here; muons added in eps).
+    """beta-equilibrium proton fraction with electrons AND muons.
 
-    Condition mu_n - mu_p = mu_e with charge neutrality n_e = n_p.
+    Condition mu_n - mu_p = mu_e = mu_mu, with charge neutrality
+    n_p = n_e + n_mu (``_leptons``).
     mu_n - mu_p = (E*_Fn - 1/2 R) - (E*_Fp + 1/2 R) = E*_Fn - E*_Fp - R.
     """
     M = p["M_mev"] / HBARC
-    Crho = p["C_rho"]
 
     def g(x_p):
         n_p, n_n = x_p * n_B, (1.0 - x_p) * n_B
@@ -172,7 +178,7 @@ def _solve_xp(n_B, p, n_iter=70):
         kfn, kfp = _kf(n_n), _kf(n_p)
         efn = jnp.sqrt(kfn**2 + mstar**2)
         efp = jnp.sqrt(kfp**2 + mstar**2)
-        R = 0.5 * Crho * (n_p - n_n)
+        _, R = _vector_fields(n_B, n_p - n_n, p)
         mu_e = efn - efp - R                       # required by beta-eq (fm^-1)
         mu_e_actual = _leptons(x_p * n_B)[0]        # e + mu, charge neutrality
         return mu_e - mu_e_actual                   # >0 -> need more protons
@@ -212,16 +218,16 @@ def _eps_p_from_state(n_B, x_p, Phi, p, leptons=True):
     """eps (MeV/fm^3), p (MeV/fm^3), mu_n (MeV) given a *solved* scalar field Phi."""
     M = p["M_mev"] / HBARC
     Cs, Co, Cr, b, c = p["C_sigma"], p["C_omega"], p["C_rho"], p["b"], p["c"]
+    lam = p.get("Lambda_v", 0.0)
     n_p, n_n = x_p * n_B, (1.0 - x_p) * n_B
     mstar = M - Phi
     kfn, kfp = _kf(n_n), _kf(n_p)
-    n3 = n_p - n_n
-    W = Co * n_B
-    R = 0.5 * Cr * n3
+    W, R = _vector_fields(n_B, n_p - n_n, p)
 
     eps_kin = _eps_kin_one(kfn, mstar) + _eps_kin_one(kfp, mstar)
     eps_field = (0.5 * Phi**2 / Cs + (1.0 / 3.0) * b * M * Phi**3
-                 + 0.25 * c * Phi**4 + 0.5 * Co * n_B**2 + 0.5 * R**2 / Cr)
+                 + 0.25 * c * Phi**4 + 0.5 * W**2 / Co + 0.5 * R**2 / Cr
+                 + 3.0 * lam * W**2 * R**2)
     eps_lep = _leptons(x_p * n_B)[3] if leptons else 0.0 * n_B  # e + mu (n_p charge)
     eps = eps_kin + eps_field + eps_lep
 
@@ -238,11 +244,76 @@ def _eps_p_from_state(n_B, x_p, Phi, p, leptons=True):
 
 def symmetry_energy(n_B, Phi, p):
     """Symmetry energy S(n) [MeV] (analytic RMF form) given the symmetric-matter
-    scalar field Phi: S = (1/6) k_F^2/E*_F + (1/8) C_rho n."""
+    scalar field Phi: S = (1/6) k_F^2/E*_F + (1/8) C_rho_eff n, with
+    C_rho_eff = C_rho / (1 + 2 Lambda_v C_rho W^2) and W = C_omega n."""
     mstar = p["M_mev"] / HBARC - Phi
     kf = _kf(n_B / 2.0)
     ef = jnp.sqrt(kf**2 + mstar**2)
-    return ((1.0 / 6.0) * kf**2 / ef + (1.0 / 8.0) * p["C_rho"] * n_B) * HBARC
+    W = p["C_omega"] * n_B
+    cr_eff = p["C_rho"] / (1.0 + 2.0 * p.get("Lambda_v", 0.0) * p["C_rho"] * W**2)
+    return ((1.0 / 6.0) * kf**2 / ef + (1.0 / 8.0) * cr_eff * n_B) * HBARC
+
+
+def couplings_from_saturation(n0=0.153, BA=-16.3, K=300.0, mstar_frac=0.70,
+                              J=32.5, L=None, M_mev=939.0):
+    """RMF couplings reproducing a saturation point (Glendenning's inversion).
+
+    Inputs in fm^-3 (n0) and MeV (BA, K, J, L).  C_omega follows from p = 0,
+    (C_sigma, b, c) from the linear system {gap equation, E/A, K} at n0, and
+    C_rho from J.  If ``L`` is given, an omega-rho coupling Lambda_v lowers the
+    slope from its Lambda_v = 0 value L0 at fixed J; L must lie in
+    (L0 - 6 J_rho, L0], where J_rho = C_rho n0/8 is the rho part of J.
+
+    Returns a params dict (C_sigma, C_omega, C_rho, b, c, Lambda_v, M_mev) plus
+    ``L0``.  Raises ValueError if the saturation point is not reachable
+    (C_sigma <= 0, J below its kinetic part, or L outside the range above).
+    """
+    import numpy as np
+    M = M_mev / HBARC
+    mstar = mstar_frac * M
+    Phi = M - mstar
+    kf = float(_kf(n0 / 2.0))
+    ef = math.sqrt(kf**2 + mstar**2)
+    W0 = (M_mev + BA) / HBARC - ef                      # p = 0: E/A = E*_F + W
+    Co = W0 / n0
+
+    def rho_s(n, ms):
+        return 2.0 * _rho_s_one(_kf(n / 2.0), ms)
+
+    rs0 = float(rho_s(n0, mstar))
+    drs_dn = float(jax.grad(rho_s, 0)(n0, mstar))
+    drs_dm = float(jax.grad(rho_s, 1)(n0, mstar))
+    eps_kin = 2.0 * float(_eps_kin_one(kf, mstar))
+    U0 = n0 * (M_mev + BA) / HBARC - eps_kin - 0.5 * Co * n0**2
+    dkf = kf / (3.0 * n0)
+    # K = 9 n0 dmu/dn, mu = E*_F(n) + C_omega n  ->  dPhi/dn
+    dPhi = (kf * dkf - ef * (K / HBARC / (9.0 * n0) - Co)) / mstar
+    Upp = drs_dn / dPhi - drs_dm                        # U''(Phi) from d(gap)/dn
+    A = np.array([[Phi, M * Phi**2, Phi**3],
+                  [Phi**2 / 2.0, M * Phi**3 / 3.0, Phi**4 / 4.0],
+                  [1.0, 2.0 * M * Phi, 3.0 * Phi**2]])
+    inv_cs, b, c = np.linalg.solve(A, np.array([rs0, U0, Upp]))
+    if inv_cs <= 0.0:
+        raise ValueError("saturation point needs C_sigma <= 0")
+    T = kf**2 / (6.0 * ef)                              # kinetic part of E_sym
+    cr_eff = 8.0 * (J / HBARC - T) / n0
+    if cr_eff <= 0.0:
+        raise ValueError("J below its kinetic part; C_rho <= 0")
+    def_dn = (kf * dkf - mstar * dPhi) / ef             # dE*_F/dn (m* = M - Phi)
+    dT = kf * dkf / (3.0 * ef) - T * def_dn / ef
+    J_rho = cr_eff * n0 / 8.0
+    L0 = 3.0 * n0 * dT * HBARC + 3.0 * J_rho * HBARC
+    lam, Cr = 0.0, cr_eff
+    if L is not None:
+        q = (L0 - L) / (3.0 * J_rho * HBARC)
+        if not (0.0 <= q < 2.0):
+            raise ValueError(f"L={L} outside ({L0 - 6 * J_rho * HBARC:.1f}, "
+                             f"{L0:.1f}] for this saturation point")
+        x = q / (2.0 - q)                               # x = 2 Lambda_v C_rho W0^2
+        Cr = cr_eff * (1.0 + x)
+        lam = x / (2.0 * Cr * W0**2)
+    return dict(M_mev=M_mev, C_sigma=1.0 / inv_cs, C_omega=Co, C_rho=Cr,
+                b=b, c=c, Lambda_v=lam, L0=L0)
 
 
 def saturation_properties(params=None, n_start=0.005, n_hi=0.22, npts=440):
@@ -296,6 +367,17 @@ class RMFTEOS(EOSModel):
             p.update(params)
         eps, pres, _ = _eps_p_of_n(jnp.asarray(n_B), 0.5, p, leptons=False)
         return eps, pres        # MeV/fm^3
+
+    def composition(self, params: dict = None) -> Composition:
+        """beta-equilibrium (x_p, x_e, x_mu) on ``self.n_grid``, the same solve
+        that builds :meth:`eos_table`."""
+        p = dict(DEFAULT_PARAMS)
+        if params:
+            p.update(params)
+        n = self.n_grid
+        x_p = _solve_xp(n, p)
+        _, n_e, n_mu, _ = _leptons(x_p * n)
+        return Composition(n=n, x_p=x_p, x_e=n_e / n, x_mu=n_mu / n)
 
     def eos_table(self, params: dict = None):
         p = dict(DEFAULT_PARAMS)

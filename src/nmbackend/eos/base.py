@@ -72,6 +72,18 @@ class EOSTable(NamedTuple):
         return jnp.exp(logeps), jnp.exp(logp), cs2
 
 
+class Composition(NamedTuple):
+    """beta-equilibrium particle fractions per baryon on a density grid.
+
+    Charge neutrality: x_p = x_e + x_mu.  ``n`` is the baryon density (fm^-3)
+    of the EOS model's own grid (before any surface continuation).
+    """
+    n: jnp.ndarray
+    x_p: jnp.ndarray
+    x_e: jnp.ndarray
+    x_mu: jnp.ndarray
+
+
 def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query):
     """Thermodynamically consistent EOS evaluation at pseudo-enthalpy ``h_query``.
 

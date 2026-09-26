@@ -9,8 +9,13 @@ per nucleon are Taylor-expanded around saturation:
     S(n)   = E_sym + L_sym x + 1/2 K_sym x^2 + 1/6 Q_sym x^3
     e_nuc  = e_sat(n) + S(n) * delta^2,     delta = 1 - 2 x_p   (parabolic approx)
 
-Electrons are a relativistic Fermi gas with n_e = x_p n (charge neutrality).
+Leptons are relativistic Fermi gases with charge neutrality x_p = x_e + x_mu.
 beta-equilibrium fixes the proton fraction x_p(n) via mu_e = (M_N - M_P) + 4 S delta.
+By default only electrons are included (``MetaModelEOS(muons=False)``, the
+historical behaviour, kept so existing tables are unchanged).  Pass
+``muons=True`` whenever the composition matters: muons lower the direct-Urca
+threshold proton fraction below the npe value 1/9 and change x_p above
+mu_e ~ m_mu (n ~ n_sat).
 Pressure follows from the *envelope theorem*: because total energy density is
 stationary in x_p at equilibrium, p = n d(eps)/dn - eps can be taken at fixed x_p.
 
@@ -36,7 +41,8 @@ import jax
 import jax.numpy as jnp
 
 from ..constants import HBARC, M_N, M_P, M_E, N_SAT_DEFAULT
-from .base import EOSModel, build_h_and_cs2, extend_to_surface
+from .base import EOSModel, build_h_and_cs2, extend_to_surface, Composition
+from .leptons import lepton_sector
 
 jax.config.update("jax_enable_x64", True)
 
@@ -78,17 +84,20 @@ def _esat_S(n, p):
     return e_sat, S
 
 
-def _eps_total(n, x_p, p):
-    """Total energy density (nucleons + electrons), MeV/fm^3, incl. rest mass."""
+def _eps_total(n, x_p, p, muons=False):
+    """Total energy density (nucleons + leptons), MeV/fm^3, incl. rest mass."""
     e_sat, S = _esat_S(n, p)
     delta = 1.0 - 2.0 * x_p
     e_per_baryon = (x_p * M_P + (1.0 - x_p) * M_N + e_sat + S * delta**2)
     eps_b = n * e_per_baryon
-    eps_e = _eps_electron(x_p * n)
-    return eps_b + eps_e
+    if muons:
+        eps_l = lepton_sector(x_p * n, muons=True)[3] * HBARC
+    else:
+        eps_l = _eps_electron(x_p * n)
+    return eps_b + eps_l
 
 
-def _solve_xp(n, p, n_iter=70):
+def _solve_xp(n, p, n_iter=70, muons=False):
     """beta-equilibrium proton fraction x_p(n), differentiable w.r.t. params.
 
     The forward solve is a robust vectorized bisection (non-differentiable); we
@@ -99,7 +108,10 @@ def _solve_xp(n, p, n_iter=70):
 
     def g(x_p):
         delta = 1.0 - 2.0 * x_p
-        mu_e = _mu_electron(x_p * n)
+        if muons:       # charge neutrality n_p = n_e + n_mu, mu_mu = mu_e
+            mu_e = lepton_sector(x_p * n, muons=True)[0] * HBARC
+        else:
+            mu_e = _mu_electron(x_p * n)
         return mu_e - ((M_N - M_P) + 4.0 * S * delta)
 
     lo = jnp.full_like(n, 1e-6)
@@ -128,7 +140,9 @@ class MetaModelEOS(EOSModel):
     name = "MetaModelEOS"
 
     def __init__(self, n_min=3e-4, n_points_low=240, n_points_tail=160,
-                 eps_max_fac=14.0, n_surface=1e-7, gamma_crust=1.3):
+                 eps_max_fac=14.0, n_surface=1e-7, gamma_crust=1.3,
+                 muons=False):
+        self.muons = muons
         self.n_min = n_min
         self.n_points_low = n_points_low
         self.n_points_tail = n_points_tail
@@ -145,10 +159,11 @@ class MetaModelEOS(EOSModel):
                                  self.n_points_low))
         # x_p is differentiable w.r.t. params; the inner pressure derivative below
         # differentiates only w.r.t. n, so x_p is correctly held fixed there.
-        x_p = _solve_xp(n, p)
-        eps = jax.vmap(lambda ni, xi: _eps_total(ni, xi, p))(n, x_p)
+        mu = self.muons
+        x_p = _solve_xp(n, p, muons=mu)
+        eps = jax.vmap(lambda ni, xi: _eps_total(ni, xi, p, mu))(n, x_p)
         deps_dn = jax.vmap(
-            lambda ni, xi: jax.grad(lambda nn: _eps_total(nn, xi, p))(ni)
+            lambda ni, xi: jax.grad(lambda nn: _eps_total(nn, xi, p, mu))(ni)
         )(n, x_p)
         pres = n * deps_dn - eps
         pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
@@ -170,6 +185,29 @@ class MetaModelEOS(EOSModel):
         lin_m = (1.0 + cs2) * eps_m + c0
         n = n_m * (lin / lin_m) ** (1.0 / (1.0 + cs2))
         return n, eps, pres
+
+    def composition(self, params: dict = None) -> Composition:
+        """beta-equilibrium (x_p, x_e, x_mu) on the table's density grid.
+
+        Below n_match this is the composition of the EOS itself.  Above n_match
+        the pressure comes from the CSS tail, which carries no composition; there
+        x_p is the beta-equilibrium solution of the Taylor S(n) extrapolated past
+        n_match.  That is a modelling choice (as in MetaModel+CSE dUrca studies),
+        not a property of the tail.  Leptons follow ``self.muons``.
+        """
+        p = dict(DEFAULT_PARAMS)
+        if params:
+            p.update(params)
+        n_lo, eps_lo, p_lo = self._low_density(p)
+        n_t, _, _ = self._css_tail(n_lo[-1], eps_lo[-1], p_lo[-1], p)
+        n = jnp.concatenate([n_lo, n_t])
+        x_p = jnp.clip(_solve_xp(n, p, muons=self.muons), 0.0, 0.5)
+        if self.muons:
+            _, n_e, n_mu, _ = lepton_sector(x_p * n, muons=True)
+            x_e, x_mu = n_e / n, n_mu / n
+        else:
+            x_e, x_mu = x_p, jnp.zeros_like(x_p)
+        return Composition(n=n, x_p=x_p, x_e=x_e, x_mu=x_mu)
 
     def eos_table(self, params: dict = None):
         p = dict(DEFAULT_PARAMS)
