@@ -155,7 +155,7 @@ class MetaModelEOS(EOSModel):
     def _low_density(self, p):
         """Taylor metamodel part on n in [n_min, n_match]; MeV/fm^3, fm^-3."""
         n_match = p["n_match_fac"] * p["n_sat"]
-        n = jnp.exp(jnp.linspace(math.log(self.n_min), math.log(n_match),
+        n = jnp.exp(jnp.linspace(math.log(self.n_min), jnp.log(n_match),
                                  self.n_points_low))
         # x_p is differentiable w.r.t. params; the inner pressure derivative below
         # differentiates only w.r.t. n, so x_p is correctly held fixed there.
