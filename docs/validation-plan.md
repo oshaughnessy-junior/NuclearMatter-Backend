@@ -130,7 +130,8 @@ Tests: `tests/test_validation_reference.py`.
       M(h_c) is non-monotonic; `solve_hybrid` is per-`h_c`, but the family/adapter
       do not yet split twin branches).
 - [ ] Phase-transition cross-check against **RePrimAnd** (external arbiter).
-- [ ] SLy/BPS crust.
+- [x] SLy/BPS crust (`eos/crust.py`, default for the four uniform-matter models;
+      R_1.4 pinned in `tests/test_crust.py`).
 - [ ] Zhu δ-TOV cross-check of M/R/Λ and `dΛ/dparam`.
 
 > Note: the sharp-jump+junction result is the width→0 limit of a finite-width
