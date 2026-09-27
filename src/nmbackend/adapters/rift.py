@@ -51,7 +51,7 @@ class EOSConcreteNMB:
         L = np.asarray(fam.Lambda)
         stable = np.asarray(fam.stable)
         idx_max = int(np.argmax(np.where(stable, M, -np.inf)))
-        sl = slice(0, idx_max + 1)
+        sl = slice(int(np.argmax(stable)), idx_max + 1)   # minimum mass to M_max
         self._M = M[sl]
         self._R = R[sl]
         self._L = L[sl]

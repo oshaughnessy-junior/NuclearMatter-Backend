@@ -43,7 +43,7 @@ import jax.numpy as jnp
 from ..constants import HBARC, M_N, M_P, M_E, N_SAT_DEFAULT
 from .base import EOSModel, Composition
 from .leptons import lepton_sector
-from .crust import N_T_DEFAULT, check_crust, finish_table
+from .crust import N_T_DEFAULT, check_crust, finish_table, join_density
 
 jax.config.update("jax_enable_x64", True)
 
@@ -159,7 +159,7 @@ class MetaModelEOS(EOSModel):
         # the old truncated-at-n_min behaviour.
         self.n_surface = n_surface
         self.gamma_crust = gamma_crust
-        self.crust = check_crust(crust)
+        self.crust = check_crust(crust, n_surface)
         self.n_t = n_t
 
     def _low_density(self, p, n_min=None):
@@ -244,7 +244,7 @@ class MetaModelEOS(EOSModel):
 
         sly = self.crust == "sly" and self.n_surface is not None
         n_lo, eps_lo, p_lo = self._low_density(
-            p, n_min=self.n_t * (1.0 + 1e-3) if sly else None)
+            p, n_min=join_density(self.n_t) if sly else None)
         n_t, eps_t, p_t = self._css_tail(n_lo[-1], eps_lo[-1], p_lo[-1], p)
 
         n = jnp.concatenate([n_lo, n_t])

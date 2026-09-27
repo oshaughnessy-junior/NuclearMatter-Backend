@@ -87,15 +87,17 @@ _BIG_M = 1.0e3  # finite "above the branch" mass sentinel (avoids 0*inf -> nan i
 
 
 def _stable_branch_sort(family: Family):
-    """Indices sorting the masses on the stable rising branch to the front.
+    """Indices sorting the masses on the stable rising branch (minimum-mass
+    star to M_max) to the front.
 
     Off-branch masses are pushed to a large *finite* value so reverse-mode AD does
     not hit 0*inf -> nan.  Returns (M_sorted, sort_idx, idx_max).
     """
     M = family.M_msun
     idx_max = jnp.argmax(jnp.where(family.stable, M, -jnp.inf))
+    idx_min = jnp.argmax(family.stable)          # first stable star (minimum mass)
     order = jnp.arange(M.shape[0])
-    on_branch = order <= idx_max
+    on_branch = (order >= idx_min) & (order <= idx_max)
     Mb = jnp.where(on_branch, M, _BIG_M)
     srt = jnp.argsort(Mb)
     return Mb[srt], srt, idx_max

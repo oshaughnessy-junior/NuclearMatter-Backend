@@ -361,7 +361,7 @@ class RMFTEOS(EOSModel):
                                            n_points))
         self.n_surface = n_surface
         self.gamma_crust = gamma_crust
-        self.crust = check_crust(crust)
+        self.crust = check_crust(crust, n_surface)
         self.n_t = n_t
 
     def _table_grid(self):
