@@ -30,26 +30,20 @@ def test_fwd_grad_mmax_matches_fd():
 
 
 def test_fwd_grad_radius_matches_fd():
-    # Radius gradient at fixed central enthalpy.  With the thermodynamically
-    # consistent Hermite interpolation the forward-mode tangent has a small (~0.5%)
-    # interpolation-tangent residual vs FD (the hand-rolled Hermite is less smooth
-    # under AD than jnp.interp); fine for Fisher/inference use.  R *values* are
-    # accurate to ~1-3 m.  (Tighter gradients -> smoother diff'able interpolation.)
+    # Radius gradient at fixed central enthalpy.  0.1-0.2% achieved on jax 0.7.1
+    # and 0.11.2 (was -2.4% on jax 0.7.1 before the where-floor fix in
+    # hermite_eos_at_h; see test_jacfwd_matches_jvp_with_tidal).
     def f(Lsym):
         return solve_structure(mm.eos_table({"L_sym": Lsym}), _HC,
                                rtol=1e-9, atol=1e-11).R_km
     g = float(jax.jacfwd(f)(60.0))
     fd = (float(f(60.5)) - float(f(59.5))) / 1.0
-    assert abs(g - fd) <= 1e-2 * abs(fd) + 1e-5         # ~0.5% achieved
+    assert abs(g - fd) <= 5e-3 * abs(fd) + 1e-5
 
 
 def test_fwd_grad_lambda_converges_with_tolerance():
-    # The forward-mode dLambda/dparam is correct but needs a TIGHT solver tolerance:
-    # the (physically real) thin, stiff low-cs^2 surface shell makes the tidal
-    # *tangent* under-resolved by the primal-sized adaptive controller.  It
-    # converges to the finite-difference truth as rtol tightens (1e-8: ~90%, 1e-10:
-    # ~16%, 1e-12: ~3%).  Lambda *values* are accurate at default tolerance; Lambda
-    # *gradients* (Fisher / inference sensitivities) want rtol <~ 1e-11.
+    # dLambda/dL_sym converges to FD as rtol tightens (jax 0.7.1: 1e-8 +5.7%,
+    # 1e-10 +0.01%, 1e-12 +0.02%), so gradient work wants rtol <~ 1e-10.
     def f(Lsym, rt):
         return solve_structure(mm.eos_table({"L_sym": Lsym}), _HC,
                                rtol=rt, atol=rt * 1e-2).Lambda
@@ -57,9 +51,8 @@ def test_fwd_grad_lambda_converges_with_tolerance():
     g_loose = float(jax.jacfwd(lambda L: f(L, 1e-8))(60.0))
     g_tight = float(jax.jacfwd(lambda L: f(L, 1e-12))(60.0))
     assert np.isfinite(g_tight) and g_tight * fd > 0.0
-    # tightening the tolerance moves AD toward the FD truth, reaching <10%
     assert abs(g_tight - fd) < abs(g_loose - fd)
-    assert abs(g_tight - fd) <= 0.10 * abs(fd)
+    assert abs(g_tight - fd) <= 0.01 * abs(fd)
 
 
 def test_reverse_grad_structure_only():
@@ -70,3 +63,16 @@ def test_reverse_grad_structure_only():
                                tidal=False).M_msun
     g = float(jax.grad(Mof)(0.6 * float(t.h[-1])))
     assert np.isfinite(g)
+
+
+def test_jacfwd_matches_jvp_with_tidal():
+    # jax.jacfwd is vmap(jvp), so both must give the same tangent.  Under
+    # jaxlib <= 0.9 a maximum() floor in hermite_eos_at_h made XLA miscompile
+    # the batched tangent once the tidal sector was on: jacfwd(M) disagreed
+    # with jvp(M), and jvp matched finite differences.
+    t = mm.eos_table()
+    def f(hc):
+        return solve_structure(t, hc, backend="scan", n_steps=4000).M_msun
+    g_fwd = float(jax.jacfwd(f)(_HC))
+    g_jvp = float(jax.jvp(f, (_HC,), (1.0,))[1])
+    assert abs(g_fwd - g_jvp) <= 1e-10 * abs(g_jvp)

@@ -127,7 +127,13 @@ def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query):
     eps = dpdh - p                                  # derived: dp/dh = eps + p
 
     cs2 = jnp.clip(jnp.interp(h_query, h_nodes, cs2_nodes), 1e-10, 1.0)
-    return jnp.maximum(eps, 1e-300), jnp.maximum(p, 1e-300), cs2
+    # Floor with where, not maximum/clip: under jaxlib <= 0.9 the batched JVP of
+    # these two maxima inside the TOV loop is miscompiled, so jax.jacfwd (not
+    # jax.jvp) of M, R, Lambda came out wrong by 1-20%.  Pinned by
+    # tests/test_ad_gradients.py::test_jacfwd_matches_jvp_with_tidal.
+    eps = jnp.where(eps > 1e-300, eps, 1e-300)
+    p = jnp.where(p > 1e-300, p, 1e-300)
+    return eps, p, cs2
 
 
 def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None):
