@@ -9,8 +9,8 @@ import pytest
 
 from nmbackend.eos import (DD2, SLY4, DDRMFEOS, MetaModelEOS, RMFTEOS,
                            SkyrmeEOS)
-from nmbackend.eos.crust import (InvalidCoreError, monotone_core,
-                                 unstable_below_mmax)
+from nmbackend.eos.crust import (InvalidCoreError, UnstableCoreError,
+                                 monotone_core, unstable_below_mmax)
 from nmbackend.tov import build_family, default_hc_grid
 
 jax.config.update("jax_enable_x64", True)
@@ -39,13 +39,20 @@ def test_unstable_metamodel_rejected():
     n_match.  Error when eager, NaN table under jit, plateau table with the
     escape hatch."""
     P = {"L_sym": 20.0, "K_sym": -400.0}
-    with pytest.raises(InvalidCoreError):
+    with pytest.raises(UnstableCoreError):
         MetaModelEOS().eos_table(P)
     t = jax.jit(MetaModelEOS().eos_table)(P)
     assert np.all(np.isnan(np.asarray(t.p)))
     t = MetaModelEOS(allow_unstable_core=True).eos_table(P)
     p = np.asarray(t.p)
     assert np.all(np.isfinite(p)) and np.sum(np.diff(p) == 0.0) > 50
+
+
+def test_crust_rejection_is_not_unstable_core():
+    """A core rejected at the crust join raises the parent class only."""
+    with pytest.raises(InvalidCoreError) as e:
+        MetaModelEOS().eos_table({"L_sym": 20.0, "K_sym": 0.0})
+    assert not isinstance(e.value, UnstableCoreError)
 
 
 @pytest.mark.parametrize("cls, par", [
@@ -101,3 +108,46 @@ def test_lambda_smooth_to_rejection_boundary():
     assert np.all(np.diff(lam) > 0)
     c = np.polyfit(d[2:], lam[2:], 2)
     np.testing.assert_allclose(lam, np.polyval(c, d), rtol=1e-3)
+
+
+# review of PR #9: the raw p falls from 0.97 fm^-3 to the table top, where
+# h = h_max; the check once crashed diffrax there (max_steps)
+RMF_DIP_AT_TOP = dict(M_mev=939.0, C_sigma=12.616047358874976,
+                      C_omega=8.560661106535438, C_rho=15.931769773614421,
+                      b=0.003505489329273, c=0.0062758417594662875,
+                      Lambda_v=0.04909735507220698)
+# review of PR #9: no dip; jit(vmap) once solved a star at h_max and crashed
+RMF_STABLE = dict(M_mev=939.0, C_sigma=12.3617, C_omega=6.4937,
+                  C_rho=16.3866, b=0.007598, c=-0.006864, Lambda_v=0.041927)
+
+
+def test_dip_at_table_top_kept():
+    m = RMFTEOS()
+    for f in (m.eos_table, jax.jit(m.eos_table)):
+        assert np.all(np.isfinite(np.asarray(f(RMF_DIP_AT_TOP).p)))
+
+
+def test_vmap_batch():
+    """jit(vmap): stable and top-dip cores stay finite, an unstable one is
+    NaN, and a NaN element does not break the batch."""
+    batch = [RMF_STABLE, RMF_DIP_AT_TOP, RMF_DIP_ABOVE_MMAX]
+    X = {k: jnp.array([d[k] for d in batch]) for k in RMF_STABLE}
+    p = np.asarray(jax.jit(jax.vmap(RMFTEOS().eos_table))(X).p)
+    assert np.all(np.isfinite(p))
+    mm = jax.jit(jax.vmap(MetaModelEOS().eos_table))
+    p = np.asarray(mm({"L_sym": jnp.array([20.0, 60.0]),
+                       "K_sym": jnp.array([-400.0, 0.0])}).p)
+    assert np.all(np.isnan(p[0])) and np.all(np.isfinite(p[1]))
+
+
+def test_nan_core_not_reported_unstable():
+    """A NaN from elsewhere is returned as before (polytrope surface),
+    not raised as UnstableCoreError."""
+    from nmbackend.eos.crust import finish_table
+    n = jnp.geomspace(0.05, 1.0, 40)
+    p = (n / 0.16) ** 2 * 10.0
+    p = p.at[20].set(jnp.nan)
+    eps = 939.0 * n + p
+    pm, lnu = monotone_core(n, p)
+    t = finish_table(n, eps, pm, "polytrope", 0.055, 1e-7, 1.3, lnu)
+    assert not np.all(np.isfinite(np.asarray(t.p)))

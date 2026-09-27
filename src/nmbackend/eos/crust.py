@@ -36,7 +36,7 @@ and cummax the core pressure, so where the raw pressure falls with density the
 table has a plateau (cs2 = 1e-8, first-law residual up to ~4e-2).  A core whose
 raw pressure falls by more than roundoff, or sits at the floor, above 2 n_j is
 rejected in the same way when a star centred at the onset of that interval
-lies below the maximum-mass star.  Accepted cores then carry no plateau
+lies below the maximum-mass star (UnstableCoreError when eager).  Accepted cores then carry no plateau
 below the maximum-mass star, and Lambda approaches the rejection boundary
 smoothly.  ``allow_unstable_core=True`` on the model keeps the plateau tables.
 
@@ -66,6 +66,7 @@ P_FLOOR = 1e-9            # MeV fm^-3, the pressure floor of the core models
 JOIN_CAP = 0.1            # n* <= REMAP n_j e^-JOIN_CAP
 P_DROP_RTOL = 1e-10       # pressure drops below this relative size are roundoff
 M_LOW = 0.5               # Msun; below it M falls with h_c only below the M_min star
+H_TOP = 0.92              # tov.default_hc_grid stops at H_TOP h_max
 N_CRUST_PTS = 150
 N_SEG_PTS = 16            # interior nodes of the power-law segment
 
@@ -145,6 +146,12 @@ def attach_crust(n, eps, p, n_t=N_T_DEFAULT, n_floor=N_FLOOR,
 class InvalidCoreError(ValueError):
     """The uniform-matter core cannot be joined to the crust (see
     :func:`join_invalid`); the draw is outside the model's validity."""
+
+
+class UnstableCoreError(InvalidCoreError):
+    """The core's raw pressure falls with density below the maximum-mass star
+    (see :func:`monotone_core`).  Under jit such a table is NaN like any other
+    rejected core; an eager rebuild tells the two apart."""
 
 
 def _join_lnn(ln, le, lp, et, pt, gamma_min):
@@ -229,29 +236,36 @@ def monotone_core(n, p, n_t=N_T_DEFAULT):
 def unstable_below_mmax(table, ln_nu):
     """True if a star centred at n_u lies below the maximum-mass star: M rises
     with h_c there, or M < M_LOW (the falling branch below the minimum-mass
-    star).  Solves one star, only where n_u is finite.  JAX-traceable."""
+    star).  Onsets above H_TOP h_max, beyond the stellar sequences of
+    :func:`nmbackend.tov.default_hc_grid`, are kept.  Solves one star, only
+    where needed (under vmap it solves a harmless star at h_max/2 instead).
+    JAX-traceable."""
     from ..tov.solver import solve_structure
 
-    def check(t, lnu):
-        hu = jnp.interp(lnu, jnp.log(t.n), t.h)
+    def check(t, hu):
         m, dm = jax.jvp(lambda h: solve_structure(t, h).M_msun, (hu,),
                         (jnp.ones_like(hu),))
         return (dm > 0.0) | (m < M_LOW)
 
-    ok = jnp.isfinite(ln_nu) & jnp.all(jnp.isfinite(table.p))
+    hmax = table.h[-1]
+    hu = jnp.interp(jnp.minimum(ln_nu, jnp.log(table.n[-1])),
+                    jnp.log(table.n), table.h)
+    ok = (jnp.isfinite(ln_nu) & (hu < H_TOP * hmax)
+          & jnp.all(jnp.isfinite(table.p)))
+    hu = jnp.where(ok, hu, 0.5 * hmax)
     try:                                          # eager: skip the solve if stable
         if not bool(ok):
             return jnp.asarray(False)
-        return check(table, ln_nu)
+        return check(table, hu)
     except jax.errors.ConcretizationTypeError:
-        return jax.lax.cond(ok, check, lambda t, lnu: jnp.asarray(False),
-                            table, ln_nu)
+        return jax.lax.cond(ok, check, lambda t, h: jnp.asarray(False),
+                            table, hu)
 
 
-def _raise_if_nan(p, msg):
+def _raise_if(bad, err, msg):
     try:                                          # eager call: raise; jit: NaN table
-        if not bool(jnp.all(jnp.isfinite(p))):
-            raise InvalidCoreError(msg)
+        if bool(bad):
+            raise err(msg)
     except jax.errors.ConcretizationTypeError:
         pass
 
@@ -271,8 +285,9 @@ def finish_table(n, eps, p, crust, n_t, n_surface, gamma_crust,
     if n_surface is not None:
         if crust == "sly":
             n, eps, p = attach_crust(n, eps, p, n_t=n_t)
-            _raise_if_nan(p, "core invalid above the crust (p at the floor or "
-                             "not increasing near n_j)")
+            _raise_if(~jnp.all(jnp.isfinite(p)), InvalidCoreError,
+                      "core invalid above the crust (p at the floor or not "
+                      "increasing near n_j)")
         else:
             n, eps, p = extend_to_surface(n, eps, p, n_surface=n_surface,
                                           gamma_crust=gamma_crust)
@@ -280,7 +295,6 @@ def finish_table(n, eps, p, crust, n_t, n_surface, gamma_crust,
     if allow_unstable:
         return table
     bad = unstable_below_mmax(table, ln_nu)
-    table = EOSTable(*(jnp.where(bad, jnp.nan, a) for a in table))
-    _raise_if_nan(table.p, "core mechanically unstable (dp/dn <= 0) below the "
-                           "maximum-mass central density")
-    return table
+    _raise_if(bad, UnstableCoreError, "core mechanically unstable (dp/dn <= 0) "
+                                      "below the maximum-mass central density")
+    return EOSTable(*(jnp.where(bad, jnp.nan, a) for a in table))
