@@ -22,8 +22,18 @@ Tracked items intentionally deferred, with the context for when they matter.
 > keep it only as an optional future smoothing of the last ~2.5%.
 
 
+> **Update 2026-09-27: the residuals below were a JAX defect, not physics.**
+> Under jaxlib <= 0.9, `jax.jacfwd` (vmap of jvp) of the TOV solve returned
+> wrong tangents when the tidal sector was on. The trigger was the
+> `jnp.maximum(eps, 1e-300)` and `jnp.maximum(p, 1e-300)` floors in
+> `hermite_eos_at_h`. `jax.jvp` of the same function was correct, as was
+> `jacfwd` at `--xla_backend_optimization_level=0` or under jax 0.11. The
+> floors now use `jnp.where`; `test_jacfwd_matches_jvp_with_tidal` pins it.
+> After the fix, AD matches FD to the solver's discretization error on
+> jax 0.7.1 and 0.11.2 (PR text has the table). The text below is kept for
+> history; its causes are wrong.
 
-**What:** the thermodynamically consistent Hermite interpolation (`eos.base.at_h`)
+**What (superseded):** the thermodynamically consistent Hermite interpolation (`eos.base.at_h`)
 gives excellent EOS/TOV *values* but the forward-mode AD *tangents* are
 tolerance-sensitive and have a small interpolation-tangent residual:
 - Λ-gradient converges to the FD truth only as rtol tightens (1e-8 ~90% off →

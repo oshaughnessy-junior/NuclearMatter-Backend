@@ -171,6 +171,9 @@ surrogate/acceleration work.
      tangent residual (hand-rolled Hermite is less smooth under AD than jnp.interp).
      **Use rtol ≲ 1e-10 for gradient/Fisher work**; default tol is fine for values.
      Future: a smoother differentiable interpolation primitive to tighten gradients.
+     (2026-09-27: these gradient residuals were a jaxlib <= 0.9 `jacfwd` defect
+     triggered by `jnp.maximum` floors in the Hermite evaluator, now fixed; see
+     docs/backlog.md.)
 3. **RePrimAnd residual: surface fix already lands R within ~3–10 m** of RePrimAnd
    (was ~200 m) and Λ within <0.1% — i.e. at the ≲10 m budget. Remaining attribution
    (interpolation, crust Γ, RePrimAnd low-density handling) is the last ≲10 m.
