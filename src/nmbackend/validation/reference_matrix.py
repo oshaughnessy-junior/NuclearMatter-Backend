@@ -44,7 +44,8 @@ def _rising_branch(M, R, L):
     if M.size < 3:
         return M, R, L
     imax = int(np.argmax(M))
-    M, R, L = M[:imax + 1], R[:imax + 1], L[:imax + 1]
+    imin = int(np.argmin(M[:imax + 1]))     # minimum-mass star (crust tables)
+    M, R, L = M[imin:imax + 1], R[imin:imax + 1], L[imin:imax + 1]
     o = np.argsort(M)
     return M[o], R[o], L[o]
 

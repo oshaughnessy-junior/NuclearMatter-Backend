@@ -27,8 +27,9 @@ _RT = 1e-11
 def _hc_for_mass(table, m):
     fam = build_family(table, default_hc_grid(table, n_models=220), rtol=_RT,
                        atol=_RT * 1e-2)
-    M = np.asarray(fam.M_msun); H = np.asarray(fam.h_c); imax = int(np.argmax(M))
-    hc = float(np.interp(m, M[:imax + 1], H[:imax + 1]))
+    b = np.flatnonzero(np.asarray(fam.stable))          # neutron-star branch
+    M = np.asarray(fam.M_msun)[b]; H = np.asarray(fam.h_c)[b]
+    hc = float(np.interp(m, M, H))
     for _ in range(3):                                  # Newton polish onto m
         pt = solve_structure(table, hc, rtol=_RT, atol=_RT * 1e-2)
         dM = float(jax.jacfwd(lambda h: solve_structure(

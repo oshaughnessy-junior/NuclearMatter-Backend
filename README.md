@@ -119,7 +119,7 @@ the expected softening (quark cores → smaller R, Λ).
 
 Still **open**: twin-star/disconnected-branch bookkeeping in `build_family` (the
 hybrid M(h_c) is non-monotonic; `solve_hybrid` is per-`h_c` but the family/adapter
-don't yet split twin branches); a real SLy/BPS crust; and the external
+don't yet split twin branches); and the external
 **RePrimAnd**/**Zhu δ-TOV** cross-checks (the sandbox can't build them — see
 [`docs/environment.md`](docs/environment.md)). Plan + metrics:
 [`docs/validation-plan.md`](docs/validation-plan.md).

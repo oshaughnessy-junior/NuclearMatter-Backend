@@ -50,8 +50,9 @@ import jax
 import jax.numpy as jnp
 
 from ..constants import HBARC
-from .base import EOSModel, build_h_and_cs2, extend_to_surface, Composition
+from .base import EOSModel, Composition
 from .leptons import lepton_sector
+from .crust import N_T_DEFAULT, check_crust, core_grid, finish_table
 
 jax.config.update("jax_enable_x64", True)
 
@@ -354,11 +355,20 @@ class RMFTEOS(EOSModel):
     name = "RMFTEOS"
 
     def __init__(self, n_min=1e-3, n_max=1.2, n_points=200,
-                 n_surface=1e-7, gamma_crust=1.3):
+                 n_surface=1e-7, gamma_crust=1.3,
+                 crust="sly", n_t=N_T_DEFAULT):
         self.n_grid = jnp.exp(jnp.linspace(math.log(n_min), math.log(n_max),
                                            n_points))
         self.n_surface = n_surface
         self.gamma_crust = gamma_crust
+        self.crust = check_crust(crust, n_surface)
+        self.n_t = n_t
+
+    def _table_grid(self):
+        """Uniform-matter nodes of the EOS table (above n_t with the SLy crust)."""
+        if self.crust == "sly" and self.n_surface is not None:
+            return core_grid(self.n_grid, self.n_t)
+        return self.n_grid
 
     # --- symmetric nuclear matter (for saturation-property validation) ---
     def symmetric(self, n_B, params=None):
@@ -383,14 +393,11 @@ class RMFTEOS(EOSModel):
         p = dict(DEFAULT_PARAMS)
         if params:
             p.update(params)
-        n = self.n_grid
+        n = self._table_grid()
         x_p = _solve_xp(n, p)                              # beta-equilibrium
         Phi = _solve_phi((1.0 - x_p) * n, x_p * n, p)      # robust first-root, vec
         eps, pres, _ = jax.vmap(lambda ni, xi, Ph: _eps_p_from_state(ni, xi, Ph, p))(
             n, x_p, Phi)
         pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
-        if self.n_surface is not None:
-            n, eps, pres = extend_to_surface(n, eps, pres,
-                                             n_surface=self.n_surface,
-                                             gamma_crust=self.gamma_crust)
-        return build_h_and_cs2(n, eps, pres)
+        return finish_table(n, eps, pres, self.crust, self.n_t,
+                            self.n_surface, self.gamma_crust)

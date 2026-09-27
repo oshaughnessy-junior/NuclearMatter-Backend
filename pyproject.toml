@@ -36,7 +36,7 @@ docs = ["sphinx", "myst-parser"]
 where = ["src"]
 
 [tool.setuptools.package-data]
-nmbackend = ["data/*.yaml"]
+nmbackend = ["data/*.yaml", "data/*.dat"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -19,8 +19,10 @@ def test_metamodel_star_is_physical():
 def test_branch_turnover_and_compactness():
     fam = build_family(MetaModelEOS().eos_table(), n_steps=700)
     stable = np.asarray(fam.stable)
-    # there is a stable region then an unstable region past M_max
-    assert stable[0] and (not stable[-1])
+    # one stable block (minimum-mass star to M_max), then unstable past M_max;
+    # with the crust the lowest grid stars can lie below the minimum mass
+    i = np.flatnonzero(stable)
+    assert i.size > 10 and np.all(np.diff(i) == 1) and (not stable[-1])
     C = np.asarray(fam.C)
     assert np.all(C < 0.5)           # below the BH/Buchdahl-ish limit
 

@@ -124,6 +124,11 @@ at a transition density; (c) quantify the crust-induced R/Λ spread as part of t
 Phase-1 error budget and, for inference, consider marginalizing over crust choice
 rather than fixing it.
 
+Status: (b) is implemented as `nmbackend.eos.crust` -- the SLy crust (BPS/HP94
+outer, Douchin-Haensel inner) below n_t = 0.055 fm^-3, joined by P(eps)
+matching (Fortin et al. 2016).  Varying n_t over 0.5x-2x gives the matching
+systematic; `crust="polytrope"` keeps the old surface continuation.
+
 ## Proof-of-concept milestone
 
 After Phases 1–3 we have a hardened, physically-grounded, RIFT-wired backend = the

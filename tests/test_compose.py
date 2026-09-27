@@ -12,7 +12,7 @@ from nmbackend.reference.scipy_tov import solve_reference
 
 
 def _rmft_arrays():
-    t = RMFTEOS().eos_table()
+    t = RMFTEOS(crust="polytrope").eos_table()
     n = np.asarray(t.n)
     m = n > 3e-4
     return n[m], np.asarray(t.eps_mevfm3)[m], np.asarray(t.p_mevfm3)[m]
@@ -30,7 +30,7 @@ def test_compose_roundtrip_arrays_exact():
 
 def test_compose_roundtrip_tov_matches():
     # an ingested CompOSE table must give the SAME M-R-Lambda as the original EOS
-    rm = RMFTEOS()
+    rm = RMFTEOS(crust="polytrope")    # the table reload adds this surface
     t0 = rm.eos_table()
     n, eps, p = _rmft_arrays()
     d = tempfile.mkdtemp()
@@ -79,3 +79,18 @@ def test_load_simple_columns():
     t = load_simple(f)
     assert np.all(np.diff(np.asarray(t.h)) > 0)
     assert float(t.n[0]) <= n[0] + 1e-12
+
+
+def test_compose_roundtrip_default_crust():
+    """The default (SLy crust) table survives a CompOSE round trip."""
+    t0 = RMFTEOS().eos_table()
+    d = tempfile.mkdtemp()
+    write_compose(d, np.asarray(t0.n), np.asarray(t0.eps_mevfm3),
+                  np.asarray(t0.p_mevfm3))
+    t1 = load_compose(d)
+    f0 = build_family(t0, default_hc_grid(t0, n_models=45))
+    f1 = build_family(t1, default_hc_grid(t1, n_models=45))
+    assert abs(float(m_max(f0)) - float(m_max(f1))) < 1e-3
+    assert abs(float(radius_of_mass(f0, 1.4)) - float(radius_of_mass(f1, 1.4))) < 1e-2
+    l0, l1 = float(lambda_of_mass(f0, 1.4)), float(lambda_of_mass(f1, 1.4))
+    assert abs(l1 / l0 - 1.0) < 1e-2

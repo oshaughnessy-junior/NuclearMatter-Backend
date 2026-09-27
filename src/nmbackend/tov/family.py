@@ -28,10 +28,16 @@ class Family(NamedTuple):
 
 
 def default_hc_grid(table: EOSTable, n_models: int = 120, frac_lo: float = 0.02,
-                    frac_hi: float = 0.92):
-    """A central-enthalpy grid spanning low-mass to near-maximum central density."""
+                    frac_hi: float = 0.92, n_c_min: float = 0.07):
+    """A central-enthalpy grid spanning low-mass to near-maximum central density.
+
+    The grid starts at the larger of ``frac_lo`` h_max and h(n = ``n_c_min``
+    fm^-3).  With a crust table, frac_lo h_max alone can fall deep in the
+    crust, on extended configurations far below the minimum-mass star."""
     hmax = table.h[-1]
-    return jnp.linspace(frac_lo * hmax, frac_hi * hmax, n_models)
+    h_lo = jnp.maximum(frac_lo * hmax,
+                       jnp.interp(jnp.log(n_c_min), jnp.log(table.n), table.h))
+    return jnp.linspace(h_lo, frac_hi * hmax, n_models)
 
 
 def build_family(table: EOSTable, h_c_grid=None, *, backend: str = "diffrax",
@@ -50,7 +56,14 @@ def build_family(table: EOSTable, h_c_grid=None, *, backend: str = "diffrax",
 
     # forward-mode along the sequence (clean through the tidal variable)
     dM_dhc = jax.vmap(jax.jacfwd(M_of_hc))(h_c_grid)
-    stable = dM_dhc > 0.0
+    # the neutron-star branch runs from the minimum-mass star to M_max; with a
+    # crust table the lowest h_c can lie below the minimum-mass star, on the
+    # extended (R ~ 10^3 km) configurations that also have dM/dh_c > 0
+    rising = dM_dhc > 0.0
+    order = jnp.arange(h_c_grid.shape[0])
+    i_max = jnp.argmax(jnp.where(rising, pts.M_msun, -jnp.inf))
+    i_min = jnp.argmin(jnp.where(order <= i_max, pts.M_msun, jnp.inf))
+    stable = rising & (order >= i_min)
 
     return Family(
         h_c=h_c_grid, M_msun=pts.M_msun, R_km=pts.R_km, Lambda=pts.Lambda,
@@ -74,15 +87,17 @@ _BIG_M = 1.0e3  # finite "above the branch" mass sentinel (avoids 0*inf -> nan i
 
 
 def _stable_branch_sort(family: Family):
-    """Indices sorting the masses on the stable rising branch to the front.
+    """Indices sorting the masses on the stable rising branch (minimum-mass
+    star to M_max) to the front.
 
     Off-branch masses are pushed to a large *finite* value so reverse-mode AD does
     not hit 0*inf -> nan.  Returns (M_sorted, sort_idx, idx_max).
     """
     M = family.M_msun
     idx_max = jnp.argmax(jnp.where(family.stable, M, -jnp.inf))
+    idx_min = jnp.argmax(family.stable)          # first stable star (minimum mass)
     order = jnp.arange(M.shape[0])
-    on_branch = order <= idx_max
+    on_branch = (order >= idx_min) & (order <= idx_max)
     Mb = jnp.where(on_branch, M, _BIG_M)
     srt = jnp.argsort(Mb)
     return Mb[srt], srt, idx_max
