@@ -24,6 +24,13 @@ Join (the P(rho) matching of Fortin et al. 2016, arXiv:1604.01944, Sec. II.B):
   1e-3 to 1e-2).  We rescale the crust and segment n by f (Fortin et al.
   Eq. 11, applied on the crust side).
 
+* Rejection: a core that does not reach p_t (eps/eps_t)^GAMMA_MIN below
+  2 n_j e^-0.1, or whose pressure is at the model floor (1e-9 MeV fm^-3) or not
+  increasing anywhere between the join n* and 2 n_j, is outside the model's
+  validity above the crust.  The table is then NaN (under jit) or InvalidCoreError is raised
+  (eager); samplers treat both as failed draws.  Cores just inside this
+  boundary (low L) join with slope kinks of up to ~6% in Lambda(L).
+
 The TOV equations see only p(eps), which is the core's own above n_j; the
 core baryon density, and hence the composition and dUrca onset density, are
 untouched.  Vary ``n_t`` to estimate the crust-matching systematic; above
@@ -37,6 +44,7 @@ import os
 import warnings
 
 import numpy as np
+import jax
 import jax.numpy as jnp
 
 N_T_DEFAULT = 0.055       # fm^-3, 0.34 n_sat (paper 1, GKKS arXiv:2512.18044)
@@ -45,6 +53,8 @@ N_FLOOR = 3e-10           # fm^-3, lowest crust node: p = 4e-12 MeV fm^-3, above
 BRIDGE = 1.25             # the core table starts at n_j = BRIDGE * n_t
 GAMMA_MIN = 0.5           # the segment p ~ eps^Gamma has Gamma >= GAMMA_MIN
 REMAP = 2.0               # core nodes in [n_j, REMAP n_j) may move (see join)
+P_FLOOR = 1e-9            # MeV fm^-3, the pressure floor of the core models
+JOIN_CAP = 0.1            # n* <= REMAP n_j e^-JOIN_CAP
 N_CRUST_PTS = 150
 N_SEG_PTS = 16            # interior nodes of the power-law segment
 
@@ -88,15 +98,11 @@ def attach_crust(n, eps, p, n_t=N_T_DEFAULT, n_floor=N_FLOOR,
     ln, le, lp = jnp.log(n), jnp.log(eps), jnp.log(p)
     lnj = math.log(join_density(n_t))
     lnw = lnj + math.log(REMAP)
+    bad = join_invalid(n, eps, p, n_t, gamma_min)
     # join density n*: n_j if the core there lies on or above
     # p_t (eps/eps_t)^gamma_min, else the first crossing of that curve
     # (linear in ln n between core nodes, so continuous in the parameters)
-    g = lp - math.log(pt) - gamma_min * (le - math.log(et))
-    up = (ln > ln[0]) & (g >= 0.0)
-    k = jnp.maximum(jnp.argmax(up), 1)
-    t = jnp.clip(-g[k - 1] / jnp.where(g[k] > g[k - 1], g[k] - g[k - 1], 1.0), 0.0, 1.0)
-    lnx = jnp.where(g[0] >= 0.0, ln[0], ln[k - 1] + t * (ln[k] - ln[k - 1]))
-    lnx = jnp.minimum(lnx, lnw - 0.1)
+    lnx = jnp.minimum(_join_lnn(ln, le, lp, et, pt, gamma_min), lnw - JOIN_CAP)
     # core nodes in [n_j, REMAP n_j) move affinely (in ln n) onto [n*, REMAP n_j)
     # and take the core values there (log-log interpolation); the identity when
     # n* = n_j, and continuous in n* otherwise
@@ -119,9 +125,49 @@ def attach_crust(n, eps, p, n_t=N_T_DEFAULT, n_floor=N_FLOOR,
     es = et * jnp.exp(s * lr)
     ns = f * n_t * jnp.exp(jnp.interp(s, sq, cum))
     ps = pt * (es / et) ** gam
-    return (jnp.concatenate([f * jnp.asarray(nc), ns, n]),
-            jnp.concatenate([jnp.asarray(ec), es, eps]),
-            jnp.concatenate([jnp.asarray(pc), ps, p]))
+    nan = jnp.where(bad, jnp.nan, 0.0)          # invalid core: NaN table
+    return (jnp.concatenate([f * jnp.asarray(nc), ns, n]) + nan,
+            jnp.concatenate([jnp.asarray(ec), es, eps]) + nan,
+            jnp.concatenate([jnp.asarray(pc), ps, p]) + nan)
+
+
+class InvalidCoreError(ValueError):
+    """The uniform-matter core cannot be joined to the crust (see
+    :func:`join_invalid`); the draw is outside the model's validity."""
+
+
+def _join_lnn(ln, le, lp, et, pt, gamma_min):
+    """ln n*: ln n_j if the core there lies on or above p_t (eps/eps_t)^gamma_min,
+    else the first crossing of that curve (linear in ln n between nodes, so
+    continuous in the parameters); +inf if there is none."""
+    g = lp - math.log(pt) - gamma_min * (le - math.log(et))
+    up = (ln > ln[0]) & (g >= 0.0)
+    k = jnp.maximum(jnp.argmax(up), 1)
+    t = jnp.clip(-g[k - 1] / jnp.where(g[k] > g[k - 1], g[k] - g[k - 1], 1.0), 0.0, 1.0)
+    lnx = jnp.where(g[0] >= 0.0, ln[0], ln[k - 1] + t * (ln[k] - ln[k - 1]))
+    return jnp.where((g[0] >= 0.0) | jnp.any(up), lnx, jnp.inf)
+
+
+def join_invalid(n, eps, p, n_t=N_T_DEFAULT, gamma_min=GAMMA_MIN):
+    """True if :func:`attach_crust` must reject this core (see
+    :class:`InvalidCoreError`).  JAX-traceable; ``n`` starts at n_j.
+
+    Rejected: the join density n* (where the core first reaches
+    p_t (eps/eps_t)^gamma_min) lies beyond the cap 2 n_j e^-0.1, or the core
+    pressure is at the floor or not increasing anywhere between n* and 2 n_j.
+    Below n* the extended crust replaces the core, so a floor there is allowed:
+    low-L cores are mechanically unstable just above n_t, where the real crust
+    extends further."""
+    n, eps, p = jnp.asarray(n), jnp.asarray(eps), jnp.asarray(p)
+    _, ec, pc = crust_nodes(n_t)
+    et, pt = ec[-1], pc[-1]
+    ln = jnp.log(n)
+    lnw = math.log(join_density(n_t) * REMAP)
+    lnx = _join_lnn(ln, jnp.log(eps), jnp.log(p), et, pt, gamma_min)
+    above = (ln < lnw) & (ln >= lnx - 1e-12)
+    flat = jnp.any(above[1:] & above[:-1] & (jnp.diff(p) <= 0.0))
+    floor = jnp.any(above & (p <= P_FLOOR * 1.001))
+    return flat | floor | (lnx > lnw - JOIN_CAP)
 
 
 def join_density(n_t=N_T_DEFAULT):
@@ -161,6 +207,12 @@ def finish_table(n, eps, p, crust, n_t, n_surface, gamma_crust):
     if n_surface is not None:
         if crust == "sly":
             n, eps, p = attach_crust(n, eps, p, n_t=n_t)
+            try:                                  # eager call: raise; jit: NaN table
+                if not bool(jnp.all(jnp.isfinite(p))):
+                    raise InvalidCoreError("core invalid above the crust (p at the "
+                                           "floor or not increasing near n_j)")
+            except jax.errors.ConcretizationTypeError:
+                pass
         else:
             n, eps, p = extend_to_surface(n, eps, p, n_surface=n_surface,
                                           gamma_crust=gamma_crust)

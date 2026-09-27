@@ -144,6 +144,23 @@ def test_fallback_join_smooth_and_differentiable(L, K_sym):
     np.testing.assert_allclose(np.asarray(J)[:, 0], fd, rtol=0.01)
 
 
+def test_invalid_core_rejected():
+    """Metamodel, K_sym = 0: at low L the beta-equilibrium pressure stays on
+    the 1e-9 floor past the join cap, so the core is rejected (error when
+    eager, NaN table under jit); from L ~ 28 it joins."""
+    import jax
+    from nmbackend.eos.crust import InvalidCoreError
+    mm = MetaModelEOS()
+    for L in (20.0, 23.0, 25.0):
+        with pytest.raises(InvalidCoreError):
+            mm.eos_table({"L_sym": L, "K_sym": 0.0})
+        t = jax.jit(mm.eos_table)({"L_sym": L, "K_sym": 0.0})
+        assert not np.all(np.isfinite(np.asarray(t.p)))
+    t = mm.eos_table({"L_sym": 30.0, "K_sym": 0.0})
+    p = np.asarray(t.p)
+    assert np.all(np.isfinite(p)) and np.all(np.diff(p) > 0)
+
+
 def test_join_monotone_and_core_untouched():
     """p, eps, n increase; above the power-law segment the core nodes are the
     model's own; the crust n rescaling is small."""
