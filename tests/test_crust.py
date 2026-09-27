@@ -98,6 +98,52 @@ def test_join_smooth_in_parameters():
     assert np.ptp(slope) < 0.02 * np.abs(slope).mean()
 
 
+def _is_fallback(params):
+    from nmbackend.eos.crust import crust_nodes, GAMMA_MIN
+    from nmbackend.eos.metamodel import DEFAULT_PARAMS
+    _, ec, pc = crust_nodes()
+    _, e, p = MetaModelEOS()._low_density(dict(DEFAULT_PARAMS, **params),
+                                          n_min=join_density())
+    return float(p[0]) < pc[-1] * (float(e[0]) / ec[-1]) ** GAMMA_MIN
+
+
+@pytest.mark.parametrize("L, K_sym", [(60.0, 0.0), (80.0, 50.0)])
+def test_fallback_join_smooth_and_differentiable(L, K_sym):
+    """Cores softer than the crust at n_j (the join moves to n* > n_j):
+    Lambda at fixed h_c is smooth in L_sym, and the fixed-mass IFT gradients
+    of Lambda(1.4) and R(1.4) match a re-rooted finite difference."""
+    from nmbackend.inference import sensitivity_matrix
+    from nmbackend.tov.solver import solve_structure
+    P = {"L_sym": L, "K_sym": K_sym}
+    assert _is_fallback(P)
+    mm = MetaModelEOS()
+    hc = 0.2 * float(mm.eos_table(P).h[-1])
+    Ls = L + 0.05 * np.arange(-3, 4)
+    lam = [float(solve_structure(mm.eos_table(dict(P, L_sym=x)), hc, rtol=1e-11,
+                                 atol=1e-13).Lambda) for x in Ls]
+    slope = np.diff(lam) / np.diff(Ls)
+    assert np.ptp(slope) < 0.02 * np.abs(slope).mean()
+    rt = 1e-11
+    J, _, _ = sensitivity_matrix(mm, P, ["L_sym"], masses_lambda=(1.4,),
+                                 masses_radius=(1.4,), include_mmax=False,
+                                 hc_grid_n=220, rtol=rt, atol=rt * 1e-2)
+
+    def at14(q):
+        """(Lambda, R) at M = 1.4 exactly (Newton on h_c)."""
+        t = mm.eos_table(q)
+        f = build_family(t, default_hc_grid(t, n_models=220), rtol=rt,
+                         atol=rt * 1e-2)
+        b = np.flatnonzero(np.asarray(f.stable))
+        h = float(np.interp(1.4, np.asarray(f.M_msun)[b], np.asarray(f.h_c)[b]))
+        for _ in range(3):
+            s = lambda x: solve_structure(t, x, rtol=rt, atol=rt * 1e-2)
+            h -= (float(s(h).M_msun) - 1.4) / float(jax.jacfwd(lambda x: s(x).M_msun)(h))
+        pt = solve_structure(t, h, rtol=rt, atol=rt * 1e-2)
+        return np.array([float(pt.Lambda), float(pt.R_km)])
+    fd = (at14(dict(P, L_sym=L + 0.05)) - at14(dict(P, L_sym=L - 0.05))) / 0.1
+    np.testing.assert_allclose(np.asarray(J)[:, 0], fd, rtol=0.01)
+
+
 def test_join_monotone_and_core_untouched():
     """p, eps, n increase; above the power-law segment the core nodes are the
     model's own; the crust n rescaling is small."""

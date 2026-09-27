@@ -92,3 +92,5 @@ def test_compose_roundtrip_default_crust():
     f1 = build_family(t1, default_hc_grid(t1, n_models=45))
     assert abs(float(m_max(f0)) - float(m_max(f1))) < 1e-3
     assert abs(float(radius_of_mass(f0, 1.4)) - float(radius_of_mass(f1, 1.4))) < 1e-2
+    l0, l1 = float(lambda_of_mass(f0, 1.4)), float(lambda_of_mass(f1, 1.4))
+    assert abs(l1 / l0 - 1.0) < 1e-2

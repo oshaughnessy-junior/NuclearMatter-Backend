@@ -8,19 +8,21 @@ crust+cEFT ensemble (n_t = 0.055 fm^-3 = 0.34 n_sat).
 Join (the P(rho) matching of Fortin et al. 2016, arXiv:1604.01944, Sec. II.B):
 
 * The core table starts at the static density n_j = ``bridge`` * n_t (the
-  models put a grid node exactly there) and is kept unchanged.
-* Between the crust point (eps_t, p_t) and the core point (eps_j, p_j), p is
-  a power law in eps on a fixed set of segment nodes, so p is continuous and
-  strictly increasing in eps whenever p_j > p_t.  Node positions do not move
-  with the core parameters, so the table is smooth in them.
+  models put a grid node exactly there).
+* Join density n*: n_j if the core pressure there is at least
+  p_t (eps_j/eps_t)^GAMMA_MIN, else the first density above n_j where the core
+  reaches that curve (found by interpolation, so n* is continuous in the core
+  parameters).  Core nodes in [n_j, 2 n_j) move affinely in ln n onto
+  [n*, 2 n_j) and take the core values there; with n* = n_j nothing moves.
+  Node count and order never change, so the table is continuous in the
+  parameters.
+* Between the crust point (eps_t, p_t) and the core at n*, p is a power law
+  in eps (index >= GAMMA_MIN) on fixed segment nodes; p is continuous and
+  strictly increasing.
 * n follows the first law, d ln n = d eps/(eps + p), along the crust and the
-  segment.  It then misses the core n_j by a constant factor f (|f - 1| is
+  segment.  It then misses the core n* by a constant factor f (|f - 1| is
   1e-3 to 1e-2).  We rescale the crust and segment n by f (Fortin et al.
   Eq. 11, applied on the crust side).
-* Fallback, if p_j <= p_t (a core softer than the crust above n_t): the
-  segment ends at the first core node with p > p_t (eps/eps_t), and the core
-  nodes below it move onto the segment.  This branch is not smooth in the
-  core parameters.
 
 The TOV equations see only p(eps), which is the core's own above n_j; the
 core baryon density, and hence the composition and dUrca onset density, are
@@ -41,6 +43,8 @@ N_T_DEFAULT = 0.055       # fm^-3, 0.34 n_sat (paper 1, GKKS arXiv:2512.18044)
 N_FLOOR = 3e-10           # fm^-3, lowest crust node: p = 4e-12 MeV fm^-3, above
                           # the 1e-12 floor of compose.eos_table_from_arrays
 BRIDGE = 1.25             # the core table starts at n_j = BRIDGE * n_t
+GAMMA_MIN = 0.5           # the segment p ~ eps^Gamma has Gamma >= GAMMA_MIN
+REMAP = 2.0               # core nodes in [n_j, REMAP n_j) may move (see join)
 N_CRUST_PTS = 150
 N_SEG_PTS = 16            # interior nodes of the power-law segment
 
@@ -73,43 +77,51 @@ def crust_nodes(n_t=N_T_DEFAULT, n_floor=N_FLOOR, n_pts=N_CRUST_PTS):
 
 
 def attach_crust(n, eps, p, n_t=N_T_DEFAULT, n_floor=N_FLOOR,
-                 n_crust_pts=N_CRUST_PTS, n_seg=N_SEG_PTS, n_quad=257):
+                 n_crust_pts=N_CRUST_PTS, n_seg=N_SEG_PTS, n_quad=257,
+                 gamma_min=GAMMA_MIN):
     """Join the SLy crust below ``n_t`` to a core (n, eps, p) whose first node
     is n_j = BRIDGE * n_t (fm^-3, MeV/fm^3).  JAX-traceable in the core arrays;
     the node count is static.  Returns the combined (n, eps, p)."""
     n, eps, p = jnp.asarray(n), jnp.asarray(eps), jnp.asarray(p)
     nc, ec, pc = crust_nodes(n_t, n_floor, n_crust_pts)
     et, pt = ec[-1], pc[-1]
-    # segment end: the first core node, or (fallback) the first with p > p_t eps/eps_t
-    ok = (eps > et) & (p > pt * eps / et)
-    k = jnp.where((eps[0] > et) & (p[0] > pt), 0, jnp.argmax(ok))
-    nk, ek, pk = n[k], eps[k], p[k]
-    gam = jnp.log(pk / pt) / jnp.log(ek / et)
-    lr = jnp.log(ek / et)
+    ln, le, lp = jnp.log(n), jnp.log(eps), jnp.log(p)
+    lnj = math.log(join_density(n_t))
+    lnw = lnj + math.log(REMAP)
+    # join density n*: n_j if the core there lies on or above
+    # p_t (eps/eps_t)^gamma_min, else the first crossing of that curve
+    # (linear in ln n between core nodes, so continuous in the parameters)
+    g = lp - math.log(pt) - gamma_min * (le - math.log(et))
+    up = (ln > ln[0]) & (g >= 0.0)
+    k = jnp.maximum(jnp.argmax(up), 1)
+    t = jnp.clip(-g[k - 1] / jnp.where(g[k] > g[k - 1], g[k] - g[k - 1], 1.0), 0.0, 1.0)
+    lnx = jnp.where(g[0] >= 0.0, ln[0], ln[k - 1] + t * (ln[k] - ln[k - 1]))
+    lnx = jnp.minimum(lnx, lnw - 0.1)
+    # core nodes in [n_j, REMAP n_j) move affinely (in ln n) onto [n*, REMAP n_j)
+    # and take the core values there (log-log interpolation); the identity when
+    # n* = n_j, and continuous in n* otherwise
+    inw = ln < lnw
+    lm = jnp.where(inw, lnx + (ln - ln[0]) * (lnw - lnx) / (lnw - ln[0]), ln)
+    n = jnp.where(inw, jnp.exp(lm), n)
+    eps = jnp.where(inw, jnp.exp(jnp.interp(lm, ln, le)), eps)
+    p = jnp.where(inw, jnp.exp(jnp.interp(lm, ln, lp)), p)
+    # power law p(eps) from the crust point to the (moved) first core node
+    lr = jnp.log(eps[0] / et)
+    gam = jnp.log(p[0] / pt) / lr
     # ln n - ln n_t = int deps/(eps + p) along the segment, on a fine s grid
     sq = jnp.linspace(0.0, 1.0, n_quad)
     eq = et * jnp.exp(sq * lr)
     integrand = eq / (eq + pt * (eq / et) ** gam) * lr               # d/ds
     cum = jnp.concatenate([jnp.zeros(1), jnp.cumsum(
         0.5 * (integrand[1:] + integrand[:-1]) * jnp.diff(sq))])
-    f = nk / (n_t * jnp.exp(cum[-1]))            # rescales crust + segment n
-
-    def on_segment(s):
-        e = et * jnp.exp(s * lr)
-        return f * n_t * jnp.exp(jnp.interp(s, sq, cum)), e, pt * (e / et) ** gam
-
-    ns, es, ps = on_segment(jnp.linspace(0.0, 1.0, n_seg + 2)[1:-1])
-    # fallback only: core nodes below the segment end move onto the segment
-    below = jnp.arange(n.shape[0]) < k
-    sc = jnp.clip((jnp.log(n) - math.log(n_t)) / jnp.log(nk / n_t), 0.0, 1.0)
-    nb, eb, pb = on_segment(sc)
-    n2 = jnp.concatenate([ns, jnp.where(below, nb, n)])
-    e2 = jnp.concatenate([es, jnp.where(below, eb, eps)])
-    p2 = jnp.concatenate([ps, jnp.where(below, pb, p)])
-    o = jnp.argsort(n2)
-    return (jnp.concatenate([f * jnp.asarray(nc), n2[o]]),
-            jnp.concatenate([jnp.asarray(ec), e2[o]]),
-            jnp.concatenate([jnp.asarray(pc), p2[o]]))
+    f = n[0] / (n_t * jnp.exp(cum[-1]))          # rescales crust + segment n
+    s = jnp.linspace(0.0, 1.0, n_seg + 2)[1:-1]
+    es = et * jnp.exp(s * lr)
+    ns = f * n_t * jnp.exp(jnp.interp(s, sq, cum))
+    ps = pt * (es / et) ** gam
+    return (jnp.concatenate([f * jnp.asarray(nc), ns, n]),
+            jnp.concatenate([jnp.asarray(ec), es, eps]),
+            jnp.concatenate([jnp.asarray(pc), ps, p]))
 
 
 def join_density(n_t=N_T_DEFAULT):
