@@ -31,6 +31,15 @@ Join (the P(rho) matching of Fortin et al. 2016, arXiv:1604.01944, Sec. II.B):
   (eager); samplers treat both as failed draws.  Cores just inside this
   boundary (low L) join with slope kinks of up to ~6% in Lambda(L).
 
+Unstable core (:func:`monotone_core`, :func:`finish_table`): the models floor
+and cummax the core pressure, so where the raw pressure falls with density the
+table has a plateau (cs2 = 1e-8, first-law residual up to ~4e-2).  A core whose
+raw pressure falls by more than roundoff, or sits at the floor, above 2 n_j is
+rejected in the same way when a star centred at the onset of that interval
+lies below the maximum-mass star.  Accepted cores then carry no plateau
+below the maximum-mass star, and Lambda approaches the rejection boundary
+smoothly.  ``allow_unstable_core=True`` on the model keeps the plateau tables.
+
 The TOV equations see only p(eps), which is the core's own above n_j; the
 core baryon density, and hence the composition and dUrca onset density, are
 untouched.  Vary ``n_t`` to estimate the crust-matching systematic; above
@@ -55,6 +64,8 @@ GAMMA_MIN = 0.5           # the segment p ~ eps^Gamma has Gamma >= GAMMA_MIN
 REMAP = 2.0               # core nodes in [n_j, REMAP n_j) may move (see join)
 P_FLOOR = 1e-9            # MeV fm^-3, the pressure floor of the core models
 JOIN_CAP = 0.1            # n* <= REMAP n_j e^-JOIN_CAP
+P_DROP_RTOL = 1e-10       # pressure drops below this relative size are roundoff
+M_LOW = 0.5               # Msun; below it M falls with h_c only below the M_min star
 N_CRUST_PTS = 150
 N_SEG_PTS = 16            # interior nodes of the power-law segment
 
@@ -197,23 +208,79 @@ def check_crust(crust, n_surface=None):
     return crust
 
 
-def finish_table(n, eps, p, crust, n_t, n_surface, gamma_crust):
+def monotone_core(n, p, n_t=N_T_DEFAULT):
+    """Floor and cummax the raw core pressure ``p`` (MeV fm^-3) on ``n``
+    (fm^-3).  Returns (p_monotone, ln n_u): n_u is where the first unstable
+    interval above REMAP n_j begins, +inf if there is none.  An interval is a
+    run of nodes where the raw p is at the floor or more than P_DROP_RTOL below
+    the running maximum; it begins at the node that set the maximum.
+    JAX-traceable."""
+    n, p = jnp.asarray(n), jnp.asarray(p)
+    pf = jnp.maximum(p, P_FLOOR)
+    pm = jax.lax.cummax(pf)
+    ln = jnp.log(n)
+    drop = (pf < pm * (1.0 - P_DROP_RTOL)) | (pf <= P_FLOOR * 1.001)
+    idx = jnp.arange(n.shape[0])
+    anchor = jax.lax.cummax(jnp.where(drop, 0, idx))    # last node not in a drop
+    above = drop & (ln >= math.log(REMAP * join_density(n_t)))
+    return pm, jnp.min(jnp.where(above, ln[anchor], jnp.inf))
+
+
+def unstable_below_mmax(table, ln_nu):
+    """True if a star centred at n_u lies below the maximum-mass star: M rises
+    with h_c there, or M < M_LOW (the falling branch below the minimum-mass
+    star).  Solves one star, only where n_u is finite.  JAX-traceable."""
+    from ..tov.solver import solve_structure
+
+    def check(t, lnu):
+        hu = jnp.interp(lnu, jnp.log(t.n), t.h)
+        m, dm = jax.jvp(lambda h: solve_structure(t, h).M_msun, (hu,),
+                        (jnp.ones_like(hu),))
+        return (dm > 0.0) | (m < M_LOW)
+
+    ok = jnp.isfinite(ln_nu) & jnp.all(jnp.isfinite(table.p))
+    try:                                          # eager: skip the solve if stable
+        if not bool(ok):
+            return jnp.asarray(False)
+        return check(table, ln_nu)
+    except jax.errors.ConcretizationTypeError:
+        return jax.lax.cond(ok, check, lambda t, lnu: jnp.asarray(False),
+                            table, ln_nu)
+
+
+def _raise_if_nan(p, msg):
+    try:                                          # eager call: raise; jit: NaN table
+        if not bool(jnp.all(jnp.isfinite(p))):
+            raise InvalidCoreError(msg)
+    except jax.errors.ConcretizationTypeError:
+        pass
+
+
+def finish_table(n, eps, p, crust, n_t, n_surface, gamma_crust,
+                 ln_nu=math.inf, allow_unstable=False):
     """Low-density completion shared by the uniform-matter models, then the
     EOSTable.  ``crust="sly"``: :func:`attach_crust` (the core must start at
     :func:`join_density`).  ``crust="polytrope"``: the legacy surface continuation
     :func:`nmbackend.eos.base.extend_to_surface`.  ``n_surface=None`` skips
-    both (table truncated at the core grid start)."""
-    from .base import build_h_and_cs2, extend_to_surface
+    both (table truncated at the core grid start).
+
+    ``ln_nu`` is the unstable-interval onset from :func:`monotone_core`.  Unless
+    ``allow_unstable``, the table is rejected (InvalidCoreError when eager, NaN
+    under jit) if :func:`unstable_below_mmax`."""
+    from .base import EOSTable, build_h_and_cs2, extend_to_surface
     if n_surface is not None:
         if crust == "sly":
             n, eps, p = attach_crust(n, eps, p, n_t=n_t)
-            try:                                  # eager call: raise; jit: NaN table
-                if not bool(jnp.all(jnp.isfinite(p))):
-                    raise InvalidCoreError("core invalid above the crust (p at the "
-                                           "floor or not increasing near n_j)")
-            except jax.errors.ConcretizationTypeError:
-                pass
+            _raise_if_nan(p, "core invalid above the crust (p at the floor or "
+                             "not increasing near n_j)")
         else:
             n, eps, p = extend_to_surface(n, eps, p, n_surface=n_surface,
                                           gamma_crust=gamma_crust)
-    return build_h_and_cs2(n, eps, p)
+    table = build_h_and_cs2(n, eps, p)
+    if allow_unstable:
+        return table
+    bad = unstable_below_mmax(table, ln_nu)
+    table = EOSTable(*(jnp.where(bad, jnp.nan, a) for a in table))
+    _raise_if_nan(table.p, "core mechanically unstable (dp/dn <= 0) below the "
+                           "maximum-mass central density")
+    return table

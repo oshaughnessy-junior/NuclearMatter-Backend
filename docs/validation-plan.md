@@ -19,7 +19,9 @@ spaced in pseudo-enthalpy `h`** (`tov/solver.py`).  Two structural risks:
    transition, and the tidal equation has `(ε+p)/cs²` which **blows up** as `cs²→0`.
    The current table even *clips* `cs²` to `[1e-8, 1]` and applies `cummax` to `p`,
    which silently smears transitions — fine for a smooth metamodel, **wrong** for a
-   real phase-transition EOS.
+   real phase-transition EOS.  The uniform-matter models now reject a core whose
+   raw pressure falls with density below the maximum-mass star
+   (`eos.crust.monotone_core`); `allow_unstable_core=True` keeps the plateau table.
 2. **Surface / crust.** Λ depends sensitively on the low-density tail; without a
    real crust and with a coarse surface, Λ carries ~1% numerical noise (already
    observed: FD on Λ jitters while AD returns the exact slope of the noisy function).

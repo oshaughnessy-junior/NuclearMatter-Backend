@@ -43,7 +43,8 @@ import jax.numpy as jnp
 from ..constants import HBARC, M_N, M_P, M_E, N_SAT_DEFAULT
 from .base import EOSModel, Composition
 from .leptons import lepton_sector
-from .crust import N_T_DEFAULT, check_crust, finish_table, join_density
+from .crust import (N_T_DEFAULT, check_crust, finish_table, join_density,
+                    monotone_core)
 
 jax.config.update("jax_enable_x64", True)
 
@@ -144,7 +145,8 @@ class MetaModelEOS(EOSModel):
 
     def __init__(self, n_min=3e-4, n_points_low=240, n_points_tail=160,
                  eps_max_fac=14.0, n_surface=1e-7, gamma_crust=1.3,
-                 muons=False, s_high="taylor", crust="sly", n_t=N_T_DEFAULT):
+                 muons=False, s_high="taylor", crust="sly", n_t=N_T_DEFAULT,
+                 allow_unstable_core=False):
         if s_high not in ("taylor", "power", "power_matched"):
             raise ValueError(f"unknown s_high={s_high!r}")
         self.muons = muons
@@ -161,9 +163,13 @@ class MetaModelEOS(EOSModel):
         self.gamma_crust = gamma_crust
         self.crust = check_crust(crust, n_surface)
         self.n_t = n_t
+        # True keeps cores whose raw pressure falls with density (plateau
+        # tables; see eos.crust.monotone_core) instead of rejecting them
+        self.allow_unstable_core = allow_unstable_core
 
-    def _low_density(self, p, n_min=None):
-        """Taylor metamodel part on n in [n_min, n_match]; MeV/fm^3, fm^-3."""
+    def _low_density(self, p, n_min=None, onset=False):
+        """Taylor metamodel part on n in [n_min, n_match]; MeV/fm^3, fm^-3.
+        ``onset=True`` also returns ln n_u of :func:`eos.crust.monotone_core`."""
         n_match = p["n_match_fac"] * p["n_sat"]
         n_min = self.n_min if n_min is None else n_min
         n = jnp.exp(jnp.linspace(math.log(n_min), jnp.log(n_match),
@@ -176,9 +182,8 @@ class MetaModelEOS(EOSModel):
         deps_dn = jax.vmap(
             lambda ni, xi: jax.grad(lambda nn: _eps_total(nn, xi, p, mu))(ni)
         )(n, x_p)
-        pres = n * deps_dn - eps
-        pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
-        return n, eps, pres
+        pres, ln_nu = monotone_core(n, n * deps_dn - eps, self.n_t)
+        return (n, eps, pres, ln_nu) if onset else (n, eps, pres)
 
     def _css_tail(self, n_m, eps_m, p_m, p):
         """Constant-sound-speed causal extension above the match point.
@@ -243,8 +248,8 @@ class MetaModelEOS(EOSModel):
             p.update(params)
 
         sly = self.crust == "sly" and self.n_surface is not None
-        n_lo, eps_lo, p_lo = self._low_density(
-            p, n_min=join_density(self.n_t) if sly else None)
+        n_lo, eps_lo, p_lo, ln_nu = self._low_density(
+            p, n_min=join_density(self.n_t) if sly else None, onset=True)
         n_t, eps_t, p_t = self._css_tail(n_lo[-1], eps_lo[-1], p_lo[-1], p)
 
         n = jnp.concatenate([n_lo, n_t])
@@ -253,4 +258,5 @@ class MetaModelEOS(EOSModel):
         pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
 
         return finish_table(n, eps, pres, self.crust, self.n_t,
-                            self.n_surface, self.gamma_crust)
+                            self.n_surface, self.gamma_crust, ln_nu,
+                            self.allow_unstable_core)
