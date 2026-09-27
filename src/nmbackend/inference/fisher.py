@@ -98,8 +98,9 @@ def _locate(model, params, masses, hc_grid_n, rtol_locate=1e-8):
     t = model.eos_table(params)
     fam = build_family(t, default_hc_grid(t, n_models=hc_grid_n),
                        rtol=rtol_locate, atol=rtol_locate * 1e-2)
-    M = np.asarray(fam.M_msun)
-    H = np.asarray(fam.h_c)
+    b = np.flatnonzero(np.asarray(fam.stable))    # minimum-mass star to M_max
+    M = np.asarray(fam.M_msun)[b]
+    H = np.asarray(fam.h_c)[b]
     imax = int(np.argmax(M))
     hc_for = {m: float(np.interp(m, M[:imax + 1], H[:imax + 1])) for m in masses}
     return hc_for, float(H[imax])
