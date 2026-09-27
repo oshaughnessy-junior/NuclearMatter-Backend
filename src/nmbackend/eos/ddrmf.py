@@ -41,7 +41,8 @@ import numpy as np
 from ..constants import HBARC
 from .base import EOSModel, Composition
 from .leptons import lepton_sector
-from .crust import N_T_DEFAULT, check_crust, core_grid, finish_table
+from .crust import (N_T_DEFAULT, check_crust, core_grid, finish_table,
+                    monotone_core)
 
 jax.config.update("jax_enable_x64", True)
 
@@ -313,13 +314,15 @@ class DDRMFEOS(EOSModel):
 
     def __init__(self, n_min=1e-3, n_max=1.2, n_points=200,
                  n_surface=1e-7, gamma_crust=1.3,
-                 crust="sly", n_t=N_T_DEFAULT):
+                 crust="sly", n_t=N_T_DEFAULT,
+                 allow_unstable_core=False):
         self.n_grid = jnp.exp(jnp.linspace(math.log(n_min), math.log(n_max),
                                            n_points))
         self.n_surface = n_surface
         self.gamma_crust = gamma_crust
         self.crust = check_crust(crust, n_surface)
         self.n_t = n_t
+        self.allow_unstable_core = allow_unstable_core
 
     def _table_grid(self):
         """Uniform-matter nodes of the EOS table (above n_t with the SLy crust)."""
@@ -347,6 +350,7 @@ class DDRMFEOS(EOSModel):
         n = self._table_grid()
         x_p = _solve_xp(n, p)
         eps, pres = _eps_p(n, x_p, p)
-        pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
+        pres, ln_nu = monotone_core(n, pres, self.n_t)
         return finish_table(n, eps, pres, self.crust, self.n_t,
-                            self.n_surface, self.gamma_crust)
+                            self.n_surface, self.gamma_crust, ln_nu,
+                            self.allow_unstable_core)
