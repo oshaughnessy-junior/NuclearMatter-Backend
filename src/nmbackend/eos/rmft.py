@@ -176,9 +176,20 @@ def landau_masses(params, n, x_p):
     n = jnp.asarray(n, float)
     x_p = jnp.asarray(x_p, float)
     n_n, n_p = (1.0 - x_p) * n, x_p * n
-    m_D = M - _solve_phi(n_n, n_p, p)
+    kfn, kfp = _kf(n_n), _kf(n_p)
+
+    def resid(Phi):                   # scalar gap equation (see _solve_phi)
+        ms = M - Phi
+        return (Phi / p["C_sigma"] + p["b"] * M * Phi**2 + p["c"] * Phi**3
+                - _rho_s_one(kfn, ms) - _rho_s_one(kfp, ms))
+
+    # _solve_phi bisects, which carries no gradient; one Newton step from a
+    # stop-gradient root gives the implicit derivative of m_D
+    Phi0 = jax.lax.stop_gradient(_solve_phi(n_n, n_p, p))
+    Phi = Phi0 - resid(Phi0) / jax.grad(lambda x: jnp.sum(resid(x)))(Phi0)
+    m_D = M - Phi
     ef = lambda kf: jnp.sqrt(kf**2 + m_D**2) / M
-    return ef(_kf(n_n)), ef(_kf(n_p))
+    return ef(kfn), ef(kfp)
 
 
 def _solve_xp(n_B, p, n_iter=70):

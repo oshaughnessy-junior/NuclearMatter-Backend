@@ -112,6 +112,17 @@ def test_gm1_published_dirac_mass(params):
     mn, mp = rmft.landau_masses(params, 0.153, 0.5)
     assert abs(float(mn) - float(mp)) < 1e-12
     assert abs(_dirac(mn, 0.153 / 2) - 0.70) < 0.005
+    assert float(mn) > 0.74                 # Landau, not Dirac
+
+
+def test_rmf_landau_mass_gradient():
+    """d m*/d C_sigma through the scalar gap equation matches finite
+    differences (the bisection alone carries no gradient)."""
+    f = lambda cs: rmft.landau_masses({"C_sigma": cs}, 0.3, 0.1)[0]
+    cs, h = rmft.GM1["C_sigma"], 1e-4
+    fd = (float(f(cs + h)) - float(f(cs - h))) / (2 * h)
+    assert fd < 0.0
+    assert abs(float(jax.grad(f)(cs)) / fd - 1.0) < 1e-4
 
 
 def test_metamodel_prescription():

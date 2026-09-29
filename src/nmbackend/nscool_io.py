@@ -44,18 +44,28 @@ def _core_start(n, n_t):
 
 
 def write_tables(table, composition, crust=N_T_DEFAULT, path="EOS_Cat.dat",
-                 title="nmbackend EOS"):
+                 title="nmbackend EOS", n_max=None):
     """Write the NSCool star EOS file for one EOS draw.
 
     ``table``: EOSTable built with the SLy crust joined at ``crust`` = n_t
     (fm^-3).  ``composition``: CoolingComposition of the same model and
-    parameters, covering the core rows.  Returns dict(path, icore, imax,
-    n_core, rho_core), where n_core and rho_core are the least dense core row
-    (fm^-3, g cm^-3).  Raises ValueError for NaN tables (rejected cores),
-    non-monotone rows or tables beyond NSCool's row limits."""
+    parameters, covering the core rows.  ``n_max`` (fm^-3), e.g. the central
+    density of the maximum-mass star: rows above the first node at or beyond
+    it are dropped.  Rows past M_max can carry a pressure plateau or, for
+    Skyrme, a negative m*_n; with ``n_max`` they are not written or checked.
+
+    Returns dict(path, icore, imax, n_core, rho_core), where n_core and
+    rho_core are the least dense core row (fm^-3, g cm^-3).  NSCool's
+    ``rhocore`` should not be below rho_core: under it, NSCool extrapolates
+    the core composition from the two least dense core rows.  Raises
+    ValueError for NaN tables (rejected cores), non-monotone rows or tables
+    beyond NSCool's row limits."""
     n = np.asarray(table.n, float)
     rho = np.asarray(table.eps_mevfm3, float) / _G_CM3_TO_MEVFM3
     P = np.asarray(table.p_mevfm3, float) / _DYN_CM2_TO_MEVFM3
+    if n_max is not None:
+        k = min(int(np.searchsorted(n, n_max)) + 1, len(n))
+        n, rho, P = n[:k], rho[:k], P[:k]
     if not np.all(np.isfinite(n) & np.isfinite(rho) & np.isfinite(P)):
         raise ValueError("non-finite EOS table (rejected core)")
     ic = _core_start(n, crust)

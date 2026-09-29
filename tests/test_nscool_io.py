@@ -70,6 +70,18 @@ def test_file_composition_gives_durca_onset(gm1):
                                rtol=1e-5)
 
 
+def test_n_max_truncates(gm1, tmp_path):
+    """Rows stop at the first node at or above n_max; the file stays valid."""
+    tab, cc, full, _ = gm1
+    info = write_tables(tab, cc, path=str(tmp_path / "t.dat"), n_max=0.5)
+    f = read_star_eos(info["path"])
+    n = np.asarray(tab.n)
+    top = n[np.searchsorted(n, 0.5)]
+    assert f["core"][0, 2] == pytest.approx(top, rel=1e-5)
+    assert info["imax"] == full["imax"] - int(np.sum(n > top))
+    assert info["n_core"] == full["n_core"]
+
+
 def test_rejects_bad_input(tmp_path):
     m = MetaModelEOS(muons=True, crust="polytrope")
     with pytest.raises(ValueError, match="SLy crust"):
