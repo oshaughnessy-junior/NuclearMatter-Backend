@@ -1,0 +1,272 @@
+--- a/Code/precool.f
++++ b/Code/precool.f
+@@ -1301,6 +1301,7 @@
+ c       INCLUDE 'files_phys.inc.f'
+        INCLUDE 'files.inc.f'
+        dimension tcrit(10),rho_lo(10),rho_hi(10)
++       dimension kfn_s(0:isize),kfp_s(0:isize)
+ c Just to be safe:
+        do i=0,imax
+         tcn(i) =1.0d0
+@@ -1351,12 +1352,16 @@
+         tcn(i)=max(1.d0,Tc_Ioffe_3ns(kfn(i)))*fn1s0
+        end do
+       end if
++c nmbackend patch: gap scaling Delta(n)=s_y*Delta_0(n/s_x) (Zhou+2026
++c Eq. 10); s_y is fn3p2/fp1s0, s_x enters through kF at n/s_x:
++      call get_kf_scaled(sxn3p2,kfn,kfn_s)
++      call get_kf_scaled(sxp1s0,kfp,kfp_s)
+ c ***** 3p2 neutron superfluidity *************************************
+       isf=-1
+ c isf will be the largest zone number at which triplet pairing is present
+       if(sfn3p2.eq.1.)then
+        do i=0,idrip
+-        temp=tcn3_hgrr(kfn(i))*fn3p2
++        temp=tcn3_hgrr(kfn_s(i))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1364,7 +1369,7 @@
+        end do
+       else if(sfn3p2.eq.2.)then
+        do i=0,idrip
+-        temp=tcn3_ao(kfn(i))*fn3p2
++        temp=tcn3_ao(kfn_s(i))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1372,7 +1377,7 @@
+        end do
+       else if(sfn3p2.eq.3.)then
+        do i=0,idrip
+-        temp=tcn3_ao_m1(kfn(i))*fn3p2
++        temp=tcn3_ao_m1(kfn_s(i))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1380,14 +1385,14 @@
+        end do
+       else if(sfn3p2.eq.4.)then
+        do i=0,idrip
+-        temp=tcn3_t72(kfn(i))*fn3p2
++        temp=tcn3_t72(kfn_s(i))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+         end if
+        end do
+       else if(sfn3p2.eq.5.)then
+-       temp=tcn3_t72_m1(kfn(i))*fn3p2
++       temp=tcn3_t72_m1(kfn_s(i))*fn3p2
+        do i=0,idrip
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+@@ -1396,7 +1401,7 @@
+        end do
+       else if(sfn3p2.eq.6.)then
+        do i=0,idrip
+-        temp=tcn3_bcll92(kfn(i))*fn3p2
++        temp=tcn3_bcll92(kfn_s(i))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1404,7 +1409,7 @@
+        end do
+       else if(sfn3p2.eq.7.)then
+        do i=0,idrip
+-        temp=tcn3_eehjo96_nr(kfn(i))*fn3p2
++        temp=tcn3_eehjo96_nr(kfn_s(i))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1412,7 +1417,7 @@
+        end do
+       else if(sfn3p2.eq.8.)then
+        do i=0,idrip
+-        temp=tcn3_eehjo96_r(kfn(i))*fn3p2
++        temp=tcn3_eehjo96_r(kfn_s(i))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1437,7 +1442,7 @@
+        end if
+        do i=0,idrip
+         temp=tcmax_n3p2*
+-     1       exp(-(kfn(i)-kfmax_n3p2)**2/delkf_n3p2**2)*fn3p2
++     1       exp(-(kfn_s(i)-kfmax_n3p2)**2/delkf_n3p2**2)*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          if (isf.eq.i-1) isf=i
+@@ -1446,7 +1451,7 @@
+ c     Ioffe gaps:
+       else if (sfn3p2.eq.201.) then
+        do i=0,idrip
+-        temp=max(1.d0,Tc_Ioffe_1nt(kfn(i)))*fn3p2
++        temp=max(1.d0,Tc_Ioffe_1nt(kfn_s(i)))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1454,7 +1459,7 @@
+        end do
+       else if (sfn3p2.eq.202.) then
+        do i=0,idrip
+-        temp=max(1.d0,Tc_Ioffe_2nt(kfn(i)))*fn3p2
++        temp=max(1.d0,Tc_Ioffe_2nt(kfn_s(i)))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1462,7 +1467,7 @@
+        end do
+       else if (sfn3p2.eq.203.) then
+        do i=0,idrip
+-        temp=max(1.d0,Tc_Ioffe_3nt(kfn(i)))*fn3p2
++        temp=max(1.d0,Tc_Ioffe_3nt(kfn_s(i)))*fn3p2
+         if (temp.ge.tcn(i)) then
+          tcn(i)=temp
+          isf=i
+@@ -1478,44 +1483,44 @@
+ c ***** 1s0 proton superconductivity **********************************
+       if(sfp1s0.eq.1.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcp1_ccy_ms(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcp1_ccy_ms(kfp_s(i)))*fp1s0
+        end do
+       else if(sfp1s0.eq.2.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcp1_ccy_ps(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcp1_ccy_ps(kfp_s(i)))*fp1s0
+        end do
+       else if(sfp1s0.eq.3.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcp1_t73(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcp1_t73(kfp_s(i)))*fp1s0
+        end do
+       else if(sfp1s0.eq.4.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcp1_ns(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcp1_ns(kfp_s(i)))*fp1s0
+        end do
+       else if(sfp1s0.eq.5.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcp1_ao(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcp1_ao(kfp_s(i)))*fp1s0
+        end do
+       else if(sfp1s0.eq.6.)then  
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcp1_bcll92(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcp1_bcll92(kfp_s(i)))*fp1s0
+        end do
+       else if(sfp1s0.eq.7.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcp1_ccdk(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcp1_ccdk(kfp_s(i)))*fp1s0
+        end do
+ c     Using Neutron 1S0 gaps for Protons:
+       else if(sfp1s0.eq.21.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcn1_t72(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcn1_t72(kfp_s(i)))*fp1s0
+        end do
+       else if(sfp1s0.eq.22.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcn1_awp_2(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcn1_awp_2(kfp_s(i)))*fp1s0
+        end do
+       else if(sfp1s0.eq.23.)then
+        do i=0,icore
+-        tcp(i)=max(1.d0,tcn1_awp_3(kfp(i)))*fp1s0
++        tcp(i)=max(1.d0,tcn1_awp_3(kfp_s(i)))*fp1s0
+        end do
+ c     Ioffe gaps:
+       else if (sfp1s0.eq.201.) then
+@@ -1814,3 +1819,36 @@
+ c***************************************************************************
+ c***************************************************************************
+ 
++c *********************************************************************
++c nmbackend patch: Fermi momentum at baryon density bar(i)/sx,
++c interpolated in the star's own profile (bar decreases outward).
++c Above the central density: kF scaled as (n/n_c)^(1/3).
++c *********************************************************************
++      subroutine get_kf_scaled(sx,kf,kfs)
++       implicit real*8 (a-h,k-z)
++       INCLUDE 'size.inc.f'
++       INCLUDE 'profile_star.inc.f'
++       INCLUDE 'profile_comp.inc.f'
++       dimension kf(0:isize),kfs(0:isize)
++       do i=0,imax
++        if (sx.eq.1.d0) then
++         kfs(i)=kf(i)
++        else
++         b=bar(i)/sx
++         if (b.ge.bar(0)) then
++          kfs(i)=kf(0)*(b/bar(0))**(1.d0/3.d0)
++         else if (b.le.bar(imax)) then
++          kfs(i)=kf(imax)
++         else
++          j=0
++ 100      if (bar(j+1).ge.b) then
++           j=j+1
++           goto 100
++          end if
++          w=(bar(j)-b)/(bar(j)-bar(j+1))
++          kfs(i)=(1.d0-w)*kf(j)+w*kf(j+1)
++         end if
++        end if
++       end do
++      return
++      end
+--- a/Code/pairing.inc.f
++++ b/Code/pairing.inc.f
+@@ -25,3 +25,5 @@
+ 
+ 
+ 
++c nmbackend patch: density scale factors s_x (Zhou+2026 Eq. 10)
++      common/gapscale/sxp1s0,sxn3p2
+--- a/Code/NSCool_READ.inc.f
++++ b/Code/NSCool_READ.inc.f
+@@ -106,6 +106,12 @@
+         read(20,*)delkf_n3p2
+         read(20,*)tcmax_n3p2
+        end if
++c nmbackend patch: optional trailing lines SXP1S0, SXN3P2 (default 1)
++       sxp1s0=1.d0
++       sxn3p2=1.d0
++       read(20,*,end=1901,err=1901)sxp1s0
++       read(20,*,end=1901,err=1901)sxn3p2
++ 1901  continue
+       close(unit=20,status='keep')
+ 
+ c READ NEUTRINO PARAMETERS: ********************************************
+--- a/TOV/TOV.f
++++ b/TOV/TOV.f
+@@ -15,7 +15,7 @@
+       common/eos_dat/ peos(50000),eeos(50000),deos(50000),const
+       common/prof/r,den,e,p,em,phi,rhoc,baryden,propmas,delta,stepi
+      
+-      logical iread, fread, cread, dread, sread,
++      logical iread, fread, cread, dread, sread, gread,
+      C        prod, output, stndrd, qseek, seek,
+      C        dum_l     
+ c      data prho/.1,.11,.12,.135,.15,.165,.18,.2,.22,.246,.27,.3,
+@@ -69,7 +69,8 @@
+      
+ C ***** Waits for instructions *********************************************
+      
+-5     call gread(5,6,.true.,.true.)
++c nmbackend patch: gread is a LOGICAL FUNCTION (gfortran rejects CALL)
++5     dum_l=gread(5,6,.true.,.true.)
+       if(cread('go')) go to 10
+       if(cread('production')) then
+         open (unit=7,file=
+@@ -406,7 +407,8 @@
+       common/eos_dat/ peos(50000),eeos(50000),deos(50000),const
+       common/interp/ i1,i2,i3,limit
+ c      write(6,*) c2
+-      title='/Users/dany/Work/NStar/EOS/'//title
++c nmbackend patch: EOS path used as given
++c     title='/Users/dany/Work/NStar/EOS/'//title
+       open (unit=15, file=title, status='old')
+ c       read(15,*) itext,limit
+        itext=6
