@@ -164,6 +164,23 @@ def _vector_fields(n_B, n3, p, n_iter=40):
     return jax.lax.fori_loop(0, n_iter, body, (W, R))
 
 
+def landau_masses(params, n, x_p):
+    """(m*_n/M, m*_p/M): Landau masses at the Fermi surface.
+
+    The single-particle energy is sqrt(k^2 + m_D^2) + W + t3 R, so the Landau
+    mass k_F / (d e/dk) is E*_F = sqrt(k_F^2 + m_D^2), with Dirac mass
+    m_D = M - Phi (the ``mstar_frac`` of :func:`couplings_from_saturation`)."""
+    p = dict(DEFAULT_PARAMS)
+    p.update(params or {})
+    M = p["M_mev"] / HBARC
+    n = jnp.asarray(n, float)
+    x_p = jnp.asarray(x_p, float)
+    n_n, n_p = (1.0 - x_p) * n, x_p * n
+    m_D = M - _solve_phi(n_n, n_p, p)
+    ef = lambda kf: jnp.sqrt(kf**2 + m_D**2) / M
+    return ef(_kf(n_n)), ef(_kf(n_p))
+
+
 def _solve_xp(n_B, p, n_iter=70):
     """beta-equilibrium proton fraction with electrons AND muons.
 
@@ -391,6 +408,10 @@ class RMFTEOS(EOSModel):
         x_p = _solve_xp(n, p)
         _, n_e, n_mu, _ = _leptons(x_p * n)
         return Composition(n=n, x_p=x_p, x_e=n_e / n, x_mu=n_mu / n)
+
+    def landau_masses(self, params, comp):
+        """(m*_n/M, m*_p/M) on ``comp`` (see :func:`landau_masses`)."""
+        return landau_masses(params, comp.n, comp.x_p)
 
     def eos_table(self, params: dict = None):
         p = dict(DEFAULT_PARAMS)

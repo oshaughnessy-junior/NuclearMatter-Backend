@@ -158,6 +158,24 @@ def _nucleon_state(n_n, n_p, p):
     return eps, mu_n, mu_p, Phi
 
 
+def landau_masses(params, n, x_p):
+    """(m*_n/M_n, m*_p/M_p): Landau masses at the Fermi surface.
+
+    The single-particle energy is sqrt(k^2 + m_D^2) + (vector and
+    rearrangement self-energies, independent of k), so the Landau mass
+    k_F / (d e/dk) is E*_F = sqrt(k_F^2 + m_D^2), with Dirac mass
+    m_D = M_i - Phi."""
+    p = dict(DEFAULT_PARAMS)
+    p.update({k: v for k, v in (params or {}).items() if k != "L0"})
+    n = jnp.asarray(n, float)
+    x_p = jnp.asarray(x_p, float)
+    n_n, n_p = (1.0 - x_p) * n, x_p * n
+    Phi = _solve_phi(n_n, n_p, p)
+    Mn, Mp = p["M_n"] / HBARC, p["M_p"] / HBARC
+    ef = lambda kf, m: jnp.sqrt(kf**2 + (m - Phi) ** 2) / m
+    return ef(_kf(n_n), Mn), ef(_kf(n_p), Mp)
+
+
 def _solve_xp(n_B, p, n_iter=60):
     """beta-equilibrium proton fraction (npe-mu): mu_n - mu_p = mu_e."""
     def g(x_p):
@@ -344,6 +362,10 @@ class DDRMFEOS(EOSModel):
         x_p = _solve_xp(n, p)
         _, n_e, n_mu, _ = lepton_sector(x_p * n, muons=True)
         return Composition(n=n, x_p=x_p, x_e=n_e / n, x_mu=n_mu / n)
+
+    def landau_masses(self, params, comp):
+        """(m*_n/M_n, m*_p/M_p) on ``comp`` (see :func:`landau_masses`)."""
+        return landau_masses(self._p(params), comp.n, comp.x_p)
 
     def eos_table(self, params: dict = None):
         p = self._p(params)
