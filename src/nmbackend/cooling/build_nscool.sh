@@ -17,13 +17,14 @@ cd "$PREFIX"
 if [[ -n "${NSCOOL_TARBALL:-}" ]]; then
   cp "$NSCOOL_TARBALL" NSCool.tar.gz
 elif [[ ! -f NSCool.tar.gz ]]; then
-  curl -fsSL --max-time 300 -o NSCool.tar.gz "$URL"
+  curl -fsSL --max-time 300 -o NSCool.tar.gz.part "$URL"
+  mv NSCool.tar.gz.part NSCool.tar.gz
 fi
 echo "$SHA256  NSCool.tar.gz" | sha256sum -c -
 
 rm -rf NSCool
 tar xzf NSCool.tar.gz
-find NSCool -name '.DS_Store' -o -name '.#*' | xargs rm -f
+find NSCool \( -name '.DS_Store' -o -name '.#*' \) -delete
 rm -f NSCool/NSCool.out NSCool/Code/NSCool.out NSCool/Plot/Plot_Teff NSCool/Model_1/Plot_Teff NSCool/TOV/TOV
 (cd NSCool && patch -p1 -s < "$HERE/nscool_nmbackend.patch")
 

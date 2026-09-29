@@ -49,8 +49,11 @@ class GapModel:
 
     Delta_x(n) = s_y * Delta_x,0(n / s_x) for x = p1S0 and n3P2, with n the
     baryon density.  s_y maps to NSCool's FP1S0 / FN3P2 (Tc multipliers;
-    Tc is proportional to Delta).  s_x is applied by the nmbackend patch,
-    which evaluates the gap at the Fermi momentum the star has at n / s_x.
+    Tc is proportional to Delta).  s_x is applied by the nmbackend patch in
+    the core zones: the gap is evaluated at the Fermi momentum the star has
+    at n / s_x.  Where n / s_x lies outside the core (above the centre, or
+    below the crust-core boundary) k_F scales as n^(1/3) from the nearest
+    core zone.  Crust zones are not rescaled.
 
     Model codes are NSCool's SFP1S0 / SFN3P2 / SFN1S0 values (precool.f,
     subroutine get_Tc); 0 switches a channel off.  Defaults are the
@@ -65,26 +68,28 @@ class GapModel:
     sy_n3p2: float = 1.0
 
     def __post_init__(self):
+        for name in self.__dataclass_fields__:   # numpy scalars -> float
+            object.__setattr__(self, name, float(getattr(self, name)))
         if self.n3p2 == 150.0:
             raise ValueError("SFN3P2=150 (user Gaussian gap) is not supported")
         for name in ("sx_p1s0", "sy_p1s0", "sx_n3p2", "sy_n3p2"):
-            if not getattr(self, name) > 0:
-                raise ValueError(f"{name} must be > 0")
+            if not 0 < getattr(self, name) < np.inf:
+                raise ValueError(f"{name} must be finite and > 0")
 
     def pairing_file(self) -> str:
         return (
             "PAIRING CONTROL:---------------------------------------\n"
-            f"{self.n1s0!r:<10} SFN1S0\n"
-            f"{self.n3p2!r:<10} SFN3P2\n"
-            f"{self.p1s0!r:<10} SFP1S0\n"
+            f"{self.n1s0:<10.10g} SFN1S0\n"
+            f"{self.n3p2:<10.10g} SFN3P2\n"
+            f"{self.p1s0:<10.10g} SFP1S0\n"
             "0.        SFL1S0\n"
             "1.        FN1S0\n"
-            f"{self.sy_n3p2!r:<10} FN3P2\n"
-            f"{self.sy_p1s0!r:<10} FP1S0\n"
+            f"{self.sy_n3p2:<10.10g} FN3P2\n"
+            f"{self.sy_p1s0:<10.10g} FP1S0\n"
             "1.        FL1S0\n"
             "0.        SFQUARK\n"
-            f"{self.sx_p1s0!r:<10} SXP1S0\n"
-            f"{self.sx_n3p2!r:<10} SXN3P2\n")
+            f"{self.sx_p1s0:<10.10g} SXP1S0\n"
+            f"{self.sx_n3p2:<10.10g} SXN3P2\n")
 
 
 class CoolingCurve(NamedTuple):
@@ -147,7 +152,7 @@ _STAR_COLS = ("i", "rad", "emas", "rho", "pres", "nb", "kfe", "kfmu", "kfp",
 def parse_star_file(path: PathLike) -> dict:
     """Core-zone arrays (i = 0..icore) from the Star file NSCool writes with PSTAR=1.
 
-    Radii in cm, densities in g/cm^3 (rho) and fm^-3 (nb), Fermi momenta
+    Radii in m, densities in g/cm^3 (rho) and fm^-3 (nb), Fermi momenta
     in fm^-1, critical temperatures in K (1 K means unpaired).
     """
     rows = []
@@ -240,32 +245,45 @@ class NSCool:
         return self.home / "EOS" / "Crust" / "Crust_EOS_Cat_HZD-NV.dat"
 
     # ------------------------------------------------------------------
+    def _tov(self, d: Path, cmds: str, timeout: float):
+        """Run NSCool's TOV in ``d``; return (rhoc [fm^-3], M [Msun]) of each star."""
+        try:
+            r = subprocess.run([str(self.tov_exe)], cwd=d, input=cmds,
+                               capture_output=True, text=True, timeout=timeout)
+        except subprocess.TimeoutExpired as e:
+            raise NSCoolError(f"TOV timed out after {timeout} s") from e
+        rhoc = [float(x) for x in re.findall(r"rhoc:\s*([-+.\dEe]+)", r.stdout)]
+        mass = [float(x) for x in re.findall(r"masses\(g,b,p\):\s*([-+.\dEe]+)", r.stdout)]
+        if r.returncode != 0 or not mass or len(rhoc) != len(mass):
+            raise NSCoolError(f"TOV failed (rc={r.returncode}):\n{r.stdout[-2000:]}")
+        return rhoc, mass
+
     def make_profile(self, eos_table: PathLike, mass: float, out: PathLike,
                      rhoc_start: float = 0.3, timeout: float = 120.0) -> Path:
         """Build a stellar profile at gravitational mass ``mass`` with NSCool's TOV.
 
-        ``rhoc_start`` (fm^-3) seeds the target-mass search; it must lie on
-        the stable branch below the target.  Returns ``out``.
+        ``rhoc_start`` (fm^-3) seeds the target-mass search.  The star must be
+        on the stable branch: a second TOV solve at 1.002 rho_c must give a
+        larger mass, else ``NSCoolError``.  Returns ``out``.
         """
         out = Path(out)
         with tempfile.TemporaryDirectory(dir=self.workroot) as d:
             d = Path(d)
             (d / "Profile").mkdir()
             os.symlink(Path(eos_table).resolve(), d / "eos.dat")
-            cmds = ("cgs\neos='eos.dat'\ngeteos\n"
-                    f"rhoc={rhoc_start}\ngo\ntargetmass={mass}\ngo\n"
-                    "dump\ngo\nEOF\n")
-            try:
-                r = subprocess.run([str(self.tov_exe)], cwd=d, input=cmds,
-                                   capture_output=True, text=True, timeout=timeout)
-            except subprocess.TimeoutExpired as e:
-                raise NSCoolError(f"TOV timed out after {timeout} s") from e
+            head = "cgs\neos='eos.dat'\ngeteos\n"
+            rhoc, m = self._tov(d, head + f"rhoc={rhoc_start}\ngo\n"
+                                f"targetmass={mass}\ngo\ndump\ngo\nEOF\n", timeout)
             prof = d / "Profile" / "prof.dat"
-            masses = re.findall(r"masses\(g,b,p\):\s*([-+.\dEe]+)", r.stdout)
-            if r.returncode != 0 or not prof.is_file() or not masses:
-                raise NSCoolError(f"TOV failed (rc={r.returncode}):\n{r.stdout[-2000:]}")
-            if abs(float(masses[-1]) - mass) > 1e-4 * mass:
-                raise NSCoolError(f"TOV reached M={masses[-1]}, target {mass}")
+            if not prof.is_file():
+                raise NSCoolError("TOV wrote no profile")
+            if abs(m[-1] - mass) > 1e-4 * mass:
+                raise NSCoolError(f"TOV reached M={m[-1]}, target {mass}")
+            _, m2 = self._tov(d, head + f"rhoc={1.002 * rhoc[-1]:.6e}\ngo\nEOF\n",
+                              timeout)
+            if not m2[-1] > m[-1]:
+                raise NSCoolError(f"TOV star at rho_c={rhoc[-1]} fm^-3 is on the "
+                                  f"unstable branch (dM/drho_c <= 0)")
             shutil.copy(prof, out)
         return out
 
@@ -335,15 +353,23 @@ class NSCool:
                       "'Model_1/Temp.dat'", "'Model_1/Star.dat'", ""]
             (m1 / "Cool.in").write_text("\n".join(master))
             env = dict(os.environ, OMP_NUM_THREADS="1")
-            r = subprocess.run([str(self.exe)], cwd=d, input="Cool.in\n",
-                               capture_output=True, text=True, timeout=timeout,
-                               env=env)
-            (d / "stdout.txt").write_text(r.stdout + r.stderr)
+            try:
+                r = subprocess.run([str(self.exe)], cwd=d, input="Cool.in\n",
+                                   capture_output=True, text=True,
+                                   timeout=timeout, env=env)
+            except subprocess.TimeoutExpired as e:
+                raise NSCoolError(f"NSCool timed out after {timeout} s") from e
+            log = r.stdout + r.stderr    # gfortran writes PAUSE to stderr
+            (d / "stdout.txt").write_text(log)
             if keep is not None:
                 shutil.copytree(d, keep, symlinks=True, dirs_exist_ok=True)
-            if r.returncode != 0 or "Done" not in r.stdout or "PAUSE" in r.stdout.upper():
-                raise NSCoolError(f"NSCool failed (rc={r.returncode}):\n"
-                                  f"{(r.stdout + r.stderr)[-2000:]}")
+            if r.returncode != 0 or "Done" not in r.stdout or "PAUSE" in log.upper():
+                raise NSCoolError(f"NSCool failed (rc={r.returncode}):\n{log[-2000:]}")
+            m = re.search(r"nmbackend sx_p1s0 sx_n3p2 =\s*(\S+)\s+(\S+)", r.stdout)
+            if m is None or not np.allclose([float(m.group(1)), float(m.group(2))],
+                                            [gaps.sx_p1s0, gaps.sx_n3p2], rtol=1e-5):
+                raise NSCoolError("NSCool did not read the s_x values written "
+                                  f"({m.group(0) if m else 'no echo: unpatched build?'})")
             curve = parse_teff_file(m1 / "Teff.dat")
             if star:
                 curve = curve._replace(star=parse_star_file(m1 / "Star.dat"))

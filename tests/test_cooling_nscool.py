@@ -12,7 +12,8 @@ _TEFF = """ EOS
        2   1.000E+03        1.000E+06   2.000E+33   3.000E+30   0.000E+00
 """
 
-built = pytest.mark.skipif(not (default_home() / "Code" / "NSCool.out").is_file(),
+built = pytest.mark.skipif(not ((default_home() / "Code" / "NSCool.out").is_file()
+                                and (default_home() / "TOV" / "TOV").is_file()),
                            reason="NSCool not built (nmbackend/cooling/build_nscool.sh)")
 
 
@@ -25,6 +26,9 @@ def test_pairing_file_carries_scalings():
     assert (vals["FP1S0"], vals["SXP1S0"], vals["SFP1S0"]) == (0.7, 1.5, 3.0)
     with pytest.raises(ValueError):
         GapModel(sx_n3p2=0.0)
+    # numpy >= 2 reprs scalars as np.float64(...), which Fortran cannot read
+    g = GapModel(sx_p1s0=np.float64(0.8), p1s0=np.int64(7))
+    assert "np." not in g.pairing_file() and g.sx_p1s0 == 0.8
 
 
 def test_parse_teff_file(tmp_path):
@@ -83,9 +87,33 @@ def test_gap_scaling_follows_zhou_eq10(nscool):
 
 
 @built
+def test_numpy_scalar_sx_reaches_nscool(nscool):
+    b = nscool.run(mass=1.4, star=True, gaps=GapModel(p1s0=7.0)).star
+    s = nscool.run(mass=1.4, star=True,
+                   gaps=GapModel(p1s0=7.0, sx_p1s0=np.float64(0.8))).star
+    assert not np.array_equal(b["Tcp"], s["Tcp"])
+
+
+@built
+def test_sx_above_one_keeps_outer_core_paired(nscool):
+    """n/s_x below the crust-core boundary uses uniform-matter k_F, not the crust's 0."""
+    b = nscool.run(mass=1.4, star=True, gaps=GapModel(p1s0=7.0)).star
+    s = nscool.run(mass=1.4, star=True, gaps=GapModel(p1s0=7.0, sx_p1s0=2.0)).star
+    assert (b["Tcp"] > 1e8).all()
+    assert (s["Tcp"] > 1e8).all()
+
+
+@built
 def test_light_elements_raise_early_teff(nscool, reference):
     c = nscool.run(mass=1.4, eta=1e-7)
     assert c.at(1e3) > 1.05 * reference.at(1e3)
+
+
+@built
+def test_unstable_branch_raises(nscool, tmp_path):
+    with pytest.raises(NSCoolError, match="unstable"):
+        nscool.make_profile(nscool.default_eos, 2.1, tmp_path / "p.dat",
+                            rhoc_start=0.9)
 
 
 @built

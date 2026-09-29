@@ -32,11 +32,11 @@ The patch changes four files:
 
 | File | Change |
 |---|---|
-| `Code/pairing.inc.f`, `Code/NSCool_READ.inc.f` | optional trailing lines `SXP1S0`, `SXN3P2` in the pairing file (default 1) |
-| `Code/precool.f` (`get_Tc`) | p1S0 and n3P2 gaps are evaluated at the Fermi momentum the star has at baryon density n/s_x |
+| `Code/pairing.inc.f`, `Code/NSCool_READ.inc.f` | optional trailing lines `SXP1S0`, `SXN3P2` in the pairing file (default 1); NSCool prints the values it read, and the driver checks them |
+| `Code/precool.f` (`get_Tc`) | in core zones, p1S0 and n3P2 gaps are evaluated at the Fermi momentum the star has at baryon density n/s_x; outside the core density range k_F scales as n^(1/3) from the nearest core zone; crust zones are not rescaled |
 | `TOV/TOV.f` | drop the hard-coded `/Users/dany/...` EOS prefix; call `gread` as the function it is (gfortran rejects `CALL`) |
 
-With s_x = 1 the patched binary reproduces the unpatched one bit for bit.
+With s_x = 1 the patched binary reproduces the bundled Model_1 output exactly.
 
 ## Use
 
@@ -49,6 +49,7 @@ c.Ts, c.L_gamma                     # local surface values
 ```
 
 - `mass`: the driver builds the star with NSCool's TOV solver from `eos_table`.
+  It raises `NSCoolError` if the star is on the unstable branch.
   Or pass `profile=` for a ready profile.
 - `eos_table`, `crust_table`: default the bundled APR table and the HZD-NV crust.
 - `GapModel`: NSCool gap codes (`SFP1S0`, `SFN3P2`, `SFN1S0`; see `get_Tc` in
@@ -69,9 +70,11 @@ The TOV solver reads the same file.
 
 1. Seven header lines. Line 1 is `6 Imax Icore` (integers). The first number must
    be 6: `TOV.f` skips six lines, and NSCool skips `Itext` lines after line 1.
+   So line 7 must be blank: TOV reads it as data and fails on text.
 2. `Icore` core rows, densest first, 17 columns:
    `rho[g/cm3] P[dyn/cm2] nbar[fm^-3] Ye Ymu Yn Yp Yla Ysm Ys0 Ysp mstp mstn mstla mstsm msts0 mstsp`.
-   Y is the number per baryon. `mst*` is the Landau effective mass over the bare
+   `rho` is the total energy density over c^2 (TOV uses it as such), not the
+   rest-mass density. Y is the number per baryon. `mst*` is the Landau effective mass over the bare
    mass. NSCool uses these m* in the core (version `'NEW'`).
 3. Crust rows below, densest first: `rho P n A_cell A_ion Z`. TOV uses rho, P and n.
    The cooling code takes crust composition from the separate crust file.
@@ -83,7 +86,7 @@ Limits in the Fortran:
 | Icore <= 500 | `get_core_chemistry` arrays |
 | all rows <= 1000 | `TOV.f` `limit` |
 | path <= 60 characters | TOV `title`; the driver symlinks the table to `eos.dat` |
-| sum of baryon Y within 1e-2 of 1 and net charge below 1e-2, per row | else Fortran `PAUSE` |
+| sum of baryon Y within 1e-2 of 1, and net charge per baryon below 1e-2 | `get_core_chemistry`, on the interpolated core zones; else Fortran `PAUSE` |
 
 The core-crust boundary of the cooling grid is `rhocore` (default 1.6e14 g/cm3).
 It is a `run()` argument. The table does not set it.
@@ -108,5 +111,7 @@ TOV adds 0.01 s.
 - The T73 and CCDK proton gaps close below n = 0.6 fm^-3. For APR the dUrca core of a
   2.1 Msun star lies above that. So s_x <= 1, the range of Zhou+2026, cannot
   quench dUrca there. With CCDK, s_x = 2 can.
+- s_x < 1 moves the density where a gap closes down into the core. With CCDK at
+  1.4 Msun, s_x = 0.5 leaves 52 of 112 core zones unpaired.
 - NSCool Ioffe proton gaps (`SFP1S0` = 201-203) are called with the neutron k_F
   in `get_Tc`, and s_x does not act on them.
