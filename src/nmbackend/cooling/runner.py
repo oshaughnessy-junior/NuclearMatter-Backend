@@ -95,7 +95,7 @@ class CoolingCurve(NamedTuple):
     L_nu_inf: np.ndarray      # redshifted neutrino luminosity
     L_heat_inf: np.ndarray
     mass: float               # gravitational mass, Msun
-    radius_cm: float          # radius of NSCool's outer grid point
+    radius_cm: float          # NSCool grid edge at rhosurf, not the TOV surface
     star: Optional[dict] = None   # per-zone profile if run(star=True)
 
     @property
