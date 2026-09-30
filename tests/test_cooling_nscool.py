@@ -21,7 +21,7 @@ def test_pairing_file_carries_scalings():
     lines = GapModel(p1s0=3, sx_p1s0=1.5, sy_p1s0=0.7).pairing_file().splitlines()
     assert [l.split()[1] for l in lines[1:]] == [
         "SFN1S0", "SFN3P2", "SFP1S0", "SFL1S0", "FN1S0", "FN3P2", "FP1S0",
-        "FL1S0", "SFQUARK", "SXP1S0", "SXN3P2"]
+        "FL1S0", "SFQUARK", "SXP1S0", "SXN3P2", "CA3P2"]
     vals = {l.split()[1]: float(l.split()[0]) for l in lines[1:]}
     assert (vals["FP1S0"], vals["SXP1S0"], vals["SFP1S0"]) == (0.7, 1.5, 3.0)
     with pytest.raises(ValueError):
@@ -48,6 +48,10 @@ def nscool():
     return NSCool()
 
 
+#: the 2010 release's n3P2 pair-breaking rate, used for its bundled output
+RELEASE = GapModel(ca_n3p2=2.0)
+
+
 @pytest.fixture(scope="module")
 def reference(nscool):
     """NSCool's bundled output for Model_1 (APR, 1.4 Msun, SFB / gap a / T73)."""
@@ -56,7 +60,8 @@ def reference(nscool):
 
 @built
 def test_reproduces_bundled_model1(nscool, reference):
-    c = nscool.run(profile=nscool.home / "TOV/Profile/Prof_APR_Cat_1.4.dat")
+    c = nscool.run(profile=nscool.home / "TOV/Profile/Prof_APR_Cat_1.4.dat",
+                   gaps=RELEASE)
     assert len(c.t_yr) == len(reference.t_yr)
     for k in ("t_yr", "Teff_inf", "L_gamma_inf", "L_nu_inf"):
         np.testing.assert_allclose(getattr(c, k), getattr(reference, k), rtol=1e-3)
@@ -64,7 +69,7 @@ def test_reproduces_bundled_model1(nscool, reference):
 
 @built
 def test_tov_route_matches_bundled_profile(nscool, reference):
-    c = nscool.run(mass=1.4)
+    c = nscool.run(mass=1.4, gaps=RELEASE)
     ages = np.logspace(0, 6, 13)
     np.testing.assert_allclose(c.at(ages), reference.at(ages), rtol=1e-3)
 
@@ -104,9 +109,9 @@ def test_sx_above_one_keeps_outer_core_paired(nscool):
 
 
 @built
-def test_light_elements_raise_early_teff(nscool, reference):
-    c = nscool.run(mass=1.4, eta=1e-7)
-    assert c.at(1e3) > 1.05 * reference.at(1e3)
+def test_light_elements_raise_early_teff(nscool):
+    c, c0 = nscool.run(mass=1.4, eta=1e-7), nscool.run(mass=1.4)
+    assert c.at(1e3) > 1.05 * c0.at(1e3)
 
 
 @built

@@ -28,15 +28,19 @@ Set `NSCOOL_TARBALL` to build from a local tarball. The CIT build of 2026-09-29
 used gfortran 8.5.0 with `-O3 -fno-automatic -std=legacy -w` on ldas-pcdev13.
 It took 10 s. `NSCool/BUILD_INFO.txt` records each build.
 
-The patch changes four files:
+The patch changes five files:
 
 | File | Change |
 |---|---|
-| `Code/pairing.inc.f`, `Code/NSCool_READ.inc.f` | optional trailing lines `SXP1S0`, `SXN3P2` in the pairing file (default 1); NSCool prints the values it read, and the driver checks them |
+| `Code/pairing.inc.f`, `Code/NSCool_READ.inc.f` | optional trailing lines `SXP1S0`, `SXN3P2` (default 1) and `CA3P2` (default 0.5) in the pairing file; NSCool prints the values it read, and the driver checks them |
+| `Code/neutrino_core.f` (`nu_n3p2_B_pbf`) | n3P2 pair-breaking axial coefficient a_A = c_A g_A^2 with c_A = `CA3P2`. The release has c_A = 2. We use 0.5, Leinson's correction for the anomalous axial contribution, as in A. W. Steiner's fork (github awsteiner/nscool). This cuts n3P2 pair-breaking emission by 4. |
 | `Code/precool.f` (`get_Tc`) | in core zones, p1S0 and n3P2 gaps are evaluated at the Fermi momentum the star has at baryon density n/s_x; outside the core density range k_F scales as n^(1/3) from the nearest core zone; crust zones are not rescaled |
 | `TOV/TOV.f` | drop the hard-coded `/Users/dany/...` EOS prefix; call `gread` as the function it is (gfortran rejects `CALL`) |
 
-With s_x = 1 the patched binary reproduces the bundled Model_1 output to the printed digits.
+With s_x = 1 and `GapModel(ca_n3p2=2.0)` the patched binary reproduces the
+bundled Model_1 output to the printed digits. Default runs differ from it,
+because the default c_A is 0.5. A build without `CA3P2` fails the driver's
+echo check; rerun `build_nscool.sh`.
 
 ## Use
 
