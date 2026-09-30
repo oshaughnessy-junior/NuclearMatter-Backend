@@ -164,6 +164,34 @@ def _vector_fields(n_B, n3, p, n_iter=40):
     return jax.lax.fori_loop(0, n_iter, body, (W, R))
 
 
+def landau_masses(params, n, x_p):
+    """(m*_n/M, m*_p/M): Landau masses at the Fermi surface.
+
+    The single-particle energy is sqrt(k^2 + m_D^2) + W + t3 R, so the Landau
+    mass k_F / (d e/dk) is E*_F = sqrt(k_F^2 + m_D^2), with Dirac mass
+    m_D = M - Phi (the ``mstar_frac`` of :func:`couplings_from_saturation`)."""
+    p = dict(DEFAULT_PARAMS)
+    p.update(params or {})
+    M = p["M_mev"] / HBARC
+    n = jnp.asarray(n, float)
+    x_p = jnp.asarray(x_p, float)
+    n_n, n_p = (1.0 - x_p) * n, x_p * n
+    kfn, kfp = _kf(n_n), _kf(n_p)
+
+    def resid(Phi):                   # scalar gap equation (see _solve_phi)
+        ms = M - Phi
+        return (Phi / p["C_sigma"] + p["b"] * M * Phi**2 + p["c"] * Phi**3
+                - _rho_s_one(kfn, ms) - _rho_s_one(kfp, ms))
+
+    # _solve_phi bisects, which carries no gradient; one Newton step from a
+    # stop-gradient root gives the implicit derivative of m_D
+    Phi0 = jax.lax.stop_gradient(_solve_phi(n_n, n_p, p))
+    Phi = Phi0 - resid(Phi0) / jax.grad(lambda x: jnp.sum(resid(x)))(Phi0)
+    m_D = M - Phi
+    ef = lambda kf: jnp.sqrt(kf**2 + m_D**2) / M
+    return ef(kfn), ef(kfp)
+
+
 def _solve_xp(n_B, p, n_iter=70):
     """beta-equilibrium proton fraction with electrons AND muons.
 
@@ -391,6 +419,10 @@ class RMFTEOS(EOSModel):
         x_p = _solve_xp(n, p)
         _, n_e, n_mu, _ = _leptons(x_p * n)
         return Composition(n=n, x_p=x_p, x_e=n_e / n, x_mu=n_mu / n)
+
+    def landau_masses(self, params, comp):
+        """(m*_n/M, m*_p/M) on ``comp`` (see :func:`landau_masses`)."""
+        return landau_masses(params, comp.n, comp.x_p)
 
     def eos_table(self, params: dict = None):
         p = dict(DEFAULT_PARAMS)

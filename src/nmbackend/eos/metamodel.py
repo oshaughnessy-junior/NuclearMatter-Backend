@@ -26,6 +26,20 @@ density ``n_match`` (default 2 n_sat) we append a **constant-sound-speed (CSS)**
 causal segment with dp/deps = cs2_tail.  ``cs2_tail`` thus becomes a physical
 stiffness parameter controlling the maximum mass -- a natural inference knob.
 
+Effective masses (:func:`landau_masses`, used only for the cooling composition).
+The Taylor energy has no kinetic/potential split, so the metamodel carries no
+effective mass of its own.  We take the form of Margueron, Hoffmann Casali &
+Gulminelli (2018), Eqs. 15-16:
+
+    m / m*_q = 1 + (kappa_sat + tau_q kappa_sym delta) n / n_sat,   tau_n = +1
+
+with kappa_sat = m/m*_sat - 1 and kappa_sym fixed by the neutron-proton
+splitting m*_n/m - m*_p/m = dmstar_sat in neutron matter at n_sat.  Defaults
+are their central values (Sec. II A), m*_sat/m = 0.75 and Delta m*_sat/m = 0.10
+(``MSTAR_DEFAULTS``; override through ``params``).  The same form is used
+above n_match, like the Taylor x_p there.  The EOS itself does not depend on
+these two parameters.
+
 This is the empirical-parameter ("physical") nuclear-matter model emphasized in the
 project notes.  Below n_t the table uses the SLy crust (``eos.crust``); the
 legacy polytrope surface continuation is ``crust="polytrope"``.
@@ -56,6 +70,9 @@ DEFAULT_PARAMS = dict(
     cs2_tail=0.4,        # constant sound speed^2 of the causal high-density segment
     n_match_fac=2.0,     # matching density in units of n_sat
 )
+
+#: Effective-mass prescription (Margueron+2018 central values); composition only.
+MSTAR_DEFAULTS = dict(mstar_sat=0.75, dmstar_sat=0.10)
 
 _PI = math.pi
 
@@ -136,6 +153,21 @@ def _solve_xp(n, p, n_iter=70, muons=False, S=None):
     gx = g(x0)
     dg = jax.grad(lambda xp: jnp.sum(g(xp)))(x0)
     return x0 - gx / dg
+
+
+def landau_masses(params, n, x_p):
+    """(m*_n/m, m*_p/m) of the Margueron+2018 prescription (module docstring)."""
+    p = dict(DEFAULT_PARAMS, **MSTAR_DEFAULTS)
+    p.update(params or {})
+    n = jnp.asarray(n, float)
+    delta = 1.0 - 2.0 * jnp.asarray(x_p, float)
+    a = 1.0 / p["mstar_sat"]                     # 1 + kappa_sat
+    d = p["dmstar_sat"]
+    # 1/(a + k) - 1/(a - k) = d, the root with |k| < a
+    k_sym = -d * a**2 / (1.0 + jnp.sqrt(1.0 + (d * a) ** 2))
+    u = n / p["n_sat"]
+    inv = lambda tau: 1.0 + (a - 1.0 + tau * k_sym * delta) * u
+    return 1.0 / inv(1.0), 1.0 / inv(-1.0)
 
 
 class MetaModelEOS(EOSModel):
@@ -241,6 +273,10 @@ class MetaModelEOS(EOSModel):
         else:
             x_e, x_mu = x_p, jnp.zeros_like(x_p)
         return Composition(n=n, x_p=x_p, x_e=x_e, x_mu=x_mu)
+
+    def landau_masses(self, params, comp):
+        """(m*_n/m, m*_p/m) on ``comp`` (see :func:`landau_masses`)."""
+        return landau_masses(params, comp.n, comp.x_p)
 
     def eos_table(self, params: dict = None):
         p = dict(DEFAULT_PARAMS)

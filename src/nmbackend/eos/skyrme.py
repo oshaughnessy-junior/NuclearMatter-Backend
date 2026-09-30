@@ -263,6 +263,21 @@ def skyrme_from_saturation(n0=0.160, BA=-15.97, K=230.0, ms_frac=0.70,
     return out
 
 
+def landau_masses(params, n, x_p):
+    """(m*_n/m, m*_p/m) in matter of density n and proton fraction x_p.
+
+    The Skyrme single-particle energy is quadratic in k, so the Landau mass
+    at the Fermi surface is h2m / m*_q = h2m + c1(n) n + c2(n) n_q.  In units
+    of the h2m mass (one mass for n and p)."""
+    p = dict(DEFAULT_PARAMS)
+    p.update(params or {})
+    n = jnp.asarray(n, float)
+    x_p = jnp.asarray(x_p, float)
+    c1, c2 = _c12(n, p)
+    em = lambda nq: p["h2m"] / (p["h2m"] + c1 * n + c2 * nq)
+    return em((1.0 - x_p) * n), em(x_p * n)
+
+
 def diagnostics(params, n):
     """Per-density checks on beta-equilibrium matter: minimum of
     h2m/m*_q (MeV fm^2; must be > 0) over q = n, p."""
@@ -312,6 +327,10 @@ class SkyrmeEOS(EOSModel):
         x_p = _solve_xp(n, p)
         _, n_e, n_mu, _ = lepton_sector(x_p * n, muons=True)
         return Composition(n=n, x_p=x_p, x_e=n_e / n, x_mu=n_mu / n)
+
+    def landau_masses(self, params, comp):
+        """(m*_n/m, m*_p/m) on ``comp`` (see :func:`landau_masses`)."""
+        return landau_masses(self._p(params), comp.n, comp.x_p)
 
     def eos_table(self, params: dict = None):
         p = self._p(params)
