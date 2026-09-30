@@ -140,7 +140,8 @@ TOV adds 0.01 s.
   is not converged at late times. The error in log10 T_eff^inf is about
   0.25 (DT0 - 1) at 1 Myr for a GM1 1.6 Msun star, and larger in the
   photon-cooling drop. For reference curves, copy the tree and lower DT0
-  and TVAR together.
+  and TVAR together. Some stars with pairing then stall (for example APR
+  1.1 Msun at DT0 = 1.02 ran for over 25 min); give `run()` a timeout.
 - The T73 and CCDK proton gaps close below n = 0.6 fm^-3. For APR the dUrca core of a
   2.1 Msun star lies above that. So s_x <= 1, the range of Zhou+2026, cannot
   quench dUrca there. With CCDK, s_x = 2 can.
