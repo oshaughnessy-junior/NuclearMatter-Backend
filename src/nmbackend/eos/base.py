@@ -295,24 +295,32 @@ class _ByConfig:
         return isinstance(other, _ByConfig) and self.key == other.key
 
 
-@functools.partial(jax.jit, static_argnums=0)
-def _table_jit(handle, p):
-    return handle.model._table_flags(p)
+@functools.partial(jax.jit, static_argnums=(0, 1))
+def _method_jit(handle, name, *args):
+    return getattr(handle.model, name)(*args)
+
+
+def _floats(a):
+    """Numeric params as float arrays (one trace for int, float and array
+    inputs); str and None entries (labels) are dropped, as no model reads
+    them.  Non-dict arguments pass through."""
+    if not isinstance(a, dict):
+        return a
+    return {k: jnp.asarray(v, float) for k, v in a.items()
+            if not (v is None or isinstance(v, (str, bytes)))}
+
+
+def compiled_method(model, name, *args):
+    """``getattr(model, name)(*args)`` compiled once per model type,
+    ``_config()``, method and argument structure (dict arguments become float
+    arrays).  Eager fori_loop bisections recompile on every call (the loop
+    body is a new closure each time), and each executable holds ~100 memory
+    maps."""
+    return _method_jit(_ByConfig(model), name, *(_floats(a) for a in args))
 
 
 def compiled_table(model, p):
-    """``model._table_flags(p)`` compiled once per model type, ``_config()`` and
-    parameter keys, then the eager rejection of :func:`eos.crust.raise_rejected`.
-
-    Eager fori_loop bisections recompile on every call (the loop body is a new
-    closure each time), and each executable holds ~100 memory maps."""
+    """``model._table_flags(p)`` through :func:`compiled_method`, then the eager
+    rejection of :func:`eos.crust.raise_rejected`."""
     from .crust import raise_rejected
-    return raise_rejected(*_table_jit(_ByConfig(model), _floats(p)))
-
-
-def _floats(p):
-    """Numeric params as float arrays (one trace for int, float and array
-    inputs); str and None entries (labels) are dropped, as no model reads them."""
-    return {k: jnp.asarray(v, float) for k, v in p.items()
-            if not (v is None or isinstance(v, (str, bytes)))}
-
+    return raise_rejected(*compiled_method(model, "_table_flags", p))

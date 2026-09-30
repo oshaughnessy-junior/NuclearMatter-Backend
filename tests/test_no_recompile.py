@@ -3,7 +3,8 @@
 Each cached XLA executable holds ~100 memory maps, so per-draw compiles end in
 an abort at vm.max_map_count (see test_tov.py::test_repeat_solve_does_not_recompile).
 Each test warms up on one draw, then requires zero backend compiles on a second
-draw with different parameters and a fresh model instance.
+draw with different parameters and a fresh model instance.  Check each case
+alone (-k) in a fresh process: earlier tests can compile the same shapes.
 """
 import jax
 import jax.monitoring
@@ -11,7 +12,8 @@ import numpy as np
 import pytest
 
 from nmbackend.eos import MetaModelEOS, SkyrmeEOS, RMFTEOS, DDRMFEOS, HybridEOS
-from nmbackend.eos.skyrme import skyrme_from_saturation
+from nmbackend.eos.coolcomp import cooling_composition
+from nmbackend.eos.skyrme import skyrme_from_saturation, diagnostics
 from nmbackend.eos.rmft import couplings_from_saturation
 from nmbackend.eos.ddrmf import couplings_from_saturation_dd
 from nmbackend.priors import draw_bridge_eos
@@ -31,7 +33,7 @@ def _compiles(f):
     return len(_COMPILES) - n0
 
 
-@pytest.mark.parametrize("model, draws", [
+_MODELS = pytest.mark.parametrize("model, draws", [
     (MetaModelEOS, [{"L_sym": 60.0}, {"L_sym": 50.0, "K_sat": 240.0}]),
     (SkyrmeEOS, [skyrme_from_saturation(L=46.0),
                  skyrme_from_saturation(L=55.0, K=240.0)]),
@@ -40,11 +42,28 @@ def _compiles(f):
     (DDRMFEOS, [couplings_from_saturation_dd(L=55.0),
                 couplings_from_saturation_dd(L=50.0, K=250.0)]),
 ], ids=["metamodel", "skyrme", "rmft", "ddrmf"])
+
+
+@_MODELS
 def test_eos_table_compiles_once(model, draws):
     _compiles(lambda: model().eos_table(draws[0]))
     out = []
     assert _compiles(lambda: out.append(model().eos_table(draws[1]))) == 0
     assert np.all(np.isfinite(np.asarray(out[0].p)))
+
+
+@_MODELS
+def test_cooling_composition_compiles_once(model, draws):
+    _compiles(lambda: cooling_composition(model(), draws[0]))
+    out = []
+    assert _compiles(lambda: out.append(cooling_composition(model(), draws[1]))) == 0
+    assert np.all(np.isfinite(np.asarray(out[0].mst_n)))
+
+
+def test_skyrme_diagnostics_compiles_once():
+    n = np.linspace(0.1, 1.0, 50)
+    _compiles(lambda: diagnostics(skyrme_from_saturation(L=46.0), n))
+    assert _compiles(lambda: diagnostics(skyrme_from_saturation(L=55.0), n)) == 0
 
 
 @pytest.mark.skipif(not _HAVE_DIFFRAX, reason="diffrax required")

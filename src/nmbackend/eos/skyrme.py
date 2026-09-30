@@ -43,7 +43,8 @@ import jax.numpy as jnp
 import numpy as np
 
 from ..constants import HBARC, M_N, M_P
-from .base import EOSModel, Composition, compiled_table
+from .base import (EOSModel, Composition, compiled_method, compiled_table,
+                   _floats)
 from .leptons import lepton_sector
 from .crust import (N_T_DEFAULT, check_crust, core_grid, finish_table_flags,
                     monotone_core)
@@ -145,6 +146,9 @@ def _solve_xp(n_B, p, n_iter=60):
     x0 = jax.lax.stop_gradient(0.5 * (lo + hi))
     dg = jax.grad(lambda x: jnp.sum(g(x)))(x0)
     return x0 - g(x0) / dg
+
+
+_solve_xp_jit = jax.jit(_solve_xp, static_argnames="n_iter")
 
 
 def _eps_p(n_B, x_p, p):
@@ -284,7 +288,7 @@ def diagnostics(params, n):
     p = dict(DEFAULT_PARAMS)
     p.update(params)
     n = np.asarray(n, float)
-    x = np.asarray(_solve_xp(jnp.asarray(n), p))
+    x = np.asarray(_solve_xp_jit(jnp.asarray(n), _floats(p)))
     c1, c2 = _c12(n, p)
     em = lambda nq: p["h2m"] + c1 * n + c2 * nq
     return np.minimum(em((1 - x) * n), em(x * n))
@@ -323,6 +327,9 @@ class SkyrmeEOS(EOSModel):
     def composition(self, params: dict = None) -> Composition:
         """beta-equilibrium (x_p, x_e, x_mu) on ``self.n_grid``."""
         p = self._p(params)
+        return compiled_method(self, "_composition", p)
+
+    def _composition(self, p):
         n = self.n_grid
         x_p = _solve_xp(n, p)
         _, n_e, n_mu, _ = lepton_sector(x_p * n, muons=True)
