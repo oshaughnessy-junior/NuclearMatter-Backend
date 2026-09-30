@@ -11,10 +11,13 @@ Motivated by ``jester`` (MIT) and RIFT ``EOSManager``; see ATTRIBUTION.md.
 """
 from __future__ import annotations
 
+import functools
 import math
+import warnings
 from typing import NamedTuple
 import jax
 import jax.numpy as jnp
+import numpy as np
 
 from ..constants import MEVFM3_TO_GEOM
 
@@ -84,7 +87,7 @@ class Composition(NamedTuple):
     x_mu: jnp.ndarray
 
 
-def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query):
+def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query, xp=jnp):
     """Thermodynamically consistent EOS evaluation at pseudo-enthalpy ``h_query``.
 
     The *structure* sector uses a cubic-Hermite interpolation of p(h) whose node
@@ -105,10 +108,11 @@ def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query):
     parameter, which is the natural variable for realistic tabulated EOS.  Fully
     JAX-differentiable; the integer interval index is piecewise-constant (standard
     for interpolation) while gradients flow through the gathered node values.
+    ``xp=numpy`` evaluates in NumPy (no JAX compile for new array shapes).
     """
-    h_nodes = jnp.asarray(h_nodes)
+    h_nodes = xp.asarray(h_nodes)
     N = h_nodes.shape[0]
-    i = jnp.clip(jnp.searchsorted(h_nodes, h_query), 1, N - 1)
+    i = xp.clip(xp.searchsorted(h_nodes, h_query), 1, N - 1)
     h0, h1 = h_nodes[i - 1], h_nodes[i]
     p0, p1 = p_nodes[i - 1], p_nodes[i]
     e0, e1 = eps_nodes[i - 1], eps_nodes[i]
@@ -126,17 +130,17 @@ def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query):
     dpdh = (dH00*p0 + dH01*p1) / dh + dH10*s0 + dH11*s1
     eps = dpdh - p                                  # derived: dp/dh = eps + p
 
-    cs2 = jnp.clip(jnp.interp(h_query, h_nodes, cs2_nodes), 1e-10, 1.0)
+    cs2 = xp.clip(xp.interp(h_query, h_nodes, cs2_nodes), 1e-10, 1.0)
     # Floor with where, not maximum/clip: under jaxlib <= 0.9 the batched JVP of
     # these two maxima inside the TOV loop is miscompiled, so jax.jacfwd (not
     # jax.jvp) of M, R, Lambda came out wrong by 1-20%.  Pinned by
     # tests/test_ad_gradients.py::test_jacfwd_matches_jvp_with_tidal.
-    eps = jnp.where(eps > 1e-300, eps, 1e-300)
-    p = jnp.where(p > 1e-300, p, 1e-300)
+    eps = xp.where(eps > 1e-300, eps, 1e-300)
+    p = xp.where(p > 1e-300, p, 1e-300)
     return eps, p, cs2
 
 
-def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None):
+def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None, xp=jnp):
     """Given (n, eps, p) build the geometric ``EOSTable`` with h and cs2.
 
     Parameters in MeV/fm^3 (eps, p) and fm^-3 (n).  Pseudo-enthalpy is computed
@@ -146,24 +150,28 @@ def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None):
     ``h_base`` : if given, the pseudo-enthalpy at the lowest grid point is set to
     this value instead of the small self-consistent offset.  Used to continue the
     enthalpy of an inner (e.g. quark) segment above a phase-transition enthalpy.
+
+    ``xp=numpy`` returns NumPy arrays, for inputs whose length varies from call
+    to call (every new length would compile each JAX op); see
+    :func:`refine_table`.
     """
     # force jnp so every EOSTable is uniform (numpy inputs -- hybrid combined table,
     # ingested CompOSE/CMF tables -- otherwise break the jit-traced Hermite at_h)
-    n = jnp.asarray(n)
-    eps_mevfm3 = jnp.asarray(eps_mevfm3)
-    p_mevfm3 = jnp.asarray(p_mevfm3)
+    n = xp.asarray(n)
+    eps_mevfm3 = xp.asarray(eps_mevfm3)
+    p_mevfm3 = xp.asarray(p_mevfm3)
     eps = eps_mevfm3 * MEVFM3_TO_GEOM            # km^-2
     p = p_mevfm3 * MEVFM3_TO_GEOM                # km^-2
 
     # sound speed squared dp/deps via central-ish differences (log grid safe)
-    cs2 = jnp.gradient(p) / jnp.gradient(eps)
-    cs2 = jnp.clip(cs2, 1e-8, 1.0)
+    cs2 = xp.gradient(p) / xp.gradient(eps)
+    cs2 = xp.clip(cs2, 1e-8, 1.0)
 
     # pseudo-enthalpy: dh = dp/(eps+p).  Integrate from the lowest grid point.
     integrand = 1.0 / (eps + p)
-    dp = jnp.diff(p)
+    dp = xp.diff(p)
     seg = 0.5 * (integrand[1:] + integrand[:-1]) * dp
-    h_rel = jnp.concatenate([jnp.zeros((1,)), jnp.cumsum(seg)])
+    h_rel = xp.concatenate([xp.zeros((1,)), xp.cumsum(seg)])
     h0 = (p[0] / (eps[0] + p[0])) if h_base is None else h_base
     h = h_rel + h0
 
@@ -171,6 +179,41 @@ def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None):
         n=n, eps=eps, p=p, h=h, cs2=cs2,
         eps_mevfm3=eps_mevfm3, p_mevfm3=p_mevfm3,
     )
+
+
+def refine_table(table, n_out):
+    """``table`` with nodes added up to ``n_out`` in total, so that tables whose
+    node count varies from draw to draw have one length (and the TOV family
+    compiles once, not once per length).  All original nodes are kept; each
+    added node splits the interval of largest remaining h-width and takes
+    (eps, p) from the table's own Hermite p(h) and cs2 from its linear
+    interpolant, so :meth:`EOSTable.at_h` is unchanged up to roundoff.  n is
+    log-linear in h.  Works in NumPy (pass a table from
+    ``build_h_and_cs2(..., xp=numpy)`` to avoid JAX ops on the variable
+    length) and returns JAX arrays; a table with ``n_out`` or more nodes only
+    changes array type (with a RuntimeWarning if more)."""
+    t = EOSTable(*(np.asarray(a) for a in table))
+    m = n_out - t.h.size
+    if m < 0:
+        warnings.warn(f"refine_table: {t.h.size} nodes > n_out={n_out}; the "
+                      "table keeps its own length (one compile per length)",
+                      RuntimeWarning, stacklevel=2)
+    if m > 0:
+        dh = np.diff(t.h)
+        c = np.zeros(dh.size, int)               # added nodes per interval
+        for _ in range(m):
+            c[np.argmax(dh / (c + 1))] += 1
+        h_new = np.concatenate([t.h[i] + dh[i] * np.arange(1, c[i] + 1) / (c[i] + 1)
+                                for i in np.flatnonzero(c)])
+        order = np.argsort(np.concatenate([t.h, h_new]), kind="stable")
+        eps_a, p_a, cs2_a = hermite_eos_at_h(t.h, t.p, t.eps, t.cs2, h_new, xp=np)
+        n_a = np.exp(np.interp(h_new, t.h, np.log(t.n)))
+        cat = lambda a, b: np.concatenate([a, b])[order]
+        eps, p = cat(t.eps, eps_a), cat(t.p, p_a)
+        t = EOSTable(n=cat(t.n, n_a), eps=eps, p=p, h=cat(t.h, h_new),
+                     cs2=cat(t.cs2, cs2_a), eps_mevfm3=eps / MEVFM3_TO_GEOM,
+                     p_mevfm3=p / MEVFM3_TO_GEOM)
+    return EOSTable(*(jnp.asarray(a) for a in t))
 
 
 def extend_to_surface(n, eps_mevfm3, p_mevfm3, n_surface=1e-7, gamma_crust=1.3,
@@ -222,3 +265,54 @@ class EOSModel:
 
     def __call__(self, params: dict) -> EOSTable:
         return self.eos_table(params)
+
+    def _config(self):
+        """Hashable snapshot of the instance attributes (arrays as tuples); the
+        key of the table cached by :func:`compiled_table`."""
+        def key(v):
+            if hasattr(v, "shape"):
+                return tuple(np.asarray(v).ravel().tolist())
+            try:
+                hash(v)
+                return v
+            except TypeError:
+                return (type(v).__name__, repr(v))
+        return tuple(sorted((k, key(v)) for k, v in vars(self).items()))
+
+
+class _ByConfig:
+    """Static jit argument standing for a model: equal for models of one type
+    and ``_config()``, so all such instances share one compiled table."""
+    __slots__ = ("model", "key")
+
+    def __init__(self, model):
+        self.model, self.key = model, (type(model), model._config())
+
+    def __hash__(self):
+        return hash(self.key)
+
+    def __eq__(self, other):
+        return isinstance(other, _ByConfig) and self.key == other.key
+
+
+@functools.partial(jax.jit, static_argnums=0)
+def _table_jit(handle, p):
+    return handle.model._table_flags(p)
+
+
+def compiled_table(model, p):
+    """``model._table_flags(p)`` compiled once per model type, ``_config()`` and
+    parameter keys, then the eager rejection of :func:`eos.crust.raise_rejected`.
+
+    Eager fori_loop bisections recompile on every call (the loop body is a new
+    closure each time), and each executable holds ~100 memory maps."""
+    from .crust import raise_rejected
+    return raise_rejected(*_table_jit(_ByConfig(model), _floats(p)))
+
+
+def _floats(p):
+    """Numeric params as float arrays (one trace for int, float and array
+    inputs); str and None entries (labels) are dropped, as no model reads them."""
+    return {k: jnp.asarray(v, float) for k, v in p.items()
+            if not (v is None or isinstance(v, (str, bytes)))}
+

@@ -198,7 +198,9 @@ def _build_rows(tables, n_points, n_jobs=None, progress=False, desc="TOV sequenc
         import multiprocessing as mp
         ctx = mp.get_context("spawn")          # jax-safe (no fork-after-init)
         payload = [(tuple(np.asarray(x) for x in t), n_points) for t in tables]
-        with ctx.Pool(min(n_jobs, len(tables))) as pool:
+        # each table length compiles once per worker (~120 memory maps per
+        # executable); recycle workers before vm.max_map_count (65530)
+        with ctx.Pool(min(n_jobs, len(tables)), maxtasksperchild=200) as pool:
             for k, row in enumerate(pool.imap(_one_eos_worker, payload)):
                 rows[k] = row
                 if bar:

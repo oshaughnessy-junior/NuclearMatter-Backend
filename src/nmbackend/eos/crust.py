@@ -281,20 +281,37 @@ def finish_table(n, eps, p, crust, n_t, n_surface, gamma_crust,
     ``ln_nu`` is the unstable-interval onset from :func:`monotone_core`.  Unless
     ``allow_unstable``, the table is rejected (InvalidCoreError when eager, NaN
     under jit) if :func:`unstable_below_mmax`."""
+    return raise_rejected(*finish_table_flags(
+        n, eps, p, crust, n_t, n_surface, gamma_crust, ln_nu, allow_unstable))
+
+
+def finish_table_flags(n, eps, p, crust, n_t, n_surface, gamma_crust,
+                       ln_nu=math.inf, allow_unstable=False):
+    """:func:`finish_table` without the raise, for use inside jit: returns
+    (table, bad_join, bad_unstable), with a NaN table if either flag is set.
+    :func:`raise_rejected` then raises when the flags are concrete."""
     from .base import EOSTable, build_h_and_cs2, extend_to_surface
+    bad_join = jnp.asarray(False)
     if n_surface is not None:
         if crust == "sly":
             n, eps, p = attach_crust(n, eps, p, n_t=n_t)
-            _raise_if(~jnp.all(jnp.isfinite(p)), InvalidCoreError,
-                      "core invalid above the crust (p at the floor or not "
-                      "increasing near n_j)")
+            bad_join = ~jnp.all(jnp.isfinite(p))
         else:
             n, eps, p = extend_to_surface(n, eps, p, n_surface=n_surface,
                                           gamma_crust=gamma_crust)
     table = build_h_and_cs2(n, eps, p)
     if allow_unstable:
-        return table
+        return table, bad_join, jnp.asarray(False)
     bad = unstable_below_mmax(table, ln_nu)
-    _raise_if(bad, UnstableCoreError, "core mechanically unstable (dp/dn <= 0) "
-                                      "below the maximum-mass central density")
-    return EOSTable(*(jnp.where(bad, jnp.nan, a) for a in table))
+    return EOSTable(*(jnp.where(bad, jnp.nan, a) for a in table)), bad_join, bad
+
+
+def raise_rejected(table, bad_join, bad_unstable):
+    """Raise InvalidCoreError / UnstableCoreError for concrete flags from
+    :func:`finish_table_flags`; under a trace, return the (NaN) table."""
+    _raise_if(bad_join, InvalidCoreError, "core invalid above the crust (p at "
+                                          "the floor or not increasing near n_j)")
+    _raise_if(bad_unstable, UnstableCoreError, "core mechanically unstable "
+                                               "(dp/dn <= 0) below the "
+                                               "maximum-mass central density")
+    return table

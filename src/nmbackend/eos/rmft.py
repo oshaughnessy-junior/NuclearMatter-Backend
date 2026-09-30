@@ -50,9 +50,9 @@ import jax
 import jax.numpy as jnp
 
 from ..constants import HBARC
-from .base import EOSModel, Composition
+from .base import EOSModel, Composition, compiled_table
 from .leptons import lepton_sector
-from .crust import (N_T_DEFAULT, check_crust, core_grid, finish_table,
+from .crust import (N_T_DEFAULT, check_crust, core_grid, finish_table_flags,
                     monotone_core)
 
 jax.config.update("jax_enable_x64", True)
@@ -428,12 +428,15 @@ class RMFTEOS(EOSModel):
         p = dict(DEFAULT_PARAMS)
         if params:
             p.update(params)
+        return compiled_table(self, p)
+
+    def _table_flags(self, p):
         n = self._table_grid()
         x_p = _solve_xp(n, p)                              # beta-equilibrium
         Phi = _solve_phi((1.0 - x_p) * n, x_p * n, p)      # robust first-root, vec
         eps, pres, _ = jax.vmap(lambda ni, xi, Ph: _eps_p_from_state(ni, xi, Ph, p))(
             n, x_p, Phi)
         pres, ln_nu = monotone_core(n, pres, self.n_t)
-        return finish_table(n, eps, pres, self.crust, self.n_t,
-                            self.n_surface, self.gamma_crust, ln_nu,
-                            self.allow_unstable_core)
+        return finish_table_flags(n, eps, pres, self.crust, self.n_t,
+                                  self.n_surface, self.gamma_crust, ln_nu,
+                                  self.allow_unstable_core)

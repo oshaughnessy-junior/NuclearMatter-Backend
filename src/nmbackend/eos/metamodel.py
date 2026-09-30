@@ -55,9 +55,9 @@ import jax
 import jax.numpy as jnp
 
 from ..constants import HBARC, M_N, M_P, M_E, N_SAT_DEFAULT
-from .base import EOSModel, Composition
+from .base import EOSModel, Composition, compiled_table
 from .leptons import lepton_sector
-from .crust import (N_T_DEFAULT, check_crust, finish_table, join_density,
+from .crust import (N_T_DEFAULT, check_crust, finish_table_flags, join_density,
                     monotone_core)
 
 jax.config.update("jax_enable_x64", True)
@@ -282,7 +282,9 @@ class MetaModelEOS(EOSModel):
         p = dict(DEFAULT_PARAMS)
         if params:
             p.update(params)
+        return compiled_table(self, p)
 
+    def _table_flags(self, p):
         sly = self.crust == "sly" and self.n_surface is not None
         n_lo, eps_lo, p_lo, ln_nu = self._low_density(
             p, n_min=join_density(self.n_t) if sly else None, onset=True)
@@ -293,6 +295,6 @@ class MetaModelEOS(EOSModel):
         pres = jnp.concatenate([p_lo, p_t])
         pres = jax.lax.cummax(jnp.maximum(pres, 1e-9))
 
-        return finish_table(n, eps, pres, self.crust, self.n_t,
-                            self.n_surface, self.gamma_crust, ln_nu,
-                            self.allow_unstable_core)
+        return finish_table_flags(n, eps, pres, self.crust, self.n_t,
+                                  self.n_surface, self.gamma_crust, ln_nu,
+                                  self.allow_unstable_core)

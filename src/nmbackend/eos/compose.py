@@ -108,15 +108,19 @@ def write_compose(path_dir, n, eps, p, m_n=M_N, m_p=M_N):
 
 
 # ---------------- table / model construction ----------------
-def eos_table_from_arrays(n, eps, p, n_surface=1e-7, gamma_crust=1.3) -> EOSTable:
-    """Build an EOSTable from (n[fm^-3], eps, p [MeV/fm^3]); optional surface tail."""
+def eos_table_from_arrays(n, eps, p, n_surface=1e-7, gamma_crust=1.3,
+                          xp=None) -> EOSTable:
+    """Build an EOSTable from (n[fm^-3], eps, p [MeV/fm^3]); optional surface tail.
+    ``xp`` is passed to :func:`build_h_and_cs2`."""
     n = np.asarray(n, float)
     eps = np.maximum.accumulate(np.asarray(eps, float))
     p = np.maximum.accumulate(np.maximum(np.asarray(p, float), 1e-12))
     if n_surface is not None and n[0] > n_surface:
         n, eps, p = extend_to_surface(n, eps, p, n_surface=n_surface,
                                       gamma_crust=gamma_crust)
-    return build_h_and_cs2(n, eps, p)
+    if xp is None:
+        return build_h_and_cs2(n, eps, p)
+    return build_h_and_cs2(n, eps, p, xp=xp)
 
 
 def load_compose(path_dir, **kw) -> EOSTable:

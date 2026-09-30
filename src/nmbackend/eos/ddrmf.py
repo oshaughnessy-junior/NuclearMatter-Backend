@@ -39,9 +39,9 @@ import jax.numpy as jnp
 import numpy as np
 
 from ..constants import HBARC
-from .base import EOSModel, Composition
+from .base import EOSModel, Composition, compiled_table
 from .leptons import lepton_sector
-from .crust import (N_T_DEFAULT, check_crust, core_grid, finish_table,
+from .crust import (N_T_DEFAULT, check_crust, core_grid, finish_table_flags,
                     monotone_core)
 
 jax.config.update("jax_enable_x64", True)
@@ -368,11 +368,13 @@ class DDRMFEOS(EOSModel):
         return landau_masses(self._p(params), comp.n, comp.x_p)
 
     def eos_table(self, params: dict = None):
-        p = self._p(params)
+        return compiled_table(self, self._p(params))
+
+    def _table_flags(self, p):
         n = self._table_grid()
         x_p = _solve_xp(n, p)
         eps, pres = _eps_p(n, x_p, p)
         pres, ln_nu = monotone_core(n, pres, self.n_t)
-        return finish_table(n, eps, pres, self.crust, self.n_t,
-                            self.n_surface, self.gamma_crust, ln_nu,
-                            self.allow_unstable_core)
+        return finish_table_flags(n, eps, pres, self.crust, self.n_t,
+                                  self.n_surface, self.gamma_crust, ln_nu,
+                                  self.allow_unstable_core)
