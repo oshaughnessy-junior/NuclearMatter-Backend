@@ -54,7 +54,7 @@ def test_eta_reaches_envelope_divided_by_0443(nscool):
 def test_sums_match_full_run_when_isothermal(nscool):
     """APR 1.4 Msun at 1e4-1e5 yr is isothermal to 1% (RESULTS-C1): the scan at
     the full run's T_eff must give its L_nu (redshifted, e^(2 phi) weighted).
-    The curve is compared with default-step NSCool, itself 0.002-0.003 dex off
+    The curve is compared with default-step NSCool, itself 0.005-0.006 dex off
     the zero-step limit at 1-10 kyr; the isothermal curve is 0.002 dex off it."""
     full = nscool.run(mass=1.4)
     s = nscool.isothermal(mass=1.4, T_grid=(1e7, 1e9, 401))
