@@ -38,6 +38,7 @@ _FOURPI = 4.0 * math.pi
 def _diffrax_segment(table, t0, t1, state0, rtol, atol, adjoint=None,
                      max_steps=100000):
     """Integrate (r, m, y) in enthalpy from t0 down to t1 with a given start."""
+    t0, t1 = jnp.asarray(t0), jnp.asarray(t1)   # a Python float here is a jit key
     term = diffrax.ODETerm(_field_tidal)
     ctrl = diffrax.PIDController(rtol=rtol, atol=atol)
     if adjoint is None:
