@@ -256,7 +256,8 @@ def diffuse_mu_of_n(n_grid, mu, corr_frac, n_steps=40):
 # ------------------------------------------------------------- full draw ---------
 def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
                     corr_frac=0.2, levels=9, X=None, n_L_fac=2.0,
-                    n_term_fac=12.0, n_grid_pts=600, n_steps=40):
+                    n_term_fac=12.0, n_grid_pts=600, n_steps=40,
+                    n_table_pts=800):
     """One stable-causal-consistent EOS draw bridging nuclear matter to pQCD.
 
     Parameters
@@ -271,6 +272,9 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     X          : pQCD renormalization-scale parameter (log-uniform [1,4] if None).
     n_L_fac    : bridge start in units of n_sat (paper: 2).
     n_term_fac : truncation density for the returned stellar-structure table.
+    n_table_pts : node count of the returned table, which adds nodes to the
+        raw (n, eps, p) (their count varies by a few per draw) with
+        :func:`nmbackend.eos.base.refine_table`; None keeps the raw nodes.
 
     Returns dict with the combined (n, eps, p) arrays, the EOSTable, the anchor
     metadata, and the endpoint pressure mismatch diagnostic.
@@ -332,8 +336,13 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     eps_all = np.concatenate([eps_lo, eps_b[sel]])
     p_all = np.concatenate([p_lo, p_b[sel]])
     # lazy import: keeps this module importable without the (JAX) table machinery
+    from ..eos.base import refine_table
     from ..eos.compose import eos_table_from_arrays
-    table = eos_table_from_arrays(n_all, eps_all, p_all, n_surface=None)
+    if n_table_pts is None:
+        table = eos_table_from_arrays(n_all, eps_all, p_all, n_surface=None)
+    else:       # NumPy until the length is fixed: no compile per raw length
+        table = refine_table(eos_table_from_arrays(
+            n_all, eps_all, p_all, n_surface=None, xp=np), n_table_pts)
 
     cs2 = np.diff(np.log(mu_s)) / np.diff(np.log(grid))
     return dict(table=table, n=n_all, eps=eps_all, p=p_all,
