@@ -39,3 +39,17 @@ def test_polytrope_runs():
     assert float(m_max(fam)) > 0.8
     pt = solve_structure(PolytropeEOS().eos_table(), 0.3, n_steps=400)
     assert float(pt.R_km) > 0 and float(pt.M_msun) > 0
+
+
+def test_repeat_solve_does_not_recompile():
+    # A per-call vector-field closure made every diffrax solve recompile, leaking ~120
+    # memory maps per call until the process hit vm.max_map_count and crashed.
+    import jax.monitoring
+    t = MetaModelEOS().eos_table()
+    solve_structure(t, 0.2).M_msun.block_until_ready()
+    n = []
+    jax.monitoring.register_event_duration_secs_listener(
+        lambda ev, *a, **k: n.append(ev)
+        if ev == "/jax/core/compile/backend_compile_duration" else None)
+    solve_structure(t, 0.25).M_msun.block_until_ready()
+    assert n == []

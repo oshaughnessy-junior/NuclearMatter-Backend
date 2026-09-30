@@ -25,7 +25,7 @@ import math
 import jax
 import jax.numpy as jnp
 
-from .solver import (_derivs, _k2_from_y_C, _central_start, TOVPoint,
+from .solver import (_field_tidal, _k2_from_y_C, _central_start, TOVPoint,
                      _HAVE_DIFFRAX, solve_structure)
 from ..constants import GMSUN_KM
 
@@ -38,7 +38,7 @@ _FOURPI = 4.0 * math.pi
 def _diffrax_segment(table, t0, t1, state0, rtol, atol, adjoint=None,
                      max_steps=100000):
     """Integrate (r, m, y) in enthalpy from t0 down to t1 with a given start."""
-    term = diffrax.ODETerm(lambda h, s, args: _derivs(h, s, args, True))
+    term = diffrax.ODETerm(_field_tidal)
     ctrl = diffrax.PIDController(rtol=rtol, atol=atol)
     if adjoint is None:
         adjoint = diffrax.ForwardMode()

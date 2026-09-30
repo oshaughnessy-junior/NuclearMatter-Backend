@@ -138,16 +138,23 @@ def _solve_scan(table, h_c, n_steps, tidal):
 
 
 # ----- adaptive diffrax backend -----
+# Module-level vector fields: diffeqsolve is jitted with the term as a static key, so a
+# fresh closure per call would recompile every solve and leak the executables.
+def _field_tidal(h, s, args):
+    return _derivs(h, s, args, True)
+
+
+def _field_structure(h, s, args):
+    return _derivs(h, s, args, False)
+
+
 def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000):
     if not _HAVE_DIFFRAX:  # pragma: no cover
         raise ImportError("backend='diffrax' requires the 'diffrax' package; "
                           "pip install diffrax  (or use backend='scan').")
     h_min, h_c, dh0, state0 = _central_start(table, h_c)
 
-    def field(h, s, args):
-        return _derivs(h, s, args, tidal)
-
-    term = diffrax.ODETerm(field)
+    term = diffrax.ODETerm(_field_tidal if tidal else _field_structure)
     ctrl = diffrax.PIDController(rtol=rtol, atol=atol)
     if adjoint is None:
         adjoint = diffrax.ForwardMode()   # supports values, vmap, forward-mode AD
