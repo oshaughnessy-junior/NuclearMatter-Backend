@@ -97,9 +97,10 @@ class HybridEOS:
         self._n_outer = n_h.size if self.n_hadronic == "auto" else self.n_hadronic
         if self._n_outer is None:
             outer = build_h_and_cs2(*[np.asarray(a) for a in self._had_seg])
+            self._outer_raw = outer
         else:   # NumPy until the length is fixed: no compile per raw length
-            outer = refine_table(build_h_and_cs2(*self._had_seg, xp=np),
-                                 self._n_outer)
+            self._outer_raw = build_h_and_cs2(*self._had_seg, xp=np)
+            outer = refine_table(self._outer_raw, self._n_outer)
         h_t = float(outer.h[-1])
         inner = build_h_and_cs2(*[np.asarray(a) for a in self._quark_seg],
                                 h_base=h_t)
@@ -115,6 +116,13 @@ class HybridEOS:
     def segments(self):
         """(inner_quark_table, outer_hadronic_table)."""
         return self._inner, self._outer
+
+    @property
+    def raw_segments(self):
+        """(inner, outer) with the outer segment on its raw nodes, before
+        :func:`refine_table`.  For solvers that interpolate between nodes
+        linearly (``reference.scipy_tov``), where added nodes change p(eps)."""
+        return self._inner, self._outer_raw
 
     @property
     def transition(self) -> TransitionInfo:

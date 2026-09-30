@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import functools
 import math
+import warnings
 from typing import NamedTuple
 import jax
 import jax.numpy as jnp
@@ -190,9 +191,13 @@ def refine_table(table, n_out):
     log-linear in h.  Works in NumPy (pass a table from
     ``build_h_and_cs2(..., xp=numpy)`` to avoid JAX ops on the variable
     length) and returns JAX arrays; a table with ``n_out`` or more nodes only
-    changes array type."""
+    changes array type (with a RuntimeWarning if more)."""
     t = EOSTable(*(np.asarray(a) for a in table))
     m = n_out - t.h.size
+    if m < 0:
+        warnings.warn(f"refine_table: {t.h.size} nodes > n_out={n_out}; the "
+                      "table keeps its own length (one compile per length)",
+                      RuntimeWarning, stacklevel=2)
     if m > 0:
         dh = np.diff(t.h)
         c = np.zeros(dh.size, int)               # added nodes per interval
@@ -264,9 +269,15 @@ class EOSModel:
     def _config(self):
         """Hashable snapshot of the instance attributes (arrays as tuples); the
         key of the table cached by :func:`compiled_table`."""
-        return tuple(sorted(
-            (k, tuple(np.asarray(v).ravel().tolist()) if hasattr(v, "shape")
-             else v) for k, v in vars(self).items()))
+        def key(v):
+            if hasattr(v, "shape"):
+                return tuple(np.asarray(v).ravel().tolist())
+            try:
+                hash(v)
+                return v
+            except TypeError:
+                return (type(v).__name__, repr(v))
+        return tuple(sorted((k, key(v)) for k, v in vars(self).items()))
 
 
 class _ByConfig:
@@ -290,8 +301,13 @@ def _method_jit(handle, name, *args):
 
 
 def _floats(a):
-    return {k: jnp.asarray(v, float) for k, v in a.items()} \
-        if isinstance(a, dict) else a
+    """Numeric params as float arrays (one trace for int, float and array
+    inputs); str and None entries (labels) are dropped, as no model reads
+    them.  Non-dict arguments pass through."""
+    if not isinstance(a, dict):
+        return a
+    return {k: jnp.asarray(v, float) for k, v in a.items()
+            if not (v is None or isinstance(v, (str, bytes)))}
 
 
 def compiled_method(model, name, *args):

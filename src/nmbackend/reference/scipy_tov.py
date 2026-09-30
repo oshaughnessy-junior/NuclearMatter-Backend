@@ -161,7 +161,9 @@ def solve_reference_hybrid(hybrid, h_c, rtol=1e-8, atol=1e-10, r0=1e-4,
     """Independent radius-domain reference for a HybridEOS, with the tidal
     junction applied at the density discontinuity (different formulation from the
     production enthalpy solver -> a genuine cross-check of the junction code)."""
-    inner, outer = hybrid.segments
+    # raw nodes: _EOSInterp is linear in (log p, log eps) between nodes, so the
+    # Hermite nodes added by refine_table would change its EOS
+    inner, outer = getattr(hybrid, "raw_segments", hybrid.segments)
     tr = hybrid.transition
     if h_c <= tr.h_t:                       # purely hadronic
         return solve_reference(outer, h_c, rtol=rtol, atol=atol)
