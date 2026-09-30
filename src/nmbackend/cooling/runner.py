@@ -60,6 +60,11 @@ class GapModel:
     Model codes are NSCool's SFP1S0 / SFN3P2 / SFN1S0 values (precool.f,
     subroutine get_Tc); 0 switches a channel off.  Defaults are the
     bundled Model_1: n1S0 SFB, n3P2 minimal-cooling gap "a", p1S0 T73.
+
+    ``ca_n3p2`` is the axial coefficient of n3P2 pair-breaking emission,
+    a_A = c_A g_A^2 (nmbackend patch).  The default 0.5 follows Leinson's
+    correction, as in A. W. Steiner's NSCool fork; the 2010 release, and
+    its bundled Model_1 output, use 2.
     """
     n1s0: float = 1.0
     n3p2: float = 101.0
@@ -68,13 +73,14 @@ class GapModel:
     sy_p1s0: float = 1.0
     sx_n3p2: float = 1.0
     sy_n3p2: float = 1.0
+    ca_n3p2: float = 0.5
 
     def __post_init__(self):
         for name in self.__dataclass_fields__:   # numpy scalars -> float
             object.__setattr__(self, name, float(getattr(self, name)))
         if self.n3p2 == 150.0:
             raise ValueError("SFN3P2=150 (user Gaussian gap) is not supported")
-        for name in ("sx_p1s0", "sy_p1s0", "sx_n3p2", "sy_n3p2"):
+        for name in ("sx_p1s0", "sy_p1s0", "sx_n3p2", "sy_n3p2", "ca_n3p2"):
             if not 0 < getattr(self, name) < np.inf:
                 raise ValueError(f"{name} must be finite and > 0")
 
@@ -91,7 +97,8 @@ class GapModel:
             "1.        FL1S0\n"
             "0.        SFQUARK\n"
             f"{self.sx_p1s0:<10.10g} SXP1S0\n"
-            f"{self.sx_n3p2:<10.10g} SXN3P2\n")
+            f"{self.sx_n3p2:<10.10g} SXN3P2\n"
+            f"{self.ca_n3p2:<10.10g} CA3P2\n")
 
 
 class CoolingCurve(NamedTuple):
@@ -395,6 +402,10 @@ class NSCool:
                                         [gaps.sx_p1s0, gaps.sx_n3p2], rtol=1e-5):
             raise NSCoolError("NSCool did not read the s_x values written "
                               f"({m.group(0) if m else 'no echo: unpatched build?'})")
+        m = re.search(r"nmbackend ca_n3p2 =\s*(\S+)", r.stdout)
+        if m is None or not np.isclose(float(m.group(1)), gaps.ca_n3p2, rtol=1e-5):
+            raise NSCoolError("NSCool did not read CA3P2 "
+                              f"({m.group(0) if m else 'no echo: build predates CA3P2?'})")
         return r.stdout
 
     def run(self, *, mass: Optional[float] = None,

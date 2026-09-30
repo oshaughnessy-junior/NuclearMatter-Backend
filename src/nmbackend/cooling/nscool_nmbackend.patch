@@ -1,6 +1,62 @@
+diff --git a/Code/NSCool_READ.inc.f b/Code/NSCool_READ.inc.f
+index 753db72..2e06189 100644
+--- a/Code/NSCool_READ.inc.f
++++ b/Code/NSCool_READ.inc.f
+@@ -106,6 +106,17 @@ c READ PAIRING PARAMETERS: ********************************************
+         read(20,*)delkf_n3p2
+         read(20,*)tcmax_n3p2
+        end if
++c nmbackend patch: optional trailing lines SXP1S0, SXN3P2 (default 1)
++c and CA3P2 (default 0.5, Leinson; the 2010 release used 2)
++       sxp1s0=1.d0
++       sxn3p2=1.d0
++       ca3p2=0.5d0
++       read(20,*,end=1901)sxp1s0
++       read(20,*,end=1901)sxn3p2
++       read(20,*,end=1901)ca3p2
++ 1901  continue
++       print '(a,1p2e14.6)',' nmbackend sx_p1s0 sx_n3p2 =',sxp1s0,sxn3p2
++       print '(a,1p1e14.6)',' nmbackend ca_n3p2 =',ca3p2
+       close(unit=20,status='keep')
+ 
+ c READ NEUTRINO PARAMETERS: ********************************************
+diff --git a/Code/neutrino_core.f b/Code/neutrino_core.f
+index cacda6a..2e5fbf5 100644
+--- a/Code/neutrino_core.f
++++ b/Code/neutrino_core.f
+@@ -775,12 +775,15 @@ c
+ c     For the j=2 m=0 gap
+        implicit real*8 (a-h,k-z)
+        parameter (pi = 3.14159265d0,rhonucl=2.8d14)
++c nmbackend patch: a_A = c_A g_A^2 with c_A from the pairing file
++c (default 0.5: Leinson 2010, as in A. W. Steiner's fork; release: 2)
++       common/gapscale/sxp1s0,sxn3p2,ca3p2
+         if (T.le.Tc) then
+          pf=kf*197.d0
+          vf=pf/mst/940.d0
+          g_A=1.26d0
+          a_v=0.d0
+-         a_a=2.d0*g_A**2
++         a_a=ca3p2*g_A**2
+          a=a_v+a_a
+ c        The vector part in "a" has been put to zero !
+          tau=T/Tc
+diff --git a/Code/pairing.inc.f b/Code/pairing.inc.f
+index e25d565..2fe52b1 100644
+--- a/Code/pairing.inc.f
++++ b/Code/pairing.inc.f
+@@ -25,3 +25,6 @@ c     3                   T0_p ,k0_p ,k1_p ,k2_ p,k3_p
+ 
+ 
+ 
++c nmbackend patch: density scale factors s_x (Zhou+2026 Eq. 10) and the
++c axial coefficient c_A of n3P2 pair breaking, a_A = c_A g_A^2
++      common/gapscale/sxp1s0,sxn3p2,ca3p2
+diff --git a/Code/precool.f b/Code/precool.f
+index 111fcd6..909bab8 100644
 --- a/Code/precool.f
 +++ b/Code/precool.f
-@@ -1301,6 +1301,7 @@
+@@ -1301,6 +1301,7 @@ c *********************************************************************
  c       INCLUDE 'files_phys.inc.f'
         INCLUDE 'files.inc.f'
         dimension tcrit(10),rho_lo(10),rho_hi(10)
@@ -8,7 +64,7 @@
  c Just to be safe:
         do i=0,imax
          tcn(i) =1.0d0
-@@ -1351,12 +1352,16 @@
+@@ -1351,12 +1352,16 @@ c     Ioffe gaps:
          tcn(i)=max(1.d0,Tc_Ioffe_3ns(kfn(i)))*fn1s0
         end do
        end if
@@ -26,7 +82,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1364,7 +1369,7 @@
+@@ -1364,7 +1369,7 @@ c isf will be the largest zone number at which triplet pairing is present
         end do
        else if(sfn3p2.eq.2.)then
         do i=0,idrip
@@ -35,7 +91,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1372,7 +1377,7 @@
+@@ -1372,7 +1377,7 @@ c isf will be the largest zone number at which triplet pairing is present
         end do
        else if(sfn3p2.eq.3.)then
         do i=0,idrip
@@ -44,7 +100,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1380,14 +1385,14 @@
+@@ -1380,14 +1385,14 @@ c isf will be the largest zone number at which triplet pairing is present
         end do
        else if(sfn3p2.eq.4.)then
         do i=0,idrip
@@ -61,7 +117,7 @@
         do i=0,idrip
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
-@@ -1396,7 +1401,7 @@
+@@ -1396,7 +1401,7 @@ c isf will be the largest zone number at which triplet pairing is present
         end do
        else if(sfn3p2.eq.6.)then
         do i=0,idrip
@@ -70,7 +126,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1404,7 +1409,7 @@
+@@ -1404,7 +1409,7 @@ c isf will be the largest zone number at which triplet pairing is present
         end do
        else if(sfn3p2.eq.7.)then
         do i=0,idrip
@@ -79,7 +135,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1412,7 +1417,7 @@
+@@ -1412,7 +1417,7 @@ c isf will be the largest zone number at which triplet pairing is present
         end do
        else if(sfn3p2.eq.8.)then
         do i=0,idrip
@@ -88,7 +144,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1437,7 +1442,7 @@
+@@ -1437,7 +1442,7 @@ c     Minimal Cooling paper gaps:
         end if
         do i=0,idrip
          temp=tcmax_n3p2*
@@ -97,7 +153,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           if (isf.eq.i-1) isf=i
-@@ -1446,7 +1451,7 @@
+@@ -1446,7 +1451,7 @@ c     Minimal Cooling paper gaps:
  c     Ioffe gaps:
        else if (sfn3p2.eq.201.) then
         do i=0,idrip
@@ -106,7 +162,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1454,7 +1459,7 @@
+@@ -1454,7 +1459,7 @@ c     Ioffe gaps:
         end do
        else if (sfn3p2.eq.202.) then
         do i=0,idrip
@@ -115,7 +171,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1462,7 +1467,7 @@
+@@ -1462,7 +1467,7 @@ c     Ioffe gaps:
         end do
        else if (sfn3p2.eq.203.) then
         do i=0,idrip
@@ -124,7 +180,7 @@
          if (temp.ge.tcn(i)) then
           tcn(i)=temp
           isf=i
-@@ -1478,44 +1483,44 @@
+@@ -1478,44 +1483,44 @@ c     Uniform Tc gap:
  c ***** 1s0 proton superconductivity **********************************
        if(sfp1s0.eq.1.)then
         do i=0,icore
@@ -179,7 +235,7 @@
         end do
  c     Ioffe gaps:
        else if (sfp1s0.eq.201.) then
-@@ -1814,3 +1819,39 @@
+@@ -1814,3 +1819,39 @@ c**************************************************************c
  c***************************************************************************
  c***************************************************************************
  
@@ -219,30 +275,8 @@
 +       end do
 +      return
 +      end
---- a/Code/pairing.inc.f
-+++ b/Code/pairing.inc.f
-@@ -25,3 +25,5 @@
- 
- 
- 
-+c nmbackend patch: density scale factors s_x (Zhou+2026 Eq. 10)
-+      common/gapscale/sxp1s0,sxn3p2
---- a/Code/NSCool_READ.inc.f
-+++ b/Code/NSCool_READ.inc.f
-@@ -106,6 +106,13 @@
-         read(20,*)delkf_n3p2
-         read(20,*)tcmax_n3p2
-        end if
-+c nmbackend patch: optional trailing lines SXP1S0, SXN3P2 (default 1)
-+       sxp1s0=1.d0
-+       sxn3p2=1.d0
-+       read(20,*,end=1901)sxp1s0
-+       read(20,*,end=1901)sxn3p2
-+ 1901  continue
-+       print '(a,1p2e14.6)',' nmbackend sx_p1s0 sx_n3p2 =',sxp1s0,sxn3p2
-       close(unit=20,status='keep')
- 
- c READ NEUTRINO PARAMETERS: ********************************************
+diff --git a/TOV/TOV.f b/TOV/TOV.f
+index b3ead9c..0ff4e89 100644
 --- a/TOV/TOV.f
 +++ b/TOV/TOV.f
 @@ -15,7 +15,7 @@
@@ -254,7 +288,7 @@
       C        prod, output, stndrd, qseek, seek,
       C        dum_l     
  c      data prho/.1,.11,.12,.135,.15,.165,.18,.2,.22,.246,.27,.3,
-@@ -69,7 +69,8 @@
+@@ -69,7 +69,8 @@ C ***** Initializes result arrays ****************************************
       
  C ***** Waits for instructions *********************************************
       
@@ -264,7 +298,7 @@
        if(cread('go')) go to 10
        if(cread('production')) then
          open (unit=7,file=
-@@ -406,7 +407,8 @@
+@@ -406,7 +407,8 @@ c *************************************************************************
        common/eos_dat/ peos(50000),eeos(50000),deos(50000),const
        common/interp/ i1,i2,i3,limit
  c      write(6,*) c2

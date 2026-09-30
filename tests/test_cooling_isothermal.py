@@ -52,16 +52,18 @@ def test_eta_reaches_envelope_divided_by_0443(nscool):
 
 @iso_built
 def test_sums_match_full_run_when_isothermal(nscool):
-    """APR 1.4 Msun at 1e4-1e5 yr is isothermal to 1% (RESULTS-C1): the scan at
-    the full run's T_eff must give its L_nu (redshifted, e^(2 phi) weighted).
+    """APR 1.4 Msun at 1e4-1e5 yr: the full run's T_eff gives T_b, the crust
+    march gives the core T, and the scan there must give the run's L_nu
+    (redshifted, e^(2 phi) weighted) to 0.5%.  T_core = T_b is 8-12% off.
     The curve is compared with default-step NSCool, itself 0.005-0.006 dex off
     the zero-step limit at 1-10 kyr; the isothermal curve is 0.002 dex off it."""
     full = nscool.run(mass=1.4)
-    s = nscool.isothermal(mass=1.4, T_grid=(1e7, 1e9, 401))
+    s = nscool.isothermal(mass=1.4, T_grid=(1e7, 1e9, 401), rho_b=1.6e14)
     for t in (1e4, 1e5):
-        T = np.interp(np.log(full.at(t)), np.log(s.Teff_inf), s.T)
+        T_b = np.interp(np.log(full.at(t)), np.log(s.Teff_inf), s.T)
+        T = np.interp(T_b, s.T, s.T_in)
         L_nu = np.exp(np.interp(T, s.T, np.log(s.L_nu)))
-        assert L_nu == pytest.approx(full.at(t, "L_nu_inf"), rel=0.1)
+        assert L_nu == pytest.approx(full.at(t, "L_nu_inf"), rel=0.02)
     cur = isothermal_curve(nscool.isothermal(mass=1.4))
     for t in (1e3, 3e3, 1e4):
         assert abs(np.log10(cur.at(t) / full.at(t))) < 0.008
@@ -82,3 +84,17 @@ def test_crust_blanket_fixes_light_element_star(nscool):
     for t in (3e3, 1e4):
         assert abs(np.log10(strict.at(t) / full.at(t))) > 0.012
         assert abs(np.log10(crust.at(t) / full.at(t))) < 0.006
+
+
+@iso_built
+def test_n3p2_axial_coefficient_scales_pbf(nscool):
+    """With only the n3P2 gap on, pair-breaking emission is proportional to
+    c_A: the 2010 release (c_A = 2) emits 4 times the default (0.5)."""
+    g = dict(n1s0=0, p1s0=0)
+    new = nscool.isothermal(mass=1.4, gaps=GapModel(**g), T_grid=(1e8, 1e9, 21))
+    old = nscool.isothermal(mass=1.4, gaps=GapModel(ca_n3p2=2.0, **g),
+                            T_grid=(1e8, 1e9, 21))
+    on = old.L_pbf > 0
+    assert on.sum() > 5
+    np.testing.assert_allclose(old.L_pbf[on] / new.L_pbf[on], 4.0, rtol=1e-7)
+    np.testing.assert_allclose(old.L_murca_brem, new.L_murca_brem, rtol=1e-12)

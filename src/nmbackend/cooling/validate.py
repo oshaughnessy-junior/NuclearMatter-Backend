@@ -29,8 +29,10 @@ def make_figure(path: str, nscool: NSCool) -> None:
     import matplotlib.pyplot as plt
 
     ref = parse_teff_file(nscool.home / "Model_1" / "Teff_Try_KEEP.dat")
-    prof = nscool.run(profile=nscool.home / "TOV/Profile/Prof_APR_Cat_1.4.dat")
-    tov = nscool.run(mass=1.4)
+    release = GapModel(ca_n3p2=2.0)     # n3P2 rate of the bundled output
+    prof = nscool.run(profile=nscool.home / "TOV/Profile/Prof_APR_Cat_1.4.dat",
+                      gaps=release)
+    tov = nscool.run(mass=1.4, gaps=release)
 
     fig, ax = plt.subplots(1, 3, figsize=(13, 4.2), sharey=True)
     for a in ax:
