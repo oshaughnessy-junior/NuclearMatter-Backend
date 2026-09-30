@@ -84,8 +84,8 @@ c.t_yr, c.Teff_inf
 With `rho_b` set, the driver also marches NSCool's steady heat-flux equation
 from its outer boundary (T_b = T at 1e10 g/cm3) inward to rho_b, at
 L = L_gamma(T_b), with NSCool's conductivities. `blanket=True` then treats the
-star as isothermal only below rho_b. One scan of 961 temperatures takes about
-0.2 s. The accuracy against full NSCool is in nmb-papers
+star as isothermal only below rho_b. One scan of 961 temperatures with the crust march
+takes 1 s. The accuracy against full NSCool is in nmb-papers
 `paper7_cooling_population/notes/RESULTS-C1-isothermal.md`.
 
 ## EOS table format (interface with W2, `nscool_io`)
