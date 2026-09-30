@@ -55,7 +55,7 @@ import jax
 import jax.numpy as jnp
 
 from ..constants import HBARC, M_N, M_P, M_E, N_SAT_DEFAULT
-from .base import EOSModel, Composition, compiled_table
+from .base import EOSModel, Composition, compiled_method, compiled_table
 from .leptons import lepton_sector
 from .crust import (N_T_DEFAULT, check_crust, finish_table_flags, join_density,
                     monotone_core)
@@ -252,6 +252,9 @@ class MetaModelEOS(EOSModel):
         p = dict(DEFAULT_PARAMS)
         if params:
             p.update(params)
+        return compiled_method(self, "_composition", p)
+
+    def _composition(self, p):
         n_lo, eps_lo, p_lo = self._low_density(p)
         n_t, _, _ = self._css_tail(n_lo[-1], eps_lo[-1], p_lo[-1], p)
         n = jnp.concatenate([n_lo, n_t])

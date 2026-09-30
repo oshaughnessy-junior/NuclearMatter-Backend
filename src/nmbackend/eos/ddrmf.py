@@ -39,7 +39,7 @@ import jax.numpy as jnp
 import numpy as np
 
 from ..constants import HBARC
-from .base import EOSModel, Composition, compiled_table
+from .base import EOSModel, Composition, compiled_method, compiled_table
 from .leptons import lepton_sector
 from .crust import (N_T_DEFAULT, check_crust, core_grid, finish_table_flags,
                     monotone_core)
@@ -358,6 +358,9 @@ class DDRMFEOS(EOSModel):
     def composition(self, params: dict = None) -> Composition:
         """beta-equilibrium (x_p, x_e, x_mu) on ``self.n_grid``."""
         p = self._p(params)
+        return compiled_method(self, "_composition", p)
+
+    def _composition(self, p):
         n = self.n_grid
         x_p = _solve_xp(n, p)
         _, n_e, n_mu, _ = lepton_sector(x_p * n, muons=True)
@@ -365,7 +368,12 @@ class DDRMFEOS(EOSModel):
 
     def landau_masses(self, params, comp):
         """(m*_n/M_n, m*_p/M_p) on ``comp`` (see :func:`landau_masses`)."""
-        return landau_masses(self._p(params), comp.n, comp.x_p)
+        # _solve_phi bisects: compiled, or it recompiles on every call
+        return compiled_method(self, "_landau", self._p(params), comp.n, comp.x_p)
+
+    @staticmethod
+    def _landau(params, n, x_p):
+        return landau_masses(params, n, x_p)
 
     def eos_table(self, params: dict = None):
         return compiled_table(self, self._p(params))

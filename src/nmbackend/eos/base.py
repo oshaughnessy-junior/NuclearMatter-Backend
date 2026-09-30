@@ -284,18 +284,27 @@ class _ByConfig:
         return isinstance(other, _ByConfig) and self.key == other.key
 
 
-@functools.partial(jax.jit, static_argnums=0)
-def _table_jit(handle, p):
-    return handle.model._table_flags(p)
+@functools.partial(jax.jit, static_argnums=(0, 1))
+def _method_jit(handle, name, *args):
+    return getattr(handle.model, name)(*args)
+
+
+def _floats(a):
+    return {k: jnp.asarray(v, float) for k, v in a.items()} \
+        if isinstance(a, dict) else a
+
+
+def compiled_method(model, name, *args):
+    """``getattr(model, name)(*args)`` compiled once per model type,
+    ``_config()``, method and argument structure (dict arguments become float
+    arrays).  Eager fori_loop bisections recompile on every call (the loop
+    body is a new closure each time), and each executable holds ~100 memory
+    maps."""
+    return _method_jit(_ByConfig(model), name, *(_floats(a) for a in args))
 
 
 def compiled_table(model, p):
-    """``model._table_flags(p)`` compiled once per model type, ``_config()`` and
-    parameter keys, then the eager rejection of :func:`eos.crust.raise_rejected`.
-
-    Eager fori_loop bisections recompile on every call (the loop body is a new
-    closure each time), and each executable holds ~100 memory maps."""
+    """``model._table_flags(p)`` through :func:`compiled_method`, then the eager
+    rejection of :func:`eos.crust.raise_rejected`."""
     from .crust import raise_rejected
-    p = {k: jnp.asarray(v, float) for k, v in p.items()}
-    return raise_rejected(*_table_jit(_ByConfig(model), p))
-
+    return raise_rejected(*compiled_method(model, "_table_flags", p))

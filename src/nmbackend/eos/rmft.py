@@ -50,7 +50,7 @@ import jax
 import jax.numpy as jnp
 
 from ..constants import HBARC
-from .base import EOSModel, Composition, compiled_table
+from .base import EOSModel, Composition, compiled_method, compiled_table
 from .leptons import lepton_sector
 from .crust import (N_T_DEFAULT, check_crust, core_grid, finish_table_flags,
                     monotone_core)
@@ -415,6 +415,9 @@ class RMFTEOS(EOSModel):
         p = dict(DEFAULT_PARAMS)
         if params:
             p.update(params)
+        return compiled_method(self, "_composition", p)
+
+    def _composition(self, p):
         n = self.n_grid
         x_p = _solve_xp(n, p)
         _, n_e, n_mu, _ = _leptons(x_p * n)
@@ -422,7 +425,12 @@ class RMFTEOS(EOSModel):
 
     def landau_masses(self, params, comp):
         """(m*_n/M, m*_p/M) on ``comp`` (see :func:`landau_masses`)."""
-        return landau_masses(params, comp.n, comp.x_p)
+        # _solve_phi bisects: compiled, or it recompiles on every call
+        return compiled_method(self, "_landau", params or {}, comp.n, comp.x_p)
+
+    @staticmethod
+    def _landau(params, n, x_p):
+        return landau_masses(params, n, x_p)
 
     def eos_table(self, params: dict = None):
         p = dict(DEFAULT_PARAMS)
