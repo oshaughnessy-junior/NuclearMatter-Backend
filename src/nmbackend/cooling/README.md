@@ -36,7 +36,7 @@ The patch changes four files:
 | `Code/precool.f` (`get_Tc`) | in core zones, p1S0 and n3P2 gaps are evaluated at the Fermi momentum the star has at baryon density n/s_x; outside the core density range k_F scales as n^(1/3) from the nearest core zone; crust zones are not rescaled |
 | `TOV/TOV.f` | drop the hard-coded `/Users/dany/...` EOS prefix; call `gread` as the function it is (gfortran rejects `CALL`) |
 
-With s_x = 1 the patched binary reproduces the bundled Model_1 output exactly.
+With s_x = 1 the patched binary reproduces the bundled Model_1 output to the printed digits.
 
 ## Use
 
@@ -56,12 +56,35 @@ c.Ts, c.L_gamma                     # local surface values
   `precool.f`) and the scalings of Zhou+2026 (arXiv:2609.34338) Eq. 10,
   Delta(n) = s_y Delta_0(n/s_x). The code applies s_y through NSCool's own
   `FP1S0`/`FN3P2` factors and s_x through the patch.
-- `eta`: light-element envelope, eta = g_s14^2 Delta M / M (Potekhin, Chabrier
-  and Yakovlev 1997), as the NSCool control guide defines `ETA`.
+- `eta`: written to NSCool's `ETA`. NSCool divides it by 0.443 before the
+  envelope formula (see Notes).
 - `star=True` also returns the core-zone profile (n_b, k_F, T_c).
 
 Each run uses a new temporary directory. Pass `workroot=` to put these on a
 node-local disk.
+
+## Isothermal star
+
+`NSCool.isothermal()` takes the arguments of `run()` and returns NSCool's
+heat capacity C, L_nu and L_gamma for a star at uniform redshifted T, on a
+log grid of T. `Code/NSCool_iso.out` is the setup part of `NSCool.f` plus
+`nscool_isothermal_tail.f`, which calls `neutrino`, `heating`, `specheat`
+and `fteff` as the time loop does: C = sum cv dV, L_nu = sum e^(2 phi) q_nu dV.
+
+```python
+from nmbackend.cooling import NSCool, isothermal_curve
+s = NSCool().isothermal(mass=1.4, eta=1e-9, rho_b=1.6e14)
+c = isothermal_curve(s, blanket=True)   # t(T) = int C dT / (L_nu + L_gamma)
+c.t_yr, c.Teff_inf
+```
+
+With `rho_b` set, the driver marches NSCool's steady flux equation from
+T_b = T at 1e10 g/cm3 in to rho_b at L = L_gamma(T_b). `blanket=True` then
+makes only the star below rho_b isothermal. A 961-point scan takes 1 s.
+Other approximations: envelope densities stay at NSCool's initial ones; the
+crust layer's C and L_nu use T_in; `C_core` sums zones i <= icore.
+Accuracy against full NSCool: nmb-papers
+`paper7_cooling_population/notes/RESULTS-C1-isothermal.md`.
 
 ## EOS table format (interface with W2, `nscool_io`)
 
@@ -100,14 +123,23 @@ the bundled profile and for a profile built by the driver's TOV call. The
 figure is `docs/cooling/nscool_validation.png`
 (`python -m nmbackend.cooling.validate --fig ...`).
 
-One curve takes 3.1 s wall on one core of ldas-pcdev11 (Xeon E5-2630 v4).
+One curve takes 3.1 s of wall time on one core of ldas-pcdev11 (Xeon E5-2630 v4).
 TOV adds 0.01 s.
 
 ## Notes for users
 
-- NSCool divides the input `ETA` by 0.443 (`NSCool_READ.inc.f`), and the control
-  guide does not mention this factor. We pass `ETA` as the guide defines it. Ask
-  D. Page before quoting eta values.
+- NSCool divides the input `ETA` by 0.443 (`NSCool_READ.inc.f`, line 78) and
+  passes the result to `fteff_acc`. That function is Eqs. (A7)-(A10) of
+  Potekhin, Chabrier and Yakovlev (1997), where eta = g_s14^2 Delta M / M
+  (their Eq. A5). So the envelope formula sees eta = ETA / 0.443 = 2.26 ETA.
+  Neither the source nor the guides explain the factor. `run(eta=x)` means
+  PCY97 eta = 2.26 x. `IsothermalStar.eta_nscool` reports the value used.
+- NSCool's default time step (`Code/Data_Files/NUM_PARAM.dat`: DT0 = TVAR = 1.2)
+  is not converged at late times. The error in log10 T_eff^inf is about
+  0.25 (DT0 - 1) at 1 Myr for a GM1 1.6 Msun star, and larger in the
+  photon-cooling drop. For reference curves, copy the tree and lower DT0
+  and TVAR together. Some stars with pairing then stall (for example APR
+  1.1 Msun at DT0 = 1.02 ran for over 25 min); give `run()` a timeout.
 - The T73 and CCDK proton gaps close below n = 0.6 fm^-3. For APR the dUrca core of a
   2.1 Msun star lies above that. So s_x <= 1, the range of Zhou+2026, cannot
   quench dUrca there. With CCDK, s_x = 2 can.

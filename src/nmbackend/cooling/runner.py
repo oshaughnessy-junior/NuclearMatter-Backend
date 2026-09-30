@@ -12,6 +12,7 @@ with e^(2 phi_s) = 1 - 2GM/(R c^2) at NSCool's outer grid radius.
 """
 from __future__ import annotations
 
+import inspect
 import os
 import re
 import shutil
@@ -23,8 +24,9 @@ from typing import NamedTuple, Optional, Union
 
 import numpy as np
 
-__all__ = ["GapModel", "CoolingCurve", "NSCool", "NSCoolError",
-           "default_home", "parse_teff_file", "parse_star_file"]
+__all__ = ["GapModel", "CoolingCurve", "IsothermalStar", "NSCool", "NSCoolError",
+           "default_home", "parse_teff_file", "parse_star_file",
+           "parse_isothermal"]
 
 PathLike = Union[str, os.PathLike]
 
@@ -172,6 +174,49 @@ def parse_star_file(path: PathLike) -> dict:
     return {k: a[:, j] for j, k in enumerate(_STAR_COLS)}
 
 
+class IsothermalStar(NamedTuple):
+    """NSCool physics summed over an isothermal star (``NSCool.isothermal``).
+
+    ``T`` is the redshifted interior temperature (K).  C in erg/K; all
+    luminosities in erg/s at infinity; ``eta_nscool`` is the eta NSCool's
+    envelope formula receives (input ETA / 0.443).  ``T_in`` answers a
+    different question from the other columns: with T_b = T at NSCool's
+    outer grid point, it is the redshifted temperature at density rho_b,
+    from NSCool's steady heat-flux equation at L = L_gamma(T).
+    """
+    T: np.ndarray
+    C: np.ndarray
+    L_nu: np.ndarray
+    L_heat: np.ndarray
+    L_gamma: np.ndarray
+    Teff_inf: np.ndarray
+    L_durca: np.ndarray
+    L_murca_brem: np.ndarray
+    L_pbf: np.ndarray
+    L_nu_crust: np.ndarray
+    C_core: np.ndarray
+    T_in: np.ndarray          # T at rho_b when T_b = T (flux march); = T if rho_b unset
+    mass: float
+    radius_cm: float
+    exp_phi_s: float
+    eta_nscool: float
+
+
+def parse_isothermal(text: str) -> IsothermalStar:
+    """Parse the stdout of ``NSCool_iso.out``."""
+    m = re.search(r"star M R e\^phi_s =\s*(\S+)\s+(\S+)\s+(\S+)", text)
+    e = re.search(r"eta used by fteff =\s*(\S+)", text)
+    rows = [[float(x) for x in l.split()[1:]] for l in text.splitlines()
+            if l.startswith("ISO ")]
+    if m is None or e is None or not rows:
+        raise NSCoolError("no isothermal scan in NSCool_iso output")
+    a = np.array(rows).T
+    if len(a) == 11:                             # binary without the T_in column
+        a = np.vstack([a, a[0]])
+    return IsothermalStar(*a, float(m.group(1)), float(m.group(2)),
+                          float(m.group(3)), float(e.group(1)))
+
+
 _I_DAT = """PRINT OUT CONTROL:----------------------------------------
 0	PSCREEN
 0.      DEBUG
@@ -288,6 +333,70 @@ class NSCool:
         return out
 
     # ------------------------------------------------------------------
+    def _setup(self, d: Path, *, mass, profile, eos_table, crust_table, gaps,
+               eta, rhocore, rhodrip, rhoenv, rhosurf, icore, idec, tempini,
+               tempmin, neutrino_file, conduct_file, star) -> None:
+        """Write NSCool's input files for one star into run directory ``d``."""
+        if (mass is None) == (profile is None):
+            raise ValueError("give exactly one of mass, profile")
+        eos_table = Path(eos_table) if eos_table else self.default_eos
+        crust_table = Path(crust_table) if crust_table else self.default_crust
+        m1 = d / "Model_1"      # NSCool prefixes the master file with Model_1/
+        m1.mkdir()
+        os.symlink(self.home / "Code", d / "Code")   # Code/Data_Files/*
+        os.symlink(eos_table.resolve(), d / "eos.dat")
+        os.symlink(crust_table.resolve(), d / "crust.dat")
+        if profile is None:
+            self.make_profile(eos_table, mass, d / "prof.dat")
+        else:
+            os.symlink(Path(profile).resolve(), d / "prof.dat")
+        files = {
+            "I_Struct.dat": _STRUCT.format(rhocore=rhocore, rhodrip=rhodrip,
+                                           rhoenv=rhoenv, rhosurf=rhosurf,
+                                           icore=icore, idec=idec),
+            "I_Bound.dat": _BOUND.format(eta=eta),
+            "I_Pairing.dat": gaps.pairing_file(),
+            "I.dat": _I_DAT.format(tempmin=tempmin, tempini=tempini,
+                                    pstar=int(star)),
+        }
+        for name, text in files.items():
+            (m1 / name).write_text(text)
+        for name in (neutrino_file, conduct_file, "I_Heat_0.dat",
+                     "I_Bfield_0.dat", "I_Accretion_0.dat"):
+            shutil.copy(self.home / "I_Files" / name, m1 / name)
+        master = ["'NEW'", "BASIC MODEL FILES:", "'crust.dat'", "'eos.dat'",
+                  "'prof.dat'", "OTHER MODEL FILES:",
+                  "'Model_1/I_Struct.dat'", "'Model_1/I_Bound.dat'",
+                  "'Model_1/I_Pairing.dat'", f"'Model_1/{neutrino_file}'",
+                  f"'Model_1/{conduct_file}'", "'Model_1/I_Heat_0.dat'",
+                  "'Model_1/I_Bfield_0.dat'", "'Model_1/I_Accretion_0.dat'",
+                  "OUTPUT FILES:", "'Model_1/I.dat'", "'Model_1/Teff.dat'",
+                  "'Model_1/Temp.dat'", "'Model_1/Star.dat'", ""]
+        (m1 / "Cool.in").write_text("\n".join(master))
+
+    def _exec(self, exe: Path, d: Path, stdin: str, gaps: GapModel,
+              timeout: float, keep: Optional[PathLike]) -> str:
+        """Run ``exe`` in ``d``; check the run and the s_x echo; return stdout."""
+        env = dict(os.environ, OMP_NUM_THREADS="1")
+        try:
+            r = subprocess.run([str(exe)], cwd=d, input=stdin,
+                               capture_output=True, text=True,
+                               timeout=timeout, env=env)
+        except subprocess.TimeoutExpired as e:
+            raise NSCoolError(f"{exe.name} timed out after {timeout} s") from e
+        log = r.stdout + r.stderr    # gfortran writes PAUSE to stderr
+        (d / "stdout.txt").write_text(log)
+        if keep is not None:
+            shutil.copytree(d, keep, symlinks=True, dirs_exist_ok=True)
+        if r.returncode != 0 or "Done" not in r.stdout or "PAUSE" in log.upper():
+            raise NSCoolError(f"{exe.name} failed (rc={r.returncode}):\n{log[-2000:]}")
+        m = re.search(r"nmbackend sx_p1s0 sx_n3p2 =\s*(\S+)\s+(\S+)", r.stdout)
+        if m is None or not np.allclose([float(m.group(1)), float(m.group(2))],
+                                        [gaps.sx_p1s0, gaps.sx_n3p2], rtol=1e-5):
+            raise NSCoolError("NSCool did not read the s_x values written "
+                              f"({m.group(0) if m else 'no echo: unpatched build?'})")
+        return r.stdout
+
     def run(self, *, mass: Optional[float] = None,
             profile: Optional[PathLike] = None,
             eos_table: Optional[PathLike] = None,
@@ -307,70 +416,58 @@ class NSCool:
 
         Give either ``mass`` (built from ``eos_table`` with NSCool's TOV) or
         a ready ``profile``.  ``eos_table`` is an NSCool 'NEW'-format core+crust
-        table (README.md); default the bundled APR.  ``eta`` is the
-        light-element envelope parameter of Potekhin, Chabrier & Yakovlev
-        (1997), eta = g_s14^2 Delta M_light / M.  Grid defaults follow the
-        bundled Model_1 (I_Struct_1.6e14-4.0e11-1e10_normal.dat).
+        table (README.md); default the bundled APR.  ``eta`` is written to
+        NSCool's ``ETA``; NSCool divides it by 0.443 before the envelope
+        formula of Potekhin, Chabrier & Yakovlev (1997) (README.md).
+        Grid defaults follow the bundled Model_1
+        (I_Struct_1.6e14-4.0e11-1e10_normal.dat).
         ``star=True`` also returns NSCool's per-zone profile (``parse_star_file``).
         ``keep`` copies the run directory there for inspection.
         """
-        if (mass is None) == (profile is None):
-            raise ValueError("give exactly one of mass, profile")
-        eos_table = Path(eos_table) if eos_table else self.default_eos
-        crust_table = Path(crust_table) if crust_table else self.default_crust
+        opts = dict(mass=mass, profile=profile, eos_table=eos_table,
+                    crust_table=crust_table, gaps=gaps, eta=eta,
+                    rhocore=rhocore, rhodrip=rhodrip, rhoenv=rhoenv,
+                    rhosurf=rhosurf, icore=icore, idec=idec, tempini=tempini,
+                    tempmin=tempmin, neutrino_file=neutrino_file,
+                    conduct_file=conduct_file, star=star)
         with tempfile.TemporaryDirectory(dir=self.workroot) as d:
             d = Path(d)
-            m1 = d / "Model_1"      # NSCool prefixes the master file with Model_1/
-            m1.mkdir()
-            os.symlink(self.home / "Code", d / "Code")   # Code/Data_Files/*
-            os.symlink(eos_table.resolve(), d / "eos.dat")
-            os.symlink(crust_table.resolve(), d / "crust.dat")
-            if profile is None:
-                self.make_profile(eos_table, mass, d / "prof.dat")
-            else:
-                os.symlink(Path(profile).resolve(), d / "prof.dat")
-            files = {
-                "I_Struct.dat": _STRUCT.format(rhocore=rhocore, rhodrip=rhodrip,
-                                               rhoenv=rhoenv, rhosurf=rhosurf,
-                                               icore=icore, idec=idec),
-                "I_Bound.dat": _BOUND.format(eta=eta),
-                "I_Pairing.dat": gaps.pairing_file(),
-                "I.dat": _I_DAT.format(tempmin=tempmin, tempini=tempini,
-                                        pstar=int(star)),
-            }
-            for name, text in files.items():
-                (m1 / name).write_text(text)
-            for name in (neutrino_file, conduct_file, "I_Heat_0.dat",
-                         "I_Bfield_0.dat", "I_Accretion_0.dat"):
-                shutil.copy(self.home / "I_Files" / name, m1 / name)
-            master = ["'NEW'", "BASIC MODEL FILES:", "'crust.dat'", "'eos.dat'",
-                      "'prof.dat'", "OTHER MODEL FILES:",
-                      "'Model_1/I_Struct.dat'", "'Model_1/I_Bound.dat'",
-                      "'Model_1/I_Pairing.dat'", f"'Model_1/{neutrino_file}'",
-                      f"'Model_1/{conduct_file}'", "'Model_1/I_Heat_0.dat'",
-                      "'Model_1/I_Bfield_0.dat'", "'Model_1/I_Accretion_0.dat'",
-                      "OUTPUT FILES:", "'Model_1/I.dat'", "'Model_1/Teff.dat'",
-                      "'Model_1/Temp.dat'", "'Model_1/Star.dat'", ""]
-            (m1 / "Cool.in").write_text("\n".join(master))
-            env = dict(os.environ, OMP_NUM_THREADS="1")
-            try:
-                r = subprocess.run([str(self.exe)], cwd=d, input="Cool.in\n",
-                                   capture_output=True, text=True,
-                                   timeout=timeout, env=env)
-            except subprocess.TimeoutExpired as e:
-                raise NSCoolError(f"NSCool timed out after {timeout} s") from e
-            log = r.stdout + r.stderr    # gfortran writes PAUSE to stderr
-            (d / "stdout.txt").write_text(log)
-            if keep is not None:
-                shutil.copytree(d, keep, symlinks=True, dirs_exist_ok=True)
-            if r.returncode != 0 or "Done" not in r.stdout or "PAUSE" in log.upper():
-                raise NSCoolError(f"NSCool failed (rc={r.returncode}):\n{log[-2000:]}")
-            m = re.search(r"nmbackend sx_p1s0 sx_n3p2 =\s*(\S+)\s+(\S+)", r.stdout)
-            if m is None or not np.allclose([float(m.group(1)), float(m.group(2))],
-                                            [gaps.sx_p1s0, gaps.sx_n3p2], rtol=1e-5):
-                raise NSCoolError("NSCool did not read the s_x values written "
-                                  f"({m.group(0) if m else 'no echo: unpatched build?'})")
-            curve = parse_teff_file(m1 / "Teff.dat")
+            self._setup(d, **opts)
+            self._exec(self.exe, d, "Cool.in\n", gaps, timeout, keep)
+            curve = parse_teff_file(d / "Model_1" / "Teff.dat")
             if star:
-                curve = curve._replace(star=parse_star_file(m1 / "Star.dat"))
+                curve = curve._replace(star=parse_star_file(d / "Model_1" / "Star.dat"))
             return curve
+
+    def isothermal(self, *, T_grid=(1e4, 1e10, 601), rho_b: float = 0.0,
+                   timeout: float = 600.0,
+                   keep: Optional[PathLike] = None, **kw) -> "IsothermalStar":
+        """C(T), L_nu(T), L_gamma(T) of the star with uniform redshifted T.
+
+        Takes the star and physics arguments of ``run`` and returns NSCool's
+        own heat capacity and luminosities summed over zones at each
+        redshifted temperature of the log grid ``T_grid = (T_min, T_max, n)``
+        (``NSCool_iso.out``, built from ``nscool_isothermal_tail.f``).
+        ``rho_b`` (g/cm^3) > ``rhosurf`` also fills ``T_in``, the temperature
+        at rho_b below a blanket at T_b = T (``isothermal_curve``).
+        """
+        if not self.iso_exe.is_file():
+            raise FileNotFoundError(f"{self.iso_exe} missing: rerun build_nscool.sh")
+        tmin, tmax, n = T_grid
+        opts = {k: v.default for k, v in inspect.signature(self.run).parameters.items()
+                if k not in ("timeout", "keep")}
+        unknown = set(kw) - set(opts)
+        if unknown:
+            raise TypeError(f"unknown arguments {sorted(unknown)}")
+        opts.update(kw)
+        with tempfile.TemporaryDirectory(dir=self.workroot) as d:
+            d = Path(d)
+            self._setup(d, **opts)
+            out = self._exec(self.iso_exe, d,
+                             f"Cool.in\n{int(n)} {tmin:.8e} {tmax:.8e} {rho_b:.8e}\n",
+                             opts["gaps"], timeout, keep)
+        return parse_isothermal(out)
+
+    @property
+    def iso_exe(self) -> Path:
+        return self.home / "Code" / "NSCool_iso.out"

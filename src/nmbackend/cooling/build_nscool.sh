@@ -30,11 +30,19 @@ rm -f NSCool/NSCool.out NSCool/Code/NSCool.out NSCool/Plot/Plot_Teff NSCool/Mode
 
 (cd NSCool/Code && make -s COMPILER="$FC" OPTIONS="$FFLAGS" NSCool.out >/dev/null)
 (cd NSCool/TOV && "$FC" $FFLAGS -o TOV TOV.f)
+# Isothermal-star scan: NSCool.f up to its output files, then our tail.
+(cd NSCool/Code \
+  && grep -q "INCLUDE 'NSCool_OPEN.inc.f'" NSCool.f \
+  && sed "/INCLUDE 'NSCool_OPEN.inc.f'/,\$d" NSCool.f > NSCool_iso.f \
+  && cat "$HERE/nscool_isothermal_tail.f" >> NSCool_iso.f \
+  && "$FC" $FFLAGS -o NSCool_iso.out NSCool_iso.f \
+       $(sed -n '/^DEPENDS/,/^#/p' makefile | tr -d '\\' | sed 's/DEPENDS *=//;/^#/d'))
 
 {
   echo "source: $URL"
   echo "sha256: $SHA256"
   echo "patch:  nscool_nmbackend.patch sha256 $(sha256sum "$HERE/nscool_nmbackend.patch" | cut -d' ' -f1)"
+  echo "iso:    nscool_isothermal_tail.f sha256 $(sha256sum "$HERE/nscool_isothermal_tail.f" | cut -d' ' -f1)"
   echo "fc:     $("$FC" --version | head -1)"
   echo "flags:  $FFLAGS"
   echo "host:   $(hostname)"
