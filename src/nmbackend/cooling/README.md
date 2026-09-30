@@ -36,7 +36,7 @@ The patch changes four files:
 | `Code/precool.f` (`get_Tc`) | in core zones, p1S0 and n3P2 gaps are evaluated at the Fermi momentum the star has at baryon density n/s_x; outside the core density range k_F scales as n^(1/3) from the nearest core zone; crust zones are not rescaled |
 | `TOV/TOV.f` | drop the hard-coded `/Users/dany/...` EOS prefix; call `gread` as the function it is (gfortran rejects `CALL`) |
 
-With s_x = 1 the patched binary reproduces the bundled Model_1 output exactly.
+With s_x = 1 the patched binary reproduces the bundled Model_1 output to the printed digits.
 
 ## Use
 
@@ -65,14 +65,11 @@ node-local disk.
 
 ## Isothermal star
 
-`NSCool.isothermal()` takes the same star and physics arguments as `run()`
-and returns NSCool's own heat capacity C, neutrino luminosity L_nu and photon
-luminosity L_gamma for a star whose redshifted temperature T is uniform, on a
-log grid of T. The build makes `Code/NSCool_iso.out` from the part of
-`NSCool.f` that reads the inputs and builds the star, plus
-`nscool_isothermal_tail.f`. The tail calls `neutrino`, `heating`,
-`specheat` and `fteff` as the time loop does and sums with the loop's
-weights: C = sum cv dV, L_nu = sum e^(2 phi) q_nu dV.
+`NSCool.isothermal()` takes the arguments of `run()` and returns NSCool's
+heat capacity C, L_nu and L_gamma for a star at uniform redshifted T, on a
+log grid of T. `Code/NSCool_iso.out` is the setup part of `NSCool.f` plus
+`nscool_isothermal_tail.f`, which calls `neutrino`, `heating`, `specheat`
+and `fteff` as the time loop does: C = sum cv dV, L_nu = sum e^(2 phi) q_nu dV.
 
 ```python
 from nmbackend.cooling import NSCool, isothermal_curve
@@ -81,11 +78,12 @@ c = isothermal_curve(s, blanket=True)   # t(T) = int C dT / (L_nu + L_gamma)
 c.t_yr, c.Teff_inf
 ```
 
-With `rho_b` set, the driver also marches NSCool's steady heat-flux equation
-from its outer boundary (T_b = T at 1e10 g/cm3) inward to rho_b, at
-L = L_gamma(T_b), with NSCool's conductivities. `blanket=True` then treats the
-star as isothermal only below rho_b. One scan of 961 temperatures with the crust march
-takes 1 s. The accuracy against full NSCool is in nmb-papers
+With `rho_b` set, the driver marches NSCool's steady flux equation from
+T_b = T at 1e10 g/cm3 in to rho_b at L = L_gamma(T_b). `blanket=True` then
+makes only the star below rho_b isothermal. A 961-point scan takes 1 s.
+Other approximations: envelope densities stay at NSCool's initial ones; the
+crust layer's C and L_nu use T_in; `C_core` sums zones i <= icore.
+Accuracy against full NSCool: nmb-papers
 `paper7_cooling_population/notes/RESULTS-C1-isothermal.md`.
 
 ## EOS table format (interface with W2, `nscool_io`)
@@ -125,7 +123,7 @@ the bundled profile and for a profile built by the driver's TOV call. The
 figure is `docs/cooling/nscool_validation.png`
 (`python -m nmbackend.cooling.validate --fig ...`).
 
-One curve takes 3.1 s wall on one core of ldas-pcdev11 (Xeon E5-2630 v4).
+One curve takes 3.1 s of wall time on one core of ldas-pcdev11 (Xeon E5-2630 v4).
 TOV adds 0.01 s.
 
 ## Notes for users
