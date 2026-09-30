@@ -73,3 +73,17 @@ def test_draw_makes_a_neutron_star():
     fam = build_family(t, default_hc_grid(t, 80), rtol=1e-7, atol=1e-9)
     mm = float(m_max(fam))
     assert np.isfinite(mm) and 1.0 < mm < 3.5
+
+
+def test_default_grid_starts_on_the_stable_branch():
+    """The minimum-mass star of the MetaModel crust sits at n_c = 0.093
+    fm^-3, above the old n_c = 0.07 grid start, whose first star had
+    M = 0.62, R = 1840 km (a true TOV solution, below the minimum mass)."""
+    from nmbackend.tov import build_family
+    from nmbackend.tov.family import default_hc_grid
+    t = draw_bridge_eos(np.random.default_rng(1), corr_frac=0.3)["table"]
+    fam = build_family(t, default_hc_grid(t, 40))
+    M = np.asarray(fam.M_msun)
+    top = int(np.argmax(np.where(np.asarray(fam.stable), M, -np.inf)))
+    assert np.all(np.diff(M[:top + 1]) > 0)
+    assert 0.08 < M[0] < 0.15 and float(fam.R_km[0]) < 100.0

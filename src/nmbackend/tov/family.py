@@ -27,16 +27,41 @@ class Family(NamedTuple):
     stable: jnp.ndarray      # bool mask: dM/dh_c > 0
 
 
-def default_hc_grid(table: EOSTable, n_models: int = 120, frac_lo: float = 0.02,
-                    frac_hi: float = 0.92, n_c_min: float = 0.07):
-    """A central-enthalpy grid spanning low-mass to near-maximum central density.
+def _mass_and_slope(table, hc):
+    return jax.jvp(lambda h: solve_structure(table, h, tidal=False, rtol=1e-6,
+                                             atol=1e-8).M_msun,
+                   (hc,), (jnp.ones_like(hc),))
 
-    The grid starts at the larger of ``frac_lo`` h_max and h(n = ``n_c_min``
-    fm^-3).  With a crust table, frac_lo h_max alone can fall deep in the
-    crust, on extended configurations far below the minimum-mass star."""
+
+# jitted at module level with the table as an argument: one compile per
+# table length, not one per table
+_probe_masses = jax.jit(jax.vmap(_mass_and_slope, in_axes=(None, 0)))
+
+
+def default_hc_grid(table: EOSTable, n_models: int = 120, frac_lo: float = 0.02,
+                    frac_hi: float = 0.92, n_c_min: float = 0.07,
+                    n_c_probe: float = 0.25, n_probe: int = 16):
+    """A central-enthalpy grid from the minimum-mass star to near-maximum
+    central density.
+
+    The search starts at the larger of ``frac_lo`` h_max and h(n = ``n_c_min``
+    fm^-3); with a crust table, frac_lo h_max alone falls deep in the crust.
+    The minimum-mass star can still lie above n_c_min (n_c = 0.093 fm^-3 for
+    the MetaModel crust), so ``n_probe`` structure-only solves up to
+    h(n = ``n_c_probe``) locate it and the grid starts at the first probe on
+    the rising branch.  ``n_probe=0`` skips the probe."""
     hmax = table.h[-1]
     h_lo = jnp.maximum(frac_lo * hmax,
                        jnp.interp(jnp.log(n_c_min), jnp.log(table.n), table.h))
+    if n_probe:
+        h_top = jnp.minimum(
+            frac_hi * hmax,
+            jnp.interp(jnp.log(n_c_probe), jnp.log(table.n), table.h))
+        probe = jnp.linspace(h_lo, jnp.maximum(h_top, h_lo), n_probe)
+        M, dM = _probe_masses(table, probe)
+        i = jnp.argmin(M)
+        h_lo = jnp.where(dM[i] > 0.0, probe[i],
+                         probe[jnp.minimum(i + 1, n_probe - 1)])
     return jnp.linspace(h_lo, frac_hi * hmax, n_models)
 
 
