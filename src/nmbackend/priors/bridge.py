@@ -257,7 +257,7 @@ def diffuse_mu_of_n(n_grid, mu, corr_frac, n_steps=40):
 def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
                     corr_frac=0.2, levels=9, X=None, n_L_fac=2.0,
                     n_term_fac=12.0, n_grid_pts=600, n_steps=40,
-                    n_table_pts=800):
+                    n_table_pts="auto"):
     """One stable-causal-consistent EOS draw bridging nuclear matter to pQCD.
 
     Parameters
@@ -273,8 +273,10 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     n_L_fac    : bridge start in units of n_sat (paper: 2).
     n_term_fac : truncation density for the returned stellar-structure table.
     n_table_pts : node count of the returned table, which adds nodes to the
-        raw (n, eps, p) (their count varies by a few per draw) with
-        :func:`nmbackend.eos.base.refine_table`; None keeps the raw nodes.
+        raw (n, eps, p) (their count varies per draw) with
+        :func:`nmbackend.eos.base.refine_table`.  "auto" is a bound on the raw
+        count that depends only on the settings (:func:`_table_pts_bound`);
+        None keeps the raw nodes.
 
     Returns dict with the combined (n, eps, p) arrays, the EOSTable, the anchor
     metadata, and the endpoint pressure mismatch diagnostic.
@@ -291,6 +293,7 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     else:
         n_lo = np.asarray(low_table["n"]); eps_lo = np.asarray(low_table["eps"])
         p_lo = np.asarray(low_table["p"])
+    n_lo_all = n_lo.size
     keep = n_lo < n_L
     n_lo, eps_lo, p_lo = n_lo[keep], eps_lo[keep], p_lo[keep]
     # anchor point at exactly n_L (interpolate the model)
@@ -338,6 +341,8 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     # lazy import: keeps this module importable without the (JAX) table machinery
     from ..eos.base import refine_table
     from ..eos.compose import eos_table_from_arrays
+    if n_table_pts == "auto":
+        n_table_pts = _table_pts_bound(n_lo_all, n_L, n_term, n_grid_pts)
     if n_table_pts is None:
         table = eos_table_from_arrays(n_all, eps_all, p_all, n_surface=None)
     else:       # NumPy until the length is fixed: no compile per raw length
@@ -350,6 +355,17 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
                             cs2=cs2),
                 meta=dict(X=X, corr_frac=corr_frac, mu_L=mu_L, p_L=p_L,
                           n_L=n_L, p_end_mismatch=float(p_end_mismatch)))
+
+
+def _table_pts_bound(n_low_table, n_L, n_term, n_grid_pts):
+    """Upper bound on the raw node count of :func:`draw_bridge_eos`: every
+    low-table node plus the bridge-grid nodes up to n_term for the smallest
+    pQCD density n_H over X in [1, 4].  Fixed for fixed settings."""
+    n_H = min(pqcd_anchor(x)[1] for x in np.geomspace(1.0, 4.0, 65))
+    if n_term >= n_H:
+        return n_low_table + n_grid_pts
+    frac = math.log(n_term / n_L) / math.log(n_H / n_L)
+    return n_low_table + int((n_grid_pts - 1) * frac) + 2
 
 
 def _pbar(total, desc):

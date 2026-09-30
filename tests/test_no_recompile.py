@@ -42,9 +42,9 @@ def _compiles(f):
 ], ids=["metamodel", "skyrme", "rmft", "ddrmf"])
 def test_eos_table_compiles_once(model, draws):
     _compiles(lambda: model().eos_table(draws[0]))
-    t1 = model().eos_table(draws[1])
-    assert _compiles(lambda: model().eos_table(draws[1])) == 0
-    assert np.all(np.isfinite(np.asarray(t1.p)))
+    out = []
+    assert _compiles(lambda: out.append(model().eos_table(draws[1]))) == 0
+    assert np.all(np.isfinite(np.asarray(out[0].p)))
 
 
 @pytest.mark.skipif(not _HAVE_DIFFRAX, reason="diffrax required")
@@ -63,3 +63,18 @@ def test_hybrid_family_compiles_once():
         return build_family(t, default_hc_grid(t, 20))
     _compiles(lambda: fam(80.0, 60.0))
     assert _compiles(lambda: fam(90.0, 55.0)) == 0
+
+
+def test_params_may_carry_labels():
+    # str / None entries (e.g. from a --params-file JSON) cannot be jit inputs
+    t0 = RMFTEOS().eos_table()
+    t1 = RMFTEOS().eos_table({"name": "GM1", "meta": None})
+    assert np.array_equal(np.asarray(t0.p), np.asarray(t1.p))
+
+
+def test_bridge_length_fixed_beyond_default_grid():
+    # raw counts here (856-889) exceed the default grid's 800
+    lens = {draw_bridge_eos(np.random.default_rng(s), corr_frac=0.3,
+                            n_term_fac=20.0, n_grid_pts=800)["table"].n.shape[0]
+            for s in (1, 2, 3)}
+    assert len(lens) == 1
