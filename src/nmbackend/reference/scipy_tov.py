@@ -149,8 +149,9 @@ def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
                     C=C, y=float(y), k2=float(k2), Lambda=float(Lam))
 
 
-def reference_sequence(table: EOSTable, h_c_array):
-    return [solve_reference(table, float(hc)) for hc in np.asarray(h_c_array)]
+def reference_sequence(table: EOSTable, h_c_array, **kw):
+    """``solve_reference`` over ``h_c_array``; ``kw`` (e.g. ``r_max``) is forwarded."""
+    return [solve_reference(table, float(hc), **kw) for hc in np.asarray(h_c_array)]
 
 
 def _hbeta_rhs(r, s, eos):
