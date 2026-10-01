@@ -79,9 +79,25 @@ def _k2_from_y_C(y, C):
     return num / den
 
 
+def _nan_point(h_c):
+    nan = float("nan")
+    return RefPoint(h_c=float(h_c), R_km=nan, M_km=nan, M_msun=nan, C=nan,
+                    y=nan, k2=nan, Lambda=nan)
+
+
+def _event_fired(sol):
+    """True iff the terminal event stopped ``sol`` (not r_max, not a failure)."""
+    return sol.status == 1 and sol.t_events[0].size > 0
+
+
 def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
                     r0=1e-4, r_max=60.0):
-    """Reference (R, M, k2, Lambda) at central pseudo-enthalpy h_c."""
+    """Reference (R, M, k2, Lambda) at central pseudo-enthalpy h_c.
+
+    If the surface is not reached by ``r_max`` (or the integrator fails), every
+    field except ``h_c`` is NaN.  Low-h_c stars on crust tables can have
+    R >> 60 km; pass a larger ``r_max`` for those.
+    """
     eos = _EOSInterp(table)
     eps_c, p_c = eos.central_from_hc(h_c)
 
@@ -120,6 +136,8 @@ def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
     sol = solve_ivp(rhs, (r0, r_max), [m0, p_c, H0, beta0],
                     method="RK45", rtol=rtol, atol=atol, events=hit_surface,
                     dense_output=False, max_step=r_max)
+    if not _event_fired(sol):
+        return _nan_point(h_c)
     R = float(sol.t[-1])
     m, _, H, beta = sol.y[:, -1]
     M = float(m)
@@ -164,7 +182,8 @@ def solve_reference_hybrid(hybrid, h_c, rtol=1e-8, atol=1e-10, r0=1e-4,
     inner, outer = hybrid.segments
     tr = hybrid.transition
     if h_c <= tr.h_t:                       # purely hadronic
-        return solve_reference(outer, h_c, rtol=rtol, atol=atol)
+        return solve_reference(outer, h_c, rtol=rtol, atol=atol, r0=r0,
+                               r_max=r_max)
 
     ei_in, ei_out = _EOSInterp(inner), _EOSInterp(outer)
     eps_c, p_c = ei_in.central_from_hc(h_c)
@@ -177,6 +196,8 @@ def solve_reference_hybrid(hybrid, h_c, rtol=1e-8, atol=1e-10, r0=1e-4,
     hit_pt.direction = -1
     s1 = solve_ivp(_hbeta_rhs, (r0, r_max), s0, args=(ei_in,), method="RK45",
                    rtol=rtol, atol=atol, events=hit_pt, max_step=r_max)
+    if not _event_fired(s1):
+        return _nan_point(h_c)
     r_d = float(s1.t[-1])
     m_d, p_d, H_d, beta_d = s1.y[:, -1]
 
@@ -192,6 +213,8 @@ def solve_reference_hybrid(hybrid, h_c, rtol=1e-8, atol=1e-10, r0=1e-4,
     s2 = solve_ivp(_hbeta_rhs, (r_d, r_max), [m_d, p_d, H_d, beta_d],
                    args=(ei_out,), method="RK45", rtol=rtol, atol=atol,
                    events=hit_surface, max_step=r_max)
+    if not _event_fired(s2):
+        return _nan_point(h_c)
     R = float(s2.t[-1])
     m, _, H, beta = s2.y[:, -1]
     M = float(m)
