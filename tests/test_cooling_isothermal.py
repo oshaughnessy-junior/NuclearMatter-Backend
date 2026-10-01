@@ -1,4 +1,7 @@
-"""Isothermal-star scan (NSCool_iso.out) and the isothermal cooling curve."""
+"""Isothermal-star scan (NSCool_iso.out) and the isothermal cooling curve.
+Binary tests skip unless NSCool is built; NSCOOL_REQUIRED=1 (CI) makes them run."""
+import os
+
 import numpy as np
 import pytest
 
@@ -16,7 +19,8 @@ ISO   1.00000000E+008  7.28E+037  8.35E+033  0.0E+000  7.90E+032  8.57E+005  5.5
 """
 
 iso_built = pytest.mark.skipif(
-    not (default_home() / "Code" / "NSCool_iso.out").is_file(),
+    not (default_home() / "Code" / "NSCool_iso.out").is_file()
+    and not os.environ.get("NSCOOL_REQUIRED"),
     reason="NSCool_iso.out not built (nmbackend/cooling/build_nscool.sh)")
 
 

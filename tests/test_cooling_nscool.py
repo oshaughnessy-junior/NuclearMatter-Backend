@@ -1,4 +1,7 @@
-"""NSCool driver (nmbackend.cooling).  Binary tests skip unless NSCool is built."""
+"""NSCool driver (nmbackend.cooling).  Binary tests skip unless NSCool is built;
+NSCOOL_REQUIRED=1 (CI) makes them run, so a failed build fails them."""
+import os
+
 import numpy as np
 import pytest
 
@@ -13,7 +16,8 @@ _TEFF = """ EOS
 """
 
 built = pytest.mark.skipif(not ((default_home() / "Code" / "NSCool.out").is_file()
-                                and (default_home() / "TOV" / "TOV").is_file()),
+                                and (default_home() / "TOV" / "TOV").is_file())
+                           and not os.environ.get("NSCOOL_REQUIRED"),
                            reason="NSCool not built (nmbackend/cooling/build_nscool.sh)")
 
 
