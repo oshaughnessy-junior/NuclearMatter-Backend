@@ -50,7 +50,10 @@ def enthalpy_at_energy(table, energy):
                 above = fun(mid) > 0
                 return jnp.where(above, a, mid), jnp.where(above, mid, b)
             a, b = jax.lax.fori_loop(0, 48, step, (lo, hi))
-            return .5*(a+b)
+            mid = .5*(a+b)
+            candidates = jnp.stack((a, mid, b))
+            residuals = jax.vmap(fun)(candidates)
+            return candidates[jnp.argmin(jnp.abs(residuals))]
         h = jax.lax.custom_root(f, .5*(lo+hi), solve, lambda g, y: y/g(jnp.ones_like(y)))
         supported = jnp.isfinite(h) & (jnp.abs(f(h)) <= tolerance)
         return jnp.where(supported, h, jnp.nan)

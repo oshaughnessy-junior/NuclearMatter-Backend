@@ -131,3 +131,21 @@ def test_stellar_coverage_is_distinct_from_eos_coverage():
         assert np.all(np.isnan(weights))
     invalid = s._replace(ephi=s.ephi.at[-1].set(jnp.inf))
     assert np.all(np.isnan(np.asarray(geometry_at_volume(invalid, .2, .1))))
+
+
+def test_physical_eos_contacts_at_bisection_precision_limit():
+    from nmbackend.constants import MEVFM3_TO_GEOM
+    from nmbackend.eos import MetaModelEOS
+    from nmbackend.eos.crust import _G_CM3_TO_MEVFM3
+
+    # Supported monotone intervals whose midpoint residual can miss the tolerance.
+    rho = jnp.array([557028487e6, 502078121e6, 360750247e6, 355662730e6,
+                     315644319e6, 260351642e6, 253420918e6, 241418729e6, 205050564e6])
+    model = MetaModelEOS(muons=True, s_high='power', n_points_low=240, n_points_tail=160)
+    table = model.eos_table({'L_sym': 100., 'K_sym': -100.})
+    energy = rho * _G_CM3_TO_MEVFM3 * MEVFM3_TO_GEOM
+    roots = jax.jit(jax.vmap(lambda e: enthalpy_at_energy(table, e)))(energy)
+    assert np.all(np.isfinite(roots))
+    recovered = jax.vmap(lambda h: table.at_h(h)[0])(roots)
+    # Separate polynomial evaluation has its own rounding budget.
+    np.testing.assert_allclose(recovered, energy, rtol=1e-13, atol=0.)
