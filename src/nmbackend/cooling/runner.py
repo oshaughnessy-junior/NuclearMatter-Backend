@@ -25,6 +25,7 @@ from typing import NamedTuple, Optional, Union
 import numpy as np
 
 __all__ = ["GapModel", "CoolingCurve", "IsothermalStar", "NSCool", "NSCoolError",
+           "ZoneDump", "parse_zone_dump",
            "default_home", "parse_teff_file", "parse_star_file",
            "parse_isothermal"]
 
@@ -222,6 +223,75 @@ def parse_isothermal(text: str) -> IsothermalStar:
         a = np.vstack([a, a[0]])
     return IsothermalStar(*a, float(m.group(1)), float(m.group(2)),
                           float(m.group(3)), float(e.group(1)))
+
+
+_ZST_COLS = ("i", "idurca_np", "rad", "rho", "pres", "nb", "debar", "dvol",
+             "ephi", "a2ephin", "emas", "Ye", "Ymu", "Yn", "Yp", "kfe", "kfm",
+             "kfn", "kfp", "mstn", "mstp", "Tcn", "Tcp", "A_cell", "A_ion",
+             "Z_ion", "v_ion", "fhad")
+_ZON_COLS = ("T", "qnu", "qeebrem", "qnpb", "qplasma", "qsynch", "qbubble",
+             "qpair", "qphoto", "qbrem_nn", "qmurca_nucl", "qbrem_nucl",
+             "qmurca_hyp", "qbrem_hyp", "qdurca_np", "qdurca_lap", "qdurca_smn",
+             "qdurca_smla", "qdurca_sms0", "qfast", "qdurca_q", "qmurca_q",
+             "qpbf_n1s0", "qpbf_n3p2", "qpbf_p1s0", "qpbf_q", "cv", "cv_n",
+             "cv_p", "cv_e", "cv_m", "cv_l", "cv_sm", "cv_s0", "cv_sp", "cv_q",
+             "cv_ion", "lam", "fp")
+
+
+class ZoneDump(NamedTuple):
+    """Per-zone NSCool physics at a few uniform redshifted temperatures.
+
+    ``star``: T-independent arrays on zones i = 0..imax+1 (NSCool units:
+    cm, g/cm^3, fm^-3 for nb, fm^-1 for k_F, K for Tc).  An unpaired zone
+    has Tc = 1 K times the channel's s_y (FP1S0, FN3P2), so test T < Tc,
+    not Tc == 1.  Zone imax+1 holds only dvol; rho is NSCool's initial
+    profile, which its time loop changes in the envelope.  ``zones``: indices of the temperature (odd) zones.
+    ``terms``: arrays of shape (n_T, n_zones) for each column of
+    ``_ZON_COLS``, at the local temperature T / e^phi; q in erg/cm^3/s,
+    cv in erg/cm^3/K, lam in erg/cm/s/K.  ``fp`` is the flux-equation
+    coefficient of the C1 crust march (lam bar / L_sun).
+    """
+    T: np.ndarray             # redshifted temperatures of the dump
+    zones: np.ndarray
+    star: dict
+    terms: dict
+    imax: int
+    icore: int
+    idrip: int
+    isf: int                  # last zone with n3P2 pairing (NSCool's convention)
+    rhocore: float
+    rhodrip: float
+    gs14: float
+    eta_nscool: float
+    qimp: float
+    radius_cm: float
+    iso: Optional[IsothermalStar] = None
+
+
+def parse_zone_dump(text: str) -> ZoneDump:
+    """Parse the ZSC/ZST/ZON lines of ``NSCool_iso.out`` (``NSCool.zone_dump``)."""
+    lines = text.splitlines()
+    sc = [l.split()[1:] for l in lines if l.startswith("ZSC ")]
+    st = np.array([[float(x) for x in l.split()[1:]] for l in lines
+                   if l.startswith("ZST ")])
+    zon = np.array([[float(x) for x in l.split()[1:]] for l in lines
+                    if l.startswith("ZON ")])
+    if len(sc) != 1 or not len(st) or not len(zon):
+        raise NSCoolError("no zone dump in NSCool_iso output")
+    if st.shape[1] != len(_ZST_COLS) or zon.shape[1] != 2 + len(_ZON_COLS):
+        raise NSCoolError("zone dump columns do not match the reader")
+    imax, icore, idrip, isf = (int(x) for x in sc[0][:4])
+    rhocore, rhodrip, gs14, eta, qimp, radius = (float(x) for x in sc[0][4:])
+    nT = int(zon[:, 0].max())
+    zones = zon[zon[:, 0] == 1, 1].astype(int)
+    a = zon[:, 2:].reshape(nT, zones.size, len(_ZON_COLS))
+    terms = {k: a[:, :, j] for j, k in enumerate(_ZON_COLS)}
+    star = {k: st[:, j] for j, k in enumerate(_ZST_COLS)}
+    for k in ("i", "idurca_np"):
+        star[k] = star[k].astype(int)
+    iso = parse_isothermal(text) if any(l.startswith("ISO ") for l in lines) else None
+    return ZoneDump(terms["T"][:, 0], zones, star, terms, imax, icore, idrip,
+                    isf, rhocore, rhodrip, gs14, eta, qimp, radius, iso)
 
 
 _I_DAT = """PRINT OUT CONTROL:----------------------------------------
@@ -478,6 +548,35 @@ class NSCool:
                              f"Cool.in\n{int(n)} {tmin:.8e} {tmax:.8e} {rho_b:.8e}\n",
                              opts["gaps"], timeout, keep)
         return parse_isothermal(out)
+
+    def zone_dump(self, T, *, T_grid=(1e8, 1e9, 2), rho_b: float = 0.0,
+                  timeout: float = 600.0, keep: Optional[PathLike] = None,
+                  **kw) -> ZoneDump:
+        """Every term NSCool sums, zone by zone, at uniform redshifted T.
+
+        ``T`` is a sequence of redshifted temperatures (K).  Takes the star
+        and physics arguments of ``run``.  The isothermal scan on ``T_grid``
+        (with ``rho_b``) comes back as ``ZoneDump.iso``.
+        """
+        if not self.iso_exe.is_file():
+            raise FileNotFoundError(f"{self.iso_exe} missing: rerun build_nscool.sh")
+        T = np.atleast_1d(np.asarray(T, float))
+        tmin, tmax, n = T_grid
+        opts = {k: v.default for k, v in inspect.signature(self.run).parameters.items()
+                if k not in ("timeout", "keep")}
+        unknown = set(kw) - set(opts)
+        if unknown:
+            raise TypeError(f"unknown arguments {sorted(unknown)}")
+        opts.update(kw)
+        stdin = (f"Cool.in\n{int(n)} {tmin:.8e} {tmax:.8e} {rho_b:.8e}\n{T.size}\n"
+                 + "".join(f"{t:.10e}\n" for t in T))
+        with tempfile.TemporaryDirectory(dir=self.workroot) as d:
+            d = Path(d)
+            self._setup(d, **opts)
+            out = self._exec(self.iso_exe, d, stdin, opts["gaps"], timeout, keep)
+        if "ZSC " not in out:
+            raise NSCoolError("NSCool_iso.out wrote no zone dump: rerun build_nscool.sh")
+        return parse_zone_dump(out)
 
     @property
     def iso_exe(self) -> Path:
