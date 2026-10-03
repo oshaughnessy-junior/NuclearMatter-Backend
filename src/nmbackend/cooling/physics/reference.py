@@ -23,6 +23,10 @@ GAPS = {
     "zhou": GapModel(sx_p1s0=0.8, sy_p1s0=0.4),
     "zhou_no3p2": GapModel(n3p2=0, sx_p1s0=0.8, sy_p1s0=0.4),
     "c_ccdk": GapModel(n3p2=103, p1s0=7, sx_p1s0=2.0),
+    # neutron pairing alone, so zone isf's neutron factor is not hidden by min(R_n, R_p)
+    "n_only": GapModel(p1s0=0),
+    # p1S0 alone, kept open in the dUrca core: the proton-only dUrca branch
+    "p_ccdk": GapModel(n1s0=0, n3p2=0, p1s0=7, sx_p1s0=2.0),
     # the remaining supported codes, with both scalings on n3P2
     "ccdk_n": GapModel(n1s0=2, n3p2=102, p1s0=7, sx_n3p2=1.3, sy_n3p2=0.7, sx_p1s0=1.5),
 }

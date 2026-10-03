@@ -26,7 +26,7 @@ from ._spline import natural_y2_matrix, spline_y2, splint2
 from .superfluid import below, f32, fexp, u_1s0, u_3p2b
 
 __all__ = ["murca", "brem", "durca", "durca_flag", "r_durca", "pbf_1s0",
-           "pbf_n3p2", "sf_suppression_table"]
+           "pbf_n3p2", "pbf_neutron", "sf_suppression_table"]
 
 _PI = 3.14159265
 
@@ -109,6 +109,7 @@ def brem(T, kfn, kfp, mstn, mstp, tcn, tcp, i, isf):
 # ---- direct Urca ---------------------------------------------------------
 def durca_flag(kfe, kfm, kfn, kfp):
     """NSCool idurca_np: 0 closed, 1 electron triangle, 2 electron and muon."""
+    kfe, kfm, kfn, kfp = (jnp.asarray(x) for x in (kfe, kfm, kfn, kfp))
     tri = lambda a, b, c: (a < b + c) & (b < a + c) & (c < a + b)
     e = tri(kfp, kfn, kfe)
     mu = e & tri(kfp, kfn, kfm)
@@ -154,7 +155,8 @@ def sf_suppression_table(path=None):
 
     log10 R(log10 tau_p, log10 tau_n) for dUrca with p1S0 and n3P2 pairing.
     NSCool has no licence, so the table is read from the NSCool build
-    (``build_nscool.sh``), not shipped with nmbackend.
+    (``build_nscool.sh``), not shipped with nmbackend.  ``durca`` needs it
+    even for stars without dUrca; the default path is fixed at first use.
     """
     if path is None:
         from ..runner import default_home
@@ -197,8 +199,10 @@ def r_durca(T, tcn, tcp, i, isf, table=None):
 def durca(T, kfe, kfm, kfn, kfp, mstn, mstp, nb, Ye, Ymu, tcn, tcp, i, isf, table=None):
     """n-p direct Urca with electrons, plus muons where their triangle closes."""
     flag = durca_flag(kfe, kfm, kfn, kfp)
+    mu = flag == 2
+    ymu = jnp.where(mu, jnp.abs(Ymu), 1.0)        # Ymu = 0: keep d/dYmu finite
     lep = ((jnp.abs(Ye) * nb / 0.16) ** (1.0 / 3.0)
-           + jnp.where(flag == 2, (jnp.abs(Ymu) * nb / 0.16) ** (1.0 / 3.0), 0.0))
+           + jnp.where(mu, (ymu * nb / 0.16) ** (1.0 / 3.0), 0.0))
     q = 4.24e27 * mstn * mstp * (T / 1e9) ** 6 * lep
     return jnp.where(flag > 0, q * r_durca(T, tcn, tcp, i, isf, table), 0.0)
 
@@ -246,3 +250,11 @@ def pbf_n3p2(T, tc, mst, kf, ca=0.5):
     m, mst = m & (mst > 0), jnp.where(mst > 0, mst, 1.0)
     v = jnp.sqrt(1.0 - tau) * (0.7893 + 1.764 / tau)
     return _pbf(T, kf, mst, ca * 1.26 ** 2, _ctrl_3p2b, m, v)
+
+
+def pbf_neutron(T, tcn, mstn, kfn, i, isf, ca=0.5):
+    """Neutron pair breaking as neutrino.f dispatches it: (n1S0 for i > isf,
+    n3P2 for i <= isf).  Applies in the crust as well as the core."""
+    q1 = jnp.where(i > isf, pbf_1s0(T, tcn, mstn, kfn), 0.0)
+    q3 = jnp.where(i <= isf, pbf_n3p2(T, tcn, mstn, kfn, ca), 0.0)
+    return q1, q3
