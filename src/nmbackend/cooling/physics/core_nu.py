@@ -25,7 +25,7 @@ import numpy as np
 from ._spline import natural_y2_matrix, spline_y2, splint2
 from .superfluid import below, f32, fexp, u_1s0, u_3p2b
 
-__all__ = ["murca", "brem", "durca", "durca_flag", "r_durca", "pbf_1s0",
+__all__ = ["murca", "brem", "durca", "durca_unpaired_channel", "durca_flag", "r_durca", "pbf_1s0",
            "pbf_n3p2", "pbf_neutron", "sf_suppression_table"]
 
 _PI = 3.14159265
@@ -196,14 +196,22 @@ def r_durca(T, tcn, tcp, i, isf, table=None):
     return jnp.where(sn & sp, r_both, jnp.where(sn, r_n, jnp.where(sp, r_p, 1.0)))
 
 
+def durca_unpaired_channel(T, mstn, mstp, nb, Yl):
+    """Unpaired n-p direct-Urca amplitude for one lepton, without a threshold.
+
+    Mirrors ``nudurca_h``'s n-p channel; the caller supplies its active domain.
+    """
+    present = jnp.abs(Yl) > 0
+    density = jnp.where(present, jnp.abs(Yl) * nb / 0.16, 1.)
+    return 4.24e27 * mstn * mstp * (T / 1e9)**6 * jnp.where(present, density**(1./3.), 0.)
+
+
 def durca(T, kfe, kfm, kfn, kfp, mstn, mstp, nb, Ye, Ymu, tcn, tcp, i, isf, table=None):
     """n-p direct Urca with electrons, plus muons where their triangle closes."""
     flag = durca_flag(kfe, kfm, kfn, kfp)
     mu = flag == 2
-    ymu = jnp.where(mu, jnp.abs(Ymu), 1.0)        # Ymu = 0: keep d/dYmu finite
-    lep = ((jnp.abs(Ye) * nb / 0.16) ** (1.0 / 3.0)
-           + jnp.where(mu, (ymu * nb / 0.16) ** (1.0 / 3.0), 0.0))
-    q = 4.24e27 * mstn * mstp * (T / 1e9) ** 6 * lep
+    q = durca_unpaired_channel(T, mstn, mstp, nb, Ye)
+    q += jnp.where(mu, durca_unpaired_channel(T, mstn, mstp, nb, Ymu), 0.)
     return jnp.where(flag > 0, q * r_durca(T, tcn, tcp, i, isf, table), 0.0)
 
 
