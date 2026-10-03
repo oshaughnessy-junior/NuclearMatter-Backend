@@ -50,4 +50,4 @@ Use the existing NSCool builder in this branch. Our separate installation is `/h
     python -m pytest tests/test_cooling_core_conduct.py tests/test_cooling_physics_star.py -q
     python examples/core_conduct_validation.py /path/to/results
 
-Raw measurements: `core-conduct-results.json`. Science, numerical and code-style adversarial reviews checked the source prescription, model limitations, species and pairing branches, boundary indexing, inactive-branch AD, iteration convergence and test scope. Their requested corrections were incorporated.
+Raw measurements: local `core-conduct-results.json`; the PR stores the same measurements in `docs/cooling/core_transport_results.json`. Science, numerical and code-style adversarial reviews checked the source prescription, model limitations, species and pairing branches, boundary indexing, inactive-branch AD, iteration convergence and test scope. Their requested corrections were incorporated.
