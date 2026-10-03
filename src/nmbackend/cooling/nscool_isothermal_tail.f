@@ -114,7 +114,7 @@ c     the number of temperatures, then one redshifted T per line.
 c     ZSC: scalars; ZST: T-independent zone arrays (0 to imax+1);
 c     ZON: every term NSCool sums, at odd (temperature) zones.
       jnd=0
-      read(5,*,end=200,err=200) jnd
+      read(5,*,end=200) jnd
  200  continue
       if (jnd.gt.0) then
        write(6,'(a4,4i7,1p6e17.8e3)') 'ZSC ',imax,icore,idrip,isf,

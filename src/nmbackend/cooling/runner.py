@@ -242,8 +242,10 @@ class ZoneDump(NamedTuple):
     """Per-zone NSCool physics at a few uniform redshifted temperatures.
 
     ``star``: T-independent arrays on zones i = 0..imax+1 (NSCool units:
-    cm, g/cm^3, fm^-3 for nb, fm^-1 for k_F, K for Tc; Tc = 1 K means
-    unpaired).  ``zones``: indices of the temperature (odd) zones.
+    cm, g/cm^3, fm^-3 for nb, fm^-1 for k_F, K for Tc).  An unpaired zone
+    has Tc = 1 K times the channel's s_y (FP1S0, FN3P2), so test T < Tc,
+    not Tc == 1.  Zone imax+1 holds only dvol; rho is NSCool's initial
+    profile, which its time loop changes in the envelope.  ``zones``: indices of the temperature (odd) zones.
     ``terms``: arrays of shape (n_T, n_zones) for each column of
     ``_ZON_COLS``, at the local temperature T / e^phi; q in erg/cm^3/s,
     cv in erg/cm^3/K, lam in erg/cm/s/K.  ``fp`` is the flux-equation

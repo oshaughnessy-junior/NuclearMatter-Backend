@@ -51,6 +51,32 @@ def test_zone_sums_equal_the_scan(dump):
     crust = z > dump.icore
     np.testing.assert_allclose((t["qnu"] * w)[:, crust].sum(1),
                                dump.iso.L_nu_crust, rtol=1e-7)
+    mb = t["qmurca_nucl"] + t["qbrem_nucl"] + t["qmurca_hyp"] + t["qbrem_hyp"] + t["qmurca_q"]
+    pbf = t["qpbf_n1s0"] + t["qpbf_n3p2"] + t["qpbf_p1s0"] + t["qpbf_q"]
+    np.testing.assert_allclose((mb * w).sum(1), dump.iso.L_murca_brem, rtol=1e-7)
+    np.testing.assert_allclose((pbf * w).sum(1), dump.iso.L_pbf, rtol=1e-7)
+
+
+def test_columns_carry_their_physics(dump):
+    """Each column is zero where its process is off, so a swapped label fails."""
+    st, z, t = dump.star, dump.zones, dump.terms
+    core = z <= dump.icore
+    T = t["T"] / st["ephi"][z]
+    on = lambda k: t[k] != 0
+    assert np.array_equal(on("cv_m")[0], st["Ymu"][z] > 0)
+    for k in ("cv_ion", "qplasma", "qnpb", "qeebrem"):
+        assert not on(k)[:, core].any() and on(k)[:, ~core].any(), k
+    for k in ("qmurca_nucl", "qbrem_nucl", "cv_p"):
+        assert not on(k)[:, ~core].any() and on(k)[:, core].all(), k
+    assert not on("qpbf_n3p2")[:, z > dump.isf].any()
+    # pair breaking only below Tc (it underflows to 0 far below)
+    n1 = (T <= st["Tcn"][z]) & (z > dump.isf)
+    assert on("qpbf_n1s0").any() and not (on("qpbf_n1s0") & ~n1).any()
+    p1 = T <= st["Tcp"][z]
+    assert not (on("qpbf_p1s0") & ~p1).any()
+    assert on("qpbf_p1s0")[(T > 0.5 * st["Tcp"][z]) & p1].all()
+    assert not on("qbrem_nn")[:, core | (st["rho"][z] < dump.rhodrip)].any()
+    np.testing.assert_allclose(t["fp"], t["lam"] * st["nb"][z] / 3.826e33, rtol=1e-6)
 
 
 def test_star_arrays(dump):
