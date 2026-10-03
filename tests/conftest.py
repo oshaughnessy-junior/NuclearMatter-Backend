@@ -48,7 +48,9 @@ def nscool_probe(tmp_path_factory):
                    check=True)
 
     def run(rows):
-        text = "".join(f"{k} {a!r} {b!r} {c!r} {d!r}\n" for k, a, b, c, d in rows)
+        # NumPy scalar repr includes a constructor; Fortran needs numeric text.
+        text = "".join(f"{k} " + " ".join(format(float(v), ".17g") for v in (a, b, c, d))
+                       + "\n" for k, a, b, c, d in rows)
         out = subprocess.run([str(exe)], input=text, capture_output=True, text=True,
                              cwd=code.parent, check=True).stdout.split()
         return np.array([float(x) for x in out])
