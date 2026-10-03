@@ -21,6 +21,7 @@ c = isothermal_curve(np.logspace(4, 10, 961), s, tc, eta=1e-9, rho_b=1.6e14)
 | `crust_nu` | `neebrem`, `npb_new`, `nplasma`, `nubrem_crust_nn` |
 | `heat` | `specheat`, `cvt_deg`, `cvion` |
 | `conduct` | `con_crust` (ICON_CRUST = 3) |
+| `core_conduct` | `con_core_lep`, lepton-only `con_core` sum (ICON_CORE = 2) |
 | `envelope` | `fteff_acc` |
 | `star` | the C1 driver's sums and crust march |
 
@@ -45,12 +46,33 @@ have not checked them against the paper's equation.
 | 7 | `con_crust` | impurity scattering in the solid only | (src) |
 | 8 | `NSCool_READ` | ETA divided by 0.443 before PCY97 | PCY97 Eq. A5 (nmb-papers OPEN-eta-0443.md) |
 
-## Known difference
+## Core transport and boundary coverage
 
-With `rho_b = rhocore`, the C1 driver's last march step reaches zone
-`icore`, where NSCool uses its core conductivity (C4). We use the crust
-formula there, and T_in differs by 2e-4 below 1e9 K and 0.17% at 1e10 K.
-Inside the crust the march matches to 1e-8. Larger rho_b is refused.
+`core_conduct.lambda_core(T, kfe, kfm, kfp, mstp, tcp)` implements the
+NSCool 2009 electron–muon thermal conductivity, including the corrected
+proton-pairing scattering fit. It uses local temperature and Fermi
+momenta, with proton Landau/bare mass ratio. It returns scalar, unmagnetized
+conductivity in erg cm^-1 s^-1 K^-1; inputs broadcast under JAX.
+
+`zone_terms` now returns conductivity in core and crust zones. With
+`rho_b = rhocore`, the last crust-march step uses actual core conductivity
+and the star's proton gap at `icore`, replacing the former crust proxy.
+`crust_march` therefore requires the star's `tc` keyword. Larger `rho_b`
+remains outside this crust-blanket approximation and is refused.
+
+This reproduces a named reference prescription, not universal core
+transport. NSCool calls its baryon conductivity routine but deliberately
+returns only the electron and muon sum; neutron conduction can be important.
+The proton-superconductivity fit uses the older Pippard-limit screening.
+[Shternin & Yakovlev 2007](https://arxiv.org/abs/0705.1963) describes the
+lepton model; [Shternin 2018](https://arxiv.org/abs/1805.06000) improves
+screening outside that limit. Add such an alternative separately from
+reference-parity work. Hyperons and magnetic anisotropy are excluded.
+
+The exactly absent-muon branch is preserved. Derivatives at species
+onsets and the pairing transition are outside the smooth-AD contract;
+scalar values at Tc match the reference. Gap-helper clipping keeps
+unused branches finite.
 
 Differentiate in log eta: at eta = 0 the gradient is 0 while the one-sided
 derivative diverges. `ZoneDump.eta_nscool` is PCY97's eta (ETA / 0.443).
