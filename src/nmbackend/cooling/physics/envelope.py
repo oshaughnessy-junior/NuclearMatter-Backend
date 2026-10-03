@@ -2,7 +2,9 @@
 
 As NSCool's ``fteff_acc``.  ``eta`` here is PCY97's eta = g_s14^2 Delta M / M.
 NSCool divides its input ETA by 0.443 before this formula
-(nmb-papers OPEN-eta-0443.md), so NSCool ETA = 0.443 eta.
+(see physics/README.md, envelope normalization), so NSCool ETA = 0.443 eta.
+Steiner interprets the fixed factor as a reference-gravity normalization;
+it is not recomputed from the current star's gs14.
 """
 from __future__ import annotations
 
