@@ -7,7 +7,7 @@ import pytest
 
 from nmbackend.cooling import (GapModel, IsothermalStar, NSCool, default_home,
                                isothermal_curve, parse_isothermal)
-from nmbackend.cooling.isothermal import YEAR_S
+from nmbackend.cooling.isothermal import YEAR_S, IsothermalCurve
 
 _OUT = """ nmbackend sx_p1s0 sx_n3p2 =   1.0000000000000000        1.0000000000000000
 nmbackend isothermal scan
@@ -102,3 +102,16 @@ def test_n3p2_axial_coefficient_scales_pbf(nscool):
     assert on.sum() > 5
     np.testing.assert_allclose(old.L_pbf[on] / new.L_pbf[on], 4.0, rtol=1e-7)
     np.testing.assert_allclose(old.L_murca_brem, new.L_murca_brem, rtol=1e-12)
+
+
+def test_curve_interpolation_requires_age_support():
+    ages = np.array([10., 1000.])
+    temperatures = np.array([1e6, 1e5])
+    curve = IsothermalCurve(ages, temperatures, temperatures, temperatures, temperatures)
+    np.testing.assert_allclose(curve.at([10., 100., 1000.]), [1e6, np.sqrt(1e11), 1e5])
+    for query in (1., 1e6, 0., np.nan):
+        with pytest.raises(ValueError):
+            curve.at(query)
+    bad = curve._replace(t_yr=ages[::-1])
+    with pytest.raises(ValueError, match="increasing"):
+        bad.at(100.)
