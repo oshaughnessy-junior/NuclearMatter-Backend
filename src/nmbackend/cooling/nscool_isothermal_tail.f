@@ -109,6 +109,58 @@ c      March the flux equation inward from zone imax to rho_b.
        write(6,'(a4,1p12e17.8e3)') 'ISO ',tt,c_tot,l_nu,l_h,l_g,te_inf,
      1       l_du,l_mb,l_pbf,l_cr,c_core,tcur
       end do
+c     Optional per-zone dump (for the JAX physics tests): a line with
+c     the number of temperatures, then one redshifted T per line.
+c     ZSC: scalars; ZST: T-independent zone arrays (0 to imax+1);
+c     ZON: every term NSCool sums, at odd (temperature) zones.
+      jnd=0
+      read(5,*,end=200,err=200) jnd
+ 200  continue
+      if (jnd.gt.0) then
+       write(6,'(a4,4i7,1p6e17.8e3)') 'ZSC ',imax,icore,idrip,isf,
+     1   rhocore,rhodrip,gs14,eta,qimp,radius
+       do i=0,imax+1
+        write(6,'(a4,2i6,1p26e17.8e3)') 'ZST ',i,idurca_np(i),
+     1   rad(i),rrho(i),pres(i),bar(i),debar(i),dvol(i),ephi(i),
+     2   a2ephin(i),emas(i),yelect(i),ymuon(i),yneutr(i),yprot(i),
+     3   kfe(i),kfm(i),kfn(i),kfp(i),mstn(i),mstp(i),tcn(i),tcp(i),
+     4   a_cell(i),a_ion(i),z_ion(i),v_ion(i),fhad(i)
+       end do
+      end if
+      do jd=1,jnd
+       read(5,*) tt
+       do i=1,imax,2
+        t=tt/ephi(i)
+        d=rrho(i)
+        call neutrino(i,t,d,a_cell(i),z_ion(i),qnu(i),
+     1    qeebrem(i),qnpb(i),qplasma(i),qsynch(i),qbubble(i),
+     1    qpair(i),qphoto(i),qbrem_nn(i),
+     2    qmurca_nucl(i),qbrem_nucl(i),qmurca_hyp(i),qbrem_hyp(i),
+     3    qdurca_np(i),qdurca_lap(i),
+     3    qdurca_smn(i),qdurca_smla(i),qdurca_sms0(i),
+     4    qfast(i),
+     5    qdurca_q(i),qmurca_q(i),
+     6    qpbf_n1s0(i),qpbf_n3p2(i),qpbf_p1s0(i),qpbf_q(i),
+     7    debug,naa)
+        call specheat(i,t,d,a_cell(i),z_ion(i),cv(i),
+     1       cv_n(i),cv_p(i),cv_e(i),cv_m(i),
+     2       cv_l(i),cv_sm(i),cv_s0(i),cv_sp(i),
+     3       cv_q(i),cv_ion(i))
+        call conduct(i,t,d,a_cell(i),a_ion(i),z_ion(i),qimp,
+     1       nbfield2(i),sigx,xlam,0.d0,nues,nuel)
+        write(6,'(a4,2i6,1p39e17.8e3)') 'ZON ',jd,i,tt,qnu(i),
+     1    qeebrem(i),qnpb(i),qplasma(i),qsynch(i),qbubble(i),
+     1    qpair(i),qphoto(i),qbrem_nn(i),
+     2    qmurca_nucl(i),qbrem_nucl(i),qmurca_hyp(i),qbrem_hyp(i),
+     3    qdurca_np(i),qdurca_lap(i),
+     3    qdurca_smn(i),qdurca_smla(i),qdurca_sms0(i),
+     4    qfast(i),qdurca_q(i),qmurca_q(i),
+     6    qpbf_n1s0(i),qpbf_n3p2(i),qpbf_p1s0(i),qpbf_q(i),
+     7    cv(i),cv_n(i),cv_p(i),cv_e(i),cv_m(i),
+     8    cv_l(i),cv_sm(i),cv_s0(i),cv_sp(i),cv_q(i),cv_ion(i),
+     9    xlam,fpzone(i,tt,ephi)
+       end do
+      end do
       print *,'Done !'
       stop
  9997 continue

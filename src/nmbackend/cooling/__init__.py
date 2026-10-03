@@ -4,9 +4,10 @@ See README.md in this directory for the build and the input formats.
 """
 from .isothermal import IsothermalCurve, isothermal_curve
 from .runner import (CoolingCurve, GapModel, IsothermalStar, NSCool, NSCoolError,
-                     default_home, parse_isothermal, parse_star_file,
-                     parse_teff_file)
+                     ZoneDump, default_home, parse_isothermal, parse_star_file,
+                     parse_teff_file, parse_zone_dump)
 
 __all__ = ["CoolingCurve", "GapModel", "IsothermalCurve", "IsothermalStar",
-           "NSCool", "NSCoolError", "default_home", "isothermal_curve",
-           "parse_isothermal", "parse_star_file", "parse_teff_file"]
+           "NSCool", "NSCoolError", "ZoneDump", "default_home", "isothermal_curve",
+           "parse_isothermal", "parse_star_file", "parse_teff_file",
+           "parse_zone_dump"]

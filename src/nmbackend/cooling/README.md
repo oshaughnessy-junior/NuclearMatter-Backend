@@ -26,7 +26,7 @@ src/nmbackend/cooling/build_nscool.sh      # installs into ~/.local/share/nmback
 Set `NSCOOL_HOME` to change the prefix (the driver reads the same variable).
 Set `NSCOOL_TARBALL` to build from a local tarball. The CIT build of 2026-09-29
 used gfortran 8.5.0 with `-O3 -fno-automatic -std=legacy -w` on ldas-pcdev13.
-It took 10 s. `NSCool/BUILD_INFO.txt` records each build.
+`NSCool/BUILD_INFO.txt` records each build.
 
 The patch changes five files:
 
@@ -64,8 +64,7 @@ c.Ts, c.L_gamma                     # local surface values
   envelope formula (see Notes).
 - `star=True` also returns the core-zone profile (n_b, k_F, T_c).
 
-Each run uses a new temporary directory. Pass `workroot=` to put these on a
-node-local disk.
+Pass `workroot=` to put the per-run directories on a node-local disk.
 
 ## Isothermal star
 
@@ -89,6 +88,11 @@ Other approximations: envelope densities stay at NSCool's initial ones; the
 crust layer's C and L_nu use T_in; `C_core` sums zones i <= icore.
 Accuracy against full NSCool: nmb-papers
 `paper7_cooling_population/notes/RESULTS-C1-isothermal.md`.
+
+## Zone dump
+
+`NSCool.zone_dump(T, ...)` gives each term NSCool sums, per zone, at uniform
+redshifted T. The JAX physics tests compare with it.
 
 ## EOS table format (interface with W2, `nscool_io`)
 
@@ -127,7 +131,7 @@ the bundled profile and for a profile built by the driver's TOV call. The
 figure is `docs/cooling/nscool_validation.png`
 (`python -m nmbackend.cooling.validate --fig ...`).
 
-One curve takes 3.1 s of wall time on one core of ldas-pcdev11 (Xeon E5-2630 v4).
+One curve takes 3.1 s on one core of ldas-pcdev11 (Xeon E5-2630 v4).
 TOV adds 0.01 s.
 
 ## Notes for users
