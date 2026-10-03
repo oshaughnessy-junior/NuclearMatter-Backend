@@ -4,6 +4,7 @@ NSCOOL_REQUIRED=1 (CI) makes them run."""
 import os
 
 import jax
+import jax.numpy as jnp
 import numpy as np
 import pytest
 from scipy.interpolate import CubicSpline
@@ -71,3 +72,19 @@ def test_sx_moves_the_gap_and_is_differentiable():
     fd = (np.asarray(f(0.8 + h)) - np.asarray(f(0.8 - h))) / (2 * h)
     np.testing.assert_allclose(np.asarray(g), fd, rtol=1e-4, atol=1e-6 * np.abs(fd).max())
     assert np.abs(fd).max() > 0
+
+
+def test_below_keeps_gradients_finite():
+    """tau stays below 1 at T = Tc, and Tc = 0 counts as unpaired."""
+    from nmbackend.cooling.physics.superfluid import below, u_1s0
+    f = lambda t, tc, strict: jnp.sum(jnp.where(below(t, tc, strict)[0],
+                                                u_1s0(below(t, tc, strict)[1]) ** 2, 0.0))
+    for strict in (True, False):
+        for tc in (1e9, 0.0):
+            g = jax.grad(f, argnums=(0, 1))(1e9, tc, strict)
+            assert np.all(np.isfinite(g))
+
+
+def test_non_integer_gap_code_is_refused():
+    with pytest.raises(ValueError):
+        G.star_tc(GapModel(n1s0=1.5), np.ones(3), np.ones(3), np.ones(3), 1, 2)

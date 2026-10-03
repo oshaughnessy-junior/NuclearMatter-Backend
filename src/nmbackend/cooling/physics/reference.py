@@ -42,7 +42,8 @@ def dump(mass, gaps="default", eta=0.0, eos_table=None, T=T_TEST, rho_b=1.6e14):
 def gate_error(val, ref, total, floor=1e-6):
     """(worst relative error where |ref| >= floor * total, worst |val - ref| / total elsewhere)."""
     val, ref, total = (np.asarray(x, float) for x in (val, ref, total))
-    big = np.abs(ref) >= floor * total
+    big = (np.abs(ref) >= floor * total) & (total > 0)
     rel = np.max(np.abs(val[big] / ref[big] - 1.0), initial=0.0)
-    small = np.max(np.abs(val - ref)[~big] / total[~big], initial=0.0)
+    tot = np.where(total > 0, total, 1.0)
+    small = np.max((np.abs(val - ref) / tot)[~big], initial=0.0)
     return rel, small

@@ -117,7 +117,7 @@ def kf_scaled(sx, kf, nb, icore: int):
 class StarTc(NamedTuple):
     tcn: jnp.ndarray   # neutron Tc per zone (K); 1 K means unpaired
     tcp: jnp.ndarray   # proton Tc per zone (K)
-    isf: jnp.ndarray   # last zone of n3P2 pairing, NSCool's isf (-1 if none)
+    isf: jnp.ndarray   # end of the run of n3P2 zones from the centre (NSCool isf; -1 if none)
 
 
 def star_tc(gaps, kfn, kfp, nb, icore: int, idrip: int, *, sy_n3p2=None,
@@ -130,6 +130,9 @@ def star_tc(gaps, kfn, kfp, nb, icore: int, idrip: int, *, sy_n3p2=None,
     ``isf`` follows get_Tc for codes 101-103: the run of zones from the
     centre in which the 3P2 Tc is at least the 1S0 Tc.
     """
+    for c in (gaps.n1s0, gaps.n3p2, gaps.p1s0):
+        if c != int(c):
+            raise ValueError(f"gap code {c} is not an integer (NSCool matches none)")
     sy_n3p2 = gaps.sy_n3p2 if sy_n3p2 is None else sy_n3p2
     sx_n3p2 = gaps.sx_n3p2 if sx_n3p2 is None else sx_n3p2
     sy_p1s0 = gaps.sy_p1s0 if sy_p1s0 is None else sy_p1s0
