@@ -9,6 +9,6 @@ import jax
 
 jax.config.update("jax_enable_x64", True)
 
-from . import core_nu, gaps  # noqa: E402
+from . import core_nu, crust_nu, gaps, heat  # noqa: E402
 
-__all__ = ["core_nu", "gaps"]
+__all__ = ["core_nu", "crust_nu", "gaps", "heat"]
