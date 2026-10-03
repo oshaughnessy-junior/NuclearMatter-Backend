@@ -38,7 +38,7 @@ have not checked them against the paper's equation.
 |---|---|---|---|
 | 1 | `numurca_nucl` | proton branch has no threshold step | Yakovlev+2001: zero for k_Fn > 3 k_Fp + k_Fe (src) |
 | 2 | `numurca_nucl`, `nubrem_nucl` | n and p reductions combined as min(R_n, R_p) | Yakovlev+2001 give joint factors (src) |
-X
+| 3 | `nu_n3p2_B_pbf` | gap v = sqrt(1-tau)(0.7893 + 1.764/tau) | 1.188/tau, as NSCool's Urca routines (src) |
 | 4 | Urca vs pair breaking | zone isf counts as 1S0 in Urca and brem, 3P2 in pair breaking and C | one gap per zone |
 | 5 | `specheat` | proton C ramps from the reduced value at Tc to normal at 1.1 Tc | BCS jump at Tc |
 | 6 | `con_e_phon_ion_GYP` | nuclear composition from the Oyamatsu smooth model, not the crust table | (src) |
@@ -49,5 +49,8 @@ X
 
 With `rho_b = rhocore`, the C1 driver's last march step reaches zone
 `icore`, where NSCool uses its core conductivity (C4). We use the crust
-formula there, and T_in differs by up to 0.15%. Inside the crust the
-march matches to 1e-8.
+formula there, and T_in differs by 2e-4 below 1e9 K and 0.17% at 1e10 K.
+Inside the crust the march matches to 1e-8. Larger rho_b is refused.
+
+Differentiate in log eta: at eta = 0 the gradient is 0 while the one-sided
+derivative diverges. `ZoneDump.eta_nscool` is PCY97's eta (ETA / 0.443).

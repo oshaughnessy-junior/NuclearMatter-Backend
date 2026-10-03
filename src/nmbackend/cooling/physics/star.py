@@ -109,8 +109,8 @@ def zone_terms(T, s: Star, tc: StarTc, ca_n3p2=0.5, qimp=1e-10) -> dict:
         "qdurca_np": jnp.where(core, core_nu.durca(
             t, kfe, kfm, kfn, kfp, mstn, mstp, g(s.nb), g(s.Ye), g(s.Ymu),
             tcn, tcp, i, isf), 0.0),
-        "qpbf_n1s0": jnp.where(i > isf, core_nu.pbf_1s0(t, tcn, mstn, kfn), 0.0),
-        "qpbf_n3p2": jnp.where(i <= isf, core_nu.pbf_n3p2(t, tcn, mstn, kfn, ca_n3p2), 0.0),
+        **dict(zip(("qpbf_n1s0", "qpbf_n3p2"),
+                   core_nu.pbf_neutron(t, tcn, mstn, kfn, i, isf, ca_n3p2))),
         "qpbf_p1s0": core_nu.pbf_1s0(t, tcp, jnp.where(core, mstp, 1.0), kfp),
     }
     q["qnu"] = sum(q.values()) + z0
@@ -157,8 +157,9 @@ def _fp(s: Star, i, ttil, qimp):
     Crust formula everywhere.  The march reaches one core zone, i = icore
     at rho_b = rhocore; there it uses the composition of zone icore + 2,
     while NSCool uses its core conductivity (C4), and T_in differs by up
-    to 0.15%.  Deeper zones (steps the march skips) are clamped to icore
-    so that their unused values and gradients stay finite.
+    to 0.17% at 1e10 K.  Deeper zones (steps the march skips, since
+    rho_b <= rhocore) are clamped to icore so that their unused values
+    and gradients stay finite.
     """
     i = jnp.maximum(i, s.icore)
     j = jnp.maximum(i, s.icore + 2)
@@ -173,7 +174,12 @@ def crust_march(T, s: Star, lg, rho_b, qimp=1e-10, n_iter=20):
 
     NSCool's last step reaches zone icore when rho_b = rhocore; there the
     core conductivity is C4 work, so the crust formula is used at that zone.
+    rho_b > rhocore would march through the core and is refused when
+    rho_b is a Python number; a traced rho_b must respect it.
     """
+    if isinstance(rho_b, (int, float)) and rho_b > s.rhocore:
+        raise ValueError(f"rho_b = {rho_b:g} > rhocore: the core needs its own "
+                         "conductivity (C4)")
     xl = lg / _LSOL
 
     def step(carry, j1):

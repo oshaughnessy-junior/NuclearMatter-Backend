@@ -76,7 +76,7 @@ def _e1(x):
     xs = jnp.maximum(x, 1.0)
     num = xs ** 4 + 8.5733287401 * xs ** 3 + 18.0590169730 * xs ** 2 + 8.6347608925 * xs + 0.2677737343
     den = xs ** 4 + 9.5733223454 * xs ** 3 + 25.6329561486 * xs ** 2 + 21.0996530827 * xs + 3.9584969228
-    big = num / den / (xs * jnp.exp(xs))
+    big = num / den / xs * jnp.exp(-xs)      # NSCool: / (x exp(x)); no overflow
     xl = jnp.clip(x, 1e-300, 1.0)
     small = (-0.57721566 + 0.99999193 * xl - 0.24991055 * xl ** 2 + 0.05519968 * xl ** 3
              - 0.00976004 * xl ** 4 + 0.00107857 * xl ** 5 - jnp.log(xl))
@@ -93,14 +93,16 @@ def _get_lam(s, w):
     b2 = w * ((1.0 - 3.0 * s - 6.0 * s ** 2) / (4.0 * s + 4.0) + 1.5 * l)
     c1 = 0.5 * (l - 1.0 / (s + 1.0))
     c2 = (2.0 * s + 1.0) / (2.0 * s + 2.0) - s * l
+    c_a = (s <= eps) & (s * w <= eps)
+    c_b = w <= eps
+    c_c = w > 1.0 / eps
+    # the general branch only for w <= 1/eps: keep its exp(s w) finite elsewhere
+    ws = jnp.where(c_c, 1.0, ws)
     sw = s * ws
     de = jnp.exp(sw) * (_e1(sw) - _e1(sw + ws))
     d1 = 0.5 * (l + s / (s + 1.0) * (1.0 - jnp.exp(-ws)) - (1.0 + sw) * de)
     d2 = 0.5 * ((jnp.exp(-ws) - 1.0 + ws) / ws - s ** 2 / (s + 1.0) * (1.0 - jnp.exp(-ws))
                 - 2.0 * s * l + s * (2.0 + sw) * de)
-    c_a = (s <= eps) & (s * w <= eps)
-    c_b = w <= eps
-    c_c = w > 1.0 / eps
     pick = lambda a, b, c, d: jnp.where(c_a, a, jnp.where(c_b, b, jnp.where(c_c, c, d)))
     return pick(a1, b1, c1, d1), pick(a2, b2, c2, d2)
 

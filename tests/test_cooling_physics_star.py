@@ -132,8 +132,34 @@ def test_march_gradient():
     _fd_check(f, (8.7, -8.6))
 
 
-def test_zone_terms_keys_match_dump():
+@pytest.mark.parametrize("mass,gaps", [(1.4, "default"), (2.0, "none"), (2.0, "zhou"),
+                                       (1.4, "c_ccdk")])
+def test_zone_terms_match_dump(mass, gaps):
+    """The assembled star: every term per zone, with JAX Tc and NSCool's masks."""
+    d = R.dump(mass, gaps)
+    s = Star.from_dump(d)
+    t = jax.jit(jax.vmap(lambda T: zone_terms(T, s, s.tc(R.GAPS[gaps]),
+                                              R.GAPS[gaps].ca_n3p2)))(jnp.asarray(d.T))
+    crust = d.zones > d.icore
+    for k in set(t) - {"T"}:
+        tot = d.terms["qnu" if k.startswith("q") else "cv"]
+        if k == "lam":
+            np.testing.assert_allclose(t[k][:, crust], d.terms[k][:, crust], rtol=1e-6)
+            continue
+        rel, small = R.gate_error(t[k], d.terms[k], tot)
+        assert rel < 1e-5 and small < 1e-8, (k, rel, small)
+
+
+def test_get_lam_reverse_mode_is_finite():
+    """Large w (T >~ 1e10 K) must not leak exp(s w) overflow into gradients."""
+    from nmbackend.cooling.physics.conduct import _get_lam
+    for s_, w in ((0.01, 800.0), (1.0, 1e3), (0.01, 1e5), (0.3, 5.0)):
+        g = jax.grad(lambda a, b: sum(_get_lam(a, b)), argnums=(0, 1))(s_, w)
+        assert np.all(np.isfinite(g)), (s_, w)
+
+
+def test_march_refuses_rho_b_in_the_core():
     d = R.dump(1.4)
     s = Star.from_dump(d)
-    t = zone_terms(1e8, s, s.tc(R.GAPS["default"]))
-    assert set(t) - {"T"} <= set(d.terms)
+    with pytest.raises(ValueError):
+        isothermal_sums(1e8, s, s.tc(R.GAPS["default"]), rho_b=5e14)

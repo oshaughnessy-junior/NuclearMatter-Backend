@@ -20,9 +20,13 @@ def isothermal_curve(T_grid, star, tc, eta=0.0, rho_b=0.0, ca_n3p2=0.5,
                      blanket=None) -> IsothermalCurve:
     """Curve on ``T_grid`` (redshifted T_b, any order; returned decreasing).
 
-    ``blanket`` defaults to rho_b > 0.  Heating is off (L_heat = 0).
+    ``blanket`` defaults to rho_b > 0; pass it when rho_b is traced.
+    Heating is off (L_heat = 0).
     """
-    blanket = rho_b > 0 if blanket is None else blanket
+    if blanket is None:
+        if not isinstance(rho_b, (int, float)):
+            raise TypeError("pass blanket= when rho_b is a JAX value")
+        blanket = rho_b > 0
     T = jnp.sort(jnp.asarray(T_grid, float))[::-1]
     s = jax.vmap(lambda t: isothermal_sums(t, star, tc, eta, rho_b, ca_n3p2))(T)
     lnT = jnp.log(T)
