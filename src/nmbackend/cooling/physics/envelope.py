@@ -27,9 +27,9 @@ def teff_local(Tb, eta, g14):
     ts = jnp.sqrt(7.0 * tb9 * jnp.sqrt(g14))
     z = tb9 - ts / 1e3
     t4_iron = g14 * ((7.0 * z) ** 2.25 + (z / 3.0) ** 1.25)
-    t4_wacc = g14 * (18.1 * tb9) ** 2.42
+    t4_wacc = g14 * (18.1 * tb9) ** f32(2.42)
     acc = eta > 1e-30
     es = jnp.where(acc, eta, 1.0)
-    a = (1.2 + (5.3e-6 / es) ** 0.38) * tb9 ** f32(5.0 / 3.0)
+    a = (1.2 + (5.3e-6 / es) ** f32(0.38)) * tb9 ** f32(5.0 / 3.0)
     t4 = jnp.where(acc, (a * t4_iron + t4_wacc) / (a + 1.0), t4_iron)
     return t4 ** 0.25 * 1e6

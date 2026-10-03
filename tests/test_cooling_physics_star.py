@@ -53,6 +53,20 @@ def test_envelope_is_pcy97():
         assert np.all(np.asarray(E.teff_local(tb, eta, g)) > t4_fe ** 0.25 * 1e6)
 
 
+def test_cold_accreted_envelope_matches_nscool():
+    """Cold photons resolve the default-real exponents in NSCool.fteff_acc."""
+    from nmbackend.cooling.physics.star import _l_gamma
+    temperatures = tuple(np.geomspace(5e5, 2e7, 3))
+    d = R.dump(1.4, "none", 1e-9, T=temperatures, rho_b=1e10)
+    s = Star.from_dump(d)
+    values = jax.jit(jax.vmap(lambda T: _l_gamma(T, s, d.eta_nscool)))(d.iso.T)
+    actual = np.stack(values, axis=1)
+    reference = np.stack((d.iso.L_gamma, d.iso.Teff_inf), axis=1)
+    assert np.isfinite(actual).all() and np.all(actual > 0)
+    assert np.isfinite(reference).all() and np.all(reference > 0)
+    np.testing.assert_allclose(actual, reference, rtol=2e-7)
+
+
 @pytest.mark.parametrize("mass,gaps,eta", [(1.4, "default", 1e-9), (2.0, "none", 0.0),
                                            (2.0, "zhou", 1e-9)])
 def test_isothermal_sums_match_nscool(mass, gaps, eta):
