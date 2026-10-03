@@ -64,6 +64,7 @@ def cooling_curve(x):
 x_cooling = jnp.log(jnp.array([1e-9,.8,1.]))
 baseline = jax.jit(cooling_curve)(x_cooling)
 assert np.all(np.isfinite(baseline.t_yr)) and np.all(np.diff(baseline.t_yr)>0)
+assert baseline.t_yr[0]<=1e3<=baseline.t_yr[-1], "Baseline must cover the handoff age"
 anchor_teff = float(jnp.exp(jnp.interp(jnp.log(1e3),jnp.log(baseline.t_yr),jnp.log(baseline.Teff_inf))))
 def cooling_endpoint(x):
     c = cooling_curve(x)
