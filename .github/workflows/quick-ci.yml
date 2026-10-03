@@ -1,0 +1,26 @@
+name: Quick CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+concurrency:
+  group: quick-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  quick:
+    if: ${{ vars.CI_QUICK_ENABLED == 'true' }}
+    name: Quick syntax and lint (not full validation)
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check Python syntax without scientific dependencies
+        run: python -m compileall -q src tests scripts

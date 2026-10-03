@@ -1,0 +1,136 @@
+# Full validation is admitted by the external quota controller; no push/PR trigger.
+name: Full backend validation
+run-name: "Full backend validation PR #${{ inputs.pr }} @ ${{ inputs.sha }} [${{ inputs.ticket }}]"
+on:
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: Pull request number (controller supplied)
+        required: true
+        type: string
+      sha:
+        description: Exact candidate commit (controller supplied)
+        required: true
+        type: string
+      ticket:
+        description: Budget reservation (use ci-control request, not a manual dispatch)
+        required: true
+        type: string
+permissions:
+  contents: read
+  pull-requests: read
+  actions: read
+concurrency:
+  group: full-validation-${{ inputs.pr }}
+  cancel-in-progress: true
+
+jobs:
+  admission:
+    # Evaluated before a runner is allocated. Empty/incorrect tickets fail closed.
+    if: >-
+      ${{ github.ref == 'refs/heads/main' && github.run_attempt == 1 &&
+          inputs.ticket != '' && vars.CI_ADMISSION != '' &&
+          inputs.ticket == fromJSON(vars.CI_ADMISSION).ticket &&
+          inputs.sha == fromJSON(vars.CI_ADMISSION).sha &&
+          inputs.pr == fromJSON(vars.CI_ADMISSION).pr &&
+          github.workflow == fromJSON(vars.CI_ADMISSION).workflow }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Verify the requested PR still has the admitted head
+        uses: actions/github-script@v7
+        env:
+          EXPECTED_SHA: ${{ inputs.sha }}
+          PR_NUMBER: ${{ inputs.pr }}
+          LEASE_EXPIRES: ${{ fromJSON(vars.CI_ADMISSION).expires_at }}
+          TICKET: ${{ inputs.ticket }}
+          WORKFLOW_FILE: full-validation.yml
+        with:
+          script: |
+            if (!(Number(process.env.LEASE_EXPIRES) > Date.now() / 1000))
+              throw new Error('Budget admission expired');
+            const runs = await github.paginate(github.rest.actions.listWorkflowRuns, {
+              ...context.repo, workflow_id: process.env.WORKFLOW_FILE,
+              event: 'workflow_dispatch', per_page: 100
+            });
+            const matching = runs.filter(r =>
+              r.display_title.endsWith(`[${process.env.TICKET}]`));
+            if (!matching.length || Math.min(...matching.map(r => r.id)) !== context.runId)
+              throw new Error('Replayed or unconfirmed budget ticket');
+            if (!/^[0-9a-f]{40}$/.test(process.env.EXPECTED_SHA))
+              throw new Error('Invalid commit SHA');
+            const {data: pr} = await github.rest.pulls.get({
+              ...context.repo, pull_number: Number(process.env.PR_NUMBER)
+            });
+            if (pr.state !== 'open' || pr.draft ||
+                pr.head.sha !== process.env.EXPECTED_SHA ||
+                pr.head.repo.full_name !== `${context.repo.owner}/${context.repo.repo}`)
+              throw new Error('Closed, draft, forked, or superseded candidate');
+  core:
+    needs: admission
+    name: Core physics and AD (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    env:
+      JAX_PLATFORMS: cpu
+      JAX_ENABLE_X64: 'true'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install package and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e '.[test]' h5py
+      - name: Run full in-repository test suite
+        run: python -m pytest -ra
+
+  nscool:
+    needs: admission
+    name: NSCool cooling driver (Python 3.12)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      JAX_PLATFORMS: cpu
+      JAX_ENABLE_X64: 'true'
+      NSCOOL_HOME: ${{ github.workspace }}/.nscool
+      NSCOOL_REQUIRED: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install gfortran
+        run: sudo apt-get update && sudo apt-get install -y gfortran
+      # NSCool has no licence, so it is fetched, never vendored; cache the
+      # tarball (build_nscool.sh checks its sha256).
+      - uses: actions/cache@v4
+        with:
+          path: .nscool/NSCool.tar.gz
+          key: nscool-tarball-c671fb959c732af5
+      - name: Build NSCool
+        run: |
+          gfortran --version | head -1
+          src/nmbackend/cooling/build_nscool.sh
+      - name: Install package and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e '.[test]'
+      - name: Run the cooling tests against the build
+        run: python -m pytest -ra tests/test_cooling_*.py

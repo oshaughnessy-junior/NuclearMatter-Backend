@@ -1,71 +1,10 @@
-name: Tests
-
-on:
-  push:
-  pull_request:
-  workflow_dispatch:
-
-permissions:
-  contents: read
-
+# Retired 2026-10-03: this workflow ID is disabled repository-wide.
+# Use full-validation.yml through the quota controller. Keep this tombstone for old branches.
+name: Retired ci.yml
+on: workflow_dispatch
 jobs:
-  core:
-    name: Core physics and AD (Python ${{ matrix.python-version }})
-    runs-on: ubuntu-24.04
-    timeout-minutes: 60
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ['3.11', '3.12', '3.13']
-    env:
-      JAX_PLATFORMS: cpu
-      JAX_ENABLE_X64: 'true'
+  retired:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: pip
-          cache-dependency-path: pyproject.toml
-      - name: Install package and test dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install -e '.[test]' h5py
-      - name: Run full in-repository test suite
-        run: python -m pytest -ra
-
-  nscool:
-    name: NSCool cooling driver (Python 3.12)
-    runs-on: ubuntu-24.04
-    timeout-minutes: 30
-    env:
-      JAX_PLATFORMS: cpu
-      JAX_ENABLE_X64: 'true'
-      NSCOOL_HOME: ${{ github.workspace }}/.nscool
-      NSCOOL_REQUIRED: '1'
-      OMP_NUM_THREADS: '1'
-    steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.12'
-          cache: pip
-          cache-dependency-path: pyproject.toml
-      - name: Install gfortran
-        run: sudo apt-get update && sudo apt-get install -y gfortran
-      # NSCool has no licence, so it is fetched, never vendored; cache the
-      # tarball (build_nscool.sh checks its sha256).
-      - uses: actions/cache@v4
-        with:
-          path: .nscool/NSCool.tar.gz
-          key: nscool-tarball-c671fb959c732af5
-      - name: Build NSCool
-        run: |
-          gfortran --version | head -1
-          src/nmbackend/cooling/build_nscool.sh
-      - name: Install package and test dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install -e '.[test]'
-      - name: Run the cooling tests against the build
-        run: python -m pytest -ra tests/test_cooling_*.py
+      - run: echo 'See docs/CI_QUOTA.md'
