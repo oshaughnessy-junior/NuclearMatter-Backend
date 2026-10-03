@@ -44,9 +44,10 @@ def eebrem(T, kfe, table=None):
     NSCool evaluates the table at log10(T / (mu_e / 10 MeV)), with T in K.
     """
     x, y, y2 = nalpha_table() if table is None else table
-    mu = kfe * 197.0
+    ok = kfe > 0
+    mu = jnp.where(ok, kfe, 1.0) * 197.0
     naa = splint(x, y, y2, jnp.log10(T / (mu / 10.0)))
-    return 2.16e14 * (T / 1e9) ** 7 * (mu / 10.0) ** 2 * naa
+    return jnp.where(ok, 2.16e14 * (T / 1e9) ** 7 * (mu / 10.0) ** 2 * naa, 0.0)
 
 
 _NPB = [f32(c) for c in (11.204, 7.304, 0.2976, 0.370, 0.188, 0.103, 0.0547, 6.77, 0.228)]
@@ -64,8 +65,9 @@ def npb(T, rho):
 
 def plasma(T, rho, A, Z):
     """Plasmon decay (nplasma); A is NSCool's a_cell, Z the nuclear charge."""
-    zs = jnp.where(Z == 0.0, 1.0, Z)
-    rza = rho * zs / A
+    ok = (Z != 0.0) & (A > 0)
+    zs = jnp.where(ok, Z, 1.0)
+    rza = rho * zs / jnp.where(ok, A, 1.0)
     l = T / 5.9302e9
     den = 1.0 + (1.019e-6 * rza) ** (2.0 / 3.0)
     g2 = 1.1095e11 * rza / T ** 2 / den ** 0.5
@@ -79,7 +81,7 @@ def plasma(T, rho, A, Z):
     second = jnp.minimum(0.0, y - 1.6 + 1.25 * x) / (0.57 - 0.25 * x)
     f_xy = jnp.where((jnp.abs(x) > 0.7) | (y < 0.0), 1.0, 1.05 + first * fexp(-second ** 2))
     q = 3.00e21 * l ** 9 * g ** 6 * fexp(-g) * (f_l + f_t) * f_xy
-    return jnp.where(Z == 0.0, 0.0, q)
+    return jnp.where(ok, q, 0.0)
 
 
 def brem_nn_crust(T, kfn, mstn, tcn, v_ion, i, isf):

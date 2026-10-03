@@ -64,18 +64,19 @@ _T0MAX = 0.999999999999
 def cv_neutron(T, cvn, tcn, i, isf):
     """Neutron C (3P2 reduction for i <= isf, 1S0 above); NSCool applies it
     only at rho >= rhodrip, which the caller masks."""
-    m = T < tcn
-    t0 = jnp.where(m, jnp.minimum(_T0MAX, T / tcn), 0.5)
+    m = (T < tcn) & (tcn > 0)
+    t0 = jnp.where(m, jnp.minimum(_T0MAX, T / jnp.where(m, tcn, 1.0)), 0.5)
     r = jnp.where(i <= isf, R_3P2(_u3(t0)), R_1S0(_u1(t0)))
     return cvn * T * jnp.where(m, r, 1.0)
 
 
 def cv_proton(T, cvp, tcp, raise_=1.1):
     """Proton C with NSCool's ramp from Tc to 1.1 Tc."""
-    m = T < raise_ * tcp
-    t0 = jnp.where(m, jnp.minimum(_T0MAX, T / tcp), 0.5)
+    m = (T < raise_ * tcp) & (tcp > 0)
+    tcs = jnp.where(m, tcp, 1.0)
+    t0 = jnp.where(m, jnp.minimum(_T0MAX, T / tcs), 0.5)
     r = R_1S0(_u1(t0))
-    w1 = (raise_ * tcp - T) / ((raise_ - 1.0) * tcp)
+    w1 = (raise_ * tcs - T) / ((raise_ - 1.0) * tcs)
     r = jnp.where(T > tcp, w1 * r + (1.0 - w1), r)
     return cvp * T * jnp.where(m, r, 1.0)
 
@@ -87,7 +88,19 @@ _G, _NA, _KBS, _THIRD = f32(2.273e5), f32(6.022e23), f32(1.38e-16), f32(1.0 / 3.
 
 
 def cv_ion(T, rho, A, Z):
-    """cvion: ions per cm^3 with A = a_cell (nucleons per cell), Z per nucleus."""
+    """cvion: ions per cm^3 with A = a_cell (nucleons per cell), Z per nucleus.
+
+    Zones without nuclei (A or Z = 0, as in the core) give 0 with finite
+    gradients.  In the 178 < Gamma < 210 blend NSCool reads past its Debye
+    table when delta > 7e20 (low Z only, not reached by our crusts); here
+    the table is clamped at its last entry.
+    """
+    ok = (A > 0) & (Z > 0)
+    A, Z = jnp.where(ok, A, 1.0), jnp.where(ok, Z, 1.0)
+    return jnp.where(ok, _cv_ion(T, rho, A, Z), 0.0)
+
+
+def _cv_ion(T, rho, A, Z):
     gamma = _G * Z ** 2 * (rho / A) ** _THIRD / T
     a1 = jnp.where(rho >= f32(4.3e11), 3.0 * Z, A)       # cvion's own drip density
     nk = _KBS * _NA * rho / A
@@ -96,7 +109,7 @@ def cv_ion(T, rho, A, Z):
     liquid = nk * (.75 * _BCV * g ** .25 + 1.25 * _CCV / g ** .25 + _DCV + 1.5)
     gas = 1.5 * nk
     solid0 = 1.5 + 3.0 * _HCV / g ** 2 + 1.5             # cv0(0), set at each call
-    x = delta * f32(2e-20)
+    x = jnp.minimum(delta * f32(2e-20), 14.0)
     i1 = jnp.clip(jnp.floor(x).astype(int), 0, 13)
     cv0 = lambda j: jnp.where(j == 0, solid0, jnp.asarray(_CV0)[j])
     table = nk * (cv0(i1) + (x - i1) * (cv0(i1 + 1) - cv0(i1)))
