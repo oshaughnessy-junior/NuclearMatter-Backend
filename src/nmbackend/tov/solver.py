@@ -62,6 +62,20 @@ class TOVPoint(NamedTuple):
     Lambda: jnp.ndarray   # dimensionless tidal deformability
 
 
+class TOVProfile(NamedTuple):
+    """Structure-only profile, centre-series start to surface; r and m in km.
+
+    Enthalpy decreases outward. The first point is at the small nonzero
+    central-series radius. Redshift
+    uses the same finite-pressure surface convention as solve_structure.
+    """
+    h: jnp.ndarray
+    r_km: jnp.ndarray
+    m_km: jnp.ndarray
+    ephi: jnp.ndarray
+
+
+
 def _derivs(h, state, table: EOSTable, tidal: bool = True):
     r, m, y = state
     eps, p, cs2 = table.at_h(h)
@@ -148,7 +162,8 @@ def _field_structure(h, s, args):
     return _derivs(h, s, args, False)
 
 
-def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000):
+def _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint=None,
+                       max_steps=100000, saveat=None):
     if not _HAVE_DIFFRAX:  # pragma: no cover
         raise ImportError("backend='diffrax' requires the 'diffrax' package; "
                           "pip install diffrax  (or use backend='scan').")
@@ -162,9 +177,41 @@ def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000
         term, diffrax.Dopri5(), t0=h_c - dh0, t1=h_min,
         dt0=-(h_c - h_min) * 1e-4, y0=state0, args=table,
         stepsize_controller=ctrl, max_steps=max_steps, adjoint=adjoint,
+        saveat=diffrax.SaveAt(t1=True) if saveat is None else saveat,
     )
+    return sol
+
+
+def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000):
+    sol = _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint, max_steps)
     ys = sol.ys[0]
     return _finish(ys[0], ys[1], ys[2], h_c, tidal)
+
+
+def solve_profile(table: EOSTable, h_c, *, n_points: int = 256,
+                  rtol: float = 1e-7, atol: float = 1e-9, adjoint=None):
+    """Save an adaptive spherical TOV profile for thermal volume integrals.
+
+    Quadratic spacing in enthalpy drop resolves the central r ~ sqrt(h_c-h)
+    behavior. Saving points does not change the adaptive integration mesh.
+    Default ForwardMode supports JVP/jacfwd through central enthalpy
+    and smooth table inputs, with n_points fixed.
+    Smooth EOS only; phase-transition junctions are not included.
+    """
+    if n_points < 2:
+        raise ValueError("n_points must be at least 2")
+    if not _HAVE_DIFFRAX:  # pragma: no cover
+        raise ImportError("solve_profile requires diffrax")
+    h_min, h_c, dh0, _ = _central_start(table, h_c)
+    h_start = h_c - dh0
+    h = h_start + (h_min - h_start) * jnp.linspace(0., 1., n_points)**2
+    h = h.at[0].set(h_start).at[-1].set(h_min)
+    sol = _integrate_diffrax(table, h_c, rtol, atol, False, adjoint,
+                            saveat=diffrax.SaveAt(ts=h))
+    r, m = sol.ys[:, 0], sol.ys[:, 1]
+    ephi_surface = jnp.sqrt(1. - 2. * m[-1] / r[-1])
+    ephi = ephi_surface * jnp.exp(h_min - h)
+    return TOVProfile(h, r, m, ephi)
 
 
 def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
