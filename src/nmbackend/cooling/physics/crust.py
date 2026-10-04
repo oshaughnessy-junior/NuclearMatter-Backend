@@ -86,3 +86,28 @@ def crust_chemistry(table: CrustTable, rho, *, core_rho, core_n, core_Ye):
              & (rho <= core_rho) & (width > 0) & (n > 0)
              & (hi_z > 0) & (hi_ion >= hi_z) & (cell >= hi_ion))
     return CrustChemistry(*(jnp.where(valid, value, jnp.nan) for value in values))
+
+
+def _unpaired_crust_terms(T_local, rho, chemistry, *, rho_drip):
+    """Local unpaired crust cv and neutrino emissivity, without GR weights.
+
+    Mirrors NSCool's EMNCR=5 neutron mass prescription and unpaired thermal
+    calls. Chemical density is distinct from EOS energy density. The caller
+    owns density coverage and moving species, drip and ionic phase contacts.
+    The unsupported ionic source-table overrun branch must be excluded.
+    """
+    from . import crust_nu, heat
+    from .native import _kf
+
+    ke = _kf(chemistry.n, chemistry.Ye)
+    kn = _kf(chemistry.n, chemistry.Yn)
+    mn = jnp.minimum(1., 1.09-.11*kn)
+    inner = rho >= rho_drip
+    cv = (heat.lepton_cv_coeff(ke, .511)*T_local
+          + heat.cv_ion(T_local, rho, chemistry.A_cell, chemistry.Z)
+          + jnp.where(inner, heat.cv_coeff(kn, 939.56*mn)*T_local, 0.))
+    q = (crust_nu.eebrem(T_local, ke) + crust_nu.npb(T_local, rho)
+         + crust_nu.plasma(T_local, rho, chemistry.A_cell, chemistry.Z)
+         + jnp.where(inner, crust_nu.brem_nn_crust(
+             T_local, kn, mn, 0., chemistry.v_ion, 0, -1), 0.))
+    return cv, q
