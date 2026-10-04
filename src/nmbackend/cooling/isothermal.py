@@ -32,10 +32,21 @@ class IsothermalCurve(NamedTuple):
     L_nu_inf: np.ndarray
 
     def at(self, t_yr, quantity: str = "Teff_inf") -> np.ndarray:
-        """log-log interpolation of a column at ages t_yr."""
+        """Log-log interpolation at finite positive ages within curve support.
+
+        Raises ValueError rather than returning an unsupported endpoint value.
+        """
+        ages = np.asarray(self.t_yr, float)
+        query = np.asarray(t_yr, float)
+        if (ages.ndim != 1 or ages.size == 0 or not np.all(np.isfinite(ages))
+                or np.any(ages <= 0) or np.any(np.diff(ages) <= 0)):
+            raise ValueError("curve ages must be finite, positive and increasing")
+        if not np.all(np.isfinite(query)) or np.any(query <= 0):
+            raise ValueError("queried ages must be finite and positive")
+        if np.any(query < ages[0]) or np.any(query > ages[-1]):
+            raise ValueError(f"queried age outside curve support [{ages[0]:g}, {ages[-1]:g}] yr")
         y = getattr(self, quantity)
-        return np.exp(np.interp(np.log(np.asarray(t_yr, float)),
-                                np.log(self.t_yr), np.log(y)))
+        return np.exp(np.interp(np.log(query), np.log(ages), np.log(y)))
 
 
 def isothermal_curve(star: IsothermalStar, blanket: bool = False) -> IsothermalCurve:
