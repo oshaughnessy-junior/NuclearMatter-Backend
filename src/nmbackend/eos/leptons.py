@@ -31,9 +31,9 @@ def lepton_sector(n_charge, muons=True, n_bis=50):
     """Leptons in chemical equilibrium (mu_e = mu_mu) with n_e + n_mu = n_charge.
 
     Muons switch on once mu_e > m_mu (~106 MeV); ``muons=False`` gives the
-    electron-only (npe) limit.  The root is bracketed by bisection and finished
-    with one Newton step from a stop-gradient start, so AD returns the implicit
-    derivative d mu_e / d n_charge.
+    electron-only (npe) limit. Bisection plus a Newton polish gives the primal;
+    ``custom_root`` supplies implicit derivatives, including the energy Hessian
+    needed when differentiating pressure. Threshold contacts are excluded.
 
     Returns (mu_e [fm^-1], n_e, n_mu [fm^-3], eps_lep [fm^-4]).
     """
@@ -54,10 +54,18 @@ def lepton_sector(n_charge, muons=True, n_bis=50):
         f = nlep(mid) - n_charge           # increasing in mu
         return jnp.where(f < 0.0, mid, lo), jnp.where(f < 0.0, hi, mid)
 
-    lo, hi = jax.lax.fori_loop(0, n_bis, body, (mu_lo, mu_hi))
-    mu0 = jax.lax.stop_gradient(0.5 * (lo + hi))
-    dn = jax.grad(lambda m: jnp.sum(nlep(m)))(mu0)
-    mu_e = mu0 - (nlep(mu0) - n_charge) / dn
+    def solve(fun, initial):
+        lo, hi = jax.lax.fori_loop(0, n_bis, body, (mu_lo, mu_hi))
+        mu0 = 0.5 * (lo + hi)
+        dn = jax.grad(lambda m: jnp.sum(nlep(m)))(mu0)
+        return mu0 - fun(mu0) / dn
+
+    # Each charge-density entry has an independent scalar root: the linearized
+    # Jacobian is diagonal. A stop-gradient start plus one Newton polish recovers
+    # only the first derivative; pressure sensitivities need the true second one.
+    mu_e = jax.lax.custom_root(lambda mu: nlep(mu)-n_charge,
+                              0.5*(mu_lo+mu_hi), solve,
+                              lambda g, y: y/g(jnp.ones_like(y)))
     ke = _kf_of_mu(mu_e, m_e)
     kmu = mu_on * _kf_of_mu(mu_e, m_mu)
     n_e = ke**3 / (3.0 * _PI2)
