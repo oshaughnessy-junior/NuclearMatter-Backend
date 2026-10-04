@@ -126,8 +126,9 @@ def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query, xp=jnp):
     p = H00*p0 + H10*dh*s0 + H01*p1 + H11*dh*s1
 
     dH00, dH10 = 6*t2 - 6*t, 3*t2 - 4*t + 1
-    dH01, dH11 = -6*t2 + 6*t, 3*t2 - 2*t
-    dpdh = (dH00*p0 + dH01*p1) / dh + dH10*s0 + dH11*s1
+    dH11 = 3*t2 - 2*t
+    # Combine the opposite pressure terms before division to reduce cancellation.
+    dpdh = dH00*(p0-p1) / dh + dH10*s0 + dH11*s1
     eps = dpdh - p                                  # derived: dp/dh = eps + p
 
     cs2 = xp.clip(xp.interp(h_query, h_nodes, cs2_nodes), 1e-10, 1.0)

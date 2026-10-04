@@ -149,3 +149,29 @@ def test_physical_eos_contacts_at_bisection_precision_limit():
     recovered = jax.vmap(lambda h: table.at_h(h)[0])(roots)
     # Separate polynomial evaluation has its own rounding budget.
     np.testing.assert_allclose(recovered, energy, rtol=1e-13, atol=0.)
+
+
+def test_live_eos_contacts_retain_compiled_ad_support():
+    from nmbackend.constants import MEVFM3_TO_GEOM
+    from nmbackend.eos import MetaModelEOS
+    from nmbackend.eos.crust import _G_CM3_TO_MEVFM3
+
+    # Own-drip and chemistry contacts that previously failed only with live EOS nodes.
+    energy = jnp.array([430000013312., 1.334e14])*_G_CM3_TO_MEVFM3*MEVFM3_TO_GEOM
+    model = MetaModelEOS(muons=True, s_high='power', n_points_low=240, n_points_tail=160)
+
+    @jax.jit
+    def contacts(L):
+        table = model.eos_table({'L_sym': L, 'K_sym': -100.})
+        return jax.vmap(lambda e: enthalpy_at_energy(table, e))(energy)
+
+    forward, tangent = jax.jvp(contacts, (100.,), (1.,))
+    reverse, pullback = jax.vjp(contacts, 100.)
+    assert np.all(np.isfinite(forward)) and np.all(np.isfinite(reverse))
+    assert np.all(np.isfinite(tangent))
+    np.testing.assert_allclose(reverse, forward, rtol=1e-13, atol=1e-16)
+    np.testing.assert_allclose(pullback(jnp.ones_like(reverse))[0], jnp.sum(tangent),
+                               rtol=1e-12, atol=1e-16)
+    for step in (.04, .02, .01):
+        fd = (contacts(100.+step)-contacts(100.-step))/(2*step)
+        np.testing.assert_allclose(tangent, fd, rtol=1e-5, atol=1e-11)
