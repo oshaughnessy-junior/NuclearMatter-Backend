@@ -140,8 +140,10 @@ TOV adds 0.01 s.
   passes the result to `fteff_acc`. That function is Eqs. (A7)-(A10) of
   Potekhin, Chabrier and Yakovlev (1997), where eta = g_s14^2 Delta M / M
   (their Eq. A5). So the envelope formula sees eta = ETA / 0.443 = 2.26 ETA.
-  Neither the source nor the guides explain the factor. `run(eta=x)` means
-  PCY97 eta = 2.26 x. `IsothermalStar.eta_nscool` reports the value used.
+  `run(eta=x)` therefore means PCY97 eta = x / 0.443.
+  `IsothermalStar.eta_nscool` reports the value used. See
+  [envelope normalization and provenance](physics/README.md#envelope-normalization-and-provenance)
+  for the reference-gravity interpretation and its limits.
 - NSCool's default time step (`Code/Data_Files/NUM_PARAM.dat`: DT0 = TVAR = 1.2)
   is not converged at late times. The error in log10 T_eff^inf is about
   0.25 (DT0 - 1) at 1 Myr for a GM1 1.6 Msun star, and larger in the

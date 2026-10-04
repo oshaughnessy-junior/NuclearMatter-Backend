@@ -44,7 +44,7 @@ have not checked them against the paper's equation.
 | 5 | `specheat` | proton C ramps from the reduced value at Tc to normal at 1.1 Tc | BCS jump at Tc |
 | 6 | `con_e_phon_ion_GYP` | nuclear composition from the Oyamatsu smooth model, not the crust table | (src) |
 | 7 | `con_crust` | impurity scattering in the solid only | (src) |
-| 8 | `NSCool_READ` | ETA divided by 0.443 before PCY97 | PCY97 Eq. A5 (nmb-papers OPEN-eta-0443.md) |
+| 8 | `NSCool_READ` | ETA divided by the fixed factor 0.443 before PCY97 | PCY97 Eq. A5 defines a gravity-dependent eta; see normalization below |
 
 ## Core transport and boundary coverage
 
@@ -76,3 +76,46 @@ unused branches finite.
 
 Differentiate in log eta: at eta = 0 the gradient is 0 while the one-sided
 derivative diverges. `ZoneDump.eta_nscool` is PCY97's eta (ETA / 0.443).
+
+## Envelope normalization and provenance
+
+The inputs use two conventions:
+
+- `NSCool.run(eta=x)` writes the raw NSCool `ETA` and the reader converts it
+  to `eta_pcy = x / 0.443`.
+- `teff_local`, `isothermal_sums`, and `isothermal_curve` take `eta_pcy`
+  directly. Passing the same number to both interfaces does not describe the
+  same envelope. `ZoneDump.eta_nscool` is already converted; do not divide it
+  again.
+
+[Potekhin, Chabrier & Yakovlev (1997), Appendix A, Eq. A5](https://arxiv.org/pdf/astro-ph/9706148)
+defines `eta_pcy = g_s14**2 * DeltaM / M`. The same convention appears in
+[Page et al. (2004), Fig. 14 caption](https://arxiv.org/pdf/astro-ph/0403657).
+Here `g_s14` is local surface gravity in units of 1e14 cm/s^2 and `DeltaM`
+is the light-element/accreted-envelope mass. These papers establish the eta
+convention; the caption does not specify the numeric constant 0.443.
+
+Andrew Steiner explained the normalization on October 2, 2026: NSCool's
+input parameter represents the envelope mass fraction, with 0.443 interpreted
+as `1 / g_s14**2`. The source inspected at NSCool commit
+`ed41c1e791897ff47c6bff34822c8c24026309a6`, `src/NSCool.f:309`, confirms the
+fixed `eta=eta/0.443d0` operation. This implies a reference gravity
+`g_s14 = 1 / sqrt(0.443)`, approximately 1.5025; the inspected line does not
+recompute that factor from the current star's mass and radius. The exact
+reference stellar model behind this constant remains unverified.
+
+For an intended physical mass fraction `f = DeltaM/M` at a chosen mass and
+radius, compute `eta_pcy = gs14(mass_msun, radius_cm)**2 * f`. To reproduce
+that envelope through the raw NSCool interface, supply `ETA = 0.443 * eta_pcy`.
+This is an input-convention conversion, not a change to NSCool physics. A raw
+`ETA=f` is a physical mass fraction under the reference-gravity interpretation,
+not generally at arbitrary mass and radius. Keep this distinction when varying
+stellar models or differentiating their cooling curves.
+
+The port retains the NSCool conversion for forward-reference comparisons.
+Its envelope formula is nonmagnetic; changing eta normalization does not
+validate other envelope prescriptions or extend the fixed-background cooling
+model. Runtime NSCool tables/build dependencies and supported options remain
+as listed above. Steiner supplied access and clarification; downstream papers
+should cite the original physics and code provenance and discuss scientific
+contributions with the collaborators. Documentation does not settle authorship.
