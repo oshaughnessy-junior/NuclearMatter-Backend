@@ -15,7 +15,7 @@ import jax
 import jax.numpy as jnp
 import numpy as np
 
-from . import conduct, core_nu, crust_nu, envelope, heat
+from . import conduct, core_conduct, core_nu, crust_nu, envelope, heat
 from .gaps import StarTc, star_tc
 
 __all__ = ["Star", "zone_terms", "IsoSums", "isothermal_sums"]
@@ -80,7 +80,7 @@ def zone_terms(T, s: Star, tc: StarTc, ca_n3p2=0.5, qimp=1e-10) -> dict:
     """Per-zone terms at redshifted T on the temperature zones (``Star.zones``).
 
     Keys follow ``NSCool.zone_dump``: q* (erg cm^-3 s^-1), cv* (erg cm^-3 K^-1),
-    lam (crust zones only; 0 in the core, which is C4).
+    lam (crust ICON_CRUST=3; core lepton-only ICON_CORE=2).
     """
     i = jnp.asarray(s.zones)
     g = lambda a: a[i]
@@ -125,7 +125,8 @@ def zone_terms(T, s: Star, tc: StarTc, ca_n3p2=0.5, qimp=1e-10) -> dict:
     }
     c["cv"] = sum(c.values())
     rho_c = jnp.where(crust, rho, s.rhodrip)
-    lam = jnp.where(crust, conduct.lambda_crust(t, rho_c, A, Z, kfe_c, qimp, s.rhodrip), 0.0)
+    lam_core = core_conduct.lambda_core(t, kfe, kfm, kfp, mstp, tcp)
+    lam = jnp.where(crust, conduct.lambda_crust(t, rho_c, A, Z, kfe_c, qimp, s.rhodrip), lam_core)
     return {**q, **c, "T": t, "lam": lam}
 
 
@@ -151,35 +152,37 @@ def _l_gamma(T, s: Star, eta):
     return lg, te_inf
 
 
-def _fp(s: Star, i, ttil, qimp):
-    """Flux-equation coefficient lam bar / L_sun at zone i.
+def _fp(s: Star, tc: StarTc, i, ttil, qimp):
+    """NSCool flux-equation coefficient lam bar / L_sun at zone i.
 
-    Crust formula everywhere.  The march reaches one core zone, i = icore
-    at rho_b = rhocore; there it uses the composition of zone icore + 2,
-    while NSCool uses its core conductivity (C4), and T_in differs by up
-    to 0.17% at 1e10 K.  Deeper zones (steps the march skips, since
-    rho_b <= rhocore) are clamped to icore so that their unused values
-    and gradients stay finite.
+    The crust march reaches at most the core boundary zone icore. Deeper
+    unused zones are clamped there to keep their values and AD finite.
     """
     i = jnp.maximum(i, s.icore)
     j = jnp.maximum(i, s.icore + 2)
     t = ttil / s.ephi[i]
-    lam = conduct.lambda_crust(t, s.rho[i], s.A_cell[j], s.Z_ion[j], s.kfe[i], qimp, s.rhodrip)
+    crust_lam = conduct.lambda_crust(t, s.rho[i], s.A_cell[j], s.Z_ion[j],
+                                    s.kfe[i], qimp, s.rhodrip)
+    core_lam = core_conduct.lambda_core(t, s.kfe[i], s.kfm[i], s.kfp[i],
+                                      s.mstp[i], tc.tcp[i])
+    lam = jnp.where(i <= s.icore, core_lam, crust_lam)
     return lam * s.nb[i] / _LSOL
 
 
-def crust_march(T, s: Star, lg, rho_b, qimp=1e-10, n_iter=20):
+def crust_march(T, s: Star, lg, rho_b, qimp=1e-10, n_iter=20, *, tc):
     """T_in: march the steady flux equation from T_b = T at zone imax inward
     to the first zone with rho >= rho_b, at L = lg (C1 driver).
 
-    NSCool's last step reaches zone icore when rho_b = rhocore; there the
-    core conductivity is C4 work, so the crust formula is used at that zone.
-    rho_b > rhocore would march through the core and is refused when
-    rho_b is a Python number; a traced rho_b must respect it.
+    NSCool's last step reaches zone icore when rho_b = rhocore, where
+    the lepton core conductivity uses the same proton gap as the star.
+    Supply tc (StarTc) so the core boundary uses the star's actual pairing.
+    rho_b > rhocore would march deeper through the core, outside this
+    crust-blanket approximation, and is refused for Python numbers;
+    a traced rho_b must respect the same bound.
     """
     if isinstance(rho_b, (int, float)) and rho_b > s.rhocore:
-        raise ValueError(f"rho_b = {rho_b:g} > rhocore: the core needs its own "
-                         "conductivity (C4)")
+        raise ValueError(f"rho_b = {rho_b:g} > rhocore: deeper-core marching is "
+                         "outside the crust-blanket approximation")
     xl = lg / _LSOL
 
     def step(carry, j1):
@@ -189,15 +192,15 @@ def crust_march(T, s: Star, lg, rho_b, qimp=1e-10, n_iter=20):
 
         def picard(c, _):
             x0, done = c
-            x1 = tcur + num / (0.5 * (_fp(s, j0, x0, qimp) + fpout) * s.a2ephin[ie])
+            x1 = tcur + num / (0.5 * (_fp(s, tc, j0, x0, qimp) + fpout) * s.a2ephin[ie])
             new_done = done | (jnp.abs(x1 - x0) < 1e-10 * x1)
             return (jnp.where(done, x0, x1), new_done), None
 
         (x, _), _ = jax.lax.scan(picard, (tcur, jnp.asarray(False)), None, length=n_iter)
         on = s.rho[j1] < rho_b          # rho grows inwards, so steps stop once
-        return (jnp.where(on, x, tcur), jnp.where(on, _fp(s, j0, x, qimp), fpout)), None
+        return (jnp.where(on, x, tcur), jnp.where(on, _fp(s, tc, j0, x, qimp), fpout)), None
 
-    (tin, _), _ = jax.lax.scan(step, (T, _fp(s, s.imax, T, qimp)),
+    (tin, _), _ = jax.lax.scan(step, (T, _fp(s, tc, s.imax, T, qimp)),
                                jnp.arange(s.imax, 1, -2))
     return tin
 
@@ -215,7 +218,7 @@ def isothermal_sums(T, s: Star, tc: StarTc, eta=0.0, rho_b=0.0, ca_n3p2=0.5,
     w = s.ephi[z] ** 2 * dv
     core = z <= s.icore
     lg, te = _l_gamma(T, s, eta)
-    tin = crust_march(T, s, lg, rho_b, qimp)
+    tin = crust_march(T, s, lg, rho_b, qimp, tc=tc)
     return IsoSums(jnp.sum(terms["cv"] * dv), jnp.sum(terms["qnu"] * w), lg, te, tin,
                    jnp.sum(jnp.where(core, terms["cv"] * dv, 0.0)),
                    jnp.sum(terms["qdurca_np"] * w),

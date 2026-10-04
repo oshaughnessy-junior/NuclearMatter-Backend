@@ -1,0 +1,68 @@
+{
+  "host": "cardassia",
+  "base_commit": "f97b5fd",
+  "cases": [
+    {
+      "mass": 1.4,
+      "gaps": "none",
+      "core_lambda_max_relative_error": 9.972964454263433e-09,
+      "boundary_Tin_max_relative_error": 1.7483847258858987e-08
+    },
+    {
+      "mass": 1.4,
+      "gaps": "default",
+      "core_lambda_max_relative_error": 9.525710487068295e-08,
+      "boundary_Tin_max_relative_error": 1.6417940784663188e-08
+    },
+    {
+      "mass": 2.0,
+      "gaps": "zhou",
+      "core_lambda_max_relative_error": 3.6762578092819354e-08,
+      "boundary_Tin_max_relative_error": 1.5954124132910863e-08
+    },
+    {
+      "mass": 2.0,
+      "gaps": "c_ccdk",
+      "core_lambda_max_relative_error": 8.69638994149824e-09,
+      "boundary_Tin_max_relative_error": 1.5368515793312554e-08
+    }
+  ],
+  "paired_boundary_logTin_20": 20.1507770331918,
+  "paired_boundary_logTin_40": 20.1507770331918,
+  "paired_boundary_gradient_20": [
+    1.0373932736593112,
+    0.01759993823513735,
+    -1.0536274467131482e-05
+  ],
+  "paired_boundary_gradient_40": [
+    1.0373932736593112,
+    0.01759993823513735,
+    -1.0536274467131482e-05
+  ],
+  "paired_boundary_finite_difference": [
+    1.0373932736840175,
+    0.01759993839556273,
+    -1.0536282957218644e-05
+  ],
+  "coupled_late_cooling": {
+    "parameter_order": [
+      "log_eta",
+      "log_proton_gap_amplitude",
+      "log_proton_Landau_mass_scale"
+    ],
+    "fixed_1kyr_anchor_Teff": 1636671.885144656,
+    "10kyr_Teff": 1323862.924710682,
+    "logTeff_gradient": [
+      0.020421742344041642,
+      -0.0026615956863593523,
+      0.023103877466660955
+    ],
+    "finite_difference": [
+      0.020421742359388873,
+      -0.0026615957082753994,
+      0.023103877442309795
+    ],
+    "max_absolute_AD_FD_error": 2.4351159977342718e-11
+  },
+  "scope": "NSCool2009 ICON_CORE2 lepton-only; fixed stellar background; transition derivatives excluded"
+}
