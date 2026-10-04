@@ -33,6 +33,23 @@ def _kf(n, fraction):
     return jnp.where(present, (3.*jnp.pi**2*n*jnp.where(present, fraction, 1.))**(1./3.), 0.)
 
 
+def _unpaired_core_terms(T_local, n, comp):
+    """Local cv (erg cm^-3 K^-1), slow and e/mu Urca rates (erg cm^-3 s^-1).
+
+    Direct-Urca amplitudes are unmasked; callers own their active domains.
+    Requires positive local T/density and covered physical npeμ composition.
+    """
+    xp, xe, xm, mn, mp = _composition_at(comp, n)
+    kn, kp, ke, km = (_kf(n, x) for x in (1.-xp, xp, xe, xm))
+    cv = (heat.cv_coeff(kn,939.56*mn) + heat.cv_coeff(kp,938.27*mp)
+          + heat.lepton_cv_coeff(ke,.511) + heat.lepton_cv_coeff(km,105.))*T_local
+    slow = (core_nu.murca(T_local,ke,km,kn,kp,mn,mp,0.,0.,0,-1)
+            + core_nu.brem(T_local,kn,kp,mn,mp,0.,0.,0,-1))
+    return (cv, slow,
+            core_nu.durca_unpaired_channel(T_local,mn,mp,n,xe),
+            core_nu.durca_unpaired_channel(T_local,mn,mp,n,xm))
+
+
 def _margin(comp, n, lepton):
     xp, xe, xm, _, _ = _composition_at(comp, n)
     return _kf(n, xp) + _kf(n, xe if lepton == 'electron' else xm) - _kf(n, 1.-xp)
@@ -94,8 +111,6 @@ def inner_core_sums(table, profile, h_c, comp, T_inf, *, n_cut):
     m = jnp.concatenate((jnp.zeros(1), profile.m_km))
     ephi = profile.ephi[-1]*jnp.exp(profile.h[-1]-h)
     n = density_at_h(table, h)
-    xp, xe, xm, mn, mp = _composition_at(comp, n)
-    kn, kp, ke, km = (_kf(n, x) for x in (1.-xp, xp, xe, xm))
     t = T_inf/ephi
     metric = jnp.sqrt(1.-2.*m/jnp.where(r>0,r,1.))
     # Interpolate in sqrt(enthalpy drop); the central-series segment then
@@ -108,19 +123,15 @@ def inner_core_sums(table, profile, h_c, comp, T_inf, *, n_cut):
         return jnp.interp(target_u, u, r)**3
     limit = volume_limit(n_cut)
     integrate = lambda value, v=limit: _shell_integral(r, value/metric, v)
-    cv = (heat.cv_coeff(kn,939.56*mn) + heat.cv_coeff(kp,938.27*mp)
-          + heat.lepton_cv_coeff(ke,.511) + heat.lepton_cv_coeff(km,105.))*t
-    qslow = (core_nu.murca(t,ke,km,kn,kp,mn,mp,0.,0.,0,-1)
-             + core_nu.brem(t,kn,kp,mn,mp,0.,0.,0,-1))
+    cv, qslow, q_e, q_mu = _unpaired_core_terms(t,n,comp)
     fast = jnp.asarray(0.)
     single_onset = jnp.asarray(True)
-    for lepton, fraction in [('electron',xe), ('muon',xm)]:
+    for lepton, q in [('electron',q_e), ('muon',q_mu)]:
         opened = _margin(comp,jnp.clip(comp.n,n_cut,n[0]),lepton)>0
         single_onset &= ~jnp.any(opened[:-1] & ~opened[1:])
         threshold = onset_density(comp,n_cut,n[0],lepton=lepton)
         active = _margin(comp,n[0],lepton)>0
         v = jax.lax.cond(active, lambda _: volume_limit(threshold), lambda _: jnp.asarray(0.), None)
-        q = core_nu.durca_unpaired_channel(t,mn,mp,n,fraction)
         fast += integrate(ephi**2*q,v)
     valid = (n[0]>n_cut) & (n_cut>=comp.n[0]) & (n[0]<=comp.n[-1]) & single_onset & (T_inf>0)
     values = InnerCoreSums(integrate(cv),integrate(ephi**2*qslow)+fast,fast,integrate(jnp.ones_like(n)))
