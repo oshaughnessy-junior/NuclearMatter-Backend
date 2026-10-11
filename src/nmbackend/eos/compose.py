@@ -59,20 +59,70 @@ def read_compose(path_dir, thermo="eos.thermo", nb="eos.nb"):
     return n[order], eps[order], p[order], m_n
 
 
-def read_cmf_csv(path, col_nb=5, col_eps=8, col_p=9, sep=",", skip_header=1):
+def _count_header_lines(path, sep=","):
+    """Number of leading lines of ``path`` that are not data rows.
+
+    MUSES CMF++ writes its CSV tables **headerless** (``pandas.to_csv(header=False)``
+    in ``clean_output.py``), so for a real CMF file this returns 0.  A table with a
+    text header row (e.g. a hand-made or CompOSE-style export) returns the number of
+    lines to skip so that :func:`numpy.genfromtxt` starts on the first data row.
+    A UTF-8 BOM (Excel / Windows round-trip) is ignored, and the all-integer
+    ``0,1,2,...`` header that ``pandas.to_csv`` emits for an unnamed DataFrame is
+    treated as a header, not as a data row.  Stops at the first data row.
+    """
+    with open(path, encoding="utf-8-sig") as fh:
+        for i, line in enumerate(fh):
+            toks = line.strip().split(sep)
+            try:
+                vals = [float(tok) for tok in toks]
+            except ValueError:
+                continue
+            if len(vals) > 1 and vals == list(range(len(vals))):
+                continue                                     # pandas default header
+            return i
+    return 0
+
+
+def read_cmf_csv(path, col_nb=5, col_eps=8, col_p=9, sep=",", skip_header=None):
     """Read a MUSES CMF (or CompOSE-style) CSV EOS table -> (n, eps, p).
 
-    The MUSES CMF output schema (CMF_output_stable.csv / _for_Lepton_*.csv) has, in
-    1-based columns: ... 5=baryon density [1/fm^3], 8=energy density [MeV/fm^3],
-    9=pressure [MeV/fm^3] (Cruz-Camacho et al. 2409.06837; docs/muses-integration.md).
-    The CMF grid runs over (mu_B, mu_S, mu_Q), so n_B can repeat / be non-monotone;
-    we keep the physical, sorted, strictly-increasing-density points (for the cold
+    MUSES CMF++ (v1.1.0) output CSVs are **intentionally headerless**; the
+    ``CMF_output_{stable,metastable,unstable}.csv`` layout (1-based columns,
+    ``api/OpenAPI_Specifications_CMF.yaml`` schema ``CMF_output_all_EoS_variables``) is
+
+        1 T [MeV]   2 mu_B   3 mu_S   4 mu_Q [MeV]
+        5 n_B   6 n_S   7 n_Q [1/fm^3]   8 eps   9 p [MeV/fm^3]   10 s [1/fm^3]
+        11 sigma  12 zeta  13 delta  14 omega  15 phi  16 rho [MeV]  17 Phi_order
+        18 n_B_without_Phi_order  19 n_quark  20 n_octet  21 n_decuplet [1/fm^3]
+
+    The ``CMF_output_for_Lepton_*.csv`` files carry only columns 1-10 plus 18 (11
+    columns), so the (5, 8, 9) default mapping is the same for both families.  Column 5
+    is the full baryon density (including the Polyakov-loop ``Phi_order`` term in
+    mu_B; it is what pairs thermodynamically with eps and p), column 18 excludes it
+    (Cruz-Camacho et al. 2409.06837; docs/muses-integration.md).
+
+    ``skip_header=None`` (default) auto-detects: leading non-numeric lines are skipped,
+    so a real headerless CMF file loses no rows (the first row of the default C4 run is
+    the mu_B = 922 MeV nuclear-matter onset) while a file with a text header still
+    reads correctly.  Pass an int to force a fixed number of skipped lines.
+    The CMF grid runs over (mu_B, mu_S, mu_Q), so n_B can repeat / be non-monotone and
+    the Lepton files include metastable points with p < 0; we keep the physical
+    (n, eps, p > 0, finite), sorted, strictly-increasing-density points (for the cold
     beta-eq NS EOS, point CMF at its Lepton/Synthesis output along the NS line).
     """
-    d = np.genfromtxt(path, delimiter=sep, skip_header=skip_header)
+    if skip_header is None:
+        skip_header = _count_header_lines(path, sep)
+    d = np.genfromtxt(path, delimiter=sep, skip_header=skip_header, encoding="utf-8-sig")
     d = np.atleast_2d(d)
+    need = max(col_nb, col_eps, col_p)
+    if d.size == 0 or d.shape[1] < need:
+        raise ValueError(f"{path}: expected >= {need} numeric columns after skipping "
+                         f"{skip_header} header line(s); got shape {d.shape}")
     n, eps, p = d[:, col_nb - 1], d[:, col_eps - 1], d[:, col_p - 1]
-    ok = (n > 0) & (eps > 0) & np.isfinite(n) & np.isfinite(eps) & np.isfinite(p)
+    ok = (n > 0) & (eps > 0) & (p > 0) & np.isfinite(n) & np.isfinite(eps) & np.isfinite(p)
+    if not np.any(ok):
+        raise ValueError(f"{path}: no rows with finite n_B, eps, p > 0 in columns "
+                         f"({col_nb}, {col_eps}, {col_p}); is this a CMF EOS table?")
     n, eps, p = n[ok], eps[ok], p[ok]
     o = np.argsort(n)
     n, eps, p = n[o], eps[o], p[o]
