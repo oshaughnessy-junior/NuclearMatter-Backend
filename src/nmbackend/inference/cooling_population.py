@@ -129,7 +129,7 @@ def source_mass_kernels(logL, M_knots, log_t, sources: Sequence[CoolingSource], 
     """S[i, g, m] = sum_eta w_eta sum_t w_i(t) p(d_i | logL) for one EOS draw.
 
     logL: [nM, nG, nEta, nT]; M_knots ascending (top knot ~ Mmax of the draw);
-    sigma_model: None, scalar, or array over log_t.  Mass points outside the knots get 0.
+    sigma_model: None, scalar, array over log_t, or array shaped like logL.  Mass points outside the knots get 0.
     valid: optional bool [nM, nG, nEta]; invalid curves are excluded from the eta average
     (renormalized) and a mass point with no valid curve gets 0.
     """
@@ -140,7 +140,12 @@ def source_mass_kernels(logL, M_knots, log_t, sources: Sequence[CoolingSource], 
     if valid is not None:
         v = _interp_mass(valid.astype(float), M_knots, m_fine)
         ok &= (v > 0.999)
-    sm = 0.0 if sigma_model is None else np.broadcast_to(sigma_model, log_t.shape)
+    if sigma_model is None:
+        sm = 0.0
+    elif np.ndim(sigma_model) == 4:                           # per curve point, like logL
+        sm = np.nan_to_num(_interp_mass(np.asarray(sigma_model, float), M_knots, m_fine))
+    else:
+        sm = np.broadcast_to(sigma_model, log_t.shape)
     lf0 = np.where(np.isfinite(lf), lf, 0.0)
     out = np.zeros((len(sources), len(m_fine), nG))
     wE = ew[None, None, :] * ok                               # [m, G, E]
