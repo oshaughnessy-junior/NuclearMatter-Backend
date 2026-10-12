@@ -24,7 +24,7 @@ import numpy as np
 from scipy.special import erf, log_ndtr, logsumexp
 from scipy.stats import norm
 
-__all__ = ["CoolingSource", "age_weights", "thermal_loglike", "source_mass_kernels",
+__all__ = ["split_at_onset", "CoolingSource", "age_weights", "thermal_loglike", "source_mass_kernels",
            "IsoPopulation", "population_density", "log_like_grid", "posterior_weights",
            "star_mass_posterior"]
 
@@ -122,6 +122,27 @@ def _interp_mass(logL, M_knots, m_fine):
         + w[(...,) + (None,) * (logL.ndim - 1)] * logL[idx + 1]
     out[(m_fine < M_knots[0]) | (m_fine > M_knots[-1])] = np.nan
     return out
+
+
+def split_at_onset(M_knots, n_durca, *arrays, eps=1e-6):
+    """Stop mass interpolation across the dUrca switch.
+
+    Unpaired dUrca turns on as a near step in mass (the first dUrca zone drops
+    log L by ~3 dex), so linear interpolation between a slow and a fast knot
+    invents intermediate luminosities.  Inserts two knots at the midpoint of the
+    first slow->fast pair (n_durca 0 -> >0), carrying each side's nearest values.
+    Returns (M_knots, *arrays) with the mass axis first in every array.
+    """
+    M_knots = np.asarray(M_knots, float)
+    fast = np.asarray(n_durca) > 0
+    j = np.flatnonzero(~fast[:-1] & fast[1:])
+    if j.size == 0:
+        return (M_knots,) + arrays
+    j = int(j[0])
+    mid = 0.5 * (M_knots[j] + M_knots[j + 1])
+    M2 = np.concatenate([M_knots[:j + 1], [mid - eps, mid + eps], M_knots[j + 1:]])
+    out = [np.concatenate([a[:j + 1], a[j:j + 1], a[j + 1:j + 2], a[j + 1:]]) for a in arrays]
+    return (M2, *out)
 
 
 def source_mass_kernels(logL, M_knots, log_t, sources: Sequence[CoolingSource], m_fine,

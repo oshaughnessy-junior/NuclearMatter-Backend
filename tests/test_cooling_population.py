@@ -85,3 +85,15 @@ def test_recovers_onset_mass_and_population():
     assert 1.2 < mu_post < 1.6
     post = star_mass_posterior(w, S[:, 0], np.full(len(draws), mmax), pop, m_fine)
     assert abs(_trapz(post, m_fine) - 1) < 1e-3
+
+
+def test_split_at_onset_blocks_interpolation():
+    from nmbackend.inference.cooling_population import split_at_onset, _interp_mass
+    M = np.array([1.0, 1.2, 1.4, 1.6])
+    L = np.array([33.0, 33.0, 30.0, 30.0])[:, None]
+    nd = np.array([0, 0, 1, 2])
+    M2, L2 = split_at_onset(M, nd, L)
+    v = _interp_mass(L2, M2, np.array([1.25, 1.29, 1.31, 1.35]))[:, 0]
+    assert np.allclose(v, [33, 33, 30, 30])
+    M3, L3 = split_at_onset(M, np.zeros(4), L)
+    assert M3 is not None and len(M3) == 4
