@@ -97,3 +97,25 @@ def test_split_at_onset_blocks_interpolation():
     assert np.allclose(v, [33, 33, 30, 30])
     M3, L3 = split_at_onset(M, np.zeros(4), L)
     assert M3 is not None and len(M3) == 4
+
+
+def test_mixture_weights_respected():
+    """Regression: component normalization must not cancel the ECSN share."""
+    from nmbackend.inference.cooling_population import mixture_density
+    m = np.linspace(0.95, 2.7, 2001)
+    for fe in (0.0, 0.07, 0.5):
+        pop = IsoPopulation(mu=np.array([1.5]), sigma=np.array([0.2]), alpha=np.array([0.0]),
+                            f_ecsn=np.array([fe]))
+        p = mixture_density(pop, m, 2.2)[0]
+        assert abs(_trapz(p, m) - 1) < 2e-3
+        spike = (m > 1.2) & (m < 1.3)
+        base = mixture_density(IsoPopulation(np.array([1.5]), np.array([0.2]), np.array([0.0]),
+                                             np.array([0.0])), m, 2.2)[0]
+        assert abs(_trapz(p[spike] - (1 - fe) * base[spike], m[spike]) - fe) < 5e-3
+    # likelihood of a star measured at 1.25 must grow with the ECSN share
+    S = np.exp(-0.5 * ((m - 1.25) / 0.02) ** 2)[None, None, None, :]
+    lo = log_like_grid(S, np.array([2.2]), IsoPopulation(np.array([1.6]), np.array([0.15]),
+                                                         np.array([0.]), np.array([0.05])), m)
+    hi = log_like_grid(S, np.array([2.2]), IsoPopulation(np.array([1.6]), np.array([0.15]),
+                                                         np.array([0.]), np.array([0.5])), m)
+    assert hi[0, 0, 0] > lo[0, 0, 0] + 1.0

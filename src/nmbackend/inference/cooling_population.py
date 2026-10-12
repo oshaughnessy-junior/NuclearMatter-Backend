@@ -24,7 +24,7 @@ import numpy as np
 from scipy.special import erf, log_ndtr, logsumexp
 from scipy.stats import norm
 
-__all__ = ["split_at_onset", "CoolingSource", "age_weights", "thermal_loglike", "source_mass_kernels",
+__all__ = ["mixture_density", "split_at_onset", "CoolingSource", "age_weights", "thermal_loglike", "source_mass_kernels",
            "IsoPopulation", "population_density", "log_like_grid", "posterior_weights",
            "star_mass_posterior"]
 
@@ -220,6 +220,20 @@ def _trunc_norm(cdfs, m_fine, Mmax):
     return [np.stack([np.interp(Mmax, m_fine, row) for row in C]) for C in cdfs]
 
 
+def mixture_density(pop: IsoPopulation, m_fine, mmax):
+    """p(M | Lam_k) on m_fine, each component truncated to [M_min, mmax] and
+    renormalized, then mixed with weights (1 - f_ecsn, f_ecsn); [k, m].
+    mmax: scalar or per-sample array."""
+    (f_sn, f_ec), (F_sn, F_ec) = population_density(pop, m_fine)
+    mm = np.broadcast_to(np.asarray(mmax, float), (pop.n,))
+    Zs = np.array([np.interp(x, m_fine, r) for x, r in zip(mm, F_sn)])
+    Ze = np.array([np.interp(x, m_fine, r) for x, r in zip(mm, F_ec)])
+    fe = np.atleast_1d(np.asarray(pop.f_ecsn, float))[:, None]
+    p = ((1 - fe) * f_sn / np.where(Zs > 0, Zs, np.inf)[:, None]
+         + fe * f_ec / np.where(Ze > 1e-300, Ze, np.inf)[:, None])
+    return p * (m_fine[None, :] <= mm[:, None])
+
+
 def log_like_grid(S, Mmax, pop: IsoPopulation, m_fine, chunk=64):
     """lnL[k, e, g] for kernels S[e, i, g, m] (all draws) and population samples k.
 
@@ -230,6 +244,7 @@ def log_like_grid(S, Mmax, pop: IsoPopulation, m_fine, chunk=64):
     nE, nI, nG, nm = S.shape
     (f_sn, f_ec), (F_sn, F_ec) = population_density(pop, m_fine)
     Zsn, Zec = _trunc_norm((F_sn, F_ec), m_fine, np.asarray(Mmax))   # [k, e]
+    fe_k = np.atleast_1d(np.asarray(pop.f_ecsn, float))[:, None, None, None]
     dm = np.gradient(m_fine)
     out = np.empty((pop.n, nE, nG))
     for e0 in range(0, nE, chunk):
@@ -239,8 +254,10 @@ def log_like_grid(S, Mmax, pop: IsoPopulation, m_fine, chunk=64):
         a = (f_sn @ flat).reshape((pop.n,) + Se.shape[:3])
         b = (f_ec @ flat).reshape((pop.n,) + Se.shape[:3])
         zs, ze = Zsn[:, sl, None, None], Zec[:, sl, None, None]
-        lik = np.where(zs > 0, a / np.where(zs > 0, zs, 1), 0.0) \
-            + np.where(ze > 1e-300, b / np.where(ze > 1e-300, ze, 1), 0.0)
+        # f_sn, F_sn carry the weight (1 - f_ecsn) and f_ec, F_ec carry f_ecsn: each
+        # ratio below is a unit-normalized component, so the weights are put back
+        lik = (1 - fe_k) * np.where(zs > 0, a / np.where(zs > 0, zs, 1), 0.0) \
+            + fe_k * np.where(ze > 1e-300, b / np.where(ze > 1e-300, ze, 1), 0.0)
         with np.errstate(divide="ignore"):
             out[:, sl, :] = np.log(lik).sum(axis=2)
     return out
@@ -275,8 +292,9 @@ def star_mass_posterior(w, S_i, Mmax, pop: IsoPopulation, m_fine):
     Zsn, Zec = _trunc_norm((F_sn, F_ec), m_fine, np.asarray(Mmax))
     out = np.zeros_like(m_fine)
     for k in np.nonzero(w.sum(axis=(1, 2)) > 1e-12 * w.sum())[0]:
-        prior = (f_sn[k][None, :] / np.where(Zsn[k] > 0, Zsn[k], np.inf)[:, None]
-                 + f_ec[k][None, :] / np.where(Zec[k] > 1e-300, Zec[k], np.inf)[:, None])
+        fe = np.atleast_1d(pop.f_ecsn)[k]
+        prior = ((1 - fe) * f_sn[k][None, :] / np.where(Zsn[k] > 0, Zsn[k], np.inf)[:, None]
+                 + fe * f_ec[k][None, :] / np.where(Zec[k] > 1e-300, Zec[k], np.inf)[:, None])
         prior = prior * (m_fine[None, :] <= np.asarray(Mmax)[:, None])   # [e, m]
         post = prior[:, None, :] * S_i                                    # [e, g, m]
         z = _trapz(post, m_fine, axis=-1)
