@@ -38,8 +38,9 @@ class CoolingSource:
 
     age: dict with "form" one of
       split_normal_log10t (mode_log10, sigma_lo, sigma_hi), loguniform_t (lo, hi),
-      uniform_t (lo, hi), box_log10t (lo, hi in log10); combined with a uniform
-      birth rate (weight proportional to t) and soft edges of width sigma_age_edge dex.
+      uniform_t (lo, hi), box_log10t (lo, hi in log10), with soft edges of width
+      sigma_age_edge dex.  The stated density is read as the age posterior under a
+      uniform birth rate (see age_weights); bounds-only ranges are log-uniform.
     thermal: dict with "form" one of
       split_normal_log10L (mode, sigma_lo, sigma_hi), uniform_log10L (lo, hi; soft edges),
       upper_limit (log10_L_max; P(L < max) with width sigma_lim).
