@@ -22,7 +22,7 @@ from typing import Optional, Sequence
 
 import numpy as np
 from scipy.special import erf, log_ndtr, logsumexp
-from scipy.stats import norm, skewnorm
+from scipy.stats import norm
 
 __all__ = ["CoolingSource", "age_weights", "thermal_loglike", "source_mass_kernels",
            "IsoPopulation", "population_density", "log_like_grid", "posterior_weights",
@@ -180,8 +180,13 @@ def population_density(pop: IsoPopulation, m_fine):
     mu, sg, al, fe = (np.atleast_1d(np.asarray(x, float))[:, None]
                       for x in (pop.mu, pop.sigma, pop.alpha, pop.f_ecsn))
     m = m_fine[None, :]
-    f_sn = skewnorm.pdf(m, al, loc=mu, scale=sg)
-    F_sn = skewnorm.cdf(m, al, loc=mu, scale=sg) - skewnorm.cdf(pop.M_min, al, loc=mu, scale=sg)
+    z = (m - mu) / sg
+    f_sn = np.exp(-0.5 * z * z) / (sg * np.sqrt(2 * np.pi)) * (1 + erf(al * z / np.sqrt(2)))
+    # CDF by trapezoid on m_fine from M_min (scipy's skewnorm.cdf is far too slow here);
+    # same quadrature as the likelihood, so truncation normalizations are consistent
+    fa = f_sn * (m >= pop.M_min)
+    F_sn = np.concatenate([np.zeros((fa.shape[0], 1)),
+                           np.cumsum(0.5 * (fa[:, 1:] + fa[:, :-1]) * np.diff(m_fine), axis=1)], 1)
     f_ec = norm.pdf(m, M_ECSN, SIG_ECSN)
     F_ec = norm.cdf(m, M_ECSN, SIG_ECSN) - norm.cdf(pop.M_min, M_ECSN, SIG_ECSN)
     above = m >= pop.M_min
@@ -208,8 +213,9 @@ def log_like_grid(S, Mmax, pop: IsoPopulation, m_fine, chunk=64):
     for e0 in range(0, nE, chunk):
         sl = slice(e0, min(nE, e0 + chunk))
         Se = S[sl] * dm                                                 # [e, i, g, m]
-        a = np.einsum("km,eigm->keig", f_sn, Se, optimize=True)
-        b = np.einsum("km,eigm->keig", f_ec, Se, optimize=True)
+        flat = Se.reshape(-1, nm).T                                     # [m, e*i*g]
+        a = (f_sn @ flat).reshape((pop.n,) + Se.shape[:3])
+        b = (f_ec @ flat).reshape((pop.n,) + Se.shape[:3])
         zs, ze = Zsn[:, sl, None, None], Zec[:, sl, None, None]
         lik = np.where(zs > 0, a / np.where(zs > 0, zs, 1), 0.0) \
             + np.where(ze > 1e-300, b / np.where(ze > 1e-300, ze, 1), 0.0)
