@@ -135,26 +135,28 @@ def source_mass_kernels(logL, M_knots, log_t, sources: Sequence[CoolingSource], 
     """
     nM, nG, nE, nT = logL.shape
     ew = np.full(nE, 1.0 / nE) if eta_weights is None else np.asarray(eta_weights, float)
-    lf = _interp_mass(logL, M_knots, m_fine)                  # [m, G, E, T]
-    ok = np.isfinite(lf).all(axis=-1)                         # [m, G, E]
+    finite = np.isfinite(logL).all(axis=-1)                    # [M, G, E]
+    ok = _interp_mass(finite.astype(float), M_knots, m_fine) > 0.999
     if valid is not None:
-        v = _interp_mass(valid.astype(float), M_knots, m_fine)
-        ok &= (v > 0.999)
-    if sigma_model is None:
-        sm = 0.0
-    elif np.ndim(sigma_model) == 4:                           # per curve point, like logL
-        sm = np.nan_to_num(_interp_mass(np.asarray(sigma_model, float), M_knots, m_fine))
-    else:
-        sm = np.broadcast_to(sigma_model, log_t.shape)
-    lf0 = np.where(np.isfinite(lf), lf, 0.0)
-    out = np.zeros((len(sources), len(m_fine), nG))
+        ok &= _interp_mass(valid.astype(float), M_knots, m_fine) > 0.999
+    ok &= np.isfinite(m_fine)[:, None, None]
     wE = ew[None, None, :] * ok                               # [m, G, E]
     norm_e = wE.sum(-1)
+    L0 = np.where(np.isfinite(logL), logL, 0.0)
+    full_sm = sigma_model is not None and np.ndim(sigma_model) == 4
+    out = np.zeros((len(sources), len(m_fine), nG))
     for i, src in enumerate(sources):
-        with np.errstate(divide="ignore"):
-            lw = np.log(age_weights(log_t, src))
-        ll = thermal_loglike(lf0, src, sm) + lw               # [m, G, E, T]
-        pe = np.exp(logsumexp(ll, axis=-1))                   # [m, G, E]
+        aw = age_weights(log_t, src)
+        cols = np.nonzero(aw > 1e-5 * aw.max())[0]           # age support (weight > 1e-5 peak)
+        lf = np.nan_to_num(_interp_mass(L0[..., cols], M_knots, m_fine))   # [m, G, E, t]
+        if sigma_model is None:
+            sm = 0.0
+        elif full_sm:
+            sm = np.nan_to_num(_interp_mass(np.asarray(sigma_model, float)[..., cols],
+                                            M_knots, m_fine))
+        else:
+            sm = np.broadcast_to(sigma_model, log_t.shape)[cols]
+        pe = np.exp(thermal_loglike(lf, src, sm)) @ aw[cols]  # [m, G, E]
         out[i] = np.where(norm_e > 0, (pe * wE).sum(-1) / np.where(norm_e > 0, norm_e, 1), 0.0)
     return out.transpose(0, 2, 1)                             # [i, G, m]
 
