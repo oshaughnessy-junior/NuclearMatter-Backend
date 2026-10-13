@@ -14,13 +14,22 @@ Two backends sit behind one seam, ``solve_structure``:
   and is validated against an independent radius-domain solver to <0.1% in M, R,
   and Lambda (see ``tests/test_validation_reference.py``).  Forward-mode AD flows
   through it via ``diffrax.ForwardMode`` -- this is the supported sensitivity path
-  and reproduces the perturbation ("delta-TOV") equations.  Steps are cut at
-  the EOS table nodes (diffrax ``jump_ts``), where the right-hand side has slope
-  kinks, and the integration mesh is held fixed under differentiation.  Without
-  this the tangents carried a bias that fell only slowly and erratically with
-  rtol (0.01-4% at rtol 1e-11); with it they converge like the values
-  (AD vs FD ~1e-4 at the default rtol, <1e-6 at 1e-9;
-  docs/devlog/2026-10-12-tov-jump-ts.md).
+  and reproduces the perturbation ("delta-TOV") equations.  Two mechanisms make
+  the tangents accurate (docs/devlog/2026-10-12-tov-jump-ts.md):
+
+  - steps stop at the EOS table nodes (diffrax ``jump_ts``), where the
+    right-hand side has slope kinks.  This fixes the EOS-*parameter* tangents,
+    which now converge with rtol at the level of the values (~3e-5 at the
+    default rtol, ~1e-7 at 1e-9; up to 10% before).
+  - the start of the integration is frozen against differentiation.  This fixes
+    the *h_c* tangent (3.6e-2 -> 1.2e-4 at the default rtol).  It converges like
+    rtol but sits ~1e3x above the values (~1e-4 at the default rtol, ~5e-7 at
+    1e-9), from the near-centre resolution; ``centre_refine=True`` buys ~10x.
+    The residual is a near-common factor on M, R, Lambda, so it largely cancels
+    in fixed-mass derivatives.
+
+  FIRST derivatives only w.r.t. h_c: d^2/dh_c^2 is wrong by orders of
+  magnitude (mixed d^2/dh_c dtheta is fine).
 
 * ``backend="scan"``: a lightweight fixed-step RK4 ``jax.lax.scan``.  Fully
   jit/vmap/grad-able (incl. reverse-mode for structure-only, ``tidal=False``), but
@@ -189,22 +198,46 @@ def _node_jumps(table):
 
 
 def _adaptive_tov(table, t0, t1, state0, rtol, atol, tidal, dt0,
-                  adjoint=None, max_steps=100000, saveat=None):
+                  adjoint=None, max_steps=100000, saveat=None, jump_nodes=True):
     """Adaptive Dopri5 integration of the TOV(+tidal) system from ``t0`` down to
     ``t1`` in pseudo-enthalpy, with steps cut at the EOS table nodes.
 
+    Two mechanisms, each fixing one column of the tangent (docs/devlog/
+    2026-10-12-tov-jump-ts.md):
+
+    * ``jump_ts`` at the table nodes fixes the *parameter* tangents: the mesh
+      no longer straddles kinks whose position moves with the EOS parameters.
+    * The frozen start fixes the *h_c* tangent and is REQUIRED whenever
+      ``jump_ts`` is on.  With a live t0/dt0 the mesh moves with h_c while the
+      (gradient-stopped) node clips do not, and the h_c tangent error grows as
+      rtol tightens (0.49 / 4.8e3 / 1.7e7 at rtol 1e-7 / 1e-8 / 1e-9).
+
     The start time and the initial step are frozen against differentiation, so
     no mesh point before the last carries a tangent.  The start's dependence on
-    the inputs moves into the starting state through the first-order flow
-    correction ``y(t0s) = y(t0) + f(t0, y(t0)) (t0s - t0)``, whose value is
-    unchanged (t0s == t0) and whose tangent ``dy0 - f dt0`` is exact.  ``t1``
-    stays live: the last step ends there and spans no node."""
+    the inputs moves into the starting state through the flow expansion
+    ``y(t0s) = y(t0) + f d + f' d^2 / 2`` with ``d = t0s - t0 == 0`` and
+    ``f' = df/dt`` along the flow: values are unchanged, first tangents are
+    exact (``dy0 - f dt0``), and the ``f' dt0^2`` term of the second tangent is
+    kept.  ``t1`` stays live: the last step ends there and spans no node.
+
+    Derivatives w.r.t. the start (h_c) are reliable to FIRST order only.  Second
+    derivatives in h_c are wrong by orders of magnitude (the frozen mesh
+    under-resolves the (h_c - h)^-3/2 second tangent near the centre);
+    mixed d^2/dh_c dtheta and all parameter derivatives are fine.
+    ``tests/test_tov_jump_ts.py::test_second_hc_derivative_is_not_supported``
+    pins this."""
     sg = jax.lax.stop_gradient
     t0, t1 = jnp.asarray(t0), jnp.asarray(t1)   # a Python float here is a jit key
-    t0s = sg(t0)
-    state0 = state0 + _derivs(t0, state0, table, tidal) * (t0s - t0)
+    t0s = sg(t0)                                # REQUIRED with jump_ts; see above
+    f0 = _derivs(t0, state0, table, tidal)
+    _, fdot = jax.jvp(lambda t, y: _derivs(t, y, table, tidal),
+                      (t0, state0), (jnp.ones_like(t0), f0))
+    d = t0s - t0
+    state0 = state0 + f0 * d + 0.5 * fdot * d * d
     term = diffrax.ODETerm(_field_tidal if tidal else _field_structure)
-    ctrl = diffrax.PIDController(rtol=rtol, atol=atol, jump_ts=_node_jumps(table))
+    ctrl = diffrax.PIDController(
+        rtol=rtol, atol=atol,
+        jump_ts=_node_jumps(table) if jump_nodes else None)
     if adjoint is None:
         adjoint = diffrax.ForwardMode()   # supports values, vmap, forward-mode AD
     return diffrax.diffeqsolve(
@@ -215,18 +248,42 @@ def _adaptive_tov(table, t0, t1, state0, rtol, atol, tidal, dt0,
     )
 
 
+#: ``centre_refine``: the inner fraction of (h_c - h_min) integrated at a
+#: tolerance tighter by ``_CENTRE_TOL`` (floored at ``_CENTRE_RTOL_MIN``)
+_CENTRE_FRAC = 0.05
+_CENTRE_TOL = 1e-3
+_CENTRE_RTOL_MIN = 1e-13
+
+
 def _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint=None,
-                       max_steps=100000, saveat=None):
+                       max_steps=100000, saveat=None, *, jump_nodes=True,
+                       centre_refine=False):
     if not _HAVE_DIFFRAX:  # pragma: no cover
         raise ImportError("backend='diffrax' requires the 'diffrax' package; "
                           "pip install diffrax  (or use backend='scan').")
     h_min, h_c, dh0, state0 = _central_start(table, h_c)
-    return _adaptive_tov(table, h_c - dh0, h_min, state0, rtol, atol, tidal,
-                         -(h_c - h_min) * 1e-4, adjoint, max_steps, saveat)
+    t0, dt0 = h_c - dh0, -(h_c - h_min) * 1e-4
+    if not centre_refine:
+        return _adaptive_tov(table, t0, h_min, state0, rtol, atol, tidal, dt0,
+                             adjoint, max_steps, saveat, jump_nodes)
+    if saveat is not None:
+        raise ValueError("centre_refine supports SaveAt(t1=True) only")
+    # Inner shell to a frozen split point at a tighter tolerance, then the rest.
+    # The split is an arbitrary interior point, so freezing it needs no
+    # correction; the state carries the tangents across.
+    h_split = jax.lax.stop_gradient(t0 - _CENTRE_FRAC * (h_c - h_min))
+    scale = jnp.maximum(_CENTRE_TOL, _CENTRE_RTOL_MIN / rtol)
+    inner = _adaptive_tov(table, t0, h_split, state0, rtol * scale,
+                          atol * scale, tidal, dt0, adjoint, max_steps, None,
+                          jump_nodes)
+    return _adaptive_tov(table, h_split, h_min, inner.ys[0], rtol, atol, tidal,
+                         10.0 * dt0, adjoint, max_steps, None, jump_nodes)
 
 
-def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000):
-    sol = _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint, max_steps)
+def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000,
+                   *, jump_nodes=True, centre_refine=False):
+    sol = _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint, max_steps,
+                             jump_nodes=jump_nodes, centre_refine=centre_refine)
     ys = sol.ys[0]
     return _finish(ys[0], ys[1], ys[2], h_c, tidal)
 
@@ -259,7 +316,8 @@ def solve_profile(table: EOSTable, h_c, *, n_points: int = 256,
 
 def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
                     tidal: bool = True, rtol: float = 1e-7, atol: float = 1e-9,
-                    n_steps: int = 2000, adjoint=None):
+                    n_steps: int = 2000, adjoint=None, jump_nodes: bool = True,
+                    centre_refine: bool = False):
     """Integrate one star at central pseudo-enthalpy ``h_c``.  Returns TOVPoint.
 
     Backend seam: callers depend only on this signature and ``TOVPoint``.
@@ -272,9 +330,23 @@ def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
               reverse-mode AD of (R, M) is clean (scan backend).
     rtol, atol : diffrax tolerances.   n_steps : scan-backend step count.
     adjoint : optional diffrax adjoint override (default ForwardMode()).
+    jump_nodes : (diffrax) stop steps at every EOS table node (default).  False
+              is an opt-out for bulk value-only scans of tables with thousands
+              of rows: cheaper (MetaModel family 3x), but Lambda loses
+              ~1e3x in accuracy (2e-7 -> 2e-4..3e-3 at the default rtol), and
+              the parameter tangents are biased by up to ~10%.
+    centre_refine : (diffrax) integrate the inner 5% of (h_c - h_min) at
+              rtol * 1e-3.  Off by default.  Cuts the h_c-tangent error at the
+              default rtol from ~1.2e-4 to ~8e-6 for +40-90% cost; parameter
+              tangents and values are unchanged.
+
+    Derivatives: forward-mode first derivatives in h_c and in any EOS
+    parameter, and mixed d^2/dh_c dtheta, are supported.  Second derivatives
+    in h_c (d^2 X/dh_c^2) are NOT: they are wrong by orders of magnitude.
     """
     if backend == "diffrax":
-        return _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=adjoint)
+        return _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=adjoint,
+                              jump_nodes=jump_nodes, centre_refine=centre_refine)
     elif backend == "scan":
         return _solve_scan(table, h_c, n_steps, tidal)
     raise ValueError(f"unknown backend {backend!r} (use 'diffrax' or 'scan')")

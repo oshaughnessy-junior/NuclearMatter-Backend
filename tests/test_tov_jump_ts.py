@@ -19,14 +19,16 @@ _L0 = 60.0
 _HC = 0.20 * float(mm.eos_table().h[-1])    # ~1.25 Msun on the default table
 
 
-def _obs(x, rtol, atol):
+def _obs(x, rtol, atol, centre_refine=False):
     """(M, R, Lambda) at (L_sym, h_c) = x."""
-    pt = solve_structure(mm.eos_table({"L_sym": x[0]}), x[1], rtol=rtol, atol=atol)
+    pt = solve_structure(mm.eos_table({"L_sym": x[0]}), x[1], rtol=rtol, atol=atol,
+                         centre_refine=centre_refine)
     return jnp.stack([pt.M_msun, pt.R_km, pt.Lambda])
 
 
 _val = jax.jit(_obs)
-_jac = jax.jit(jax.jacfwd(_obs))             # rows (M, R, Lambda), cols (L_sym, h_c)
+# rows (M, R, Lambda), cols (L_sym, h_c)
+_jac = jax.jit(jax.jacfwd(_obs), static_argnums=3)
 
 
 def _fd_reference():
@@ -44,18 +46,29 @@ def _fd_reference():
 _FD = None
 
 
-def _rel_err(rtol, atol):
+def _rel_err(rtol, atol, centre_refine=False):
     global _FD
     if _FD is None:
         _FD = _fd_reference()
-    J = np.asarray(_jac(jnp.array([_L0, _HC]), rtol, atol))
+    J = np.asarray(_jac(jnp.array([_L0, _HC]), rtol, atol, centre_refine))
     return np.abs(J / _FD - 1.0)
 
 
 def test_tangents_match_fd_at_default_tolerance():
-    # measured <= 1.3e-4 (h_c column) and <= 3e-5 (L_sym column); was 2-10%
+    # measured <= 1.2e-4 (h_c column: the frozen start) and <= 3e-5 (L_sym
+    # column: jump_ts); was up to 10%.  The h_c residual is a near-common factor
+    # (+1.0e-4, +1.2e-4, +1.0e-4 on M, R, Lambda), so it largely cancels in
+    # fixed-mass (IFT) derivatives.
     err = _rel_err(1e-7, 1e-9)               # solve_structure's defaults
     assert np.all(err <= 3e-4), err
+
+
+def test_centre_refine_tightens_the_hc_column():
+    # opt-in: inner 5% of the star at rtol*1e-3; measured h_c column <= 8.1e-6,
+    # L_sym column unchanged (<= 3e-5)
+    err = _rel_err(1e-7, 1e-9, True)
+    assert np.all(err[:, 1] <= 3e-5), err
+    assert np.all(err[:, 0] <= 3e-4), err
 
 
 def test_tangents_match_fd_at_tight_tolerance():
@@ -79,3 +92,23 @@ def test_batched_tables_match_unbatched():
     batched = np.asarray(jax.vmap(_val, in_axes=(0, None, None))(xs, 1e-7, 1e-9))
     single = np.stack([np.asarray(_val(x, 1e-7, 1e-9)) for x in xs])
     np.testing.assert_allclose(batched, single, rtol=1e-10, atol=0.0)
+
+
+def test_second_hc_derivative_is_not_supported():
+    """Pins a documented LIMITATION: the frozen start makes first h_c derivatives
+    (and mixed d^2/dh_c dtheta: measured 9.3e-4 at the default rtol, 2.4e-7 at
+    1e-10) accurate, but d^2 X/dh_c^2 is wrong by orders of magnitude (AD/FD - 1
+    = +3.7e4 at the default rtol, +7.9 at 1e-10; the base solver gave O(1)).  If
+    this starts failing, second h_c derivatives may have become usable: update
+    the solve_structure docstring, README and docs/physics.rst first."""
+    t = mm.eos_table({"L_sym": _L0})
+
+    def M(hc, rtol):
+        return solve_structure(t, hc, tidal=False, rtol=rtol,
+                               atol=rtol * 1e-2).M_msun
+
+    grad = jax.jit(jax.jacfwd(M))
+    d2 = float(jax.jit(jax.jacfwd(jax.jacfwd(M)))(_HC, 1e-7))
+    dh = 1e-4 * _HC
+    fd = (float(grad(_HC + dh, 1e-10)) - float(grad(_HC - dh, 1e-10))) / (2 * dh)
+    assert abs(d2 / fd - 1.0) > 10.0

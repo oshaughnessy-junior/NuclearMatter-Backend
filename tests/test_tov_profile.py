@@ -38,4 +38,7 @@ def test_profile_central_enthalpy_sensitivity():
     radius = lambda hc: solve_profile(table, hc, n_points=32, rtol=1e-9, atol=1e-11).r_km[-1]
     # Exact analytic forward value gates the derivative comparison.
     np.testing.assert_allclose(radius(.3), exact_radius(.3), rtol=2e-6)
-    np.testing.assert_allclose(jax.jacfwd(radius)(.3), jax.jacfwd(exact_radius)(.3), rtol=2e-5)
+    # measured 4.9e-7 since the start is frozen (7.8e-10 with the old co-moving
+    # mesh on this kink-free table); docs/devlog/2026-10-12-tov-jump-ts.md
+    np.testing.assert_allclose(jax.jacfwd(radius)(.3), jax.jacfwd(exact_radius)(.3),
+                               rtol=2e-6, atol=0.0)

@@ -42,7 +42,11 @@ from ..tov import build_family, m_max, lambda_of_mass, radius_of_mass
 from ..tov.family import default_hc_grid
 from ..tov.solver import solve_structure
 
-#: default solver tolerances for *gradient* work (single-star tangents)
+#: default solver tolerances for *gradient* work (single-star tangents).
+#: Deliberately tighter than solve_structure's 1e-7: parameter tangents are
+#: accurate there (~3e-5) but the h_c tangent sits at ~1e-4 (frozen-start
+#: near-centre resolution), ~5e-8 at 1e-10.  Do not loosen to 1e-7; see
+#: docs/devlog/2026-10-12-tov-jump-ts.md.
 GRADIENT_RTOL = 1e-10
 GRADIENT_ATOL = 1e-12
 

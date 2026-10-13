@@ -178,10 +178,10 @@ surrogate/acceleration work.
      solve stepped across the table nodes, where the right-hand side has slope
      kinks. Half the steps were rejected there, and ForwardMode differentiated
      the mesh position relative to the kinks. That left a 0.01–4% tangent bias
-     at rtol 1e-11, falling only erratically with rtol. With `jump_ts` at the
-     nodes and a gradient-frozen mesh, AD matches FD to ~1e-4 at the default
-     rtol and below 1e-6 at 1e-9. Tighter than 1e-9 buys nothing for gradients.
-     See docs/devlog/2026-10-12-tov-jump-ts.md.)
+     at rtol 1e-11, falling only erratically with rtol. `jump_ts` at the nodes
+     fixes the EOS-parameter tangents (~3e-5 at the default rtol); a frozen
+     start fixes the h_c tangent (~1e-4 at the default rtol, ~5e-7 at 1e-9).
+     First h_c derivatives only. See docs/devlog/2026-10-12-tov-jump-ts.md.)
 3. **RePrimAnd residual: surface fix already lands R within ~3–10 m** of RePrimAnd
    (was ~200 m) and Λ within <0.1% — i.e. at the ≲10 m budget. Remaining attribution
    (interpolation, crust Γ, RePrimAnd low-density handling) is the last ≲10 m.

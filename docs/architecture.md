@@ -76,8 +76,9 @@ boundary start and the surface need very different step densities; adaptive step
 resolves both automatically (and is the natural place to add phase-transition
 handling). Forward-mode AD flows through diffrax via `diffrax.ForwardMode`.
 Steps are cut at the EOS table nodes (`jump_ts`), where the right-hand side has
-slope kinks, and the integration mesh is held fixed under differentiation; without
-that the tangents carried a step-controller bias that fell only slowly with rtol
+slope kinks; that fixes the EOS-parameter tangents. The start is frozen under
+differentiation; that fixes the h_c tangent (to ~1e-4 at the default rtol), and is
+required once `jump_ts` is on. First h_c derivatives only
 (`docs/devlog/2026-10-12-tov-jump-ts.md`). The
 fixed-step `scan` backend is retained (lightweight, reverse-mode-capable for
 structure-only) behind the same `solve_structure` seam.

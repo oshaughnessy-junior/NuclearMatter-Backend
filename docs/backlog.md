@@ -30,13 +30,15 @@ Tracked items intentionally deferred, with the context for when they matter.
 > h_c and dt0, the kinks with the table parameters. That gave 0.01–4% AD-vs-FD
 > errors at rtol 1e-11, erratic in rtol. Examples: dR/dh_c -0.36% on GM1;
 > dLambda/dC_omega -0.2%; dM/dL_sym +3.6% on the MetaModel. Fix in
-> `tov.solver._adaptive_tov`: `jump_ts` at the (gradient-stopped) node
-> positions, plus a start time frozen against differentiation with a
-> first-order flow correction of the start state. AD now matches FD to ~1e-4 at
-> the default rtol 1e-7, and to below 1e-6 at 1e-9, on both tables. This meets
-> the acceptance criterion below ("within ~0.1% of FD at default tolerance").
-> Option 3's "standardize rtol ≲ 1e-10" is withdrawn.
-> `fisher.GRADIENT_RTOL = 1e-10` is left unchanged, but 1e-9 is now enough.
+> `tov.solver._adaptive_tov`. `jump_ts` at the (gradient-stopped) node
+> positions fixes the EOS-parameter tangents (~3e-5 at the default rtol 1e-7).
+> A start time frozen against differentiation, with a flow correction of the
+> start state, fixes the h_c tangent (~1.2e-4 at the default rtol, ~5e-7 at
+> 1e-9); it is required once `jump_ts` is on. This meets the acceptance
+> criterion below ("within ~0.1% of FD at default tolerance"). Option 3's
+> "standardize rtol ≲ 1e-10" is withdrawn as a workaround for the bias.
+> `fisher.GRADIENT_RTOL = 1e-10` stays, for the h_c column (comment at the
+> constant). Second h_c derivatives are unsupported (open; see the devlog).
 > `tests/test_tov_jump_ts.py` pins it. Details and before/after tables:
 > docs/devlog/2026-10-12-tov-jump-ts.md.
 
