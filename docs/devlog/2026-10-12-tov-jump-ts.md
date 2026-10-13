@@ -42,9 +42,12 @@ roadmap, backlog) was a symptom of this defect.
   the solver as a tabulated `EOSTable`.
 - The `scan` backend is unchanged and documented.  Its uniform grid moves with
   h_c, and its tangent is the exact derivative of that discrete map.
-- `solve_structure`'s public signature is unchanged.  There is no opt-out.  The
-  values that move are the old solve's errors being removed (see "Suite
-  comparison"); old numbers are reproducible from the old pin.
+- `solve_structure` keeps its defaults; after the review it gained two
+  keyword-only options, `jump_nodes` (default True; False is a value-only
+  opt-out, also on `build_family`) and `centre_refine` (default False).  Neither
+  restores the old solver: old numbers are reproducible only from the old pin.
+  The values that move are the old solve's errors being removed (see "Suite
+  comparison").
 
 ### Which mechanism fixes which column (measured after the review of PR #43)
 MetaModel star of the table below, AD/FD - 1 for (M, R, Λ):
@@ -240,7 +243,7 @@ branch:
 
 | | b94994a | this branch |
 |---|---|---|
-| passed / skipped / failed | 298 / 94 / 0 | 302 / 94 / 0 (304 / 94 / 0 after the review responses) |
+| passed / skipped / failed | 298 / 94 / 0 | 302 / 94 / 0 (304 after the review, 305 after the re-review) |
 | wall time | 819 s | 919 s (953 s) |
 
 - The 4 extra passes are the new file.
@@ -273,14 +276,19 @@ Two residuals in the spot-checks, explained after the review:
 - **"3.2e-4 on one table (d = 10)".**  This is star 0 of that family: M = 0.079
   Msun, Λ = 2.7e12, an extended low-mass configuration that the family labels
   stable.  The rtol 1e-12 reference is itself unconverged there: rtol 1e-11 and
-  1e-12 differ by 7.7e-4, because k2 → 0 as C^5 and Λ = (2/3)k2/C^5 cancels.  So
-  it is not a solver residual.  On the stars that matter the post-fix error is
+  1e-12 differ by 7.7e-4.  At such stars y ≈ 2.00 (k2 ≈ 3e-4), so
+  dln k2/dln y ≈ -620 amplifies any error in y, and the Hinderer denominator of
+  k2(y, C) cancels through O(C^4): evaluated in float64, `_k2_from_y_C` alone is
+  off by 3.6e-8 at C = 3.5e-3 and 1.3e-4 at C = 5.9e-4 (this star; re-review
+  of PR #43, against 60-digit arithmetic).  So it is not a solver residual.  On the stars that matter the post-fix error is
   ≤ 3.8e-7, which agrees with the review's 3e-7 near M_max.
 - **The Λ "floor" of 3e-7 at rtol 1e-9** (default MetaModel family) is the same
   effect.  It is the lowest star (M = 0.108, Λ = 4e8), where rtol 1e-11 and 1e-12
   also differ by 3.4e-7.  For M > 0.5 the family Λ error at rtol 1e-9 is 1.7e-9.
-  This item is closed as a reference-conditioning artefact.  Open sub-item: Λ
-  for M ≲ 0.1 Msun is not reliable to better than ~1e-3 at any rtol.
+  This item is closed as a reference-conditioning artefact (y-sensitivity and
+  the float64 k2 formula, as above).  Open sub-item (docs/backlog.md): Λ for
+  M ≲ 0.1 Msun is not reliable to better than ~1e-3 at any rtol; a small-C
+  series for k2 would fix the formula part.
 
 So the old solver's *values* were also degraded by the node-straddling, not only
 its tangents.  No assertion margin tightened materially.  For example, the
@@ -302,7 +310,7 @@ Gradient values asserted by existing tests (AD/FD - 1):
 - The Fisher FD reference uses steps 0.4 and 0.01, and family-located h_c.  Its
   own truncation error is probably what limits the Λ row.
 - The profile row is the one that got worse.  The star is kink-free, and the
-  mechanism is explained above.  The test bound is 2e-5.
+  mechanism is explained above.  The test bound is now 2e-6 (was 2e-5).
 
 ## Downstream
 - Q2C pins nmbackend via `NMB_PIN`.
@@ -327,3 +335,14 @@ Gradient values asserted by existing tests (AD/FD - 1):
 | 7 minor | Λ floor 3e-7 | Explained above (low-mass reference conditioning); open sub-item recorded. |
 | — | d = 10 residual 3.2e-4 | Explained above (star 0, M = 0.079, Λ = 2.7e12). |
 | — | optional `jump_ts=False` | Implemented as `jump_nodes=False` (default True), with its accuracy loss stated. |
+
+## Re-review of PR #43 at 800ddd1 (2026-10-12): responses
+
+| # | finding | disposition |
+|---|---|---|
+| N1 | stale "no opt-out" / "bound 2e-5" | devlog and PR body corrected |
+| N2 | `jump_nodes=False` is not the old solver; untested; not on `build_family` | docstring states it (frozen start stays, values equal the old solver only to roundoff; batched vs unbatched ~1e-4, measured 3e-5 in Λ); `build_family(jump_nodes=...)` added; `test_jump_nodes_opt_out_is_finite_and_close` |
+| N3 | centre_refine floor looser than outer for rtol < 1e-13 | inner rtol = max(rtol·1e-3, min(rtol, 1e-13)); docstring states the floor |
+| N4 | centre_refine test L_sym bound slack | 3e-4 → 1e-4 (measured 3.0e-5) |
+| N5 | Λ-floor mechanism wording | reworded (y ≈ 2 sensitivity, float64 k2 denominator cancellation); backlog item for a small-C k2 series |
+| N6 | PR body recommended centre_refine for 2nd h_c derivatives | removed; it reduces but does not cure the error, and second h_c derivatives stay unsupported |

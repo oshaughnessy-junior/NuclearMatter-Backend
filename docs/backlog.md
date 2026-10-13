@@ -159,3 +159,12 @@ charge neutrality n_p = n_e + n_mu (an inner solve for mu_e given the charge
 density). Small but real effect on the symmetry-energy-driven part of the EOS and on
 Lambda/R at the ~0.1-1% level.
 
+
+## Small-compactness series for k2 (Love number at M ≲ 0.1 Msun)
+
+**Open (2026-10-12, PR #43 re-review).** `tov.solver._k2_from_y_C` is the closed
+Hinderer formula; its denominator cancels through O(C^4), so in float64 it is off
+by 3.6e-8 at C = 3.5e-3 and 1.3e-4 at C = 5.9e-4 (vs 60-digit arithmetic).
+Combined with dln k2/dln y ≈ -620 near y = 2, Λ for M ≲ 0.1 Msun is not reliable
+to better than ~1e-3 at any rtol.  Fix: switch to a Taylor series in C below a
+threshold.  Irrelevant for M ≳ 0.5 Msun (family Λ error 1.7e-9 at rtol 1e-9).

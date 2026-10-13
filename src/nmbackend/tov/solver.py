@@ -249,7 +249,7 @@ def _adaptive_tov(table, t0, t1, state0, rtol, atol, tidal, dt0,
 
 
 #: ``centre_refine``: the inner fraction of (h_c - h_min) integrated at a
-#: tolerance tighter by ``_CENTRE_TOL`` (floored at ``_CENTRE_RTOL_MIN``)
+#: tolerance tighter by ``_CENTRE_TOL`` (floored at min(rtol, ``_CENTRE_RTOL_MIN``))
 _CENTRE_FRAC = 0.05
 _CENTRE_TOL = 1e-3
 _CENTRE_RTOL_MIN = 1e-13
@@ -272,7 +272,8 @@ def _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint=None,
     # The split is an arbitrary interior point, so freezing it needs no
     # correction; the state carries the tangents across.
     h_split = jax.lax.stop_gradient(t0 - _CENTRE_FRAC * (h_c - h_min))
-    scale = jnp.maximum(_CENTRE_TOL, _CENTRE_RTOL_MIN / rtol)
+    # inner rtol = max(rtol * 1e-3, min(rtol, 1e-13)): never looser than rtol
+    scale = jnp.maximum(_CENTRE_TOL, jnp.minimum(1.0, _CENTRE_RTOL_MIN / rtol))
     inner = _adaptive_tov(table, t0, h_split, state0, rtol * scale,
                           atol * scale, tidal, dt0, adjoint, max_steps, None,
                           jump_nodes)
@@ -332,11 +333,18 @@ def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
     adjoint : optional diffrax adjoint override (default ForwardMode()).
     jump_nodes : (diffrax) stop steps at every EOS table node (default).  False
               is an opt-out for bulk value-only scans of tables with thousands
-              of rows: cheaper (MetaModel family 3x), but Lambda loses
-              ~1e3x in accuracy (2e-7 -> 2e-4..3e-3 at the default rtol), and
-              the parameter tangents are biased by up to ~10%.
+              of rows (also exposed by ``build_family``): cheaper (MetaModel
+              family 3x), but Lambda loses ~1e3x in accuracy (2e-7 -> 2e-4..3e-3
+              at the default rtol), the parameter tangents are biased by up to
+              ~10%, and batched vs unbatched solves agree only to ~1e-4
+              (measured 3e-5 in Lambda; 1e-12 with the default).  It is
+              NOT the pre-2026-10-12 solver: the start stays frozen (so the h_c
+              tangent stays accurate, 1-19% off the old one); parameter
+              tangents equal the old solver's, and values equal it only up to
+              step-decision roundoff (up to ~1e-4 in Lambda).
     centre_refine : (diffrax) integrate the inner 5% of (h_c - h_min) at
-              rtol * 1e-3.  Off by default.  Cuts the h_c-tangent error at the
+              rtol * 1e-3, floored at min(rtol, 1e-13) (never looser than the
+              rest of the star).  Off by default.  Cuts the h_c-tangent error at the
               default rtol from ~1.2e-4 to ~8e-6 for +40-90% cost; parameter
               tangents and values are unchanged.
 

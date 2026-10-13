@@ -12,6 +12,7 @@ import jax.numpy as jnp
 import numpy as np
 
 from nmbackend.eos import MetaModelEOS
+from nmbackend.tov import build_family
 from nmbackend.tov.solver import _integrate_diffrax, solve_structure
 
 mm = MetaModelEOS()
@@ -65,10 +66,10 @@ def test_tangents_match_fd_at_default_tolerance():
 
 def test_centre_refine_tightens_the_hc_column():
     # opt-in: inner 5% of the star at rtol*1e-3; measured h_c column <= 8.1e-6,
-    # L_sym column unchanged (<= 3e-5)
+    # L_sym column unchanged (<= 3.0e-5)
     err = _rel_err(1e-7, 1e-9, True)
     assert np.all(err[:, 1] <= 3e-5), err
-    assert np.all(err[:, 0] <= 3e-4), err
+    assert np.all(err[:, 0] <= 1e-4), err
 
 
 def test_tangents_match_fd_at_tight_tolerance():
@@ -112,3 +113,28 @@ def test_second_hc_derivative_is_not_supported():
     dh = 1e-4 * _HC
     fd = (float(grad(_HC + dh, 1e-10)) - float(grad(_HC - dh, 1e-10))) / (2 * dh)
     assert abs(d2 / fd - 1.0) > 10.0
+
+
+def test_jump_nodes_opt_out_is_finite_and_close():
+    # value-only opt-out (not the pre-2026-10-12 solver; see solve_structure).
+    # Values within 1e-3 of the default (measured 5.4e-6 in Lambda here; up to
+    # 7.7e-4 near M_max on this table), finite
+    # tangents, and reachable through build_family.
+    t = mm.eos_table({"L_sym": _L0})
+
+    def f(hc, jn):
+        pt = solve_structure(t, hc, jump_nodes=jn)
+        return jnp.stack([pt.M_msun, pt.R_km, pt.Lambda])
+
+    on, off = (np.asarray(jax.jit(f, static_argnums=1)(_HC, jn)) for jn in (True, False))
+    np.testing.assert_allclose(off, on, rtol=1e-3, atol=0.0)
+    tan = jax.jit(lambda h: jax.jvp(lambda x: f(x, False), (h,), (1.0,))[1])(_HC)
+    assert np.all(np.isfinite(np.asarray(tan)))
+    hcs = jnp.array([0.9, 1.0, 1.1]) * _HC
+    fam_off = build_family(t, hcs, jump_nodes=False)
+    fam_on = build_family(t, hcs)
+    # batched vs unbatched agree only to roundoff-flipped step decisions here
+    # (measured 3.0e-5 in Lambda, 2.3e-8 in M), and the flag must reach the solve
+    np.testing.assert_allclose(np.asarray(fam_off.Lambda)[1], off[2], rtol=2e-4,
+                               atol=0.0)
+    assert np.any(np.asarray(fam_off.Lambda) != np.asarray(fam_on.Lambda))
