@@ -250,11 +250,11 @@ def test_dmej_dLsym_through_metamodel_matches_fd():
 
     This is the bridge contract: gradients with respect to nuclear empirical
     parameters must survive the full composition.  Forward-mode (jacfwd) is
-    the supported TOV sensitivity path.  The Lambda tangent is under-resolved
-    at the family-build tolerance (cf. test_fwd_grad_lambda_converges: tight
-    dLambda/dparam needs rtol <~ 1e-11, unaffordable across a 140-model
-    family), so we require sign agreement and <25% relative error; measured
-    on ldas-pcdev13 (jax 0.10.1): AD -5.17e-6 vs FD -6.32e-6 Msun/MeV (18%).
+    the supported TOV sensitivity path.  We require sign agreement and <25%
+    relative error; measured on ldas-pcdev13 (jax 0.10.1): AD -5.17e-6 vs FD
+    -6.32e-6 Msun/MeV (18%).  On sporcsubmit (jax 0.10.1, 2026-10-12): AD
+    -2.0319e-5 vs FD -2.0366e-5 (-0.23%) before steps stopped at the table
+    nodes, -2.0346e-5 vs -2.0366e-5 (-0.10%) after (test_tov_jump_ts.py).
     """
     from nmbackend.eos import MetaModelEOS
     from nmbackend.tov import build_family

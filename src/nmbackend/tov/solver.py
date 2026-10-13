@@ -14,12 +14,21 @@ Two backends sit behind one seam, ``solve_structure``:
   and is validated against an independent radius-domain solver to <0.1% in M, R,
   and Lambda (see ``tests/test_validation_reference.py``).  Forward-mode AD flows
   through it via ``diffrax.ForwardMode`` -- this is the supported sensitivity path
-  and reproduces the perturbation ("delta-TOV") equations.
+  and reproduces the perturbation ("delta-TOV") equations.  Steps are cut at
+  the EOS table nodes (diffrax ``jump_ts``), where the right-hand side has slope
+  kinks, and the integration mesh is held fixed under differentiation.  Without
+  this the tangents carried a bias that fell only slowly and erratically with
+  rtol (0.01-4% at rtol 1e-11); with it they converge like the values
+  (AD vs FD ~1e-4 at the default rtol, <1e-6 at 1e-9;
+  docs/devlog/2026-10-12-tov-jump-ts.md).
 
 * ``backend="scan"``: a lightweight fixed-step RK4 ``jax.lax.scan``.  Fully
   jit/vmap/grad-able (incl. reverse-mode for structure-only, ``tidal=False``), but
   a *fixed* grid is only accurate with enough, well-placed steps -- prefer the
-  diffrax backend unless you specifically need the dependency-free scan.
+  diffrax backend unless you specifically need the dependency-free scan.  Its
+  uniform grid ignores the table nodes and moves with h_c; its tangent is the
+  exact derivative of that discrete map, so it agrees with FD of the same scan
+  but carries the grid's (low-order, node-straddling) discretization error.
 
 WARNING (see docs/validation-plan.md): neither backend yet handles strong
 first-order phase transitions (cs^2 -> 0 plateaus / density discontinuities) with
@@ -162,24 +171,58 @@ def _field_structure(h, s, args):
     return _derivs(h, s, args, False)
 
 
+def _node_jumps(table):
+    """Interior EOS-table nodes as diffrax ``jump_ts`` (gradient-stopped).
+
+    The TOV right-hand side is only C^0 in h at every table node: eps comes from
+    a C^1 Hermite of p(h) (so eps' jumps) and cs2 is linearly interpolated.  An
+    adaptive step that straddles a node rejects repeatedly there, and ForwardMode
+    then differentiates the mesh's position relative to the kink -- a tangent
+    bias that shrinks only slowly and erratically with rtol (docs/devlog/
+    2026-10-12-tov-jump-ts.md).  Stepping to just before and restarting just after
+    each node removes both.  ``table.h[0]`` is the surface (the integration end
+    point) and is left out; nodes outside the integration interval are inert, so
+    the array keeps the table's static length under jit/vmap.  The positions are
+    gradient-stopped: the mesh is fixed, and the node motion enters the tangent
+    through the vector field on each side of the node, where it belongs."""
+    return jax.lax.stop_gradient(table.h[1:])
+
+
+def _adaptive_tov(table, t0, t1, state0, rtol, atol, tidal, dt0,
+                  adjoint=None, max_steps=100000, saveat=None):
+    """Adaptive Dopri5 integration of the TOV(+tidal) system from ``t0`` down to
+    ``t1`` in pseudo-enthalpy, with steps cut at the EOS table nodes.
+
+    The start time and the initial step are frozen against differentiation, so
+    no mesh point before the last carries a tangent.  The start's dependence on
+    the inputs moves into the starting state through the first-order flow
+    correction ``y(t0s) = y(t0) + f(t0, y(t0)) (t0s - t0)``, whose value is
+    unchanged (t0s == t0) and whose tangent ``dy0 - f dt0`` is exact.  ``t1``
+    stays live: the last step ends there and spans no node."""
+    sg = jax.lax.stop_gradient
+    t0, t1 = jnp.asarray(t0), jnp.asarray(t1)   # a Python float here is a jit key
+    t0s = sg(t0)
+    state0 = state0 + _derivs(t0, state0, table, tidal) * (t0s - t0)
+    term = diffrax.ODETerm(_field_tidal if tidal else _field_structure)
+    ctrl = diffrax.PIDController(rtol=rtol, atol=atol, jump_ts=_node_jumps(table))
+    if adjoint is None:
+        adjoint = diffrax.ForwardMode()   # supports values, vmap, forward-mode AD
+    return diffrax.diffeqsolve(
+        term, diffrax.Dopri5(), t0=t0s, t1=t1, dt0=sg(dt0),
+        y0=state0, args=table, stepsize_controller=ctrl, max_steps=max_steps,
+        adjoint=adjoint,
+        saveat=diffrax.SaveAt(t1=True) if saveat is None else saveat,
+    )
+
+
 def _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint=None,
                        max_steps=100000, saveat=None):
     if not _HAVE_DIFFRAX:  # pragma: no cover
         raise ImportError("backend='diffrax' requires the 'diffrax' package; "
                           "pip install diffrax  (or use backend='scan').")
     h_min, h_c, dh0, state0 = _central_start(table, h_c)
-
-    term = diffrax.ODETerm(_field_tidal if tidal else _field_structure)
-    ctrl = diffrax.PIDController(rtol=rtol, atol=atol)
-    if adjoint is None:
-        adjoint = diffrax.ForwardMode()   # supports values, vmap, forward-mode AD
-    sol = diffrax.diffeqsolve(
-        term, diffrax.Dopri5(), t0=h_c - dh0, t1=h_min,
-        dt0=-(h_c - h_min) * 1e-4, y0=state0, args=table,
-        stepsize_controller=ctrl, max_steps=max_steps, adjoint=adjoint,
-        saveat=diffrax.SaveAt(t1=True) if saveat is None else saveat,
-    )
-    return sol
+    return _adaptive_tov(table, h_c - dh0, h_min, state0, rtol, atol, tidal,
+                         -(h_c - h_min) * 1e-4, adjoint, max_steps, saveat)
 
 
 def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000):

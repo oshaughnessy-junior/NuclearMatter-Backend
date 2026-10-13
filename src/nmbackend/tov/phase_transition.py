@@ -25,29 +25,22 @@ import math
 import jax
 import jax.numpy as jnp
 
-from .solver import (_field_tidal, _k2_from_y_C, _central_start, TOVPoint,
+from .solver import (_adaptive_tov, _k2_from_y_C, _central_start, TOVPoint,
                      _HAVE_DIFFRAX, solve_structure)
 from ..constants import GMSUN_KM
-
-if _HAVE_DIFFRAX:
-    import diffrax
 
 _FOURPI = 4.0 * math.pi
 
 
 def _diffrax_segment(table, t0, t1, state0, rtol, atol, adjoint=None,
                      max_steps=100000):
-    """Integrate (r, m, y) in enthalpy from t0 down to t1 with a given start."""
+    """Integrate (r, m, y) in enthalpy from t0 down to t1 with a given start.
+
+    Steps are cut at the segment table's nodes and the start is frozen against
+    differentiation, as in :func:`nmbackend.tov.solver._adaptive_tov`."""
     t0, t1 = jnp.asarray(t0), jnp.asarray(t1)   # a Python float here is a jit key
-    term = diffrax.ODETerm(_field_tidal)
-    ctrl = diffrax.PIDController(rtol=rtol, atol=atol)
-    if adjoint is None:
-        adjoint = diffrax.ForwardMode()
-    sol = diffrax.diffeqsolve(
-        term, diffrax.Dopri5(), t0=t0, t1=t1, dt0=-(t0 - t1) * 1e-3,
-        y0=state0, args=table, stepsize_controller=ctrl, max_steps=max_steps,
-        adjoint=adjoint,
-    )
+    sol = _adaptive_tov(table, t0, t1, state0, rtol, atol, True,
+                        -(t0 - t1) * 1e-3, adjoint, max_steps)
     return sol.ys[0]
 
 
