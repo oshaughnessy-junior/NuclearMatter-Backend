@@ -100,6 +100,13 @@ count and reproduces the perturbation ("delta-TOV") equations.  Reverse-mode
 `R`, `M`); reverse-mode through the tidal variable is not recommended (near-center
 `1/r²` terms give `0*inf` in the backward pass).
 
+Tangents converge with `rtol` like the values: AD matches finite differences to
+~1e-4 at the default `rtol=1e-7` and below 1e-6 at `rtol=1e-9`. The adaptive
+solve stops at every EOS table node, where the right-hand side has slope kinks.
+Before 2026-10-12 it did not, and the tangents carried a bias of 0.01–4% that
+tighter tolerances barely reduced
+([devlog](docs/devlog/2026-10-12-tov-jump-ts.md)).
+
 ## Validation status (important)
 
 Cross-validation already changed the design. An independent radius-domain reference

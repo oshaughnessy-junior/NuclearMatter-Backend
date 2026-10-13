@@ -169,11 +169,19 @@ surrogate/acceleration work.
      *tangents* tolerance-sensitive — Λ-gradient converges to FD as rtol tightens
      (1e-8: ~90%, 1e-10: ~16%, 1e-12: ~3%); R-gradient has a ~0.5% interpolation-
      tangent residual (hand-rolled Hermite is less smooth under AD than jnp.interp).
-     **Use rtol ≲ 1e-10 for gradient/Fisher work**; default tol is fine for values.
+     ~~**Use rtol ≲ 1e-10 for gradient/Fisher work**~~; default tol is fine for values.
      Future: a smoother differentiable interpolation primitive to tighten gradients.
      (2026-09-27: these gradient residuals were a jaxlib <= 0.9 `jacfwd` defect
      triggered by `jnp.maximum` floors in the Hermite evaluator, now fixed; see
      docs/backlog.md.)
+     (2026-10-12: the rtol advice was a symptom of a second defect. The adaptive
+     solve stepped across the table nodes, where the right-hand side has slope
+     kinks. Half the steps were rejected there, and ForwardMode differentiated
+     the mesh position relative to the kinks. That left a 0.01–4% tangent bias
+     at rtol 1e-11, falling only erratically with rtol. With `jump_ts` at the
+     nodes and a gradient-frozen mesh, AD matches FD to ~1e-4 at the default
+     rtol and below 1e-6 at 1e-9. Tighter than 1e-9 buys nothing for gradients.
+     See docs/devlog/2026-10-12-tov-jump-ts.md.)
 3. **RePrimAnd residual: surface fix already lands R within ~3–10 m** of RePrimAnd
    (was ~200 m) and Λ within <0.1% — i.e. at the ≲10 m budget. Remaining attribution
    (interpolation, crust Γ, RePrimAnd low-density handling) is the last ≲10 m.

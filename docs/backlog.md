@@ -22,6 +22,24 @@ Tracked items intentionally deferred, with the context for when they matter.
 > keep it only as an optional future smoothing of the last ~2.5%.
 
 
+> **Update 2026-10-12: the remaining tangent bias was the adaptive mesh
+> straddling the EOS table nodes.** The TOV right-hand side is only C^0 at
+> every node: eps' jumps (Hermite of p(h)), and so does cs2' (linear interpolation).
+> Dopri5 + PID rejected about half its steps there. ForwardMode then
+> differentiated the mesh position relative to the kinks: the mesh moves with
+> h_c and dt0, the kinks with the table parameters. That gave 0.01–4% AD-vs-FD
+> errors at rtol 1e-11, erratic in rtol. Examples: dR/dh_c -0.36% on GM1;
+> dLambda/dC_omega -0.2%; dM/dL_sym +3.6% on the MetaModel. Fix in
+> `tov.solver._adaptive_tov`: `jump_ts` at the (gradient-stopped) node
+> positions, plus a start time frozen against differentiation with a
+> first-order flow correction of the start state. AD now matches FD to ~1e-4 at
+> the default rtol 1e-7, and to below 1e-6 at 1e-9, on both tables. This meets
+> the acceptance criterion below ("within ~0.1% of FD at default tolerance").
+> Option 3's "standardize rtol ≲ 1e-10" is withdrawn.
+> `fisher.GRADIENT_RTOL = 1e-10` is left unchanged, but 1e-9 is now enough.
+> `tests/test_tov_jump_ts.py` pins it. Details and before/after tables:
+> docs/devlog/2026-10-12-tov-jump-ts.md.
+
 > **Update 2026-09-27: the residuals below were a JAX defect, not physics.**
 > Under jaxlib <= 0.9, `jax.jacfwd` (vmap of jvp) of the TOV solve returned
 > wrong tangents when the tidal sector was on. The trigger was the
@@ -55,6 +73,8 @@ dΛ/dθ, dR/dθ, dM_max/dθ and are sensitive to gradient accuracy/smoothness.
    gradients) so dp/dh = ε+p is exact *and* the tangent stays smooth.
 3. Forward-over-reverse or a tangent-aware step controller for the tidal sector; or
    simply document/standardize rtol ≲ 1e-10 for gradient/Fisher runs.
+   (2026-10-12: superseded -- steps now stop at the table nodes; see the update
+   at the top of this section.)
 
 **Acceptance:** dΛ/dθ and dR/dθ within ~0.1% of FD at default tolerance, smooth
 enough for HMC step-size adaptation.
