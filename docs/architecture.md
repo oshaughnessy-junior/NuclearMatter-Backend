@@ -74,7 +74,12 @@ fixed-step RK4. Cross-validation against an independent radius-domain reference
 (§4) showed the fixed grid was under-resolved (M ~5%, Λ ~25%) because the central
 boundary start and the surface need very different step densities; adaptive stepping
 resolves both automatically (and is the natural place to add phase-transition
-handling). Forward-mode AD flows through diffrax via `diffrax.ForwardMode`. The
+handling). Forward-mode AD flows through diffrax via `diffrax.ForwardMode`.
+Steps are cut at the EOS table nodes (`jump_ts`), where the right-hand side has
+slope kinks; that fixes the EOS-parameter tangents. The start is frozen under
+differentiation; that fixes the h_c tangent (to ~1e-4 at the default rtol), and is
+required once `jump_ts` is on. First h_c derivatives only
+(`docs/devlog/2026-10-12-tov-jump-ts.md`). The
 fixed-step `scan` backend is retained (lightweight, reverse-mode-capable for
 structure-only) behind the same `solve_structure` seam.
 

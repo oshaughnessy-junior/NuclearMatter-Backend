@@ -100,6 +100,21 @@ count and reproduces the perturbation ("delta-TOV") equations.  Reverse-mode
 `R`, `M`); reverse-mode through the tidal variable is not recommended (near-center
 `1/r²` terms give `0*inf` in the backward pass).
 
+Accuracy of the adaptive (diffrax) tangents, AD vs finite differences
+([devlog](docs/devlog/2026-10-12-tov-jump-ts.md)):
+
+- **EOS-parameter derivatives** converge with `rtol` at the level of the values:
+  ~3e-5 at the default `rtol=1e-7`, ~1e-7 at `1e-9`. Steps stop at every EOS
+  table node (`jump_ts`), where the right-hand side has slope kinks. Before
+  2026-10-12 they did not, and these tangents were off by up to 10%.
+- **Central-enthalpy derivatives** (`d/dh_c`) converge like `rtol` but sit
+  ~1e3x higher: ~1e-4 at the default, ~5e-7 at `1e-9`. Freezing the start of the
+  integration is what makes them converge at all. The residual is a near-common
+  factor on M, R and Λ, so it largely cancels in fixed-mass derivatives.
+  `solve_structure(..., centre_refine=True)` cuts it ~10x for +40–90% cost.
+- **First derivatives only in `h_c`.** `d²/dh_c²` (e.g. `jacfwd` of `dM/dh_c`)
+  is wrong by orders of magnitude. Mixed `d²/dh_c dθ` is fine.
+
 ## Validation status (important)
 
 Cross-validation already changed the design. An independent radius-domain reference

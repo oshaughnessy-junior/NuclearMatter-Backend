@@ -15,7 +15,14 @@ Two backends sit behind :func:`nmbackend.tov.solver.solve_structure`:
 
 * ``diffrax`` (default): adaptive Dopri5 + PID controller. Accurate, recommended;
   forward-mode AD flows through it (``diffrax.ForwardMode``), reproducing the
-  perturbative :math:`\delta`-TOV sensitivity equations.
+  perturbative :math:`\delta`-TOV sensitivity equations. Steps stop at every EOS
+  table node (``jump_ts``), where the right-hand side has slope kinks; this makes
+  the EOS-parameter tangents converge with ``rtol`` at the level of the values.
+  The start of the integration is frozen against differentiation; this makes the
+  :math:`h_c` tangent converge like ``rtol``, about 1e3 times above the values
+  (~1e-4 at the default ``rtol``). Only *first* derivatives in :math:`h_c` are
+  supported: :math:`\partial^2/\partial h_c^2` is wrong by orders of magnitude,
+  while mixed :math:`\partial^2/\partial h_c\,\partial\theta` is fine.
 * ``scan``: fixed-step RK4 ``lax.scan``; lightweight, reverse-mode-capable for
   structure-only solves.
 
@@ -62,5 +69,7 @@ Validation
 ``tests/test_validation_reference.py`` compares against an independent
 radius-domain solver; ``scripts/validate_against_reprimand.py`` drives the
 RePrimAnd cross-check (matched surface convention, stable/unstable-branch aware).
-``tests/test_ad_gradients.py`` validates forward-mode tangents against finite
-differences, and documents the tolerance behaviour of the tidal tangent.
+``tests/test_ad_gradients.py`` and ``tests/test_tov_jump_ts.py`` validate
+forward-mode tangents against finite differences (parameter column ~3e-5 and
+:math:`h_c` column ~1.2e-4 at the default ``rtol=1e-7``; below 1e-6 at
+``rtol=1e-9``), and pin the unsupported second :math:`h_c` derivative.
