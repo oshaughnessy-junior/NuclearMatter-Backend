@@ -23,8 +23,16 @@ Two backends sit behind :func:`nmbackend.tov.solver.solve_structure`:
   (~1e-4 at the default ``rtol``). Only *first* derivatives in :math:`h_c` are
   supported: :math:`\partial^2/\partial h_c^2` is wrong by orders of magnitude,
   while mixed :math:`\partial^2/\partial h_c\,\partial\theta` is fine.
-* ``scan``: fixed-step RK4 ``lax.scan``; lightweight, reverse-mode-capable for
-  structure-only solves.
+* ``scan``: fixed-step RK4 ``lax.scan``, the reverse-mode path (with or without
+  the tidal sector). It steps in
+  :math:`\sigma = \sqrt{(h_c - h)/(h_c - h_{\min})}` (regular at the centre) on a
+  frozen mesh of sin-mapped base steps, every table node, and points placed where
+  the EOS varies fastest, and carries :math:`y` in a node-anchored picture like
+  the ``diffrax`` path. At the default ``n_steps=2000`` it agrees with ``diffrax``
+  to ~1e-5 in :math:`M, R`, ~5e-5 in :math:`\Lambda`, and its gradients to
+  ~6e-5; errors fall as ``n_steps``\ :sup:`-4`. Before 2026-10-14 it stepped
+  uniformly in :math:`h` and was wrong at every :math:`h_c`
+  (``docs/devlog/2026-10-14-tov-scan-accuracy.md``).
 
 Thermodynamically consistent EOS evaluation
 -------------------------------------------

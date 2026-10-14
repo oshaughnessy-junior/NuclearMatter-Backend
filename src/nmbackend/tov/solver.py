@@ -41,15 +41,17 @@ Two backends sit behind one seam, ``solve_structure``:
   the EOS parameters, and the frozen mesh keeps the jumps' boundary terms in
   the parameter tangents.  First parameter derivatives of Lambda only.
 
-* ``backend="scan"``: a lightweight fixed-step RK4 ``jax.lax.scan``.  Fully
-  jit/vmap/grad-able (incl. reverse-mode for structure-only, ``tidal=False``), but
-  a *fixed* grid is only accurate with enough, well-placed steps -- prefer the
-  diffrax backend unless you specifically need the dependency-free scan.  Its
-  uniform grid ignores the table nodes and moves with h_c; its tangent is the
-  exact derivative of that discrete map, so it agrees with FD of the same scan
-  but carries the grid's (low-order, node-straddling) discretization error.
-  Since the tidal term jumps at the nodes, its Lambda error is first order in
-  the step where a step straddles a node.
+* ``backend="scan"``: fixed-step RK4 in a ``jax.lax.scan``, the reverse-mode
+  path (``jax.grad`` / ``jax.jacrev``, with or without the tidal sector).  It
+  steps in sigma = sqrt((h_c - h) / (h_c - h_min)), in which the centre is
+  regular, on a frozen mesh: sin-mapped base steps, every table node, and
+  points where the EOS varies fastest (``_scan_mesh``); y is carried in a
+  node-anchored picture like the diffrax path's.  At the default
+  n_steps=2000 it agrees with the diffrax backend to ~1e-5 in M, R and ~5e-5
+  in Lambda, and its reverse-mode gradients with diffrax's forward-mode
+  tangents to ~6e-5; both converge as n_steps^-4.  Before 2026-10-14 it
+  stepped uniformly in h and was wrong at every h_c -- M off by up to +210%,
+  Lambda NaN (docs/devlog/2026-10-14-tov-scan-accuracy.md).
 
 WARNING (see docs/validation-plan.md): neither backend yet handles strong
 first-order phase transitions (cs^2 -> 0 plateaus / density discontinuities) with
@@ -130,12 +132,6 @@ def _rhs(eps, p, deps_dh, state, tidal):
         # never formed -> reverse-mode AD of (R, M) is clean.
         dydh = 0.0 * r
     return jnp.stack([drdh, dmdh, dydh])
-
-
-def _derivs(h, state, table: EOSTable, tidal: bool = True):
-    """d(r, m, y)/dh at pseudo-enthalpy ``h`` (scan backend)."""
-    eps, p, deps_dh = table.at_h_tidal(h)
-    return _rhs(eps, p, deps_dh, state, tidal)
 
 
 # ----- the tidal variable in a node-anchored picture (adaptive backend) -----
@@ -241,20 +237,140 @@ def _finish(R, M, y, h_c, tidal):
 
 
 # ----- fixed-step RK4 scan backend -----
+# docs/devlog/2026-10-14-tov-scan-accuracy.md.  Until 2026-10-14 the scan stepped
+# uniformly in h from h_c - dh0; with r ~ sqrt(h_c - h) its first step
+# overshot r by orders of magnitude: M +60..+210% off and Lambda NaN at almost
+# every h_c at the default n_steps, on every table.
+#
+# Now it steps in sigma = sqrt((h_c - h) / H), H = h_c - h_min, in which r is
+# regular at the centre, on a mesh frozen against differentiation
+# (:func:`_scan_mesh`) whose primal points include every table node.  Each step
+# evaluates the EOS on its own table cell.  As in the diffrax path, r and m are
+# carried on the frozen mesh: their right-hand side is continuous at the nodes,
+# so the node motion enters through the vector field.  The tidal term jumps at
+# the nodes, so y is carried in a node-anchored picture (cf. :func:`_derivs_x`):
+# in step cell i, y holds y(sigma~(sigma)), with sigma~ linear in the cell and
+# mapping its frozen ends to their live positions.  The jump then contributes
+# its boundary term to the tangent.  sigma~ == sigma in value, and it equals
+# sigma at both ends of the star (sigma0 and the surface), so no start or end
+# correction is needed.
+def _cell_eos(h, table, i, aux, tidal):
+    """(eps, p, tidal term) at ``h`` from table cell ``i`` (nodes i-1, i),
+    extrapolated outside it; the tidal term is 0 unless ``tidal``.  ``aux`` is
+    ``eos.base._degenerate_cells(table.h, table.eps, table.p)``."""
+    from ..eos.base import _floor_eps_p, _hermite_cell_t, _tidal_term
+    h0 = table.h[i - 1]
+    dh = table.h[i] - h0
+    t = (h - h0) / dh
+    if not tidal:
+        eps, p = _floor_eps_p(*_hermite_cell_t(i, t, dh, table.p, table.eps), jnp)
+        return eps, p, 0.0
+    eps, p, deps = _hermite_cell_t(i, t, dh, table.p, table.eps, deps=True)
+    eps, p = _floor_eps_p(eps, p, jnp)
+    return eps, p, _tidal_term(i, t, dh, deps, eps, p, *aux, jnp)
+
+
+def _scan_mesh(table, h_c, dh0, n_steps, aux):
+    """Frozen sigma mesh, increasing from sigma0 = sqrt(dh0 / H) to 1 (static
+    length n_steps + n_steps//4 + len(table.h)), and the table cell of each step.
+
+    * ``n_steps + 1`` base points equally spaced in s, at sigma = sigma0 +
+      (1 - sigma0) sin(pi s / 2): the sqrt resolves the centre (r ~ sqrt(h_c -
+      h)), the sin packs steps toward the surface (with uniform sigma the Lambda
+      error stalls near 4e-6);
+    * every table node, so no step straddles a node, where eps' and the tidal
+      term jump (jump cells of ``_degenerate_cells`` included);
+    * ``n_steps // 4`` points where the EOS varies fastest (:func:`_eos_points`).
+      Where the table is denser than the base grid a step is one cell however
+      large n_steps is; at the MetaModel crust-core joint the Lambda tangent was
+      then up to 9e-3 off at n_steps=2000 (values 1e-6).
+
+    Points outside the star clip to an end and give zero-length steps.  The mesh
+    is frozen (like the diffrax ``jump_ts``): a mesh that moves with the nodes
+    either rescales the near-centre steps with the node just below h_c
+    (dM/dL_sym 6e-5 -> 1.2e-2 off) or lets base points cross nodes (a
+    piecewise-smooth map whose Lambda ripples in the parameters)."""
+    sg = jax.lax.stop_gradient
+    tb = jax.tree_util.tree_map(sg, table)
+    aux = jax.tree_util.tree_map(sg, aux)
+    hn, N = tb.h, tb.h.shape[0]
+    hc, top = sg(h_c), sg(h_c - dh0)
+    H = hc - hn[0]
+    s0 = jnp.sqrt(sg(dh0) / H)
+    s = jnp.linspace(0.0, 1.0, n_steps + 1)
+    base = s0 + (1.0 - s0) * jnp.sin(0.5 * math.pi * s)
+    base = base.at[0].set(s0).at[-1].set(1.0)
+    h_pts = jnp.concatenate([hn[1:], _eos_points(tb, top, n_steps // 4, aux)])
+    pts = jnp.sqrt(jnp.clip((hc - h_pts) / H, s0 * s0, 1.0))
+    sig = jnp.sort(jnp.concatenate([base, pts]))
+    mid = 0.5 * (sig[:-1] + sig[1:])
+    cell = jnp.clip(jnp.searchsorted(hn, hc - H * mid * mid), 1, N - 1)
+    return sig, cell
+
+
+def _eos_points(table, top, k, aux):
+    """``k`` enthalpies in [h_min, top], equidistributed in the EOS variation per
+    cell: |dln cs2| + |dln eps| (node values) in a regular cell, nothing in a
+    jump cell, and ln(1 + Delta eps / eps) of the jump run above in the cell
+    that carries its junction bubble (:func:`eos.base._tidal_term`), whose
+    points go to t = u^(1/(q+1)), equidistributing the bubble (q+1) t^q.
+    Call with gradient-stopped inputs."""
+    from ..eos.base import _BUBBLE_Q
+    h, eps, cs2 = table.h, table.eps, table.cs2
+    deg, extra = aux[0][1:], aux[1][1:]                    # per cell 1..N-1
+    width = h[1:] - h[:-1]
+    lo, hi = jnp.clip(h[:-1], h[0], top), jnp.clip(h[1:], h[0], top)
+    frac = jnp.where(width > 0, (hi - lo) / jnp.where(width > 0, width, 1.0), 0.0)
+    w_reg = jnp.abs(jnp.diff(jnp.log(cs2))) + jnp.abs(jnp.diff(jnp.log(eps)))
+    w_bub = jnp.log1p(extra / eps[1:])
+    w = (jnp.where(deg, 0.0, w_reg) + w_bub + 1e-12) * frac
+    W = jnp.concatenate([jnp.zeros(1), jnp.cumsum(w)])
+    q = (jnp.arange(k) + 0.5) / k * W[-1]
+    j = jnp.clip(jnp.searchsorted(W, q), 1, h.shape[0] - 1)
+    u = (q - W[j - 1]) / (W[j] - W[j - 1])
+    u = jnp.where(extra[j - 1] > 0, u ** (1.0 / (_BUBBLE_Q + 1.0)), u)
+    return lo[j - 1] + u * (hi[j - 1] - lo[j - 1])
+
+
 def _solve_scan(table, h_c, n_steps, tidal):
+    from ..eos.base import _degenerate_cells
+    sg = jax.lax.stop_gradient
     h_min, h_c, dh0, state0 = _central_start(table, h_c)
-    hs = jnp.linspace(h_c - dh0, h_min, n_steps + 1)
-    h_lefts, dhs = hs[:-1], jnp.diff(hs)
+    aux = _degenerate_cells(table.h, table.eps, table.p, jnp)
+    sig, cell = _scan_mesh(table, h_c, dh0, n_steps, aux)
+    H = h_c - h_min
+    # y picture per step: the cell's ends in sigma, live (a, b) and frozen (A, B);
+    # the top cell ends at the start sigma0, the bottom one at the surface 1
+    s0 = jnp.sqrt(dh0 / H)
+    top = table.h[cell] >= h_c - dh0
+    a = jnp.where(top, s0, jnp.sqrt(jnp.where(top, 1.0, (h_c - table.h[cell]) / H)))
+    b = jnp.sqrt((h_c - table.h[cell - 1]) / H)
+    A, B = sg(a), sg(b)
+    g = (b - a) / jnp.where(B > A, B - A, 1.0)               # d sigma~/d sigma
 
-    def step(state, hd):
-        h0, dh = hd
-        k1 = _derivs(h0, state, table, tidal)
-        k2 = _derivs(h0 + 0.5 * dh, state + 0.5 * dh * k1, table, tidal)
-        k3 = _derivs(h0 + 0.5 * dh, state + 0.5 * dh * k2, table, tidal)
-        k4 = _derivs(h0 + dh, state + dh * k3, table, tidal)
-        return state + (dh / 6.0) * (k1 + 2.0 * k2 + 2.0 * k3 + k4), None
+    def step(state, sd):
+        s_lo, ds, i, a, A, g = sd
 
-    state, _ = jax.lax.scan(step, state0, (h_lefts, dhs))
+        def f(s, X):            # d(r, m, y)/dsigma
+            dhds = -2.0 * H * s
+            eps, p, _ = _cell_eos(h_c - H * s * s, table, i, aux, False)
+            frm = _rhs(eps, p, 0.0, X, False) * dhds        # (dr, dm, 0)
+            if not tidal:
+                return frm
+            shift = (a - A) + (s - A) * (g - 1.0)           # sigma~ - sigma == 0
+            st = s + shift
+            eps, p, d = _cell_eos(h_c - H * st * st, table, i, aux, True)
+            fy = _rhs(eps, p, d, X + frm * shift, True)[2] * (-2.0 * H * st) * g
+            return frm.at[2].set(fy)
+
+        k1 = f(s_lo, state)
+        k2 = f(s_lo + 0.5 * ds, state + 0.5 * ds * k1)
+        k3 = f(s_lo + 0.5 * ds, state + 0.5 * ds * k2)
+        k4 = f(s_lo + ds, state + ds * k3)
+        return state + (ds / 6.0) * (k1 + 2.0 * k2 + 2.0 * k3 + k4), None
+
+    state, _ = jax.lax.scan(step, state0,
+                            (sig[:-1], jnp.diff(sig), cell, a, A, g))
     return _finish(state[0], state[1], state[2], h_c, tidal)
 
 
@@ -433,10 +549,16 @@ def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
     Parameters
     ----------
     backend : "diffrax" (adaptive, accurate, forward-mode AD; default) or
-              "scan" (fixed-step RK4; lightweight, reverse-mode-capable).
-    tidal   : integrate the tidal sector (k2, Lambda).  ``tidal=False`` drops y so
-              reverse-mode AD of (R, M) is clean (scan backend).
-    rtol, atol : diffrax tolerances.   n_steps : scan-backend step count.
+              "scan" (fixed-step RK4 on a frozen mesh; forward- and
+              reverse-mode AD, with or without the tidal sector).
+    tidal   : integrate the tidal sector (k2, Lambda).  ``tidal=False`` drops y
+              (cheaper; k2 and Lambda are NaN placeholders).
+    rtol, atol : diffrax tolerances.
+    n_steps : scan-backend base step count; the scan takes
+              n_steps + n_steps // 4 + len(table.h) - 1 steps (table nodes and
+              EOS-placed points, ``_scan_mesh``).  Errors fall as n_steps^-4:
+              at 2000, ~1e-5 in M, R and ~5e-5 in Lambda (worst at 0.26 Msun),
+              gradients ~6e-5.
     adjoint : optional diffrax adjoint override (default ForwardMode()).
     jump_nodes : (diffrax) stop steps at every EOS table node (default).  False
               was an opt-out for bulk value-only scans of tables with thousands
