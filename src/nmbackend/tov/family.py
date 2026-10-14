@@ -72,7 +72,8 @@ def build_family(table: EOSTable, h_c_grid=None, *, backend: str = "diffrax",
 
     ``jump_nodes=False`` is the value-only opt-out of
     :func:`nmbackend.tov.solver.solve_structure` for bulk scans of very dense
-    tables (cheaper, ~1e3x less accurate Lambda, biased parameter tangents);
+    tables (biased parameter tangents; with the tidal sector no longer cheaper
+    and ~1e4x less accurate Lambda since 2026-10-14 -- see solve_structure);
     the ``default_hc_grid`` probe always uses the default."""
     if h_c_grid is None:
         h_c_grid = default_hc_grid(table)

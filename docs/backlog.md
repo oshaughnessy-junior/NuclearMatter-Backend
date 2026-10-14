@@ -168,3 +168,24 @@ by 3.6e-8 at C = 3.5e-3 and 1.3e-4 at C = 5.9e-4 (vs 60-digit arithmetic).
 Combined with dln k2/dln y ≈ -620 near y = 2, Λ for M ≲ 0.1 Msun is not reliable
 to better than ~1e-3 at any rtol.  Fix: switch to a Taylor series in C below a
 threshold.  Irrelevant for M ≳ 0.5 Msun (family Λ error 1.7e-9 at rtol 1e-9).
+
+## Tidal c_s² consistent with the structure's ε(h); node h quadrature
+
+**RESOLVED 2026-10-14** (docs/devlog/2026-10-14-tidal-cs2.md; found by Q2C's
+crust–core seam study, Q2C PR #47, and its adversarial review).  The tidal term
+took node c_s² (finite differences, linear in h), which is not the derivative of
+the Hermite ε(h): at steep joints Λ1.4 was 2–10% low.  It is now the Hermite
+cell's analytic dε/dh, carried with the node boundary terms in the tangents.
+The node h is now ∫dp/(ε+p) along the log-linear ε(p) of each cell: the
+trapezoid h made the Hermite overshoot between coarse crust nodes (R1.4 +4 to
++41 m).  Λ1.4 now agrees with an independent reference to ≤ 6e-6 on 18 tables.
+
+Open follow-ups:
+- `build_family` + `lambda_of_mass` sits +0.2% above the direct M = 1.4 root in
+  Λ1.4 on every table (interpolation; unchanged by this fix; Q2C review F1).
+- `jump_nodes=False` is no longer cheaper for tidal solves and is ~1e4x less
+  accurate in Λ: deprecate it for `tidal=True`.
+- Pressure plateaus (`allow_unstable_core=True`) have zero width in h; their
+  Δε needs the junction condition, not the tidal term.
+- Second derivatives in EOS parameters (d²/dθ²) are not supported (they were
+  wrong by O(1)–O(1e3) before as well).

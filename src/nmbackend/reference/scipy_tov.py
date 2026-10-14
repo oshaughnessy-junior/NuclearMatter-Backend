@@ -41,9 +41,16 @@ class RefPoint(NamedTuple):
 
 
 class _EOSInterp:
-    """log-space NumPy interpolants eps(p), cs2(p) from an EOSTable (geometric)."""
+    """log-space NumPy interpolants eps(p), cs2(p) from an EOSTable (geometric).
 
-    def __init__(self, table: EOSTable):
+    ``consistent=False`` (default): the tidal term (eps + p)/cs2 takes the
+    table's node cs2, interpolated linearly in log p -- not the derivative of
+    the log-linear eps(p), so a steep cell leaves a phantom Delta eps in the
+    tidal sector (docs/devlog/2026-10-14-tidal-cs2.md).  ``consistent=True``:
+    cs2 is the slope dp/deps of the log-linear eps(p) itself, segment by
+    segment, so the tidal source integrates to each segment's Delta eps."""
+
+    def __init__(self, table: EOSTable, consistent: bool = False):
         self.h = np.asarray(table.h, dtype=float)
         self.eps = np.asarray(table.eps, dtype=float)
         self.p = np.asarray(table.p, dtype=float)
@@ -52,6 +59,9 @@ class _EOSInterp:
         self._logeps = np.log(self.eps)
         self.p_min = float(self.p[0])
         self.p_max = float(self.p[-1])
+        self.consistent = consistent
+        if consistent:   # d ln eps / d ln p per segment (p strictly increasing)
+            self._g = np.diff(self._logeps) / np.diff(self._logp)
 
     def eps_of_p(self, p):
         lp = np.log(np.clip(p, self.p_min, self.p_max))
@@ -60,6 +70,14 @@ class _EOSInterp:
     def cs2_of_p(self, p):
         lp = np.log(np.clip(p, self.p_min, self.p_max))
         return np.interp(lp, self._logp, self.cs2)
+
+    def tidal_term(self, p, eps):
+        """(eps + p)/cs2 at pressure ``p`` (``eps`` = eps_of_p(p))."""
+        if not self.consistent:
+            return (eps + p) / float(self.cs2_of_p(p))
+        lp = math.log(min(max(p, self.p_min), self.p_max))
+        j = min(max(int(np.searchsorted(self._logp, lp)), 1), self._g.size)
+        return (eps + p) * (eps / p) * float(self._g[j - 1])   # (eps+p) deps/dp
 
     def central_from_hc(self, h_c):
         eps_c = math.exp(np.interp(h_c, self.h, self._logeps))
@@ -91,14 +109,18 @@ def _event_fired(sol):
 
 
 def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
-                    r0=1e-4, r_max=60.0):
+                    r0=1e-4, r_max=60.0, consistent_cs2=False):
     """Reference (R, M, k2, Lambda) at central pseudo-enthalpy h_c.
+
+    ``consistent_cs2=True`` takes the tidal term from the slope of the log-linear
+    eps(p) this solver integrates (see :class:`_EOSInterp`), instead of the
+    table's node cs2.  The default keeps the node cs2 (unchanged behaviour).
 
     If the surface is not reached by ``r_max`` (or the integrator fails), every
     field except ``h_c`` is NaN.  Low-h_c stars on crust tables can have
     R >> 60 km; pass a larger ``r_max`` for those.
     """
-    eos = _EOSInterp(table)
+    eos = _EOSInterp(table, consistent=consistent_cs2)
     eps_c, p_c = eos.central_from_hc(h_c)
 
     # central series: m ~ 4/3 pi eps r^3 ; H ~ a0 r^2 ; beta = dH/dr ~ 2 a0 r.
@@ -111,14 +133,14 @@ def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
         m, p, H, beta = s
         p = max(p, p_surface)
         eps = float(eos.eps_of_p(p))
-        cs2 = float(eos.cs2_of_p(p))
+        tid = eos.tidal_term(p, eps)          # (eps + p)/cs2
         one_minus = 1.0 - 2.0 * m / r
         dm = _FOURPI * r**2 * eps
         dp = -(eps + p) * (m + _FOURPI * r**3 * p) / (r**2 * one_minus)
         dH = beta
         # Hinderer 2008 (H, beta) second-order tidal system
         term_a = (2.0 / one_minus) * (
-            -2.0 * math.pi * (5.0 * eps + 9.0 * p + (eps + p) / cs2)
+            -2.0 * math.pi * (5.0 * eps + 9.0 * p + tid)
             + 3.0 / r**2
             + 2.0 / one_minus * ((m + _FOURPI * r**3 * p) / r**2) ** 2
         )
@@ -159,12 +181,12 @@ def _hbeta_rhs(r, s, eos):
     m, p, H, beta = s
     p = max(p, eos.p_min)
     eps = float(eos.eps_of_p(p))
-    cs2 = float(eos.cs2_of_p(p))
+    tid = eos.tidal_term(p, eps)              # (eps + p)/cs2
     one_minus = 1.0 - 2.0 * m / r
     dm = _FOURPI * r**2 * eps
     dp = -(eps + p) * (m + _FOURPI * r**3 * p) / (r**2 * one_minus)
     term_a = (2.0 / one_minus) * (
-        -2.0 * math.pi * (5.0 * eps + 9.0 * p + (eps + p) / cs2)
+        -2.0 * math.pi * (5.0 * eps + 9.0 * p + tid)
         + 3.0 / r**2
         + 2.0 / one_minus * ((m + _FOURPI * r**3 * p) / r**2) ** 2
     )

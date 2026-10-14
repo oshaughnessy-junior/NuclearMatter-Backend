@@ -114,6 +114,19 @@ Accuracy of the adaptive (diffrax) tangents, AD vs finite differences
   `solve_structure(..., centre_refine=True)` cuts it ~10x for +40–90% cost.
 - **First derivatives only in `h_c`.** `d²/dh_c²` (e.g. `jacfwd` of `dM/dh_c`)
   is wrong by orders of magnitude. Mixed `d²/dh_c dθ` is fine.
+  Second derivatives in EOS parameters (`d²/dθ²`) are not supported either.
+
+## Tidal term and node enthalpies (2026-10-14)
+
+The tidal term `(ε+p)/c_s²` is the analytic `dε/dh` of the same Hermite cell
+that gives `ε(h)`, and the table's node `h` comes from the log-linear `ε(p)` of
+each cell (Gauss–Legendre) instead of the trapezoid
+([devlog](docs/devlog/2026-10-14-tidal-cs2.md)). Before, the node `c_s²` left a
+"phantom" energy jump at steep crust–core joins (Λ1.4 2–10% low; 6.2% on Q2C's
+FSUGold2 join), and the trapezoid `h` put R1.4 4–10 m high on smooth tables.
+Now Λ1.4 agrees with an independent radius-domain reference on the same nodes
+to ≤ 6e-6 and R1.4 to < 0.1 mm on 18 test tables. Every Λ moves. `EOSTable.cs2` is now a
+diagnostic only. `jump_nodes=False` is not recommended for tidal solves.
 
 ## Validation status (important)
 
