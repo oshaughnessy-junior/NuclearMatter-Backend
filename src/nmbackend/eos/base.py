@@ -55,8 +55,15 @@ class EOSTable(NamedTuple):
         """Unclipped chord sound speed dp/deps of each cell (length N - 1).
         ``cs2`` is clipped to [1e-8, 1], so it cannot show acausality (e.g. a
         penalty on max(cs2) - 1 is identically zero); test causality on this.
-        A cell with Delta eps = 0 gives inf or nan."""
-        return jnp.diff(self.p) / jnp.diff(self.eps)
+        Limits: it is the node chord, not the c_s^2 of the Hermite eps(h) the
+        solver integrates, which can overshoot it between nodes (SLy 250
+        nodes: 1.176 vs 1.140), so it under-reports interpolant acausality.  A
+        cell with Delta eps <= 0 gives +inf (0 if Delta p = 0 too), with a zero
+        rather than NaN gradient; mask such cells before a penalty."""
+        dp, de = jnp.diff(self.p), jnp.diff(self.eps)
+        ok = de > 0
+        c = dp / jnp.where(ok, de, 1.0)
+        return jnp.where(ok, c, jnp.where(dp == 0, 0.0, jnp.inf))
 
     @property
     def mu(self) -> jnp.ndarray:
@@ -202,13 +209,15 @@ def hermite_eos_tidal_at_h(h_nodes, p_nodes, eps_nodes, h_query, xp=jnp):
 
     Two guards (:func:`_tidal_term`):
 
-    * Degenerate cells (width <= 1e3 ulp in h: a density jump at fixed
-      pressure, e.g. the low-table/bridge join of every ``draw_bridge_eos``
-      table, or an exact plateau) carry no tidal term inside; their cubic's
-      deps/dh is +-1e18 roundoff noise there.  Their Delta eps is moved
-      instead, as a bubble 6t(1-t) Delta eps / dh, into the regular cell just
+    * Jump cells -- a density jump at (nearly) fixed pressure: width <= 1e3 ulp
+      in h, or chord dp/deps <= 1e-8 at any width (the low-table/bridge join
+      of every ``draw_bridge_eos`` table, exact or nudged plateaus) -- carry
+      no tidal term inside; their cubic's deps/dh is noise there or beyond the
+      clip.  Their Delta eps = eps_in - eps_out > 0 is moved instead, as a
+      bubble (q+1) t^q Delta eps / dh (q = 32), into the regular cell just
       below (outward).  That is the junction condition
-      Delta y = -4 pi r^3 Delta eps / (m + 4 pi r^3 p), smeared over one cell.
+      y_out = y_in - 4 pi r^3 Delta eps / (m + 4 pi r^3 p) (y falls outward),
+      smeared over the top ~3% of that cell.
     * Elsewhere deps/dh is clipped to [0, 1e10 (eps + p)], i.e. 1/cs^2 in
       [0, 1e10].  The clip does not act with the default log-linear node h on
       any table in the devlog; with ``h_rule="trapezoid"`` it does (negative
@@ -222,7 +231,7 @@ def hermite_eos_tidal_at_h(h_nodes, p_nodes, eps_nodes, h_query, xp=jnp):
     t = (h_query - h0) / dh
     eps, p, deps_dh = _hermite_cell_t(i, t, dh, p_nodes, eps_nodes, deps=True)
     eps, p = _floor_eps_p(eps, p, xp)
-    deg, extra = _degenerate_cells(h_nodes, eps_nodes, xp)
+    deg, extra = _degenerate_cells(h_nodes, eps_nodes, p_nodes, xp)
     return eps, p, _tidal_term(i, t, dh, deps_dh, eps, p, deg, extra, xp)
 
 
@@ -233,23 +242,31 @@ def _clip_tidal(deps_dh, eps, p, xp):
     return xp.where(deps_dh > 0.0, deps_dh, 0.0)
 
 
-#: a cell no wider than this many ulp of h is degenerate (a jump at fixed p)
+#: a cell no wider than this many ulp of h is a jump cell
 _DEGENERATE_ULP = 1e3
+#: ... and so is any cell whose chord dp/deps is below this (a density jump at
+#: (nearly) fixed p, whatever its width; well inside the 1e10 (eps+p) clip)
+_JUMP_CS2 = 1e-8
+#: the junction bubble in the cell below a jump is (q+1) t^q Delta eps / dh
+_BUBBLE_Q = 32
 
 
-def _degenerate_cells(h, eps, xp):
-    """Per cell i (nodes i-1, i; index 0 unused): ``deg`` -- the cell is
-    degenerate (width <= 1e3 ulp of h); ``extra`` -- for a regular cell, the
-    Delta eps of the run of degenerate cells directly above it, which its tidal
-    term carries (:func:`_tidal_term`).  Gradient-free mask, differentiable
-    ``extra``."""
-    h = xp.asarray(h)
-    eps = xp.asarray(eps)
+def _degenerate_cells(h, eps, p, xp):
+    """Per cell i (nodes i-1, i; index 0 unused): ``deg`` -- a jump cell: a
+    density jump at fixed pressure, by width (<= 1e3 ulp of h) or by chord
+    (dp <= 1e-8 deps, independent of width, so that no cell can sit between this
+    test and the 1e10 (eps+p) clip); ``extra`` -- for a regular cell, the
+    Delta eps (= eps_in - eps_out > 0) of the run of jump cells directly above
+    it, which its tidal term carries (:func:`_tidal_term`).  Gradient-free mask,
+    differentiable ``extra``."""
+    h, eps, p = xp.asarray(h), xp.asarray(eps), xp.asarray(p)
     n = h.shape[0]
     dh = h[1:] - h[:-1]
+    de = eps[1:] - eps[:-1]
     scale = xp.maximum(xp.abs(h[1:]), xp.abs(h[:-1]))
-    deg = dh <= _DEGENERATE_ULP * np.finfo(np.float64).eps * scale
-    a = xp.where(deg, eps[1:] - eps[:-1], 0.0)
+    deg = ((dh <= _DEGENERATE_ULP * np.finfo(np.float64).eps * scale)
+           | ((de > 0) & (p[1:] - p[:-1] <= _JUMP_CS2 * de)))
+    a = xp.where(deg, de, 0.0)
     idx = xp.arange(n - 1)
     nr = xp.where(deg, n - 1, idx)                  # regular cells: own index
     # index of the first regular cell above cell k (n - 1 if none): reverse
@@ -266,12 +283,14 @@ def _degenerate_cells(h, eps, xp):
 
 
 def _tidal_term(i, t, dh, deps_dh, eps, p, deg, extra, xp):
-    """The tidal term in cell ``i`` at local ``t``: 0 in a degenerate cell, else
-    the clipped deps/dh plus the bubble carrying the Delta eps of the
-    degenerate run above (:func:`_degenerate_cells`)."""
+    """The tidal term in cell ``i`` at local ``t``: 0 in a jump cell, else the
+    clipped deps/dh plus the junction bubble (q+1) t^q Delta eps / dh carrying
+    the Delta eps of the jump run above (:func:`_degenerate_cells`).  The
+    bubble sits within ~dh/(q+2) of the jump, so the smearing error of the
+    junction is that fraction of the cell below (it was dh/2 with 6t(1-t))."""
     d = _clip_tidal(deps_dh, eps, p, xp)
     dh_safe = xp.where(deg[i], 1.0, dh)
-    d = d + extra[i] * 6.0 * t * (1.0 - t) / dh_safe
+    d = d + extra[i] * (_BUBBLE_Q + 1.0) * t ** _BUBBLE_Q / dh_safe
     return xp.where(deg[i], 0.0, d)
 
 

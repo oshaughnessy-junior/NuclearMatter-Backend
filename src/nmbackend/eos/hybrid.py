@@ -160,9 +160,13 @@ class HybridEOS:
         n_ramp_arr = np.linspace(no[-1], nq[0], n_ramp)
         # quark branch shifted to start at p_t + dp
         pq2 = pq + dp
-        n = np.concatenate([no[:-1], n_ramp_arr, nq])
-        eps = np.concatenate([eo[:-1], eps_ramp, eq])
-        p = np.concatenate([po[:-1], p_ramp, pq2])
-        # enforce strictly increasing p for the table builder
-        p = np.maximum.accumulate(p) + 1e-12 * np.arange(len(p))
+        # the ramp ends on the first quark node: drop that duplicate.  (Until
+        # 2026-10-14 an absolute 1e-12 * k MeV/fm^3 was added to every p to make
+        # it strictly increasing, which moved outer-crust pressures by up to 41%
+        # and left a width-independent +2e-4 floor in Lambda.)
+        n = np.concatenate([no[:-1], n_ramp_arr, nq[1:]])
+        eps = np.concatenate([eo[:-1], eps_ramp, eq[1:]])
+        p = np.concatenate([po[:-1], p_ramp, pq2[1:]])
+        for k in np.flatnonzero(np.diff(p) <= 0) + 1:   # ties, if any: 1 ulp
+            p[k] = np.nextafter(max(p[k], p[k - 1]), np.inf)
         return build_h_and_cs2(n, eps, p)

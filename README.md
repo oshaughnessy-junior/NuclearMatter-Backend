@@ -140,12 +140,14 @@ reference to **<0.1%** in M, R, Λ and carries clean forward-mode AD
 **First-order phase transitions** are now handled: `eos/hybrid.py` builds a
 Maxwell hadron–quark EOS (density jump at constant pressure), and
 `tov.solve_hybrid` integrates each phase adaptively and applies the **tidal junction
-condition** at the discontinuity (Damour–Nagar 2009 / Takátsy–Kovács 2020). It is
-cross-validated against an independent radius-domain (H,β) junction solver to
-**<0.1%** in M, R, Λ (`tests/test_phase_transition.py`).  Until 2026-10-14 both
-applied the junction with the wrong sign (hybrid Λ ~2% low); the sign is now
-checked against the smeared-transition limit
-([devlog](docs/devlog/2026-10-14-tidal-cs2.md)). The hybrid sequence shows
+condition** at the discontinuity (Damour–Nagar 2009 / Takátsy–Kovács 2020).  It
+agrees with a radius-domain (H,β) solver that applies the same junction formula
+to **<0.1%** in M, R, Λ; that checks the integration, not the formula.  Until
+2026-10-14 both applied the junction with the wrong sign, and hybrid Λ was 2–13%
+low (+2.2% on `HybridEOS()`, +13% on a large quark core).  The sign is now
+checked against the limit of the smeared transition, which needs no junction
+(`tests/test_phase_transition.py`;
+[devlog](docs/devlog/2026-10-14-tidal-cs2.md)). The hybrid sequence shows
 the expected softening (quark cores → smaller R, Λ).
 
 Still **open**: twin-star/disconnected-branch bookkeeping in `build_family` (the

@@ -2,6 +2,23 @@
 
 **Who:** R. O'Shaughnessy (with AI pair).  Follow-on to `...b-validation-adaptive-solver`.
 
+> **Correction (2026-10-14).**  The junction applied below had the wrong sign.
+> It used y_out = y_in − 4πr³(ε_out − ε_in)/(m+4πr³p), which raises y across
+> the outward density drop.  The correct form is
+> y_out = y_in − 4πr³(ε_in − ε_out)/(m+4πr³p), which lowers it: it is the
+> zero-width limit of the tidal term, and its Newtonian limit is the
+> self-bound surface term Δy = −3.
+>
+> - Both solvers compared below shared the formula, so the "<0.1%"
+>   agreement says nothing about the sign.
+> - The "~0.4%" smeared comparison does not reproduce: the old sign was 2–13%
+>   off the smeared limit.
+> - Hybrid Λ moves by +2.2% to +13% with the fix.
+> - Fixed in PR #44.  See `2026-10-14-tidal-cs2.md` and
+>   `tests/test_phase_transition.py::test_junction_matches_smeared_transition`.
+>
+> The text below is kept as written.
+
 ## Goal
 Address the open item: strong first-order phase transitions (cs²→0 / density
 discontinuities), which the smooth solver mishandles and which need the tidal

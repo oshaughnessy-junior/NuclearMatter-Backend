@@ -64,16 +64,51 @@ def test_hadronic_only_branch_matches_plain_solver():
 
 def test_junction_matches_smeared_transition():
     """Sign of the tidal junction.  The sharp transition with the junction must be
-    the limit of the same transition smeared over a small pressure width and
+    the limit of the same transition smeared over a pressure width w and
     integrated by the plain solver (continuous tidal term).  On HybridEOS() at
-    h_c = h_t + 0.08 the smeared Lambda converges 97.01 / 97.57 / 97.72 at width
-    0.02 / 0.005 / 0.001 to the junction's 97.73; with the junction sign of
-    before 2026-10-14 the hybrid gave 95.60 (-2.2%)."""
+    h_c = h_t + 0.08 the smeared Lambda converges linearly in w: -3.8e-4,
+    -7.6e-5, -1.9e-5 at w = 1e-3, 2e-4, 5e-5 against the junction's 97.726.
+    With the junction sign of before 2026-10-14 the hybrid gave 95.60 (-2.2%).
+    (The smeared table no longer adds 1e-12 k MeV/fm^3 to every pressure,
+    which left a +2e-4 floor.)"""
     from nmbackend.tov.solver import solve_structure
     hy = HybridEOS()
     hc = float(hy.transition.h_t) + 0.08
-    sm = solve_structure(hy.eos_table_smeared(width_frac=0.001), hc,
+    sm = solve_structure(hy.eos_table_smeared(width_frac=5e-5), hc,
                          rtol=1e-10, atol=1e-12)
     hyb = solve_hybrid(hy, hc, rtol=1e-10, atol=1e-12)
-    assert abs(float(hyb.M_msun) / float(sm.M_msun) - 1.0) < 1e-3
-    assert abs(float(hyb.Lambda) / float(sm.Lambda) - 1.0) < 1e-3
+    assert abs(float(hyb.M_msun) / float(sm.M_msun) - 1.0) < 1e-5
+    assert abs(float(hyb.Lambda) / float(sm.Lambda) - 1.0) < 1e-4
+
+
+def test_nudged_plateau_is_continuous():
+    """A density jump at fixed p written into one table (the raw combined
+    HybridEOS table), with the quark side nudged by delta p_t to make p strictly
+    increasing.  Lambda from the plain solver, and from the consistent_cs2
+    reference, must stay at the junction value of solve_hybrid for every delta.
+    Before the chord test for jump cells, a cell between 1e3 ulp and ~3e-11 wide
+    lost most of its Delta eps to the 1e10 (eps + p) clip (delta 1e-12..1e-10:
+    -1.2e-2), and the reference skipped thin segments (delta 1e-11..3e-8:
+    -1.24e-2).  Measured now: solver +1.43e-5 (junction bubble) up to delta 1e-8,
+    -1e-8 above; reference <= 1.1e-6."""
+    import math
+    import jax
+    import jax.numpy as jnp
+    from nmbackend.eos.base import build_h_and_cs2
+    from nmbackend.reference.scipy_tov import solve_reference
+    from nmbackend.tov.solver import solve_structure
+    hy = HybridEOS(n_hadronic=None)
+    hc = float(hy.transition.h_t) + 0.08
+    L = float(solve_hybrid(hy, hc, rtol=1e-10, atol=1e-12).Lambda)
+    no, eo, po = hy._had_seg
+    nq, eq, pq = hy._quark_seg
+    pt = float(hy.p_trans_mev)
+    lam = jax.jit(lambda t: solve_structure(t, hc, rtol=1e-10, atol=1e-12).Lambda)
+    for d in (0.0, 1e-13, 1e-11, 1e-9, 3e-8, 1e-6):
+        t = build_h_and_cs2(np.concatenate([no, nq]), np.concatenate([eo, eq]),
+                            np.concatenate([po, pq + d * pt]))
+        assert abs(float(lam(t)) / L - 1.0) < 5e-5, d
+        p_c = float(t.at_h(hc)[1])
+        hr = np.interp(math.log(p_c), np.log(np.asarray(t.p)), np.asarray(t.h))
+        ref = solve_reference(t, hr, rtol=1e-10, atol=1e-40, consistent_cs2=True)
+        assert abs(ref.Lambda / L - 1.0) < 5e-5, d

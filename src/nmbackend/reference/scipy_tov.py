@@ -49,8 +49,8 @@ class _EOSInterp:
     tidal sector (docs/devlog/2026-10-14-tidal-cs2.md).  ``consistent=True``:
     cs2 is the slope dp/deps of the log-linear eps(p) itself, segment by
     segment, so the tidal source integrates to each segment's Delta eps.
-    Segments of zero width in p (|Delta ln p| <= 1e-12: a density jump at
-    fixed p) get no tidal term; ``plateaus`` lists their (p, Delta eps) for the
+    Jump segments (|Delta ln p| <= 1e-12, or chord dp/deps <= 1e-6 at any
+    width: a density jump at (nearly) fixed p) get no tidal term; ``plateaus`` lists their (p, Delta eps) for the
     junction condition (:func:`solve_reference`)."""
 
     def __init__(self, table: EOSTable, consistent: bool = False):
@@ -66,7 +66,12 @@ class _EOSInterp:
         self.plateaus = []
         if consistent:   # d ln eps / d ln p per segment
             dlp = np.diff(self._logp)
-            flat = np.abs(dlp) <= 1e-12
+            de = np.diff(self.eps)
+            # a jump at (nearly) fixed p, by chord dp/deps at any width.  The
+            # threshold is 1e-6, above the solver's 1e-8 (eos.base): RK45 steps
+            # over segments with a chord below ~4e-8 without resolving their
+            # tidal term (Lambda 1.2% low), so they take the exact junction
+            flat = (np.abs(dlp) <= 1e-12) | ((de > 0) & (np.diff(self.p) <= 1e-6 * de))
             with np.errstate(divide="ignore", invalid="ignore"):
                 self._g = np.where(flat, 0.0, np.diff(self._logeps) / dlp)
             self.plateaus = [(float(self.p[j]), float(self.eps[j + 1] - self.eps[j]))

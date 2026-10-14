@@ -64,18 +64,30 @@ solver takes it as the analytic derivative of the *same* Hermite cell that gives
 every table cell the tidal source therefore integrates to exactly the
 :math:`\Delta\varepsilon` that the structure equations see, however steep the
 cell. A steep but finite layer is the smooth limit of the junction condition
-:math:`\Delta y = -4\pi r^3 \Delta\varepsilon/(m + 4\pi r^3 p)` (Takátsy & Kovács
-2020) and is counted correctly without one.
+:math:`y_{\rm out} = y_{\rm in} - 4\pi r^3 \Delta\varepsilon/(m + 4\pi r^3 p)`, with
+:math:`\Delta\varepsilon = \varepsilon_{\rm in} - \varepsilon_{\rm out} > 0` the drop
+outward, so :math:`y` *falls* across it. Its Newtonian limit is the self-bound
+surface term :math:`\Delta y = -3`, and it is counted correctly without a junction
+(Takátsy & Kovács 2020).
 
 Two guards act on the tidal term.
 
-* A cell no wider than :math:`10^3` ulp in :math:`h` is a density jump at fixed
-  pressure. Every ``draw_bridge_eos`` table has one, at the low-table/bridge
-  join; exact plateaus are another case. In such a cell the cubic's
-  :math:`d\varepsilon/dh` is roundoff noise of order :math:`10^{18}`, so the tidal
-  term is 0 inside it. Its :math:`\Delta\varepsilon` is carried instead by a
-  bubble :math:`6t(1-t)\Delta\varepsilon/\Delta h` in the regular cell just below.
-  This is the junction condition, smeared over one cell.
+* A **jump cell** is a density jump at (nearly) fixed pressure: width at most
+  :math:`10^3` ulp in :math:`h`, or chord :math:`\Delta p/\Delta\varepsilon \le 10^{-8}`
+  at any width.
+
+  - Examples: the low-table/bridge join of every ``draw_bridge_eos`` table,
+    exact plateaus, and plateaus nudged to strict increase.
+  - The chord criterion leaves no window between this test and the clip below.
+    A width-only test let cells 1e3 ulp to ~3e-11 wide lose most of their
+    :math:`\Delta\varepsilon` to the clip, a 1.2% drop in :math:`\Lambda`.
+  - The tidal term is 0 inside a jump cell. Its :math:`\Delta\varepsilon` is
+    carried instead by the bubble :math:`(q+1)t^q\,\Delta\varepsilon/\Delta h`,
+    :math:`q = 32`, in the regular cell just below. That is the junction,
+    smeared over the top :math:`\sim 1/(q+2)` of that cell.
+  - The smearing error scales with the width of that cell (see the devlog for
+    measured values).
+
 * Elsewhere the term is clipped to :math:`[0, 10^{10}(\varepsilon+p)]`. With the
   default node :math:`h`, the clip acts on none of the tables of the devlog.
 
@@ -107,7 +119,7 @@ for tidal solves and is not recommended there.
 
 A density jump at *fixed* pressure inside one table (the bridge join, or the
 pressure plateaus of ``allow_unstable_core=True`` tables) has zero width in
-:math:`h`, and gets the smeared junction above. A genuine first-order transition
+:math:`h` (or nearly), and gets the smeared junction above. A genuine first-order transition
 between two phases should be built as a ``HybridEOS``, whose ``tov.solve_hybrid``
 applies the junction condition exactly at the transition.
 

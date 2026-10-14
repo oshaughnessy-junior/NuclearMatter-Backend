@@ -149,10 +149,11 @@ def test_bridge_density_jump_gets_the_junction():
     310.75 -> 312.73 MeV/fm^3, cell width 1.7e-16 in h).  There the cubic's
     deps/dh is +-1e18 noise; it used to make tidal solves at rtol 1e-10 hit
     max_steps.  The cell now carries no tidal term and its Delta eps goes into
-    the cell below (the junction, smeared over one cell).  Measured on draw 1:
-    Lambda 224.0997 vs the reference with the exact junction 224.0955 (1.9e-5;
-    1.2e-5..3.2e-5 over 12 stars of 4 draws) and 223.5689 without it (main
-    dropped the jump too: 224.028 at rtol 1e-10, with its phantom term)."""
+    the cell below (the junction bubble, within the top ~3% of that cell).
+    Measured on draw 1: Lambda 224.0959 vs the reference with the exact junction
+    224.0955 (1.8e-6; 1.8e-6..2.3e-6 on 4 stars of 2 draws, 1.2e-5..3.2e-5 with
+    the first, centred bubble) and 223.5689 without it (main dropped the jump
+    too: 224.028 at rtol 1e-10, with its phantom term)."""
     from nmbackend.priors.bridge import draw_bridge_eos
     from nmbackend.tov import build_family
     from nmbackend.tov.family import default_hc_grid
@@ -162,7 +163,7 @@ def test_bridge_density_jump_gets_the_junction():
     p_c = float(t.at_h(hc)[1])
     hr = np.interp(math.log(p_c), np.log(np.asarray(t.p)), np.asarray(t.h))
     ref = solve_reference(t, hr, rtol=1e-10, atol=1e-40, consistent_cs2=True)
-    np.testing.assert_allclose(v, [ref.M_msun, ref.R_km, ref.Lambda], rtol=1e-4,
+    np.testing.assert_allclose(v, [ref.M_msun, ref.R_km, ref.Lambda], rtol=2e-5,
                                atol=0.0)
     # and the batched family at the same tolerance (one bad star would raise)
     fam = build_family(t, default_hc_grid(t, 8), rtol=1e-10, atol=1e-12)

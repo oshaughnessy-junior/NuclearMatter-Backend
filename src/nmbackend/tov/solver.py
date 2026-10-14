@@ -179,7 +179,7 @@ def _shift(x, lo_u, lo_h, dhdx):
 def _derivs_x(x, state, table: EOSTable, ua, aux, tidal: bool = True):
     """d(r, m, y)/dx (adaptive backend): r, m in h (x == h), y in the
     node-anchored picture (see the note above).  ``aux`` is
-    ``eos.base._degenerate_cells(table.h, table.eps)``."""
+    ``eos.base._degenerate_cells(table.h, table.eps, table.p)``."""
     from ..eos.base import _floor_eps_p, _hermite_cell_t, _tidal_term
     i, lo_u, lo_h, dhdx = _u_cell(table, x, ua)
     dh = table.h[i] - lo_h
@@ -330,7 +330,7 @@ def _adaptive_tov(table, t0, t1, state0, rtol, atol, tidal, dt0,
         raise ValueError("tidal solves save the end point only")
     ua = sg(t0)                  # y picture anchored at the frozen start
     from ..eos.base import _degenerate_cells
-    aux = _degenerate_cells(table.h, table.eps, jnp)   # density jumps at fixed p
+    aux = _degenerate_cells(table.h, table.eps, table.p, jnp)   # jumps at fixed p
     t0s = sg(t0)                                # REQUIRED with jump_ts; see above
     f0 = _derivs_x(t0, state0, table, ua, aux, tidal)
     _, fdot = jax.jvp(lambda t, y: _derivs_x(t, y, table, ua, aux, tidal),
