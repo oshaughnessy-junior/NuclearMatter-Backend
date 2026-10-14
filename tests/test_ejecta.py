@@ -103,9 +103,15 @@ def test_asymmetric_pinned_anchors():
     # closes the equal-mass blind spot -- at q=1 the mass-ratio exponents
     # (Radice n=-0.773, KF20 n=1.5465) and all Nedora q-coefficients are
     # invisible to the other anchors, so a wrong sign/row there would pass.
+    # The anchor is given by compactness C = GMSUN_KM m / R (what the fits use),
+    # so the pins do not depend on the unit constant.  C1, C2 are the
+    # compactnesses the pins were computed at: R = 11.5, 12.0 km with the
+    # pre-2026-10-14 GMSUN_KM = 1.4770039 km.
     from nmbackend.ejecta import (nedora2021_vej, nedora2021_mdisk)
+    C1, C2 = 0.19265267846681078, 0.1415462040401985
     x = _inputs(m1=1.50, m2=1.15, lambda1=250.0, lambda2=900.0,
-                r1_km=11.5, r2_km=12.0)     # q=1.3043, Lt=466.26
+                r1_km=GMSUN_KM * 1.50 / C1,
+                r2_km=GMSUN_KM * 1.15 / C2)     # q=1.3043, Lt=466.26
     assert float(radice2018_mej(x)) == pytest.approx(8.97442575e-04, rel=1e-6)
     assert float(radice2018_vej(x)) == pytest.approx(2.09410824e-01, rel=1e-6)
     assert float(kf2020_mdyn(x)) == pytest.approx(1.05719335e-02, rel=1e-6)

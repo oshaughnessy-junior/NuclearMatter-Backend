@@ -31,6 +31,12 @@ from dataclasses import dataclass
 
 import numpy as np
 
+# G Msun / c^2 in km: the package constant (IAU 2015 B3 nominal), re-exported
+# (it is in __all__).  Until 2026-10-14 this module defined its own rounded
+# 1.4766, which shadowed constants.GMSUN_KM under `from nmbackend.postmerger
+# import *`.
+from .constants import GMSUN_KM
+
 __all__ = ["MSUN_S", "GMSUN_KM", "dtilde", "FPeakFit", "STROUD2026_EXP",
            "fpeak_lnlike", "MthreshFit", "BAUSWEIN2013", "KOEPPEL2019_LIN",
            "MthreshNonlinFit", "KOEPPEL2019_NONLIN", "mthresh_lnlike"]
@@ -123,8 +129,7 @@ def fpeak_lnlike(f_obs_hz, sigma_obs_hz, f_pred_hz, sigma_lnf):
     return -0.5 * z**2 - np.log(sig_ln) - 0.5 * np.log(2.0 * np.pi)
 
 
-#: G Msun / c^2 in km.
-GMSUN_KM = 1.4766
+# GMSUN_KM (G Msun / c^2 in km) is the package constant, imported above.
 
 
 @dataclass(frozen=True)
