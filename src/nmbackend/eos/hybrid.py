@@ -147,7 +147,10 @@ class HybridEOS:
         eps_out -> eps_in across it (cs^2 = dp/deps small but finite).  As
         width_frac -> 0 this approaches the sharp transition; the standard adaptive
         solver resolves it, giving an independent value to compare the junction
-        solver against.
+        solver against.  At width_frac <= ~1e-8 every ramp cell has chord
+        dp/deps <= 1e-8 and is treated as a jump cell (eos.base), so the table
+        then tests the junction bubble, not a smear.  p is strictly increasing
+        by construction (ramp, then the quark branch without its first node).
         """
         no, eo, po = self._had_seg
         nq, eq, pq = self._quark_seg
@@ -167,6 +170,4 @@ class HybridEOS:
         n = np.concatenate([no[:-1], n_ramp_arr, nq[1:]])
         eps = np.concatenate([eo[:-1], eps_ramp, eq[1:]])
         p = np.concatenate([po[:-1], p_ramp, pq2[1:]])
-        for k in np.flatnonzero(np.diff(p) <= 0) + 1:   # ties, if any: 1 ulp
-            p[k] = np.nextafter(max(p[k], p[k - 1]), np.inf)
         return build_h_and_cs2(n, eps, p)

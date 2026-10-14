@@ -143,8 +143,9 @@ Maxwell hadron–quark EOS (density jump at constant pressure), and
 condition** at the discontinuity (Damour–Nagar 2009 / Takátsy–Kovács 2020).  It
 agrees with a radius-domain (H,β) solver that applies the same junction formula
 to **<0.1%** in M, R, Λ; that checks the integration, not the formula.  Until
-2026-10-14 both applied the junction with the wrong sign, and hybrid Λ was 2–13%
-low (+2.2% on `HybridEOS()`, +13% on a large quark core).  The sign is now
+2026-10-14 both applied the junction with the wrong sign, and hybrid Λ was too
+low: at fixed mass on `Hybrid(80, 250, 1)` by 0 / 0 / 0.5% / 9.9% / 18.6% at
+1.2 / 1.4 / 1.6 / 1.8 / 2.0 M☉ (no quark core below ~1.57 M☉; M_max 2.06).  The sign is now
 checked against the limit of the smeared transition, which needs no junction
 (`tests/test_phase_transition.py`;
 [devlog](docs/devlog/2026-10-14-tidal-cs2.md)). The hybrid sequence shows

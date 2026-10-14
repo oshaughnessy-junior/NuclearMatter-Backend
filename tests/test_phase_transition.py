@@ -104,7 +104,8 @@ def test_nudged_plateau_is_continuous():
     nq, eq, pq = hy._quark_seg
     pt = float(hy.p_trans_mev)
     lam = jax.jit(lambda t: solve_structure(t, hc, rtol=1e-10, atol=1e-12).Lambda)
-    for d in (0.0, 1e-13, 1e-11, 1e-9, 3e-8, 1e-6):
+    for d in (0.0, 1e-13, 1e-11, 1e-9, 3e-8, 1e-6, 1e-5):   # 1e-5 crosses the
+        # reference's 1e-6 chord threshold (delta ~2.5e-6)
         t = build_h_and_cs2(np.concatenate([no, nq]), np.concatenate([eo, eq]),
                             np.concatenate([po, pq + d * pt]))
         assert abs(float(lam(t)) / L - 1.0) < 5e-5, d

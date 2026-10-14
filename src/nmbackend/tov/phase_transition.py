@@ -16,7 +16,9 @@ LOWERS y across the transition going outward: it is the zero-width limit of the
 tidal term, and the Newtonian self-bound-star case (Delta y = -3 at a surface
 with finite density) is its limit.  Until 2026-10-14 the sign was reversed here
 and in ``reference.scipy_tov.solve_reference_hybrid`` (so the two agreed), and
-hybrid Lambda was 2-13% low (more for larger Delta eps and quark cores);
+hybrid Lambda was too low -- at fixed mass on HybridEOS(80, 250, 1) by
+0 / 0 / 0.5 / 9.9 / 18.6% at 1.2 / 1.4 / 1.6 / 1.8 / 2.0 Msun (more with a larger
+quark core);
 ``tests/test_phase_transition.py::
 test_junction_matches_smeared_transition`` now checks the sign against the
 ``HybridEOS.eos_table_smeared`` limit.

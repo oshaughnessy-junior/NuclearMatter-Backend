@@ -46,7 +46,7 @@ resolution. ``h_rule="trapezoid"`` reproduces the old node :math:`h` only, for
 table comparison. It does not reproduce the old :math:`\Lambda`, and it is not
 valid with the new tidal term: on the packaged SLy crust its Hermite
 :math:`\varepsilon(h)` is non-monotone (:math:`d\varepsilon/dh` down to
-:math:`-1.4\times10^5(\varepsilon+p)`), which the clip below silently zeroes.
+:math:`-1.4\times10^5(\varepsilon+p)`); use the default rule with the tidal term.
 
 Tables that stop near neutron drip are continued to the surface with a consistent
 polytropic tail (:func:`nmbackend.eos.base.extend_to_surface`); this surface
@@ -85,11 +85,28 @@ Two guards act on the tidal term.
     carried instead by the bubble :math:`(q+1)t^q\,\Delta\varepsilon/\Delta h`,
     :math:`q = 32`, in the regular cell just below. That is the junction,
     smeared over the top :math:`\sim 1/(q+2)` of that cell.
-  - The smearing error scales with the width of that cell (see the devlog for
-    measured values).
+  - The smearing error scales with the width of that cell: +1.4e-5 to
+    +2.8e-5 in :math:`\Lambda` on hybrid tables, 1.8e-6 on bridge draws.
+  - The classification is a hard mask. Where a parameter change moves a cell's
+    chord through 1e-8, :math:`\Lambda` steps by that smearing error, and its
+    parameter derivative carries a delta function there. No shipped generator
+    moves a cell through that threshold.
+  - Gradients through a jump cell: the concentrated bubble needs a tighter
+    tolerance. On a bridge draw, AD vs FD of :math:`d\Lambda/d\theta` (for a
+    parameter that moves the jump) is 3.2e-6 at the default rtol 1e-7 and
+    1.3e-7 at rtol 1e-9; use rtol :math:`\le 10^{-9}` there. The smearing also
+    biases that derivative against the exact junction, by 1.2e-4 on the bridge
+    draw (the value bias is only 1.8e-6). A Fisher row through such a join
+    carries this bias.
 
-* Elsewhere the term is clipped to :math:`[0, 10^{10}(\varepsilon+p)]`. With the
-  default node :math:`h`, the clip acts on none of the tables of the devlog.
+* Elsewhere the term is capped at :math:`10^{10}(\varepsilon+p)`; the chord test
+  keeps every cell that could reach the cap a jump cell. It is **not** floored at
+  0, so a regular cell whose cubic :math:`\varepsilon(h)` dips (a soft cell over a
+  large :math:`\varepsilon` ratio) still integrates to exactly its
+  :math:`\Delta\varepsilon`. A zero floor over-counted such cells, by up to 7.6%
+  at :math:`\Delta\varepsilon = 3000` MeV/fm³ (only unstable-branch stars were
+  affected). With the default node :math:`h`, the cap acts on none of the
+  tables of the devlog.
 
 Until 2026-10-14 the tidal term used the node values ``EOSTable.cs2``
 (finite differences :math:`\Delta p/\Delta\varepsilon`) interpolated linearly in

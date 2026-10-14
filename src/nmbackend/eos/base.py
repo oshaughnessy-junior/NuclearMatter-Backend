@@ -58,12 +58,17 @@ class EOSTable(NamedTuple):
         Limits: it is the node chord, not the c_s^2 of the Hermite eps(h) the
         solver integrates, which can overshoot it between nodes (SLy 250
         nodes: 1.176 vs 1.140), so it under-reports interpolant acausality.  A
-        cell with Delta eps <= 0 gives +inf (0 if Delta p = 0 too), with a zero
-        rather than NaN gradient; mask such cells before a penalty."""
+        cell with Delta eps <= 0 gives +inf (0 if Delta p = 0 too); NaN input
+        (a rejected table) gives NaN.  Mask Delta eps <= 0 cells before any
+        penalty: with them, max-form penalties give an inf loss and NaN
+        reverse-mode gradient, and forward mode gives NaN even for sum forms.
+        A safe form is mean(relu(minimum(cs2_chord, cap) - 1)^2) over cells
+        with Delta eps > 0."""
         dp, de = jnp.diff(self.p), jnp.diff(self.eps)
         ok = de > 0
         c = dp / jnp.where(ok, de, 1.0)
-        return jnp.where(ok, c, jnp.where(dp == 0, 0.0, jnp.inf))
+        c = jnp.where(ok, c, jnp.where(dp == 0, 0.0, jnp.inf))
+        return jnp.where(jnp.isnan(dp) | jnp.isnan(de), jnp.nan, c)
 
     @property
     def mu(self) -> jnp.ndarray:
@@ -218,10 +223,14 @@ def hermite_eos_tidal_at_h(h_nodes, p_nodes, eps_nodes, h_query, xp=jnp):
       below (outward).  That is the junction condition
       y_out = y_in - 4 pi r^3 Delta eps / (m + 4 pi r^3 p) (y falls outward),
       smeared over the top ~3% of that cell.
-    * Elsewhere deps/dh is clipped to [0, 1e10 (eps + p)], i.e. 1/cs^2 in
-      [0, 1e10].  The clip does not act with the default log-linear node h on
-      any table in the devlog; with ``h_rule="trapezoid"`` it does (negative
-      deps/dh in the packaged SLy crust), so that rule is not valid with the
+    * Elsewhere deps/dh is capped at 1e10 (eps + p), i.e. 1/cs^2 <= 1e10; the
+      chord test keeps every cell that could reach the cap a jump cell.  It is
+      NOT floored at 0 (since 2026-10-14, PR #44 review 3, R2): a regular cell
+      whose cubic eps(h) dips (negative deps/dh near the outer end of a soft
+      cell spanning a large eps ratio) then still integrates to exactly its
+      Delta eps; a zero floor over-counted it (x(1 + 7.6e-2) at Delta eps = 3000
+      MeV/fm^3).  With ``h_rule="trapezoid"`` the packaged SLy crust has such
+      dips (deps/dh down to -1.4e5 (eps + p)); that rule is not valid with the
       tidal term."""
     h_nodes = xp.asarray(h_nodes)
     N = h_nodes.shape[0]
@@ -236,10 +245,10 @@ def hermite_eos_tidal_at_h(h_nodes, p_nodes, eps_nodes, h_query, xp=jnp):
 
 
 def _clip_tidal(deps_dh, eps, p, xp):
-    """deps/dh clipped to [0, 1e10 (eps + p)] (with where; see _floor_eps_p)."""
+    """deps/dh capped at 1e10 (eps + p) (with where; see _floor_eps_p).  No
+    floor: a regular cell then integrates to exactly its Delta eps."""
     hi = 1e10 * (eps + p)
-    deps_dh = xp.where(deps_dh < hi, deps_dh, hi)
-    return xp.where(deps_dh > 0.0, deps_dh, 0.0)
+    return xp.where(deps_dh < hi, deps_dh, hi)
 
 
 #: a cell no wider than this many ulp of h is a jump cell
