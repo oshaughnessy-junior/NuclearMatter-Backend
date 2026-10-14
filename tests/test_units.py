@@ -8,6 +8,13 @@ def test_gmsun_km():
     assert abs(c.GMSUN_KM - 1.4766) < 1e-3
 
 
+def test_gmsun_km_is_iau_nominal():
+    # IAU 2015 B3 nominal (GM)_sun / c^2 = 1476.6250 m (LAL MRSUN_SI 1476.62506);
+    # the pre-2026-10-14 value, 1477.004 m from MSUN_SI = 1.98892e30, fails this.
+    assert abs(c.GMSUN_KM / 1.476625 - 1.0) < 1e-7
+    assert abs(c.G_SI * c.MSUN_SI / c.GM_SUN_SI - 1.0) < 1e-15
+
+
 def test_mevfm3_to_geom():
     # nuclear saturation energy density ~150 MeV/fm^3 -> ~2e-4 km^-2
     eps_geom = 150.0 * c.MEVFM3_TO_GEOM
