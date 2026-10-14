@@ -176,10 +176,11 @@ def _shift(x, lo_u, lo_h, dhdx):
     return (lo_h - lo_u) + (x - lo_u) * (dhdx - 1.0)
 
 
-def _derivs_x(x, state, table: EOSTable, ua, tidal: bool = True):
+def _derivs_x(x, state, table: EOSTable, ua, aux, tidal: bool = True):
     """d(r, m, y)/dx (adaptive backend): r, m in h (x == h), y in the
-    node-anchored picture (see the note above)."""
-    from ..eos.base import _clip_tidal, _floor_eps_p, _hermite_cell_t
+    node-anchored picture (see the note above).  ``aux`` is
+    ``eos.base._degenerate_cells(table.h, table.eps)``."""
+    from ..eos.base import _floor_eps_p, _hermite_cell_t, _tidal_term
     i, lo_u, lo_h, dhdx = _u_cell(table, x, ua)
     dh = table.h[i] - lo_h
     eps, p = _hermite_cell_t(i, (x - lo_h) / dh, dh, table.p, table.eps)
@@ -190,17 +191,17 @@ def _derivs_x(x, state, table: EOSTable, ua, tidal: bool = True):
     t_y = (x - lo_u) * dhdx / dh                  # == (h(x) - h_{i-1}) / dh
     eps_y, p_y, deps_y = _hermite_cell_t(i, t_y, dh, table.p, table.eps, deps=True)
     eps_y, p_y = _floor_eps_p(eps_y, p_y, jnp)
-    deps_y = _clip_tidal(deps_y, eps_y, p_y, jnp)
+    deps_y = _tidal_term(i, t_y, dh, deps_y, eps_y, p_y, *aux, jnp)
     s_y = state + f * _shift(x, lo_u, lo_h, dhdx)  # r, m at h(x); f[2] == 0
     fy = _rhs(eps_y, p_y, deps_y, s_y, True)[2] * dhdx
     return jnp.stack([f[0], f[1], fy])
 
 
-def _y_to_h(table, x, state, ua):
+def _y_to_h(table, x, state, ua, aux):
     """Tidal state at solve coordinate ``x`` with y moved from h(x) back to h = x
     (a zero-valued correction; first tangents exact)."""
     _, lo_u, lo_h, dhdx = _u_cell(table, x, ua)
-    fy = _derivs_x(x, state, table, ua, True)[2]
+    fy = _derivs_x(x, state, table, ua, aux, True)[2]
     return state.at[2].add(-fy * _shift(x, lo_u, lo_h, dhdx))
 
 
@@ -261,7 +262,7 @@ def _solve_scan(table, h_c, n_steps, tidal):
 # Module-level vector fields: diffeqsolve is jitted with the term as a static key, so a
 # fresh closure per call would recompile every solve and leak the executables.
 def _field_tidal(x, s, args):
-    return _derivs_x(x, s, *args, True)          # args = (table, ua)
+    return _derivs_x(x, s, *args, True)          # args = (table, ua, aux)
 
 
 def _field_structure(x, s, args):
@@ -328,9 +329,11 @@ def _adaptive_tov(table, t0, t1, state0, rtol, atol, tidal, dt0,
     if tidal and saveat is not None:
         raise ValueError("tidal solves save the end point only")
     ua = sg(t0)                  # y picture anchored at the frozen start
+    from ..eos.base import _degenerate_cells
+    aux = _degenerate_cells(table.h, table.eps, jnp)   # density jumps at fixed p
     t0s = sg(t0)                                # REQUIRED with jump_ts; see above
-    f0 = _derivs_x(t0, state0, table, ua, tidal)
-    _, fdot = jax.jvp(lambda t, y: _derivs_x(t, y, table, ua, tidal),
+    f0 = _derivs_x(t0, state0, table, ua, aux, tidal)
+    _, fdot = jax.jvp(lambda t, y: _derivs_x(t, y, table, ua, aux, tidal),
                       (t0, state0), (jnp.ones_like(t0), f0))
     d = t0s - t0
     state0 = state0 + f0 * d + 0.5 * fdot * d * d
@@ -342,13 +345,13 @@ def _adaptive_tov(table, t0, t1, state0, rtol, atol, tidal, dt0,
         adjoint = diffrax.ForwardMode()   # supports values, vmap, forward-mode AD
     sol = diffrax.diffeqsolve(
         term, diffrax.Dopri5(), t0=t0s, t1=t1, dt0=sg(dt0),
-        y0=state0, args=(table, ua), stepsize_controller=ctrl, max_steps=max_steps,
+        y0=state0, args=(table, ua, aux), stepsize_controller=ctrl, max_steps=max_steps,
         adjoint=adjoint,
         saveat=diffrax.SaveAt(t1=True) if saveat is None else saveat,
     )
     if not tidal:
         return sol
-    ys = _y_to_h(table, t1, sol.ys[0], ua)[None]
+    ys = _y_to_h(table, t1, sol.ys[0], ua, aux)[None]
     return eqx.tree_at(lambda s: s.ys, sol, ys)
 
 

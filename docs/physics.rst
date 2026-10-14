@@ -42,7 +42,11 @@ since 2026-10-14). The trapezoid rule used before is inconsistent with the
 Hermite's node slopes by :math:`O((\Delta\ln\varepsilon)^2)` per cell; the cubic
 then overshoots between coarse crust nodes, which put :math:`R_{1.4}` 4–10 m high
 on the MetaModel and GM1 tables (41 m on a 250-node SLy table) at any core
-resolution. ``h_rule="trapezoid"`` reproduces the old tables.
+resolution. ``h_rule="trapezoid"`` reproduces the old node :math:`h` only, for
+table comparison. It does not reproduce the old :math:`\Lambda`, and it is not
+valid with the new tidal term: on the packaged SLy crust its Hermite
+:math:`\varepsilon(h)` is non-monotone (:math:`d\varepsilon/dh` down to
+:math:`-1.4\times10^5(\varepsilon+p)`), which the clip below silently zeroes.
 
 Tables that stop near neutron drip are continued to the surface with a consistent
 polytropic tail (:func:`nmbackend.eos.base.extend_to_surface`); this surface
@@ -61,7 +65,19 @@ every table cell the tidal source therefore integrates to exactly the
 :math:`\Delta\varepsilon` that the structure equations see, however steep the
 cell. A steep but finite layer is the smooth limit of the junction condition
 :math:`\Delta y = -4\pi r^3 \Delta\varepsilon/(m + 4\pi r^3 p)` (Takátsy & Kovács
-2020) and is counted correctly without one. No :math:`c_s^2` clipping is involved.
+2020) and is counted correctly without one.
+
+Two guards act on the tidal term.
+
+* A cell no wider than :math:`10^3` ulp in :math:`h` is a density jump at fixed
+  pressure. Every ``draw_bridge_eos`` table has one, at the low-table/bridge
+  join; exact plateaus are another case. In such a cell the cubic's
+  :math:`d\varepsilon/dh` is roundoff noise of order :math:`10^{18}`, so the tidal
+  term is 0 inside it. Its :math:`\Delta\varepsilon` is carried instead by a
+  bubble :math:`6t(1-t)\Delta\varepsilon/\Delta h` in the regular cell just below.
+  This is the junction condition, smeared over one cell.
+* Elsewhere the term is clipped to :math:`[0, 10^{10}(\varepsilon+p)]`. With the
+  default node :math:`h`, the clip acts on none of the tables of the devlog.
 
 Until 2026-10-14 the tidal term used the node values ``EOSTable.cs2``
 (finite differences :math:`\Delta p/\Delta\varepsilon`) interpolated linearly in
@@ -89,9 +105,11 @@ in :math:`h`. First derivatives only: second derivatives in EOS parameters were
 never accurate and are not supported. ``jump_nodes=False`` is no longer cheaper
 for tidal solves and is not recommended there.
 
-Not covered: a density jump at *fixed* pressure (a first-order transition, or the
+A density jump at *fixed* pressure inside one table (the bridge join, or the
 pressure plateaus of ``allow_unstable_core=True`` tables) has zero width in
-:math:`h` and needs the junction condition (``tov.solve_hybrid``).
+:math:`h`, and gets the smeared junction above. A genuine first-order transition
+between two phases should be built as a ``HybridEOS``, whose ``tov.solve_hybrid``
+applies the junction condition exactly at the transition.
 
 EOS models
 ----------

@@ -117,8 +117,9 @@ def test_second_hc_derivative_is_not_supported():
 
 def test_jump_nodes_opt_out_is_finite_and_close():
     # value-only opt-out (not the pre-2026-10-12 solver; see solve_structure).
-    # Values within 1e-3 of the default (measured 5.4e-6 in Lambda here; up to
-    # 7.7e-4 near M_max on this table), finite
+    # Values within 1e-3 of the default (measured 1.3e-5 in Lambda here, 5.4e-6
+    # before the 2026-10-14 tidal term; up to 7.5e-4 over this table's family
+    # against rtol 1e-12, as before), finite
     # tangents, and reachable through build_family.
     t = mm.eos_table({"L_sym": _L0})
 

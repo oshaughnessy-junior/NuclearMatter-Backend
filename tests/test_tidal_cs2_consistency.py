@@ -32,7 +32,8 @@ from nmbackend.reference.scipy_tov import solve_reference
 from nmbackend.tov.solver import solve_structure
 
 _FRAC, _RATIO, _NJ, _GAMMA = 0.9, 2.7, 0.08, 2.5
-_HC = 0.2155567       # M = 1.4000 on the steep table (asserted below)
+_HC = None            # the M = 1.4 star of the steep table (_hc14; by root, so it
+                      # does not depend on GMSUN_KM)
 
 
 def _steep_table(scale=1.0, n_crust=80, n_core=200):
@@ -79,6 +80,17 @@ def _obs(scale, hc, rtol, atol):
 _val = jax.jit(_obs)
 
 
+def _hc14():
+    """h_c of the M = 1.4 star of the steep table (structure-only root)."""
+    global _HC
+    if _HC is None:
+        from scipy.optimize import brentq
+        m = jax.jit(lambda h: solve_structure(_steep_table(), h, tidal=False,
+                                              rtol=1e-10, atol=1e-12).M_msun)
+        _HC = brentq(lambda h: float(m(h)) - 1.4, 0.19, 0.24, xtol=1e-14)
+    return _HC
+
+
 def test_tidal_source_integrates_to_the_cell_delta_eps():
     # Per cell, int deps/dh dh == Delta eps (Gauss-Legendre is exact for the
     # quadratic), and eps, p equal those of the structure interpolant bit for bit.
@@ -101,16 +113,17 @@ def test_lambda_matches_references_on_steep_joint():
     # of Delta eps at the joint), and R +22 m (trapezoid h).  Measured now:
     # vs the dense-Hermite reference 2e-8, 7e-8, 9e-8 in (M, R, Lambda); vs the
     # raw-node log-linear reference 6e-7, 1e-7, 7e-7.
-    v = np.asarray(_val(1.0, _HC, 1e-10, 1e-12))
-    assert 1.3995 < v[0] < 1.4005
+    hc = _hc14()
+    v = np.asarray(_val(1.0, hc, 1e-10, 1e-12))
+    assert abs(v[0] - 1.4) < 1e-8
     tab = _steep_table()
     # the raw-node reference interpolates log p linearly in h: give it the same
     # central pressure (its own h_c), so both integrate the same star
-    p_c = float(tab.at_h(_HC)[1])
+    p_c = float(tab.at_h(hc)[1])
     h, lp = np.asarray(tab.h), np.log(np.asarray(tab.p))
-    for table, hc, tol in ((_dense(tab, 16), _HC, 1e-6),
+    for table, hr, tol in ((_dense(tab, 16), hc, 1e-6),
                            (tab, np.interp(math.log(p_c), lp, h), 5e-6)):
-        ref = solve_reference(table, hc, rtol=1e-10, atol=1e-40, consistent_cs2=True)
+        ref = solve_reference(table, hr, rtol=1e-10, atol=1e-40, consistent_cs2=True)
         np.testing.assert_allclose(v, [ref.M_msun, ref.R_km, ref.Lambda],
                                    rtol=tol, atol=0.0)
 
@@ -120,10 +133,41 @@ def test_lambda_tangent_keeps_the_node_boundary_terms():
     # core scale.  Without the node-anchored y picture the forward-mode
     # dLambda/dscale is off by a factor 2.5 here; measured now 1.5e-7 at the
     # default rtol (dM, dR: 1.4e-8, 4.4e-9).
-    jvp = jax.jit(lambda s: jax.jvp(lambda x: _obs(x, _HC, 1e-7, 1e-9), (s,), (1.0,))[1])
+    hc = _hc14()
+    jvp = jax.jit(lambda s: jax.jvp(lambda x: _obs(x, hc, 1e-7, 1e-9), (s,), (1.0,))[1])
     ad = np.asarray(jvp(1.0))
     d = 1e-4
-    fd = (np.asarray(_val(1.0 + d, _HC, 1e-11, 1e-13))
-          - np.asarray(_val(1.0 - d, _HC, 1e-11, 1e-13))) / (2 * d)
+    fd = (np.asarray(_val(1.0 + d, hc, 1e-11, 1e-13))
+          - np.asarray(_val(1.0 - d, hc, 1e-11, 1e-13))) / (2 * d)
     np.testing.assert_allclose(ad[:2], fd[:2], rtol=1e-6, atol=0.0)
     np.testing.assert_allclose(ad[2], fd[2], rtol=5e-6, atol=0.0)
+
+
+def test_bridge_density_jump_gets_the_junction():
+    """Every draw_bridge_eos table has a density jump at fixed p at the
+    low-table/bridge join (n_L = 0.32 fm^-3: p 17.7128 at both nodes, eps
+    310.75 -> 312.73 MeV/fm^3, cell width 1.7e-16 in h).  There the cubic's
+    deps/dh is +-1e18 noise; it used to make tidal solves at rtol 1e-10 hit
+    max_steps.  The cell now carries no tidal term and its Delta eps goes into
+    the cell below (the junction, smeared over one cell).  Measured on draw 1:
+    Lambda 224.0997 vs the reference with the exact junction 224.0955 (1.9e-5;
+    1.2e-5..3.2e-5 over 12 stars of 4 draws) and 223.5689 without it (main
+    dropped the jump too: 224.028 at rtol 1e-10, with its phantom term)."""
+    from nmbackend.priors.bridge import draw_bridge_eos
+    from nmbackend.tov import build_family
+    from nmbackend.tov.family import default_hc_grid
+    t = draw_bridge_eos(np.random.default_rng(1), corr_frac=0.3)["table"]
+    hc = 0.29
+    v = np.asarray(_val_table(t, hc))
+    p_c = float(t.at_h(hc)[1])
+    hr = np.interp(math.log(p_c), np.log(np.asarray(t.p)), np.asarray(t.h))
+    ref = solve_reference(t, hr, rtol=1e-10, atol=1e-40, consistent_cs2=True)
+    np.testing.assert_allclose(v, [ref.M_msun, ref.R_km, ref.Lambda], rtol=1e-4,
+                               atol=0.0)
+    # and the batched family at the same tolerance (one bad star would raise)
+    fam = build_family(t, default_hc_grid(t, 8), rtol=1e-10, atol=1e-12)
+    assert np.all(np.isfinite(np.asarray(fam.Lambda)))
+
+
+_val_table = jax.jit(lambda t, hc: (lambda s: jnp.stack([s.M_msun, s.R_km, s.Lambda]))(
+    solve_structure(t, hc, rtol=1e-10, atol=1e-12)))

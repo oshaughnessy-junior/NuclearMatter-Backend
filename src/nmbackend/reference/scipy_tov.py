@@ -48,7 +48,10 @@ class _EOSInterp:
     the log-linear eps(p), so a steep cell leaves a phantom Delta eps in the
     tidal sector (docs/devlog/2026-10-14-tidal-cs2.md).  ``consistent=True``:
     cs2 is the slope dp/deps of the log-linear eps(p) itself, segment by
-    segment, so the tidal source integrates to each segment's Delta eps."""
+    segment, so the tidal source integrates to each segment's Delta eps.
+    Segments of zero width in p (|Delta ln p| <= 1e-12: a density jump at
+    fixed p) get no tidal term; ``plateaus`` lists their (p, Delta eps) for the
+    junction condition (:func:`solve_reference`)."""
 
     def __init__(self, table: EOSTable, consistent: bool = False):
         self.h = np.asarray(table.h, dtype=float)
@@ -60,8 +63,14 @@ class _EOSInterp:
         self.p_min = float(self.p[0])
         self.p_max = float(self.p[-1])
         self.consistent = consistent
-        if consistent:   # d ln eps / d ln p per segment (p strictly increasing)
-            self._g = np.diff(self._logeps) / np.diff(self._logp)
+        self.plateaus = []
+        if consistent:   # d ln eps / d ln p per segment
+            dlp = np.diff(self._logp)
+            flat = np.abs(dlp) <= 1e-12
+            with np.errstate(divide="ignore", invalid="ignore"):
+                self._g = np.where(flat, 0.0, np.diff(self._logeps) / dlp)
+            self.plateaus = [(float(self.p[j]), float(self.eps[j + 1] - self.eps[j]))
+                             for j in np.flatnonzero(flat)]
 
     def eps_of_p(self, p):
         lp = np.log(np.clip(p, self.p_min, self.p_max))
@@ -155,7 +164,30 @@ def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
     hit_surface.terminal = True
     hit_surface.direction = -1
 
-    sol = solve_ivp(rhs, (r0, r_max), [m0, p_c, H0, beta0],
+    # consistent_cs2: density jumps at fixed p (zero-width segments) get the
+    # junction y_out = y_in - 4 pi r^3 (eps_in - eps_out) / (m + 4 pi r^3 p), the
+    # zero-width limit of the tidal term (y falls across an outward density drop;
+    # cf. the self-bound-star surface term y(R) - 4 pi R^3 eps_s / M), integrating
+    # segment by segment between them
+    kicks = sorted(((pk, de) for pk, de in eos.plateaus
+                    if p_surface < pk < p_c * (1.0 - 1e-12)), reverse=True)
+    state, r_start = [m0, p_c, H0, beta0], r0
+    for pk, de in kicks:
+        def hit_jump(r, s, pk=pk):
+            return s[1] - pk
+        hit_jump.terminal = True
+        hit_jump.direction = -1
+        seg = solve_ivp(rhs, (r_start, r_max), state, method="RK45", rtol=rtol,
+                        atol=atol, events=[hit_surface, hit_jump], max_step=r_max)
+        if not (seg.status == 1 and seg.t_events[1].size > 0):
+            return _nan_point(h_c)
+        r_start = float(seg.t[-1])
+        m, _, H, beta = seg.y[:, -1]
+        y = r_start * beta / H - _FOURPI * r_start**3 * de / (
+            m + _FOURPI * r_start**3 * pk)
+        state = [m, pk, H, y * H / r_start]
+
+    sol = solve_ivp(rhs, (r_start, r_max), state,
                     method="RK45", rtol=rtol, atol=atol, events=hit_surface,
                     dense_output=False, max_step=r_max)
     if not _event_fired(sol):

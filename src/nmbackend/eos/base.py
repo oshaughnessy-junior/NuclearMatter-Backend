@@ -51,6 +51,14 @@ class EOSTable(NamedTuple):
         return self.h[-1]
 
     @property
+    def cs2_chord(self) -> jnp.ndarray:
+        """Unclipped chord sound speed dp/deps of each cell (length N - 1).
+        ``cs2`` is clipped to [1e-8, 1], so it cannot show acausality (e.g. a
+        penalty on max(cs2) - 1 is identically zero); test causality on this.
+        A cell with Delta eps = 0 gives inf or nan."""
+        return jnp.diff(self.p) / jnp.diff(self.eps)
+
+    @property
     def mu(self) -> jnp.ndarray:
         """Baryon chemical potential mu = (eps+p)/n (geometric km^-1 * ... ); the
         pseudo-enthalpy is h = ln(mu/mu_surface), so mu = mu[0] * exp(h).  Either
@@ -178,30 +186,44 @@ def hermite_eos_at_h(h_nodes, p_nodes, eps_nodes, cs2_nodes, h_query, xp=jnp):
 
 
 def hermite_eos_tidal_at_h(h_nodes, p_nodes, eps_nodes, h_query, xp=jnp):
-    """(eps, p, deps/dh) at ``h_query``; eps and p are those of
+    """(eps, p, tidal term) at ``h_query``; eps and p are those of
     :func:`hermite_eos_at_h`, bit for bit.
 
-    deps/dh = d^2p/dh^2 - dp/dh is the analytic derivative of the cell's own
-    eps(h) = dp/dh - p.  The tidal equation's term (eps + p)/cs^2 =
-    (eps + p) deps/dp equals deps/dh exactly, because dp/dh = eps + p holds in
-    the interpolant.  So across every cell the tidal source integrates to the
-    Delta eps that the structure equations see, however steep the cell
+    The tidal term is (eps + p)/cs^2 = (eps + p) deps/dp, which equals deps/dh
+    exactly because dp/dh = eps + p holds in the interpolant.  It is taken as the
+    analytic deps/dh = d^2p/dh^2 - dp/dh of the cell's own eps(h) = dp/dh - p,
+    so across every cell the tidal source integrates to the Delta eps that the
+    structure equations see, however steep the cell
     (docs/devlog/2026-10-14-tidal-cs2.md).  The node cs^2 interpolated linearly
     in h does not: across a stiff joint it leaves a "phantom" energy jump in y
-    and biases Lambda low.
+    and biases Lambda low.  deps/dh is quadratic in h within a cell and jumps
+    at the nodes (the Hermite is C^1); the adaptive TOV solve stops at the nodes
+    (``jump_ts``).
 
-    deps/dh is quadratic in h within a cell and jumps at the nodes (the Hermite
-    is C^1); the adaptive TOV solve stops at the nodes (``jump_ts``).  It is
-    clipped to [0, 1e10 (eps + p)], i.e. 1/cs^2 in [0, 1e10] (the old cs^2 floor
-    was 1e-10).  The clip never acts on the reference tables of the devlog; it
-    guards degenerate cells, e.g. a pressure plateau ~1e-16 wide in h (a density
-    jump at fixed p, as in some bridge-prior draws), where the cubic's deps/dh
-    is +-1e18 and roundoff noise.  Such a jump needs the junction condition; the
-    clip drops its Delta eps from the tidal sector, as the old term did."""
-    eps, p, deps_dh = _hermite_cell(h_nodes, p_nodes, eps_nodes, h_query, xp,
-                                    deps=True)
+    Two guards (:func:`_tidal_term`):
+
+    * Degenerate cells (width <= 1e3 ulp in h: a density jump at fixed
+      pressure, e.g. the low-table/bridge join of every ``draw_bridge_eos``
+      table, or an exact plateau) carry no tidal term inside; their cubic's
+      deps/dh is +-1e18 roundoff noise there.  Their Delta eps is moved
+      instead, as a bubble 6t(1-t) Delta eps / dh, into the regular cell just
+      below (outward).  That is the junction condition
+      Delta y = -4 pi r^3 Delta eps / (m + 4 pi r^3 p), smeared over one cell.
+    * Elsewhere deps/dh is clipped to [0, 1e10 (eps + p)], i.e. 1/cs^2 in
+      [0, 1e10].  The clip does not act with the default log-linear node h on
+      any table in the devlog; with ``h_rule="trapezoid"`` it does (negative
+      deps/dh in the packaged SLy crust), so that rule is not valid with the
+      tidal term."""
+    h_nodes = xp.asarray(h_nodes)
+    N = h_nodes.shape[0]
+    i = xp.clip(xp.searchsorted(h_nodes, h_query), 1, N - 1)
+    h0 = h_nodes[i - 1]
+    dh = h_nodes[i] - h0
+    t = (h_query - h0) / dh
+    eps, p, deps_dh = _hermite_cell_t(i, t, dh, p_nodes, eps_nodes, deps=True)
     eps, p = _floor_eps_p(eps, p, xp)
-    return eps, p, _clip_tidal(deps_dh, eps, p, xp)
+    deg, extra = _degenerate_cells(h_nodes, eps_nodes, xp)
+    return eps, p, _tidal_term(i, t, dh, deps_dh, eps, p, deg, extra, xp)
 
 
 def _clip_tidal(deps_dh, eps, p, xp):
@@ -209,6 +231,48 @@ def _clip_tidal(deps_dh, eps, p, xp):
     hi = 1e10 * (eps + p)
     deps_dh = xp.where(deps_dh < hi, deps_dh, hi)
     return xp.where(deps_dh > 0.0, deps_dh, 0.0)
+
+
+#: a cell no wider than this many ulp of h is degenerate (a jump at fixed p)
+_DEGENERATE_ULP = 1e3
+
+
+def _degenerate_cells(h, eps, xp):
+    """Per cell i (nodes i-1, i; index 0 unused): ``deg`` -- the cell is
+    degenerate (width <= 1e3 ulp of h); ``extra`` -- for a regular cell, the
+    Delta eps of the run of degenerate cells directly above it, which its tidal
+    term carries (:func:`_tidal_term`).  Gradient-free mask, differentiable
+    ``extra``."""
+    h = xp.asarray(h)
+    eps = xp.asarray(eps)
+    n = h.shape[0]
+    dh = h[1:] - h[:-1]
+    scale = xp.maximum(xp.abs(h[1:]), xp.abs(h[:-1]))
+    deg = dh <= _DEGENERATE_ULP * np.finfo(np.float64).eps * scale
+    a = xp.where(deg, eps[1:] - eps[:-1], 0.0)
+    idx = xp.arange(n - 1)
+    nr = xp.where(deg, n - 1, idx)                  # regular cells: own index
+    # index of the first regular cell above cell k (n - 1 if none): reverse
+    # running minimum of nr over the cells strictly above
+    if xp is np:
+        above = np.minimum.accumulate(nr[::-1])[::-1]
+    else:
+        above = jax.lax.cummin(nr, reverse=True)
+    above = xp.concatenate([above[1:], xp.full((1,), n - 1)])
+    c = xp.concatenate([xp.zeros((1,)), xp.cumsum(a)])     # c[k] = sum a[:k]
+    extra = xp.where(deg, 0.0, c[above] - c[idx + 1])
+    pad = lambda v, z: xp.concatenate([z, v])
+    return (pad(deg, xp.zeros((1,), dtype=bool)), pad(extra, xp.zeros((1,))))
+
+
+def _tidal_term(i, t, dh, deps_dh, eps, p, deg, extra, xp):
+    """The tidal term in cell ``i`` at local ``t``: 0 in a degenerate cell, else
+    the clipped deps/dh plus the bubble carrying the Delta eps of the
+    degenerate run above (:func:`_degenerate_cells`)."""
+    d = _clip_tidal(deps_dh, eps, p, xp)
+    dh_safe = xp.where(deg[i], 1.0, dh)
+    d = d + extra[i] * 6.0 * t * (1.0 - t) / dh_safe
+    return xp.where(deg[i], 0.0, d)
 
 
 def _h_steps_loglinear(eps, p, xp, n_gl=12):
@@ -239,7 +303,9 @@ def build_h_and_cs2(n, eps_mevfm3, p_mevfm3, h_base=None, xp=jnp, *,
     dh = int dp/(eps+p) per cell in geometric units: with ``h_rule="loglinear"``
     (default since 2026-10-14) along the log-linear eps(p) between the nodes
     (12-point Gauss-Legendre); with ``"trapezoid"`` by the trapezoid rule (the
-    rule before 2026-10-14).  The Hermite p(h) of :func:`hermite_eos_at_h` takes
+    rule before 2026-10-14; it reproduces the old node h only, not the old
+    Lambda, and is not valid with the tidal term -- see docs/physics.rst).  The
+    Hermite p(h) of :func:`hermite_eos_at_h` takes
     its node slopes from dp/dh = eps + p and its cell widths from these steps;
     the trapezoid width is inconsistent with those slopes by O((Delta ln eps)^2)
     per cell, which made the Hermite eps(h) overshoot between coarse crust nodes
