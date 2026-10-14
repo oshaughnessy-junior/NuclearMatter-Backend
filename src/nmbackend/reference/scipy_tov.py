@@ -258,8 +258,9 @@ def solve_reference_hybrid(hybrid, h_c, rtol=1e-8, atol=1e-10, r0=1e-4,
     r_d = float(s1.t[-1])
     m_d, p_d, H_d, beta_d = s1.y[:, -1]
 
-    # junction: y = r beta / H ; Delta y = -4 pi r^3 (eps_out - eps_in)/(m+4pi r^3 p)
-    dy = -_FOURPI * r_d**3 * (tr.eps_out - tr.eps_in) / (
+    # junction: y = r beta / H ; Delta y = -4 pi r^3 (eps_in - eps_out)/(m+4pi r^3 p)
+    # (y falls outward; sign reversed before 2026-10-14, see tov.phase_transition)
+    dy = -_FOURPI * r_d**3 * (tr.eps_in - tr.eps_out) / (
         m_d + _FOURPI * r_d**3 * tr.p_t)
     beta_d = beta_d + (H_d / r_d) * dy
 

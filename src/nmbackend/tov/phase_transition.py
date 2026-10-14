@@ -8,11 +8,17 @@ continuous there, but the tidal variable y is **discontinuous** -- the
 Integrating across it gives the junction condition (Damour & Nagar 2009;
 Postnikov, Prakash & Lattimer 2010; Takatsy & Kovacs 2020):
 
-    y_out = y_in - 4 pi r_d^3 (eps_out - eps_in) / (m_d + 4 pi r_d^3 p_t)
+    y_out = y_in - 4 pi r_d^3 (eps_in - eps_out) / (m_d + 4 pi r_d^3 p_t)
 
 with r_d, m_d the radius/mass at the transition, ``in`` the inner (higher-density)
 side and ``out`` the outer (lower-density) side.  Since eps_out < eps_in this
-raises y across the transition going outward.
+LOWERS y across the transition going outward: it is the zero-width limit of the
+tidal term, and the Newtonian self-bound-star case (Delta y = -3 at a surface
+with finite density) is its limit.  Until 2026-10-14 the sign was reversed here
+and in ``reference.scipy_tov.solve_reference_hybrid`` (so the two agreed), and
+hybrid Lambda was off by ~2%; ``tests/test_phase_transition.py::
+test_junction_matches_smeared_transition`` now checks the sign against the
+``HybridEOS.eos_table_smeared`` limit.
 
 We integrate each smooth phase as a separate adaptive (diffrax) segment and apply
 the junction between them, so the genuine matter sound speed is used inside each
@@ -65,7 +71,7 @@ def solve_hybrid(hybrid, h_c, rtol: float = 1e-7, atol: float = 1e-9) -> TOVPoin
     r_d, m_d, y_in = state_t[0], state_t[1], state_t[2]
 
     # 2) tidal junction at the discontinuity
-    y_out = y_in - _FOURPI * r_d**3 * (tr.eps_out - tr.eps_in) / (
+    y_out = y_in - _FOURPI * r_d**3 * (tr.eps_in - tr.eps_out) / (
         m_d + _FOURPI * r_d**3 * tr.p_t)
 
     # 3) outer (hadronic) envelope: h_t -> surface, starting from junction state

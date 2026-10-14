@@ -142,7 +142,10 @@ Maxwell hadron–quark EOS (density jump at constant pressure), and
 `tov.solve_hybrid` integrates each phase adaptively and applies the **tidal junction
 condition** at the discontinuity (Damour–Nagar 2009 / Takátsy–Kovács 2020). It is
 cross-validated against an independent radius-domain (H,β) junction solver to
-**<0.1%** in M, R, Λ (`tests/test_phase_transition.py`). The hybrid sequence shows
+**<0.1%** in M, R, Λ (`tests/test_phase_transition.py`).  Until 2026-10-14 both
+applied the junction with the wrong sign (hybrid Λ ~2% low); the sign is now
+checked against the smeared-transition limit
+([devlog](docs/devlog/2026-10-14-tidal-cs2.md)). The hybrid sequence shows
 the expected softening (quark cores → smaller R, Λ).
 
 Still **open**: twin-star/disconnected-branch bookkeeping in `build_family` (the

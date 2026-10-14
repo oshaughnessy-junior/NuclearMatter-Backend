@@ -60,3 +60,20 @@ def test_hadronic_only_branch_matches_plain_solver():
     a = solve_hybrid(hy, hc)
     b = solve_structure(outer, hc, backend="diffrax")
     assert abs(float(a.Lambda) - float(b.Lambda)) <= 1e-6 * float(b.Lambda)
+
+
+def test_junction_matches_smeared_transition():
+    """Sign of the tidal junction.  The sharp transition with the junction must be
+    the limit of the same transition smeared over a small pressure width and
+    integrated by the plain solver (continuous tidal term).  On HybridEOS() at
+    h_c = h_t + 0.08 the smeared Lambda converges 97.01 / 97.57 / 97.72 at width
+    0.02 / 0.005 / 0.001 to the junction's 97.73; with the junction sign of
+    before 2026-10-14 the hybrid gave 95.60 (-2.2%)."""
+    from nmbackend.tov.solver import solve_structure
+    hy = HybridEOS()
+    hc = float(hy.transition.h_t) + 0.08
+    sm = solve_structure(hy.eos_table_smeared(width_frac=0.001), hc,
+                         rtol=1e-10, atol=1e-12)
+    hyb = solve_hybrid(hy, hc, rtol=1e-10, atol=1e-12)
+    assert abs(float(hyb.M_msun) / float(sm.M_msun) - 1.0) < 1e-3
+    assert abs(float(hyb.Lambda) / float(sm.Lambda) - 1.0) < 1e-3
