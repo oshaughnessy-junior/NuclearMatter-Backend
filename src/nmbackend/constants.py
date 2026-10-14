@@ -17,13 +17,14 @@ from __future__ import annotations
 G_SI = 6.67430e-11          # m^3 kg^-1 s^-2
 C_SI = 2.99792458e8         # m / s
 # Solar mass parameter: the IAU 2015 Resolution B3 nominal (GM)_sun (exact by
-# definition), as LALSuite (MRSUN_SI) and the Q2C oracle use.  Until 2026-10-14
-# this module had MSUN_SI = 1.98892e30 kg (the pre-2015 LAL value), so with
-# CODATA G, GMSUN_KM came out 1.4770039 km, 2.566e-4 above the 1.476625 km its
-# comment claimed (docs/devlog/2026-10-14-gmsun-iau.md).  MSUN_SI is derived,
-# so G_SI * MSUN_SI == GM_SUN_SI.
+# definition), as current LALSuite (LAL_GMSUN_SI in lal 7.7.0 LALConstants.h)
+# and the Q2C oracle use.  Until 2026-10-14 this module had MSUN_SI = 1.98892e30
+# kg (old LAL's solar mass, meant for CODATA-1986 G); paired with CODATA-2018 G,
+# GMSUN_KM came out 1.4770039 km, 2.566e-4 above the 1.476625 km its comment
+# claimed (docs/devlog/2026-10-14-gmsun-iau.md).  MSUN_SI is derived, so
+# G_SI * MSUN_SI == GM_SUN_SI.
 GM_SUN_SI = 1.3271244e20    # m^3 s^-2
-MSUN_SI = GM_SUN_SI / G_SI  # kg, 1.988410e30 (LAL MSUN_SI 1.988409902e30)
+MSUN_SI = GM_SUN_SI / G_SI  # kg, 1.98840987069805e30 (= lal 7.7 LAL_MSUN_SI)
 
 # --- nuclear constants ---
 HBARC = 197.3269804         # MeV fm
