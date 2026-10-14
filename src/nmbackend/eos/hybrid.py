@@ -147,7 +147,10 @@ class HybridEOS:
         eps_out -> eps_in across it (cs^2 = dp/deps small but finite).  As
         width_frac -> 0 this approaches the sharp transition; the standard adaptive
         solver resolves it, giving an independent value to compare the junction
-        solver against.
+        solver against.  At width_frac <= ~1e-8 every ramp cell has chord
+        dp/deps <= 1e-8 and is treated as a jump cell (eos.base), so the table
+        then tests the junction bubble, not a smear.  p is strictly increasing
+        by construction (ramp, then the quark branch without its first node).
         """
         no, eo, po = self._had_seg
         nq, eq, pq = self._quark_seg
@@ -160,9 +163,11 @@ class HybridEOS:
         n_ramp_arr = np.linspace(no[-1], nq[0], n_ramp)
         # quark branch shifted to start at p_t + dp
         pq2 = pq + dp
-        n = np.concatenate([no[:-1], n_ramp_arr, nq])
-        eps = np.concatenate([eo[:-1], eps_ramp, eq])
-        p = np.concatenate([po[:-1], p_ramp, pq2])
-        # enforce strictly increasing p for the table builder
-        p = np.maximum.accumulate(p) + 1e-12 * np.arange(len(p))
+        # the ramp ends on the first quark node: drop that duplicate.  (Until
+        # 2026-10-14 an absolute 1e-12 * k MeV/fm^3 was added to every p to make
+        # it strictly increasing, which moved outer-crust pressures by up to 41%
+        # and left a width-independent +2e-4 floor in Lambda.)
+        n = np.concatenate([no[:-1], n_ramp_arr, nq[1:]])
+        eps = np.concatenate([eo[:-1], eps_ramp, eq[1:]])
+        p = np.concatenate([po[:-1], p_ramp, pq2[1:]])
         return build_h_and_cs2(n, eps, p)

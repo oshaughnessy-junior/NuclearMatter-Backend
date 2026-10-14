@@ -41,9 +41,19 @@ class RefPoint(NamedTuple):
 
 
 class _EOSInterp:
-    """log-space NumPy interpolants eps(p), cs2(p) from an EOSTable (geometric)."""
+    """log-space NumPy interpolants eps(p), cs2(p) from an EOSTable (geometric).
 
-    def __init__(self, table: EOSTable):
+    ``consistent=False`` (default): the tidal term (eps + p)/cs2 takes the
+    table's node cs2, interpolated linearly in log p -- not the derivative of
+    the log-linear eps(p), so a steep cell leaves a phantom Delta eps in the
+    tidal sector (docs/devlog/2026-10-14-tidal-cs2.md).  ``consistent=True``:
+    cs2 is the slope dp/deps of the log-linear eps(p) itself, segment by
+    segment, so the tidal source integrates to each segment's Delta eps.
+    Jump segments (|Delta ln p| <= 1e-12, or chord dp/deps <= 1e-6 at any
+    width: a density jump at (nearly) fixed p) get no tidal term; ``plateaus`` lists their (p, Delta eps) for the
+    junction condition (:func:`solve_reference`)."""
+
+    def __init__(self, table: EOSTable, consistent: bool = False):
         self.h = np.asarray(table.h, dtype=float)
         self.eps = np.asarray(table.eps, dtype=float)
         self.p = np.asarray(table.p, dtype=float)
@@ -52,6 +62,20 @@ class _EOSInterp:
         self._logeps = np.log(self.eps)
         self.p_min = float(self.p[0])
         self.p_max = float(self.p[-1])
+        self.consistent = consistent
+        self.plateaus = []
+        if consistent:   # d ln eps / d ln p per segment
+            dlp = np.diff(self._logp)
+            de = np.diff(self.eps)
+            # a jump at (nearly) fixed p, by chord dp/deps at any width.  The
+            # threshold is 1e-6, above the solver's 1e-8 (eos.base): RK45 steps
+            # over segments with a chord below ~4e-8 without resolving their
+            # tidal term (Lambda 1.2% low), so they take the exact junction
+            flat = (np.abs(dlp) <= 1e-12) | ((de > 0) & (np.diff(self.p) <= 1e-6 * de))
+            with np.errstate(divide="ignore", invalid="ignore"):
+                self._g = np.where(flat, 0.0, np.diff(self._logeps) / dlp)
+            self.plateaus = [(float(self.p[j]), float(self.eps[j + 1] - self.eps[j]))
+                             for j in np.flatnonzero(flat)]
 
     def eps_of_p(self, p):
         lp = np.log(np.clip(p, self.p_min, self.p_max))
@@ -60,6 +84,14 @@ class _EOSInterp:
     def cs2_of_p(self, p):
         lp = np.log(np.clip(p, self.p_min, self.p_max))
         return np.interp(lp, self._logp, self.cs2)
+
+    def tidal_term(self, p, eps):
+        """(eps + p)/cs2 at pressure ``p`` (``eps`` = eps_of_p(p))."""
+        if not self.consistent:
+            return (eps + p) / float(self.cs2_of_p(p))
+        lp = math.log(min(max(p, self.p_min), self.p_max))
+        j = min(max(int(np.searchsorted(self._logp, lp)), 1), self._g.size)
+        return (eps + p) * (eps / p) * float(self._g[j - 1])   # (eps+p) deps/dp
 
     def central_from_hc(self, h_c):
         eps_c = math.exp(np.interp(h_c, self.h, self._logeps))
@@ -91,14 +123,18 @@ def _event_fired(sol):
 
 
 def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
-                    r0=1e-4, r_max=60.0):
+                    r0=1e-4, r_max=60.0, consistent_cs2=False):
     """Reference (R, M, k2, Lambda) at central pseudo-enthalpy h_c.
+
+    ``consistent_cs2=True`` takes the tidal term from the slope of the log-linear
+    eps(p) this solver integrates (see :class:`_EOSInterp`), instead of the
+    table's node cs2.  The default keeps the node cs2 (unchanged behaviour).
 
     If the surface is not reached by ``r_max`` (or the integrator fails), every
     field except ``h_c`` is NaN.  Low-h_c stars on crust tables can have
     R >> 60 km; pass a larger ``r_max`` for those.
     """
-    eos = _EOSInterp(table)
+    eos = _EOSInterp(table, consistent=consistent_cs2)
     eps_c, p_c = eos.central_from_hc(h_c)
 
     # central series: m ~ 4/3 pi eps r^3 ; H ~ a0 r^2 ; beta = dH/dr ~ 2 a0 r.
@@ -111,14 +147,14 @@ def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
         m, p, H, beta = s
         p = max(p, p_surface)
         eps = float(eos.eps_of_p(p))
-        cs2 = float(eos.cs2_of_p(p))
+        tid = eos.tidal_term(p, eps)          # (eps + p)/cs2
         one_minus = 1.0 - 2.0 * m / r
         dm = _FOURPI * r**2 * eps
         dp = -(eps + p) * (m + _FOURPI * r**3 * p) / (r**2 * one_minus)
         dH = beta
         # Hinderer 2008 (H, beta) second-order tidal system
         term_a = (2.0 / one_minus) * (
-            -2.0 * math.pi * (5.0 * eps + 9.0 * p + (eps + p) / cs2)
+            -2.0 * math.pi * (5.0 * eps + 9.0 * p + tid)
             + 3.0 / r**2
             + 2.0 / one_minus * ((m + _FOURPI * r**3 * p) / r**2) ** 2
         )
@@ -133,7 +169,30 @@ def solve_reference(table: EOSTable, h_c: float, rtol=1e-8, atol=1e-10,
     hit_surface.terminal = True
     hit_surface.direction = -1
 
-    sol = solve_ivp(rhs, (r0, r_max), [m0, p_c, H0, beta0],
+    # consistent_cs2: density jumps at fixed p (zero-width segments) get the
+    # junction y_out = y_in - 4 pi r^3 (eps_in - eps_out) / (m + 4 pi r^3 p), the
+    # zero-width limit of the tidal term (y falls across an outward density drop;
+    # cf. the self-bound-star surface term y(R) - 4 pi R^3 eps_s / M), integrating
+    # segment by segment between them
+    kicks = sorted(((pk, de) for pk, de in eos.plateaus
+                    if p_surface < pk < p_c * (1.0 - 1e-12)), reverse=True)
+    state, r_start = [m0, p_c, H0, beta0], r0
+    for pk, de in kicks:
+        def hit_jump(r, s, pk=pk):
+            return s[1] - pk
+        hit_jump.terminal = True
+        hit_jump.direction = -1
+        seg = solve_ivp(rhs, (r_start, r_max), state, method="RK45", rtol=rtol,
+                        atol=atol, events=[hit_surface, hit_jump], max_step=r_max)
+        if not (seg.status == 1 and seg.t_events[1].size > 0):
+            return _nan_point(h_c)
+        r_start = float(seg.t[-1])
+        m, _, H, beta = seg.y[:, -1]
+        y = r_start * beta / H - _FOURPI * r_start**3 * de / (
+            m + _FOURPI * r_start**3 * pk)
+        state = [m, pk, H, y * H / r_start]
+
+    sol = solve_ivp(rhs, (r_start, r_max), state,
                     method="RK45", rtol=rtol, atol=atol, events=hit_surface,
                     dense_output=False, max_step=r_max)
     if not _event_fired(sol):
@@ -159,12 +218,12 @@ def _hbeta_rhs(r, s, eos):
     m, p, H, beta = s
     p = max(p, eos.p_min)
     eps = float(eos.eps_of_p(p))
-    cs2 = float(eos.cs2_of_p(p))
+    tid = eos.tidal_term(p, eps)              # (eps + p)/cs2
     one_minus = 1.0 - 2.0 * m / r
     dm = _FOURPI * r**2 * eps
     dp = -(eps + p) * (m + _FOURPI * r**3 * p) / (r**2 * one_minus)
     term_a = (2.0 / one_minus) * (
-        -2.0 * math.pi * (5.0 * eps + 9.0 * p + (eps + p) / cs2)
+        -2.0 * math.pi * (5.0 * eps + 9.0 * p + tid)
         + 3.0 / r**2
         + 2.0 / one_minus * ((m + _FOURPI * r**3 * p) / r**2) ** 2
     )
@@ -204,8 +263,9 @@ def solve_reference_hybrid(hybrid, h_c, rtol=1e-8, atol=1e-10, r0=1e-4,
     r_d = float(s1.t[-1])
     m_d, p_d, H_d, beta_d = s1.y[:, -1]
 
-    # junction: y = r beta / H ; Delta y = -4 pi r^3 (eps_out - eps_in)/(m+4pi r^3 p)
-    dy = -_FOURPI * r_d**3 * (tr.eps_out - tr.eps_in) / (
+    # junction: y = r beta / H ; Delta y = -4 pi r^3 (eps_in - eps_out)/(m+4pi r^3 p)
+    # (y falls outward; sign reversed before 2026-10-14, see tov.phase_transition)
+    dy = -_FOURPI * r_d**3 * (tr.eps_in - tr.eps_out) / (
         m_d + _FOURPI * r_d**3 * tr.p_t)
     beta_d = beta_d + (H_d / r_d) * dy
 

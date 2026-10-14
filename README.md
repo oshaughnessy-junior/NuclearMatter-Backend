@@ -114,6 +114,19 @@ Accuracy of the adaptive (diffrax) tangents, AD vs finite differences
   `solve_structure(..., centre_refine=True)` cuts it ~10x for +40–90% cost.
 - **First derivatives only in `h_c`.** `d²/dh_c²` (e.g. `jacfwd` of `dM/dh_c`)
   is wrong by orders of magnitude. Mixed `d²/dh_c dθ` is fine.
+  Second derivatives in EOS parameters (`d²/dθ²`) are not supported either.
+
+## Tidal term and node enthalpies (2026-10-14)
+
+The tidal term `(ε+p)/c_s²` is the analytic `dε/dh` of the same Hermite cell
+that gives `ε(h)`, and the table's node `h` comes from the log-linear `ε(p)` of
+each cell (Gauss–Legendre) instead of the trapezoid
+([devlog](docs/devlog/2026-10-14-tidal-cs2.md)). Before, the node `c_s²` left a
+"phantom" energy jump at steep crust–core joins (Λ1.4 2–10% low; 6.2% on Q2C's
+FSUGold2 join), and the trapezoid `h` put R1.4 4–10 m high on smooth tables.
+Now Λ1.4 agrees with an independent radius-domain reference on the same nodes
+to ≤ 6e-6 and R1.4 to < 0.1 mm on 18 test tables. Every Λ moves. `EOSTable.cs2` is now a
+diagnostic only. `jump_nodes=False` is not recommended for tidal solves.
 
 ## Validation status (important)
 
@@ -127,9 +140,15 @@ reference to **<0.1%** in M, R, Λ and carries clean forward-mode AD
 **First-order phase transitions** are now handled: `eos/hybrid.py` builds a
 Maxwell hadron–quark EOS (density jump at constant pressure), and
 `tov.solve_hybrid` integrates each phase adaptively and applies the **tidal junction
-condition** at the discontinuity (Damour–Nagar 2009 / Takátsy–Kovács 2020). It is
-cross-validated against an independent radius-domain (H,β) junction solver to
-**<0.1%** in M, R, Λ (`tests/test_phase_transition.py`). The hybrid sequence shows
+condition** at the discontinuity (Damour–Nagar 2009 / Takátsy–Kovács 2020).  It
+agrees with a radius-domain (H,β) solver that applies the same junction formula
+to **<0.1%** in M, R, Λ; that checks the integration, not the formula.  Until
+2026-10-14 both applied the junction with the wrong sign, and hybrid Λ was too
+low: at fixed mass on `Hybrid(80, 250, 1)` by 0 / 0 / 0.5% / 9.9% / 18.6% at
+1.2 / 1.4 / 1.6 / 1.8 / 2.0 M☉ (no quark core below ~1.57 M☉; M_max 2.06).  The sign is now
+checked against the limit of the smeared transition, which needs no junction
+(`tests/test_phase_transition.py`;
+[devlog](docs/devlog/2026-10-14-tidal-cs2.md)). The hybrid sequence shows
 the expected softening (quark cores → smaller R, Λ).
 
 Still **open**: twin-star/disconnected-branch bookkeeping in `build_family` (the

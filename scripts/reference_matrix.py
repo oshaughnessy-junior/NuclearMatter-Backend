@@ -8,7 +8,9 @@ in their absence the comparison is our diffrax solver vs the independent SciPy
 (H,beta) reference, which establishes the internal numerical floor (~1-2 m in R).
 
     PYTHONPATH=src python scripts/reference_matrix.py
-    PYTHONPATH=src python scripts/reference_matrix.py --masses 1.2 1.4 1.6 2.0 \
+    # reproduces the committed refmatrix.csv (RePrimAnd not installed, so the
+    # reference column is the SciPy (H,beta) solver; default masses 1.2..2.0):
+    PYTHONPATH=src python scripts/reference_matrix.py --masses 1.2 1.4 1.6 1.8 2.0 \
         --n-models 80 --csv refmatrix.csv
 """
 import argparse
