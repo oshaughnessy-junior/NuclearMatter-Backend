@@ -20,14 +20,70 @@ concurrency:
 jobs:
   dispatch:
     name: Dispatch exact PR generation
-    if: ${{ vars.SCIENTIFIC_REVIEW_ENABLED == 'true' }}
+    if: ${{ vars.SCIENTIFIC_REVIEW_ENABLED == 'true' || vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY == 'true' }}
     runs-on: ubuntu-24.04
     environment: private-review-dispatch-nmb
     timeout-minutes: 5
     steps:
+      - name: Observe identity only; do not join tailnet or dispatch
+        if: ${{ vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY == 'true' }}
+        shell: bash
+        env:
+          EXPECTED_REPOSITORY: oshaughnessy-junior/NuclearMatter-Backend
+          EXPECTED_REPOSITORY_ID: "1257038859"
+          EXPECTED_OWNER_ID: "274802661"
+          EXPECTED_ENVIRONMENT: private-review-dispatch-nmb
+          EXPECTED_WORKFLOW_REF: oshaughnessy-junior/NuclearMatter-Backend/.github/workflows/private-review-dispatch.yml@refs/heads/main
+          EXPECTED_AUDIENCE: scientific-review-nmb
+        run: |
+          set -euo pipefail
+          umask 077
+          export IDENTITY_RESPONSE_PATH="$RUNNER_TEMP/scientific-review-oidc-response.json"
+          trap 'rm -f "$IDENTITY_RESPONSE_PATH"' EXIT
+          curl --fail --silent --show-error --proto '=https' \
+            --header "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=${EXPECTED_AUDIENCE}" \
+            --output "$IDENTITY_RESPONSE_PATH"
+          python3 - <<'PY'
+          import base64
+          import json
+          import os
+          from pathlib import Path
+
+          token = json.loads(Path(os.environ["IDENTITY_RESPONSE_PATH"]).read_text())["value"]
+          print("::add-mask::" + token)
+          segment = token.split(".")[1]
+          claims = json.loads(base64.urlsafe_b64decode(segment + "=" * (-len(segment) % 4)))
+          expected = {
+              "iss": "https://token.actions.githubusercontent.com",
+              "aud": os.environ["EXPECTED_AUDIENCE"],
+              "repository": os.environ["EXPECTED_REPOSITORY"],
+              "repository_id": os.environ["EXPECTED_REPOSITORY_ID"],
+              "repository_owner_id": os.environ["EXPECTED_OWNER_ID"],
+              "environment": os.environ["EXPECTED_ENVIRONMENT"],
+              "workflow_ref": os.environ["EXPECTED_WORKFLOW_REF"],
+              "ref": "refs/heads/main",
+              "event_name": "pull_request_target",
+              "repository_visibility": "private",
+              "runner_environment": "github-hosted",
+          }
+          if any(claims.get(key) != value for key, value in expected.items()):
+              raise SystemExit("Identity claims differ from this repository's reviewed profile")
+          subject = claims.get("sub")
+          if not isinstance(subject, str) or not 1 <= len(subject) <= 512:
+              raise SystemExit("Identity subject is absent or oversized")
+          observed = {key: claims[key] for key in [*expected, "sub"]}
+          evidence = {"schema": "genesis.scientific-review.observed-actions-identity.v1", "claims": observed}
+          text = json.dumps(evidence, indent=2, sort_keys=True)
+          print(text)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+              stream.write("### Scientific review identity only\n\nNo tailnet join, admission or model call.\n\n```json\n" + text + "\n```\n")
+          PY
+
       # SECURITY: This privileged workflow must never check out, fetch, cache,
       # download, interpret, or execute pull-request-controlled content.
       - name: Join review-dispatch tailnet segment
+        if: ${{ vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY != 'true' }}
         uses: tailscale/github-action@306e68a486fd2350f2bfc3b19fcd143891a4a2d8 # v4
         with:
           oauth-client-id: ${{ vars.TS_WIF_CLIENT_ID }}
@@ -38,6 +94,7 @@ jobs:
           use-cache: "false"
 
       - name: Verify dispatcher cannot reach blocked coordinator ports
+        if: ${{ vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY != 'true' }}
         shell: bash
         env:
           REVIEW_COORDINATOR_HOST: ${{ vars.REVIEW_COORDINATOR_HOST }}
@@ -56,6 +113,7 @@ jobs:
           done
 
       - name: Admit PR event through private coordinator
+        if: ${{ vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY != 'true' }}
         shell: bash
         env:
           DISPATCH_ACTION: ${{ github.event.action }}
