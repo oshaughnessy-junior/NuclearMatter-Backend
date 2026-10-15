@@ -1,0 +1,37 @@
+{
+  "status": "FROZEN accepted selected hot beta scope",
+  "checks": 267,
+  "counts": [
+    226,
+    23,
+    18
+  ],
+  "files": {
+    "inverse_results.json": "feca260074a13c2c61915a68acfbc862a9db9457bfbb9b2542303bfa57b0e9a1",
+    "results.json": "f9f432d00aa2ad479cbf9c623f46d608619d5dfd92c5242b19c7c46de9ee1248",
+    "inverse_probe.py": "16766c560f2dc565553f9db085a7b5fb1b4f03d245c5d54fcf42fb39b1927d69",
+    "spectral_results.json": "713cef053cee48e2802f035504fbcb677b347e0bc93940f1a869433f60cfeeb7",
+    "spectral_audit.py": "5fff712fd020306c8751473b4491ab13d1e3936d38b064f12659407b266e5e57",
+    "probe.py": "d550ca9113c6e099a32aedc15d19c16b19a8e836ef1c49dcb9a253814ef9e73a",
+    "REVIEW.md": "d85adc2c096c37662528c8a40e6e44aabb9060629b10c5b753c4e0893fec060a",
+    "spectral_partial.json": "32f9da9014c7a6f48080a7c042f994780122dee705a12ba866998552a7dfefe9"
+  },
+  "author_source_sha256": {
+    "hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+    "hot_beta_moments/SOURCES.json": "4039d5cc29b4388304d0d401a0eea226dbdee3f2d0aa4aa61f61799e95228bc8",
+    "hot_beta_moments/controls.py": "222a67fffc4df10163e2321d7f869da4db4d2feacb16f088733c3b8a7bb9e3dd",
+    "hot_beta_moments/controls.json": "dc92226d6a66a2c10df55f3dce88a75d523adfe061d89ef50125fb69f8535696",
+    "hot_beta_moments/CHECKPOINT.json": "07c3f9b0294f33f3c440cec464d833a3e90cdaf4a1eedfad9779d59d2f860b67",
+    "hot_beta_moments/initial_syntax_failure.txt": "9474cc5bebab671b6525c328da2906186c2731525251ad4217424c942e6329c5",
+    "hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88",
+    "hot_beta_moments/RESEARCH_NOTE.md": "31c3b5e1fa5856e7efc4eb8356986201eb43023cb3c76670f355032c4ac18d76",
+    "hot_beta_moments/bookkeeping.py": "44f163ca70a79052053a5a4759c2cfcaec66b7c7b9125cadca8255ad5989eebb",
+    "hot_beta_moments/bookkeeping.json": "7720571dcb9879430ee9bf53f70d7e781cee67306052956b3d30a4a0e61d0e1c",
+    "hot_beta_moments/conditional.py": "656858a96b77890a2ee9d480a2023484534cfcda500afaeef2aaa1958eaff64c",
+    "hot_beta_moments/initial_study_syntax.py.txt": "ec509804cff12da3b86b257d8898030798bcce5cce74fabea1106fe56ced653a",
+    "hot_beta_moments/hot_spectrum.py": "084a5c50836a4d3617c00245ecf7081f4036cdfc63f801b8db260366f622416b",
+    "hot_beta_moments/study.py": "1ad8aef43808ed329b62b6d15474cc41fc68f92b0bce4d2f32cde5ef86982dbd"
+  },
+  "independent_reference_sha256": "7629a91bab827bd0bd586881c6d2e6f2ae3bbc3c0215387dece8078e9e27acbc",
+  "scope": "Independent TOTALmoment physical chain at2hotstates; hotselectedspectrumfreshcontrols+sourceaudit; noallEnutensor/fullantiinventory"
+}

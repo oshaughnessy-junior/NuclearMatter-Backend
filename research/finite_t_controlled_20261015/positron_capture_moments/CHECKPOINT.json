@@ -1,0 +1,43 @@
+{
+  "status": "FROZEN pending independent review",
+  "selected_checks": 198,
+  "selected_counts": {
+    "refinement": 142,
+    "controls_vacuum": 16,
+    "guard_identity": 40
+  },
+  "preserved_coarse": {
+    "total": 102,
+    "failed": 62
+  },
+  "runtime_failure": "Initial fourth n36/e72/angular12/tail60 integral stopped at110s; excluded",
+  "files": {
+    "initial_refinement_partial.json": "915b0f9a6a47d6e7147cc43bc32ea41b0734cc5b42f350a61493725dc3036588",
+    "moments.py": "376c05dfe75f9788a9d9ab7559db899de9c6c559e48c9a8989dcc45ae8276a12",
+    "results.json": "03beb7882dc8f89f42a151cf343e4332be6dbc6fa701abcdb28524a73ef48931",
+    "RESEARCH_NOTE.md": "d3d0ad2d9f44d0284601637f7700c2681905162858e6a69e63f79c8f2945b226",
+    "refine.py": "b65c92fa7fd443d633ca4adf2b8e69e63539d61600c82a7a2cc07b1118e7d844",
+    "initial_refinement_timeout.txt": "9eed5deb7f5e892e199ab3a4357743128aaec10de7c7a3e5932a24c47c3a7994",
+    "controls_anchor.json": "e937a6fef89b8bcc36feca933f6cf7342b8b72bfbfc1f011b960765a8e72e8e1",
+    "MATCHED_STATE.json": "abfb9572ac0ddfa6e52179e03d162ff07648ae3ec15528d98f08f6db1226306e",
+    "complete_refinement.py": "0ce4b01d57eb39c2fe5912ebe140b4510d403c6ac324e323e90cea5ffd52fa98",
+    "check_guard_identity.py": "d4c758d34fdbaa298bccd9fe3ac10ba1f6bb00ad703f2a4fa976b977b3b39f21",
+    "guard_identity.json": "a7c7603b7fb3dae047be0856cb3c891d5bc1e2a6c846b880f6ca24915c8e868c",
+    "conditional.py": "7d2999d2f1d6e786ed7cfc56df97dc40f86138edf83408a18176bdfd82061991",
+    "initial_guard_reporting_failure.txt": "b490af77ec93ac3f0851a3f1e5f6f76247b415575c42e012bb1ece2ba850e92a",
+    "initial_check_guard_identity.py.txt": "d7f48cf9d677ec7e109364b12d026bfb9592fd9c8ba94041f29d24819e7d3090",
+    "check_controls_anchor.py": "71a513e4ecb5309423967b0f3973b7f87cd7c3ffd2dacb001a1600cfed7bb9e7",
+    "study.py": "c651515821a11729047be837ae0170263e4304df1c74c027ed38e2eca8af060d",
+    "refinement.json": "524488939b55d563977d874f17fb42699f382187814d2dd1c36be95d96e77cf9"
+  },
+  "dependency_sha256": {
+    "positron_capture/pc_kernel.py": "6291c802fe8e4b86572c2c7582df28dd9518980500ef67b2d7dec99dc3eeb4e6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b"
+  },
+  "prior_reviewed_PC_sources_unchanged": true,
+  "scope": "Selected physicalT2neutralnpe totalPC/inverse only; fullantiinventory OPEN"
+}

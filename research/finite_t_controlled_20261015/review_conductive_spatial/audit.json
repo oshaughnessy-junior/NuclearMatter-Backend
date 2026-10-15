@@ -1,0 +1,592 @@
+{
+  "checks": [
+    {
+      "name": "frozen coefficient_range.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen coefficient_range.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen results.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_averaging_failure.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen RESEARCH_NOTE.md",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen refine.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen PROTOCOL.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen time_separation_results.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_averaging_source.py.txt",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen time_separation.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen conductive_thermal_slab/slab.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen screened_coulomb_transport/lorentz.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen relativistic_free_eos/free_baryons.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen thermodynamics/lepton_reference.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "time supplement pins original report",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "endpoint actual EOS (4, 16)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint energy ledger (4, 16)",
+      "error": -2.7004440350530956e-13,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint entropy monotonic (4, 16)",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "zero energy/entropy boundary flux (4, 16)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "endpoint actual EOS (8, 16)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint energy ledger (8, 16)",
+      "error": 1.2660011927678738e-14,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint entropy monotonic (8, 16)",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "zero energy/entropy boundary flux (8, 16)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "endpoint actual EOS (16, 16)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint energy ledger (16, 16)",
+      "error": -3.164742773398288e-14,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint entropy monotonic (16, 16)",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "zero energy/entropy boundary flux (16, 16)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "endpoint actual EOS (16, 32)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint energy ledger (16, 32)",
+      "error": -1.898828316804213e-14,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint entropy monotonic (16, 32)",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "zero energy/entropy boundary flux (16, 32)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "endpoint actual EOS (16, 64)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint energy ledger (16, 64)",
+      "error": 4.008338799765809e-14,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint entropy monotonic (16, 64)",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "zero energy/entropy boundary flux (16, 64)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "endpoint actual EOS (4, 32)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint energy ledger (4, 32)",
+      "error": -2.7848209849246075e-13,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint entropy monotonic (4, 32)",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "zero energy/entropy boundary flux (4, 32)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "endpoint actual EOS (8, 32)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint energy ledger (8, 32)",
+      "error": -1.308016195356032e-13,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint entropy monotonic (8, 32)",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "zero energy/entropy boundary flux (8, 32)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "independent spatial 4 L1",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent spatial 4 L2",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent spatial 4 Linf",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent spatial 8 L1",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent spatial 8 L2",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent spatial 8 Linf",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent measured order L1",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent measured order L2",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent measured order Linf",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent time ratio L1",
+      "error": -0.00024765561453005125,
+      "tolerance": 0.03,
+      "passed": true
+    },
+    {
+      "name": "independent Richardson estimate 4 L1",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent Richardson estimate 8 L1",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent time ratio L2",
+      "error": -0.0002440262476947619,
+      "tolerance": 0.03,
+      "passed": true
+    },
+    {
+      "name": "independent Richardson estimate 4 L2",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent Richardson estimate 8 L2",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent time ratio Linf",
+      "error": -0.00031471288415702015,
+      "tolerance": 0.03,
+      "passed": true
+    },
+    {
+      "name": "independent Richardson estimate 4 Linf",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent Richardson estimate 8 Linf",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new coarse timehalve spatial change 4 L1",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new coarse timehalve spatial change 4 L2",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new coarse timehalve spatial change 4 Linf",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new coarse timehalve spatial change 8 L1",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new coarse timehalve spatial change 8 L2",
+      "error": 1.0842021724855044e-19,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new coarse timehalve spatial change 8 Linf",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh forward particle density",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh actual conductivity 0.96",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh actual Cv 0.96",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh actual diffusivity 0.96",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh actual conductivity 1.0",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh actual Cv 1.0",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh actual diffusivity 1.0",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh actual conductivity 1.04",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh actual Cv 1.04",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh actual diffusivity 1.04",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "independent_spatial": {
+        "N": 4,
+        "norms": {
+          "L1": 1.4031406346240363e-05,
+          "L2": 1.530456353495366e-05,
+          "Linf": 2.1808115109996085e-05
+        }
+      }
+    },
+    {
+      "independent_spatial": {
+        "N": 8,
+        "norms": {
+          "L1": 3.5769283428801427e-06,
+          "L2": 3.986110892954558e-06,
+          "Linf": 6.216989252225136e-06
+        }
+      }
+    },
+    {
+      "measured_order": {
+        "norm": "L1",
+        "value": 1.971866493287951
+      }
+    },
+    {
+      "measured_order": {
+        "norm": "L2",
+        "value": 1.94090815039004
+      }
+    },
+    {
+      "measured_order": {
+        "norm": "Linf",
+        "value": 1.8105770923725824
+      }
+    },
+    {
+      "time_fraction": {
+        "N": 4,
+        "norm": "L1",
+        "value": 0.012179103815025646
+      }
+    },
+    {
+      "time_fraction": {
+        "N": 8,
+        "norm": "L1",
+        "value": 0.04777561588613499
+      }
+    },
+    {
+      "time_fraction": {
+        "N": 4,
+        "norm": "L2",
+        "value": 0.012206119771453477
+      }
+    },
+    {
+      "time_fraction": {
+        "N": 8,
+        "norm": "L2",
+        "value": 0.04784206453388491
+      }
+    },
+    {
+      "time_fraction": {
+        "N": 4,
+        "norm": "Linf",
+        "value": 0.01227741590355344
+      }
+    },
+    {
+      "time_fraction": {
+        "N": 8,
+        "norm": "Linf",
+        "value": 0.048010161631133356
+      }
+    },
+    {
+      "space_difference_time_halving": {
+        "N": 4,
+        "old": {
+          "L1": 1.4031406346240363e-05,
+          "L2": 1.530456353495366e-05,
+          "Linf": 2.1808115109996085e-05
+        },
+        "new": {
+          "L1": 1.4025129527485934e-05,
+          "L2": 1.52974326992664e-05,
+          "Linf": 2.1796102907103987e-05
+        },
+        "fraction": {
+          "L1": 0.0004473406727409175,
+          "L2": 0.0004892297406552013,
+          "Linf": 0.0005508134394701412
+        }
+      }
+    },
+    {
+      "space_difference_time_halving": {
+        "N": 8,
+        "old": {
+          "L1": 3.5769283428801427e-06,
+          "L2": 3.986110892954558e-06,
+          "Linf": 6.216989252225136e-06
+        },
+        "new": {
+          "L1": 3.5752857310155815e-06,
+          "L2": 3.98417779864441e-06,
+          "Linf": 6.2131855390334945e-06
+        },
+        "fraction": {
+          "L1": 0.000516115947561843,
+          "L2": 0.0005198535994159702,
+          "Linf": 0.0006118256019631859
+        }
+      }
+    },
+    {
+      "diffusivity_span": 0.0007988345781070327
+    }
+  ],
+  "all_pass": true
+}

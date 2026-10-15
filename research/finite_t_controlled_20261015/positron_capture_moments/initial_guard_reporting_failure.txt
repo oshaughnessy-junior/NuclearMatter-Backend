@@ -1,0 +1,1 @@
+The first guard-identity integral completed, but JSON reporting failed on a NumPy bool scalar: TypeError: Object of type bool is not JSON serializable. No first-run guard-result artifact was saved. The corrected driver casts pass flags to Python bool before JSON; its fresh bounded rerun is guard_identity.json.

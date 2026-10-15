@@ -1,0 +1,1 @@
+{"qualified":false,"error":"TypeError: float() argument must be a string or a real number, not generator","cause":"Incorrect parentheses in cell quadrature generator sum; no numerical evolution ran","repair":"Move generator expression inside sum, no physical formula or tolerance change"}

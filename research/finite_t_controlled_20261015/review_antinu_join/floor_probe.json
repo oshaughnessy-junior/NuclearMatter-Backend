@@ -1,0 +1,14 @@
+{
+  "expected": "reject finite log with floored positive ordinary value",
+  "tested_source_sha256": "f5051ea1e3230c6bea124f029201cc5f9529d0c0dcc36cdfacdebc4aebdfc2b6",
+  "input_metadata": {
+    "value": 0.0,
+    "log": -13.704578240522283,
+    "representable": true,
+    "reason": null
+  },
+  "rejected": false,
+  "passed": false,
+  "observed": 0.0,
+  "synthetic_row_mutation_only": true
+}
