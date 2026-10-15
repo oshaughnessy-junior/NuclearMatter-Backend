@@ -1,0 +1,21 @@
+{
+  "status": "selected scope accepted",
+  "checks": 59,
+  "source_sha256": {
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "relativistic_free_eos/results.json": "7d926cfd8bd899913ed563694376ac4ffcbb8142e171408348a38ddba6107af3",
+    "relativistic_free_eos/extra_results.json": "556461b63a5fd71de90cabc6405124eb5f817f236f21db5f96a0a4e94d836d0c",
+    "relativistic_free_eos/initial_antiparticle_exclusion_results.json": "1269b1e48f31e61dbf3a1d82f021587cdeec32b2c6e59ebfa0440a485dc6658b",
+    "relativistic_free_eos/initial_cold_roundoff_results.json": "50aad735efc456114015c9a36e9eb88d5120fea2e35cf2b43edd7c1fbf01c6a0",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "review_files": {
+    "signed_results.json": "cda143ca50573323437bfa66936dd1c437b5520fe81649d73209eb92ca18a7f5",
+    "initial_probe.py": "2149f1bc37516087d230f82a73aa8562fa57ab01ccb056d96ecf6e5b064813d6",
+    "results.json": "521e3bff78b33011682766b63cf697508721b248b71852e24d2576472bec3444",
+    "probe.py": "14123ce7b8541eca2ae777c9124bc3699a4413fa5f0ab550907efe68407b0902",
+    "initial_reporting_failure.json": "88ca33965e49185a39f98e962c6a7524b1f655885c39fd2901db4d2a3e1e7263",
+    "REVIEW.md": "88229cc875e26beb94fb411579f3b40672ca74deba1d4f017c1604cd740b0138",
+    "check_signed.py": "8724605e5f6f9478f4ee227cbac847b219aee635f455e684e76b4ca3b582800b"
+  }
+}

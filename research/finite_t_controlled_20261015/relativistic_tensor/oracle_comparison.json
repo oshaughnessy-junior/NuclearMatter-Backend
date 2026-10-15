@@ -1,0 +1,341 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "electron exact input T",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact input mass_a",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact input mass_b",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact input mu_a",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact input mu_b",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact input weak_mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact lepton input Enu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact lepton input El",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact lepton input cosine",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact lepton input lepton_mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact lepton input mu_lepton",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron exact lepton input antineutrino",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron forward j",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "electron forward chi",
+      "error": -1.021405182655144e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "electron all16 complex absorption",
+      "error": 1.1450502215821073e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "electron all16 complex emission",
+      "error": 1.0230204537115e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "electron all16 complex lepton",
+      "error": 2.2461412574024455e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "muon exact input T",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact input mass_a",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact input mass_b",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact input mu_a",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact input mu_b",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact input weak_mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact lepton input Enu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact lepton input El",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact lepton input cosine",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact lepton input lepton_mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact lepton input mu_lepton",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon exact lepton input antineutrino",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon forward j",
+      "error": -2.9976021664879227e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "muon forward chi",
+      "error": 7.549516567451064e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "muon all16 complex absorption",
+      "error": 1.1956658939430721e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "muon all16 complex emission",
+      "error": 4.5759727024228455e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "muon all16 complex lepton",
+      "error": 4.391050495781073e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact input T",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact input mass_a",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact input mass_b",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact input mu_a",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact input mu_b",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact input weak_mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact lepton input Enu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact lepton input El",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact lepton input cosine",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact lepton input lepton_mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact lepton input mu_lepton",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon exact lepton input antineutrino",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antimuon forward j",
+      "error": 3.3306690738754696e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "antimuon forward chi",
+      "error": 1.3766765505351941e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "antimuon all16 complex absorption",
+      "error": 1.2878745091212115e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "antimuon all16 complex emission",
+      "error": 1.650506060619234e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "antimuon all16 complex lepton",
+      "error": 2.9523505497311157e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "electron",
+      "author_j": 1594.8780139991422,
+      "author_chi": 1362119.54301627,
+      "oracle_j": 1594.878013999143,
+      "oracle_chi": 1362119.543016284
+    },
+    {
+      "label": "muon",
+      "author_j": 5744.794646643252,
+      "author_chi": 4514098.745919866,
+      "oracle_j": 5744.7946466432695,
+      "oracle_chi": 4514098.745919831
+    },
+    {
+      "label": "antimuon",
+      "author_j": 0.2864823418301497,
+      "author_chi": 936515.7523492513,
+      "oracle_j": 0.28648234183014876,
+      "oracle_chi": 936515.7523492385
+    }
+  ],
+  "scope": "forward data agreement only, independent reviews remain required",
+  "source_sha256": {
+    "relativistic_tensor/compare_oracle.py": "0250b2bd0ef5e2c5897464b8062ea1fc0ac75c0d0384f4d88ceea5cfb96f7669",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "relativistic_tensor/results.json": "1234a25302af2271f97cb658bb8ce70c720ca102a5d628344e8033bed15e4dcd",
+    "relativistic_delta_oracle/results.json": "4243300422d17a2d9c1c24c865fcf2687a0bf2b820de08b66731a4f4c83ddef9"
+  }
+}
