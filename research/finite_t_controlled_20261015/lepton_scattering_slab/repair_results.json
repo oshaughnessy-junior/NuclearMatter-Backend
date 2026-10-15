@@ -1,0 +1,733 @@
+{
+  "checks": [
+    {
+      "name": "preODE positive thermal left_T-3.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal left_T0.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal left_Tnan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal left_Tinf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal left_T-inf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal left_TTrue",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal right_T-3.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal right_T0.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal right_Tnan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal right_Tinf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal right_T-inf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal right_TTrue",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal initial_T-3.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal initial_T0.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal initial_Tnan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal initial_Tinf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal initial_T-inf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE positive thermal initial_TTrue",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control durationnan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control durationinf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control durationTrue",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control crossing_timenan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control crossing_timeinf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control crossing_timeTrue",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control rtolnan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control rtolinf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control rtolTrue",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control max_stepnan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control max_stepinf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control max_stepTrue",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control rad_munan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control rad_muinf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preODE finite control rad_muTrue",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'f', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'f', inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'f', -inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'f', 0.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'f', 1.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'f', -0.2)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'left', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'left', inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'left', -inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'left', 0.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'left', 1.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'left', -0.2)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'right', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'right', inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'right', -inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'right', 0.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'right', 1.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (False, 'right', -0.2)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "literalcollision flag 0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "literalcollision flag 1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "literalcollision flag None",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "literalcollision flag 'yes'",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale nan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale inf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale True",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale 0.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale -1.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'f', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'f', inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'f', -inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'f', 0.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'f', 1.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'f', -0.2)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'left', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'left', inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'left', -inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'left', 0.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'left', 1.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'left', -0.2)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'right', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'right', inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'right', -inf)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'right', 0.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'right', 1.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs invalid (True, 'right', -0.2)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "literalcollision flag 0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "literalcollision flag 1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "literalcollision flag None",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "literalcollision flag 'yes'",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale nan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale inf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale True",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale 0.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "rhs crossing scale -1.0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "boundaryshape (7,)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "boundaryshape (8, 1)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "boundaryshape ()",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "cellshape/type ((16,), 'float64')",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "cellshape/type ((0, 8), 'float64')",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "cellshape/type ((2, 7), 'float64')",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "cellshape/type ((2, 8), 'complex128')",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "invalid physical grid ('E', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "invalid physical grid ('W', 0.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "invalid physical grid ('mu', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "invalid physical grid ('mu', 1.0)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "invalid physical grid ('A', nan)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "finite positive boundary E [nan]",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "finite positive boundary E [0.0]",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "finite positive boundary E [-1.0]",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "finite positive boundary E array([1.+1.j])",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "bitwise literal boundary (3.0, 1.3, -0.7)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "bitwise literal boundary (2.0, 2.0, 0.4)",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "bitwise physical rhs False",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "bitwise paired collision False",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "bitwise physical rhs True",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "bitwise paired collision True",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "bitwise full finite trajectory excluding runtime",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "identical full physical function AST angular_edge",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "identical full physical function AST grid",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "identical physical arithmetic source tail collision",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "identical physical arithmetic source tail rhs",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "identical physical arithmetic source tail evolve",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preserved initialauthor snapshot",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "passed": 116,
+  "failed": [],
+  "valid_repaired": {
+    "cells": 2,
+    "duration": 0.013,
+    "crossing_time": 0.047,
+    "length_cm": 1409024552.6,
+    "left_T": 2.7,
+    "right_T": 1.6,
+    "rad_mu": -0.41,
+    "initial_T": 1.85,
+    "collisions": true,
+    "initial": [
+      [
+        0.24557396439032142,
+        0.24557396439032142,
+        0.010956280713397711,
+        0.010956280713397711,
+        0.00013455666874395586,
+        0.00013455666874395586,
+        4.57977019863994e-06,
+        4.57977019863994e-06
+      ],
+      [
+        0.24557396439032142,
+        0.24557396439032142,
+        0.010956280713397711,
+        0.010956280713397711,
+        0.00013455666874395586,
+        0.00013455666874395586,
+        4.57977019863994e-06,
+        4.57977019863994e-06
+      ]
+    ],
+    "final": [
+      [
+        0.24436755713548056,
+        0.26466116720082056,
+        0.010945396199511079,
+        0.019758667043677257,
+        0.00014351236804917758,
+        0.0006835358253401428,
+        5.365941182805247e-06,
+        5.908796060416151e-05
+      ],
+      [
+        0.23675526609737527,
+        0.2479360622233849,
+        0.009494843035435971,
+        0.012238752632176431,
+        0.00011315380132162256,
+        0.0002198900497387347,
+        4.010833561348683e-06,
+        1.2950661370681011e-05
+      ]
+    ],
+    "boundary_in_number": 1.8593080802804198e-08,
+    "boundary_out_number": 9.114951962310444e-09,
+    "boundary_in_energy": 1.5006818833495194e-07,
+    "boundary_out_energy": 5.628498648208898e-08,
+    "thermostat_heat": 3.4291016351499994e-11,
+    "collision_entropy": 2.1167440589812224e-10,
+    "radiation_number_change": 9.478128840493765e-09,
+    "radiation_energy_change": 9.374891083651139e-08,
+    "number_ledger": 1.1580528575742387e-23,
+    "energy_ledger": -6.617444900424221e-23,
+    "min_occupation": 4.010833561348683e-06,
+    "max_occupation": 0.26466116720082056,
+    "rtol": 2e-10,
+    "max_step": 0.001,
+    "nfev": 158,
+    "seconds": 0.02218699990771711,
+    "units": "volume-average N fm^-3; E/heat MeVfm^-3; time s; length cm; one helicity axisymmetric nue"
+  },
+  "valid_original": {
+    "cells": 2,
+    "duration": 0.013,
+    "crossing_time": 0.047,
+    "length_cm": 1409024552.6,
+    "left_T": 2.7,
+    "right_T": 1.6,
+    "rad_mu": -0.41,
+    "initial_T": 1.85,
+    "collisions": true,
+    "initial": [
+      [
+        0.24557396439032142,
+        0.24557396439032142,
+        0.010956280713397711,
+        0.010956280713397711,
+        0.00013455666874395586,
+        0.00013455666874395586,
+        4.57977019863994e-06,
+        4.57977019863994e-06
+      ],
+      [
+        0.24557396439032142,
+        0.24557396439032142,
+        0.010956280713397711,
+        0.010956280713397711,
+        0.00013455666874395586,
+        0.00013455666874395586,
+        4.57977019863994e-06,
+        4.57977019863994e-06
+      ]
+    ],
+    "final": [
+      [
+        0.24436755713548056,
+        0.26466116720082056,
+        0.010945396199511079,
+        0.019758667043677257,
+        0.00014351236804917758,
+        0.0006835358253401428,
+        5.365941182805247e-06,
+        5.908796060416151e-05
+      ],
+      [
+        0.23675526609737527,
+        0.2479360622233849,
+        0.009494843035435971,
+        0.012238752632176431,
+        0.00011315380132162256,
+        0.0002198900497387347,
+        4.010833561348683e-06,
+        1.2950661370681011e-05
+      ]
+    ],
+    "boundary_in_number": 1.8593080802804198e-08,
+    "boundary_out_number": 9.114951962310444e-09,
+    "boundary_in_energy": 1.5006818833495194e-07,
+    "boundary_out_energy": 5.628498648208898e-08,
+    "thermostat_heat": 3.4291016351499994e-11,
+    "collision_entropy": 2.1167440589812224e-10,
+    "radiation_number_change": 9.478128840493765e-09,
+    "radiation_energy_change": 9.374891083651139e-08,
+    "number_ledger": 1.1580528575742387e-23,
+    "energy_ledger": -6.617444900424221e-23,
+    "min_occupation": 4.010833561348683e-06,
+    "max_occupation": 0.26466116720082056,
+    "rtol": 2e-10,
+    "max_step": 0.001,
+    "nfev": 158,
+    "seconds": 0.012640583096072078,
+    "units": "volume-average N fm^-3; E/heat MeVfm^-3; time s; length cm; one helicity axisymmetric nue"
+  },
+  "initial_source_sha": "be7f2c05f595647ef9fa7a868bd9b8b4d78f39dee4b2b2055c32180334906022",
+  "repaired_source_sha": "13c3bee74aa03803693416082271b5fad2dba5d6e8e1759e9eb2020be6694dfa",
+  "seconds": 0.6346339578740299
+}

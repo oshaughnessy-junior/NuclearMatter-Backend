@@ -1,0 +1,462 @@
+{
+  "checks": [
+    {
+      "name": "exact initial NaNleft failure reproduced",
+      "passed": true
+    },
+    {
+      "name": "exact initial NaNstate failure reproduced",
+      "passed": true
+    },
+    {
+      "name": "exact initial negative_temperature failure reproduced",
+      "passed": true
+    },
+    {
+      "name": "repaired rejects ('NaN', False, 'state')",
+      "passed": true,
+      "message": "Finite cell populations required"
+    },
+    {
+      "name": "repaired rejects ('NaN', False, 'left')",
+      "passed": true,
+      "message": "Finite left boundary required"
+    },
+    {
+      "name": "repaired rejects ('NaN', False, 'right')",
+      "passed": true,
+      "message": "Finite right boundary required"
+    },
+    {
+      "name": "repaired rejects ('NaN', True, 'state')",
+      "passed": true,
+      "message": "Finite cell populations required"
+    },
+    {
+      "name": "repaired rejects ('NaN', True, 'left')",
+      "passed": true,
+      "message": "Finite left boundary required"
+    },
+    {
+      "name": "repaired rejects ('NaN', True, 'right')",
+      "passed": true,
+      "message": "Finite right boundary required"
+    },
+    {
+      "name": "repaired rejects ('plusInf', False, 'state')",
+      "passed": true,
+      "message": "Finite cell populations required"
+    },
+    {
+      "name": "repaired rejects ('plusInf', False, 'left')",
+      "passed": true,
+      "message": "Finite left boundary required"
+    },
+    {
+      "name": "repaired rejects ('plusInf', False, 'right')",
+      "passed": true,
+      "message": "Finite right boundary required"
+    },
+    {
+      "name": "repaired rejects ('plusInf', True, 'state')",
+      "passed": true,
+      "message": "Finite cell populations required"
+    },
+    {
+      "name": "repaired rejects ('plusInf', True, 'left')",
+      "passed": true,
+      "message": "Finite left boundary required"
+    },
+    {
+      "name": "repaired rejects ('plusInf', True, 'right')",
+      "passed": true,
+      "message": "Finite right boundary required"
+    },
+    {
+      "name": "repaired rejects ('minusInf', False, 'state')",
+      "passed": true,
+      "message": "Finite cell populations required"
+    },
+    {
+      "name": "repaired rejects ('minusInf', False, 'left')",
+      "passed": true,
+      "message": "Finite left boundary required"
+    },
+    {
+      "name": "repaired rejects ('minusInf', False, 'right')",
+      "passed": true,
+      "message": "Finite right boundary required"
+    },
+    {
+      "name": "repaired rejects ('minusInf', True, 'state')",
+      "passed": true,
+      "message": "Finite cell populations required"
+    },
+    {
+      "name": "repaired rejects ('minusInf', True, 'left')",
+      "passed": true,
+      "message": "Finite left boundary required"
+    },
+    {
+      "name": "repaired rejects ('minusInf', True, 'right')",
+      "passed": true,
+      "message": "Finite right boundary required"
+    },
+    {
+      "name": "repaired rejects ('zero', False, 'state')",
+      "passed": true,
+      "message": "Strictly interior cell populations of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('zero', False, 'left')",
+      "passed": true,
+      "message": "Strictly interior left boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('zero', False, 'right')",
+      "passed": true,
+      "message": "Strictly interior right boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('zero', True, 'state')",
+      "passed": true,
+      "message": "Strictly interior cell populations of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('zero', True, 'left')",
+      "passed": true,
+      "message": "Strictly interior left boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('zero', True, 'right')",
+      "passed": true,
+      "message": "Strictly interior right boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('one', False, 'state')",
+      "passed": true,
+      "message": "Strictly interior cell populations of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('one', False, 'left')",
+      "passed": true,
+      "message": "Strictly interior left boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('one', False, 'right')",
+      "passed": true,
+      "message": "Strictly interior right boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('one', True, 'state')",
+      "passed": true,
+      "message": "Strictly interior cell populations of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('one', True, 'left')",
+      "passed": true,
+      "message": "Strictly interior left boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects ('one', True, 'right')",
+      "passed": true,
+      "message": "Strictly interior right boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects negative_left",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects negative_right",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects negative_initial",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects NaNinitial",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects NaNmu",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects NaNrtol",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects negative_rtol",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects Infstep",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects NaNduration",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects integer_flag",
+      "passed": true,
+      "message": "Finite bounded slab controls and positive thermal temperatures/rtol required"
+    },
+    {
+      "name": "repaired rejects state_complex",
+      "passed": true,
+      "message": "Real numeric cell populations required"
+    },
+    {
+      "name": "repaired rejects state_string",
+      "passed": true,
+      "message": "Real numeric cell populations required"
+    },
+    {
+      "name": "repaired rejects state_bool",
+      "passed": true,
+      "message": "Real numeric cell populations required"
+    },
+    {
+      "name": "repaired rejects state_shape",
+      "passed": true,
+      "message": "Finite matching slab arrays/scale and literal collision flag required"
+    },
+    {
+      "name": "repaired rejects state_zero_cells",
+      "passed": true,
+      "message": "Finite matching slab arrays/scale and literal collision flag required"
+    },
+    {
+      "name": "repaired rejects left_wrongshape",
+      "passed": true,
+      "message": "Strictly interior left boundary of matching shape required"
+    },
+    {
+      "name": "repaired rejects right_complex",
+      "passed": true,
+      "message": "Real numeric right boundary required"
+    },
+    {
+      "name": "repaired rejects rhs_NaNcrossing",
+      "passed": true,
+      "message": "Finite matching slab arrays/scale and literal collision flag required"
+    },
+    {
+      "name": "repaired rejects rhs_integer_flag",
+      "passed": true,
+      "message": "Finite matching slab arrays/scale and literal collision flag required"
+    },
+    {
+      "name": "repaired grid rejects NaNW",
+      "passed": true,
+      "message": "Finite phase weights required"
+    },
+    {
+      "name": "repaired grid rejects negativeW",
+      "passed": true,
+      "message": "Positive finite spectral measures/transitions and interior angular nodes required"
+    },
+    {
+      "name": "repaired grid rejects NaNE",
+      "passed": true,
+      "message": "Finite energy nodes required"
+    },
+    {
+      "name": "repaired grid rejects zeroE",
+      "passed": true,
+      "message": "Positive finite spectral measures/transitions and interior angular nodes required"
+    },
+    {
+      "name": "repaired grid rejects NaNmu",
+      "passed": true,
+      "message": "Finite angular nodes required"
+    },
+    {
+      "name": "repaired grid rejects negativeA",
+      "passed": true,
+      "message": "Positive finite spectral measures/transitions and interior angular nodes required"
+    },
+    {
+      "name": "fresh valid RHS bitwise False",
+      "passed": true
+    },
+    {
+      "name": "fresh valid face+thermostat ledgers bitwise False",
+      "passed": true
+    },
+    {
+      "name": "fresh valid RHS bitwise True",
+      "passed": true
+    },
+    {
+      "name": "fresh valid face+thermostat ledgers bitwise True",
+      "passed": true
+    },
+    {
+      "name": "fresh valid paired collision bitwise 0",
+      "passed": true
+    },
+    {
+      "name": "fresh valid paired collision bitwise 1",
+      "passed": true
+    },
+    {
+      "name": "fresh valid boundary bitwise",
+      "passed": true
+    },
+    {
+      "name": "new complete valid trajectory bitwise",
+      "passed": true
+    },
+    {
+      "name": "angular_edge complete AST unchanged",
+      "passed": true
+    },
+    {
+      "name": "grid complete AST unchanged",
+      "passed": true
+    },
+    {
+      "name": "collision physical arithmetic AST unchanged",
+      "passed": true
+    },
+    {
+      "name": "rhs physical arithmetic AST unchanged",
+      "passed": true
+    },
+    {
+      "name": "ODE and ledger arithmetic AST unchanged",
+      "passed": true
+    },
+    {
+      "name": "initial review evidence byte-identical",
+      "passed": true
+    },
+    {
+      "name": "new author source still frozen",
+      "passed": true
+    },
+    {
+      "name": "all four elementary physical sources match initial pinned hashes",
+      "passed": true
+    }
+  ],
+  "passed": 74,
+  "failed": [],
+  "oldcounterexamples": [
+    {
+      "name": "NaNleft",
+      "returned_nonfinite": true,
+      "completed_ODE": false
+    },
+    {
+      "name": "NaNstate",
+      "returned_nonfinite": true,
+      "completed_ODE": false
+    },
+    {
+      "name": "negative_temperature",
+      "returned_nonfinite": false,
+      "completed_ODE": true
+    }
+  ],
+  "new_trajectory": {
+    "cells": 2,
+    "duration": 0.011,
+    "crossing_time": 0.043,
+    "length_cm": 1289107569.3999999,
+    "left_T": 2.4,
+    "right_T": 1.7,
+    "rad_mu": -0.52,
+    "initial_T": 1.93,
+    "collisions": true,
+    "initial": [
+      [
+        0.24363898721858365,
+        0.24363898721858365,
+        0.01245407825786955,
+        0.01245407825786955,
+        0.00018390296095578348,
+        0.00018390296095578348,
+        7.201154178791685e-06,
+        7.201154178791685e-06
+      ],
+      [
+        0.24363898721858365,
+        0.24363898721858365,
+        0.01245407825786955,
+        0.01245407825786955,
+        0.00018390296095578348,
+        0.00018390296095578348,
+        7.201154178791685e-06,
+        7.201154178791685e-06
+      ]
+    ],
+    "final": [
+      [
+        0.24269000319166867,
+        0.25450836489239864,
+        0.012336903573782827,
+        0.016574034618945195,
+        0.00018469436303963736,
+        0.00038434551908135913,
+        7.41092388307019e-06,
+        2.32402697846882e-05
+      ],
+      [
+        0.2365680100436294,
+        0.24491240292090724,
+        0.01106814772317127,
+        0.012999146183582303,
+        0.0001549894908803433,
+        0.0002131481452553306,
+        6.021366904714552e-06,
+        9.589674917991768e-06
+      ]
+    ],
+    "boundary_in_number": 1.2498315771445353e-08,
+    "boundary_out_number": 9.128745905261024e-09,
+    "boundary_in_energy": 9.073806726840325e-08,
+    "boundary_out_energy": 5.8375319817812776e-08,
+    "thermostat_heat": -1.8149765906587206e-10,
+    "collision_entropy": 3.599961622752448e-11,
+    "radiation_number_change": 3.369569866184333e-09,
+    "radiation_energy_change": 3.25442451096563e-08,
+    "number_ledger": 4.963083675318166e-24,
+    "energy_ledger": -4.632211430296955e-23,
+    "min_occupation": 6.021366904714552e-06,
+    "max_occupation": 0.25450836489239864,
+    "rtol": 3e-11,
+    "max_step": 0.0007,
+    "nfev": 194,
+    "seconds": 0.025129874935373664,
+    "units": "volume-average N fm^-3; E/heat MeVfm^-3; time s; length cm; one helicity axisymmetric nue"
+  },
+  "initial_review_pins": {
+    "INITIAL_PIN.json": "ea631149a5fcf8fa61dab431fd30607c35163c0089725ae27af5d45d70a17f2f",
+    "REVIEW.md": "50caee07a7fd52b8a78eb00db429744b1eb26e05c9849ad8cba2cf1432059fab",
+    "edge_results.json": "dc18b1c061874a7734cdf22094c0185bd14ae3ce96f2612d6db4078c89432285",
+    "extra_probes.py": "d0372cb31e03f2bd77be0ec86e12c1ee66d748c9a36b4954b589108108cd0aa8",
+    "extra_results.json": "0433ff5ea365b4e391c07303b529b50f9e247a80ee5b86164d3f06c4db2162e1",
+    "initial_input_probes.json": "6c548c2458596d6cc9ee10dc0a973d77a6a000f9ca782497356d19e23b57bfb8",
+    "probe.py": "e29099c6088beb7441bd703d6eaae4ea906ab51a7207f4845ddd73ac127599d3",
+    "results.json": "6393e18d20c3bc52aa9aa5fc68326e5369db16880481d95ae78f0d1976e0cc53",
+    "reviewed_initial_MANIFEST.json": "0091277ba134951a390dc8150069a4a1e93236721ec041ad9002a4cac4922b0f",
+    "reviewed_initial_RESEARCH_NOTE.md": "7f0be2285e13432c75a4ff102dc2574b73addb364addb80117335e82312082ff",
+    "reviewed_initial_accepted_results.json": "954a1f02620283114760283fe82f8eb1f308607d23a2355e6b66c3f79d8e4b88",
+    "reviewed_initial_slab.py": "be7f2c05f595647ef9fa7a868bd9b8b4d78f39dee4b2b2055c32180334906022"
+  },
+  "new_source_sha256": "13c3bee74aa03803693416082271b5fad2dba5d6e8e1759e9eb2020be6694dfa",
+  "scope": "input contract repair accepted only if all gates pass; physicalfinitegrid/time qualification unchanged"
+}

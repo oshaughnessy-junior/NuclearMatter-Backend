@@ -1,0 +1,48 @@
+{
+  "manifest_sha": "0091277ba134951a390dc8150069a4a1e93236721ec041ad9002a4cac4922b0f",
+  "time": "2026-10-15T21:51:42.855247+00:00",
+  "status": "author FROZEN; independent review pending",
+  "selected_passes": 55,
+  "preserved_coarse_failures": [
+    {
+      "name": "full directional phi(16, 32)",
+      "error": 0.022089930178462946,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "full directional phi(32, 64)",
+      "error": 0.00020094409508053523,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "phi32/64 slab heat",
+      "error": -7.310831301454712e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    }
+  ],
+  "scope": "finiteenergy24MeV S2 axisymmetric threecellupwind slab; fixedpairthermostat; no continuum in angle/space/energy",
+  "upstream_pins": {
+    "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "files": {
+    "RESEARCH_NOTE.md": "7f0be2285e13432c75a4ff102dc2574b73addb364addb80117335e82312082ff",
+    "accepted_results.json": "954a1f02620283114760283fe82f8eb1f308607d23a2355e6b66c3f79d8e4b88",
+    "check_slab.py": "578ca62175fd5d66364debb963e69af3039fe7f6614d9d9ebe947e688829403a",
+    "figure_data.json": "598eb0192ad66dcadb2bc058101055d06df96fc4c1e1ded5814d642b01e94374",
+    "make_figure.py": "f08bce6f80e9e7495c594de4c26b539d4cff8f24459bdb38c4e44edb49070de6",
+    "partial_grids.json": "5bd5d0477506565198b4a0c1fcc46dedfa1d05fc56a561518b08d0174132d9f3",
+    "reference.py": "279e96a3ae395fe6b6de0839ab3d13ab6b6e12067c12ae0a810c35bff22e2393",
+    "refine.py": "24485b2802c3df26da97b5d1350e45f331a7fb11c34dc1a1357734075c4c55b8",
+    "refinement_partial.json": "bfba322c841ed02b7b4596cf6ea9bcf90749a78b999040d8bb15efa8caad4791",
+    "results.json": "9b5f933c3ad559fd6a7dbb98ee16acda935e1de291d34a9d3be3fb87dd37306b",
+    "slab.py": "be7f2c05f595647ef9fa7a868bd9b8b4d78f39dee4b2b2055c32180334906022",
+    "slab_feedback.pdf": "b24ec5586d0eeaf68449ac863dc146d3e79e3e3515b29c94c638c3525212fb9c",
+    "slab_feedback.png": "bf9c7966383d9169688aa3e60ce9692a223bfdf65c28ee40cbb7a837f5a2ea78"
+  }
+}
