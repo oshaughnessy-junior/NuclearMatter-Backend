@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "representation -1000.0",
+      "passed": true
+    },
+    {
+      "name": "representation -745.0",
+      "passed": true
+    },
+    {
+      "name": "representation -744.0",
+      "passed": true
+    },
+    {
+      "name": "representation 0.0",
+      "passed": true
+    },
+    {
+      "name": "representation 710.0",
+      "passed": true
+    },
+    {
+      "name": "nonfinite representation nan",
+      "passed": true
+    },
+    {
+      "name": "nonfinite representation inf",
+      "passed": true
+    },
+    {
+      "name": "nonfinite representation -inf",
+      "passed": true
+    },
+    {
+      "name": "bool order",
+      "passed": true
+    },
+    {
+      "name": "fractional order",
+      "passed": true
+    },
+    {
+      "name": "NaN tail",
+      "passed": true
+    },
+    {
+      "name": "negative tail",
+      "passed": true
+    },
+    {
+      "name": "unsorted edges",
+      "passed": true
+    },
+    {
+      "name": "NaN edge",
+      "passed": true
+    },
+    {
+      "name": "nonzero first edge",
+      "passed": true
+    },
+    {
+      "name": "negative runtime",
+      "passed": true
+    }
+  ]
+}

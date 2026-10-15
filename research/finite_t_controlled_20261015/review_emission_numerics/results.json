@@ -1,0 +1,390 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "forward independent dimensionless kinetic density neutron",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "forward independent dimensionless kinetic density proton",
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "prescribed electron bath not neutralized",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "physical Q offset retained",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "author heavyM versus independent p-static positron_capture number",
+      "error": 5.449963385401944e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "author heavyM versus independent p-static positron_capture energy",
+      "error": 6.268254011942481e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "author heavyM versus independent p-static neutron_decay number",
+      "error": 6.692183742379627e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "author heavyM versus independent p-static neutron_decay energy",
+      "error": 1.8487741758959986e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "author heavyM versus independent p-static combined number",
+      "error": 4.1393496945022525e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "author heavyM versus independent p-static combined energy",
+      "error": 5.893993652568877e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout heavyM spectral neutron_decay E0.23",
+      "error": 1.305336740101669e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout log inventory sum E0.23",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "heldout heavyM spectral positron_capture E2.6",
+      "error": 6.50635137045884e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout log inventory sum E2.6",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "gap finite negative log positron_capture",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "gap None and explicit underflow positron_capture",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "gap finite negative log neutron_decay",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "gap None and explicit underflow neutron_decay",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "gap finite negative log combined",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "gap None and explicit underflow combined",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "gap ND retains extreme finite tail",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "independent logE10->16 positron_capture number",
+      "error": 9.690026558975315e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus author mapped20 positron_capture number",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus staticp positron_capture number",
+      "error": 5.449963367638386e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "independent logE10->16 positron_capture energy",
+      "error": 6.4215299744525236e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus author mapped20 positron_capture energy",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus staticp positron_capture energy",
+      "error": 6.268253976415366e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "independent logE10->16 neutron_decay number",
+      "error": 7.799901473584187e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus author mapped20 neutron_decay number",
+      "error": 4.209965709369731e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus staticp neutron_decay number",
+      "error": 6.691762745780516e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "independent logE10->16 neutron_decay energy",
+      "error": 4.191918546572115e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus author mapped20 neutron_decay energy",
+      "error": 6.082245818087961e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus staticp neutron_decay energy",
+      "error": 1.848713353426573e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "independent logE10->16 combined number",
+      "error": 1.6713546242335935e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus author mapped20 combined number",
+      "error": 9.006129175755215e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus staticp combined number",
+      "error": 4.1393587006277e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "independent logE10->16 combined energy",
+      "error": 1.926688140505791e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus author mapped20 combined energy",
+      "error": 2.771116669464007e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent logE16 versus staticp combined energy",
+      "error": 5.893996423683912e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "author source/failures unchanged",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "pinned_log_emission_sha256": "f73fd3504498b696614fb5153362f5d27816e659a8cb5bb43d4467ccbde28207",
+  "static_momentum_integrals": {
+    "positron_capture": [
+      2.5221439445215086e-07,
+      6.740867986796309e-07
+    ],
+    "neutron_decay": [
+      6.874305044652645e-08,
+      3.25831755789623e-08
+    ],
+    "combined": [
+      3.209574448986773e-07,
+      7.066699742585932e-07
+    ]
+  },
+  "heldout": [
+    {
+      "E": 0.23,
+      "logs": {
+        "positron_capture": -18199127.575146444,
+        "neutron_decay": 5.244157591305596,
+        "combined": 5.244157591305596
+      },
+      "static_expected": 189.45617321035553
+    },
+    {
+      "E": 2.6,
+      "logs": {
+        "positron_capture": 1.3647695250257712,
+        "neutron_decay": -7082361.657660918,
+        "combined": 1.3647695250257712
+      },
+      "static_expected": 3.91482322693587
+    }
+  ],
+  "gap_logs": {
+    "positron_capture": -12489427.363418696,
+    "neutron_decay": -55933.95101013701,
+    "combined": -55933.95101013701
+  },
+  "gap_representations": {
+    "positron_capture": {
+      "log_value": -12489427.363418696,
+      "representable": false,
+      "value": null,
+      "reason": "underflow",
+      "subnormal": false
+    },
+    "neutron_decay": {
+      "log_value": -55933.95101013701,
+      "representable": false,
+      "value": null,
+      "reason": "underflow",
+      "subnormal": false
+    },
+    "combined": {
+      "log_value": -55933.95101013701,
+      "representable": false,
+      "value": null,
+      "reason": "underflow",
+      "subnormal": false
+    }
+  },
+  "alternate_logE_edges": [
+    0.0,
+    1e-05,
+    0.1,
+    0.4,
+    0.65,
+    0.7476443542473824,
+    0.7736611455443455,
+    0.7801653433685863,
+    0.7817913928246466,
+    0.7821979051886616,
+    0.78233340931,
+    0.7824689134313383,
+    0.7828754257953533,
+    0.7845014752514136,
+    0.7910056730756544,
+    0.8170224643726175,
+    1.1,
+    1.5,
+    1.7243263569926577,
+    1.7843300722656643,
+    1.799331001083916,
+    1.803081233288479,
+    1.8040187913396195,
+    1.8043313106899999,
+    1.8046438300403802,
+    1.8055813880915208,
+    1.8093316202960836,
+    1.8243325491143354,
+    1.884336264387342,
+    2.0,
+    3.0,
+    5.0,
+    8.0,
+    12.0,
+    20.0,
+    32.0
+  ],
+  "alternate_coarse": {
+    "positron_capture": [
+      -15.192986884487317,
+      -14.209907579721108
+    ],
+    "neutron_decay": [
+      -16.49289004500663,
+      -17.23946962537501
+    ],
+    "combined": [
+      -14.951957690236144,
+      -14.162702668731308
+    ]
+  },
+  "alternate_refined": {
+    "positron_capture": [
+      -15.192986884497007,
+      -14.20990757972753
+    ],
+    "neutron_decay": [
+      -16.49289012300564,
+      -17.239469583455822
+    ],
+    "combined": [
+      -14.95195770694969,
+      -14.16270266680462
+    ]
+  },
+  "source_hashes": {
+    "emission_only/log_emission.py": "f73fd3504498b696614fb5153362f5d27816e659a8cb5bb43d4467ccbde28207",
+    "emission_only/initial_import_failure.txt": "f59a49e83e2e9055cf2aa6e092a319a5f47175c57050cc118ec0a83c6af43edb",
+    "emission_only/initial_representation_serialization_failure.txt": "522258ec277a01e0329c16131d35d969bba654ba84e4d7a0c7ddd74856931812",
+    "emission_only/initial_partial_before_flag_cast.json": "cb8e7ea2c82c29eeac15423cf98e9952e98b87c12f4f456ca184b586fbb725d0",
+    "quantum_energy_moments/static_inventory_failure.json": "260331e302d85c04d44a1ad524a2bc0e6426a16b77145a680b0808bb8fd1da98"
+  },
+  "end_hashes": {
+    "emission_only/log_emission.py": "f73fd3504498b696614fb5153362f5d27816e659a8cb5bb43d4467ccbde28207",
+    "emission_only/initial_import_failure.txt": "f59a49e83e2e9055cf2aa6e092a319a5f47175c57050cc118ec0a83c6af43edb",
+    "emission_only/initial_representation_serialization_failure.txt": "522258ec277a01e0329c16131d35d969bba654ba84e4d7a0c7ddd74856931812",
+    "emission_only/initial_partial_before_flag_cast.json": "cb8e7ea2c82c29eeac15423cf98e9952e98b87c12f4f456ca184b586fbb725d0",
+    "quantum_energy_moments/static_inventory_failure.json": "260331e302d85c04d44a1ad524a2bc0e6426a16b77145a680b0808bb8fd1da98"
+  },
+  "runtime_seconds": 21.647958416026086,
+  "limits": "Single prescribed-electron heavyM normalization bath; shared finiteM response, no extreme-tail relative accuracy, ordinaryopacity/transfer or oldT2wrapper qualification"
+}

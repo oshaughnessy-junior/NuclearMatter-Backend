@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "numerical_checks": 39,
+  "control_checks": 16,
+  "independent_review": "pending",
+  "source_sha256": {
+    "emission_only/log_emission.py": "f73fd3504498b696614fb5153362f5d27816e659a8cb5bb43d4467ccbde28207",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "files": {
+    "controls.json": "120b80945c33d0e827a8a23b561c9ce9fd466cfded278cbd5bf9dde4ff4f2089",
+    "initial_results_before_representation_edge.json": "5a03e8a20558ec4f64231d1928f61a4e3c58c20c1643f460b723073bbae28f43",
+    "results.json": "f08b3fa1bf7e01ad0a7bf7c467a47318a0f201ca0839f9862a447f98d24b5632",
+    "RESEARCH_NOTE.md": "414b854728c318b5d6006c9ef0d6a916a1d4b59a2c0f62cbd964a3722f77b75d",
+    "initial_partial_before_flag_cast.json": "cb8e7ea2c82c29eeac15423cf98e9952e98b87c12f4f456ca184b586fbb725d0",
+    "run_reference.py": "ecdbc8084dcee38598b728258624ed633a86992d1ed9e7e755209bfe416d4747",
+    "initial_log_emission.py": "2730e0792aaff6a8f8e39018a9bcca512742ba7fbe07368c752e41d6633376ff",
+    "log_emission.py": "f73fd3504498b696614fb5153362f5d27816e659a8cb5bb43d4467ccbde28207",
+    "initial_representation_serialization_failure.txt": "522258ec277a01e0329c16131d35d969bba654ba84e4d7a0c7ddd74856931812",
+    "partial.json": "a1f4ee2e19739052fa0959db9a55f073f9ebddc11d6100f941ff80fbd41e90ec",
+    "initial_import_failure.txt": "f59a49e83e2e9055cf2aa6e092a319a5f47175c57050cc118ec0a83c6af43edb",
+    "check_controls.py": "43dc65c91c72c91b66a969a67c0ee07610de5d5e2ad3d30810ff18b1a77afeb7"
+  },
+  "total_recorded_experiment_seconds_lower_bound": 101.34440329205245,
+  "comment": "Second reporting failure occurred just after final checks; its partial integration runtime retained. Total full experiments approximately102s, below120s budget.",
+  "original_failure_unchanged": true
+}

@@ -1,0 +1,22 @@
+{
+  "status": "accepted_restricted_scope",
+  "checks": 52,
+  "files": {
+    "selected_source_results.json": "cc6820be222f9dee8abbe2162cf83362de9d6dbd53365d32036c2d9803105ef9",
+    "eos_ledger_probe.py": "96e7734399da4e81aaea46cff7d78b2d7f7560c7ae2272186ffb7ce3b6e5f19e",
+    "results.json": "775ec7ce0a22f50610ea300cf3f8efee699327a9a5d657b75cba9cbcaed4a81c",
+    "probe.py": "c367177979259564ca469f8ac6e737d03a86c1eab39ce7006deef1b46327ee9c",
+    "selected_source_probe.py": "9e583849a35294a1b68d1a7faa9483ff725d8103267b36c955ae6429fdb20fc7",
+    "REVIEW.md": "e20b19b5545615ff6f1ec412289353b446dbc6cd73d0b788f45a229cba4a8605",
+    "initial_budget_stop.txt": "f764a830465b9e188a00ab48a83cf2ccf5f4178d437180dacbc7bf528d661fba"
+  },
+  "author_sources": {
+    "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "fd_fluid_element/qualify_source.py": "71c9b25e184fce5a6296a9daa67c986b52f9ea10e3fe224c82635b9ec9390c83",
+    "fd_fluid_element/short_evolution.py": "ca6babcaf1fb2e49d24fadb5f2c1606dc6528139b0183294ba8e221084670ab6",
+    "fd_fluid_element/source_qualification.json": "8b8cf64d11ac0f1fa774e13981e32e82ac1ba459d9450d11db04eb3aa01b0451",
+    "fd_fluid_element/short_evolution_results.json": "f58fd8654bc204ab78465ddd9e34cb442462d7bdcdf06a1cf323b8fb4b0b8831"
+  },
+  "author_sources_unchanged": true,
+  "unqualified": "New independent full-energy extension stopped at88second budget; no saved completed integral arrays, no numerical claim"
+}
