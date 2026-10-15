@@ -1,0 +1,631 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-15T11:46:06.784414+00:00",
+  "model": "allowed NR V0/Aspin current with common-mass free-FD recoil/Pauli response; captures only",
+  "prefactor_K": 38161.97401048155,
+  "degenerate_test_state": {
+    "baryons": {
+      "T": 3,
+      "mass": 939,
+      "offset_a": 1.29333236,
+      "offset_b": 0,
+      "mu_a": 21.29333236,
+      "mu_b": 5
+    },
+    "mu_lepton": 5
+  },
+  "constants": {
+    "GF": 1.1663785e-11,
+    "VUD": 0.974,
+    "GA": 1.2723,
+    "HBAR": 6.582119569e-22,
+    "HBARC": 197.3269804,
+    "ME": 0.51099895069,
+    "Q": 1.29333236
+  },
+  "environment": {
+    "python": "3.13.4",
+    "numpy": "2.3.5",
+    "scipy": "1.15.3"
+  },
+  "source_sha256": {
+    "check_allowed.py": "c6a4424157aca7829621736230f51be8c10abb489ef1804af70dac96a7d08647",
+    "allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "checks": [
+    {
+      "name": "KMS_electron_capture_E3.0_M939.0",
+      "error": 1.1102230246251565e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E3.0_M10000.0",
+      "error": 6.661338147750939e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E3.0_M100000.0",
+      "error": 0.0,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E3.0_M10000000.0",
+      "error": 3.552713678800501e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_limit_electron_capture_E3.0",
+      "error": 1.8967107091594215e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "absolute_cross_section_cm2_electron_capture_E3.0",
+      "error": 1.8964875208027365e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E8.0_M939.0",
+      "error": 0.0,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E8.0_M10000.0",
+      "error": 0.0,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E8.0_M100000.0",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E8.0_M10000000.0",
+      "error": 3.1086244689504383e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_limit_electron_capture_E8.0",
+      "error": 3.436371082132794e-07,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "absolute_cross_section_cm2_electron_capture_E8.0",
+      "error": 3.438602961258752e-07,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E20.0_M939.0",
+      "error": 0.0,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E20.0_M10000.0",
+      "error": 1.7763568394002505e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E20.0_M100000.0",
+      "error": 2.6645352591003757e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_electron_capture_E20.0_M10000000.0",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_limit_electron_capture_E20.0",
+      "error": 4.2962722009987075e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "absolute_cross_section_cm2_electron_capture_E20.0",
+      "error": 4.296495387912103e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E3.0_M939.0",
+      "error": 2.3314683517128287e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E3.0_M10000.0",
+      "error": 1.2212453270876722e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E3.0_M100000.0",
+      "error": 3.552713678800501e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E3.0_M10000000.0",
+      "error": 0.0,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_limit_positron_capture_E3.0",
+      "error": 2.153313316766159e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "absolute_cross_section_cm2_positron_capture_E3.0",
+      "error": 2.1530901281874293e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E8.0_M939.0",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E8.0_M10000.0",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E8.0_M100000.0",
+      "error": 2.220446049250313e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E8.0_M10000000.0",
+      "error": 2.220446049250313e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_limit_positron_capture_E8.0",
+      "error": 5.2886217849490436e-08,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "absolute_cross_section_cm2_positron_capture_E8.0",
+      "error": 5.3109404429818596e-08,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E20.0_M939.0",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E20.0_M10000.0",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E20.0_M100000.0",
+      "error": 4.440892098500626e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_positron_capture_E20.0_M10000000.0",
+      "error": 2.6645352591003757e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_limit_positron_capture_E20.0",
+      "error": 3.884885617644329e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "absolute_cross_section_cm2_positron_capture_E20.0",
+      "error": 3.885108804002613e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "quadrature_refinement_E5.0",
+      "error": 5.5067062021407764e-14,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "q_energy_independent_E5.0",
+      "error": 2.0305979120394113e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "energy_tail_E5.0",
+      "error": 0.0,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "unit_conversion_E5.0",
+      "error": 0.0,
+      "gate": 1e-14,
+      "pass": true
+    },
+    {
+      "name": "quadrature_refinement_E20.0",
+      "error": 7.327471962526033e-15,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "q_energy_independent_E20.0",
+      "error": 1.1102230246251565e-15,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "energy_tail_E20.0",
+      "error": 0.0,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "unit_conversion_E20.0",
+      "error": 0.0,
+      "gate": 1e-14,
+      "pass": true
+    },
+    {
+      "name": "absolute_number_energy_moments_electron_capture",
+      "error": 3.652276794441356e-06,
+      "gate": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "outer_neutrino_refinement_electron_capture",
+      "error": 1.2212453270876722e-15,
+      "gate": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "absolute_number_energy_moments_positron_capture",
+      "error": 3.430411870564143e-06,
+      "gate": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "outer_neutrino_refinement_positron_capture",
+      "error": 2.2799062637801626e-10,
+      "gate": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "angular_integral_Ee0.51099895069",
+      "error": 0.0,
+      "gate": 1e-14,
+      "pass": true
+    },
+    {
+      "name": "angular_integral_Ee1.0",
+      "error": 0.0,
+      "gate": 1e-14,
+      "pass": true
+    },
+    {
+      "name": "angular_integral_Ee10.0",
+      "error": 0.0,
+      "gate": 1e-14,
+      "pass": true
+    }
+  ],
+  "static_limit_samples": [
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 3.0,
+      "kinetic_mass_MeV": 939.0,
+      "j_s-1": 0.005860267347134187,
+      "chi_s-1": 0.01852152753384598,
+      "static_j_s-1": 0.005742429186364819,
+      "static_chi_s-1": 0.018149096958593302,
+      "chi_static_relative_difference": 0.020520611912668185
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 3.0,
+      "kinetic_mass_MeV": 10000.0,
+      "j_s-1": 0.005753337129498576,
+      "chi_s-1": 0.01818357179687667,
+      "static_j_s-1": 0.005742429186364819,
+      "static_chi_s-1": 0.018149096958593302,
+      "chi_static_relative_difference": 0.0018995346359118592
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 3.0,
+      "kinetic_mass_MeV": 100000.0,
+      "j_s-1": 0.005743518519279175,
+      "chi_s-1": 0.01815253982363193,
+      "static_j_s-1": 0.005742429186364819,
+      "static_chi_s-1": 0.018149096958593302,
+      "chi_static_relative_difference": 0.0001896989721572595
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 3.0,
+      "kinetic_mass_MeV": 10000000.0,
+      "j_s-1": 0.00574244007809175,
+      "chi_s-1": 0.018149131382179863,
+      "static_j_s-1": 0.005742429186364819,
+      "static_chi_s-1": 0.018149096958593302,
+      "chi_static_relative_difference": 1.8967107091594215e-06
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 8.0,
+      "kinetic_mass_MeV": 939.0,
+      "j_s-1": 0.009307949934075237,
+      "chi_s-1": 0.1557534042242605,
+      "static_j_s-1": 0.009344695018294186,
+      "static_chi_s-1": 0.15636827344854104,
+      "chi_static_relative_difference": -0.003932186566495965
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 8.0,
+      "kinetic_mass_MeV": 10000.0,
+      "j_s-1": 0.009341461088053877,
+      "chi_s-1": 0.1563141588854506,
+      "static_j_s-1": 0.009344695018294186,
+      "static_chi_s-1": 0.15636827344854104,
+      "chi_static_relative_difference": -0.0003460712451253123
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 8.0,
+      "kinetic_mass_MeV": 100000.0,
+      "j_s-1": 0.009344373673494706,
+      "chi_s-1": 0.15636289626593836,
+      "static_j_s-1": 0.009344695018294186,
+      "static_chi_s-1": 0.15636827344854104,
+      "chi_static_relative_difference": -3.438793870458312e-05
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 8.0,
+      "kinetic_mass_MeV": 10000000.0,
+      "j_s-1": 0.009344691807110218,
+      "chi_s-1": 0.15636821971459974,
+      "static_j_s-1": 0.009344695018294186,
+      "static_chi_s-1": 0.15636827344854104,
+      "chi_static_relative_difference": -3.436371082132794e-07
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 20.0,
+      "kinetic_mass_MeV": 939.0,
+      "j_s-1": 0.0010606529635790942,
+      "chi_s-1": 0.9690244750630975,
+      "static_j_s-1": 0.0011098214989935283,
+      "static_chi_s-1": 1.0139454019408354,
+      "chi_static_relative_difference": -0.04430310230881551
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 20.0,
+      "kinetic_mass_MeV": 10000.0,
+      "j_s-1": 0.0011050678065185658,
+      "chi_s-1": 1.0096023750382201,
+      "static_j_s-1": 0.0011098214989935283,
+      "static_chi_s-1": 1.0139454019408354,
+      "chi_static_relative_difference": -0.00428329463726751
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 20.0,
+      "kinetic_mass_MeV": 100000.0,
+      "j_s-1": 0.0011093448323159117,
+      "chi_s-1": 1.013509913903825,
+      "static_j_s-1": 0.0011098214989935283,
+      "static_chi_s-1": 1.0139454019408354,
+      "chi_static_relative_difference": -0.0004294985076875868
+    },
+    {
+      "channel": "electron_capture",
+      "E_nu_MeV": 20.0,
+      "kinetic_mass_MeV": 10000000.0,
+      "j_s-1": 0.0011098167308982768,
+      "chi_s-1": 1.0139410457553917,
+      "static_j_s-1": 0.0011098214989935283,
+      "static_chi_s-1": 1.0139454019408354,
+      "chi_static_relative_difference": -4.2962722009987075e-06
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 3.0,
+      "kinetic_mass_MeV": 939.0,
+      "j_s-1": 0.0006172397702648477,
+      "chi_s-1": 0.0014430570214328117,
+      "static_j_s-1": 0.0006031723269522192,
+      "static_chi_s-1": 0.0014101684685173337,
+      "chi_static_relative_difference": 0.023322428241540072
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 3.0,
+      "kinetic_mass_MeV": 10000.0,
+      "j_s-1": 0.0006044731884042149,
+      "chi_s-1": 0.0014132097781390511,
+      "static_j_s-1": 0.0006031723269522192,
+      "static_chi_s-1": 0.0014101684685173337,
+      "chi_static_relative_difference": 0.0021566994934407724
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 3.0,
+      "kinetic_mass_MeV": 100000.0,
+      "j_s-1": 0.000603302229018231,
+      "chi_s-1": 0.0014104721691171442,
+      "static_j_s-1": 0.0006031723269522192,
+      "static_chi_s-1": 0.0014101684685173337,
+      "chi_static_relative_difference": 0.00021536476427508333
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 3.0,
+      "kinetic_mass_MeV": 10000000.0,
+      "j_s-1": 0.0006031736257712213,
+      "chi_s-1": 0.0014101715050518757,
+      "static_j_s-1": 0.0006031723269522192,
+      "static_chi_s-1": 0.0014101684685173337,
+      "chi_static_relative_difference": 2.153313316766159e-06
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 8.0,
+      "kinetic_mass_MeV": 939.0,
+      "j_s-1": 0.0019933489827983933,
+      "chi_s-1": 0.02467385832386103,
+      "static_j_s-1": 0.0019948085640514863,
+      "static_chi_s-1": 0.02469192515579155,
+      "chi_static_relative_difference": -0.000731689887140341
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 8.0,
+      "kinetic_mass_MeV": 10000.0,
+      "j_s-1": 0.0019947001298420723,
+      "chi_s-1": 0.02469058294710469,
+      "static_j_s-1": 0.0019948085640514863,
+      "static_chi_s-1": 0.02469192515579155,
+      "chi_static_relative_difference": -5.435820327459595e-05
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 8.0,
+      "kinetic_mass_MeV": 100000.0,
+      "j_s-1": 0.001994797985037776,
+      "chi_s-1": 0.024691794207780098,
+      "static_j_s-1": 0.0019948085640514863,
+      "static_chi_s-1": 0.02469192515579155,
+      "chi_static_relative_difference": -5.303272653911506e-06
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 8.0,
+      "kinetic_mass_MeV": 10000000.0,
+      "j_s-1": 0.001994808458553606,
+      "chi_s-1": 0.02469192384992905,
+      "static_j_s-1": 0.0019948085640514863,
+      "static_chi_s-1": 0.02469192515579155,
+      "chi_static_relative_difference": -5.288621662824511e-08
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 20.0,
+      "kinetic_mass_MeV": 939.0,
+      "j_s-1": 0.0002789316142357126,
+      "chi_s-1": 0.18850783067644186,
+      "static_j_s-1": 0.0002906217971225504,
+      "static_chi_s-1": 0.1964083012711683,
+      "chi_static_relative_difference": -0.04022472850482406
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 20.0,
+      "kinetic_mass_MeV": 10000.0,
+      "j_s-1": 0.00028949573339634053,
+      "chi_s-1": 0.19564728380524585,
+      "static_j_s-1": 0.0002906217971225504,
+      "static_chi_s-1": 0.1964083012711683,
+      "chi_static_relative_difference": -0.0038746705765341227
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 20.0,
+      "kinetic_mass_MeV": 100000.0,
+      "j_s-1": 0.0002905089233030856,
+      "chi_s-1": 0.19633201877839368,
+      "static_j_s-1": 0.0002906217971225504,
+      "static_chi_s-1": 0.1964083012711683,
+      "chi_static_relative_difference": -0.0003883873150010153
+    },
+    {
+      "channel": "positron_capture",
+      "E_nu_MeV": 20.0,
+      "kinetic_mass_MeV": 10000000.0,
+      "j_s-1": 0.0002906206680901106,
+      "chi_s-1": 0.1964075382473836,
+      "static_j_s-1": 0.0002906217971225504,
+      "static_chi_s-1": 0.1964083012711683,
+      "chi_static_relative_difference": -3.884885617089218e-06
+    }
+  ],
+  "moment_samples": [
+    {
+      "channel": "electron_capture",
+      "orders": [
+        16,
+        32
+      ],
+      "number_energy_moments": [
+        [
+          8.305040916134231e-08,
+          1.2518448162577879e-06
+        ],
+        [
+          8.305040916134227e-08,
+          1.2518448162577864e-06
+        ]
+      ],
+      "static_number_energy_moments": [
+        8.305063569700955e-08,
+        1.2518493883582577e-06
+      ]
+    },
+    {
+      "channel": "positron_capture",
+      "orders": [
+        16,
+        32
+      ],
+      "number_energy_moments": [
+        [
+          1.991855694233485e-08,
+          3.1379450652968734e-07
+        ],
+        [
+          1.9918556937793605e-08,
+          3.137945065215026e-07
+        ]
+      ],
+      "static_number_energy_moments": [
+        1.9918607371702772e-08,
+        3.1379558296959536e-07
+      ]
+    }
+  ]
+}
