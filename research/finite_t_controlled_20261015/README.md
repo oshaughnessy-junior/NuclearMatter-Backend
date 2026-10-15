@@ -53,3 +53,20 @@ The old crossed_decay.combined_antineutrino wrapper still calls frozen allowed_c
 quantum_slab/ explicitly composes guarded mapped capture plus crossed decay with the matched FD EOS for twelve selected spectral energies and two prescribed irradiated faces.514 author checks pass; independent physical collision-source and numerical ray/flux checks pass. A broad fallback initially bypassed invalid controls; preserved source/reports demonstrate the counterexample. The parent narrowed the fallback, restored validation at both entry points, reran506+8 valid checks and9 regression checks;20 independent post-repair checks pass with unchanged held-out physical outputs. The original CHECKPOINT.json is historical; CONTROL_REPAIR.md and REPAIRED_SOURCE_HASHES.json describe current source. Sources are column exchanges per area/per energy, not volumetric sources or time-evolved matter. No integrated luminosity or closed-fluid claim follows.
 
 rmf_parameter_ad/ adds first-order derivatives in five raw nuclear couplings at fixedM939, using exact converged primals and analytic implicit rules.504 author checks plus7 independent physics and84 numerical checks pass, including new shifted couplings, an independent full species-Hessian gate and re-solved finite differences. Parameter-extended Gibbs-Duhem includes minus the canonical parameter-work derivative; omitting it doubles the vector-coupling pressure derivative. Raw-coupling changes are not recalibrated EOS uncertainties; external finiteT forward agreement, global phase selection and higher-order AD remain unqualified.
+
+## Integrated charged-current moments and physical threshold study
+
+quantum_energy_moments/ integrates the named complete electron-flavor charged-current inventory at two warm matched FD baths. The dilute602-check grid passes;14 initial moderate coarse-grid failures are retained, with70 targeted refined/remainder checks supporting the final summary.48 independent numerical and18 physics checks accept the qualified full-energy moments/net slab exchanges. Positive slab components are linear-source/incident-attenuation terms, not gross microscopic reaction counts. An initial-state matched-EOS diagnostic can yield rising temperature while total matter energy escapes, due to the composition derivative.
+
+The explicit --resume path originally lacked state/source fingerprints. The author preserved that version and added full solved-state, source, environment, controls, energy-edge and result validation;31 author and8 independent cache tests pass. Legacy partials are intentionally rejected rather than silently migrated. The heavy-static integrated-inventory gate remains excluded after an underflow failure; selected-energy static checks do not replace it.
+
+urca_threshold/ supplies nine independently reviewed spectral capture/inverse points under a declared constant-offset NR quasiparticle family.48 author gates,11 independent physics and80 numerical review checks pass. Offsets are set once per composition atT0 and held fixed in each temperature scan; different compositions are different local Hamiltonians. The independently verified finite-energy cold absorption onset distinguishes true thermal opening from an incident neutrino simply exceeding the cold onset. The failedT=.01MeV extension is preserved and excluded. No universal width, total Urca rate, interacting GM1 threshold or cross-family composition derivative is implied.
+
+### Compressed raw evidence
+
+Large new JSON reports are stored losslessly as .json.gz, with original/stored SHA256 and sizes in ARCHIVE7_EVIDENCE_MANIFEST.json. Source and small reports remain readable. From this research directory run:
+
+    python restore_archive7_evidence.py --verify-only
+    python restore_archive7_evidence.py
+
+The first checks all compressed bytes and original hashes; the second restores exact JSON filenames needed by report/figure readers. Neither overwrites a changed existing file. Original failed grids and pre-repair snapshots retain their original status. Fresh physics drivers regenerate their own measurements; decompression is only for archived-evidence inspection.

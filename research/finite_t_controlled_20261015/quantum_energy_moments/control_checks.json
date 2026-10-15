@@ -1,0 +1,46 @@
+[
+  {
+    "case": "{'length_cm': -1}",
+    "passed": true
+  },
+  {
+    "case": "{'length_cm': inf}",
+    "passed": true
+  },
+  {
+    "case": "{'outer_order': 3}",
+    "passed": true
+  },
+  {
+    "case": "{'outer_order': True}",
+    "passed": true
+  },
+  {
+    "case": "{'internal_order': nan}",
+    "passed": true
+  },
+  {
+    "case": "{'tail': -1}",
+    "passed": true
+  },
+  {
+    "case": "{'tail': nan}",
+    "passed": true
+  },
+  {
+    "case": "{'edges': [0, 1, inf]}",
+    "passed": true
+  },
+  {
+    "case": "{'edges': [0, 1, 1]}",
+    "passed": true
+  },
+  {
+    "case": "{'edges': [1, 2]}",
+    "passed": true
+  },
+  {
+    "case": "{'flavor': 'numu'}",
+    "passed": true
+  }
+]

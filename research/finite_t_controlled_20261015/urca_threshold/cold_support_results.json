@@ -1,0 +1,68 @@
+{
+  "critical_Enu_MeV": 0.30891897995726564,
+  "reference": {
+    "nB": 0.01,
+    "Yp": 0.1,
+    "offset_neutron": 54.44701849820937,
+    "offset_proton": 0.0,
+    "pFn": 126.98165214034535,
+    "pFp": 61.04641107877929,
+    "pFe": 61.04641107877929,
+    "delta_p": 4.88882998278676,
+    "EF_n": 8.585910532636673,
+    "EF_p": 1.9843792894565002,
+    "mu_e_cold": 61.04854974138954,
+    "cold_beta_residual": 0.0,
+    "calibration_temperature": 0.0
+  },
+  "checks": [
+    {
+      "name": "cold finite-energy support E0.03",
+      "passed": true
+    },
+    {
+      "name": "cold finite-energy support E0.09",
+      "passed": true
+    },
+    {
+      "name": "cold finite-energy support E0.3",
+      "passed": true
+    },
+    {
+      "name": "cold finite-energy support E0.32",
+      "passed": true
+    },
+    {
+      "name": "cold finite-energy support E0.9",
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "Enu": 0.03,
+      "maximum_cold_interval_MeV": 0.0,
+      "allowed": false
+    },
+    {
+      "Enu": 0.09,
+      "maximum_cold_interval_MeV": 0.0,
+      "allowed": false
+    },
+    {
+      "Enu": 0.3,
+      "maximum_cold_interval_MeV": 0.0,
+      "allowed": false
+    },
+    {
+      "Enu": 0.32,
+      "maximum_cold_interval_MeV": 0.02451411545245641,
+      "allowed": true
+    },
+    {
+      "Enu": 0.9,
+      "maximum_cold_interval_MeV": 0.899999999999995,
+      "allowed": true
+    }
+  ],
+  "note": "Selected local model finite-energy absorption onset; distinct from zero-neutrino cold Yp=1/9 triangle"
+}

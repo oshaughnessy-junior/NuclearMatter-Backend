@@ -1,0 +1,115 @@
+{
+  "author_status": "dilute passes all602; moderate original coarse grids fail14/602, targeted refinement70/70 passes; independent review pending",
+  "species": [
+    {
+      "state": "dilute",
+      "flavor": "nue",
+      "values": {
+        "emission_number_cm3_s": 2.5963623097185033e+38,
+        "emission_energy_MeV_cm3_s": 4.3576231614876586e+39,
+        "incoming_left_number_cm2_s": 1.108043327514409e+43,
+        "incoming_right_number_cm2_s": 4.9533120499852807e+42,
+        "outgoing_left_number_cm2_s": 1.3712737099919645e+43,
+        "outgoing_right_number_cm2_s": 1.9494968084523535e+43,
+        "slab_emission_number_cm2_s": 2.0437671478394928e+43,
+        "slab_absorbed_boundary_number_cm2_s": 3.2637116190811115e+42,
+        "incoming_left_energy_MeV_cm2_s": 1.4500094615819233e+44,
+        "incoming_right_energy_MeV_cm2_s": 9.255473499249913e+43,
+        "outgoing_left_energy_MeV_cm2_s": 2.1895769343816665e+44,
+        "outgoing_right_energy_MeV_cm2_s": 2.7492466346758784e+44,
+        "slab_emission_energy_MeV_cm2_s": 3.316193321241817e+44,
+        "slab_absorbed_boundary_energy_MeV_cm2_s": 7.529265636911859e+43,
+        "radiation_number_gain_cm2_s": 1.7173959859313816e+43,
+        "radiation_energy_gain_MeV_cm2_s": 2.5632667575506312e+44,
+        "bath_energy_source_erg_cm2_s": -4.106806105656565e+38,
+        "bath_electron_lepton_source_cm2_s": -1.7173959859313816e+43,
+        "emission_energy_erg_cm3_s": 6.981682009112735e+33
+      }
+    },
+    {
+      "state": "dilute",
+      "flavor": "antinue",
+      "values": {
+        "emission_number_cm3_s": 1.4075353718825248e+32,
+        "emission_energy_MeV_cm3_s": 1.5012976532801805e+33,
+        "incoming_left_number_cm2_s": 1.108043327514409e+43,
+        "incoming_right_number_cm2_s": 4.9533120499852807e+42,
+        "outgoing_left_number_cm2_s": 4.193343442218171e+42,
+        "outgoing_right_number_cm2_s": 1.0171495131304285e+43,
+        "slab_emission_number_cm2_s": 1.3241484376469287e+37,
+        "slab_absorbed_boundary_number_cm2_s": 1.668919993091294e+42,
+        "incoming_left_energy_MeV_cm2_s": 1.4500094615819233e+44,
+        "incoming_right_energy_MeV_cm2_s": 9.255473499249913e+43,
+        "outgoing_left_energy_MeV_cm2_s": 7.125890095173526e+43,
+        "outgoing_right_energy_MeV_cm2_s": 1.2690343763279113e+44,
+        "slab_emission_energy_MeV_cm2_s": 1.3863555400289734e+38,
+        "slab_absorbed_boundary_energy_MeV_cm2_s": 3.9393481201719e+43,
+        "radiation_number_gain_cm2_s": -1.6689067516069173e+42,
+        "radiation_energy_gain_MeV_cm2_s": -3.9393342566164997e+43,
+        "bath_energy_source_erg_cm2_s": 6.311509299466716e+37,
+        "bath_electron_lepton_source_cm2_s": -1.6689067516069173e+42,
+        "emission_energy_erg_cm3_s": 2.4053440207645387e+27
+      }
+    },
+    {
+      "state": "moderate",
+      "flavor": "nue",
+      "values": {
+        "emission_number_cm3_s": 1.9501685397250148e+42,
+        "emission_energy_MeV_cm3_s": 9.339811190017767e+43,
+        "incoming_left_number_cm2_s": 1.1080433275144093e+43,
+        "incoming_right_number_cm2_s": 4.953312049985283e+42,
+        "outgoing_left_number_cm2_s": 3.1761752161386535e+45,
+        "outgoing_right_number_cm2_s": 3.1782450685134603e+45,
+        "slab_emission_number_cm2_s": 6.350895785883266e+45,
+        "slab_absorbed_boundary_number_cm2_s": 1.2509246556282342e+43,
+        "incoming_left_energy_MeV_cm2_s": 1.4500094615819241e+44,
+        "incoming_right_energy_MeV_cm2_s": 9.255473499249919e+43,
+        "outgoing_left_energy_MeV_cm2_s": 1.394636599394767e+47,
+        "outgoing_right_energy_MeV_cm2_s": 1.394787657619876e+47,
+        "slab_emission_energy_MeV_cm2_s": 2.789151871870909e+47,
+        "slab_absorbed_boundary_energy_MeV_cm2_s": 2.103171667772629e+44,
+        "radiation_number_gain_cm2_s": 6.338386539326983e+45,
+        "radiation_energy_gain_MeV_cm2_s": 2.7870487002031364e+47,
+        "bath_energy_source_erg_cm2_s": -4.465344305285536e+41,
+        "bath_electron_lepton_source_cm2_s": -6.338386539326983e+45,
+        "emission_energy_erg_cm3_s": 1.49640272546182e+38
+      }
+    },
+    {
+      "state": "moderate",
+      "flavor": "antinue",
+      "values": {
+        "emission_number_cm3_s": 1.909624488727964e+24,
+        "emission_energy_MeV_cm3_s": 2.040709818427246e+25,
+        "incoming_left_number_cm2_s": 1.108043327514409e+43,
+        "incoming_right_number_cm2_s": 4.9533120499852807e+42,
+        "outgoing_left_number_cm2_s": 1.2161352274940974e+42,
+        "outgoing_right_number_cm2_s": 4.397327201964431e+42,
+        "slab_emission_number_cm2_s": 1.103195918216732e+29,
+        "slab_absorbed_boundary_number_cm2_s": 1.0420282895670952e+43,
+        "incoming_left_energy_MeV_cm2_s": 1.4500094615819233e+44,
+        "incoming_right_energy_MeV_cm2_s": 9.255473499249913e+43,
+        "outgoing_left_energy_MeV_cm2_s": 1.1589694391395519e+43,
+        "outgoing_right_energy_MeV_cm2_s": 3.7147970492553467e+43,
+        "slab_emission_energy_MeV_cm2_s": 1.0218529765717877e+30,
+        "slab_absorbed_boundary_energy_MeV_cm2_s": 1.8881801626674345e+44,
+        "radiation_number_gain_cm2_s": -1.0420282895670842e+43,
+        "radiation_energy_gain_MeV_cm2_s": -1.888180162667424e+44,
+        "bath_energy_source_erg_cm2_s": 3.025198137408066e+38,
+        "bath_electron_lepton_source_cm2_s": -1.0420282895670842e+43,
+        "emission_energy_erg_cm3_s": 3.2695775878585164e+19
+      }
+    }
+  ],
+  "material_totals": {
+    "dilute": {
+      "bath_energy_source_erg_cm2_s": -3.475655175709893e+38,
+      "bath_electron_lepton_source_cm2_s": -1.8842866610920734e+43
+    },
+    "moderate": {
+      "bath_energy_source_erg_cm2_s": -4.462319107148128e+41,
+      "bath_electron_lepton_source_cm2_s": -6.348806822222654e+45
+    }
+  }
+}

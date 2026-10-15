@@ -1,0 +1,729 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "cold_beta_Y0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.1_T0.03",
+      "error": 2.5301982731207318e-12,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.1_T0.03",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.1_T0.03",
+      "error": 1.5765166949677223e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.1_T0.03",
+      "error": 3.441691376337926e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.1_T0.03",
+      "error": 2.7435965372675434e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.1_T0.1",
+      "error": 3.554934124849751e-13,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.1_T0.1",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.1_T0.1",
+      "error": 1.7319479184152442e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.1_T0.1",
+      "error": 8.881784197001292e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.1_T0.1",
+      "error": 8.517464568707524e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.1_T0.3",
+      "error": 4.030109579389318e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.1_T0.3",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.1_T0.3",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.1_T0.3",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.1_T0.3",
+      "error": 3.009661035345175e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "cold_beta_Y0.1111111111111111",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.1111111111111111_T0.03",
+      "error": 2.4926727348884015e-12,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.1111111111111111_T0.03",
+      "error": 2.3980817331903668e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.1111111111111111_T0.03",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.1111111111111111_T0.03",
+      "error": 3.552713678800438e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.1111111111111111_T0.03",
+      "error": 7.704877768179102e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.1111111111111111_T0.1",
+      "error": 4.511946372076636e-13,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.1111111111111111_T0.1",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.1111111111111111_T0.1",
+      "error": 7.149836278586008e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.1111111111111111_T0.1",
+      "error": 1.4210854715202105e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.1111111111111111_T0.1",
+      "error": 6.542147360235814e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.1111111111111111_T0.3",
+      "error": 4.39648317751562e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.1111111111111111_T0.3",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.1111111111111111_T0.3",
+      "error": 6.661338147750939e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.1111111111111111_T0.3",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.1111111111111111_T0.3",
+      "error": 3.8671041800162887e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "cold_beta_Y0.12",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.12_T0.03",
+      "error": 2.4633628470382973e-12,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.12_T0.03",
+      "error": 4.6114223561463113e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.12_T0.03",
+      "error": 1.2079226507921703e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.12_T0.03",
+      "error": 9.80548975349419e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.12_T0.03",
+      "error": 4.0932163313584697e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.12_T0.1",
+      "error": 5.235811784132238e-13,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.12_T0.1",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.12_T0.1",
+      "error": 1.9984014443252818e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.12_T0.1",
+      "error": 1.243449787580183e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.12_T0.1",
+      "error": 9.247889449237611e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_density_Y0.12_T0.3",
+      "error": 4.9182879990894435e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "capture_order_Y0.12_T0.3",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture_KMS_Y0.12_T0.3",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent_capture_Y0.12_T0.3",
+      "error": 3.5527136788004946e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_quad_error_Y0.12_T0.3",
+      "error": 1.0261815556080386e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "rows": [
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1,
+        "offset_neutron": 54.44701849820937,
+        "offset_proton": 0.0,
+        "pFn": 126.98165214034535,
+        "pFp": 61.04641107877929,
+        "pFe": 61.04641107877929,
+        "delta_p": 4.88882998278676,
+        "EF_n": 8.585910532636673,
+        "EF_p": 1.9843792894565002,
+        "mu_e_cold": 61.04854974138954,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.03,
+      "Enu": 0.09,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.00033543724971707434,
+      "mu_n": 63.03284281591192,
+      "mu_p": 1.984006139408625,
+      "mu_e": 61.048501239253575,
+      "independent_densities": [
+        0.00900000000000108,
+        0.0009999999999999996,
+        0.0010000000000025301
+      ],
+      "log_j": -3.683719407483462,
+      "log_chi": -0.6725381658260687,
+      "log_j_over_T2": 3.3293963871565015,
+      "log_chi_over_T2": 6.340577628813895,
+      "independent_log_chi": -0.6725381658260343,
+      "coarse_logs": [
+        -3.683719407589649,
+        -0.6725381659322558
+      ],
+      "fine_logs": [
+        -3.683719407483464,
+        -0.6725381658260652
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.13523072645404124,
+      "pFp_over_M": 0.06501215237356688,
+      "T_over_EFp": 0.015118077556744039
+    },
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1,
+        "offset_neutron": 54.44701849820937,
+        "offset_proton": 0.0,
+        "pFn": 126.98165214034535,
+        "pFp": 61.04641107877929,
+        "pFe": 61.04641107877929,
+        "delta_p": 4.88882998278676,
+        "EF_n": 8.585910532636673,
+        "EF_p": 1.9843792894565002,
+        "mu_e_cold": 61.04854974138954,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.1,
+      "Enu": 0.30000000000000004,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.0037413995270867417,
+      "mu_n": 63.03197091187716,
+      "mu_p": 1.9802186835812394,
+      "mu_e": 61.04801082876883,
+      "independent_densities": [
+        0.00899999999999996,
+        0.0009999999999999996,
+        0.0010000000000003554
+      ],
+      "log_j": 6.567717478605448,
+      "log_chi": 9.605131473876298,
+      "log_j_over_T2": 11.172887664593539,
+      "log_chi_over_T2": 14.210301659864388,
+      "independent_log_chi": 9.60513147387629,
+      "coarse_logs": [
+        6.56771747860545,
+        9.605131473876302
+      ],
+      "fine_logs": [
+        6.567717478605451,
+        9.605131473876302
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.13523072645404188,
+      "pFp_over_M": 0.06501215237356688,
+      "T_over_EFp": 0.05039359185581347
+    },
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1,
+        "offset_neutron": 54.44701849820937,
+        "offset_proton": 0.0,
+        "pFn": 126.98165214034535,
+        "pFp": 61.04641107877929,
+        "pFe": 61.04641107877929,
+        "delta_p": 4.88882998278676,
+        "EF_n": 8.585910532636673,
+        "EF_p": 1.9843792894565002,
+        "mu_e_cold": 61.04854974138954,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.3,
+      "Enu": 0.8999999999999999,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.0350763809031136,
+      "mu_n": 63.024291963675466,
+      "mu_p": 1.9455160549692365,
+      "mu_e": 61.04369952780311,
+      "independent_densities": [
+        0.008999999999999638,
+        0.001,
+        0.0009999999999999658
+      ],
+      "log_j": 10.002671267446667,
+      "log_chi": 13.119592537123712,
+      "log_j_over_T2": 12.410616876098539,
+      "log_chi_over_T2": 15.527538145775583,
+      "independent_log_chi": 13.119592537123712,
+      "coarse_logs": [
+        10.002671267446667,
+        13.119592537123712
+      ],
+      "fine_logs": [
+        10.002671267446669,
+        13.119592537123712
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.1352307264540401,
+      "pFp_over_M": 0.06501215237356689,
+      "T_over_EFp": 0.1511807755674404
+    },
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1111111111111111,
+        "offset_neutron": 56.844205353763975,
+        "offset_proton": 0.0,
+        "pFn": 126.45692858386987,
+        "pFp": 63.228464291934934,
+        "pFe": 63.228464291934934,
+        "delta_p": 0.0,
+        "EF_n": 8.515098395562282,
+        "EF_p": 2.1287745988905704,
+        "mu_e_cold": 63.230529150435686,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.03,
+      "Enu": 0.09,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.00030772008540225215,
+      "mu_n": 65.35921681739663,
+      "mu_p": 2.128426775172965,
+      "mu_e": 63.230482322138265,
+      "independent_densities": [
+        0.008888888888889787,
+        0.001111111111111111,
+        0.0011111111111138808
+      ],
+      "log_j": 5.816081125810813,
+      "log_chi": 8.826338461990902,
+      "log_j_over_T2": 12.829196920450777,
+      "log_chi_over_T2": 15.839454256630866,
+      "independent_log_chi": 8.826338461990938,
+      "coarse_logs": [
+        5.816081125211329,
+        8.82633846139138
+      ],
+      "fine_logs": [
+        5.816081125810837,
+        8.826338461990911
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.13467191542478088,
+      "pFp_over_M": 0.06733595771239077,
+      "T_over_EFp": 0.01409261460355397
+    },
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1111111111111111,
+        "offset_neutron": 56.844205353763975,
+        "offset_proton": 0.0,
+        "pFn": 126.45692858386987,
+        "pFp": 63.228464291934934,
+        "pFe": 63.228464291934934,
+        "delta_p": 0.0,
+        "EF_n": 8.515098395562282,
+        "EF_p": 2.1287745988905704,
+        "mu_e_cold": 63.230529150435686,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.1,
+      "Enu": 0.30000000000000004,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.0034306373608927743,
+      "mu_n": 65.35833765932855,
+      "mu_p": 2.124898185946441,
+      "mu_e": 63.23000883602123,
+      "independent_densities": [
+        0.00888888888888886,
+        0.001111111111111111,
+        0.0011111111111116124
+      ],
+      "log_j": 8.205297996722084,
+      "log_chi": 11.239604370330941,
+      "log_j_over_T2": 12.810468182710174,
+      "log_chi_over_T2": 15.844774556319031,
+      "independent_log_chi": 11.239604370330927,
+      "coarse_logs": [
+        8.205297996722077,
+        11.239604370330936
+      ],
+      "fine_logs": [
+        8.205297996722088,
+        11.239604370330941
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.13467191542478157,
+      "pFp_over_M": 0.06733595771239077,
+      "T_over_EFp": 0.046975382011846575
+    },
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1111111111111111,
+        "offset_neutron": 56.844205353763975,
+        "offset_proton": 0.0,
+        "pFn": 126.45692858386987,
+        "pFp": 63.228464291934934,
+        "pFe": 63.228464291934934,
+        "delta_p": 0.0,
+        "EF_n": 8.515098395562282,
+        "EF_p": 2.1287745988905704,
+        "mu_e_cold": 63.230529150435686,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.3,
+      "Enu": 0.8999999999999999,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.031984994627848096,
+      "mu_n": 65.35059458823409,
+      "mu_p": 2.0927632729005303,
+      "mu_e": 63.225846320705706,
+      "independent_densities": [
+        0.008888888888888499,
+        0.001111111111111102,
+        0.0011111111111110638
+      ],
+      "log_j": 10.345452967741831,
+      "log_chi": 13.452069616501332,
+      "log_j_over_T2": 12.753398576393703,
+      "log_chi_over_T2": 15.860015225153203,
+      "independent_log_chi": 13.45206961650133,
+      "coarse_logs": [
+        10.34545296774183,
+        13.45206961650133
+      ],
+      "fine_logs": [
+        10.345452967741831,
+        13.452069616501333
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.13467191542477955,
+      "pFp_over_M": 0.06733595771239059,
+      "T_over_EFp": 0.1409261460355397
+    },
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.12,
+        "offset_neutron": 58.65611526317358,
+        "offset_proton": 0.0,
+        "pFn": 126.03399255319827,
+        "pFp": 64.8714918507091,
+        "pFe": 64.8714918507091,
+        "delta_p": -3.708991148219937,
+        "EF_n": 8.458236037752735,
+        "EF_p": 2.240846887612683,
+        "mu_e_cold": 64.87350441331364,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.03,
+      "Enu": 0.09,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.00028854427173996555,
+      "mu_n": 67.11426378455592,
+      "mu_p": 2.2405164692279835,
+      "mu_e": 64.87345877105619,
+      "independent_densities": [
+        0.008800000000000767,
+        0.001199999999999999,
+        0.0012000000000029559
+      ],
+      "log_j": 6.049973869470005,
+      "log_chi": 9.059592011861458,
+      "log_j_over_T2": 13.063089664109969,
+      "log_chi_over_T2": 16.07270780650142,
+      "independent_log_chi": 9.059592011860477,
+      "coarse_logs": [
+        6.049974187414878,
+        9.05959232980633
+      ],
+      "fine_logs": [
+        6.049973869931147,
+        9.059592012322598
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.13422150431650443,
+      "pFp_over_M": 0.06908572082077646,
+      "T_over_EFp": 0.013387795554367801
+    },
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.12,
+        "offset_neutron": 58.65611526317358,
+        "offset_proton": 0.0,
+        "pFn": 126.03399255319827,
+        "pFp": 64.8714918507091,
+        "pFe": 64.8714918507091,
+        "delta_p": -3.708991148219937,
+        "EF_n": 8.458236037752735,
+        "EF_p": 2.240846887612683,
+        "mu_e_cold": 64.87350441331364,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.1,
+      "Enu": 0.30000000000000004,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.0032158799845660724,
+      "mu_n": 67.11337871349141,
+      "mu_p": 2.2371655563856168,
+      "mu_e": 64.87299727712123,
+      "independent_densities": [
+        0.008799999999999968,
+        0.0012000000000000008,
+        0.0012000000000006283
+      ],
+      "log_j": 8.42468240416203,
+      "log_chi": 11.456841204007672,
+      "log_j_over_T2": 13.02985259015012,
+      "log_chi_over_T2": 16.062011389995764,
+      "independent_log_chi": 11.45684120400766,
+      "coarse_logs": [
+        8.424682404162024,
+        11.456841204007667
+      ],
+      "fine_logs": [
+        8.424682404162033,
+        11.456841204007674
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.1342215043165051,
+      "pFp_over_M": 0.06908572082077649,
+      "T_over_EFp": 0.044625985181226006
+    },
+    {
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.12,
+        "offset_neutron": 58.65611526317358,
+        "offset_proton": 0.0,
+        "pFn": 126.03399255319827,
+        "pFp": 64.8714918507091,
+        "pFe": 64.8714918507091,
+        "delta_p": -3.708991148219937,
+        "EF_n": 8.458236037752735,
+        "EF_p": 2.240846887612683,
+        "mu_e_cold": 64.87350441331364,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "T": 0.3,
+      "Enu": 0.8999999999999999,
+      "Enu_over_T": 3.0,
+      "affinity_mu_e_plus_mu_p_minus_mu_n": -0.02987555949944465,
+      "mu_n": 67.10558336936302,
+      "mu_p": 2.206767622281272,
+      "mu_e": 64.8689401875823,
+      "independent_densities": [
+        0.008799999999999591,
+        0.0011999999999999986,
+        0.001199999999999941
+      ],
+      "log_j": 10.491465232675118,
+      "log_chi": 13.591050431006622,
+      "log_j_over_T2": 12.89941084132699,
+      "log_chi_over_T2": 15.998996039658493,
+      "independent_log_chi": 13.591050431006625,
+      "coarse_logs": [
+        10.491465232675118,
+        13.591050431006625
+      ],
+      "fine_logs": [
+        10.49146523267512,
+        13.591050431006625
+      ],
+      "discarded_panels": [],
+      "pFn_over_M": 0.134221504316503,
+      "pFp_over_M": 0.06908572082077644,
+      "T_over_EFp": 0.133877955543678
+    }
+  ],
+  "source_sha256": {
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "end_source_sha256": {
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "runtime_seconds": 6.740267417160794,
+  "scope": "selected electron capture/inverse spectral coefficients in frozen local constant-offset commonM NR quasiparticle model; not full Urca emissivity or interacting EOS",
+  "cold_extension_requested": false
+}
