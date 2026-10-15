@@ -1,0 +1,1 @@
+Actual tail80 source completed and tail_raw.json was saved. Reporting failed in json.dumps because a NumPy bool from the density comparison was not JSON-serializable. Numerical raw is preserved; report recovery computes only gates from completed saved source, with explicit Python float/bool conversion. No gate/physics change or numerical rerun to conceal failure.

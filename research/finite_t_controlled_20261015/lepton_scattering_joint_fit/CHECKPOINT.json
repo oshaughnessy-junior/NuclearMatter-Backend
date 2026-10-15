@@ -1,0 +1,22 @@
+{
+  "status": "AUTHOR_FROZEN_INDEPENDENT_REVIEW_PENDING",
+  "manifest_sha": "3d914218212a3e12ef62266f28b0a48c325d284379bb24e334b1de2ec544c01d",
+  "api_sha": "edf38db39a3776965c97e36592fc0a95ab4e95110f35002e2bc45f2794edc658",
+  "note_sha": "dd0d6c6eab723a17563f0c950fb42242ec6809904f9ef2dacfeb27cf821e3819",
+  "source_pins": {
+    "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  },
+  "model_sha": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0",
+  "counts": {
+    "development_quadrature_pass": 84,
+    "fresh_validation_pass": 80,
+    "independent_phase_pass": 12,
+    "API_math_admission_pass": 624,
+    "density_preservation_pass": 75
+  },
+  "external_model_uncertainty": "NOT TESTED",
+  "all_new_gates_pass": true,
+  "original_v1_unchanged": true
+}

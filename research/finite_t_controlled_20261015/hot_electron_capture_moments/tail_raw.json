@@ -1,0 +1,353 @@
+{
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "scenarios": {
+    "empty": {
+      "scenario": {
+        "name": "empty",
+        "mode": "empty"
+      },
+      "forward": {
+        "number": {
+          "value": 3.308860348247319e-07,
+          "log": -14.921491826521615,
+          "representable": true,
+          "reason": null
+        },
+        "neutrino_energy": {
+          "value": 3.1603848367506553e-06,
+          "log": -12.664816753998643,
+          "representable": true,
+          "reason": null
+        },
+        "electron_energy": {
+          "value": 3.5854154442999226e-06,
+          "log": -12.538636206582119,
+          "representable": true,
+          "reason": null
+        },
+        "proton_energy": {
+          "value": 0.00031146667408830486,
+          "log": -8.074218210730388,
+          "representable": true,
+          "reason": null
+        },
+        "neutron_energy": {
+          "value": 0.00031189170469585393,
+          "log": -8.072854530741857,
+          "representable": true,
+          "reason": null
+        },
+        "material_energy_loss": {
+          "value": 3.1603848367506553e-06,
+          "log": -12.664816753998643,
+          "representable": true,
+          "reason": null
+        }
+      },
+      "backward": {
+        "number": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "absent_initial_nue_occupation"
+        },
+        "neutrino_energy": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "absent_initial_nue_occupation"
+        },
+        "electron_energy": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "absent_initial_nue_occupation"
+        },
+        "proton_energy": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "absent_initial_nue_occupation"
+        },
+        "neutron_energy": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "absent_initial_nue_occupation"
+        },
+        "material_energy_loss": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "absent_initial_nue_occupation"
+        }
+      },
+      "net": {
+        "number": 3.308860348247322e-07,
+        "neutrino_energy": 3.160384836750658e-06,
+        "electron_energy": 3.585415444299921e-06,
+        "proton_energy": 0.0003114666740883049,
+        "neutron_energy": 0.00031189170469585425,
+        "material_energy_loss": 3.160384836750658e-06
+      },
+      "material_energy_change": -3.1603848367505787e-06,
+      "direct_material_energy_change": -3.160384836750658e-06,
+      "radiation_energy_change": 3.160384836750658e-06,
+      "energy_ledger_scaled": 2.50594736588168e-14,
+      "direct_energy_ledger_scaled": 0.0,
+      "number_sources": {
+        "n": 3.308860348247322e-07,
+        "p": -3.308860348247322e-07,
+        "electron_net": -3.308860348247322e-07,
+        "nue": 3.308860348247322e-07
+      },
+      "matter_Le_change": -3.308860348247322e-07,
+      "radiation_Le_change": 3.308860348247322e-07,
+      "entropy": null,
+      "max_event_kms_error": 0.0
+    },
+    "LTE": {
+      "scenario": {
+        "name": "LTE",
+        "mode": "FD",
+        "mu_nu": -2.809364169619812
+      },
+      "forward": {
+        "number": {
+          "value": 3.2789797112000537e-07,
+          "log": -14.930563340611123,
+          "representable": true,
+          "reason": null
+        },
+        "neutrino_energy": {
+          "value": 3.1463652334244538e-06,
+          "log": -12.669262665526125,
+          "representable": true,
+          "reason": null
+        },
+        "electron_energy": {
+          "value": 3.567447097444269e-06,
+          "log": -12.543660316732906,
+          "representable": true,
+          "reason": null
+        },
+        "proton_energy": {
+          "value": 0.00030865409171694573,
+          "log": -8.083289352394013,
+          "representable": true,
+          "reason": null
+        },
+        "neutron_energy": {
+          "value": 0.0003090751735809653,
+          "log": -8.081926030457058,
+          "representable": true,
+          "reason": null
+        },
+        "material_energy_loss": {
+          "value": 3.1463652334244538e-06,
+          "log": -12.669262665526125,
+          "representable": true,
+          "reason": null
+        }
+      },
+      "backward": {
+        "number": {
+          "value": 3.278979711200042e-07,
+          "log": -14.930563340611126,
+          "representable": true,
+          "reason": null
+        },
+        "neutrino_energy": {
+          "value": 3.1463652334244483e-06,
+          "log": -12.669262665526126,
+          "representable": true,
+          "reason": null
+        },
+        "electron_energy": {
+          "value": 3.567447097444263e-06,
+          "log": -12.543660316732907,
+          "representable": true,
+          "reason": null
+        },
+        "proton_energy": {
+          "value": 0.0003086540917169446,
+          "log": -8.083289352394017,
+          "representable": true,
+          "reason": null
+        },
+        "neutron_energy": {
+          "value": 0.00030907517358096424,
+          "log": -8.081926030457062,
+          "representable": true,
+          "reason": null
+        },
+        "material_energy_loss": {
+          "value": 3.1463652334244428e-06,
+          "log": -12.669262665526128,
+          "representable": true,
+          "reason": null
+        }
+      },
+      "net": {
+        "number": 1.1016237084013943e-21,
+        "neutrino_energy": 6.451403918729086e-21,
+        "electron_energy": 7.469735924566974e-21,
+        "proton_energy": 1.0380651475428825e-18,
+        "neutron_energy": 1.0390834795487231e-18,
+        "material_energy_loss": 6.4514039187271945e-21
+      },
+      "material_energy_change": -6.4514039187263e-21,
+      "direct_material_energy_change": -6.4514039187271945e-21,
+      "radiation_energy_change": 6.451403918729086e-21,
+      "energy_ledger_scaled": 4.427056881868587e-28,
+      "direct_energy_ledger_scaled": 3.0055687283331426e-28,
+      "number_sources": {
+        "n": 1.1016237084013943e-21,
+        "p": -1.1016237084013943e-21,
+        "electron_net": -1.1016237084013943e-21,
+        "nue": 1.1016237084013943e-21
+      },
+      "matter_Le_change": -1.1016237084013943e-21,
+      "radiation_Le_change": 1.1016237084013943e-21,
+      "entropy": 1.047388602443874e-33,
+      "max_event_kms_error": 3.694822225952521e-13
+    },
+    "noneq": {
+      "scenario": {
+        "name": "noneq",
+        "mode": "FD",
+        "mu_nu": -4.009364169619812
+      },
+      "forward": {
+        "number": {
+          "value": 3.2921939714550905e-07,
+          "log": -14.926541447809136,
+          "representable": true,
+          "reason": null
+        },
+        "neutrino_energy": {
+          "value": 3.152608470338047e-06,
+          "log": -12.667280361979032,
+          "representable": true,
+          "reason": null
+        },
+        "electron_energy": {
+          "value": 3.575436650883221e-06,
+          "log": -12.541423249169604,
+          "representable": true,
+          "reason": null
+        },
+        "proton_energy": {
+          "value": 0.0003098979137648218,
+          "log": -8.07926762515573,
+          "representable": true,
+          "reason": null
+        },
+        "neutron_energy": {
+          "value": 0.000310320741945367,
+          "log": -8.077904143931299,
+          "representable": true,
+          "reason": null
+        },
+        "material_energy_loss": {
+          "value": 3.1526084703380417e-06,
+          "log": -12.667280361979033,
+          "representable": true,
+          "reason": null
+        }
+      },
+      "backward": {
+        "number": {
+          "value": 1.806794359813153e-07,
+          "log": -15.526541447809139,
+          "representable": true,
+          "reason": null
+        },
+        "neutrino_energy": {
+          "value": 1.7301882125701042e-06,
+          "log": -13.267280361979035,
+          "representable": true,
+          "reason": null
+        },
+        "electron_energy": {
+          "value": 1.962241238121764e-06,
+          "log": -13.141423249169605,
+          "representable": true,
+          "reason": null
+        },
+        "proton_energy": {
+          "value": 0.0001700755810753968,
+          "log": -8.679267625155733,
+          "representable": true,
+          "reason": null
+        },
+        "neutron_energy": {
+          "value": 0.00017030763410094847,
+          "log": -8.677904143931302,
+          "representable": true,
+          "reason": null
+        },
+        "material_energy_loss": {
+          "value": 1.7301882125701042e-06,
+          "log": -13.267280361979035,
+          "representable": true,
+          "reason": null
+        }
+      },
+      "net": {
+        "number": 1.4853996116419368e-07,
+        "neutrino_energy": 1.4224202577679406e-06,
+        "electron_energy": 1.613195412761459e-06,
+        "proton_energy": 0.0001398223326894249,
+        "neutron_energy": 0.00014001310784441848,
+        "material_energy_loss": 1.42242025776794e-06
+      },
+      "material_energy_change": -1.4224202577678706e-06,
+      "direct_material_energy_change": -1.42242025776794e-06,
+      "radiation_energy_change": 1.4224202577679406e-06,
+      "energy_ledger_scaled": 1.4354883264061527e-14,
+      "direct_energy_ledger_scaled": 1.3010468215161504e-16,
+      "number_sources": {
+        "n": 1.4853996116419368e-07,
+        "p": -1.4853996116419368e-07,
+        "electron_net": -1.4853996116419368e-07,
+        "nue": 1.4853996116419368e-07
+      },
+      "matter_Le_change": -1.4853996116419368e-07,
+      "radiation_Le_change": 1.4853996116419368e-07,
+      "entropy": 8.91239766985167e-08,
+      "max_event_kms_error": 3.637090628672013e-13
+    }
+  },
+  "proton_density": 2.999999999999992e-08,
+  "controls": {
+    "proton_order": 28,
+    "electron_order": 48,
+    "initial_order": 12,
+    "outgoing_order": 12,
+    "phi_order": 12,
+    "tail": 80.0,
+    "proton_kinetic_max": 160.0,
+    "electron_total_max": 161.29333236000002,
+    "amplitude": "scalar"
+  },
+  "points": 2322432,
+  "min_amplitude": 2.085343817963864e-19,
+  "max_four_residual": 6.394884621840902e-13,
+  "max_neutron_mass_residual": 1.3187306298834252e-15,
+  "max_single_event_energy_residual": 6.394884621840902e-13,
+  "max_threshold_shell_residual": 3.745231917044779e-16,
+  "seconds": 2.2158835420850664,
+  "units": "number fm^-3s^-1; energy MeVfm^-3s^-1; entropy kB fm^-3s^-1",
+  "inventory": "p+e- <-> n+nue ONLY, physical free masses; no beta/PC join or full inventory",
+  "source_pins": {
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  }
+}

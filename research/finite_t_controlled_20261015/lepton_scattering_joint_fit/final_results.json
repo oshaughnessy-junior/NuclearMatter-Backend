@@ -1,0 +1,461 @@
+{
+  "checks": [
+    {
+      "name": "independent actual pair density E1.0 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E1.0 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E1.2 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E1.2 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E1.45 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E1.45 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E1.8 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E1.8 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E2.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E2.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E3.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E3.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E4.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E4.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E5.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E5.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E7.0 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E7.0 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E8.14 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E8.14 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E8.19 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E8.19 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E9.0 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E9.0 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E10.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E10.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E13.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E13.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E16.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E16.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E19.0 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E19.0 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E21.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E21.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E23.17 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E23.17 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E24.0 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E24.0 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E27.5 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E27.5 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E30.0 posFalse",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent actual pair density E30.0 posTrue",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "net neutrality same underlying npe material",
+      "error": -3.3306690738754696e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "physical source frozen neutrino_lepton_scattering/scatter.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "physical source frozen leptonic_pair_annihilation/pair.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "physical source frozen relativistic_capture_oracle/events.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 FITTING_LOCK.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 PREREGISTRATION.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 QUALIFICATION.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 RESEARCH_NOTE.md",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 SOURCES.md",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 api.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 api_metadata_results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 build_fit.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 check_api_metadata.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 compute.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 final_checks.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 final_checks.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 heldout_references.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 initial_api_metadata_failure.txt",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 initial_api_metadata_path.py.txt",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 initial_compute_failure.txt",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 initial_compute_print.py.txt",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 initial_training_partial.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 make_figure.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 model.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 moment_fit_validation.pdf",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 moment_fit_validation.png",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 phase_reference.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 pre_signed_qualification_api.py.txt",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 reference.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 training_references.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 validate.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 validation_partial.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preserved v1 validation_results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 75,
+  "failed": [],
+  "independent_pair_densities_fm3": [
+    2.0342863678432754e-07,
+    1.7342863678432764e-07
+  ],
+  "net_charge_fm3": 2.99999999999999e-08
+}
