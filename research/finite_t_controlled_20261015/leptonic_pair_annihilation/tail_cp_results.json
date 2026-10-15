@@ -1,0 +1,363 @@
+{
+  "checks": [
+    {
+      "name": "CP exchange number",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "CP exchange nu_energy",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "CP exchange antinu_energy",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "CP exchange electron_energy",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "CP exchange positron_energy",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail forwardnumber",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail forwardnu_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail forwardantinu_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail forwardelectron_energy",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail forwardpositron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail backwardnumber",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail backwardnu_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail backwardantinu_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail backwardelectron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated bothpartner tail backwardpositron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "CP_empty": {
+        "T": 2.0,
+        "mu_e": -0.17446333200826397,
+        "mass_e": 0.51099895069,
+        "flavor": "e",
+        "sin2w": 0.23129,
+        "cv": 0.96258,
+        "ca": 0.5,
+        "totals": {
+          "number": {
+            "log": -15.479298043009624,
+            "value": 1.8942019361363643e-07,
+            "representable": true,
+            "reason": null
+          },
+          "nu_energy": {
+            "log": -13.37379882872086,
+            "value": 1.5553673088914602e-06,
+            "representable": true,
+            "reason": null
+          },
+          "antinu_energy": {
+            "log": -13.372242874559166,
+            "value": 1.5577892728725297e-06,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "log": -13.37492874686706,
+            "value": 1.553610863651686e-06,
+            "representable": true,
+            "reason": null
+          },
+          "positron_energy": {
+            "log": -13.371115985449894,
+            "value": 1.5595457181123046e-06,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "forward": {
+          "number": {
+            "log": -15.479298043009624,
+            "value": 1.8942019361363643e-07,
+            "representable": true,
+            "reason": null
+          },
+          "nu_energy": {
+            "log": -13.37379882872086,
+            "value": 1.5553673088914602e-06,
+            "representable": true,
+            "reason": null
+          },
+          "antinu_energy": {
+            "log": -13.372242874559166,
+            "value": 1.5577892728725297e-06,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "log": -13.37492874686706,
+            "value": 1.553610863651686e-06,
+            "representable": true,
+            "reason": null
+          },
+          "positron_energy": {
+            "log": -13.371115985449894,
+            "value": 1.5595457181123046e-06,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "empty_occupation"
+          },
+          "nu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "empty_occupation"
+          },
+          "antinu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "empty_occupation"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "empty_occupation"
+          },
+          "positron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "empty_occupation"
+          }
+        },
+        "net": {
+          "number": 1.894201936136361e-07,
+          "nu_energy": 1.5553673088914594e-06,
+          "antinu_energy": 1.5577892728725392e-06,
+          "electron_energy": 1.5536108636516828e-06,
+          "positron_energy": 1.5595457181123063e-06
+        },
+        "entropy": null,
+        "max_affinity_error": 0.0,
+        "electron_density": 1.7342863678432714e-07,
+        "positron_density": 2.034286367843268e-07,
+        "anchor_number": 1.8942019361363609e-07,
+        "anchor_total_energy": 3.1131565817640013e-06,
+        "max_fourmomentum_residual": 3.8986532445112253e-14,
+        "runtime": 3.8250412079505622,
+        "controls": {
+          "radial": 20,
+          "incident": 8,
+          "outgoing": 8,
+          "azimuth": 8,
+          "tail": 40.0
+        },
+        "radiation": "both neutrino occupations EXACTLY empty; inverse absent",
+        "units": "event number fm^-3 s^-1; energies MeV fm^-3 s^-1"
+      }
+    },
+    {
+      "isolated_FD_tail70": {
+        "T": 2.0,
+        "mu_e": 0.17446333200826397,
+        "mass_e": 0.51099895069,
+        "flavor": "e",
+        "sin2w": 0.23129,
+        "cv": 0.96258,
+        "ca": 0.5,
+        "totals": {
+          "number": {
+            "log": -15.560516278393672,
+            "value": 1.746439899253392e-07,
+            "representable": true,
+            "reason": null
+          },
+          "nu_energy": {
+            "log": -13.424386708524885,
+            "value": 1.4786416310104651e-06,
+            "representable": true,
+            "reason": null
+          },
+          "antinu_energy": {
+            "log": -13.446604203415452,
+            "value": 1.4461521717609505e-06,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "log": -13.429634823694766,
+            "value": 1.4709018767612628e-06,
+            "representable": true,
+            "reason": null
+          },
+          "positron_energy": {
+            "log": -13.441266510356762,
+            "value": 1.4538919260101533e-06,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "forward": {
+          "number": {
+            "log": -15.560516278393672,
+            "value": 1.746439899253392e-07,
+            "representable": true,
+            "reason": null
+          },
+          "nu_energy": {
+            "log": -13.424386708524885,
+            "value": 1.4786416310104651e-06,
+            "representable": true,
+            "reason": null
+          },
+          "antinu_energy": {
+            "log": -13.446604203415452,
+            "value": 1.4461521717609505e-06,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "log": -13.429634823694766,
+            "value": 1.4709018767612628e-06,
+            "representable": true,
+            "reason": null
+          },
+          "positron_energy": {
+            "log": -13.441266510356762,
+            "value": 1.4538919260101533e-06,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "log": -16.36051627839367,
+            "value": 7.847260308245123e-08,
+            "representable": true,
+            "reason": null
+          },
+          "nu_energy": {
+            "log": -14.224386708524884,
+            "value": 6.64396512362532e-07,
+            "representable": true,
+            "reason": null
+          },
+          "antinu_energy": {
+            "log": -14.246604203415451,
+            "value": 6.497980572932189e-07,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "log": -14.229634823694765,
+            "value": 6.609188166032161e-07,
+            "representable": true,
+            "reason": null
+          },
+          "positron_energy": {
+            "log": -14.241266510356763,
+            "value": 6.532757530525339e-07,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": 9.617138684288808e-08,
+          "nu_energy": 8.142451186479323e-07,
+          "antinu_energy": 7.963541144677302e-07,
+          "electron_energy": 8.09983060158048e-07,
+          "positron_energy": 8.006161729576145e-07
+        },
+        "entropy": 7.693710947431076e-08,
+        "max_affinity_error": 7.079892228034623e-12,
+        "electron_density": 2.0342863678432754e-07,
+        "positron_density": 1.7342863678432767e-07,
+        "anchor_number": 1.8942019361365064e-07,
+        "anchor_total_energy": 3.1131565817653833e-06,
+        "max_fourmomentum_residual": 1.1086583193311375e-13,
+        "runtime": 14.251250083791092,
+        "controls": {
+          "radial": 24,
+          "incident": 12,
+          "outgoing": 12,
+          "azimuth": 12,
+          "tail": 70.0
+        },
+        "radiation": {
+          "temperature": 2.0,
+          "mu_nu": 0.5,
+          "mu_antinu": -2.1
+        },
+        "units": "event number fm^-3 s^-1; energies MeV fm^-3 s^-1"
+      }
+    }
+  ],
+  "all_pass": true
+}
