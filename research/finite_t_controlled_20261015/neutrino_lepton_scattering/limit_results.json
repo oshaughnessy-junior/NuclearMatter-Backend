@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "name": "NRlimit final e",
+      "error": 0.0003619222792413668,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "NRlimit firstorder convergence e",
+      "error": 0.00016938709361957738,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "relativistic targetrest limit e",
+      "error": -0.0006365069985115879,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "NRlimit final mu",
+      "error": 0.0008072308270221651,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "NRlimit firstorder convergence mu",
+      "error": 0.00035974110337555487,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "relativistic targetrest limit mu",
+      "error": -5.598353603997186e-05,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "primaryGuo40 \u03bb1",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "primaryGuo40 \u03bb2",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "primaryGuo40 \u03bb3",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "flavor": "e",
+      "E_over_me": 0.001,
+      "sigma": 1.8930399638979475e-29,
+      "NRleading": 1.8957816797512914e-29,
+      "error": 0.0014462191942394842
+    },
+    {
+      "flavor": "e",
+      "E_over_me": 0.0005,
+      "sigma": 4.736024733060495e-30,
+      "NRleading": 4.7394541993782285e-30,
+      "error": 0.0007235994216767683
+    },
+    {
+      "flavor": "e",
+      "E_over_me": 0.00025,
+      "sigma": 1.1844347213280073e-30,
+      "NRleading": 1.1848635498445571e-30,
+      "error": 0.0003619222792413668
+    },
+    {
+      "flavor": "mu",
+      "E_over_me": 0.001,
+      "sigma": 8.46913297995879e-30,
+      "NRleading": 8.496508460139011e-30,
+      "error": 0.003221968213019677
+    },
+    {
+      "flavor": "mu",
+      "E_over_me": 0.0005,
+      "sigma": 2.120700258821284e-30,
+      "NRleading": 2.124127115034753e-30,
+      "error": 0.001613300912743476
+    },
+    {
+      "flavor": "mu",
+      "E_over_me": 0.00025,
+      "sigma": 5.306031135367458e-31,
+      "NRleading": 5.310317787586882e-31,
+      "error": 0.0008072308270221651
+    }
+  ],
+  "passed": true,
+  "meaning": "formal Fermi-model NR and highenergy vacuumlimits, not extended thermal-domain certificate"
+}

@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "name": "(0.35, 'nn') low-p derivative coupling p4",
+      "error": -0.00010498867619157526,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "(0.35, 'np') low-p derivative coupling p4",
+      "error": -0.00012186073399900188,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 'nn') low-p derivative coupling p4",
+      "error": -0.00041981887624065184,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 'np') low-p derivative coupling p4",
+      "error": -0.00048727181966745636,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "(1.4, 'nn') low-p derivative coupling p4",
+      "error": -0.0016771056733128065,
+      "tolerance": 0.008,
+      "passed": true
+    },
+    {
+      "name": "(1.4, 'np') low-p derivative coupling p4",
+      "error": -0.001946353950421753,
+      "tolerance": 0.008,
+      "passed": true
+    },
+    {
+      "name": "83.6 angular central/contact-plus-Yukawa projection",
+      "error": 1.3019779053962778e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "147.9 angular central/contact-plus-Yukawa projection",
+      "error": 1.3019779053962778e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "pure model f=0 exactzero",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exact zero momentum directvertex",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author hashes still unchanged after extra limits",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 11,
+  "failed": [],
+  "rows": [
+    {
+      "p": 0.35,
+      "channel": "nn",
+      "total": 1.9271751574912074e-09,
+      "twicep": 3.083156521476213e-08,
+      "p4_ratio": 0.9998950113238084
+    },
+    {
+      "p": 0.35,
+      "channel": "np",
+      "total": 6.1669258153393575e-09,
+      "twicep": 9.865878894772773e-08,
+      "p4_ratio": 0.999878139266001
+    },
+    {
+      "p": 0.7,
+      "channel": "nn",
+      "total": 3.083156521476213e-08,
+      "twicep": 4.930979446672149e-07,
+      "p4_ratio": 0.9995801811237593
+    },
+    {
+      "p": 0.7,
+      "channel": "np",
+      "total": 9.865878894772773e-08,
+      "twicep": 1.5777714448017757e-06,
+      "p4_ratio": 0.9995127281803325
+    },
+    {
+      "p": 1.4,
+      "channel": "nn",
+      "total": 4.930979446672149e-07,
+      "twicep": 7.876335476907434e-06,
+      "p4_ratio": 0.9983228943266872
+    },
+    {
+      "p": 1.4,
+      "channel": "np",
+      "total": 1.5777714448017757e-06,
+      "twicep": 2.519520868987717e-05,
+      "p4_ratio": 0.9980536460495782
+    }
+  ],
+  "author_after": {
+    "CHECKPOINT.json": "8c527b784f0c6cfca1e763698d25e44ffe8aa42e865ed5c8917a097294893a75",
+    "RESEARCH_NOTE.md": "e472695fa3d39b8a8997885835464f57a8b82176a1f462b53ee0f9bcf1750164",
+    "SOURCES.md": "d2c78b2a085bec460597664584521f64adaa53d999fcd7a015c44b2e0d7155cc",
+    "check_ope.py": "3d3fbb456615819f8715b965add4cd83d1d83c8fd7d2340e0e006dbae42930f8",
+    "download_failure.txt": "f17df00d39acc721affad8b2016bcf4ff74af420dac7aade0e72ce82c63a41bb",
+    "initial_charge_zero_roundoff_check.py.txt": "3de0c6497c3bbdf46c8f2838baa2f14e87de57d654d08bb56eed7cfbfbc564cd",
+    "initial_charge_zero_roundoff_results.json": "e50032b69b13c89b5850fc2232e840ed26a528769f2b4684d0369adfa99427ae",
+    "initial_driver_syntax.py.txt": "15e4c3ddf682a57d9f818cf4eff1f4b594f401cdebae82716925be899981cc7b",
+    "initial_driver_syntax_failure.txt": "c143db5b6fe901314b86cd94ac0d971157d1dd73b757814e6c85f10af619d066",
+    "ope.py": "a4d25710817060fc4fdcfb3f4b013012f67ead9c3cb07dab9407275e6eebefd7",
+    "results.json": "0a23edde0332ed727325618a352703bc9405d265b26d7aedcc4b70cd340dc90a"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "checks": [
+    {
+      "name": "absolute shellkernel vs CMevents rate",
+      "error": -1.1852314685256715e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute shellkernel vs CMevents transport_rate",
+      "error": -8.422889052894789e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute shellkernel vs CMevents neutrino_energy_change",
+      "error": 1.240094693599758e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute shellkernel vs CMevents outgoing_energy_moment",
+      "error": -1.3195274872757068e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated thermal tail60to80 rate",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated thermal tail60to80 transport_rate",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated thermal tail60to80 neutrino_energy_change",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated thermal tail60to80 outgoing_energy_moment",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "electron particle root",
+      "error": -3.6637359812630166e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "reject nanEnu",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolangle",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject extremeFD",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolcharge",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject badT",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject nanConditional",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject collinear",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject badtail",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolconditionalorder",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "controlguard valid differential unchanged",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "isolated_tail": {
+    "rate": 9.302828118077503,
+    "transport_rate": 6.840868534980794,
+    "neutrino_energy_change": -8.654396015162082,
+    "outgoing_energy_moment": 84.37388516561319,
+    "target_density": 2.0342863678432757e-07,
+    "energy_ledger": -2.4513724383723456e-13,
+    "max_four_residual": 7.078071462274238e-11,
+    "T": 2.0,
+    "mu_e": 0.17446333200826397,
+    "Ein": 10.0,
+    "flavor": "e",
+    "positron": false,
+    "anti": false,
+    "final_neutrino_blocking": "NONE",
+    "histogram_unqualified": {
+      "edges": [
+        0.0,
+        2.0,
+        4.0,
+        6.0,
+        8.0,
+        10.0,
+        15.0,
+        25.0,
+        1000.0
+      ],
+      "rate": [
+        0.054915953611181505,
+        0.4974022368080405,
+        1.2194464272336032,
+        1.8646513874532291,
+        2.287042170161417,
+        2.876746604973994,
+        0.49491880601267046,
+        0.007704531823398134
+      ]
+    },
+    "controls": {
+      "radial": 32,
+      "incident": 40,
+      "outgoing": 40,
+      "phi": 48,
+      "tail": 80.0
+    },
+    "seconds": 4.729184374911711,
+    "units": "rate s^-1; signed\u03bdenergychange MeV s^-1 per incident\u03bd; targetdensity fm^-3"
+  },
+  "absolute_kernel": {
+    "values": {
+      "rate": 9.302828107051507,
+      "transport_rate": 6.840868529218809,
+      "neutrino_energy_change": -8.654396016235308,
+      "outgoing_energy_moment": 84.37388505427953
+    },
+    "controls": {
+      "order": 16,
+      "angle": 20,
+      "upper": 150.0,
+      "inner": 28,
+      "angular_coordinate": "sqrt(1-c)"
+    },
+    "seconds": 1.9184553751256317,
+    "calls": 5536
+  },
+  "scope": "one selectedelectron\u03bdE10 cross-method total/transport/energy+tails; noallflavorcontinuumcert"
+}
