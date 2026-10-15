@@ -1,0 +1,81 @@
+{
+  "time": "2026-10-15T22:57:35.887465+00:00",
+  "status": "author FROZEN; positive moment heldouts pass; signed RT gate has2retained failures; independent review pending",
+  "physical_quadrature_pass": 108,
+  "training_population_checks": 24,
+  "training_selection_checks": [
+    {
+      "name": "training-only selection rate",
+      "passed": true
+    },
+    {
+      "name": "training-only selection transport_rate",
+      "passed": true
+    },
+    {
+      "name": "training-only selection outgoing_energy_moment",
+      "passed": true
+    }
+  ],
+  "validation_pass": 114,
+  "validation_fail": [
+    {
+      "name": "training signedRT 19.0",
+      "error": -0.03141840430010508,
+      "tolerance": 0.03,
+      "passed": false
+    },
+    {
+      "name": "training signedRT 30.0",
+      "error": 0.059393241076720935,
+      "tolerance": 0.03,
+      "passed": false
+    }
+  ],
+  "API_math_metadata_checks": 539,
+  "additional_zero_reference_and_immutability_checks": 17,
+  "model_sha": "9067c895b38e43451cce803a39681db961abb7066eea2cb5d9fa2d7fc5dd2e9f",
+  "preregistration_sha": "d9b496c00ba0b4e6ea85d4fa504707657005d2395e64d276f687465db5054ac5",
+  "source_pins": {
+    "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  },
+  "runtime": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+  },
+  "files": {
+    "FITTING_LOCK.json": "810e3b6ceed69b82936b273d8b822627a6e6102b3ea28ad90264a81f6a3e675e",
+    "PREREGISTRATION.json": "d9b496c00ba0b4e6ea85d4fa504707657005d2395e64d276f687465db5054ac5",
+    "QUALIFICATION.json": "4adb567a49a99405bb3c57675e581067156cf77f4ce76fe0b44febc2456f2a42",
+    "RESEARCH_NOTE.md": "ca3d807d8fea345f83b649c7470f8f2ad68d5e3a1534f4b3bbdac26d0c727e83",
+    "SOURCES.md": "8d68c078b48ee78431c1aa894bbe5fad13251226ba1f206cf50be36ce943eca1",
+    "api.py": "335f1acfdf3ff122a66b4afd5711b956dc7b3083e97d03d012742846c7eb2182",
+    "api_metadata_results.json": "e8f26f00242e65c9c622b4b20f18b42b29c4da941616c5644d729d2732d83cd2",
+    "build_fit.py": "e97213d1dfb77f7c9cd23a3a2a3b20c930187930dbf26d834ba56db6b1baaffe",
+    "check_api_metadata.py": "64e4a14639e6ffe0d6b90edb2e5597d66e41bafa8685551581fc937b68d6e49d",
+    "compute.py": "e5a434dbbd8de05efa46d880dad8d10bc71e19b332da726f36911c3db7fbc2cf",
+    "final_checks.json": "7931c7f058eaa5385086e5d2423caf236501d8e1c2e7b80a70818c429557dee2",
+    "final_checks.py": "c4803253836793f83e20c7a563bab4428f66e7c1729464cce5a53ea7358c2355",
+    "heldout_references.json": "bb40d858d309a89597aead0fc53f5305075e94d5f651f04fda5b22ef56889f5e",
+    "initial_api_metadata_failure.txt": "8a4c4857e7fe18f67f5022b458c627a68e326751d50bd027383a63bab889f110",
+    "initial_api_metadata_path.py.txt": "5d7c91e8c08b5f699c9af884866e30a3daed374da558afebd685ebc22ca8c4da",
+    "initial_compute_failure.txt": "837bc2f4400d8c7bff02eaec8acf75155588c14fee59d9662019cc4665e83e81",
+    "initial_compute_print.py.txt": "e59e969d05f6fbf4eac7a7eac22d960b9bdb06466b7441edef3d2d21f7528532",
+    "initial_training_partial.json": "845d73bed770b7e46f00b2d7ddf702daaf02c25d2377b7b2806d0801bf860be4",
+    "make_figure.py": "2781e322a0462b8f52b069a930796adecb873279ab1f0052fbea94f755550167",
+    "model.json": "9067c895b38e43451cce803a39681db961abb7066eea2cb5d9fa2d7fc5dd2e9f",
+    "moment_fit_validation.pdf": "5c39b0f6804405c25fcb4c20a29ffa01edcfe14a2c85246994e58a35c495ad86",
+    "moment_fit_validation.png": "960379a1c414ea1dd49bbac3111343ca7a640b9c4525a5df356436a088057e0e",
+    "phase_reference.py": "d4f463a9b5d81f68b71c93992ddaa6d3b21bfbd864603ee2772a7eef670f9e72",
+    "pre_signed_qualification_api.py.txt": "e8c09033f1c1675eb54e8983811275ded64ee426c043252fe8ca79bc80d1541d",
+    "reference.py": "66c2e1335dcde2ca0adc1f7519abc8ab6748bcfc324e149e66c4facfed860fce",
+    "training_references.json": "a13290ff1b6a916272bf2e706d6c95405809a3ec19d0c2b317b29c1a100a1929",
+    "validate.py": "2fc804d223cd1ea6d0db2f4717580aa4a8bf34af356fd425fe973e7019a8a7a6",
+    "validation_partial.json": "c2d64767c2b97a8eddebad5cf5b21b77b300a29f72f354f4d1acabbdd53d28d5",
+    "validation_results.json": "1ee3900de819b887d5a1bee3c50316881493829742bd61cc914c74555b04f68f"
+  }
+}

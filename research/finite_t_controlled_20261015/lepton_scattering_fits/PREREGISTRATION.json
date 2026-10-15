@@ -1,0 +1,15 @@
+{
+  "version":"lepton-moment-fit-1",
+  "state":{"T_MeV":2.0,"mu_e_MeV":0.17446333200826397,"flavor":"nu_e","targets":["e-","e+"],"outgoing_neutrinos":"unblocked"},
+  "domain_MeV":[1.0,30.0],
+  "training_MeV":[1.0,1.2,1.8,2.5,4.5,5.5,9.0,10.5,16.5,19.0,24.0,30.0],
+  "heldout_blocks_MeV":[[1.35,1.55],[3.0,4.0],[6.0,8.0],[12.0,15.0],[20.0,23.0],[26.0,29.0]],
+  "heldout_MeV":[1.45,3.5,7.0,13.5,21.5,27.5],
+  "positive_observables":["rate","transport_rate","outgoing_energy_moment"],
+  "signed_observable":"neutrino_energy_change = fitted_Qout - E*fitted_rate",
+  "quadrature":{"coarse":[24,24,24,32,60.0],"fine":[32,40,40,48,80.0],"positive_relative_gate":0.0001,"signed_absolute_over_RT_gate":0.0001},
+  "fit":{"basis":"Chebyshev of affine(log(E)); fit natural log of positive moments","candidate_degrees":[2,3,4,5,6,7],"training_max_relative_gate":0.003,"leave_one_out_max_relative_gate":0.007,"selection":"For each observable choose smallest degree passing BOTH training gates; otherwise choose degree minimizing LOO maximum error and retain failed gate. Selection uses training only; lock model before heldout source evaluations.","positive_relative_gate":0.01,"signed_absolute_over_RT_gate":0.03,"signed_relative_gate_away_from_zero":0.05,"away_from_zero_threshold_absDeltaE_over_RT":0.2},
+  "postfit_zero_diagnostics":"After model lock, if fitted signed energy has an interior root, evaluate detailed physical moments at fitted root and ±1% incident energy. Diagnostics do not retune coefficients or count as preregistered heldouts.",
+  "independent_phase_anchor":"At heldout7MeV integrate independent analytic-target-azimuth/transverse-shell D for BOTH targets over outgoing E and angle. Compare positive moments and signed RT-scaled difference at quadrature0.0001 gate. If incomplete preserve explicit partial status.",
+  "qualification":"Pointwise measured holdouts only, no uniform error certificate; fixed-state optional moment convenience with direct physical fallback. Not a spectral kernel, matter EOS, AD-chain surrogate or production implementation."
+}

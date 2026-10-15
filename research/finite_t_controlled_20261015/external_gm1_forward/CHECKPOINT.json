@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_PENDING_INDEPENDENT_REVIEW_EXTERNAL_EXECUTION_OPEN",
+  "author_pass": 104,
+  "author_fail": 0,
+  "compile_availability_gate": "FAILED_MISSING_O2SCL_HEADER_LIBRARY",
+  "external_execution": false,
+  "experiment_seconds": 2.046811291947961,
+  "quota_percent": 20,
+  "quota_reset": 1792652325,
+  "source_pins": {
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "external_gm1/comparison_contract.json": "6929f5331cb2ab9c42d1a4404499c838adc145de05b077ca66c1aeaa85ef174b",
+    "external_gm1_forward/momentum_reduction.py": "645ac56ba1fbb7315ebf5ca98bf3af1ee0099fd79b097f090995e4141fff35ff",
+    "external_gm1_forward/o2scl_fixture.cpp": "5a2dbb84d9ca98849d2ad5dd880a122e7be079f413dad5357f7a19af30c16be7",
+    "external_gm1_forward/sources/eos_had_rmf.cpp": "82d0fba9a249449b689843e771f58a35c85191faceac67eaaf312d785106989d",
+    "external_gm1_forward/sources/eos_had_rmf.h": "e8bfffa0b696d8cf8dd6bb43cced8c6a297deec1422f9ecb4162e97a35699b22",
+    "external_gm1_forward/sources/fermion_rel.h": "5b9999e413816668f659ac14a6a8764b225dbd160e52fa4a0e85b013bf7d883e"
+  },
+  "scope": "two selected finiteT forward states; independent equation reduction, not external code or derivative/phase qualification",
+  "timestamp_utc": "2026-10-15T22:47:21.492507+00:00"
+}

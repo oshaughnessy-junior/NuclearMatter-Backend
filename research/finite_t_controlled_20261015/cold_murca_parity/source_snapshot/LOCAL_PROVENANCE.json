@@ -1,0 +1,20 @@
+{
+  "local_source_directory": "/Users/rossma/Genesis_LANL/outputs/rotating-ns-feasibility/native-surface-study/native-surface-forward-v1/L60_M1.4-eta-0-reference/Code",
+  "files": {
+    "neutrino_core.f": "45fb3891d0d2c69a527b0fa64be82eb69fd261f6ccccbc01b4d706ef4e7d9def",
+    "size.inc.f": "98c2209dc5f194a9c1edbeb9fc6fab2ce4b4f79adda6aa821632b305d16973b7",
+    "rho_limits.inc.f": "146d9fd02f5b4a32cb228af8692c659e8b37fab7043d3520af9c0a04da3878ce",
+    "profile_star.inc.f": "ea5f14050db31e7063c92c65b880653d56af0aa4bb4687f5cf7c15868eb961d7",
+    "profile_comp.inc.f": "b64f5e3020c8d4bc4f01c6a43700cb3a7d5b4241b71d388c2dc85eb1d5f24685",
+    "pairing.inc.f": "7840203c2db3e415cd783249e59f38be22c4e802e155b58945ef979f99da9cb7",
+    "fermi.inc.f": "2dd93b11a6baed19ca8a1bcc0e1cb117b56fbd93bdd16d2be90c1a91f1713301",
+    "control_nu.inc.f": "f3845e4b9861a42ecbd7ef8ad0f7f6131bb0d375809d02cd92521ab3fc95752f"
+  },
+  "routine_bytes_sha256": "5818a2fd0c65e35d6d669da639823395f6334f4bd5ca54bb48491435142f0ad1",
+  "note": "Local NSCool installation has nmbackend patches in other routines/includes; original MU routine comparison against pinned public mirror pending. Executed extraction retains routine byte text.",
+  "public_mirror_blob": "7a58562ed3c6a74dd469810838873b91878c3b57",
+  "public_mirror_url": "https://api.github.com/repos/awsteiner/nscool/git/blobs/7a58562ed3c6a74dd469810838873b91878c3b57",
+  "computational_body_identical_after_f77_whitespace_comments": true,
+  "body_sha256": "6f7748c87db4fb2a536d2ffafae6c2b6554c4411f7a44921bf717c82c1a7e805",
+  "nmb_superfluid_blob": "e16a07cfa7b92530649822358c552b1fa7069042"
+}

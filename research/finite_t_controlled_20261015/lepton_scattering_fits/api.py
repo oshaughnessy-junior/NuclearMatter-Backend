@@ -1,0 +1,31 @@
+"""Optional fixed-state moment fits; explicit actual-quadrature fallback."""
+from pathlib import Path
+import math,json,hashlib,importlib.util,sys
+import numpy as np
+from numpy.polynomial.chebyshev import chebval
+P=Path(__file__).parent;ROOT=P.parent;MU=.17446333200826397
+REFERENCE_SHA='66c2e1335dcde2ca0adc1f7519abc8ab6748bcfc324e149e66c4facfed860fce'
+QUALIFICATION_SHA='4adb567a49a99405bb3c57675e581067156cf77f4ce76fe0b44febc2456f2a42'
+MODEL_SHA='9067c895b38e43451cce803a39681db961abb7066eea2cb5d9fa2d7fc5dd2e9f'
+def model():
+ raw=(P/'model.json').read_bytes()
+ if hashlib.sha256(raw).hexdigest()!=MODEL_SHA:raise RuntimeError('Frozen coefficient model changed')
+ z=json.loads(raw)
+ if z['state']!=dict(T_MeV=2.,mu_e_MeV=MU,flavor='nu_e',targets=['e-','e+'],outgoing_neutrinos='unblocked')or z['domain_MeV']!=[1.,30.]:raise RuntimeError('Unsupported coefficient state/domain')
+ for path,sha in z['source_pins'].items():
+  if hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=sha:raise RuntimeError('Physical reference source changed')
+ return z
+
+def evaluate(E,*,T=2.,mu_e=MU,flavor='nu_e',targets=('e-','e+'),outgoing='unblocked',method='fit'):
+ if type(E)not in(int,float)or not math.isfinite(E)or not 1<=E<=30 or type(T)not in(int,float)or type(mu_e)not in(int,float)or T!=2. or mu_e!=MU or flavor!='nu_e'or targets!=('e-','e+')or outgoing!='unblocked'or method not in['fit','detailed']:raise ValueError('Only fixed T2/mue pair bath, nue, both targets, unblocked finalnu and finite E1..30 are exposed')
+ m=model()
+ if method=='detailed':
+  if hashlib.sha256((P/'reference.py').read_bytes()).hexdigest()!=REFERENCE_SHA:raise RuntimeError('Detailed fallback adapter changed')
+  sp=importlib.util.spec_from_file_location('fit_fallback_physical_reference',P/'reference.py');R=importlib.util.module_from_spec(sp);sys.modules[sp.name]=R;sp.loader.exec_module(R);out=R.detailed(E)['total'];return dict(E=E,**out,method='actual detailed quadrature',units=m['units'],state=m['state'],domain_MeV=m['domain_MeV'],model_sha=MODEL_SHA)
+ x=2*math.log(E)/math.log(30)-1;out={k:float(math.exp(chebval(x,z['selected']['coefficients'])))for k,z in m['models'].items()}
+ if not all(math.isfinite(v)and v>0 for v in out.values())or out['transport_rate']>2*out['rate']:raise ArithmeticError('Fit physical moment bounds failed; use detailed reference')
+ out['neutrino_energy_change']=out['outgoing_energy_moment']-E*out['rate']
+ raw=(P/'QUALIFICATION.json').read_bytes()
+ if hashlib.sha256(raw).hexdigest()!=QUALIFICATION_SHA:raise RuntimeError('Frozen fit qualification changed')
+ qualification=json.loads(raw)
+ return dict(E=E,**out,method='optional fixed-state Chebyshev moments',units=m['units'],state=m['state'],domain_MeV=m['domain_MeV'],model_sha=MODEL_SHA,qualification=m['qualification'],measured_positive_gate_pass=qualification['positive_moments']['measured_heldout_gate_pass'],signed_energy_RT_gate_pass=qualification['signed_energy']['absolute_RT_gate_pass'],signed_energy_advice=qualification['signed_energy']['advice'])
