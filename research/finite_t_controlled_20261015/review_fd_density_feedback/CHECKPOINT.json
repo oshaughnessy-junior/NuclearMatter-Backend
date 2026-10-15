@@ -1,0 +1,37 @@
+{
+  "status": "accepted_restricted_short_split_scope",
+  "utc": "2026-10-15T15:33:57.277003+00:00",
+  "independent_checks": 61,
+  "all_passed": true,
+  "preserved_rejection": "initial_environment_mismatch.json",
+  "quota_used_percent": 9,
+  "quota_reset": 1792652325,
+  "author_sources_unchanged": {
+    "nr_baryon_eos/free_nucleons.py": true,
+    "thermodynamics/lepton_reference.py": true,
+    "response_reference/free_density_response.py": true,
+    "allowed_opacity/allowed_capture.py": true,
+    "weak_rates/static_capture.py": true,
+    "capture_endpoint/mapped_capture.py": true,
+    "crossed_opacity/crossed_decay.py": true,
+    "quantum_slab/fixed_bath.py": true,
+    "quantum_slab/guarded_capture.py": true,
+    "fd_fluid_element/element.py": true,
+    "fd_prescribed_density/density_element.py": true,
+    "fd_fluid_element/qualification_contract.py": true,
+    "fd_fluid_element/qualify_source.py": true,
+    "fd_fluid_element/short_evolution.py": true,
+    "fd_density_feedback/engine.py": true,
+    "fd_density_feedback/run_feedback.py": true
+  },
+  "files_sha256": {
+    "REVIEW.md": "8df64a1feb279d5f745c99beb7617ba4c0419ddbae08612a60df29e4801a30ff",
+    "initial_environment_mismatch.json": "89cf57d1251d69f9f5240d288ea0cc3d8e7a30a9e06ef1a033dbc130383cfab5",
+    "probe.py": "2e713537c5fef7c7fae9ca5bd46d5cd483c1fa42ed8fe9e4950cdc115ee1196f",
+    "results.json": "c8a93d2ce0e6492f7e35c4ed72d77fce866cbe7e92015d9a31d768c9a301275f"
+  },
+  "limits": [
+    "energy step sensitivity .612484percent despite T difference2.31e-8MeV",
+    "no fulltime/grid/stiff/hydro/interactingEOS qualification"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "radiation {'T': 0.0}",
+      "passed": true
+    },
+    {
+      "name": "radiation {'T': -1.0}",
+      "passed": true
+    },
+    {
+      "name": "radiation {'T': nan}",
+      "passed": true
+    },
+    {
+      "name": "radiation {'mu': inf}",
+      "passed": true
+    },
+    {
+      "name": "radiation {'kind': 'unknown'}",
+      "passed": true
+    },
+    {
+      "name": "adaptive Ein0.0",
+      "passed": true
+    },
+    {
+      "name": "adaptive Ein-1.0",
+      "passed": true
+    },
+    {
+      "name": "adaptive Einnan",
+      "passed": true
+    },
+    {
+      "name": "adaptive tail29.0",
+      "passed": true
+    },
+    {
+      "name": "adaptive tail101.0",
+      "passed": true
+    },
+    {
+      "name": "adaptive tailnan",
+      "passed": true
+    },
+    {
+      "name": "energy_grid Ein0.0",
+      "passed": true
+    },
+    {
+      "name": "energy_grid Ein-1.0",
+      "passed": true
+    },
+    {
+      "name": "energy_grid Einnan",
+      "passed": true
+    },
+    {
+      "name": "energy_grid tail29.0",
+      "passed": true
+    },
+    {
+      "name": "energy_grid tail101.0",
+      "passed": true
+    },
+    {
+      "name": "energy_grid tailnan",
+      "passed": true
+    },
+    {
+      "name": "angularTrue",
+      "passed": true
+    },
+    {
+      "name": "angular12.5",
+      "passed": true
+    },
+    {
+      "name": "angular4",
+      "passed": true
+    },
+    {
+      "name": "negative Eout",
+      "passed": true
+    },
+    {
+      "name": "nonfinite Eout",
+      "passed": true
+    },
+    {
+      "name": "unknown angular coordinate",
+      "passed": true
+    },
+    {
+      "name": "invalid tolerance",
+      "passed": true
+    },
+    {
+      "name": "unknown grid",
+      "passed": true
+    }
+  ]
+}

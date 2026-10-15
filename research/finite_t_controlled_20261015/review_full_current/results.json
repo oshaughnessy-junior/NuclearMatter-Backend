@@ -1,0 +1,2069 @@
+{
+  "passed": true,
+  "phase": "complete",
+  "checks": [
+    {
+      "name": "point spinor vs frozen invariant (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -1.5404324596643718e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -3.243542818825965e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 2.5913919401242967e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 2.3363789472021753e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -2.560336126152205e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 7.218532680700544e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "component FF (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -5.826092490693208e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 5.2626270281272556e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 3.5666689218865076e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (False, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 1.4362213936545302e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -3.659337229310192e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -2.630756680343601e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -1.0603460216783718e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -1.9842334256081062e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -4.8448966501494335e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "component FF (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -4.877097300852405e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 3.466958318791497e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (False, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 4.580748163390951e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -5.770647647208392e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 1.3940909635564856e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -2.0562916043023302e-50,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -3.4883740137176836e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -3.6100289181724165e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -6.288959523684885e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "component FF (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -5.443407785272547e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -1.2751018892656179e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -1.3527431012641018e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (False, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 2.1338364612439714e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 3.904780238879554e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -1.5562141721211359e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 1.42800707884092e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 1.5377882682435774e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -2.0436753898009665e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -5.76417311573453e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "component FF (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -3.229492032703538e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 7.278805647476777e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 2.072462771570581e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (False, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 3.216226188109603e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 7.695179115859162e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": -1.3188737404413314e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 1.5816980384772694e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 3.3683763454449066e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 1.4173969266811693e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FF (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 4.0402179244411387e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": -5.2657612481555864e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 2.45223331555392e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (False, 'muon', 110.53137301322262, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -5.789528844971371e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -9.676200589679024e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 2.056817134642604e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -6.128974484578748e-18,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -3.5177070140907347e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -1.332999400335851e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 1.3718597985569725e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FF (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 1.9986454871234948e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 3.736967839429171e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (False, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 3.577113002055084e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 8.750525921028901e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 1.4171693538023078e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": -1.0550284790687732e-17,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": -1.73464163841101e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": -5.793470500596258e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FF (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 2.097132067622436e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 1.205456870573468e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 2.5126064375864013e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (False, 'muon', 110.53137301322262, -0.31, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 6.872010472928418e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 1.1042508108782621e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 6.88990576136216e-52,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": -2.745864507600395e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": -7.476455958838633e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FF (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 1.3115874472798406e-18,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 4.480516602429047e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (False, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -3.587177252243011e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -6.09131898263027e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 5.241446901273775e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -1.1079358480987138e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 4.461676049520035e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 1.0471773818949156e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "component FF (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 1.571714964082188e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 3.545134215100274e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": -6.493956952458956e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (True, 'electron', 17.3, -0.44, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 1.4991017161364971e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -5.838104680145465e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -4.278250989923312e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 1.0721971717149013e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -2.3540531409250183e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 4.2200596341211053e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -3.2118812121552636e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "component FF (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -3.3776657336434473e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 5.091208073408331e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": -4.691554575494576e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (True, 'electron', 63.7, 0.51, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -1.3004841359464663e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -9.399299593183324e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -4.052591540565303e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -2.2594833115287023e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -1.572111299743993e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "component FF (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 4.894924849076897e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 6.294097277353557e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": -1.8688963315054756e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (True, 'electron', 17.3, -0.44, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -1.5228418815064076e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 3.3744444306778083e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 1.4453806850218006e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -3.207320210746875e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -1.2639074894067702e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "component FF (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -1.7532250131564232e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 1.1126996797419932e-18,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": -1.1967541459929191e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (True, 'electron', 63.7, 0.51, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 1.5697207570673552e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 5.88492012138179e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": -6.012693752589292e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": -2.667530547567895e-17,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 2.6911900163709223e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": -1.6110565296502762e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 2.7519002084294105e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FF (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 1.680170136834998e-19,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": -3.272755743881664e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (True, 'muon', 113.41731059534446, -0.31, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 1.4759251664561487e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 7.412310071785996e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -1.3016110978556368e-50,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -2.378985208442158e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 2.722544979755011e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -2.6519637780623907e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FF (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": -1.2525809372953294e-18,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 2.238643680732121e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (True, 'muon', 187.4, 0.63, (1.0, 1.2723, 3.706))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": -2.3274889083792454e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 1.6728854607976311e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 7.795637147144896e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 3.749373794079239e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FF (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": -1.9610028230306028e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 6.495377884337203e-20,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": -3.4098406445350183e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (True, 'muon', 113.41731059534446, -0.31, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "point spinor vs frozen invariant (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full explicit spinors vs trace (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "component VV (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VA (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 8.773819574418291e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VF (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": -1.1444160383508645e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component VP (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": -6.191138178026843e-18,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AA (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 3.2412893351702955e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AF (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component AP (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": -1.2646247896817017e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FF (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component FP (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 4.0757787714177156e-18,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "component PP (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 2.3131468620591806e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent pole conventions (True, 'muon', 187.4, 0.63, (0.82, 1.09, 4.2))",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 17.3,
+      "cosine": -0.44,
+      "t": -893.0867658265115,
+      "model": {
+        "gv": 1.0,
+        "ga": 1.2723,
+        "xi": 3.706,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.9983040204884774,
+        1.2703210844899497,
+        3.695310363582467,
+        111.25998500556025
+      ],
+      "spinor_amplitude": 3.858469168287106e-12,
+      "trace_amplitude": 3.8584691682871056e-12,
+      "spinor_parts": {
+        "VV": 3.2774626123591834e-13,
+        "VA": 7.782708716085191e-14,
+        "VF": 3.044158982693965e-15,
+        "VP": 9.01484613321468e-32,
+        "AA": 3.1550293678053375e-12,
+        "AF": 2.880838260194622e-13,
+        "AP": -3.2357931173430517e-17,
+        "FF": 6.770068502011973e-15,
+        "FP": 1.6339408616451608e-31,
+        "PP": 7.565120035476447e-19
+      },
+      "trace_parts": {
+        "VV": 3.277462612359184e-13,
+        "AA": 3.1550293678053383e-12,
+        "FF": 6.7700685020119766e-15,
+        "PP": 7.565120035473749e-19,
+        "VA": 7.782708716085194e-14,
+        "VF": 3.0441589826939643e-15,
+        "AF": 2.880838260194622e-13,
+        "AP": -3.235793117343285e-17,
+        "VP": 0.0,
+        "FP": -3.9662755157718047e-32
+      }
+    },
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 63.7,
+      "cosine": 0.51,
+      "t": -3572.646927867663,
+      "model": {
+        "gv": 1.0,
+        "ga": 1.2723,
+        "xi": 3.706,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.9932453375267813,
+        1.2644113018962264,
+        3.6635000646021476,
+        97.73332908991127
+      ],
+      "spinor_amplitude": 4.5342914854381843e-11,
+      "trace_amplitude": 4.534291485438186e-11,
+      "spinor_parts": {
+        "VV": 1.1248872499954189e-11,
+        "VA": 1.1037429954202215e-12,
+        "VF": 4.797773423077514e-14,
+        "VP": -4.807917937714496e-30,
+        "AA": 2.8627926708633198e-11,
+        "AF": 4.071061179199479e-12,
+        "AP": -1.1362505582312332e-16,
+        "FF": 2.434380356538732e-13,
+        "FP": -1.8660731495754387e-29,
+        "PP": 9.326345942835403e-18
+      },
+      "trace_parts": {
+        "VV": 1.1248872499954187e-11,
+        "AA": 2.8627926708633198e-11,
+        "FF": 2.434380356538732e-13,
+        "PP": 9.326345942803069e-18,
+        "VA": 1.1037429954202255e-12,
+        "VF": 4.797773423077527e-14,
+        "AF": 4.07106117919948e-12,
+        "AP": -1.1362505582257281e-16,
+        "VP": 0.0,
+        "FP": 3.453449269154235e-30
+      }
+    },
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 17.3,
+      "cosine": -0.44,
+      "t": -893.0867658265115,
+      "model": {
+        "gv": 0.82,
+        "ga": 1.09,
+        "xi": 4.2,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.8187115940463187,
+        1.0883046310571762,
+        4.187885463315262,
+        95.31822970687784
+      ],
+      "spinor_amplitude": 2.8819922176880348e-12,
+      "trace_amplitude": 2.8819922176880344e-12,
+      "spinor_parts": {
+        "VV": 2.2043166807393808e-13,
+        "VA": 5.468092688713238e-14,
+        "VF": 2.8293021253381394e-15,
+        "VP": -5.926216400896558e-62,
+        "AA": 2.3156736169050337e-12,
+        "AF": 2.7970467316757076e-13,
+        "AP": -2.3749511900133622e-17,
+        "FF": 8.695224789390058e-15,
+        "FP": -2.0471213094175003e-31,
+        "PP": 5.552515312102625e-19
+      },
+      "trace_parts": {
+        "VV": 2.2043166807393798e-13,
+        "AA": 2.3156736169050345e-12,
+        "FF": 8.695224789390062e-15,
+        "PP": 5.552515312102701e-19,
+        "VA": 5.468092688713241e-14,
+        "VF": 2.829302125338139e-15,
+        "AF": 2.7970467316757086e-13,
+        "AP": -2.3749511900118686e-17,
+        "VP": 0.0,
+        "FP": 1.62771241220532e-31
+      }
+    },
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 63.7,
+      "cosine": 0.51,
+      "t": -3572.646927867663,
+      "model": {
+        "gv": 0.82,
+        "ga": 1.09,
+        "xi": 4.2,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.8148668773899214,
+        1.0832416246694072,
+        4.151834935598764,
+        83.72972467814452
+      ],
+      "spinor_amplitude": 3.366872621959949e-11,
+      "trace_amplitude": 3.366872621959949e-11,
+      "spinor_parts": {
+        "VV": 7.571279070518774e-12,
+        "VA": 7.757737159922472e-13,
+        "VF": 4.460810144456472e-14,
+        "VP": 4.807917937714496e-31,
+        "AA": 2.1011828055339697e-11,
+        "AF": 3.952651047116572e-12,
+        "AP": -8.339654352276068e-17,
+        "FF": 3.126627805418672e-13,
+        "FP": 3.8162848630608814e-30,
+        "PP": 6.8451892912097315e-18
+      },
+      "trace_parts": {
+        "VV": 7.571279070518772e-12,
+        "AA": 2.1011828055339694e-11,
+        "FF": 3.126627805418673e-13,
+        "PP": 6.845189291195545e-18,
+        "VA": 7.757737159922469e-13,
+        "VF": 4.460810144456479e-14,
+        "AF": 3.952651047116573e-12,
+        "AP": -8.339654352275587e-17,
+        "VP": 0.0,
+        "FP": -2.0690526591996136e-29
+      }
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 110.53137301322262,
+      "cosine": -0.31,
+      "t": -10401.799642277172,
+      "model": {
+        "gv": 1.0,
+        "ga": 1.2723,
+        "xi": 3.706,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.9805517165878186,
+        1.2495347409976,
+        3.584170089169674,
+        74.32991523889008
+      ],
+      "spinor_amplitude": 1.2158876905084038e-10,
+      "trace_amplitude": 1.215887690508403e-10,
+      "spinor_parts": {
+        "VV": 2.0092954156837135e-11,
+        "VA": 5.248698924249322e-12,
+        "VF": 3.8280463387837553e-13,
+        "VP": 1.9231671750857984e-30,
+        "AA": 9.392420143864762e-11,
+        "AF": 1.9185351851522284e-11,
+        "AP": -2.2796537843150607e-11,
+        "FF": 1.499535882816372e-12,
+        "FP": -5.7695015252573955e-30,
+        "PP": 4.051760006039875e-12
+      },
+      "trace_parts": {
+        "VV": 2.009295415683713e-11,
+        "AA": 9.392420143864762e-11,
+        "FF": 1.4995358828163714e-12,
+        "PP": 4.051760006039775e-12,
+        "VA": 5.248698924249318e-12,
+        "VF": 3.828046338783756e-13,
+        "AF": 1.9185351851522278e-11,
+        "AP": -2.279653784315061e-11,
+        "VP": 0.0,
+        "FP": 6.33072757531146e-31
+      }
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 187.4,
+      "cosine": 0.63,
+      "t": -15796.838104644386,
+      "model": {
+        "gv": 1.0,
+        "ga": 1.2723,
+        "xi": 3.706,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.9707211182584771,
+        1.2379670924177018,
+        3.523216985146433,
+        62.3015500247002
+      ],
+      "spinor_amplitude": 3.6147786081885e-10,
+      "trace_amplitude": 3.6147786081885003e-10,
+      "spinor_parts": {
+        "VV": 8.929705623535907e-11,
+        "VA": 1.3357202500459716e-11,
+        "VF": 9.81849034292832e-13,
+        "VP": -2.2154885856988397e-27,
+        "AA": 2.2045094181014717e-10,
+        "AF": 4.8479755759397424e-11,
+        "AP": -2.3553239705573858e-11,
+        "FF": 7.060224279853734e-12,
+        "FP": -1.230826992054911e-28,
+        "PP": 5.4040709049138565e-12
+      },
+      "trace_parts": {
+        "VV": 8.929705623535912e-11,
+        "AA": 2.2045094181014725e-10,
+        "FF": 7.060224279853734e-12,
+        "PP": 5.404070904913836e-12,
+        "VA": 1.3357202500459729e-11,
+        "VF": 9.818490342928319e-13,
+        "AF": 4.847975575939743e-11,
+        "AP": -2.355323970557386e-11,
+        "VP": 0.0,
+        "FP": -1.9532930872755604e-28
+      }
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 110.53137301322262,
+      "cosine": -0.31,
+      "t": -10401.799642277172,
+      "model": {
+        "gv": 0.82,
+        "ga": 1.09,
+        "xi": 4.2,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.8052080313622336,
+        1.0704966341958533,
+        4.061930484218196,
+        63.6796412877389
+      ],
+      "spinor_amplitude": 9.333033308380893e-11,
+      "trace_amplitude": 9.333033308380887e-11,
+      "spinor_parts": {
+        "VV": 1.3549366203677072e-11,
+        "VA": 3.6925486501562645e-12,
+        "VF": 3.5625310269860384e-13,
+        "VP": -9.846615936439288e-28,
+        "AA": 6.89368528482647e-11,
+        "AF": 1.8627330257938048e-11,
+        "AP": -1.673180661290698e-11,
+        "FF": 1.92594824955905e-12,
+        "FP": 1.1539003050514791e-29,
+        "PP": 2.9738403844221894e-12
+      },
+      "trace_parts": {
+        "VV": 1.3549366203677067e-11,
+        "AA": 6.89368528482647e-11,
+        "FF": 1.9259482495590494e-12,
+        "PP": 2.9738403844221147e-12,
+        "VA": 3.692548650156261e-12,
+        "VF": 3.562531026986038e-13,
+        "AF": 1.862733025793805e-11,
+        "AP": -1.673180661290697e-11,
+        "VP": 0.0,
+        "FP": 2.884339256360238e-31
+      }
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 187.4,
+      "cosine": 0.63,
+      "t": -15796.838104644386,
+      "model": {
+        "gv": 0.82,
+        "ga": 1.09,
+        "xi": 4.2,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.7977164751664896,
+        1.0605864424548417,
+        3.992852492610637,
+        53.374746150218684
+      ],
+      "spinor_amplitude": 2.7524168166735206e-10,
+      "trace_amplitude": 2.752416816673521e-10,
+      "spinor_parts": {
+        "VV": 6.030388745120304e-11,
+        "VA": 9.403868869275292e-12,
+        "VF": 9.144135994609787e-13,
+        "VP": 1.8963892482868988e-61,
+        "AA": 1.6180275054831815e-10,
+        "AF": 4.7069682554861086e-11,
+        "AP": -1.728719749343477e-11,
+        "FF": 9.067890104596933e-12,
+        "FP": 6.154134960274555e-29,
+        "PP": 3.966386033071386e-12
+      },
+      "trace_parts": {
+        "VV": 6.030388745120304e-11,
+        "AA": 1.6180275054831815e-10,
+        "FF": 9.067890104596933e-12,
+        "PP": 3.966386033071368e-12,
+        "VA": 9.403868869275286e-12,
+        "VF": 9.144135994609777e-13,
+        "AF": 4.70696825548611e-11,
+        "AP": -1.7287197493434758e-11,
+        "VP": 0.0,
+        "FP": -2.994621850403473e-28
+      }
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 17.3,
+      "cosine": -0.44,
+      "t": -768.7312243480217,
+      "model": {
+        "gv": 1.0,
+        "ga": 1.2723,
+        "xi": 3.706,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.9985398735725216,
+        1.2705963566355962,
+        3.6967961811404453,
+        111.97581208850866
+      ],
+      "spinor_amplitude": 2.712204606636961e-12,
+      "trace_amplitude": 2.712204606636961e-12,
+      "spinor_parts": {
+        "VV": 2.814864969528666e-13,
+        "VA": -6.216276566468385e-14,
+        "VF": 2.2575662410010396e-15,
+        "VP": -3.00494871107156e-32,
+        "AA": 2.7157739310764673e-12,
+        "AF": -2.301391069103275e-13,
+        "AP": -3.1192205276340655e-17,
+        "FF": 5.01910921031201e-15,
+        "FP": 2.535425474966629e-32,
+        "PP": 5.679366017516926e-19
+      },
+      "trace_parts": {
+        "VV": 2.814864969528667e-13,
+        "AA": 2.715773931076466e-12,
+        "FF": 5.019109210312009e-15,
+        "PP": 5.679366017517295e-19,
+        "VA": -6.216276566468381e-14,
+        "VF": 2.2575662410010385e-15,
+        "AF": -2.301391069103275e-13,
+        "AP": -3.119220527634098e-17,
+        "VP": 0.0,
+        "FP": -7.079703874374641e-32
+      }
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 63.7,
+      "cosine": 0.51,
+      "t": -3429.8933924928924,
+      "model": {
+        "gv": 1.0,
+        "ga": 1.2723,
+        "xi": 3.706,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.9935137167377222,
+        1.2647251045016867,
+        3.665184907232211,
+        98.37323211526245
+      ],
+      "spinor_amplitude": 3.363129980578512e-11,
+      "trace_amplitude": 3.363129980578512e-11,
+      "spinor_parts": {
+        "VV": 1.0777034783579214e-11,
+        "VA": -1.0377429121305888e-12,
+        "VF": 4.425327492448881e-14,
+        "VP": 3.6059384532858716e-30,
+        "AA": 2.7452007871968286e-11,
+        "AF": -3.828351430936836e-12,
+        "AP": -1.2050099491832445e-16,
+        "FF": 2.2421001032428206e-13,
+        "FP": 1.3011427918939854e-29,
+        "PP": 8.70905118942693e-18
+      },
+      "trace_parts": {
+        "VV": 1.0777034783579212e-11,
+        "AA": 2.7452007871968292e-11,
+        "FF": 2.2421001032428214e-13,
+        "PP": 8.70905118946779e-18,
+        "VA": -1.0377429121305882e-12,
+        "VF": 4.425327492448883e-14,
+        "AF": -3.828351430936838e-12,
+        "AP": -1.2050099491828575e-16,
+        "VP": 0.0,
+        "FP": -4.110966590103068e-30
+      }
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 17.3,
+      "cosine": -0.44,
+      "t": -768.7312243480217,
+      "model": {
+        "gv": 0.82,
+        "ga": 1.09,
+        "xi": 4.2,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.818890784866162,
+        1.0885404611591607,
+        4.1895693364246815,
+        95.93149035327713
+      ],
+      "spinor_amplitude": 1.923991048377182e-12,
+      "trace_amplitude": 1.9239910483771823e-12,
+      "spinor_parts": {
+        "VV": 1.8931224720771877e-13,
+        "VA": -4.367449291073166e-14,
+        "VF": 2.0981906614433233e-15,
+        "VP": 0.0,
+        "AA": 1.9932765462803964e-12,
+        "AF": -2.2344532343541243e-13,
+        "AP": -2.28939126679996e-17,
+        "FF": 6.446357642199786e-15,
+        "FP": 4.7891370082702985e-32,
+        "PP": 4.168442354835929e-19
+      },
+      "trace_parts": {
+        "VV": 1.8931224720771877e-13,
+        "AA": 1.993276546280397e-12,
+        "FF": 6.4463576421997825e-15,
+        "PP": 4.168442354836708e-19,
+        "VA": -4.36744929107316e-14,
+        "VF": 2.0981906614433253e-15,
+        "AF": -2.2344532343541238e-13,
+        "AP": -2.2893912667996002e-17,
+        "VP": 0.0,
+        "FP": -7.32064981097314e-32
+      }
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 63.7,
+      "cosine": 0.51,
+      "t": -3429.8933924928924,
+      "model": {
+        "gv": 0.82,
+        "ga": 1.09,
+        "xi": 4.2,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.8150709167440016,
+        1.0835104644398637,
+        4.153744363296084,
+        84.27793995569918
+      ],
+      "spinor_amplitude": 2.3284817565895345e-11,
+      "trace_amplitude": 2.3284817565895348e-11,
+      "spinor_parts": {
+        "VV": 7.2534119514981414e-12,
+        "VA": -7.293706379105209e-13,
+        "VF": 4.114440826367691e-14,
+        "VP": 3.365542556400147e-30,
+        "AA": 2.0148747586589325e-11,
+        "AF": -3.717000709676944e-12,
+        "AP": -8.844322578763626e-17,
+        "FF": 2.879670182394339e-13,
+        "FP": 1.7353578806438257e-29,
+        "PP": 6.392118017481435e-18
+      },
+      "trace_parts": {
+        "VV": 7.2534119514981414e-12,
+        "AA": 2.014874758658933e-11,
+        "FF": 2.8796701823943395e-13,
+        "PP": 6.3921180174890845e-18,
+        "VA": -7.293706379105198e-13,
+        "VF": 4.1144408263676774e-14,
+        "AF": -3.717000709676944e-12,
+        "AP": -8.844322578752448e-17,
+        "VP": 0.0,
+        "FP": -8.555430241984234e-30
+      }
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 113.41731059534446,
+      "cosine": -0.31,
+      "t": -10906.31802497959,
+      "model": {
+        "gv": 1.0,
+        "ga": 1.2723,
+        "xi": 3.706,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.9796251067975105,
+        1.2484461320408347,
+        3.578406714043057,
+        73.02218684517811
+      ],
+      "spinor_amplitude": 7.382570329263431e-11,
+      "trace_amplitude": 7.382570329263431e-11,
+      "spinor_parts": {
+        "VV": 2.0584388995542972e-11,
+        "VA": -5.4906000440777035e-12,
+        "VF": 4.1983759702049587e-13,
+        "VP": -1.9693231872878575e-27,
+        "AA": 9.605191006594215e-11,
+        "AF": -2.005624388913702e-11,
+        "AP": -2.348322266837858e-11,
+        "FF": 1.6036309328432085e-12,
+        "FP": 1.1539003050514791e-29,
+        "PP": 4.196002302878814e-12
+      },
+      "trace_parts": {
+        "VV": 2.058438899554297e-11,
+        "AA": 9.605191006594213e-11,
+        "FF": 1.6036309328432085e-12,
+        "PP": 4.196002302878828e-12,
+        "VA": -5.490600044077707e-12,
+        "VF": 4.198375970204961e-13,
+        "AF": -2.0056243889137018e-11,
+        "AP": -2.3483222668378587e-11,
+        "VP": 0.0,
+        "FP": -8.649711497977434e-31
+      }
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 187.4,
+      "cosine": 0.63,
+      "t": -15669.407730946776,
+      "model": {
+        "gv": 1.0,
+        "ga": 1.2723,
+        "xi": 3.706,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.9709513453219939,
+        1.2382384639525796,
+        3.5246396244012352,
+        62.54269224227654
+      ],
+      "spinor_amplitude": 2.3311285546487926e-10,
+      "trace_amplitude": 2.331128554648792e-10,
+      "spinor_parts": {
+        "VV": 8.757013814036802e-11,
+        "VA": -1.3077600248069672e-11,
+        "VF": 9.474055617539212e-13,
+        "VP": -3.034222797259038e-60,
+        "AA": 2.1731445870745185e-10,
+        "AF": -4.747285046619904e-11,
+        "AP": -2.4368162902632585e-11,
+        "FF": 6.822941479254197e-12,
+        "FP": -1.8462404880823666e-28,
+        "PP": 5.376525192952597e-12
+      },
+      "trace_parts": {
+        "VV": 8.7570138140368e-11,
+        "AA": 2.173144587074519e-10,
+        "FF": 6.822941479254197e-12,
+        "PP": 5.376525192952477e-12,
+        "VA": -1.3077600248069681e-11,
+        "VF": 9.474055617539212e-13,
+        "AF": -4.7472850466199054e-11,
+        "AP": -2.4368162902632578e-11,
+        "VP": 0.0,
+        "FP": 1.073686701855524e-28
+      }
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 113.41731059534446,
+      "cosine": -0.31,
+      "t": -10906.31802497959,
+      "model": {
+        "gv": 0.82,
+        "ga": 1.09,
+        "xi": 4.2,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.8045023141583563,
+        1.0695640052853177,
+        4.055398866427642,
+        62.55928920949786
+      ],
+      "spinor_amplitude": 4.933957645245575e-11,
+      "trace_amplitude": 4.933957645245575e-11,
+      "spinor_parts": {
+        "VV": 1.3882662366951094e-11,
+        "VA": -3.862995218147973e-12,
+        "VF": 3.907442479748138e-13,
+        "VP": 3.846334350171597e-30,
+        "AA": 7.04985114442081e-11,
+        "AF": -1.9472891690910736e-11,
+        "AP": -1.7235807605460507e-11,
+        "FF": 2.0596440695019585e-12,
+        "FP": 2.8847507626286977e-30,
+        "PP": 3.0797088383390073e-12
+      },
+      "trace_parts": {
+        "VV": 1.3882662366951098e-11,
+        "AA": 7.04985114442081e-11,
+        "FF": 2.059644069501959e-12,
+        "PP": 3.0797088383390178e-12,
+        "VA": -3.8629952181479796e-12,
+        "VF": 3.907442479748138e-13,
+        "AF": -1.9472891690910736e-11,
+        "AP": -1.7235807605460513e-11,
+        "VP": 0.0,
+        "FP": -3.200411744897596e-31
+      }
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 187.4,
+      "cosine": 0.63,
+      "t": -15669.407730946776,
+      "model": {
+        "gv": 0.82,
+        "ga": 1.09,
+        "xi": 4.2,
+        "vector_mass": 823.0,
+        "axial_mass": 1071.0,
+        "pion_mass": 138.7,
+        "weak_magnetism": true,
+        "pseudoscalar": true,
+        "q2_dependence": true
+      },
+      "ff": [
+        0.797892035786393,
+        1.0608189308404559,
+        3.994464765916133,
+        53.58133659049079
+      ],
+      "spinor_amplitude": 1.590437114032799e-10,
+      "trace_amplitude": 1.5904371140327981e-10,
+      "spinor_parts": {
+        "VV": 5.913564791285865e-11,
+        "VA": -9.206863214985505e-12,
+        "VF": 8.82320698806319e-13,
+        "VP": -9.846615936439288e-28,
+        "AA": 1.595006891967206e-10,
+        "AF": -4.609206392268658e-11,
+        "AP": -1.788532065719647e-11,
+        "FF": 8.763132879576855e-12,
+        "FP": 8.000375448356922e-28,
+        "PP": 3.946168510186037e-12
+      },
+      "trace_parts": {
+        "VV": 5.913564791285865e-11,
+        "AA": 1.5950068919672055e-10,
+        "FF": 8.763132879576855e-12,
+        "PP": 3.9461685101859456e-12,
+        "VA": -9.206863214985513e-12,
+        "VF": 8.8232069880632e-13,
+        "AF": -4.609206392268658e-11,
+        "AP": -1.7885320657196446e-11,
+        "VP": 0.0,
+        "FP": 1.518105621707186e-28
+      }
+    }
+  ],
+  "runtime_seconds": 0.05445570801384747,
+  "source_sha256": {
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_full_current/source_polynomial.py": "a31fb9baa0ae836d64ab6d40da6d0965dfc75c5b9d26655201504bf1266766db",
+    "muon_full_current/results.json": "37b2ec9faf357b76a5ea92da32183aa7f9502a8e2bc79e9914e5807e21b89b17",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9"
+  },
+  "end_source_sha256": {
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_full_current/source_polynomial.py": "a31fb9baa0ae836d64ab6d40da6d0965dfc75c5b9d26655201504bf1266766db",
+    "muon_full_current/results.json": "37b2ec9faf357b76a5ea92da32183aa7f9502a8e2bc79e9914e5807e21b89b17",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9"
+  }
+}

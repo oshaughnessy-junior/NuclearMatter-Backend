@@ -1,0 +1,13 @@
+{
+  "T": 0.08,
+  "n": 0.0042,
+  "Ein": 19.6,
+  "Eout": 77.2,
+  "cosine": -0.3,
+  "exponent": 720.0,
+  "log_forward_kernel": -2983.0580356613928,
+  "log_reverse_kernel": -2265.7997754429816,
+  "log_gain_integrand": -2443.558035661393,
+  "all_logs_finite": true,
+  "note": "Finite physical logs; ordinary gain exponential overflows before multiplication by an underflowed forward rate. No author repair."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "passed": true,
+  "checks": 126,
+  "experiments": {
+    "results_2.json": 49.80901366705075,
+    "results_4.json": 110.23130395798944,
+    "qualification.json": 87.69036541692913,
+    "tails_eos.json": 18.57090033404529
+  },
+  "external_gate": "No full hydro or long-time temporal accuracy qualification",
+  "manifest_sha256": "1c5328de6b652023f9312c6f6dd9950a43f6490724dbc6ea13ae1d8e29db1acc"
+}

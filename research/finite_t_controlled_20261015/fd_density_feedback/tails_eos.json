@@ -1,0 +1,281 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "peak FD T10000.0",
+      "error": 1.0263778715824401e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD n10000.0",
+      "error": 1.5934877861667474e-09,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD Y10000.0",
+      "error": 3.5792468988660175e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD T20000.0",
+      "error": 1.1965095580990237e-11,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD n20000.0",
+      "error": 3.818931837429318e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD Y20000.0",
+      "error": 9.05372443682495e-11,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 nuenumber_fm3_s6",
+      "error": 5.776657587241715e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 nueenergy_MeV_fm3_s6",
+      "error": 3.5021601249744043e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 nuenumber_fm3_s10",
+      "error": 5.902706029388506e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 nueenergy_MeV_fm3_s10",
+      "error": 3.57032872771846e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 antinuenumber_fm3_s6",
+      "error": 1.0480711874709592e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 antinueenergy_MeV_fm3_s6",
+      "error": 9.941480197778571e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 antinuenumber_fm3_s10",
+      "error": 1.0707969355128447e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 antinueenergy_MeV_fm3_s10",
+      "error": 1.0133719911220901e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD T10000.0",
+      "error": 8.764877712508223e-11,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD n10000.0",
+      "error": 1.5826948640551564e-09,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD Y10000.0",
+      "error": 3.5570690837261054e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD T20000.0",
+      "error": 8.217648783670484e-12,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD n20000.0",
+      "error": 3.827653749510773e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD Y20000.0",
+      "error": 8.975642451503063e-11,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 nuenumber_fm3_s6",
+      "error": 3.472110207042541e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 nueenergy_MeV_fm3_s6",
+      "error": 2.126880950016102e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 nuenumber_fm3_s10",
+      "error": 3.552601439948139e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 nueenergy_MeV_fm3_s10",
+      "error": 2.170974540713797e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 antinuenumber_fm3_s6",
+      "error": 6.311406291977506e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 antinueenergy_MeV_fm3_s6",
+      "error": 6.047324834934637e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 antinuenumber_fm3_s10",
+      "error": 6.456821293403239e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 antinueenergy_MeV_fm3_s10",
+      "error": 6.171892514161964e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "physical provenance unchanged",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "peak",
+      "state": {
+        "T": 2.026895313664173,
+        "nB": 0.00010202013400267558,
+        "Ye": 0.2973945797515789,
+        "u": 8.529019596712539,
+        "entropy": 6.017546848343916
+      },
+      "tails": [
+        {
+          "flavor": "nue",
+          "order": 6,
+          "number": 1.551376546971814e-16,
+          "energy": 1.5889340011510498e-14
+        },
+        {
+          "flavor": "nue",
+          "order": 10,
+          "number": 1.58522805954212e-16,
+          "energy": 1.6198621731494046e-14
+        },
+        {
+          "flavor": "antinue",
+          "order": 6,
+          "number": 1.7672103036165032e-23,
+          "energy": 1.810019884467498e-21
+        },
+        {
+          "flavor": "antinue",
+          "order": 10,
+          "number": 1.805529433630871e-23,
+          "energy": 1.8450204776379903e-21
+        }
+      ]
+    },
+    {
+      "label": "endpoint",
+      "state": {
+        "T": 2.004413271549279,
+        "nB": 0.0001,
+        "Ye": 0.2948002262140444,
+        "u": 8.414697702458614
+      },
+      "tails": [
+        {
+          "flavor": "nue",
+          "order": 6,
+          "number": 8.621419068127609e-17,
+          "energy": 8.828685151761546e-15
+        },
+        {
+          "flavor": "nue",
+          "order": 10,
+          "number": 8.8212827270581e-17,
+          "energy": 9.011717695015856e-15
+        },
+        {
+          "flavor": "antinue",
+          "order": 6,
+          "number": 9.784296541309546e-24,
+          "energy": 1.0019662364347555e-21
+        },
+        {
+          "flavor": "antinue",
+          "order": 10,
+          "number": 1.0009727044383454e-23,
+          "energy": 1.022605545905249e-21
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_sha256": {
+      "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+      "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+      "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+      "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+      "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+      "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+      "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+      "quantum_slab/fixed_bath.py": "8e73b2c7d41cce51f8a522b8ba4444599010783be2b8af892c50add7e684ecf3",
+      "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+      "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+      "fd_prescribed_density/density_element.py": "d539c8e2a86cb31c10d459d7f1a5609e8c0c2e1fa737256cb7a67e7ea04309b2",
+      "fd_fluid_element/qualification_contract.py": "92cbb4eede20914741d7c7b51f85c95f130e47bd6aa509f8915206ff3f12a1ff",
+      "fd_fluid_element/qualify_source.py": "115df9db7339a2357a1f2f885447cd7967e31e323b793899cbc93d2c5ada3ea8",
+      "fd_fluid_element/short_evolution.py": "38734cbbecf01d371215721ec1673e524602dfda3289bd1a6658181590a5abd6",
+      "fd_density_feedback/engine.py": "91bad5ddc2fb21a7c81b1bb739fce999924f729a9af6e2134b7e8944d49be810",
+      "fd_density_feedback/run_feedback.py": "fd5361a61bab051d3d38fd4cf770961617f985a1a691aad55fbd0dc833e398ee"
+    },
+    "environment": {
+      "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+      "executable": "/Users/rossma/miniconda3/bin/python",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+    }
+  },
+  "runtime_seconds": 18.57090033404529,
+  "scope": "Selected actual states; no bound on mathematical E>240 tail"
+}

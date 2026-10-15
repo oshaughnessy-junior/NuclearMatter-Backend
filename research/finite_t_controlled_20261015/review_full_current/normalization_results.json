@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "independent t phase/spinor total antiFalsem0.51099895069",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent t phase/spinor total antiFalsem105.6583755",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent t phase/spinor total antiTruem0.51099895069",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent t phase/spinor total antiTruem105.6583755",
+      "error": 6.8833827526759706e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing VV",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing VA",
+      "error": 3.6110135421458084e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing VF",
+      "error": -7.544140932899943e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing VP",
+      "error": -4.3119466220684976e-17,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing AA",
+      "error": -2.3831047715718953e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing AF",
+      "error": 4.1642562885355924e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing AP",
+      "error": 1.3592910976960315e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing FF",
+      "error": -2.942045373423027e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing FP",
+      "error": -1.4184034941014797e-17,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit spinor equalmass crossing PP",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent massless PS zero False",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent massless PS zero True",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "anti": false,
+      "m": 0.51099895069,
+      "E": 37.6,
+      "t_integrated_cm2": 1.448709025855626e-40,
+      "author_cos64_cm2": 1.4487090258556233e-40,
+      "quad_relative_error": 1.1102230246251565e-14
+    },
+    {
+      "anti": false,
+      "m": 105.6583755,
+      "E": 218.4,
+      "t_integrated_cm2": 2.8497743432946302e-39,
+      "author_cos64_cm2": 2.8497743432946197e-39,
+      "quad_relative_error": 1.3225133673399746e-09
+    },
+    {
+      "anti": true,
+      "m": 0.51099895069,
+      "E": 37.6,
+      "t_integrated_cm2": 9.31548938918812e-41,
+      "author_cos64_cm2": 9.31548938918812e-41,
+      "quad_relative_error": 1.1102230246251565e-14
+    },
+    {
+      "anti": true,
+      "m": 105.6583755,
+      "E": 218.4,
+      "t_integrated_cm2": 9.480715185121049e-40,
+      "author_cos64_cm2": 9.480715185120984e-40,
+      "quad_relative_error": 1.9905694924134257e-09
+    }
+  ],
+  "equalmass_spinor_parts": [
+    {
+      "VV": 4.1862314579235e-11,
+      "VA": 3.579243589172664e-11,
+      "VF": 8.566049591396515e-12,
+      "VP": 4.4309771713976794e-27,
+      "AA": 2.1693879724164926e-10,
+      "AF": 1.2414891087970163e-10,
+      "AP": -2.377102500900678e-11,
+      "FF": 2.1965495821200336e-11,
+      "FP": 1.7231577888768754e-27,
+      "PP": 8.614356459646676e-12
+    },
+    {
+      "VV": 4.1862314579235e-11,
+      "VA": -3.5792435891726624e-11,
+      "VF": 8.566049591396509e-12,
+      "VP": -4.923307968219644e-27,
+      "AA": 2.169387972416492e-10,
+      "AF": -1.2414891087970158e-10,
+      "AP": -2.3771025009006778e-11,
+      "FF": 2.196549582120033e-11,
+      "FP": -1.353909691260402e-27,
+      "PP": 8.614356459646676e-12
+    }
+  ],
+  "runtime_seconds": 0.12995170801877975
+}

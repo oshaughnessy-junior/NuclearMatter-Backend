@@ -1,0 +1,26 @@
+{
+  "verified_utc": "2026-10-15T15:10:24.539133+00:00",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2006.12051v2",
+      "equations": [
+        "26 vertex",
+        "27 form factors",
+        "29 crossing sign",
+        "47a-h components"
+      ],
+      "parameterization": "MV840,MA1000,mpi139.57MeV;xi3.706;benchmarkga1.2723,gv1 inherited frozenpoint;M=(ma+mb)/2"
+    },
+    {
+      "url": "https://arxiv.org/html/astro-ph/0302055",
+      "equations": [
+        "4 vertex convention",
+        "5-6 complete polynomial including Delta",
+        "7 convention map only; sourceparameters not substituted"
+      ],
+      "mapping": "f1=GV,g1=-GA,f2=F2,g2=-GP;physical amplitude\u00b2=8GF\u00b2Vud\u00b2 reduced polynomial"
+    }
+  ],
+  "external_software_executed": false,
+  "scope": "vacuum current only; no mediumqstar or finiteT rate"
+}
