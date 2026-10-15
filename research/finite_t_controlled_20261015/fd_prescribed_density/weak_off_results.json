@@ -1,0 +1,502 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "genuineFD un T2.0Y0.3phFalseh0.0002",
+      "error": 6.446729816644847e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Maxwell entropy_n T2.0Y0.3phFalseh0.0002",
+      "error": 1.3951079846918901e-08,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "genuineFD un T2.0Y0.3phFalseh0.0001",
+      "error": 1.6186727513911592e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Maxwell entropy_n T2.0Y0.3phFalseh0.0001",
+      "error": 3.480270516220685e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent EOS un versus pressure identity phFalseT2.0",
+      "error": 6.217248937900877e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "genuineFD un T2.1Y0.29phFalseh0.0002",
+      "error": 6.33984353903827e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Maxwell entropy_n T2.1Y0.29phFalseh0.0002",
+      "error": 1.3959186695444714e-08,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "genuineFD un T2.1Y0.29phFalseh0.0001",
+      "error": 1.5923480312096672e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Maxwell entropy_n T2.1Y0.29phFalseh0.0001",
+      "error": 3.480172150460703e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent EOS un versus pressure identity phFalseT2.1",
+      "error": 4.107825191113079e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "genuineFD un T2.0Y0.3phTrueh0.0002",
+      "error": 6.099766691747277e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Maxwell entropy_n T2.0Y0.3phTrueh0.0002",
+      "error": 1.4167618411775607e-08,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "genuineFD un T2.0Y0.3phTrueh0.0001",
+      "error": 1.5280703369313642e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Maxwell entropy_n T2.0Y0.3phTrueh0.0001",
+      "error": 3.5339517978627555e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent EOS un versus pressure identity phTrueT2.0",
+      "error": 6.106226635438361e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.0",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.0",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.0625",
+      "error": 1.1475265182525618e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.0625",
+      "error": 3.4017233474514796e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.125",
+      "error": 3.3582026048861735e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.125",
+      "error": 7.638334409421077e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.1875",
+      "error": 2.3530288828510493e-11,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.1875",
+      "error": 6.991296430669536e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.25",
+      "error": 7.008171820643838e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.25",
+      "error": 2.0827783941967937e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.3125",
+      "error": 8.107070570417818e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.3125",
+      "error": 2.4097390749489023e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.375",
+      "error": 2.8377300509419e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.375",
+      "error": 8.43769498715119e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.4375",
+      "error": 7.156497616733759e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.4375",
+      "error": 2.1294077612310502e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.5",
+      "error": 6.908573713104715e-11,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.5",
+      "error": 2.053934800017032e-11,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.5625",
+      "error": 1.0375034165122088e-11,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.5625",
+      "error": 3.084643651618535e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.625",
+      "error": 1.5983880885528379e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.625",
+      "error": 4.75397499144492e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.6875",
+      "error": 6.116218642659987e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.6875",
+      "error": 1.8196555373606316e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.75",
+      "error": 8.29691870762872e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.75",
+      "error": 2.4653612484826226e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.8125",
+      "error": 2.737632343041696e-11,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.8125",
+      "error": 8.134382056823597e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.875",
+      "error": 5.6561422212553225e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.875",
+      "error": 1.446620601086579e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta0.9375",
+      "error": 1.531308413404986e-11,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta0.9375",
+      "error": 4.547695553469566e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE independent entropy root theta1.0",
+      "error": 4.069411474461049e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "ODE entropy conservation theta1.0",
+      "error": 1.2088108292118704e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent Pdn/n2 compression",
+      "error": 6.213243971116602e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent Pdn/n2 expansion",
+      "error": 5.282428212880891e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "compression work4->8",
+      "error": 5.327310314431006e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "expansion work4->8",
+      "error": 5.391706373176913e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "closed history temperature returns",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "closed positive negative work ledger",
+      "error": 6.82988501850129e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    }
+  ],
+  "photons": false,
+  "weak": false,
+  "prescribed_history": "nB=n0 exp(.02 sin\u00b2(pi theta)),theta=t/(2e-6 s)",
+  "samples": [
+    {
+      "theta": 0.0,
+      "nB": 0.0001,
+      "T": 2.0,
+      "u": 8.501921263559376,
+      "entropy": 6.01956871769031,
+      "P": 0.00035378256398881097
+    },
+    {
+      "theta": 0.0625,
+      "nB": 0.00010007614944646908,
+      "T": 2.000931808400087,
+      "u": 8.504614793723261,
+      "entropy": 6.019568717692358,
+      "P": 0.0003541889019353222
+    },
+    {
+      "theta": 0.125,
+      "nB": 0.0001002933225700795,
+      "T": 2.003587681065006,
+      "u": 8.512291027697207,
+      "entropy": 6.019568717694908,
+      "P": 0.00035534863003951374
+    },
+    {
+      "theta": 0.1875,
+      "nB": 0.00010061922589319734,
+      "T": 2.0075688622298964,
+      "u": 8.523795128821305,
+      "entropy": 6.019568717732395,
+      "P": 0.0003570914305127971
+    },
+    {
+      "theta": 0.25,
+      "nB": 0.0001010050167084168,
+      "T": 2.012274846157504,
+      "u": 8.537389540225172,
+      "entropy": 6.019568717702848,
+      "P": 0.0003591582671085075
+    },
+    {
+      "theta": 0.3125,
+      "nB": 0.00010139228670966445,
+      "T": 2.0169915253280375,
+      "u": 8.55101041256204,
+      "entropy": 6.019568717675805,
+      "P": 0.000361237145089886
+    },
+    {
+      "theta": 0.375,
+      "nB": 0.00010172176111863227,
+      "T": 2.0209985270954323,
+      "u": 8.562578396051725,
+      "entropy": 6.019568717690818,
+      "P": 0.0003630090163197049
+    },
+    {
+      "theta": 0.4375,
+      "nB": 0.0001019425053491355,
+      "T": 2.02368022043067,
+      "u": 8.570318512538972,
+      "entropy": 6.019568717689029,
+      "P": 0.00036419781558337397
+    },
+    {
+      "theta": 0.5,
+      "nB": 0.00010202013400267558,
+      "T": 2.0246227239778256,
+      "u": 8.573038503490704,
+      "entropy": 6.019568717566672,
+      "P": 0.0003646161953002982
+    },
+    {
+      "theta": 0.5625,
+      "nB": 0.0001019425053491355,
+      "T": 2.0236802204111224,
+      "u": 8.570318512503988,
+      "entropy": 6.019568717671742,
+      "P": 0.00036419781558119245
+    },
+    {
+      "theta": 0.625,
+      "nB": 0.00010172176111863227,
+      "T": 2.0209985270916286,
+      "u": 8.562578396044916,
+      "entropy": 6.019568717687449,
+      "P": 0.0003630090163192813
+    },
+    {
+      "theta": 0.6875,
+      "nB": 0.00010139228670966445,
+      "T": 2.0169915253431556,
+      "u": 8.551010412589084,
+      "entropy": 6.019568717689215,
+      "P": 0.0003612371450915637
+    },
+    {
+      "theta": 0.75,
+      "nB": 0.0001010050167084168,
+      "T": 2.012274846160097,
+      "u": 8.53738954022981,
+      "entropy": 6.019568717705151,
+      "P": 0.00035915826710879417
+    },
+    {
+      "theta": 0.8125,
+      "nB": 0.00010061922589319734,
+      "T": 2.0075688622376178,
+      "u": 8.523795128835113,
+      "entropy": 6.019568717739276,
+      "P": 0.0003570914305136473
+    },
+    {
+      "theta": 0.875,
+      "nB": 0.0001002933225700795,
+      "T": 2.0035876810696105,
+      "u": 8.512291027705443,
+      "entropy": 6.019568717699019,
+      "P": 0.0003553486300400191
+    },
+    {
+      "theta": 0.9375,
+      "nB": 0.00010007614944646908,
+      "T": 2.0009318084284313,
+      "u": 8.504614793773941,
+      "entropy": 6.019568717717685,
+      "P": 0.0003541889019384259
+    },
+    {
+      "theta": 1.0,
+      "nB": 0.0001,
+      "T": 2.000000000008139,
+      "u": 8.50192126357393,
+      "entropy": 6.019568717697586,
+      "P": 0.0003537825639897016
+    }
+  ],
+  "compression": {
+    "T": 2.024622724117698,
+    "nB": 0.00010202013400267558,
+    "Ye": 0.3,
+    "entropy_before": 6.01956871769031,
+    "entropy_after": 6.019568717690311,
+    "u_before": 8.501921263559376,
+    "u_after": 8.573038503741026,
+    "work_energy": 0.07111724018164978,
+    "work_pressure_integral": 0.07111724018160559,
+    "work_quad_error": 3.788636071533347e-14
+  },
+  "expansion": {
+    "T": 2.000000000000003,
+    "nB": 0.0001,
+    "Ye": 0.3,
+    "entropy_before": 6.019568717690311,
+    "entropy_after": 6.019568717690314,
+    "u_before": 8.573038503741026,
+    "u_after": 8.501921263559383,
+    "work_energy": -0.07111724018164267,
+    "work_pressure_integral": -0.0711172401816051,
+    "work_quad_error": 3.8344327712991344e-14
+  },
+  "runtime_seconds": 76.02679174998775,
+  "scope": "One reversible weak-off prescribed-density cycle; independent EOS derivative/entropy/work checks, no hydro"
+}

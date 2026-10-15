@@ -1,0 +1,24 @@
+{
+  "status": "frozen_for_independent_review",
+  "scope": "primary-source research contract plus EOS/stoichiometry/support examples; no muon weak kernel",
+  "author_checks": 25,
+  "author_checks_passed": true,
+  "quota_used_percent": 8,
+  "quota_reset_unix": 1792652325,
+  "deadline": "2026-10-16T10:27:28Z",
+  "independent_review": "pending",
+  "open_gates": [
+    "complete explicit-mass CC kernel/current derivation",
+    "matched external forward rates",
+    "full leptonic coupled kernels",
+    "two-lepton EOS Jacobian and closed-box dynamics",
+    "cold cooling regression under matched conventions"
+  ],
+  "sha256": {
+    "INITIAL_FAILURE.md": "7bdf931ef2b49498662571515fa8a75763f2c9d157e6b5449cd48be4c9eef86f",
+    "RESEARCH_CONTRACT.md": "33c7a383dd87ab600dfcd3a8a78d8fac980a28b88030adb1e8f13b9967389d95",
+    "SOURCES.json": "536d8abbf480d3fe59bafaa7d63006befeef9a98652ebdabebba52adaa7d1920",
+    "contract_probes.py": "b6c3a41d7eca840abd85e8b3d3257348aaeb7280d335ceff5f325a3105f0e320",
+    "contract_results.json": "47336914bc749fe7b709046f44bfe97de155cd1d953188751b258cb19f0d34bb"
+  }
+}

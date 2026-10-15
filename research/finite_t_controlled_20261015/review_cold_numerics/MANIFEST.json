@@ -1,0 +1,26 @@
+{
+  "status": "ACCEPT selected cold numerical repair; originalmapped72remainsFAIL",
+  "checks": "41/41 PASS",
+  "runtime_seconds": 2.507554999785498,
+  "source_sha256": {
+    "cold_capture/resolved.py": "d988860e717ce3a08d8fc2d59a3bdc91c506be80ffb44250e6c55cd67b5354a1",
+    "urca_threshold/threshold_study.py": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+    "urca_threshold/initial_cold_extension_failure.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "files_sha256": {
+    "results.json": "66b756ecab58a6c064f5dc36314fd1e374c6d8bd18743a615cff342b278e2d4f",
+    "probe_cold.py": "c8ab9fd09b40a3284bfe8ac813be72e8b8e97ca4017a4f96adda8178e9cafa98",
+    "REVIEW.md": "0eb6923547ef7b8bc044a63107e5d6be4f25ff522823fefee3f6be132d8cfb57",
+    "partial.json": "6da3e55cf37a08acbc777511816099e966a16104fcd27e484bd9ec0c0c4deb84"
+  },
+  "limits": [
+    "Pointwise shared-response/current numerical review only",
+    "Energybudgetedge not explicit in author rootfinder; selected Fermipanels suffice",
+    "No broad cold-domain or physical-width certificate"
+  ],
+  "quota_used_percent": 8,
+  "quota_reset": 1792652325
+}

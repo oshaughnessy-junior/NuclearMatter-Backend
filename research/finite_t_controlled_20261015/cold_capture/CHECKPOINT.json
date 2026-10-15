@@ -1,0 +1,39 @@
+{
+  "status": "author_frozen_independent_review_required",
+  "checks": {
+    "main": 47,
+    "single_control_refinements": 10,
+    "controls": 30
+  },
+  "all_passed": true,
+  "source_sha256": {
+    "cold_capture/resolved.py": "d988860e717ce3a08d8fc2d59a3bdc91c506be80ffb44250e6c55cd67b5354a1",
+    "urca_threshold/threshold_study.py": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+    "urca_threshold/initial_cold_extension_failure.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "sources_unchanged": true,
+  "files_sha256": {
+    "cold_convergence.png": "927a8ef27a6d5cbf96b705d4360fb5742d99570571fd60e585c76999d7d73052",
+    "cold_convergence.pdf": "389f73e9f9d8dfefc4de0699c292e7a3d6df922b519411d589dba5a9a11f5b27",
+    "controls.json": "2f1f3b44352a194c4ffc2373ef97db6f4128a5fbcbe9ae83732e2f4635f50091",
+    "make_figure.py": "8296ab1ba8f1a716b164832115e6ace1a97269193dad7ffb32bc9d5f18d5f69b",
+    "initial45pass_before_domain_guards.json": "d0ca7adbab1b2652f1bb652a3b054a80145b8bbb93742ac2dd9cb5b3152e266a",
+    "results.json": "a4014b62d3ee46874824a34d31436dc7654c326e12cd970ef48c69e761b41ec5",
+    "RESEARCH_NOTE.md": "c80cbee27eca2acf99eabf181e7e5989a4d32964f291140cc363d8ab5c3d02d9",
+    "figure_data.json": "a13a39084a3152eb1a6fd631c5eda0c6ebf41e3a0ec2f20bbda5dc3ae1d66354",
+    "refine_controls.py": "a4b2536ec48fdb182b3f05d4813fc2b1bb252947a0746f03f5ba3ec38fd5bcc1",
+    "check_controls.py": "6093a180d46b3a48a810b6feb7dd47a93282ed1083e73f625862633869958ed3",
+    "study.py": "2305e257b5d089c2fe43229957768918cd73666c903504a858bca339c2aa45df",
+    "resolved.py": "d988860e717ce3a08d8fc2d59a3bdc91c506be80ffb44250e6c55cd67b5354a1",
+    "refinement.json": "7dd5887e3ee54a3d74820bebe3f167cf29a5cb57b5765855e943c4ad4279f6b1"
+  },
+  "numerical_runtime_seconds": {
+    "initial": 3.470533166779205,
+    "final": 3.5429309161845595,
+    "refinement": 1.4188825408928096
+  },
+  "scope": "Three selected finite-energy electron-capture states in fixed-offset free-NR toy; original failed module remains frozen/excluded; no external physical validation"
+}

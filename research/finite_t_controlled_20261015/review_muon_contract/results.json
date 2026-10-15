@@ -1,0 +1,563 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "charge 9.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 9.0 coordinate0 h3e-05",
+      "error": 1.978683883407939e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 9.0 coordinate1 h3e-05",
+      "error": 4.922216301217475e-09,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 9.0 coordinate2 h3e-05",
+      "error": 8.905379766943611e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 9.0 coordinate0 h1.5e-05",
+      "error": 1.4124978964247248e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 9.0 coordinate1 h1.5e-05",
+      "error": 1.2292791229384648e-09,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 9.0 coordinate2 h1.5e-05",
+      "error": 2.2195445481543175e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "trapped muon decay affinity 9.0",
+      "error": 7.105427357601002e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "charge 17.0",
+      "error": 4.218847493575595e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 17.0 coordinate0 h3e-05",
+      "error": 7.743305996399386e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 17.0 coordinate1 h3e-05",
+      "error": 1.4238931811405564e-08,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 17.0 coordinate2 h3e-05",
+      "error": 9.63227608785644e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 17.0 coordinate0 h1.5e-05",
+      "error": 7.743305996399386e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 17.0 coordinate1 h1.5e-05",
+      "error": 3.554309513376097e-09,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "energy derivative 17.0 coordinate2 h1.5e-05",
+      "error": 2.384323849469183e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "trapped muon decay affinity 17.0",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "e-+p->n+ve",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e++n->p+ae",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "n->p+e-+ae",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p->n+e++ve",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu-+p->n+vm",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu++n->p+am",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "n->p+mu-+am",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "p->n+mu++vm",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu-->e-+ae+vm",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+->e++ve+am",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ve+mu-->vm+e-",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ae+mu+->am+e+",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "am+mu-->ae+e-",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vm+mu+->ve+e+",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e-+mu+->ve+am",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e++mu-->ae+vm",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "numu+n independent minimum final-energy threshold",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "numu+n below threshold forbidden",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "anumu+p independent minimum final-energy threshold",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "anumu+p below threshold forbidden",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "inverse muon decay lab energy closure",
+      "error": 3.298250561556415e-12,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "neutron vacuum muon decay forbidden",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "raw": {
+    "thermodynamics": [
+      {
+        "T": 9.0,
+        "nB": 0.02,
+        "Ye": 0.08,
+        "Ymu": 0.015,
+        "Yp": 0.095,
+        "u": 24.212104683548162,
+        "derivatives": [
+          1.4624669528426129,
+          68.0475346835811,
+          116.01780476890215
+        ],
+        "mu_e": 67.67352800789354,
+        "mu_mu": 101.50052278669175,
+        "zeta_e": 42.16297494459554,
+        "zeta_mu": 75.98996972339376
+      },
+      {
+        "T": 17.0,
+        "nB": 0.04,
+        "Ye": 0.045,
+        "Ymu": 0.025,
+        "Yp": 0.07,
+        "u": 38.05852721229645,
+        "derivatives": [
+          1.5065453717711672,
+          75.98897506311332,
+          130.87483204940293
+        ],
+        "mu_e": 61.60531389098973,
+        "mu_mu": 100.07311271447587,
+        "zeta_e": 10.236258709946757,
+        "zeta_mu": 48.7040575334329
+      }
+    ],
+    "reactions": [
+      {
+        "incoming": [
+          "e-",
+          "p"
+        ],
+        "outgoing": [
+          "n",
+          "ve"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "e+",
+          "n"
+        ],
+        "outgoing": [
+          "p",
+          "ae"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "n"
+        ],
+        "outgoing": [
+          "p",
+          "e-",
+          "ae"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "p"
+        ],
+        "outgoing": [
+          "n",
+          "e+",
+          "ve"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "mu-",
+          "p"
+        ],
+        "outgoing": [
+          "n",
+          "vm"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "mu+",
+          "n"
+        ],
+        "outgoing": [
+          "p",
+          "am"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "n"
+        ],
+        "outgoing": [
+          "p",
+          "mu-",
+          "am"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "p"
+        ],
+        "outgoing": [
+          "n",
+          "mu+",
+          "vm"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "mu-"
+        ],
+        "outgoing": [
+          "e-",
+          "ae",
+          "vm"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "mu+"
+        ],
+        "outgoing": [
+          "e+",
+          "ve",
+          "am"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "ve",
+          "mu-"
+        ],
+        "outgoing": [
+          "vm",
+          "e-"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "ae",
+          "mu+"
+        ],
+        "outgoing": [
+          "am",
+          "e+"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "am",
+          "mu-"
+        ],
+        "outgoing": [
+          "ae",
+          "e-"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "vm",
+          "mu+"
+        ],
+        "outgoing": [
+          "ve",
+          "e+"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "e-",
+          "mu+"
+        ],
+        "outgoing": [
+          "ve",
+          "am"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "incoming": [
+          "e+",
+          "mu-"
+        ],
+        "outgoing": [
+          "ae",
+          "vm"
+        ],
+        "conservation_residual": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "thresholds": [
+      {
+        "process": "numu+n",
+        "threshold": 110.16137301322246,
+        "formula": 110.1613730132226,
+        "static": 104.36504314000001
+      },
+      {
+        "process": "anumu+p",
+        "threshold": 113.04731059534437,
+        "formula": 113.04731059534438,
+        "static": 106.95170786000006
+      }
+    ],
+    "inverse_muon_decay_threshold_MeV": 10923.144928511374,
+    "neutron_muon_decay_energy_excess": -104.36504313999998
+  },
+  "runtime_seconds": 9.002262957859784,
+  "source_sha256": {
+    "SOURCES.json": "536d8abbf480d3fe59bafaa7d63006befeef9a98652ebdabebba52adaa7d1920",
+    "INITIAL_FAILURE.md": "7bdf931ef2b49498662571515fa8a75763f2c9d157e6b5449cd48be4c9eef86f",
+    "contract_results.json": "47336914bc749fe7b709046f44bfe97de155cd1d953188751b258cb19f0d34bb",
+    "CHECKPOINT.json": "5c037bd7a6a4355b24d2850473aadb59527bb1a13b51ba9147bcc78b301099f0",
+    "RESEARCH_CONTRACT.md": "33c7a383dd87ab600dfcd3a8a78d8fac980a28b88030adb1e8f13b9967389d95",
+    "contract_probes.py": "b6c3a41d7eca840abd85e8b3d3257348aaeb7280d335ceff5f325a3105f0e320"
+  },
+  "end_source_sha256": {
+    "SOURCES.json": "536d8abbf480d3fe59bafaa7d63006befeef9a98652ebdabebba52adaa7d1920",
+    "INITIAL_FAILURE.md": "7bdf931ef2b49498662571515fa8a75763f2c9d157e6b5449cd48be4c9eef86f",
+    "contract_results.json": "47336914bc749fe7b709046f44bfe97de155cd1d953188751b258cb19f0d34bb",
+    "CHECKPOINT.json": "5c037bd7a6a4355b24d2850473aadb59527bb1a13b51ba9147bcc78b301099f0",
+    "RESEARCH_CONTRACT.md": "33c7a383dd87ab600dfcd3a8a78d8fac980a28b88030adb1e8f13b9967389d95",
+    "contract_probes.py": "b6c3a41d7eca840abd85e8b3d3257348aaeb7280d335ceff5f325a3105f0e320"
+  },
+  "scope": "Research contract review only: independent EOS composition derivatives, stoichiometry and vacuum support. No new weak-rate model or domain certificate."
+}
