@@ -1,0 +1,45 @@
+{
+  "status": "numerical_repair_complete_independent_recheck_required",
+  "utc": "2026-10-15T12:52:00Z",
+  "checks": 189,
+  "passed": true,
+  "runtime_seconds": 5.33073425013572,
+  "files_sha256": {
+    "free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+    "validate_nc.py": "201b66a11a9fad7bb3465165c5d284d198d09802663cec156fd1de5e57b9070d",
+    "validation_results.json": "452d4b4fa72d800ca77ba62d68a491e3eef0d97e7b726ca84e1f8b18d7c48ceb",
+    "RESEARCH_NOTE.md": "df91ecc8c8c29f7947e49f270610d0888e5ab17948f1ca5ca0d5b6e4d0445940",
+    "source_manifest.json": "195347258b8cfe09b87698376d56445ee85ffe93a900c33552f0cf760f9fc673"
+  },
+  "scope": "Leading free unpolarized NR nuclear NC; exact quadratic phase space and Pauli blocking; selected moments and closed discrete-grid identities only; independent review required",
+  "preserved_original": "pre_repair_20261015T1250/manifest.json",
+  "repair_regression": {
+    "original_entropy_relative_error": 2.167470647407299e-10,
+    "repaired_entropy_relative_error": 2.220446049250313e-16,
+    "gross_transition_flux": 0.03972473035162735,
+    "original_number_source": [
+      -1.1474838170499483e-09,
+      2.1740264409672236e-09,
+      1.9439395156518186e-09,
+      -2.967809231008145e-09,
+      -2.6729087693189157e-12
+    ],
+    "repaired_number_source": [
+      -1.1474838170507546e-09,
+      2.174026440966396e-09,
+      1.9439395156430455e-09,
+      -2.967809231559866e-09,
+      -2.6729079988202573e-12
+    ],
+    "pair_entropy": 1.1959463116920387e-08,
+    "macro_entropy": 1.1959463116920388e-08
+  },
+  "quota_used_percent": 5,
+  "quota_reset": 1792652325,
+  "limitations": [
+    "Free unpolarized leading-current NR model",
+    "Selected moments only",
+    "Closed coarse grid has no continuum rate certificate",
+    "Independent repaired-source rechecks pending"
+  ]
+}

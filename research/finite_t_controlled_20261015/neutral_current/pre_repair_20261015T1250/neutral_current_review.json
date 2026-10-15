@@ -1,0 +1,317 @@
+{
+  "valid_selected_cases_passed": true,
+  "checks": [
+    {
+      "name": "independent q/omega rate_s",
+      "actual": 10434.003657425797,
+      "expected": 10434.003657425788,
+      "error": 8.716641584897748e-16,
+      "passed": true
+    },
+    {
+      "name": "independent q/omega angular_transport_rate_s",
+      "actual": 10790.262090044374,
+      "expected": 10790.26209004437,
+      "error": 3.3715388715611384e-16,
+      "passed": true
+    },
+    {
+      "name": "independent q/omega energy_to_bath_MeV_s",
+      "actual": -925.2939788987155,
+      "expected": -925.2939788987147,
+      "error": 8.600594861737705e-16,
+      "passed": true
+    },
+    {
+      "name": "heldout heavyM elastic total absolute",
+      "actual": 4.172021866430122e-42,
+      "expected": 4.17203360053534e-42,
+      "error": 2.812562491499321e-06,
+      "passed": true
+    },
+    {
+      "name": "heldout heavyM elastic transport absolute",
+      "actual": 4.3189509708862803e-42,
+      "expected": 4.3189671084871545e-42,
+      "error": 3.7364491251673387e-06,
+      "passed": true
+    },
+    {
+      "name": "DOS ratio KMS (7.0, 5.3, 0.23)",
+      "actual": -0.010260009672190762,
+      "expected": -0.010260009672192205,
+      "error": 1.4432899320127035e-15,
+      "passed": true
+    },
+    {
+      "name": "DOS ratio KMS (7.0, 9.1, -0.41)",
+      "actual": 0.17527147106501673,
+      "expected": 0.17527147106501784,
+      "error": 1.1102230246251565e-15,
+      "passed": true
+    },
+    {
+      "name": "DOS ratio KMS (3.0, 3.0000001, 0.7)",
+      "actual": -3.333333253863202e-08,
+      "expected": -3.333333224346058e-08,
+      "error": 2.951714408033327e-16,
+      "passed": true
+    },
+    {
+      "name": "LTE independent event-pair sources",
+      "actual": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        -2.350988701644575e-37,
+        -1.2621774248428709e-29,
+        1.7205358003280424e-22,
+        -1.7205356741102976e-22
+      ],
+      "error": 1.651520190322422e-15,
+      "passed": true
+    },
+    {
+      "name": "LTE independent event number conservation",
+      "actual": 0.0,
+      "expected": 0.0,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "LTE independent event bath energy",
+      "actual": 0.0,
+      "expected": -9.118838517426494e-22,
+      "error": 4.618914450000994e-16,
+      "passed": true
+    },
+    {
+      "name": "independent FD stationarity",
+      "actual": 1.7205358003280424e-22,
+      "expected": 0.0,
+      "error": 1.1678011686781682e-15,
+      "passed": true
+    },
+    {
+      "name": "nonequilibrium independent event-pair sources",
+      "actual": [
+        0.0,
+        2.0127237550238153e-14,
+        1.1418358879938806e-07,
+        -1.1418360891524149e-07
+      ],
+      "expected": [
+        4.7406149540678195e-23,
+        2.0127144168967195e-14,
+        1.1418358879694649e-07,
+        -1.141836089240907e-07
+      ],
+      "error": 2.5699272463904658e-11,
+      "passed": true
+    },
+    {
+      "name": "nonequilibrium independent event number conservation",
+      "actual": 0.0,
+      "expected": 0.0,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nonequilibrium independent event bath energy",
+      "actual": -6.051732157184138e-07,
+      "expected": -6.051732158571155e-07,
+      "error": 2.8976027703598902e-11,
+      "passed": true
+    }
+  ],
+  "counterexamples": [
+    {
+      "kind": "invalid input accepted",
+      "call": "moments negative tail",
+      "result": {
+        "rate_s": 10434.003657425794,
+        "angular_transport_rate_s": 10790.262090044373,
+        "energy_to_bath_MeV_s": -925.2939788987145,
+        "inverse_mfp_cm_inv": 3.480408989283444e-07,
+        "angular_transport_inverse_mfp_cm_inv": 3.5992440110165723e-07
+      }
+    },
+    {
+      "kind": "invalid input accepted",
+      "call": "moments negative radiation T",
+      "result": {
+        "rate_s": 10.26398787021051,
+        "angular_transport_rate_s": 10.855536047388927,
+        "energy_to_bath_MeV_s": 2.4264786534362,
+        "inverse_mfp_cm_inv": 3.4236978270515764e-10,
+        "angular_transport_inverse_mfp_cm_inv": 3.6210170595382115e-10
+      }
+    },
+    {
+      "kind": "invalid input accepted",
+      "call": "grid NaN occupation",
+      "result": {
+        "collision": [
+          NaN,
+          NaN,
+          NaN,
+          NaN
+        ],
+        "number_source": [
+          NaN,
+          NaN,
+          NaN,
+          NaN
+        ],
+        "density_weights": [
+          7.800017789107008e-09,
+          1.9858067267314026e-07,
+          2.119712526629098e-06,
+          7.221880206841531e-06
+        ],
+        "transition_rates": [
+          [
+            1213.9039681855447,
+            5.496305086063782e-14,
+            1.3349576346943468e-33,
+            4.525180072344767e-44
+          ],
+          [
+            4.804686243011708e-15,
+            10850.837491561531,
+            4.140254503559943e-07,
+            8.654008895536696e-20
+          ],
+          [
+            4.7390024795852846e-35,
+            1.6813273959857835e-07,
+            52747.92529794976,
+            0.2663456628752567
+          ],
+          [
+            2.7588976494790877e-45,
+            6.035633485361397e-20,
+            0.4574313229710754,
+            107914.57428669905
+          ]
+        ],
+        "net_number_source": NaN,
+        "net_neutrino_energy_source": NaN
+      }
+    },
+    {
+      "kind": "invalid input accepted",
+      "call": "grid NaN weight",
+      "result": {
+        "collision": [
+          NaN,
+          NaN,
+          NaN,
+          NaN
+        ],
+        "number_source": [
+          NaN,
+          NaN,
+          NaN,
+          NaN
+        ],
+        "density_weights": [
+          7.800017789107008e-09,
+          NaN,
+          2.119712526629098e-06,
+          7.221880206841531e-06
+        ],
+        "transition_rates": [
+          [
+            1213.9039681855447,
+            NaN,
+            1.3349576346943468e-33,
+            4.525180072344767e-44
+          ],
+          [
+            4.804686243011708e-15,
+            NaN,
+            4.140254503559943e-07,
+            8.654008895536696e-20
+          ],
+          [
+            4.7390024795852846e-35,
+            NaN,
+            52747.92529794976,
+            0.2663456628752567
+          ],
+          [
+            2.7588976494790877e-45,
+            NaN,
+            0.4574313229710754,
+            107914.57428669905
+          ]
+        ],
+        "net_number_source": NaN,
+        "net_neutrino_energy_source": NaN
+      }
+    }
+  ],
+  "samples": [
+    {
+      "species": {
+        "T": 3.0,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": -6.197292148904479,
+        "density": 0.0002999999999999999,
+        "kinetic_energy_density": 0.0013789079703919048,
+        "energy_density": 0.0013789079703919048,
+        "pressure": 0.0009192719802612699,
+        "entropy_density": 0.0013857891984415058,
+        "free_energy_density": -0.0027784596249326127,
+        "dn_dmu": 9.58976539273091e-05,
+        "dn_dT_fixed_mu": 0.0003481019259273571,
+        "dmu_dT_fixed_density": -3.6299316163794795,
+        "cv_fixed_density": 0.00044521457029149316,
+        "fluctuation_A0": 0.0002876929617819273,
+        "fluctuation_A1": 0.0031329173333462137,
+        "fluctuation_A2": 0.03812375817207357,
+        "fermi_momentum": 40.86647906039606,
+        "temperature_over_mass": 0.003194888178913738,
+        "fermi_momentum_over_mass": 0.043521276954628395,
+        "mu": -6.197292148904479
+      },
+      "Ein": 7.0,
+      "independent_moments": [
+        10434.003657425788,
+        10790.26209004437,
+        -925.2939788987147
+      ],
+      "reference": {
+        "rate_s": 10434.003657425797,
+        "angular_transport_rate_s": 10790.262090044374,
+        "energy_to_bath_MeV_s": -925.2939788987155,
+        "inverse_mfp_cm_inv": 3.480408989283445e-07,
+        "angular_transport_inverse_mfp_cm_inv": 3.599244011016573e-07
+      }
+    },
+    {
+      "heavy_mass": 10000000.0,
+      "T": 1.7,
+      "Ein": 13.0,
+      "independent_moments": [
+        375.22220705004924,
+        388.4366782630443,
+        0.0014139149245310494
+      ],
+      "static_cross_sections": {
+        "total_cm2": 4.17203360053534e-42,
+        "transport_cm2": 4.3189671084871545e-42
+      }
+    }
+  ],
+  "source_sha256": {
+    "neutral_current/free_nc.py": "1758dc7a5b2873acefed94557374e815a936e0baf4f1ccca9534f72c95ba3e40",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b"
+  }
+}
