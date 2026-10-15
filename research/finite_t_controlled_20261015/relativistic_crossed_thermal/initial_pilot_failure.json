@@ -1,0 +1,1 @@
+{"qualified":false,"error":"ArithmeticError: Susceptibility underflow; state outside reference domain","call":"eos.matter_state(.03,1e-12,.3,0.)","cause":"Unneeded zero-net muon pair state at T=.03 has unrepresented susceptibility. Use explicit matched npe roots, no muon thermodynamics claimed. Frozen upstream unchanged."}

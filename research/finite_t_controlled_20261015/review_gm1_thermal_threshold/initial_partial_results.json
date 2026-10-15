@@ -1,0 +1,74 @@
+{
+  "passed": false,
+  "phase": "frozen response",
+  "checks": [
+    {
+      "name": "frozen forward momentum density",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "frozen independent chemical root",
+      "error": -6.821210263296962e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "frozen forward momentum density",
+      "error": 1.9984014443252818e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "frozen independent chemical root",
+      "error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "frozen forward momentum density",
+      "error": -1.1546319456101628e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "frozen independent chemical root",
+      "error": 1.3301360013429075e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "frozen forward momentum density",
+      "error": -7.105427357601002e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "frozen independent chemical root",
+      "error": 2.5579538487363607e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    }
+  ],
+  "rows": [],
+  "runtime_seconds": 0.4823371251113713,
+  "source_sha256": {
+    "gm1_threshold_thermal_probes/probe.py": "98a1b620c6bc63cb77d8eba70e01bfe291f613b99623a2487af6bfafcf8473ee",
+    "gm1_threshold_thermal_probes/results.json": "1a8104d5a3eb5e1d50610c0f720be60c27880d2940f22d014ef1235c6a182246",
+    "gm1_threshold_thermal_probes/heldout_results.json": "30c8ff2a7f01ec5b1225e76d7942ead6b41653f935be4269537ae5498c8ad1f1",
+    "gm1_threshold_thermal_probes/boltzmann_results.json": "1e4279c531d6a6185314a1e7e8ff2ff3226c9d2c1278d8b46984dc5e88857878",
+    "gm1_threshold_thermal_probes/initial_heldout_scope_failure.py": "6c61bd612ad4a758b7308098d48672a1778b9506e5d45fbacea56751a4547dfc",
+    "gm1_differential_response/adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f",
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e"
+  },
+  "end_source_sha256": {
+    "gm1_threshold_thermal_probes/probe.py": "98a1b620c6bc63cb77d8eba70e01bfe291f613b99623a2487af6bfafcf8473ee",
+    "gm1_threshold_thermal_probes/results.json": "1a8104d5a3eb5e1d50610c0f720be60c27880d2940f22d014ef1235c6a182246",
+    "gm1_threshold_thermal_probes/heldout_results.json": "30c8ff2a7f01ec5b1225e76d7942ead6b41653f935be4269537ae5498c8ad1f1",
+    "gm1_threshold_thermal_probes/boltzmann_results.json": "1e4279c531d6a6185314a1e7e8ff2ff3226c9d2c1278d8b46984dc5e88857878",
+    "gm1_threshold_thermal_probes/initial_heldout_scope_failure.py": "6c61bd612ad4a758b7308098d48672a1778b9506e5d45fbacea56751a4547dfc",
+    "gm1_differential_response/adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f",
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e"
+  }
+}

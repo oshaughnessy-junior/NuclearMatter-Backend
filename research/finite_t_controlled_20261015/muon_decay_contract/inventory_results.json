@@ -1,0 +1,613 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "mu- -> e- antinue numu charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- -> e- antinue numu Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- -> e- antinue numu Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- antinue numu -> mu- charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- antinue numu -> mu- Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- antinue numu -> mu- Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ -> e+ nue antinumu charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ -> e+ nue antinumu Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ -> e+ nue antinumu Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ nue antinumu -> mu+ charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ nue antinumu -> mu+ Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ nue antinumu -> mu+ Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- nue -> e- numu charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- nue -> e- numu Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- nue -> e- numu Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- numu -> mu- nue charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- numu -> mu- nue Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- numu -> mu- nue Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ antinue -> e+ antinumu charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ antinue -> e+ antinumu Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ antinue -> e+ antinumu Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ antinumu -> mu+ antinue charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ antinumu -> mu+ antinue Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ antinumu -> mu+ antinue Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- antinumu -> e- antinue charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- antinumu -> e- antinue Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- antinumu -> e- antinue Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- antinue -> mu- antinumu charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- antinue -> mu- antinumu Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e- antinue -> mu- antinumu Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ numu -> e+ nue charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ numu -> e+ nue Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ numu -> e+ nue Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ nue -> mu+ numu charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ nue -> mu+ numu Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "e+ nue -> mu+ numu Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- e+ -> antinue numu charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- e+ -> antinue numu Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu- e+ -> antinue numu Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antinue numu -> mu- e+ charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antinue numu -> mu- e+ Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "antinue numu -> mu- e+ Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ e- -> nue antinumu charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ e- -> nue antinumu Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu+ e- -> nue antinumu Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nue antinumu -> mu+ e- charge",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nue antinumu -> mu+ e- Le",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nue antinumu -> mu+ e- Lmu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "numu partner-dependent affinity",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue partner-dependent affinity",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "mu-minus material charge fraction unchanged",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "mu-plus material charge fraction unchanged",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid order bool",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid order fraction",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "negative electron mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "forbidden equal mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "endpoint spectrum",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nonfinite spectrum",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "unknown amplitude",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "inverse notbool",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "reactants": [
+        "mu-"
+      ],
+      "products": [
+        "e-",
+        "antinue",
+        "numu"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "e-",
+        "antinue",
+        "numu"
+      ],
+      "products": [
+        "mu-"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "mu+"
+      ],
+      "products": [
+        "e+",
+        "nue",
+        "antinumu"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "e+",
+        "nue",
+        "antinumu"
+      ],
+      "products": [
+        "mu+"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "mu-",
+        "nue"
+      ],
+      "products": [
+        "e-",
+        "numu"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "e-",
+        "numu"
+      ],
+      "products": [
+        "mu-",
+        "nue"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "mu+",
+        "antinue"
+      ],
+      "products": [
+        "e+",
+        "antinumu"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "e+",
+        "antinumu"
+      ],
+      "products": [
+        "mu+",
+        "antinue"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "mu-",
+        "antinumu"
+      ],
+      "products": [
+        "e-",
+        "antinue"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "e-",
+        "antinue"
+      ],
+      "products": [
+        "mu-",
+        "antinumu"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "mu+",
+        "numu"
+      ],
+      "products": [
+        "e+",
+        "nue"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "e+",
+        "nue"
+      ],
+      "products": [
+        "mu+",
+        "numu"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "mu-",
+        "e+"
+      ],
+      "products": [
+        "antinue",
+        "numu"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "antinue",
+        "numu"
+      ],
+      "products": [
+        "mu-",
+        "e+"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "mu+",
+        "e-"
+      ],
+      "products": [
+        "nue",
+        "antinumu"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "reactants": [
+        "nue",
+        "antinumu"
+      ],
+      "products": [
+        "mu+",
+        "e-"
+      ],
+      "quantum_numbers": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+ "retrieved_UTC_date":"2026-10-15",
+ "sources":[
+  {"url":"https://pdg.lbl.gov/2025/reviews/rpp2025-rev-standard-model.pdf","anchors":"Sec10.3.2 Eqs10.22-10.24","purpose":"Exact electron-mass tree phase factor, GF and QED extraction conventions"},
+  {"url":"https://pdg.lbl.gov/2025/reviews/rpp2025-rev-muon-decay-params.pdf","anchors":"Eqs57.1-57.4","purpose":"Unpolarized V-A Michel spectrum and explicit neglected-radiative conventions"}
+ ],
+ "primary_formula":"Gamma_tree=GF^2*m_mu^5*f((m_e/m_mu)^2)/(192*pi^3*hbar)",
+ "excluded":"QED/radiative spectrum and width, finiteW propagator, polarization, neutrino mass, medium/Pauli kernels"
+}
