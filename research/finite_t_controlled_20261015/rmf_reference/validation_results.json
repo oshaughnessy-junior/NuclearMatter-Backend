@@ -1,0 +1,1776 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "pinned source HBARC",
+      "actual": 197.3269804,
+      "expected": 197.3269804,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "pinned source parameter M_mev",
+      "actual": 939.0,
+      "expected": 939.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "pinned source parameter C_sigma",
+      "actual": 11.785,
+      "expected": 11.785,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "pinned source parameter C_omega",
+      "actual": 7.148,
+      "expected": 7.148,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "pinned source parameter C_rho",
+      "actual": 4.41,
+      "expected": 4.41,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "pinned source parameter b",
+      "actual": 0.002947,
+      "expected": 0.002947,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "pinned source parameter c",
+      "actual": -0.00107,
+      "expected": -0.00107,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.08 Y=0.5 energy",
+      "actual": 74.1320662085685,
+      "expected": 74.13206620856845,
+      "scaled_error": 7.667858427266911e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.08 Y=0.5 pressure",
+      "actual": -0.7128007131421085,
+      "expected": -0.7128007131420852,
+      "scaled_error": 3.270855806857321e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.08 Y=0.5 mu_n",
+      "actual": 917.7408186928294,
+      "expected": 917.7408186928294,
+      "scaled_error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source scalar n=0.08 Y=0.5",
+      "actual": 0.07833277252209445,
+      "expected": 0.07833277252209443,
+      "scaled_error": 1.7716451698297933e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.153 Y=0.5 energy",
+      "actual": 141.16911578980913,
+      "expected": 141.16911578980924,
+      "scaled_error": 8.053237217330711e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.153 Y=0.5 pressure",
+      "actual": -0.004759484967439027,
+      "expected": -0.004759484967444504,
+      "scaled_error": 1.1508365743064268e-12,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.153 Y=0.5 mu_n",
+      "actual": 922.6428516656326,
+      "expected": 922.6428516656326,
+      "scaled_error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source scalar n=0.153 Y=0.5",
+      "actual": 0.14641136288695783,
+      "expected": 0.14641136288695725,
+      "scaled_error": 3.9810235792848474e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.32 Y=0.1 energy",
+      "actual": 315.24364068967765,
+      "expected": 315.2436406896776,
+      "scaled_error": 1.8031583043657352e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.32 Y=0.1 pressure",
+      "actual": 36.393426610508044,
+      "expected": 36.39342661050803,
+      "scaled_error": 3.9047861217604726e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.32 Y=0.1 mu_n",
+      "actual": 1121.1981632689046,
+      "expected": 1121.1981632689046,
+      "scaled_error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source scalar n=0.32 Y=0.1",
+      "actual": 0.27106206765060153,
+      "expected": 0.27106206765060153,
+      "scaled_error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.8 Y=0.05 energy",
+      "actual": 1026.2433101387194,
+      "expected": 1026.2433101387194,
+      "scaled_error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.8 Y=0.05 pressure",
+      "actual": 463.8163177356567,
+      "expected": 463.81631773565664,
+      "scaled_error": 1.2255588405840617e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source cold n=0.8 Y=0.05 mu_n",
+      "actual": 1892.6184254618809,
+      "expected": 1892.6184254618806,
+      "scaled_error": 1.201370928150734e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "pinned source scalar n=0.8 Y=0.05",
+      "actual": 0.4271725617953682,
+      "expected": 0.42717256179536817,
+      "scaled_error": 1.2995017984757591e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "GM1 calibration n0",
+      "actual": 0.15314294342528767,
+      "expected": 0.153,
+      "scaled_error": 0.0009342707535142005,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "GM1 calibration binding",
+      "actual": -16.326055120466663,
+      "expected": -16.3,
+      "scaled_error": 0.0015984736482614673,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "GM1 calibration K",
+      "actual": 300.19304024445313,
+      "expected": 300.0,
+      "scaled_error": 0.0006434674815104321,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "GM1 calibration dirac_mass_fraction",
+      "actual": 0.7001097008313133,
+      "expected": 0.7,
+      "scaled_error": 0.0001567154733047741,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "GM1 calibration symmetry_energy",
+      "actual": 32.50724717526876,
+      "expected": 32.5,
+      "scaled_error": 0.0002229900082695097,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 solved equations",
+      "actual": 4.163336342344337e-15,
+      "expected": 0.0,
+      "scaled_error": 4.163336342344337e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss neutron n",
+      "actual": 0.07999999999999967,
+      "expected": 0.07999999999999946,
+      "scaled_error": 2.602085213965228e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss neutron scalar",
+      "actual": 0.07634731559611788,
+      "expected": 0.07634731559611767,
+      "scaled_error": 2.7265767694889633e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss neutron energy",
+      "actual": 0.27504237019050864,
+      "expected": 0.2750423701905081,
+      "scaled_error": 2.018276354759742e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss neutron pressure",
+      "actual": 0.008214092988919217,
+      "expected": 0.00821409298891921,
+      "scaled_error": 8.447547298609571e-16,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss neutron entropy",
+      "actual": 0.007969207786908447,
+      "expected": 0.007969207786908305,
+      "scaled_error": 1.7849619288855784e-14,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss proton n",
+      "actual": 0.07999999999999967,
+      "expected": 0.07999999999999946,
+      "scaled_error": 2.602085213965228e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss proton scalar",
+      "actual": 0.07634731559611788,
+      "expected": 0.07634731559611767,
+      "scaled_error": 2.7265767694889633e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss proton energy",
+      "actual": 0.27504237019050864,
+      "expected": 0.2750423701905081,
+      "scaled_error": 2.018276354759742e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss proton pressure",
+      "actual": 0.008214092988919217,
+      "expected": 0.00821409298891921,
+      "scaled_error": 8.447547298609571e-16,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 independent p-Gauss proton entropy",
+      "actual": 0.007969207786908447,
+      "expected": 0.007969207786908305,
+      "scaled_error": 1.7849619288855784e-14,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 Euler",
+      "actual": 147.8969124669801,
+      "expected": 147.8969124669806,
+      "scaled_error": 3.4591037852902415e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 quadrature phi_mev",
+      "actual": 291.8168802364574,
+      "expected": 291.8168802364574,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 quadrature energy_density",
+      "actual": 147.6411299025228,
+      "expected": 147.64112990252258,
+      "scaled_error": 1.5400429107617333e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 quadrature pressure",
+      "actual": 0.25578256445728365,
+      "expected": 0.25578256445728365,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 quadrature entropy_density",
+      "actual": 0.015938415573816894,
+      "expected": 0.015938415573816922,
+      "scaled_error": 1.7414262720834568e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 quadrature mu_n_mev",
+      "actual": 924.2560878212923,
+      "expected": 924.2560878212923,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 quadrature mu_p_mev",
+      "actual": 924.2560878212923,
+      "expected": 924.2560878212923,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 entropy=-df/dT",
+      "actual": 0.015938415629079827,
+      "expected": 0.015938415573816894,
+      "scaled_error": 3.4672789690156776e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 df/dnB fixed Y",
+      "actual": 924.2560884921146,
+      "expected": 924.2560878212923,
+      "scaled_error": 7.257969612556545e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 df/dYp",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 pressure from f",
+      "actual": 0.25578267178934766,
+      "expected": 0.25578256445728365,
+      "scaled_error": 1.073320640143649e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 Maxwell ds/dnB=-dmu_bar/dT",
+      "actual": 0.006676289972305879,
+      "expected": 0.006676289785900735,
+      "scaled_error": 2.7920469287934916e-08,
+      "tolerance": 4e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 positive frozen Cv",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 kinetic/scalar/vector sum",
+      "actual": 147.64112990252283,
+      "expected": 147.6411299025228,
+      "scaled_error": 1.9250536384521637e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 free-energy scalar stationarity",
+      "actual": 7.764516644962911e-09,
+      "expected": 0.0,
+      "scaled_error": 2.459279969350719e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=1.0,Yp=0.5 local scalar curvature positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 solved equations",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss neutron n",
+      "actual": 0.144,
+      "expected": 0.14399999999999943,
+      "scaled_error": 3.854941057726253e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss neutron scalar",
+      "actual": 0.13415958035708636,
+      "expected": 0.1341595803570858,
+      "scaled_error": 4.137695651962132e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss neutron energy",
+      "actual": 0.5114133243563882,
+      "expected": 0.5114133243563864,
+      "scaled_error": 3.473426981269593e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss neutron pressure",
+      "actual": 0.022673600056368298,
+      "expected": 0.02267360005636823,
+      "scaled_error": 2.907323579988973e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss neutron entropy",
+      "actual": 0.09896794952504026,
+      "expected": 0.0989679495250397,
+      "scaled_error": 5.6090028638223984e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss proton n",
+      "actual": 0.01599999999999998,
+      "expected": 0.015999999999999917,
+      "scaled_error": 3.9031278209478365e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss proton scalar",
+      "actual": 0.015532685420208024,
+      "expected": 0.015532685420207963,
+      "scaled_error": 3.9088747384401316e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss proton energy",
+      "actual": 0.05449307358177791,
+      "expected": 0.05449307358177772,
+      "scaled_error": 3.438054106534089e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss proton pressure",
+      "actual": 0.001052704764227758,
+      "expected": 0.0010527047642277577,
+      "scaled_error": 2.0598409151892697e-16,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 independent p-Gauss proton entropy",
+      "actual": 0.03368312556634033,
+      "expected": 0.0336831255663403,
+      "scaled_error": 8.240201925727814e-16,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 Euler",
+      "actual": 156.0234564161752,
+      "expected": 156.02345641617504,
+      "scaled_error": 1.0929783283838665e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 quadrature phi_mev",
+      "actual": 286.84152054639947,
+      "expected": 286.84152054639947,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 quadrature energy_density",
+      "actual": 151.7931270781473,
+      "expected": 151.79312707814708,
+      "scaled_error": 1.4979181193505167e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 quadrature pressure",
+      "actual": 4.230329338027903,
+      "expected": 4.230329338027903,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 quadrature entropy_density",
+      "actual": 0.13265107509138074,
+      "expected": 0.13265107509138074,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 quadrature mu_n_mev",
+      "actual": 978.5262639334891,
+      "expected": 978.5262639334891,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 quadrature mu_p_mev",
+      "actual": 861.822728677425,
+      "expected": 861.822728677425,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 entropy=-df/dT",
+      "actual": 0.1326510558712357,
+      "expected": 0.13265107509138074,
+      "scaled_error": 1.4489249346712288e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 df/dnB fixed Y",
+      "actual": 966.8559110784789,
+      "expected": 966.8559104078827,
+      "scaled_error": 6.935844765601543e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 df/dYp",
+      "actual": -116.70353691339841,
+      "expected": -116.70353525606413,
+      "scaled_error": 1.4201234579946531e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 pressure from f",
+      "actual": 4.230329445323122,
+      "expected": 4.230329338027903,
+      "scaled_error": 2.5363325253972616e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 Maxwell ds/dnB=-dmu_bar/dT",
+      "actual": 0.1778709817238863,
+      "expected": 0.17787106211812898,
+      "scaled_error": 4.519804498963486e-07,
+      "tolerance": 4e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 positive frozen Cv",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 kinetic/scalar/vector sum",
+      "actual": 151.7931270781473,
+      "expected": 151.7931270781473,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 free-energy scalar stationarity",
+      "actual": 6.569975622660925e-09,
+      "expected": 0.0,
+      "scaled_error": 2.0809292048352236e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Yp=0.1 local scalar curvature positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 solved equations",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss neutron n",
+      "actual": 0.28800000000000003,
+      "expected": 0.2879999999999986,
+      "scaled_error": 5.011423375044134e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss neutron scalar",
+      "actual": 0.2363925461005406,
+      "expected": 0.23639254610053934,
+      "scaled_error": 5.401001424875372e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss neutron energy",
+      "actual": 0.8474301379764659,
+      "expected": 0.8474301379764612,
+      "scaled_error": 5.633454360364958e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss neutron pressure",
+      "actual": 0.09396611150673975,
+      "expected": 0.09396611150673925,
+      "scaled_error": 5.316814254312195e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss neutron entropy",
+      "actual": 0.31235267938600675,
+      "expected": 0.31235267938600497,
+      "scaled_error": 5.687022896336456e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss proton n",
+      "actual": 0.032,
+      "expected": 0.03199999999999996,
+      "scaled_error": 1.3010426069826069e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss proton scalar",
+      "actual": 0.0287369589757708,
+      "expected": 0.028736958975770756,
+      "scaled_error": 1.5695053333035313e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss proton energy",
+      "actual": 0.08573391298114884,
+      "expected": 0.08573391298114878,
+      "scaled_error": 6.47481834212602e-16,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss proton pressure",
+      "actual": 0.005661760219873734,
+      "expected": 0.005661760219873753,
+      "scaled_error": 3.3703225666046258e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 independent p-Gauss proton entropy",
+      "actual": 0.08627764928992707,
+      "expected": 0.08627764928992718,
+      "scaled_error": 1.2868025888076368e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 Euler",
+      "actual": 362.4897740275797,
+      "expected": 362.48977402757964,
+      "scaled_error": 1.5681385499300497e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 quadrature phi_mev",
+      "actual": 466.9263879634984,
+      "expected": 466.9263879634984,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 quadrature energy_density",
+      "actual": 320.9267542224673,
+      "expected": 320.92675422246714,
+      "scaled_error": 5.313681528222234e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 quadrature pressure",
+      "actual": 41.56301980511239,
+      "expected": 41.56301980511239,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 quadrature entropy_density",
+      "actual": 0.39863032867593384,
+      "expected": 0.39863032867593395,
+      "scaled_error": 2.7850942207854714e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 quadrature mu_n_mev",
+      "actual": 1119.5246688664852,
+      "expected": 1119.5246688664852,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 quadrature mu_p_mev",
+      "actual": 878.3674854298096,
+      "expected": 878.3674854298096,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 entropy=-df/dT",
+      "actual": 0.3986302592537072,
+      "expected": 0.39863032867593384,
+      "scaled_error": 1.7415189372209497e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 df/dnB fixed Y",
+      "actual": 1095.4089524082276,
+      "expected": 1095.4089505228176,
+      "scaled_error": 1.7211928276559535e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 df/dYp",
+      "actual": -241.1571883493835,
+      "expected": -241.1571834366756,
+      "scaled_error": 2.037139350195575e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 pressure from f",
+      "actual": 41.56302040844355,
+      "expected": 41.56301980511239,
+      "scaled_error": 1.4516056871795982e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 Maxwell ds/dnB=-dmu_bar/dT",
+      "actual": 0.3131078596891115,
+      "expected": 0.3131080547727076,
+      "scaled_error": 6.23055182187061e-07,
+      "tolerance": 4e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 positive frozen Cv",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 kinetic/scalar/vector sum",
+      "actual": 320.92675422246725,
+      "expected": 320.9267542224673,
+      "scaled_error": 1.771227176074077e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 free-energy scalar stationarity",
+      "actual": 1.134813971186887e-08,
+      "expected": 0.0,
+      "scaled_error": 1.7971661314486024e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Yp=0.1 local scalar curvature positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 solved equations",
+      "actual": 3.2092384305570925e-14,
+      "expected": 0.0,
+      "scaled_error": 3.2092384305570925e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss neutron n",
+      "actual": 0.7600000000000081,
+      "expected": 0.7600000000000046,
+      "scaled_error": 4.6746232615795784e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss neutron scalar",
+      "actual": 0.3935741790887781,
+      "expected": 0.3935741790887754,
+      "scaled_error": 6.911140402119963e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss neutron energy",
+      "actual": 1.8941623402512473,
+      "expected": 1.89416234025124,
+      "scaled_error": 3.868449819118526e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss neutron pressure",
+      "actual": 0.46906469767212694,
+      "expected": 0.46906469767212566,
+      "scaled_error": 2.7219197792014987e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss neutron entropy",
+      "actual": 0.29307760224830154,
+      "expected": 0.29307760224829804,
+      "scaled_error": 1.1932684383729812e-14,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss proton n",
+      "actual": 0.04000000000000125,
+      "expected": 0.040000000000000965,
+      "scaled_error": 7.112366251504737e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss proton scalar",
+      "actual": 0.032388523711098134,
+      "expected": 0.0323885237110979,
+      "scaled_error": 7.28413541899124e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss proton energy",
+      "actual": 0.06187914831066878,
+      "expected": 0.06187914831066837,
+      "scaled_error": 6.61603709015407e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss proton pressure",
+      "actual": 0.007268305724759838,
+      "expected": 0.007268305724759783,
+      "scaled_error": 7.637426565885472e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 independent p-Gauss proton entropy",
+      "actual": 0.054278516633680635,
+      "expected": 0.054278516633680315,
+      "scaled_error": 5.880579267372107e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 Euler",
+      "actual": 1495.468270545597,
+      "expected": 1495.4682705455925,
+      "scaled_error": 3.0408358361261544e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 quadrature phi_mev",
+      "actual": 694.8478709146682,
+      "expected": 694.8478709146682,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 quadrature energy_density",
+      "actual": 1029.6951872412885,
+      "expected": 1029.6951872412878,
+      "scaled_error": 6.62449465416269e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 quadrature pressure",
+      "actual": 465.77308330430856,
+      "expected": 465.77308330430856,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 quadrature entropy_density",
+      "actual": 0.3473561188819822,
+      "expected": 0.34735611888198203,
+      "scaled_error": 4.794314671346124e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 quadrature mu_n_mev",
+      "actual": 1890.9102661662555,
+      "expected": 1890.9102661662555,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 quadrature mu_p_mev",
+      "actual": 1285.7336470399632,
+      "expected": 1285.733647039963,
+      "scaled_error": 1.7684352895850199e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 entropy=-df/dT",
+      "actual": 0.347356105200447,
+      "expected": 0.3473561188819822,
+      "scaled_error": 3.9387632573131645e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 df/dnB fixed Y",
+      "actual": 1860.6514360122615,
+      "expected": 1860.651435209941,
+      "scaled_error": 4.3120410037815884e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 df/dYp",
+      "actual": -605.1766356492294,
+      "expected": -605.1766191262923,
+      "scaled_error": 2.7302669350243035e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 pressure from f",
+      "actual": 465.77308394616045,
+      "expected": 465.77308330430856,
+      "scaled_error": 1.3780356161846665e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 Maxwell ds/dnB=-dmu_bar/dT",
+      "actual": 0.19740363919155954,
+      "expected": 0.1974036554088343,
+      "scaled_error": 8.215285952781021e-08,
+      "tolerance": 4e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 positive frozen Cv",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 kinetic/scalar/vector sum",
+      "actual": 1029.6951872412885,
+      "expected": 1029.6951872412885,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 free-energy scalar stationarity",
+      "actual": 4.9573452425532434e-08,
+      "expected": 0.0,
+      "scaled_error": 3.14031134547861e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.8,T=20.0,Yp=0.05 local scalar curvature positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 solved equations",
+      "actual": 3.642919299551295e-15,
+      "expected": 0.0,
+      "scaled_error": 3.642919299551295e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss neutron n",
+      "actual": 0.04000000000000015,
+      "expected": 0.04000000000000002,
+      "scaled_error": 3.122502256758251e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss neutron scalar",
+      "actual": 0.03906437649135815,
+      "expected": 0.039064376491358056,
+      "scaled_error": 2.486780114772645e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss neutron energy",
+      "actual": 0.16145501509526833,
+      "expected": 0.16145501509526786,
+      "scaled_error": 2.9224535712766536e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss neutron pressure",
+      "actual": 0.0024962044143324235,
+      "expected": 0.002496204414332415,
+      "scaled_error": 3.474722394561468e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss neutron entropy",
+      "actual": 0.03509162050104575,
+      "expected": 0.0350916205010456,
+      "scaled_error": 4.350202803584133e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss proton n",
+      "actual": 0.04000000000000015,
+      "expected": 0.04000000000000002,
+      "scaled_error": 3.122502256758251e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss proton scalar",
+      "actual": 0.03906437649135815,
+      "expected": 0.039064376491358056,
+      "scaled_error": 2.486780114772645e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss proton energy",
+      "actual": 0.16145501509526833,
+      "expected": 0.16145501509526786,
+      "scaled_error": 2.9224535712766536e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss proton pressure",
+      "actual": 0.0024962044143324235,
+      "expected": 0.002496204414332415,
+      "scaled_error": 3.474722394561468e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 independent p-Gauss proton entropy",
+      "actual": 0.03509162050104575,
+      "expected": 0.0350916205010456,
+      "scaled_error": 4.350202803584133e-15,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 Euler",
+      "actual": 73.73115499520904,
+      "expected": 73.73115499520883,
+      "scaled_error": 2.8910820770660887e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 quadrature phi_mev",
+      "actual": 161.2651968531311,
+      "expected": 161.2651968531311,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 quadrature energy_density",
+      "actual": 74.30396773753056,
+      "expected": 74.30396773753054,
+      "scaled_error": 1.9125297272684103e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 quadrature pressure",
+      "actual": -0.5728127423215164,
+      "expected": -0.5728127423215177,
+      "scaled_error": 2.3258344850198723e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 quadrature entropy_density",
+      "actual": 0.0701832410020915,
+      "expected": 0.07018324100209154,
+      "scaled_error": 5.932094732160153e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 quadrature mu_n_mev",
+      "actual": 917.2529848774795,
+      "expected": 917.2529848774795,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 quadrature mu_p_mev",
+      "actual": 917.2529848774795,
+      "expected": 917.2529848774795,
+      "scaled_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 entropy=-df/dT",
+      "actual": 0.07018322934442267,
+      "expected": 0.0701832410020915,
+      "scaled_error": 1.6610331275410598e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 df/dnB fixed Y",
+      "actual": 917.2529850833831,
+      "expected": 917.2529848774795,
+      "scaled_error": 2.244785009955513e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 df/dYp",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 pressure from f",
+      "actual": -0.5728127258494453,
+      "expected": -0.5728127423215164,
+      "scaled_error": 1.6472071040496417e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 Maxwell ds/dnB=-dmu_bar/dT",
+      "actual": 0.22461413226333019,
+      "expected": 0.22461428333144795,
+      "scaled_error": 6.725668355751783e-07,
+      "tolerance": 4e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 positive frozen Cv",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 kinetic/scalar/vector sum",
+      "actual": 74.30396773753057,
+      "expected": 74.30396773753056,
+      "scaled_error": 1.9125297272684098e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 free-energy scalar stationarity",
+      "actual": 1.134813971186887e-08,
+      "expected": 0.0,
+      "scaled_error": 7.18866452579441e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.08,T=5.0,Yp=0.5 local scalar curvature positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "cross species Maxwell n=0.16 T=10.0",
+      "actual": -183.13729388097497,
+      "expected": -183.13729388097497,
+      "scaled_error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "cross species Maxwell n=0.32 T=30.0",
+      "actual": 383.14040036624414,
+      "expected": 383.1404002774263,
+      "scaled_error": 2.318153917094121e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.16 Y=0.5 phi_mev",
+      "actual": 291.833772410661,
+      "expected": 291.8337741010037,
+      "scaled_error": 5.792142087000807e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.16 Y=0.5 energy_density",
+      "actual": 147.6331628151317,
+      "expected": 147.63316201794686,
+      "scaled_error": 5.399768101782495e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.16 Y=0.5 pressure",
+      "actual": 0.24834409327491463,
+      "expected": 0.2483433489432216,
+      "scaled_error": 7.443316930311195e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.16 Y=0.5 mu_n_mev",
+      "actual": 924.2594082127284,
+      "expected": 924.2594085430626,
+      "scaled_error": 3.574041626977096e-10,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.16 Y=0.5 mu_p_mev",
+      "actual": 924.2594082127284,
+      "expected": 924.2594085430626,
+      "scaled_error": 3.574041626977096e-10,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "cold entropy vanishes n=0.16",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.32 Y=0.1 phi_mev",
+      "actual": 475.69332587578566,
+      "expected": 475.69332712983817,
+      "scaled_error": 2.6362625556462767e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.32 Y=0.1 energy_density",
+      "actual": 315.2436414378639,
+      "expected": 315.24364068967765,
+      "scaled_error": 2.3733587934788416e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.32 Y=0.1 pressure",
+      "actual": 36.39342733116181,
+      "expected": 36.393426610508044,
+      "scaled_error": 1.980175633660492e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.32 Y=0.1 mu_n_mev",
+      "actual": 1121.1981633255175,
+      "expected": 1121.1981632689046,
+      "scaled_error": 5.0493181141905535e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.32 Y=0.1 mu_p_mev",
+      "actual": 897.8748823407468,
+      "expected": 897.8748837106604,
+      "scaled_error": 1.5257287766769345e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "cold entropy vanishes n=0.32",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.8 Y=0.05 phi_mev",
+      "actual": 696.5076574673672,
+      "expected": 696.5076579050029,
+      "scaled_error": 6.283287362886173e-10,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.8 Y=0.05 energy_density",
+      "actual": 1026.2433110178517,
+      "expected": 1026.2433101387194,
+      "scaled_error": 8.566510001451626e-10,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.8 Y=0.05 pressure",
+      "actual": 463.8163182414362,
+      "expected": 463.8163177356567,
+      "scaled_error": 1.0904737008307125e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.8 Y=0.05 mu_n_mev",
+      "actual": 1892.6184250437832,
+      "expected": 1892.6184254618809,
+      "scaled_error": 2.2090964805056355e-10,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "T->0 n=0.8 Y=0.05 mu_p_mev",
+      "actual": 1291.740611693672,
+      "expected": 1291.7406130836698,
+      "scaled_error": 1.0760657299664777e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "cold entropy vanishes n=0.8",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.16 Y=0.5 entropy",
+      "actual": 0.0015943652106560238,
+      "expected": 0.0015943704895582688,
+      "scaled_error": 3.3109633423293962e-06,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.16 Y=0.5 thermal energy",
+      "actual": 7.971812883056373e-05,
+      "expected": 7.971852447791345e-05,
+      "scaled_error": 4.963054099563791e-06,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.16 Y=0.5 thermal free energy",
+      "actual": -7.971839224296673e-05,
+      "expected": -7.971852447791345e-05,
+      "scaled_error": 1.6587731344292128e-06,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.16 Y=0.5 thermal pressure",
+      "actual": 7.443276856877734e-05,
+      "expected": 7.443317788991833e-05,
+      "scaled_error": 5.499175939962912e-06,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.32 Y=0.1 entropy",
+      "actual": 0.001496370173963168,
+      "expected": 0.0014963729251547975,
+      "scaled_error": 1.838573515531352e-06,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.32 Y=0.1 thermal energy",
+      "actual": 7.481843942969135e-05,
+      "expected": 7.481864625773988e-05,
+      "scaled_error": 2.7643917509230424e-06,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.32 Y=0.1 thermal free energy",
+      "actual": -7.481857795710312e-05,
+      "expected": -7.481864625773988e-05,
+      "scaled_error": 9.128825524462164e-07,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.32 Y=0.1 thermal pressure",
+      "actual": 7.206512266577647e-05,
+      "expected": 7.20653847138133e-05,
+      "scaled_error": 3.6362539085155618e-06,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.8 Y=0.05 entropy",
+      "actual": 0.0017582659672509885,
+      "expected": 0.001758266433955883,
+      "scaled_error": 2.654346835909354e-07,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.8 Y=0.05 thermal energy",
+      "actual": 8.791328582447022e-05,
+      "expected": 8.791332169779416e-05,
+      "scaled_error": 4.0805333304213017e-07,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.8 Y=0.05 thermal free energy",
+      "actual": -8.791331083557452e-05,
+      "expected": -8.791332169779416e-05,
+      "scaled_error": 1.235560143680357e-07,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "qualified Sommerfeld n=0.8 Y=0.05 thermal pressure",
+      "actual": 5.057796295204753e-05,
+      "expected": 5.057799780280054e-05,
+      "scaled_error": 6.890496763012029e-07,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "warm continuation scalar branch",
+      "actual": 466.92638796349826,
+      "expected": 466.9263879634984,
+      "scaled_error": 3.652187175074695e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "subnuclear example flags mechanical instability",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "saturation": {
+    "n0": 0.15314294342528767,
+    "binding": -16.326055120466663,
+    "K": 300.19304024445313,
+    "dirac_mass_fraction": 0.7001097008313133,
+    "symmetry_energy": 32.50724717526876
+  },
+  "sample_states": [
+    {
+      "nB": 0.16,
+      "temperature": 1.0,
+      "Yp": 0.5,
+      "phi_mev": 291.8168802364574,
+      "omega_mev": 225.67892094387201,
+      "rho_mev": 0.0,
+      "dirac_mass_mev": 647.1831197635427,
+      "density_defined_landau_n_mev": 698.5961381347912,
+      "density_defined_landau_p_mev": 698.5961381347912,
+      "kinetic_mu_n_mev": 698.5771668774204,
+      "kinetic_mu_p_mev": 698.5771668774204,
+      "mu_n_mev": 924.2560878212923,
+      "mu_p_mev": 924.2560878212923,
+      "energy_density": 147.6411299025228,
+      "pressure": 0.25578256445728365,
+      "free_energy_density": 147.62519148694898,
+      "entropy_density": 0.015938415573816894,
+      "kinetic_energy_density": 108.54656078350409,
+      "scalar_field_energy_density": 21.040255443508958,
+      "vector_field_energy_density": 18.05431367550976,
+      "scalar_density": 0.15269463119223575,
+      "antiparticle_density": 0.0,
+      "max_normalized_equation_residual": 4.163336342344337e-15,
+      "branch": "local GM1 branch continued from cold first scalar upcrossing",
+      "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+    },
+    {
+      "nB": 0.16,
+      "temperature": 10.0,
+      "Yp": 0.1,
+      "phi_mev": 286.84152054639947,
+      "omega_mev": 225.67892094387201,
+      "rho_mev": -55.693566948096006,
+      "dirac_mass_mev": 652.1584794536006,
+      "density_defined_landau_n_mev": 726.4253983109787,
+      "density_defined_landau_p_mev": 670.0548676633841,
+      "kinetic_mu_n_mev": 725.0005595155691,
+      "kinetic_mu_p_mev": 663.9905912076009,
+      "mu_n_mev": 978.5262639334891,
+      "mu_p_mev": 861.822728677425,
+      "energy_density": 151.7931270781473,
+      "pressure": 4.230329338027903,
+      "free_energy_density": 150.4666163272335,
+      "entropy_density": 0.13265107509138074,
+      "kinetic_energy_density": 111.66860069417935,
+      "scalar_field_energy_density": 20.288018566119128,
+      "vector_field_energy_density": 19.836507817848833,
+      "scalar_density": 0.14969226577729466,
+      "antiparticle_density": 6.215351889789861e-60,
+      "max_normalized_equation_residual": 4.119968255444917e-15,
+      "branch": "local GM1 branch continued from cold first scalar upcrossing",
+      "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+    },
+    {
+      "nB": 0.32,
+      "temperature": 30.0,
+      "Yp": 0.1,
+      "phi_mev": 466.9263879634984,
+      "omega_mev": 451.35784188774403,
+      "rho_mev": -111.38713389619201,
+      "dirac_mass_mev": 472.07361203650163,
+      "density_defined_landau_n_mev": 620.7871277948965,
+      "density_defined_landau_p_mev": 510.30962916382526,
+      "kinetic_mu_n_mev": 612.4732600306453,
+      "kinetic_mu_p_mev": 482.70321049016167,
+      "mu_n_mev": 1119.5246688664852,
+      "mu_p_mev": 878.3674854298096,
+      "energy_density": 320.9267542224673,
+      "pressure": 41.56301980511239,
+      "free_energy_density": 308.9678443621893,
+      "entropy_density": 0.39863032867593384,
+      "kinetic_energy_density": 184.13844439329785,
+      "scalar_field_energy_density": 57.44227855777411,
+      "vector_field_energy_density": 79.34603127139533,
+      "scalar_density": 0.2651295050763114,
+      "antiparticle_density": 4.774611979968544e-16,
+      "max_normalized_equation_residual": 9.75781955236954e-17,
+      "branch": "local GM1 branch continued from cold first scalar upcrossing",
+      "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+    },
+    {
+      "nB": 0.8,
+      "temperature": 20.0,
+      "Yp": 0.05,
+      "phi_mev": 694.8478709146682,
+      "omega_mev": 1128.39460471936,
+      "rho_mev": -313.27631408304,
+      "dirac_mass_mev": 244.15212908533184,
+      "density_defined_landau_n_mev": 608.2500019705457,
+      "density_defined_landau_p_mev": 321.2438205983875,
+      "kinetic_mu_n_mev": 605.8775044053757,
+      "kinetic_mu_p_mev": 313.9771993621232,
+      "mu_n_mev": 1890.9102661662555,
+      "mu_p_mev": 1285.7336470399632,
+      "energy_density": 1029.6951872412885,
+      "pressure": 465.77308330430856,
+      "free_energy_density": 1022.7480648636489,
+      "entropy_density": 0.3473561188819822,
+      "kinetic_energy_density": 385.97976047504403,
+      "scalar_field_energy_density": 135.9678483435533,
+      "vector_field_energy_density": 507.7475784226912,
+      "scalar_density": 0.4259627027998763,
+      "antiparticle_density": 4.962192863708655e-15,
+      "max_normalized_equation_residual": 3.2092384305570925e-14,
+      "branch": "local GM1 branch continued from cold first scalar upcrossing",
+      "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+    },
+    {
+      "nB": 0.08,
+      "temperature": 5.0,
+      "Yp": 0.5,
+      "phi_mev": 161.2651968531311,
+      "omega_mev": 112.83946047193601,
+      "rho_mev": 0.0,
+      "dirac_mass_mev": 777.7348031468689,
+      "density_defined_landau_n_mev": 805.2693674551687,
+      "density_defined_landau_p_mev": 805.2693674551687,
+      "kinetic_mu_n_mev": 804.4135244055436,
+      "kinetic_mu_p_mev": 804.4135244055436,
+      "mu_n_mev": 917.2529848774795,
+      "mu_p_mev": 917.2529848774795,
+      "energy_density": 74.30396773753056,
+      "pressure": -0.5728127423215164,
+      "free_energy_density": 73.95305153252009,
+      "entropy_density": 0.0701832410020915,
+      "kinetic_energy_density": 63.718861198371435,
+      "scalar_field_energy_density": 6.071528120281692,
+      "vector_field_energy_density": 4.51357841887744,
+      "scalar_density": 0.0781287529827163,
+      "antiparticle_density": 3.058396200796222e-140,
+      "max_normalized_equation_residual": 3.642919299551295e-15,
+      "branch": "local GM1 branch continued from cold first scalar upcrossing",
+      "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+    }
+  ],
+  "sommerfeld_samples": [
+    {
+      "nB": 0.16,
+      "T": 0.1,
+      "Yp": 0.5,
+      "delta_free_energy_density": -7.971852447791345e-05,
+      "delta_energy_density": 7.971852447791345e-05,
+      "delta_pressure": 7.443317788991833e-05,
+      "entropy_density": 0.0015943704895582688,
+      "cv_fixed_nB_Yp": 0.0015943704895582688,
+      "thermal_index": 1.933699894439724,
+      "min_kinetic_fermi_energy": 51.414261700194345,
+      "temperature_over_fermi_scale": 0.0019449856264224447
+    },
+    {
+      "nB": 0.32,
+      "T": 0.1,
+      "Yp": 0.1,
+      "delta_free_energy_density": -7.481864625773988e-05,
+      "delta_energy_density": 7.481864625773988e-05,
+      "delta_pressure": 7.20653847138133e-05,
+      "entropy_density": 0.0014963729251547975,
+      "cv_fixed_nB_Yp": 0.0014963729251547975,
+      "thermal_index": 1.9632008639338117,
+      "min_kinetic_fermi_energy": 38.90393590085027,
+      "temperature_over_fermi_scale": 0.0025704340109663415
+    },
+    {
+      "nB": 0.8,
+      "T": 0.1,
+      "Yp": 0.05,
+      "delta_free_energy_density": -8.791332169779416e-05,
+      "delta_energy_density": 8.791332169779416e-05,
+      "delta_pressure": 5.057799780280054e-05,
+      "entropy_density": 0.001758266433955883,
+      "cv_fixed_nB_Yp": 0.001758266433955883,
+      "thermal_index": 1.5753166508332446,
+      "min_kinetic_fermi_energy": 77.49182331083284,
+      "temperature_over_fermi_scale": 0.0012904587313539268
+    }
+  ],
+  "spinodal_example": {
+    "nB": 0.06,
+    "temperature": 1.0,
+    "Yp": 0.5,
+    "dP_dn_fixed_T_Yp": -11.340920458818847
+  },
+  "runtime_seconds": 15.332371041877195,
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1"
+}
