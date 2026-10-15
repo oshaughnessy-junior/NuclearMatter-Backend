@@ -1,0 +1,298 @@
+{
+  "passed": false,
+  "heldouts": [
+    {
+      "block": "density",
+      "n": 0.25,
+      "T": 0.7,
+      "Y": 0.2,
+      "free_error": 0.6818082815407251,
+      "pressure_relative": 0.25567590822036124,
+      "hessian_relative": 1.0486926209390552
+    },
+    {
+      "block": "density",
+      "n": 0.25,
+      "T": 1.6,
+      "Y": 0.2,
+      "free_error": 0.6801805905517995,
+      "pressure_relative": 0.25486621902325723,
+      "hessian_relative": 1.0479570985855102
+    },
+    {
+      "block": "density",
+      "n": 0.25,
+      "T": 0.7,
+      "Y": 0.28,
+      "free_error": 0.6789603898751011,
+      "pressure_relative": 0.3065354882111374,
+      "hessian_relative": 1.0456446528254595
+    },
+    {
+      "block": "density",
+      "n": 0.25,
+      "T": 1.6,
+      "Y": 0.28,
+      "free_error": 0.677303324180798,
+      "pressure_relative": 0.3054531150512295,
+      "hessian_relative": 1.0448598349310319
+    },
+    {
+      "block": "density",
+      "n": 0.26,
+      "T": 0.7,
+      "Y": 0.2,
+      "free_error": 1.275644144802527,
+      "pressure_relative": 0.29951397465789875,
+      "hessian_relative": 1.0424309698855048
+    },
+    {
+      "block": "density",
+      "n": 0.26,
+      "T": 1.6,
+      "Y": 0.2,
+      "free_error": 1.2728957065294253,
+      "pressure_relative": 0.2986418677157415,
+      "hessian_relative": 1.0416976895637478
+    },
+    {
+      "block": "density",
+      "n": 0.26,
+      "T": 0.7,
+      "Y": 0.28,
+      "free_error": 1.2686931945073638,
+      "pressure_relative": 0.3550661443177775,
+      "hessian_relative": 1.039440533211483
+    },
+    {
+      "block": "density",
+      "n": 0.26,
+      "T": 1.6,
+      "Y": 0.28,
+      "free_error": 1.2658837920691894,
+      "pressure_relative": 0.35392352046511444,
+      "hessian_relative": 1.0386626128737821
+    },
+    {
+      "block": "composition",
+      "n": 0.19,
+      "T": 0.7,
+      "Y": 0.31,
+      "free_error": 0.4456454014540441,
+      "pressure_relative": 0.2997855439348791,
+      "hessian_relative": 1.1060020836264182
+    },
+    {
+      "block": "composition",
+      "n": 0.19,
+      "T": 1.6,
+      "Y": 0.31,
+      "free_error": 0.44596367467397613,
+      "pressure_relative": 0.29737627450716464,
+      "hessian_relative": 1.1052332059757393
+    },
+    {
+      "block": "composition",
+      "n": 0.19,
+      "T": 0.7,
+      "Y": 0.32,
+      "free_error": 0.693114338667101,
+      "pressure_relative": 0.2948696893876086,
+      "hessian_relative": 1.1058213255817617
+    },
+    {
+      "block": "composition",
+      "n": 0.19,
+      "T": 1.6,
+      "Y": 0.32,
+      "free_error": 0.6935207968850818,
+      "pressure_relative": 0.2923939629373007,
+      "hessian_relative": 1.105045727703068
+    },
+    {
+      "block": "composition",
+      "n": 0.23,
+      "T": 0.7,
+      "Y": 0.31,
+      "free_error": 0.5488839462428814,
+      "pressure_relative": 0.2164775091073209,
+      "hessian_relative": 1.0604212229723862
+    },
+    {
+      "block": "composition",
+      "n": 0.23,
+      "T": 1.6,
+      "Y": 0.31,
+      "free_error": 0.5490670574436081,
+      "pressure_relative": 0.2155221796104828,
+      "hessian_relative": 1.0596155516548587
+    },
+    {
+      "block": "composition",
+      "n": 0.23,
+      "T": 0.7,
+      "Y": 0.32,
+      "free_error": 0.8478632722599286,
+      "pressure_relative": 0.23125506626534698,
+      "hessian_relative": 1.0602864397652427
+    },
+    {
+      "block": "composition",
+      "n": 0.23,
+      "T": 1.6,
+      "Y": 0.32,
+      "free_error": 0.8481156374598413,
+      "pressure_relative": 0.23023689027028738,
+      "hessian_relative": 1.0594762780921012
+    },
+    {
+      "block": "temperature",
+      "n": 0.19,
+      "T": 2.5,
+      "Y": 0.2,
+      "free_error": 0.10332932326650734,
+      "pressure_relative": 0.21432649753026278,
+      "hessian_relative": 1.1080444802970497
+    },
+    {
+      "block": "temperature",
+      "n": 0.19,
+      "T": 3.0,
+      "Y": 0.2,
+      "free_error": 0.10320919683442753,
+      "pressure_relative": 0.21273575322464344,
+      "hessian_relative": 1.1071689348081826
+    },
+    {
+      "block": "temperature",
+      "n": 0.19,
+      "T": 2.5,
+      "Y": 0.28,
+      "free_error": 0.10028183339284169,
+      "pressure_relative": 0.2921139063858149,
+      "hessian_relative": 1.1045941879992176
+    },
+    {
+      "block": "temperature",
+      "n": 0.19,
+      "T": 3.0,
+      "Y": 0.28,
+      "free_error": 0.10013264412123135,
+      "pressure_relative": 0.2893864260502801,
+      "hessian_relative": 1.1036062215300253
+    },
+    {
+      "block": "temperature",
+      "n": 0.23,
+      "T": 2.5,
+      "Y": 0.2,
+      "free_error": 0.11425167686979876,
+      "pressure_relative": 0.14582330539921373,
+      "hessian_relative": 1.0621056225194008
+    },
+    {
+      "block": "temperature",
+      "n": 0.23,
+      "T": 3.0,
+      "Y": 0.2,
+      "free_error": 0.11424479100355711,
+      "pressure_relative": 0.1450816919136363,
+      "hessian_relative": 1.0611398381080517
+    },
+    {
+      "block": "temperature",
+      "n": 0.23,
+      "T": 2.5,
+      "Y": 0.28,
+      "free_error": 0.11094936170445635,
+      "pressure_relative": 0.17961790398096533,
+      "hessian_relative": 1.0587795706955943
+    },
+    {
+      "block": "temperature",
+      "n": 0.23,
+      "T": 3.0,
+      "Y": 0.28,
+      "free_error": 0.11092047095849011,
+      "pressure_relative": 0.17857551559289686,
+      "hessian_relative": 1.0577316085440838
+    },
+    {
+      "block": "joint",
+      "n": 0.25,
+      "T": 2.5,
+      "Y": 0.31,
+      "free_error": 1.389617250784795,
+      "pressure_relative": 0.3400424659401553,
+      "hessian_relative": 1.042899742403997
+    },
+    {
+      "block": "joint",
+      "n": 0.25,
+      "T": 3.0,
+      "Y": 0.31,
+      "free_error": 1.3876105330379005,
+      "pressure_relative": 0.3384359756244878,
+      "hessian_relative": 1.0418419959835807
+    },
+    {
+      "block": "joint",
+      "n": 0.25,
+      "T": 2.5,
+      "Y": 0.32,
+      "free_error": 1.7139621042878161,
+      "pressure_relative": 0.35468919375511976,
+      "hessian_relative": 1.0427637991734886
+    },
+    {
+      "block": "joint",
+      "n": 0.25,
+      "T": 3.0,
+      "Y": 0.32,
+      "free_error": 1.7120310116071096,
+      "pressure_relative": 0.3530108684657257,
+      "hessian_relative": 1.041701180343079
+    },
+    {
+      "block": "joint",
+      "n": 0.26,
+      "T": 2.5,
+      "Y": 0.31,
+      "free_error": 2.00329739274855,
+      "pressure_relative": 0.3885617153316395,
+      "hessian_relative": 1.0367261570139066
+    },
+    {
+      "block": "joint",
+      "n": 0.26,
+      "T": 3.0,
+      "Y": 0.31,
+      "free_error": 1.9997467721490239,
+      "pressure_relative": 0.38688688957538875,
+      "hessian_relative": 1.035679048428071
+    },
+    {
+      "block": "joint",
+      "n": 0.26,
+      "T": 2.5,
+      "Y": 0.32,
+      "free_error": 2.340135808882337,
+      "pressure_relative": 0.40298545026001853,
+      "hessian_relative": 1.0365928869342411
+    },
+    {
+      "block": "joint",
+      "n": 0.26,
+      "T": 3.0,
+      "Y": 0.32,
+      "free_error": 2.3366507169379247,
+      "pressure_relative": 0.40124502389043293,
+      "hessian_relative": 1.0355414477818046
+    }
+  ],
+  "thresholds": {
+    "free": 0.005,
+    "pressure": 0.01,
+    "hessian": 0.02
+  }
+}

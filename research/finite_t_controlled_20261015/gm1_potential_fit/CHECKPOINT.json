@@ -1,0 +1,58 @@
+{
+  "status": "author_frozen_independent_review_required",
+  "utc": "2026-10-15T14:44:00Z",
+  "checks": {
+    "main": 596,
+    "analytic": 33,
+    "cold_limits": 18
+  },
+  "all_passed": true,
+  "parameters": 60,
+  "domain": {
+    "n": [
+      0.18,
+      0.26
+    ],
+    "Y": [
+      0.18,
+      0.33
+    ],
+    "T": [
+      0.0,
+      3.0
+    ]
+  },
+  "measured_error_scope": "32 specific blocked points, not continuous-domain bounds",
+  "experiments_seconds": {
+    "initial": 46.91890879091807,
+    "final": 44.88368233293295
+  },
+  "initial_model_selection": "Original validation informedisospinevenbasis; finalblockedpointschangedandpredeclared",
+  "failed_models": [
+    "baseline_results.json",
+    "initial_Y_polynomial/baseline_results.json"
+  ],
+  "external_matched_finiteT_GM1_forward_gate": "OPEN",
+  "upstream_sha256": {
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "rmf_reference/source_snapshot/rmft.py": "4a717efc9ae79895876e2529c2d2f0325cd5adfb36251bf3c60ea1eac0cc377c",
+    "rmf_reference/source_snapshot/constants.py": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317"
+  },
+  "files_sha256": {
+    "analytic_results.json": "ca38a3277400a74257c19dcc42c8143eeecaa5ae72848bc5157a94c3b63b3592",
+    "fit_study.py": "d6d240b34315c94454a179a05c206608989d9461dd6183b1c126eaaa0f2ea6e0",
+    "upstream_manifest.json": "c28d99e09c6d857f811fab1f382c10c61120da22e338d03cd5162a9845d18efb",
+    "results.json": "29f04314447f060d21084572447e2c8954f3ea82669e2cda22fff03b9eaf5d8b",
+    "baseline_coefficients.json": "9ecf185ec897d8a85a21ea5f0873b85b6073f1408c7e14b7e635057ee7c1d7f3",
+    "RESEARCH_NOTE.md": "3db3b6915cd2d2f845e923e4448fc616ae5d713bd2ed5a21c00656965a4ec5a4",
+    "baseline_results.json": "96f71b04722b70a904e6b7705827974d2d151c78fc224eada17c97351f605235",
+    "cold_limit_results.json": "f0f14bf8510722301c5050222d7a34427c0c5fba7f75255e4203c2b9d6417b67",
+    "cold_limit_checks.py": "9bdaf3125ce4ea93aebe48c3db47c1f4f21da30574ef7416b48e9c609cc6d6c0",
+    "analytic_checks.py": "04a60478218c32e2a7814f8c17d56ee03d68b7f5e325b0962ebc349a900b80d5",
+    "potential.py": "9306f288b22a9bbd10af107f552cd276ba066f6620cfbb94c52433954a919df4",
+    "record_scalar_curvature.py": "a8dd0f7c846a6cc89e143257330295fb701bbf39e23aedd8c40197e4cf9deef6",
+    "coefficients.json": "ecd8e2f44e54613f9a08678c47b0f982fcd779968d188ebd525032f1ad902234",
+    "partial.json": "6fe3a4ff71cd536a8dd99dfa4a56ba15c9edad4d0bbf389b6d360494e9b5f3ed"
+  }
+}

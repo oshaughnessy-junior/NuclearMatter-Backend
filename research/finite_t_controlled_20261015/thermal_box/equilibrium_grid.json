@@ -1,0 +1,641 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "8binLTE energy_MeV_per_baryon",
+      "error": 1.0658141036401503e-13,
+      "passed": true
+    },
+    {
+      "name": "8binLTE electron_lepton_per_baryon",
+      "error": 1.1102230246251565e-15,
+      "passed": true
+    },
+    {
+      "name": "8binLTE actual physical stationarity",
+      "error": 3.3204754369204835e-16,
+      "passed": true
+    }
+  ],
+  "grid": {
+    "edges": [
+      0.0,
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      11.0,
+      14.0,
+      19.0,
+      24.0
+    ],
+    "weights": [
+      1.7582457681841665e-08,
+      1.2307720377289166e-07,
+      3.3406669595499164e-07,
+      6.505509342281415e-07,
+      1.8000041051785404e-06,
+      3.105501588055284e-06,
+      9.043976670097307e-06,
+      1.53077272192534e-05
+    ],
+    "energies": [
+      1.5,
+      3.2142857142857144,
+      5.131578947368421,
+      7.094594594594595,
+      9.656593406593407,
+      12.619426751592357,
+      16.75060753341434,
+      21.692928930366115
+    ]
+  },
+  "LTE": {
+    "T": 2.2169721399956828,
+    "Ye": 0.2418593639914175,
+    "f": [
+      [
+        0.9941745313707512,
+        0.9874625438818271,
+        0.9707330545907868,
+        0.931893369754054,
+        0.8116112994599137,
+        0.530980703634399,
+        0.1493952595734885,
+        0.018548139595926477
+      ],
+      [
+        0.0015119072317306675,
+        0.0006983261557260761,
+        0.000294201661102508,
+        0.0001213876759086626,
+        3.822320702479363e-05,
+        1.0044634867725063e-05,
+        1.5583278435727892e-06,
+        1.6768019455646218e-07
+      ]
+    ],
+    "totals": {
+      "energy_MeV_per_baryon": 8.554085115386153,
+      "electron_lepton_per_baryon": 0.2999999999999989,
+      "entropy_per_baryon": 6.1863056973279695,
+      "matter_entropy_per_baryon": 6.10167212144466,
+      "radiation_entropy_per_baryon": 0.08463357588330912
+    },
+    "residual": [
+      -1.2459708890703778e-14,
+      -1.1102230246251565e-15
+    ],
+    "solver_message": "The solution converged."
+  },
+  "rates": {
+    "T": 2.2169721399956828,
+    "Ye": 0.2418593639914175,
+    "nB": 0.0001,
+    "edges": [
+      0.0,
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      11.0,
+      14.0,
+      19.0,
+      24.0
+    ],
+    "j": [
+      [
+        523.1142401740453,
+        1382.208886756929,
+        2820.05916476764,
+        4773.189799778723,
+        7749.784977125283,
+        10180.677499693194,
+        7277.419342986398,
+        1852.1873700693977
+      ],
+      [
+        1.9470483739643645e-07,
+        0.16794932339217775,
+        0.2877823445361948,
+        0.2706394284884795,
+        0.17591108163005043,
+        0.08402751741979697,
+        0.02397193028275442,
+        0.004425145778380293
+      ]
+    ],
+    "chi": [
+      [
+        3.0652420671504035,
+        17.549408199059123,
+        85.0228775415481,
+        348.84449588159197,
+        1798.8560808323546,
+        8992.669912010482,
+        41435.099138275014,
+        98006.20330519663
+      ],
+      [
+        0.00012858623708161213,
+        240.33474703853128,
+        977.8927740049526,
+        2229.2755353588104,
+        4602.03032231854,
+        8365.328804938028,
+        15383.087086262587,
+        26390.385865642118
+      ]
+    ],
+    "channels": [
+      {
+        "flavor": "nue",
+        "E": 1.5,
+        "coefficients": {
+          "flavor": "nue",
+          "energy_MeV": 1.5,
+          "log_j": 6.259799872667181,
+          "log_chi": 1.1201265441326882,
+          "j_s": 523.1142401740453,
+          "chi_s": 3.0652420671504035,
+          "rate_s": 526.1794822411957,
+          "feq": 0.9941745313707512,
+          "mu_neutrino_MeV": 12.894512578039851,
+          "true_absorption_cm_inv": 1.0224546966923375e-10,
+          "relaxation_cm_inv": 1.7551458290561656e-08,
+          "true_over_relaxation": 0.005825468629248689,
+          "channels": {
+            "capture": {
+              "log_j": 6.259799872667181,
+              "log_chi": 1.1201265441326882
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "nue",
+        "E": 3.2142857142857144,
+        "coefficients": {
+          "flavor": "nue",
+          "energy_MeV": 3.2142857142857144,
+          "log_j": 7.231438141065745,
+          "log_chi": 2.865020228491982,
+          "j_s": 1382.208886756929,
+          "chi_s": 17.549408199059123,
+          "rate_s": 1399.7582949559885,
+          "feq": 0.9874625438818271,
+          "mu_neutrino_MeV": 12.894512578039851,
+          "true_absorption_cm_inv": 5.853852467182187e-10,
+          "relaxation_cm_inv": 4.669091091531024e-08,
+          "true_over_relaxation": 0.012537456118172826,
+          "channels": {
+            "capture": {
+              "log_j": 7.231438141065745,
+              "log_chi": 2.865020228491982
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "nue",
+        "E": 5.131578947368421,
+        "coefficients": {
+          "flavor": "nue",
+          "energy_MeV": 5.131578947368421,
+          "log_j": 7.94451314412613,
+          "log_chi": 4.442920367824238,
+          "j_s": 2820.05916476764,
+          "chi_s": 85.0228775415481,
+          "rate_s": 2905.0820423091886,
+          "feq": 0.9707330545907868,
+          "mu_neutrino_MeV": 12.894512578039851,
+          "true_absorption_cm_inv": 2.8360579218289775e-09,
+          "relaxation_cm_inv": 9.690310629192642e-08,
+          "true_over_relaxation": 0.02926694540921302,
+          "channels": {
+            "capture": {
+              "log_j": 7.94451314412613,
+              "log_chi": 4.442920367824238
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "nue",
+        "E": 7.094594594594595,
+        "coefficients": {
+          "flavor": "nue",
+          "energy_MeV": 7.094594594594595,
+          "log_j": 8.47077008151566,
+          "log_chi": 5.8546262523665265,
+          "j_s": 4773.189799778723,
+          "chi_s": 348.84449588159197,
+          "rate_s": 5122.034295660315,
+          "feq": 0.9318933697540538,
+          "mu_neutrino_MeV": 12.894512578039851,
+          "true_absorption_cm_inv": 1.1636199863359871e-08,
+          "relaxation_cm_inv": 1.708526735405837e-07,
+          "true_over_relaxation": 0.06810663024594608,
+          "channels": {
+            "capture": {
+              "log_j": 8.47077008151566,
+              "log_chi": 5.8546262523665265
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "nue",
+        "E": 9.656593406593407,
+        "coefficients": {
+          "flavor": "nue",
+          "energy_MeV": 9.656593406593407,
+          "log_j": 8.955420377075436,
+          "log_chi": 7.494906231213076,
+          "j_s": 7749.784977125283,
+          "chi_s": 1798.8560808323546,
+          "rate_s": 9548.64105795764,
+          "feq": 0.8116112994599137,
+          "mu_neutrino_MeV": 12.894512578039851,
+          "true_absorption_cm_inv": 6.000338009945382e-08,
+          "relaxation_cm_inv": 3.1850838148695656e-07,
+          "true_over_relaxation": 0.18838870054008627,
+          "channels": {
+            "capture": {
+              "log_j": 8.955420377075436,
+              "log_chi": 7.494906231213076
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "nue",
+        "E": 12.619426751592357,
+        "coefficients": {
+          "flavor": "nue",
+          "energy_MeV": 12.619426751592357,
+          "log_j": 9.228246839922756,
+          "log_chi": 9.104165070249264,
+          "j_s": 10180.677499693194,
+          "chi_s": 8992.669912010482,
+          "rate_s": 19173.347411703668,
+          "feq": 0.5309807036343986,
+          "mu_neutrino_MeV": 12.894512578039851,
+          "true_absorption_cm_inv": 2.999631802615422e-07,
+          "relaxation_cm_inv": 6.395540281304764e-07,
+          "true_over_relaxation": 0.4690192963656016,
+          "channels": {
+            "capture": {
+              "log_j": 9.228246839922756,
+              "log_chi": 9.104165070249264
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "nue",
+        "E": 16.75060753341434,
+        "coefficients": {
+          "flavor": "nue",
+          "energy_MeV": 16.75060753341434,
+          "log_j": 8.892531592492253,
+          "log_chi": 10.631883605901857,
+          "j_s": 7277.419342986398,
+          "chi_s": 41435.099138275014,
+          "rate_s": 48712.518481261395,
+          "feq": 0.14939525957348837,
+          "mu_neutrino_MeV": 12.894512578039851,
+          "true_absorption_cm_inv": 1.3821261353504435e-06,
+          "relaxation_cm_inv": 1.6248747152025217e-06,
+          "true_over_relaxation": 0.8506047404265119,
+          "channels": {
+            "capture": {
+              "log_j": 8.892531592492253,
+              "log_chi": 10.631883605901857
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "nue",
+        "E": 21.692928930366115,
+        "coefficients": {
+          "flavor": "nue",
+          "energy_MeV": 21.692928930366115,
+          "log_j": 7.524122581832344,
+          "log_chi": 11.492786054682028,
+          "j_s": 1852.1873700693977,
+          "chi_s": 98006.20330519663,
+          "rate_s": 99858.39067526595,
+          "feq": 0.018548139595926483,
+          "mu_neutrino_MeV": 12.894512578039851,
+          "true_absorption_cm_inv": 3.2691350529304054e-06,
+          "relaxation_cm_inv": 3.330917373353867e-06,
+          "true_over_relaxation": 0.9814518604040743,
+          "channels": {
+            "capture": {
+              "log_j": 7.524122581832344,
+              "log_chi": 11.492786054682028
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "antinue",
+        "E": 1.5,
+        "coefficients": {
+          "flavor": "antinue",
+          "energy_MeV": 1.5,
+          "log_j": -15.451781079492017,
+          "log_chi": -8.958910773026245,
+          "j_s": 1.9470483739643645e-07,
+          "chi_s": 0.00012858623708161213,
+          "rate_s": 0.00012878094191900847,
+          "feq": 0.0015119072317306703,
+          "mu_neutrino_MeV": -12.89451257803985,
+          "true_absorption_cm_inv": 4.289175182706302e-15,
+          "relaxation_cm_inv": 4.295669836997983e-15,
+          "true_over_relaxation": 0.9984880927682701,
+          "channels": {
+            "capture": {
+              "log_j": -15.451781079492019,
+              "log_chi": -8.958910773026247
+            },
+            "crossed_neutron_decay": {
+              "log_j": -49.509995046069356,
+              "log_chi": -43.01712473960358
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "antinue",
+        "E": 3.2142857142857144,
+        "coefficients": {
+          "flavor": "antinue",
+          "energy_MeV": 3.2142857142857144,
+          "log_j": -1.7840929915584596,
+          "log_chi": 5.482032730868046,
+          "j_s": 0.16794932339217775,
+          "chi_s": 240.33474703853128,
+          "rate_s": 240.50269636192346,
+          "feq": 0.0006983261557260761,
+          "mu_neutrino_MeV": -12.89451257803985,
+          "true_absorption_cm_inv": 8.016704244058443e-09,
+          "relaxation_cm_inv": 8.022306430468088e-09,
+          "true_over_relaxation": 0.9993016738442739,
+          "channels": {
+            "capture": {
+              "log_j": -1.7840929915584596,
+              "log_chi": 5.482032730868046
+            },
+            "crossed_neutron_decay": {
+              "log_j": -114.62220803783333,
+              "log_chi": -107.35608231540681
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "antinue",
+        "E": 5.131578947368421,
+        "coefficients": {
+          "flavor": "antinue",
+          "energy_MeV": 5.131578947368421,
+          "log_j": -1.2455508327059928,
+          "log_chi": 6.885400025992383,
+          "j_s": 0.2877823445361948,
+          "chi_s": 977.8927740049526,
+          "rate_s": 978.1805563494887,
+          "feq": 0.0002942016611025075,
+          "mu_neutrino_MeV": -12.89451257803985,
+          "true_absorption_cm_inv": 3.2618991836177296e-08,
+          "relaxation_cm_inv": 3.262859122191422e-08,
+          "true_over_relaxation": 0.9997057983388975,
+          "channels": {
+            "capture": {
+              "log_j": -1.2455508327059928,
+              "log_chi": 6.885400025992383
+            },
+            "crossed_neutron_decay": {
+              "log_j": -145.71414948647137,
+              "log_chi": -137.583198627773
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "antinue",
+        "E": 7.094594594594595,
+        "coefficients": {
+          "flavor": "antinue",
+          "energy_MeV": 7.094594594594595,
+          "log_j": -1.3069678662157287,
+          "log_chi": 7.7094319396354045,
+          "j_s": 0.2706394284884795,
+          "chi_s": 2229.2755353588104,
+          "rate_s": 2229.5461747872982,
+          "feq": 0.00012138767590866282,
+          "mu_neutrino_MeV": -12.89451257803985,
+          "true_absorption_cm_inv": 7.436062768993376e-08,
+          "relaxation_cm_inv": 7.43696552495426e-08,
+          "true_over_relaxation": 0.9998786123240916,
+          "channels": {
+            "capture": {
+              "log_j": -1.3069678662157287,
+              "log_chi": 7.7094319396354045
+            },
+            "crossed_neutron_decay": {
+              "log_j": -162.65100440776038,
+              "log_chi": -153.63460460190925
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "antinue",
+        "E": 9.656593406593407,
+        "coefficients": {
+          "flavor": "antinue",
+          "energy_MeV": 9.656593406593407,
+          "log_j": -1.737776629620683,
+          "log_chi": 8.434252859517224,
+          "j_s": 0.17591108163005043,
+          "chi_s": 4602.03032231854,
+          "rate_s": 4602.206233400167,
+          "feq": 3.822320702479363e-05,
+          "mu_neutrino_MeV": -12.89451257803985,
+          "true_absorption_cm_inv": 1.535072080538644e-07,
+          "relaxation_cm_inv": 1.535130758159422e-07,
+          "true_over_relaxation": 0.9999617767929759,
+          "channels": {
+            "capture": {
+              "log_j": -1.737776629620683,
+              "log_chi": 8.434252859517224
+            },
+            "crossed_neutron_decay": {
+              "log_j": -175.65251301458693,
+              "log_chi": -165.48048352544902
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "antinue",
+        "E": 12.619426751592357,
+        "coefficients": {
+          "flavor": "antinue",
+          "energy_MeV": 12.619426751592357,
+          "log_j": -2.476610945453249,
+          "log_chi": 9.031850919873524,
+          "j_s": 0.08402751741979697,
+          "chi_s": 8365.328804938028,
+          "rate_s": 8365.41283245544,
+          "feq": 1.00446348677251e-05,
+          "mu_neutrino_MeV": -12.89451257803985,
+          "true_absorption_cm_inv": 2.790373333854192e-07,
+          "relaxation_cm_inv": 2.790401362417009e-07,
+          "true_over_relaxation": 0.9999899553651331,
+          "channels": {
+            "capture": {
+              "log_j": -2.476610945453249,
+              "log_chi": 9.031850919873524
+            },
+            "crossed_neutron_decay": {
+              "log_j": -184.81347683510455,
+              "log_chi": -173.3050149697778
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "antinue",
+        "E": 16.75060753341434,
+        "coefficients": {
+          "flavor": "antinue",
+          "energy_MeV": 16.75060753341434,
+          "log_j": -3.730871704668651,
+          "log_chi": 9.64102394374122,
+          "j_s": 0.02397193028275442,
+          "chi_s": 15383.087086262587,
+          "rate_s": 15383.111058192857,
+          "feq": 1.5583278435727892e-06,
+          "mu_neutrino_MeV": -12.89451257803985,
+          "true_absorption_cm_inv": 5.131245525283557e-07,
+          "relaxation_cm_inv": 5.131253521458787e-07,
+          "true_over_relaxation": 0.9999984416721572,
+          "channels": {
+            "capture": {
+              "log_j": -3.730871704668651,
+              "log_chi": 9.64102394374122
+            },
+            "crossed_neutron_decay": {
+              "log_j": -192.67580404266397,
+              "log_chi": -179.3039083942541
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      {
+        "flavor": "antinue",
+        "E": 21.692928930366115,
+        "coefficients": {
+          "flavor": "antinue",
+          "energy_MeV": 21.692928930366115,
+          "log_j": -5.420452056798162,
+          "log_chi": 10.18075505105179,
+          "j_s": 0.004425145778380293,
+          "chi_s": 26390.385865642118,
+          "rate_s": 26390.390290787913,
+          "feq": 1.676801945564625e-07,
+          "mu_neutrino_MeV": -12.89451257803985,
+          "true_absorption_cm_inv": 8.802885183203014e-07,
+          "relaxation_cm_inv": 8.802886659272766e-07,
+          "true_over_relaxation": 0.9999998323198048,
+          "channels": {
+            "capture": {
+              "log_j": -5.420452056798162,
+              "log_chi": 10.18075505105179
+            },
+            "crossed_neutron_decay": {
+              "log_j": -198.42396000477092,
+              "log_chi": -182.82275289692095
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      }
+    ],
+    "order": 48,
+    "tail": 40.0
+  },
+  "delta_8_minus_4": {
+    "T": 0.012172218773382149,
+    "Ye": -0.003939980192261133
+  },
+  "runtime_seconds": 10.212605041917413,
+  "scope": "Finite-grid LTE4versus8 bins at identical total E/Le; records grid sensitivity only, no continuum or energy-grid-converged trajectory claim"
+}

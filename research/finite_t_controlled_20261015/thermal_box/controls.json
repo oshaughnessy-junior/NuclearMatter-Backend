@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "bad grid[0.0, 2.0, 1.0]",
+      "passed": true
+    },
+    {
+      "name": "bad grid[1.0, 2.0]",
+      "passed": true
+    },
+    {
+      "name": "bad grid[0.0, nan]",
+      "passed": true
+    },
+    {
+      "name": "bad f",
+      "passed": true
+    },
+    {
+      "name": "bad f",
+      "passed": true
+    },
+    {
+      "name": "bad f",
+      "passed": true
+    },
+    {
+      "name": "bad f",
+      "passed": true
+    },
+    {
+      "name": "rate metadata/values T2.1",
+      "passed": true
+    },
+    {
+      "name": "rate metadata/values Ye0.31",
+      "passed": true
+    },
+    {
+      "name": "rate metadata/values nB0.001",
+      "passed": true
+    },
+    {
+      "name": "rate metadata/values edges[ 0  3  8 14 24]",
+      "passed": true
+    },
+    {
+      "name": "rate metadata/values j[[nan nan nan nan]\n [nan nan nan nan]]",
+      "passed": true
+    },
+    {
+      "name": "rate metadata/values chi[[0. 0. 0. 0.]\n [0. 0. 0. 0.]]",
+      "passed": true
+    },
+    {
+      "name": "rate metadata/values j[[-1. -1. -1. -1.]\n [-1. -1. -1. -1.]]",
+      "passed": true
+    },
+    {
+      "name": "bad dt 0.0",
+      "passed": true
+    },
+    {
+      "name": "bad dt -1.0",
+      "passed": true
+    },
+    {
+      "name": "bad dt nan",
+      "passed": true
+    },
+    {
+      "name": "guard repair valid replay T",
+      "passed": true,
+      "error": 0.0
+    },
+    {
+      "name": "guard repair valid replay Ye",
+      "passed": true,
+      "error": 0.0
+    },
+    {
+      "name": "guard repair valid replay f",
+      "passed": true,
+      "error": 0.0
+    }
+  ],
+  "scope": "Input contracts plus one EXACT saved-state physical-rate replay; no changed-state cache reuse"
+}

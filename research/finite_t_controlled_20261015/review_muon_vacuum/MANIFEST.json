@@ -1,0 +1,32 @@
+{
+  "status": "ACCEPT vacuum pointV-A normalization only",
+  "checks": "163/163 PASS",
+  "runtime_seconds": 0.14224520791321993,
+  "source_and_failures_sha256": {
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "muon_vacuum/initial_exothermic_threshold_failure.json": "d82f388193253ff8930c2b20edf4fadc29a4029d110848d223ebc993f2f77d5f",
+    "muon_vacuum/initial_threshold_asymptotic_failure.json": "f43305811ae43647558418477bf6696c8522f4c0b2bd31fa613b7096f4699959"
+  },
+  "review_files_sha256": {
+    "probe_vacuum.py": "d09dabf80215fb951c5a116af7765ced6690982f77fcf624d95ba1004b08f3b7",
+    "results.json": "174460f63181a2247f007cdebe0cd42f45da9e1bd0b530a69d735a5d8750f294",
+    "REVIEW.md": "d5d02d1bed264e7cd845367106dfe4a94f33d3743f76545013919de2738263a9"
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/astro-ph/0302055",
+      "equations": "3\u20136,11\u201313",
+      "verified": "2026-10-15"
+    },
+    {
+      "url": "https://arxiv.org/html/2006.12051v2",
+      "equations": "47a\u2013c",
+      "verified": "2026-10-15"
+    }
+  ],
+  "limitations": [
+    "NoWM,pseudoscalar,formfactor,radiative corrections",
+    "No warm or mediumkernel",
+    "Algebraicagreement is not physicaluncertainty"
+  ]
+}
