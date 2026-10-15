@@ -1,0 +1,36 @@
+{
+  "time": "2026-10-15T21:44:11.685095+00:00",
+  "status": "ACCEPTED selected closed-box physics with derived-W bitwise qualification; no continuum claim",
+  "fresh_physics_ODE_pass": 47,
+  "fresh_failed": [],
+  "boundary_pass": 20,
+  "boundary_strict_fail": [
+    {
+      "name": "core W bitwise upper/order (36.0, 4)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "core W bitwise upper/order (48.0, 4)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "core W bitwise upper/order (48.0, 6)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    }
+  ],
+  "preserved_author_failures": 6,
+  "files": {
+    "REVIEW.md": "90ba3158dad57102d176fa384ff4e7b36d83120bbf586078d36165ce7195c4f2",
+    "boundary_audit.py": "1111349f7788e4c161a8836fb0681884c9f7271afbf9fd3301eb8b56e1a88ae1",
+    "boundary_results.json": "5f6e01d28b6526945ed537c54ce35187ba811246a9a48d83529522c34b5bf74e",
+    "probe.py": "5169ef39485dc31c58aa6f5895a97e98046aa7961cc699de4fe69bdf738af615",
+    "results.json": "192b64c3b98ac2e42efad45928f88c9fe943c54233579d4e5433d87213831b26",
+    "weight_roundoff_diagnostic.json": "e4dc2f8f28ba80fda0fc106592c7bbc650397b3db72f299c94b2d665bb867c63"
+  }
+}

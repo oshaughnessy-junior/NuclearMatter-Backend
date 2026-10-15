@@ -1,0 +1,168 @@
+{
+  "checks": [
+    {
+      "name": "core E bitwise upper/order (36.0, 4)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "core w bitwise upper/order (36.0, 4)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "core W bitwise upper/order (36.0, 4)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "core K bitwise (36.0, 4)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "actual missing core number exchange (36.0, 4)",
+      "error": -6.634139090861961e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "whole extended box number sum (36.0, 4)",
+      "error": -6.582309879214601e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "global radiation vs pair heat (36.0, 4)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "core E bitwise upper/order (48.0, 4)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "core w bitwise upper/order (48.0, 4)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "core W bitwise upper/order (48.0, 4)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "core K bitwise (48.0, 4)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "actual missing core number exchange (48.0, 4)",
+      "error": -4.127359834277753e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "whole extended box number sum (48.0, 4)",
+      "error": -6.603775734844405e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "global radiation vs pair heat (48.0, 4)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "core E bitwise upper/order (48.0, 6)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "core w bitwise upper/order (48.0, 6)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "core W bitwise upper/order (48.0, 6)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "core K bitwise (48.0, 6)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "actual missing core number exchange (48.0, 6)",
+      "error": -1.974622441157868e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "whole extended box number sum (48.0, 6)",
+      "error": -1.746997710697246e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "global radiation vs pair heat (48.0, 6)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "upper24to48 heat change rounds19.5percent",
+      "error": -0.00011554599508362129,
+      "tolerance": 0.0006,
+      "passed": true
+    },
+    {
+      "name": "upper36to48 heat change rounds1.16percent",
+      "error": 1.967112948403349e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    }
+  ],
+  "passed": 20,
+  "failed": [
+    {
+      "name": "core W bitwise upper/order (36.0, 4)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "core W bitwise upper/order (48.0, 4)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "core W bitwise upper/order (48.0, 6)",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    }
+  ],
+  "hot_heat24": 2.3762129240968245e-07,
+  "hot_heat36": 2.806687101328063e-07,
+  "hot_heat48": 2.83929988240886e-07,
+  "relative_upper24to48": 0.19488445400491639,
+  "relative_upper36to48": 0.011619671129484033
+}

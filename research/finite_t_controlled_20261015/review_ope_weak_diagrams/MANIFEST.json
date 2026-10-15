@@ -1,0 +1,32 @@
+{
+  "status": "initial review: finite-input algebra accepted; two helper-input controls FAILED; subsequent author repair not yet reviewed",
+  "passed": 419,
+  "failed": [
+    {
+      "name": "defect helper rejects nan_gv",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "defect helper rejects nan_raising",
+      "error": 1.0,
+      "tolerance": 0,
+      "passed": false
+    }
+  ],
+  "reviewed_author_sha": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+  "files": {
+    "INITIAL_EVIDENCE_PIN.json": "651440cf9a91696d6e473eea407a1ced4210d4302e5606437f6868f358f07370",
+    "REVIEW.md": "4262fe113474f529a580bc2727e90df8145f260f2d35bd453b7f57281c4f1290",
+    "extra_probes.py": "8b6d9f710dfd8a60502d931c8111340f88bf9c10125dd6c672f81364ad69c1ef",
+    "extra_results.json": "074bb5f9c0bf4e9ae0fa847360135d9a9fcf02fd7ac76ffcdb71bbfc893f54d3",
+    "normalization.py": "2c1311399243e718271fc680ff1b257a6e34448f63c9d709883613ee19a80fa8",
+    "normalization_results.json": "48eeea99e808effb592a7029a509bc49c3f98e66e746b549ddda056ba760ac72",
+    "probe.py": "b2071a50e0f7fea1693e9104c72058dc8a0cd31317b62464e24d885802ed1e93",
+    "results.json": "2776ee8a56ca18ebf12e38594a04023fdb7e5f9265338f7ad66bb4e9b4700dcf",
+    "reviewed_initial_author_CHECKPOINT.json.txt": "55c5d3c4a9c6dcc407fcebe287f1d15e119598b773f191b3087dbb336711f929",
+    "reviewed_initial_author_external_legs.py.txt": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+    "reviewed_initial_author_results.json.txt": "5c8ef9f586970dc7d1e3c533930cf6454df381eaaf433603419f9d6444db11f8"
+  }
+}
