@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "command": "/usr/local/bin/python3 /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/prescribed_density/entropy_oracle.py",
+  "script_sha256": "0e2485fba3e1c5a272d3ab87221bb3477bf647021e2a5a9503a55254adbeefea",
+  "results_sha256": "30e237f55def423ffd0af9074ade2202589d9b3b29f94b4d08d9b07b794f1d65",
+  "element_sha256": "933e81a95dc79615588d32504f4d660dd31659760786df30bf3658f74d25a25a",
+  "scope": "Same EOS, independent constant-entropy root path and work quadrature; no independent interaction theory",
+  "checks": [
+    {
+      "density_factor": 0.5,
+      "entropy_root_final_T_MeV": 1.5815526935280142,
+      "EOS_energy_difference_MeV_per_baryon": -8.884152235609164,
+      "independent_isentropic_path_work_MeV_per_baryon": [
+        -8.884152280186035,
+        -8.884152238372854
+      ],
+      "scaled_work_quadrature_vs_EOS_difference": 3.1108086041586824e-10,
+      "scaled_quadrature_refinement_change": 4.706490767457583e-09,
+      "relative_ODE_vs_entropy_root_temperature_error": 6.650235917504688e-14,
+      "scaled_ODE_work_vs_EOS_difference_error": 8.993602148775503e-13
+    },
+    {
+      "density_factor": 2.0,
+      "entropy_root_final_T_MeV": 2.5298286985702796,
+      "EOS_energy_difference_MeV_per_baryon": 11.388042203674942,
+      "independent_isentropic_path_work_MeV_per_baryon": [
+        11.388042260498223,
+        11.388042207223492
+      ],
+      "scaled_work_quadrature_vs_EOS_difference": 3.1160315661842414e-10,
+      "scaled_quadrature_refinement_change": 4.678128992862261e-09,
+      "relative_ODE_vs_entropy_root_temperature_error": 4.440892098500626e-16,
+      "scaled_ODE_work_vs_EOS_difference_error": 9.20307912898268e-15
+    }
+  ]
+}

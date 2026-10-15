@@ -1,0 +1,31 @@
+{
+  "checkpoint": "GM1_two_charge_local_stability_and_lowT_holdouts",
+  "status": "ready_for_independent_review",
+  "passed": true,
+  "checks": 294,
+  "map_counts": {
+    "locally_stable": 52,
+    "spinodal": 20,
+    "marginal_unqualified": 0
+  },
+  "mechanically_stable_but_spinodal": 4,
+  "frozen_gm1_sha256": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+  "production_changes": false,
+  "frozen_reference_changes": false,
+  "dependencies_added": false,
+  "global_coexistence": false,
+  "leptons_coulomb_gradients": false,
+  "scope": "Fixed-temperature two-conserved-species local nuclear uniform GM1 stability only; no phase-complete EOS validity claim",
+  "next_priority": "Independent review; choose actual neutrality/conserved-charge closure before two-charge Gibbs coexistence or finite-wavelength extension",
+  "files": {
+    "stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "plot_stability.py": "24a2aa1a2b75020a41cc8706c93268b706afee5d642c747ee8f10abc71ba10f5",
+    "local_stability_nodes.pdf": "68acb8f739b988566f2a96bbb8f9eff37b7fb296460a1f45bf2cdaf4977663d4",
+    "local_stability_nodes.png": "f38479e5656f04ca727f23e328f2401c99a85c3462b046c703bbbc082f1a90a0",
+    "RESEARCH_NOTE.md": "d0f11af2f3ac2d6143e692c5fea4fbb3814d3ca9a98b13a8fc83b8aa8dd8f12c",
+    "validation_results.json": "0c08b10c3b677d780f7fcd82acb120bc4dec745eca614f3becc216a78a61a768",
+    "response_validation.json": "9e7feb74d61237a4f71c931c7f11ef40a43b0546dedfbb71a8219188d02d4c5e",
+    "run_stability_study.py": "f572f6efeb63f17720f53f1f48b2f750dc322ed729dc4a5ce97c80f068eece43",
+    "validate_response.py": "bec1381464f3a9747355298343cb1555165e11e8716954a3aaee938dd285655d"
+  }
+}

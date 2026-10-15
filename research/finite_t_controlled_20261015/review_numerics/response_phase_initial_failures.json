@@ -1,0 +1,877 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "log integral a-100.0 z-100.0",
+      "actual": -100.36651292058167,
+      "expected": -100.36651292058166,
+      "relative_error": 1.4158960296296052e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a-100.0 z-1e-05",
+      "actual": -100.0,
+      "expected": -100.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-100.0 z-1e-08",
+      "actual": -100.0,
+      "expected": -100.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-100.0 z0.0",
+      "actual": -100.0,
+      "expected": -100.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-100.0 z1e-08",
+      "actual": -100.0,
+      "expected": -100.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-100.0 z1e-05",
+      "actual": -100.0,
+      "expected": -100.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-100.0 z100.0",
+      "actual": -100.0,
+      "expected": -100.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-5.0 z-100.0",
+      "actual": -95.4461937987768,
+      "expected": -95.4461937987768,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-5.0 z-1e-05",
+      "actual": -5.006715381953541,
+      "expected": -5.006715381953539,
+      "relative_error": 3.547948512917355e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a-5.0 z-1e-08",
+      "actual": -5.006715348522583,
+      "expected": -5.006715348522582,
+      "relative_error": 1.7739742683038997e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a-5.0 z0.0",
+      "actual": -5.006715348489118,
+      "expected": -5.006715348489118,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-5.0 z1e-08",
+      "actual": -5.006715348455654,
+      "expected": -5.0067153484556535,
+      "relative_error": 1.7739742683276138e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a-5.0 z1e-05",
+      "actual": -5.00671531502503,
+      "expected": -5.00671531502503,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a-5.0 z100.0",
+      "actual": -5.003359553239909,
+      "expected": -5.003359553239908,
+      "relative_error": 1.7751640877477783e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a0.0 z-100.0",
+      "actual": -95.40178542005673,
+      "expected": -95.40178542005673,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a0.0 z-1e-05",
+      "actual": -0.6931496805826839,
+      "expected": -0.693149680567237,
+      "relative_error": 1.544686600851719e-11,
+      "passed": true
+    },
+    {
+      "name": "log integral a0.0 z-1e-08",
+      "actual": -0.6931471830599454,
+      "expected": -0.6931471830599455,
+      "relative_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a0.0 z0.0",
+      "actual": -0.6931471805599453,
+      "expected": -0.6931471805599451,
+      "relative_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a0.0 z1e-08",
+      "actual": -0.6931471780599453,
+      "expected": -0.6931471780599453,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a0.0 z1e-05",
+      "actual": -0.6931446805672383,
+      "expected": -0.693144680567237,
+      "relative_error": 1.3322676295501878e-15,
+      "passed": true
+    },
+    {
+      "name": "log integral a0.0 z100.0",
+      "actual": -0.36651292058166435,
+      "expected": -0.3665129205816642,
+      "relative_error": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a10.0 z-100.0",
+      "actual": -95.394830268001,
+      "expected": -95.394830268001,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a10.0 z-1e-05",
+      "actual": -5.0398676393493814e-05,
+      "expected": -5.0398676394891595e-05,
+      "relative_error": 1.3977805458226245e-15,
+      "passed": true
+    },
+    {
+      "name": "log integral a10.0 z-1e-08",
+      "actual": -4.540389898987944e-05,
+      "expected": -4.540389898988195e-05,
+      "relative_error": 2.5139937874507634e-18,
+      "passed": true
+    },
+    {
+      "name": "log integral a10.0 z0.0",
+      "actual": -4.539889921686465e-05,
+      "expected": -4.5398899216841926e-05,
+      "relative_error": 2.2720811777149352e-17,
+      "passed": true
+    },
+    {
+      "name": "log integral a10.0 z1e-08",
+      "actual": -4.5393899443858156e-05,
+      "expected": -4.53938994438019e-05,
+      "relative_error": 5.625654022484161e-17,
+      "passed": true
+    },
+    {
+      "name": "log integral a10.0 z1e-05",
+      "actual": -4.039913037168219e-05,
+      "expected": -4.039913037368059e-05,
+      "relative_error": 1.9984014443252818e-15,
+      "passed": true
+    },
+    {
+      "name": "log integral a10.0 z100.0",
+      "actual": 2.302589632873662,
+      "expected": 2.302589632873662,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a1000.0 z-100.0",
+      "actual": -95.39482981401191,
+      "expected": -95.39482981401191,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "log integral a1000.0 z-1e-05",
+      "actual": -5.000004167522435e-06,
+      "expected": -5.000004167365901e-06,
+      "relative_error": 1.565333827184892e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a1000.0 z-1e-08",
+      "actual": -5.000000004166667e-09,
+      "expected": -4.999989311471609e-09,
+      "relative_error": 1.0692695058097653e-14,
+      "passed": true
+    },
+    {
+      "name": "log integral a1000.0 z0.0",
+      "actual": 0.0,
+      "expected": -4.440892098500626e-16,
+      "relative_error": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a1000.0 z1e-08",
+      "actual": 4.999999995833333e-09,
+      "expected": 4.9999870910255595e-09,
+      "relative_error": 1.2904807773874113e-14,
+      "passed": true
+    },
+    {
+      "name": "log integral a1000.0 z1e-05",
+      "actual": 4.999995832477566e-06,
+      "expected": 4.999995831811432e-06,
+      "relative_error": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "log integral a1000.0 z100.0",
+      "actual": 4.605170185988092,
+      "expected": 4.605170185988092,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "smallq f-sum T3.0 q0.0001",
+      "actual": 3.1690269340825615e-13,
+      "expected": 3.1690269340825595e-13,
+      "relative_error": 6.372567855597717e-16,
+      "passed": true
+    },
+    {
+      "name": "smallq static compressibility T3.0",
+      "actual": 0.008779085437942506,
+      "expected": 0.008779085437925025,
+      "relative_error": 1.9911878738418964e-12,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T3.0 q0.0001 v-0.4",
+      "actual": 1.3333333328091612e-05,
+      "expected": 1.3333333333333335e-05,
+      "relative_error": 5.2417227866139934e-15,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T3.0 q0.0001 v0.0",
+      "actual": 0.0,
+      "expected": -0.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T3.0 q0.0001 v0.2",
+      "actual": -6.666666666710341e-06,
+      "expected": -6.6666666666666675e-06,
+      "relative_error": 4.367386579337898e-17,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T3.0 q0.0001 v0.5",
+      "actual": -1.6666666660114515e-05,
+      "expected": -1.6666666666666667e-05,
+      "relative_error": 6.552152212718071e-15,
+      "passed": true
+    },
+    {
+      "name": "smallq f-sum T3.0 q0.1",
+      "actual": 3.169026934082564e-07,
+      "expected": 3.169026934082559e-07,
+      "relative_error": 1.503477385144027e-15,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T3.0 q0.1 v-0.4",
+      "actual": 0.013333333333340747,
+      "expected": 0.013333333333333336,
+      "relative_error": 7.41073868937292e-15,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T3.0 q0.1 v0.0",
+      "actual": 0.0,
+      "expected": -0.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T3.0 q0.1 v0.2",
+      "actual": -0.006666666666666529,
+      "expected": -0.006666666666666668,
+      "relative_error": 1.3877787807814457e-16,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T3.0 q0.1 v0.5",
+      "actual": -0.016666666666672825,
+      "expected": -0.016666666666666666,
+      "relative_error": 6.158268339717665e-15,
+      "passed": true
+    },
+    {
+      "name": "smallq f-sum T0.01 q0.0001",
+      "actual": 6.736164748293702e-13,
+      "expected": 6.736164748069508e-13,
+      "relative_error": 3.3282145733233857e-11,
+      "passed": true
+    },
+    {
+      "name": "smallq static compressibility T0.01",
+      "actual": 3.7946302061719515e-05,
+      "expected": 3.7943660468085746e-05,
+      "relative_error": 6.961884017465092e-05,
+      "passed": false
+    },
+    {
+      "name": "smallq KMS T0.01 q0.0001 v-0.4",
+      "actual": 0.0039999999985411705,
+      "expected": 0.004,
+      "relative_error": 1.4588295849105037e-12,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T0.01 q0.0001 v0.0",
+      "actual": 0.0,
+      "expected": -0.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T0.01 q0.0001 v0.2",
+      "actual": -0.0019999999999242846,
+      "expected": -0.002,
+      "relative_error": 7.57154755559597e-14,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T0.01 q0.0001 v0.5",
+      "actual": -0.004999999999199645,
+      "expected": -0.005,
+      "relative_error": 8.003554416435854e-13,
+      "passed": true
+    },
+    {
+      "name": "smallq f-sum T0.01 q0.1",
+      "actual": 6.736375601486059e-07,
+      "expected": 6.736164748069506e-07,
+      "relative_error": 3.130170125555488e-05,
+      "passed": false
+    },
+    {
+      "name": "smallq KMS T0.01 q0.1 v-0.4",
+      "actual": 4.000000000001819,
+      "expected": 4.000000000000001,
+      "relative_error": 4.54525306281539e-13,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T0.01 q0.1 v0.0",
+      "actual": 0.0,
+      "expected": -0.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T0.01 q0.1 v0.2",
+      "actual": -2.0000000000003126,
+      "expected": -2.0000000000000004,
+      "relative_error": 1.5609735726229698e-13,
+      "passed": true
+    },
+    {
+      "name": "smallq KMS T0.01 q0.1 v0.5",
+      "actual": -5.0000000000009095,
+      "expected": -5.0,
+      "relative_error": 1.8189894035458566e-13,
+      "passed": true
+    },
+    {
+      "name": "independent final species zero-shift convention",
+      "actual": -17.750833526321685,
+      "expected": -17.750833526321685,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "implicitH vs independent mu FD (0.08, 10.0, 0.3)",
+      "actual": [
+        [
+          377.2047707017158,
+          -520.3909715036849
+        ],
+        [
+          -520.3909715036849,
+          585.7167934953396
+        ]
+      ],
+      "expected": [
+        [
+          377.20487126843443,
+          -520.3909771912171
+        ],
+        [
+          -520.3910025068396,
+          585.7170997229686
+        ]
+      ],
+      "relative_error": 3.1957629407990026e-07,
+      "passed": true
+    },
+    {
+      "name": "implicitH vs independent freeenergy FD (0.08, 10.0, 0.3)",
+      "actual": [
+        [
+          377.2047707017158,
+          -520.3909715036849
+        ],
+        [
+          -520.3909715036849,
+          585.7167934953396
+        ]
+      ],
+      "expected": [
+        [
+          377.20474463760263,
+          -520.3909907342368
+        ],
+        [
+          -520.3909907342368,
+          585.7168577310605
+        ]
+      ],
+      "relative_error": 7.348206504469468e-08,
+      "passed": true
+    },
+    {
+      "name": "scalar field species response (0.08, 10.0, 0.3)",
+      "actual": [
+        8.965288047539874,
+        9.09985508233278
+      ],
+      "expected": [
+        8.965288207221567,
+        9.099855111857641
+      ],
+      "relative_error": 1.2712070098952234e-08,
+      "passed": true
+    },
+    {
+      "name": "chemical FD raw symmetry (0.08, 10.0, 0.3)",
+      "actual": [
+        [
+          377.20487126843443,
+          -520.3909771912171
+        ],
+        [
+          -520.3910025068396,
+          585.7170997229686
+        ]
+      ],
+      "expected": [
+        [
+          377.20487126843443,
+          -520.3910025068396
+        ],
+        [
+          -520.3909771912171,
+          585.7170997229686
+        ]
+      ],
+      "relative_error": 3.532860649430993e-08,
+      "passed": true
+    },
+    {
+      "name": "canonical scalar curvature units/FD (0.08, 10.0, 0.3)",
+      "actual": 0.106428057993242,
+      "expected": 0.10642810053012774,
+      "relative_error": 3.996772049671496e-07,
+      "passed": true
+    },
+    {
+      "name": "positive fixedY slope does not prove full stability",
+      "actual": 1.5184512821498908,
+      "minimum_eigenvalue": -49.27086302443001,
+      "passed": true
+    },
+    {
+      "name": "implicitH vs independent mu FD (0.1, 12.0, 0.2)",
+      "actual": [
+        [
+          452.7390544316539,
+          -419.8702535601415
+        ],
+        [
+          -419.8702535601415,
+          845.5662465537982
+        ]
+      ],
+      "expected": [
+        [
+          452.7391185021655,
+          -419.87025624810775
+        ],
+        [
+          -419.8702979437029,
+          845.5666935371177
+        ]
+      ],
+      "relative_error": 4.022238004906752e-07,
+      "passed": true
+    },
+    {
+      "name": "implicitH vs independent freeenergy FD (0.1, 12.0, 0.2)",
+      "actual": [
+        [
+          452.7390544316539,
+          -419.8702535601415
+        ],
+        [
+          -419.8702535601415,
+          845.5662465537982
+        ]
+      ],
+      "expected": [
+        [
+          452.7391242150869,
+          -419.8703133321637
+        ],
+        [
+          -419.8703133321637,
+          845.5671402569145
+        ]
+      ],
+      "relative_error": 7.981785476899341e-07,
+      "passed": true
+    },
+    {
+      "name": "scalar field species response (0.1, 12.0, 0.2)",
+      "actual": [
+        8.464578303219177,
+        8.704281023057451
+      ],
+      "expected": [
+        8.464578531427769,
+        8.704281037103026
+      ],
+      "relative_error": 1.8831470175497116e-08,
+      "passed": true
+    },
+    {
+      "name": "chemical FD raw symmetry (0.1, 12.0, 0.2)",
+      "actual": [
+        [
+          452.7391185021655,
+          -419.87025624810775
+        ],
+        [
+          -419.8702979437029,
+          845.5666935371177
+        ]
+      ],
+      "expected": [
+        [
+          452.7391185021655,
+          -419.8702979437029
+        ],
+        [
+          -419.87025624810775,
+          845.5666935371177
+        ]
+      ],
+      "relative_error": 5.2272084838363095e-08,
+      "passed": true
+    },
+    {
+      "name": "canonical scalar curvature units/FD (0.1, 12.0, 0.2)",
+      "actual": 0.11093246023925403,
+      "expected": 0.11093247937902073,
+      "relative_error": 1.7253528280655842e-07,
+      "passed": true
+    },
+    {
+      "name": "implicitH vs independent mu FD (0.4, 40.0, 0.2)",
+      "actual": [
+        [
+          1457.7022628299733,
+          608.694916026219
+        ],
+        [
+          608.694916026219,
+          1722.5438757912134
+        ]
+      ],
+      "expected": [
+        [
+          1457.701942439134,
+          608.6949027386859
+        ],
+        [
+          608.6946345577121,
+          1722.5442283063326
+        ]
+      ],
+      "relative_error": 2.2915945432727648e-07,
+      "passed": true
+    },
+    {
+      "name": "implicitH vs independent freeenergy FD (0.4, 40.0, 0.2)",
+      "actual": [
+        [
+          1457.7022628299733,
+          608.694916026219
+        ],
+        [
+          608.694916026219,
+          1722.5438757912134
+        ]
+      ],
+      "expected": [
+        [
+          1457.7021014952304,
+          608.6946524597179
+        ],
+        [
+          608.6946524597179,
+          1722.544035310925
+        ]
+      ],
+      "relative_error": 1.8067425060342527e-07,
+      "passed": true
+    },
+    {
+      "name": "scalar field species response (0.4, 40.0, 0.2)",
+      "actual": [
+        3.6872550104023905,
+        4.300092400472278
+      ],
+      "expected": [
+        3.6872563114454984,
+        4.300092424526306
+      ],
+      "relative_error": 2.297225787297725e-07,
+      "passed": true
+    },
+    {
+      "name": "chemical FD raw symmetry (0.4, 40.0, 0.2)",
+      "actual": [
+        [
+          1457.701942439134,
+          608.6949027386859
+        ],
+        [
+          608.6946345577121,
+          1722.5442283063326
+        ]
+      ],
+      "expected": [
+        [
+          1457.701942439134,
+          608.6946345577121
+        ],
+        [
+          608.6949027386859,
+          1722.5442283063326
+        ]
+      ],
+      "relative_error": 1.5703421383713762e-07,
+      "passed": true
+    },
+    {
+      "name": "canonical scalar curvature units/FD (0.4, 40.0, 0.2)",
+      "actual": 0.18673590367152412,
+      "expected": 0.18673589891846798,
+      "relative_error": 2.545336044457862e-08,
+      "passed": true
+    }
+  ],
+  "phase_samples": [
+    {
+      "nB": 0.08,
+      "T": 10.0,
+      "Yp": 0.3,
+      "hessian_mev_fm3": [
+        [
+          377.2047707017158,
+          -520.3909715036849
+        ],
+        [
+          -520.3909715036849,
+          585.7167934953396
+        ]
+      ],
+      "antisymmetric_scaled_norm": 0.0,
+      "eigenvalues_mev_fm3": [
+        -49.27086302443001,
+        1012.1924272214854
+      ],
+      "unstable_eigenvector_n_p": [
+        -0.7734462747300643,
+        -0.6338618620063726
+      ],
+      "mechanical_dP_dn_fixed_T_Yp": 1.5184512821498908,
+      "composition_dmu_difference_dYp_fixed_n": 160.29628057635404,
+      "diffusive_dmu_difference_dYp_fixed_pressure": -210.19983198832867,
+      "local_label": "spinodal",
+      "fixed_Y_mechanically_stable": true,
+      "composition_at_fixed_n_convex": true,
+      "globally_stable_phase": "unassessed; no two-charge coexistence/Coulomb/lepton model",
+      "implicit_response": {
+        "canonical_scalar_curvature_fm_minus2": 0.106428057993242,
+        "scalar_density_response_a": [
+          0.9541581962496929,
+          0.9684799044326111
+        ],
+        "dphi_dn_fm2": [
+          8.965288047539874,
+          9.09985508233278
+        ],
+        "neutron": {
+          "n_nu": 0.45139079188791875,
+          "rho_s_nu": 0.4306982237914971,
+          "rho_s_m_fixed_nu": -0.41023512932780304,
+          "rho_s_m_fixed_n": 0.0007191110130383982,
+          "a": 0.9541581962496929
+        },
+        "proton": {
+          "n_nu": 0.2832233952884077,
+          "rho_s_nu": 0.2742961668019967,
+          "rho_s_m_fixed_nu": -0.265444695760533,
+          "rho_s_m_fixed_n": 0.0002056296500963506,
+          "a": 0.9684799044326111
+        }
+      }
+    },
+    {
+      "nB": 0.1,
+      "T": 12.0,
+      "Yp": 0.2,
+      "hessian_mev_fm3": [
+        [
+          452.7390544316539,
+          -419.8702535601415
+        ],
+        [
+          -419.8702535601415,
+          845.5662465537982
+        ]
+      ],
+      "antisymmetric_scaled_norm": 0.0,
+      "eigenvalues_mev_fm3": [
+        185.61265163362057,
+        1112.6926493518315
+      ],
+      "unstable_eigenvector_n_p": [
+        -0.8437195142345055,
+        -0.5367842968082152
+      ],
+      "mechanical_dP_dn_fixed_T_Yp": 18.921716355916516,
+      "composition_dmu_difference_dYp_fixed_n": 213.8045808105735,
+      "diffusive_dmu_difference_dYp_fixed_pressure": 109.14962956563568,
+      "local_label": "locally_stable",
+      "fixed_Y_mechanically_stable": true,
+      "composition_at_fixed_n_convex": true,
+      "globally_stable_phase": "unassessed; no two-charge coexistence/Coulomb/lepton model",
+      "implicit_response": {
+        "canonical_scalar_curvature_fm_minus2": 0.11093246023925403,
+        "scalar_density_response_a": [
+          0.9389964960639137,
+          0.9655873085016141
+        ],
+        "dphi_dn_fm2": [
+          8.464578303219177,
+          8.704281023057451
+        ],
+        "neutron": {
+          "n_nu": 0.501990648782576,
+          "rho_s_nu": 0.47136746026368964,
+          "rho_s_m_fixed_nu": -0.44119160075399877,
+          "rho_s_m_fixed_n": 0.0014207927921519037,
+          "a": 0.9389964960639137
+        },
+        "proton": {
+          "n_nu": 0.225258439328979,
+          "rho_s_nu": 0.21750669014894297,
+          "rho_s_m_fixed_nu": -0.20983042534771815,
+          "rho_s_m_fixed_n": 0.00019127417429426474,
+          "a": 0.9655873085016141
+        }
+      }
+    },
+    {
+      "nB": 0.4,
+      "T": 40.0,
+      "Yp": 0.2,
+      "hessian_mev_fm3": [
+        [
+          1457.7022628299733,
+          608.694916026219
+        ],
+        [
+          608.694916026219,
+          1722.5438757912134
+        ]
+      ],
+      "antisymmetric_scaled_norm": 0.0,
+      "eigenvalues_mev_fm3": [
+        967.1906726693979,
+        2213.055465951789
+      ],
+      "unstable_eigenvector_n_p": [
+        -0.77864514661061,
+        0.6274645294036482
+      ],
+      "mechanical_dP_dn_fixed_T_Yp": 478.64543054848866,
+      "composition_dmu_difference_dYp_fixed_n": 785.1425226274996,
+      "diffusive_dmu_difference_dYp_fixed_pressure": 715.5013605175996,
+      "local_label": "locally_stable",
+      "fixed_Y_mechanically_stable": true,
+      "composition_at_fixed_n_convex": true,
+      "globally_stable_phase": "unassessed; no two-charge coexistence/Coulomb/lepton model",
+      "implicit_response": {
+        "canonical_scalar_curvature_fm_minus2": 0.18673590367152412,
+        "scalar_density_response_a": [
+          0.6885428964348455,
+          0.8029816402732441
+        ],
+        "dphi_dn_fm2": [
+          3.6872550104023905,
+          4.300092400472278
+        ],
+        "neutron": {
+          "n_nu": 0.5968097726976678,
+          "rho_s_nu": 0.4109291295138739,
+          "rho_s_m_fixed_nu": -0.2404663029333881,
+          "rho_s_m_fixed_n": 0.04247603013154433,
+          "a": 0.6885428964348455
+        },
+        "proton": {
+          "n_nu": 0.2543374866976425,
+          "rho_s_nu": 0.20422833225144738,
+          "rho_s_m_fixed_nu": -0.15695165662967278,
+          "rho_s_m_fixed_n": 0.007039944591863523,
+          "a": 0.8029816402732441
+        }
+      }
+    }
+  ],
+  "sources_sha256": {
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915"
+  }
+}

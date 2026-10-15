@@ -1,0 +1,7 @@
+{
+  "stage": "Weak-off sampled ledger evaluation",
+  "error": "UnboundLocalError: local variable lepton shadowed imported module",
+  "status": "REPAIRED_IMPLEMENTATION_ERROR",
+  "repair": "Rename the local scalar lepton residual; no physical equation or numerical threshold changed",
+  "results_from_failed_run": "None published; weak-on stage was not reached"
+}
