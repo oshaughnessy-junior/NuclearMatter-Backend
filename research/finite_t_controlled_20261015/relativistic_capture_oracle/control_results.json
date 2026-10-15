@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "('T', 0)",
+      "passed": true
+    },
+    {
+      "name": "('T', nan)",
+      "passed": true
+    },
+    {
+      "name": "('mua', inf)",
+      "passed": true
+    },
+    {
+      "name": "('Enu', 0)",
+      "passed": true
+    },
+    {
+      "name": "('ml', -1)",
+      "passed": true
+    },
+    {
+      "name": "('anti', 1)",
+      "passed": true
+    },
+    {
+      "name": "('Mweak', 0)",
+      "passed": true
+    },
+    {
+      "name": "{'radial': True}",
+      "passed": true
+    },
+    {
+      "name": "{'incident': 3}",
+      "passed": true
+    },
+    {
+      "name": "{'outgoing': 4.5}",
+      "passed": true
+    },
+    {
+      "name": "{'azimuth': 0}",
+      "passed": true
+    },
+    {
+      "name": "{'tail': inf}",
+      "passed": true
+    },
+    {
+      "name": "{'tail': 19}",
+      "passed": true
+    },
+    {
+      "name": "{'tail': 101}",
+      "passed": true
+    },
+    {
+      "name": "nonfinite returned log nan",
+      "passed": true
+    },
+    {
+      "name": "nonfinite returned log inf",
+      "passed": true
+    },
+    {
+      "name": "nonfinite returned log -inf",
+      "passed": true
+    },
+    {
+      "name": "finite unrepresented log -800.0",
+      "passed": true
+    },
+    {
+      "name": "finite unrepresented log 800.0",
+      "passed": true
+    }
+  ]
+}

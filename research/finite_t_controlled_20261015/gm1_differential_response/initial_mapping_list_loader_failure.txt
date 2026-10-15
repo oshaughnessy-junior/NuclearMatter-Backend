@@ -1,0 +1,1 @@
+Mapping checker initially assumed all saved arrays used complex real/imag encoding; physical lepton vectors are real JSON lists. TypeError preserved. Correct loader handles both schemas; EOS/kernel/physical data unchanged.

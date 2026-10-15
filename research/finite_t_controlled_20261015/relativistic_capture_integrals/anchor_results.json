@@ -1,0 +1,44 @@
+[
+  {
+    "density_integral": 7.000000000000841e-16,
+    "density_EOS": 7.000000000001131e-16,
+    "density_ratio": 0.9999999999999586,
+    "mean_flux_sigma_cm2": 1.1276180350642878e-39,
+    "chi_s": 2.3663596769197535e-05,
+    "controls": {
+      "radial_order": 8,
+      "target_angle_order": 8,
+      "cm_angle_order": 8
+    },
+    "blocking": "No final baryon/lepton blocking; valid comparison requires dilute final occupations",
+    "method": "FD target average of source-invariant full-current vacuum cross section with Moller flux"
+  },
+  {
+    "density_integral": 7.000000000001513e-16,
+    "density_EOS": 7.000000000001131e-16,
+    "density_ratio": 1.0000000000000546,
+    "mean_flux_sigma_cm2": 1.1276180353119462e-39,
+    "chi_s": 2.3663596774394763e-05,
+    "controls": {
+      "radial_order": 16,
+      "target_angle_order": 16,
+      "cm_angle_order": 16
+    },
+    "blocking": "No final baryon/lepton blocking; valid comparison requires dilute final occupations",
+    "method": "FD target average of source-invariant full-current vacuum cross section with Moller flux"
+  },
+  {
+    "density_integral": 7.000000000000867e-16,
+    "density_EOS": 7.000000000001131e-16,
+    "density_ratio": 0.9999999999999623,
+    "mean_flux_sigma_cm2": 1.1276180353119462e-39,
+    "chi_s": 2.3663596774394763e-05,
+    "controls": {
+      "radial_order": 24,
+      "target_angle_order": 24,
+      "cm_angle_order": 24
+    },
+    "blocking": "No final baryon/lepton blocking; valid comparison requires dilute final occupations",
+    "method": "FD target average of source-invariant full-current vacuum cross section with Moller flux"
+  }
+]

@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "new CM sourcepolynomial amplitude False",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "new CM independenttrace amplitude False",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "new CM boostedenergy conservation False",
+      "error": 1.5124923081286925e-17,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM massshell Falsek",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM massshell Falsepa",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM massshell Falsel",
+      "error": 4.556956494294028e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM massshell Falsepb",
+      "error": 1.3046031297497404e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM absolute crosssection False",
+      "error": 1.6653345369377348e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "new CM invariantMollerflux False",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new original boostedFD blocking KMS False",
+      "error": 4.973799150320701e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "new CM sourcepolynomial amplitude True",
+      "error": 1.4432899320127035e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "new CM independenttrace amplitude True",
+      "error": 2.220446049250313e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "new CM boostedenergy conservation True",
+      "error": 3.634985176141021e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM massshell Truek",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM massshell Truepa",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM massshell Truel",
+      "error": 1.4936435110917123e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM massshell Truepb",
+      "error": 4.973591313508495e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new CM absolute crosssection True",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "new CM invariantMollerflux True",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "new original boostedFD blocking KMS True",
+      "error": 1.5631940186722204e-13,
+      "tolerance": 3e-11,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "anti": false,
+      "amp_events": 2.9029674228173535e-10,
+      "amp_published": 2.902967422817353e-10,
+      "amp_trace": 2.902967422817354e-10,
+      "s": 1188323.0897363944,
+      "Erest": 162.59640022212076,
+      "bathframe_lepton_energy": 154.75805703135197,
+      "CM_lepton_energy": 146.37720783868926,
+      "bathframe_finalbaryon_energy": 944.6389821389354,
+      "flux": 1.032534058072799,
+      "crosssection_dcos_cm2": 6.839724681283855e-40,
+      "log_abs_occupation": -3.5151250174163122,
+      "log_inv_occupation": -26.478087980379225
+    },
+    {
+      "anti": true,
+      "amp_events": 1.0072957440557746e-10,
+      "amp_published": 1.007295744055776e-10,
+      "amp_trace": 1.0072957440557768e-10,
+      "s": 1216002.5977283954,
+      "Erest": 178.86500650706316,
+      "bathframe_lepton_energy": 156.0653907752761,
+      "CM_lepton_energy": 156.1509380099923,
+      "bathframe_finalbaryon_energy": 967.6092675348577,
+      "flux": 0.9835892480362929,
+      "crosssection_dcos_cm2": 2.423901174012119e-40,
+      "log_abs_occupation": -3.6106150860673565,
+      "log_inv_occupation": -108.05505953051195
+    }
+  ]
+}

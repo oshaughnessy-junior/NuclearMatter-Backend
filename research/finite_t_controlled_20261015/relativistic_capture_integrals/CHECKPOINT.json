@@ -1,0 +1,29 @@
+{
+  "source_hashes": {
+    "relativistic_capture_integrals/capture.py": "f511e3c6cfe7c95188877203d901e8b99f97536e89e1df168ea6e17c834f8ffe",
+    "relativistic_capture_integrals/dilute_anchor.py": "d15d48e9b5dd20d4b20b22b82139d87096f2b67a0f5fb82897f4a1dded8956a2",
+    "relativistic_capture_integrals/validate.py": "8804e01dcb1687977089c14e3948459c10335ad0b00631f877dd5065edc815fe",
+    "relativistic_capture_integrals/run_study.py": "94c184811c271be8b8f3ccd3f129e8f4caefe1ef055101c0a77e9656ddd1c742",
+    "relativistic_capture_integrals/RESEARCH_NOTE.md": "827cb53fb714cb641fcbc74935d8df470751029b0cb9cceb9cc2e2948a4dc33c",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "raw_hashes": {
+    "integration_partial.json": "40c19c830be77ccef51a4e5a412c47b95295cc6ac8fa8c0465e0c3213148314c",
+    "anchor_results.json": "480b8d3008948486d3dcdb08b44f520e3c456e16e8c8ef01519e52cdf5c61f6a",
+    "validation_results.json": "989387cd6078e5939ce4a09c34bab472510665e41c786446fc1cb150d2b5ed75",
+    "heldout_controls_partial.json": "5879dc6b63d17167ec25078de27029b1d9990279164173c09b1ce6af063ef3b6",
+    "integration_results.json": "40c19c830be77ccef51a4e5a412c47b95295cc6ac8fa8c0465e0c3213148314c",
+    "control_batch_budget_stop.json": "1261c5a64aea4b1103a06ca1f2dd92bf7b15aa231e102d5ced2075b514a54783",
+    "profile.json": "89b73d1d4f47fd2714838decb0cbc06856907926cc6f83752fe85c2ddb0243f4",
+    "heldout_controls_results.json": "129525a7a305f614b2fd8ea298dcfe96e885f50ce2d326f60519e6418edfdb6e"
+  }
+}
