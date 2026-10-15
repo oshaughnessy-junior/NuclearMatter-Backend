@@ -1,0 +1,50 @@
+{
+  "status": "author_frozen_fine_selected_log_repair_pending_independent_review",
+  "passed_checks": 172,
+  "failed_checks": [
+    {
+      "name": "cold_repair comparison0 gain_s",
+      "error": 9.141736642170883e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "cold_repair comparison1 gain_s",
+      "error": 3.481047973108442e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    }
+  ],
+  "fine_repair_passed": true,
+  "controls_passed": true,
+  "main_report_kept_failed": true,
+  "source_sha256": {
+    "nc_log_gain/log_gain.py": "09f5f0437535f247a4bf0ca2a22298c7da96c80b7727986b98055ccd823ee4ec",
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "review_nc_continuum/overflow_log_evidence.json": "cf119d6660ee75d74d0f8a4f743590aa4f8fd5d470f05edd6380981430ed0172",
+    "review_nc_continuum/refined_results.json": "528ed6241bb335ac6f29b4c480eaf44529fff49f09ecf34937fa70e7928b326a"
+  },
+  "sources_unchanged": true,
+  "files_sha256": {
+    "log_gain.py": "09f5f0437535f247a4bf0ca2a22298c7da96c80b7727986b98055ccd823ee4ec",
+    "controls.json": "6c63106e489ff174b9136a48c3ca7bb2108cd404fe3f91c33c2a700d50bb888f",
+    "initial_refine_syntax_failure.txt": "c64eee5fd916bd7c9f7cabe590bb4d06ab02acf87734c1db66ead499f37aed88",
+    "initial109_results.json": "bf90527548e38a3e10048df61c6a57ad4e74e62004b083090983cf0e60c46a44",
+    "cold_refinement.json": "190d8444735663621325c1db6db76d9ade7638959ae4b8db281365c59ad65a0e",
+    "results.json": "fe3a4b643f4855b581fed8dd77dfc77f96a21f4f89749c50c476cbabaed791bc",
+    "RESEARCH_NOTE.md": "b2692c610b969982fecaec8b64ccd3a0affbade8e1fa38af73068ecca0c80fc1",
+    "initial35_cold_refinement.json": "1c2b62e23a4d8e15b1044817daaa2ecc898a80b4a71dceafacf8640b862679f1",
+    "refine_cold.py": "f6e977dbfb40b789dcbb55e9d3a5595c5a1e4b2febaf37ff57290e3cfd4e1747",
+    "initial_refine_cold_syntax_failure.py": "0150717ac647152d1beb9b1ff98b8e0c4f7b9c671c5f7d941830c98af5e6395f",
+    "check_controls.py": "ed15c960528dbb5d9a317e25e9440aa68873f91da5a5486863bdb7cf90e79baa",
+    "initial_log_gain_before_input_guard.py": "114f7a6968b00617730ea9f20498a76832737585142225e4be738b94bfe6e15c",
+    "study.py": "0248fd235af0ff145b6dbcb06d612395e855b82d7dd4117fa86029f286b1db09"
+  },
+  "runtime_seconds": {
+    "final_main": 10.41706437501125,
+    "final_fine": 13.453321333043277
+  },
+  "scope": "ExactselectedT.08 n.0042 E19.6FD(.4,5) loggainrepair+warmregression; oldAPIoverflowremainsunrepaired"
+}

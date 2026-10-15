@@ -1,0 +1,745 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "independent lab/CM phase volume (939.565, 105.658, 173.0)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "absolute spin2 dilute c-sigma closure (939.565, 105.658, 173.0)",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent lab/CM phase volume (938.272, 0.511, 29.0)",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "absolute spin2 dilute c-sigma closure (938.272, 0.511, 29.0)",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent lab/CM phase volume (700.0, 105.658, 230.0)",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "absolute spin2 dilute c-sigma closure (700.0, 105.658, 230.0)",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "Gaussian original-angle delta (939.0, 0.03)",
+      "error": 1.9306778398231472e-13,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "Gaussian original-angle delta (939.0, 0.01)",
+      "error": 2.5002222514558525e-13,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "Gaussian original-angle delta (939.0, 0.003)",
+      "error": 4.3498538104813633e-13,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "Gaussian original-angle delta (700.0, 0.03)",
+      "error": 2.687849942617504e-13,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "Gaussian original-angle delta (700.0, 0.01)",
+      "error": 8.255618411112664e-13,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "Gaussian original-angle delta (700.0, 0.003)",
+      "error": 2.4207302828926913e-12,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 30.0, -0.8)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 30.0, -0.8)",
+      "error": 7.771561172376096e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 30.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 30.0, 0.21)",
+      "error": 1.532107773982716e-14,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 30.0, 0.21)",
+      "error": 1.2323475573339238e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 30.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 30.0, 0.93)",
+      "error": 1.6209256159527285e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 30.0, 0.93)",
+      "error": 7.105427357601002e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 30.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 140.0, -0.8)",
+      "error": 2.353672812205332e-14,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 140.0, -0.8)",
+      "error": 3.6637359812630166e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 140.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 140.0, 0.21)",
+      "error": 4.440892098500626e-15,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 140.0, 0.21)",
+      "error": 3.635980405647388e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 140.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 140.0, 0.93)",
+      "error": 7.993605777301127e-14,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 140.0, 0.93)",
+      "error": 4.6629367034256575e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 140.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 370.0, -0.8)",
+      "error": 9.547918011776346e-15,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 370.0, -0.8)",
+      "error": 2.1094237467877974e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 370.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 370.0, 0.21)",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 370.0, 0.21)",
+      "error": 2.942091015256665e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 370.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (939.0, 938.0, 370.0, 0.93)",
+      "error": 4.4075854077618715e-14,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (939.0, 938.0, 370.0, 0.93)",
+      "error": 3.4416913763379853e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (939.0, 938.0, 370.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 30.0, -0.8)",
+      "error": 7.359002296425388e-12,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 30.0, -0.8)",
+      "error": 4.851674617611934e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 30.0, -0.8)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 30.0, 0.21)",
+      "error": 2.7713387140693158e-12,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 30.0, 0.21)",
+      "error": 7.274736368856338e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 30.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 30.0, 0.93)",
+      "error": 8.881784197001252e-16,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 30.0, 0.93)",
+      "error": 9.703349235223868e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 30.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 140.0, -0.8)",
+      "error": 3.381739333008227e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 140.0, -0.8)",
+      "error": 5.218048215738236e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 140.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 140.0, 0.21)",
+      "error": 1.2723155862204294e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 140.0, 0.21)",
+      "error": 1.0408340855860843e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 140.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 140.0, 0.93)",
+      "error": 9.012790513907021e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 140.0, 0.93)",
+      "error": 2.0761170560490427e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 140.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 370.0, -0.8)",
+      "error": 4.884981308350689e-14,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 370.0, -0.8)",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 370.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 370.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 370.0, 0.21)",
+      "error": 3.913536161803677e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 370.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (700.0, 810.0, 370.0, 0.93)",
+      "error": 1.2989609388114332e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (700.0, 810.0, 370.0, 0.93)",
+      "error": 1.887379141862766e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (700.0, 810.0, 370.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 30.0, -0.8)",
+      "error": 7.359002296425388e-12,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 30.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 30.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 30.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 30.0, 0.21)",
+      "error": 7.274736368856338e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 30.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 30.0, 0.93)",
+      "error": 1.9609203150139365e-11,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 30.0, 0.93)",
+      "error": 4.851674617611934e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 30.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 140.0, -0.8)",
+      "error": 3.381739333008227e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 140.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 140.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 140.0, 0.21)",
+      "error": 3.8180569816859133e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 140.0, 0.21)",
+      "error": 5.218048215738236e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 140.0, 0.21)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 140.0, 0.93)",
+      "error": 9.012790513907021e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 140.0, 0.93)",
+      "error": 1.0436096431476471e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 140.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 370.0, -0.8)",
+      "error": 1.9317880628477724e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 370.0, -0.8)",
+      "error": 9.769962616701378e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 370.0, -0.8)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 370.0, 0.21)",
+      "error": 1.8207657603852567e-14,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 370.0, 0.21)",
+      "error": 7.854827899222983e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 370.0, 0.21)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "support invariant (810.0, 700.0, 370.0, 0.93)",
+      "error": 1.2800871473928055e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "support angle reconstruction (810.0, 700.0, 370.0, 0.93)",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original energy shell (810.0, 700.0, 370.0, 0.93)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "linear support decision (810.0, 1652.9343267108168)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "linear support decision (810.0, 1352.4008127633956)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "linear support decision (700.0, 1619.9343267108168)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "linear support decision (700.0, 1325.4008127633956)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "KMS total-potential (0.0, 3.7)",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "KMS total-potential (0.0, 1.3)",
+      "error": 0.0,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "KMS total-potential (31.0, 3.7)",
+      "error": 8.881784197001252e-16,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "KMS total-potential (31.0, 1.3)",
+      "error": 0.0,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "heavy trace spin2 100000.0",
+      "error": 1.3032464049045345e-06,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "heavy trace spin2 10000000.0",
+      "error": 1.3032497303555601e-10,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "NR allowed contraction 0.511",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "NR hbar hbarc optical units 0.511",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "NR allowed contraction 105.658",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "NR hbar hbarc optical units 105.658",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "all author source/results unchanged",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "kind": "phase_volume",
+      "ma": 939.565,
+      "mb": 938.272,
+      "ml": 105.658,
+      "Enu": 173.0,
+      "target_p": 0.0,
+      "target_cos": 0.3,
+      "s": 1207871.879225,
+      "CM_phase_volume": 0.00812039141412233,
+      "lab_phase_volume": 0.00812039141412233,
+      "Moller_v": 1.0,
+      "sigma_for_unit_target_averaged_amplitude": 1.2489470844047172e-08,
+      "opacity_per_target_density": 1.248947084404717e-08
+    },
+    {
+      "kind": "phase_volume",
+      "ma": 938.272,
+      "mb": 939.565,
+      "ml": 0.511,
+      "Enu": 29.0,
+      "target_p": 137.0,
+      "target_cos": -0.43,
+      "s": 938767.952582361,
+      "CM_phase_volume": 0.0023725316960076796,
+      "lab_phase_volume": 0.0023725316960076857,
+      "Moller_v": 1.0621268573358345,
+      "sigma_for_unit_target_averaged_amplitude": 2.0308039805868226e-08,
+      "opacity_per_target_density": 2.1569714497657905e-08
+    },
+    {
+      "kind": "phase_volume",
+      "ma": 700.0,
+      "mb": 710.0,
+      "ml": 105.658,
+      "Enu": 230.0,
+      "target_p": 190.0,
+      "target_cos": 0.67,
+      "s": 765092.65562651,
+      "CM_phase_volume": 0.010388566799252092,
+      "lab_phase_volume": 0.010388566799252085,
+      "Moller_v": 0.8244930767780355,
+      "sigma_for_unit_target_averaged_amplitude": 1.8881941387334824e-08,
+      "opacity_per_target_density": 1.5568029949986206e-08
+    },
+    {
+      "kind": "delta_jacobian",
+      "ma": 939.0,
+      "mb": 938.0,
+      "p": 132.0,
+      "q": 74.0,
+      "x": -0.37,
+      "w": -1.9156638871220366,
+      "expected_original_angle_integral": 2.6991032053117986e-08,
+      "gaussian_delta_values": [
+        2.6991032053112774e-08,
+        2.6991032053124735e-08,
+        2.6991032053129725e-08
+      ]
+    },
+    {
+      "kind": "delta_jacobian",
+      "ma": 700.0,
+      "mb": 710.0,
+      "p": 190.0,
+      "q": 60.0,
+      "x": 0.53,
+      "w": 20.24877494502698,
+      "expected_original_angle_integral": 3.023437577038017e-08,
+      "gaussian_delta_values": [
+        3.023437577037205e-08,
+        3.0234375770405134e-08,
+        3.023437577045336e-08
+      ]
+    }
+  ],
+  "source_hashes_before": {
+    "SOURCES.json": "0e7b2e6375e03e8978b3a4fd31a750eae4e476cb0b21528793a994bc5d3095cd",
+    "CHECKPOINT.json": "bb3eb3a2984678266dd78e67f7537b92724051dcc8f4844518cf18e06287bfdb",
+    "RESEARCH_CONTRACT.md": "b0d87b151dc643da11e5f988af41a2b97e7a4339392428f5b295bc1aaf0d2a8f",
+    "results.json": "7c74f68962c0de046f669dc59f63bfc0d6a088fccf713bf621d20446d8df6c4d",
+    "probes.py": "1c4fb91653adb78a89930b3c79294c595c4f2a7e7d161f39712a498e044a5fcd"
+  },
+  "source_hashes_after": {
+    "SOURCES.json": "0e7b2e6375e03e8978b3a4fd31a750eae4e476cb0b21528793a994bc5d3095cd",
+    "CHECKPOINT.json": "bb3eb3a2984678266dd78e67f7537b92724051dcc8f4844518cf18e06287bfdb",
+    "RESEARCH_CONTRACT.md": "b0d87b151dc643da11e5f988af41a2b97e7a4339392428f5b295bc1aaf0d2a8f",
+    "results.json": "7c74f68962c0de046f669dc59f63bfc0d6a088fccf713bf621d20446d8df6c4d",
+    "probes.py": "1c4fb91653adb78a89930b3c79294c595c4f2a7e7d161f39712a498e044a5fcd"
+  },
+  "runtime_seconds": 0.0044925829861313105
+}

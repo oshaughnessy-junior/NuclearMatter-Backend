@@ -1,0 +1,100 @@
+{
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "qualified_checks": 245,
+  "qualified_passes": 245,
+  "coarse_checks": 20,
+  "coarse_failures": 8,
+  "coarse_failed_checks": [
+    {
+      "name": "packet coarse Erad_MeV_fm3_s",
+      "error": 0.00046698277846730435,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "packet coarse Srad_kB_fm3_s",
+      "error": 0.0015197484300640998,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "packet coarse Qbath_MeV_fm3_s",
+      "error": 0.00046698277846730435,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "packet coarse Stotal_kB_fm3_s",
+      "error": 0.0012945359408600091,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "hotcoarse positive gross eventcount",
+      "error": 3.662201258158859e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "coldcoarse positive gross eventcount",
+      "error": 3.647289474262294e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "packetcoarse positive gross eventcount",
+      "error": 5.173591784501941e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "LTEcoarse positive gross eventcount",
+      "error": 3.6044442700555734e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    }
+  ],
+  "preferred_box108": {
+    "hot": [
+      0.0,
+      -0.018361797477633807,
+      -0.006120599159211272,
+      0.018361797477633807,
+      0.003060299579605637,
+      0.05445431608346124,
+      0.06418079095038876
+    ],
+    "cold": [
+      0.0,
+      0.00015432624253119688,
+      0.00010288416168746462,
+      -0.00015432624253119688,
+      2.572104042186613e-05,
+      0.0019693415822995167,
+      0.0018101810851739557
+    ],
+    "packet": [
+      0.0,
+      -0.008584005639799466,
+      0.01577102816713172,
+      0.008584005639799466,
+      0.020063030987031494,
+      0.15276218870968658,
+      0.16559413861957067
+    ],
+    "LTE": [
+      0.0,
+      1.2477377368755195e-19,
+      6.238688684377597e-20,
+      -1.2477377368755195e-19,
+      5.709416864008532e-32,
+      0.013966357013629851,
+      0.013966357013629851
+    ]
+  },
+  "original_bounded_stop_runtime": 114.41865733405575,
+  "LTE_standalone_runtime": 28.875257916981354,
+  "qualification_runtime": 40.36462991591543,
+  "maximum_completed_physical_call_runtime": 17.263017874909565,
+  "scope": "One-helicity fixed freeNR neutron bath, prescribed isotropic radiation, selected finite boxes; no time evolution"
+}

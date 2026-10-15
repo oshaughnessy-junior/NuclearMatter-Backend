@@ -1,0 +1,483 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "new coordinate160 blocked_out_rate_s",
+      "error": 2.3271675875236042e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate160 blocked_transport_rate_s",
+      "error": 3.9455826739143163e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate160 energy_to_bath_MeV_s",
+      "error": 5.588465878947346e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate160 absolute_energy_transfer_MeV_s",
+      "error": 5.585263689322773e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate160 gain_s",
+      "error": 5.115411649825319e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate160 loss_s",
+      "error": 2.3271675031466543e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate160 net_collision_s",
+      "error": 2.506757277309646e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate192 blocked_out_rate_s",
+      "error": 1.4878472009982602e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate192 blocked_transport_rate_s",
+      "error": 2.5136856818264164e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate192 energy_to_bath_MeV_s",
+      "error": 6.547181241600697e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate192 absolute_energy_transfer_MeV_s",
+      "error": 6.544240416239688e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate192 gain_s",
+      "error": 5.1877555584667334e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate192 loss_s",
+      "error": 1.487846112979696e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate192 net_collision_s",
+      "error": 1.5643119022357155e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new independent refinement blocked_out_rate_s",
+      "error": 2.1783828363375335e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new independent refinement blocked_transport_rate_s",
+      "error": 3.6942140124729406e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new independent refinement energy_to_bath_MeV_s",
+      "error": 4.933747432822599e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new independent refinement absolute_energy_transfer_MeV_s",
+      "error": 4.930839325734127e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new independent refinement gain_s",
+      "error": -7.234401966371706e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new independent refinement loss_s",
+      "error": 2.178382858541994e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new independent refinement net_collision_s",
+      "error": 2.3503260515589375e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate cutoff1.5 blocked_out_rate_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "new coordinate cutoff1.5 blocked_transport_rate_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "new coordinate cutoff1.5 energy_to_bath_MeV_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "new coordinate cutoff1.5 absolute_energy_transfer_MeV_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "new coordinate cutoff1.5 gain_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "new coordinate cutoff1.5 loss_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "new coordinate cutoff1.5 net_collision_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "new coordinate warm blocked_out_rate_s",
+      "error": -1.1589640358522502e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate warm blocked_transport_rate_s",
+      "error": -4.196643033083092e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate warm energy_to_bath_MeV_s",
+      "error": -1.2434497875801753e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate warm absolute_energy_transfer_MeV_s",
+      "error": -2.4302782009044677e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate warm gain_s",
+      "error": -1.1376313224786827e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate warm loss_s",
+      "error": -1.1589645909637625e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate warm net_collision_s",
+      "error": -2.55351295663786e-15,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate nearLTE blocked_out_rate_s",
+      "error": -1.1628666918284125e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate nearLTE blocked_transport_rate_s",
+      "error": -4.884981308350689e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate nearLTE energy_to_bath_MeV_s",
+      "error": -2.986499936241671e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate nearLTE absolute_energy_transfer_MeV_s",
+      "error": -2.425837308805967e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate nearLTE gain_s",
+      "error": -1.1628538132413269e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate nearLTE loss_s",
+      "error": -1.1628580320888204e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "new coordinate nearLTE net_collision_s",
+      "error": 2.3476935950839106e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "original overflow still present",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "direct response DOS KMS",
+      "error": -3.410605131648481e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent combined gain log",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "underflow finite log not support zero",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "actualreverse point FDT0.08Ep18.9",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "arbitrary mu LTE point",
+      "error": 1.4210854715202225e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actualreverse point FDT0.08Ep20.3",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "arbitrary mu LTE point",
+      "error": 1.4210854715202225e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actualreverse point FDT0.08000000800000001Ep18.9",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "actualreverse point FDT0.08000000800000001Ep20.3",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "actualreverse point packetT0.4Ep18.9",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "actualreverse point packetT0.4Ep20.3",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "two original coarse gates remain failed",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "details": {
+    "independent_cold": [
+      {
+        "qorder": 160,
+        "eorder": 80,
+        "values": [
+          179082.0997337759,
+          211504.66314618255,
+          328400.60018969176,
+          328594.29815258004,
+          1.8425805365229918e-12,
+          2.5194374949990988e-11,
+          -2.335179441346845e-11
+        ]
+      },
+      {
+        "qorder": 192,
+        "eorder": 96,
+        "values": [
+          179082.06072284715,
+          211504.58501186236,
+          328400.4381652099,
+          328594.1361280912,
+          1.8425805366562914e-12,
+          2.519436946169273e-11,
+          -2.3351788925036664e-11
+        ]
+      }
+    ],
+    "independent_cold_extended": {
+      "cutoff": 177.40964630692025,
+      "qorder": 160,
+      "eorder": 80,
+      "values": [
+        179082.0997337759,
+        211504.66314618255,
+        328400.60018969176,
+        328594.29815258004,
+        1.8425805365229918e-12,
+        2.5194374949990988e-11,
+        -2.335179441346845e-11
+      ]
+    },
+    "independent_warm_regressions": [
+      {
+        "label": "warm",
+        "values": [
+          84986.06065012177,
+          87372.9475530076,
+          -4763.718479139208,
+          53361.86780093604,
+          10320.592251057134,
+          10130.586760643417,
+          190.0054904137465
+        ],
+        "reference": [
+          84986.06074861756,
+          87372.94755301127,
+          -4763.718479139267,
+          53361.867800949,
+          10320.592262798164,
+          10130.586772384408,
+          190.00549041374697
+        ]
+      },
+      {
+        "label": "nearLTE",
+        "values": [
+          84701.08301976827,
+          86990.44761683517,
+          -5842.661608466657,
+          53055.88117707158,
+          10096.797937799472,
+          10096.794455378262,
+          0.003482421168885868
+        ],
+        "reference": [
+          84701.08311826433,
+          86990.44761683942,
+          -5842.661608466831,
+          53055.88117708445,
+          10096.797949540573,
+          10096.7944671194,
+          0.00348242116071021
+        ]
+      }
+    ],
+    "witness": {
+      "log_forward": -2983.0580356613928,
+      "log_reverse": -2265.7997754429816,
+      "log_combined_gain": -2443.558035661393,
+      "point": {
+        "log_forward_kernel": -2983.0580356613928,
+        "log_gain": -2443.558035661393,
+        "log_loss": -3019.5580356613928,
+        "log_blocked_out": -2983.0580356613928,
+        "net_sign": 1,
+        "log_abs_net": -2443.558035661393,
+        "gain": {
+          "sign": 1,
+          "log_abs": -2443.558035661393,
+          "value": null,
+          "representable": false,
+          "reason": "underflow"
+        },
+        "loss": {
+          "sign": 1,
+          "log_abs": -3019.5580356613928,
+          "value": null,
+          "representable": false,
+          "reason": "underflow"
+        },
+        "net": {
+          "sign": 1,
+          "log_abs": -2443.558035661393,
+          "value": null,
+          "representable": false,
+          "reason": "underflow"
+        },
+        "reverse": "direct"
+      }
+    },
+    "preserved_failed_gates": [
+      {
+        "name": "cold_repair comparison0 gain_s",
+        "error": 9.141736642170883e-05,
+        "tolerance": 3e-05,
+        "passed": false
+      },
+      {
+        "name": "cold_repair comparison1 gain_s",
+        "error": 3.481047973108442e-05,
+        "tolerance": 3e-05,
+        "passed": false
+      }
+    ]
+  },
+  "runtime_seconds": 10.752468375023454,
+  "source_sha256": {
+    "review_nc_log_gain/probe.py": "1b2ffbd04b648ae0a1eef21d2ee014d993e2225931394f9e3dd0d2feb63fc6f8",
+    "nc_log_gain/log_gain.py": "09f5f0437535f247a4bf0ca2a22298c7da96c80b7727986b98055ccd823ee4ec",
+    "nc_log_gain/results.json": "fe3a4b643f4855b581fed8dd77dfc77f96a21f4f89749c50c476cbabaed791bc",
+    "nc_log_gain/cold_refinement.json": "190d8444735663621325c1db6db76d9ade7638959ae4b8db281365c59ad65a0e",
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "review_nc_continuum/overflow_log_evidence.json": "cf119d6660ee75d74d0f8a4f743590aa4f8fd5d470f05edd6380981430ed0172"
+  }
+}
