@@ -1,0 +1,416 @@
+{
+  "status": "FAIL",
+  "created_utc": "2026-10-15T12:04:01.729646+00:00",
+  "model": "crossed n->p electron+antinu LOallowedcurrent; common-mass NR dynamical phase space",
+  "constants": {
+    "GF": 1.1663785e-11,
+    "VUD": 0.974,
+    "GA": 1.2723,
+    "HBAR": 6.582119569e-22,
+    "HBARC": 197.3269804,
+    "ME": 0.51099895069,
+    "Q": 1.29333236
+  },
+  "finite_test_state": {
+    "baryons": {
+      "T": 3.0,
+      "mass": 939.0,
+      "offset_a": 1.29333236,
+      "offset_b": 0,
+      "mu_a": -43.53655613705464,
+      "mu_b": -48.988771580414316
+    },
+    "mu_e": 5.0
+  },
+  "prefactor_K": 38161.97401048155,
+  "environment": {
+    "python": "3.13.4",
+    "numpy": "2.3.5",
+    "scipy": "1.15.3"
+  },
+  "sources_sha256": {
+    "check_crossed.py": "0d8b36720b866661470334bccc3ef96a36cb7b6e08ff4c0f58d40d6ea1695dab",
+    "crossed_decay.py": "14f83c20e4803ae0ab99c144963daead341c8c4753bcf09e3019006efe5e1987",
+    "allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+    "free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2"
+  },
+  "checks": [
+    {
+      "name": "KMS_E0.1_M939.0",
+      "error": 7.077671781985373e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.4_M939.0",
+      "error": 7.042977312465837e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.7_M939.0",
+      "error": 1.4016565685892601e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.1_M10000.0",
+      "error": 7.077671781985373e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.4_M10000.0",
+      "error": 7.042977312465837e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.7_M10000.0",
+      "error": 1.4016565685892601e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.1_M100000.0",
+      "error": 1.887379141862766e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.4_M100000.0",
+      "error": 4.034966805122053e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.7_M100000.0",
+      "error": 6.147859998861804e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.1_M10000000.0",
+      "error": 1.887379141862766e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_j_chi_E0.1",
+      "error": 2.018478475918073e-06,
+      "gate": 5e-06,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.4_M10000000.0",
+      "error": 4.822531263215524e-16,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_j_chi_E0.4",
+      "error": 2.155795248759418e-06,
+      "gate": 5e-06,
+      "pass": true
+    },
+    {
+      "name": "KMS_E0.7_M10000000.0",
+      "error": 2.5951463200613034e-15,
+      "gate": 2e-11,
+      "pass": true
+    },
+    {
+      "name": "absolute_static_j_chi_E0.7",
+      "error": 2.3841818586056718e-06,
+      "gate": 5e-06,
+      "pass": true
+    },
+    {
+      "name": "quadrature_refinement_E0.4",
+      "error": 0.0,
+      "gate": 2e-06,
+      "pass": true
+    },
+    {
+      "name": "q_energy_independent_E0.4",
+      "error": 3.3306690738754696e-16,
+      "gate": 2e-06,
+      "pass": true
+    },
+    {
+      "name": "tail_extension_E0.4",
+      "error": 0.0,
+      "gate": 2e-06,
+      "pass": true
+    },
+    {
+      "name": "quadrature_refinement_E1.0",
+      "error": 1.0296962209555005e-06,
+      "gate": 2e-06,
+      "pass": true
+    },
+    {
+      "name": "q_energy_independent_E1.0",
+      "error": 0.0004565774062436079,
+      "gate": 2e-06,
+      "pass": false
+    },
+    {
+      "name": "tail_extension_E1.0",
+      "error": 3.5378265783592155e-07,
+      "gate": 2e-06,
+      "pass": true
+    },
+    {
+      "name": "cold_forbidden_finite_thermal_E0.9",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    },
+    {
+      "name": "combined_antinu_KMS_E0.9",
+      "error": 1.6653345369377348e-15,
+      "gate": 2e-10,
+      "pass": true
+    },
+    {
+      "name": "cold_forbidden_finite_thermal_E1.0",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    },
+    {
+      "name": "combined_antinu_KMS_E1.0",
+      "error": 0.0,
+      "gate": 2e-10,
+      "pass": true
+    },
+    {
+      "name": "cold_forbidden_finite_thermal_E1.2",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    },
+    {
+      "name": "combined_antinu_KMS_E1.2",
+      "error": 3.3306690738754696e-15,
+      "gate": 2e-10,
+      "pass": true
+    },
+    {
+      "name": "heavy_mass_number_energy_moments_warm",
+      "error": 5.526129818633763e-06,
+      "gate": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "outer_nu_refinement_warm",
+      "error": 1.4850454199688556e-10,
+      "gate": 2e-06,
+      "pass": true
+    },
+    {
+      "name": "heavy_mass_number_energy_moments_vacuum_leptons",
+      "error": 2.438955039041346e-07,
+      "gate": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "outer_nu_refinement_vacuum_leptons",
+      "error": 6.581976341735185e-08,
+      "gate": 2e-06,
+      "pass": true
+    },
+    {
+      "name": "electron_antinu_angular_correlation",
+      "error": 6.938893903907228e-18,
+      "gate": 2e-14,
+      "pass": true
+    }
+  ],
+  "spectral_samples": [
+    {
+      "mass_MeV": 939.0,
+      "E_nu_MeV": 0.1,
+      "j_s-1": 0.0006484802406262847,
+      "chi_s-1": 0.0005766447464445459,
+      "static_j_s-1": 0.0006344786208572418,
+      "static_chi_s-1": 0.0005641941581679713
+    },
+    {
+      "mass_MeV": 939.0,
+      "E_nu_MeV": 0.4,
+      "j_s-1": 0.0003052859130323492,
+      "chi_s-1": 0.000300018341012428,
+      "static_j_s-1": 0.00029825330826483944,
+      "static_chi_s-1": 0.0002931070806978366
+    },
+    {
+      "mass_MeV": 939.0,
+      "E_nu_MeV": 0.7,
+      "j_s-1": 7.68260960038184e-05,
+      "chi_s-1": 8.344095252934246e-05,
+      "static_j_s-1": 7.521179636474612e-05,
+      "static_chi_s-1": 8.168765896688875e-05
+    },
+    {
+      "mass_MeV": 10000.0,
+      "E_nu_MeV": 0.1,
+      "j_s-1": 0.0006357624045814701,
+      "chi_s-1": 0.0005653357305610352,
+      "static_j_s-1": 0.0006344786208572418,
+      "static_chi_s-1": 0.0005641941581679713
+    },
+    {
+      "mass_MeV": 10000.0,
+      "E_nu_MeV": 0.4,
+      "j_s-1": 0.0002988978643179576,
+      "chi_s-1": 0.0002937405152242618,
+      "static_j_s-1": 0.00029825330826483944,
+      "static_chi_s-1": 0.0002931070806978366
+    },
+    {
+      "mass_MeV": 10000.0,
+      "E_nu_MeV": 0.7,
+      "j_s-1": 7.538941831221414e-05,
+      "chi_s-1": 8.18805744638065e-05,
+      "static_j_s-1": 7.521179636474612e-05,
+      "static_chi_s-1": 8.168765896688875e-05
+    },
+    {
+      "mass_MeV": 100000.0,
+      "E_nu_MeV": 0.1,
+      "j_s-1": 0.00063460671961299,
+      "chi_s-1": 0.0005643080667651822,
+      "static_j_s-1": 0.0006344786208572418,
+      "static_chi_s-1": 0.0005641941581679713
+    },
+    {
+      "mass_MeV": 100000.0,
+      "E_nu_MeV": 0.4,
+      "j_s-1": 0.00029831762119317663,
+      "chi_s-1": 0.00029317028393533167,
+      "static_j_s-1": 0.00029825330826483944,
+      "static_chi_s-1": 0.0002931070806978366
+    },
+    {
+      "mass_MeV": 100000.0,
+      "E_nu_MeV": 0.7,
+      "j_s-1": 7.522971262821773e-05,
+      "chi_s-1": 8.170711785088233e-05,
+      "static_j_s-1": 7.521179636474612e-05,
+      "static_chi_s-1": 8.168765896688875e-05
+    },
+    {
+      "mass_MeV": 10000000.0,
+      "E_nu_MeV": 0.1,
+      "j_s-1": 0.0006344799015386807,
+      "chi_s-1": 0.0005641952969817358,
+      "static_j_s-1": 0.0006344786208572418,
+      "static_chi_s-1": 0.0005641941581679713
+    },
+    {
+      "mass_MeV": 10000000.0,
+      "E_nu_MeV": 0.4,
+      "j_s-1": 0.0002982539512379036,
+      "chi_s-1": 0.00029310771257668854,
+      "static_j_s-1": 0.00029825330826483944,
+      "static_chi_s-1": 0.0002931070806978366
+    },
+    {
+      "mass_MeV": 10000000.0,
+      "E_nu_MeV": 0.7,
+      "j_s-1": 7.521197568334654e-05,
+      "chi_s-1": 8.168785372512333e-05,
+      "static_j_s-1": 7.521179636474612e-05,
+      "static_chi_s-1": 8.168765896688875e-05
+    },
+    {
+      "mass_MeV": 939.0,
+      "E_nu_MeV": 0.9,
+      "thermal_log_j_s-1": -14.743033800843193,
+      "static_neutron_decay_j_s-1": 0.0,
+      "combined_antinu": {
+        "log_j_s-1": -14.743005188867627,
+        "log_chi_s-1": -14.593743669987521,
+        "positron_capture_log_j_s-1": -109.89975700820904,
+        "neutron_decay_log_j_s-1": -14.743005188867627
+      }
+    },
+    {
+      "mass_MeV": 939.0,
+      "E_nu_MeV": 1.0,
+      "thermal_log_j_s-1": -19.436213532750646,
+      "static_neutron_decay_j_s-1": 0.0,
+      "combined_antinu": {
+        "log_j_s-1": -19.436212856836615,
+        "log_chi_s-1": -19.253618004623174,
+        "positron_capture_log_j_s-1": -84.00571474368556,
+        "neutron_decay_log_j_s-1": -19.436212856836615
+      }
+    },
+    {
+      "mass_MeV": 939.0,
+      "E_nu_MeV": 1.2,
+      "thermal_log_j_s-1": -29.718662193785086,
+      "static_neutron_decay_j_s-1": 0.0,
+      "combined_antinu": {
+        "log_j_s-1": -29.71865264211111,
+        "log_chi_s-1": -29.469391123231,
+        "positron_capture_log_j_s-1": -46.121402636589195,
+        "neutron_decay_log_j_s-1": -29.718652717338536
+      }
+    }
+  ],
+  "moment_samples": [
+    {
+      "label": "warm",
+      "T_MeV": 3.0,
+      "mu_e_MeV": 5.0,
+      "orders": [
+        12,
+        24
+      ],
+      "moments": [
+        [
+          1.6778069682861043e-13,
+          7.926218671814407e-14
+        ],
+        [
+          1.677806968436856e-13,
+          7.926218672991486e-14
+        ]
+      ],
+      "static_moments": [
+        1.677799992311301e-13,
+        7.92617487192018e-14
+      ]
+    },
+    {
+      "label": "vacuum_leptons",
+      "T_MeV": 0.01,
+      "mu_e_MeV": -20.0,
+      "orders": [
+        12,
+        24
+      ],
+      "moments": [
+        [
+          8.444418754149951e-13,
+          4.049651319394941e-13
+        ],
+        [
+          8.444419094743958e-13,
+          4.0496515859420327e-13
+        ]
+      ],
+      "static_moments": [
+        8.444420982736579e-13,
+        4.0496525736340876e-13
+      ],
+      "uncorrected_beta_lifetime_s": 947.3712650026363,
+      "static_uncorrected_beta_lifetime_s": 947.3710531906055
+    }
+  ]
+}

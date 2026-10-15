@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "independent momentum normalization E1.79",
+      "error": 8.955058916626513e-13,
+      "passed": true
+    },
+    {
+      "name": "mapped48to96 refinement E1.79",
+      "error": 8.961720254770248e-13,
+      "passed": true
+    },
+    {
+      "name": "KMS E1.79",
+      "error": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "independent momentum normalization E1.8",
+      "error": 1.1507461650239748e-12,
+      "passed": true
+    },
+    {
+      "name": "mapped48to96 refinement E1.8",
+      "error": 1.1510792319307e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS E1.8",
+      "error": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "independent momentum normalization E1.81",
+      "error": 1.3777867735598193e-13,
+      "passed": true
+    },
+    {
+      "name": "mapped48to96 refinement E1.81",
+      "error": 1.3855583347320994e-13,
+      "passed": true
+    },
+    {
+      "name": "KMS E1.81",
+      "error": 8.881784197001252e-16,
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "E": 1.79,
+      "independent_momentum_chi": 61.85009492411201,
+      "mapped_log_coefficients": [
+        [
+          7.292491086916921,
+          4.124713633583586
+        ],
+        [
+          7.292491086917816,
+          4.1247136335844825
+        ]
+      ]
+    },
+    {
+      "E": 1.8,
+      "independent_momentum_chi": 66.04068849683382,
+      "mapped_log_coefficients": [
+        [
+          7.354715164448185,
+          4.190271044448186
+        ],
+        [
+          7.354715164449337,
+          4.190271044449337
+        ]
+      ]
+    },
+    {
+      "E": 1.81,
+      "independent_momentum_chi": 70.36683373704385,
+      "mapped_log_coefficients": [
+        [
+          7.41483282713283,
+          4.253722040466163
+        ],
+        [
+          7.414832827132968,
+          4.253722040466301
+        ]
+      ]
+    }
+  ],
+  "source_sha256": {
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c"
+  }
+}

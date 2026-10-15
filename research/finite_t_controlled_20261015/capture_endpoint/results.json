@@ -1,0 +1,307 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "reference_nu_n_to_p0.1",
+      "error": 6.661338147750939e-16,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "refinement_nu_n_to_p0.1",
+      "error": 0.0,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "KMS_nu_n_to_p0.1",
+      "error": 0.0,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reference_nu_n_to_p1.0",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "refinement_nu_n_to_p1.0",
+      "error": 0.0,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "KMS_nu_n_to_p1.0",
+      "error": 8.881784197001252e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reference_nu_n_to_p5.0",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "refinement_nu_n_to_p5.0",
+      "error": 0.0,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "KMS_nu_n_to_p5.0",
+      "error": 8.881784197001252e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reference_antinu_p_to_n1.0",
+      "error": 2.4313884239290928e-14,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "refinement_antinu_p_to_n1.0",
+      "error": 1.4210854715202004e-13,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "KMS_antinu_p_to_n1.0",
+      "error": 9.325873406851315e-15,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reference_antinu_p_to_n1.5",
+      "error": 3.3306690738754696e-15,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "refinement_antinu_p_to_n1.5",
+      "error": 0.0,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "KMS_antinu_p_to_n1.5",
+      "error": 1.7763568394002505e-15,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reference_antinu_p_to_n1.8",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "refinement_antinu_p_to_n1.8",
+      "error": 1.1510792319313623e-12,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "KMS_antinu_p_to_n1.8",
+      "error": 4.440892098500626e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reference_antinu_p_to_n2.0",
+      "error": 4.440892098500626e-16,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "refinement_antinu_p_to_n2.0",
+      "error": 0.0,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "KMS_antinu_p_to_n2.0",
+      "error": 1.3322676295501878e-15,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reference_antinu_p_to_n3.0",
+      "error": 8.659739592076221e-15,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "refinement_antinu_p_to_n3.0",
+      "error": 7.771561172376096e-16,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "KMS_antinu_p_to_n3.0",
+      "error": 8.881784197001252e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "fresh_q_Ee_threshold",
+      "error": 1.1507461650239748e-12,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "heavy_static_electron_capture_3.0",
+      "error": 1.8967107067169309e-06,
+      "gate": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy_static_electron_capture_8.0",
+      "error": 3.4363710998963626e-07,
+      "gate": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy_static_electron_capture_20.0",
+      "error": 4.296272197557016e-06,
+      "gate": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy_static_positron_capture_3.0",
+      "error": 2.1533133136575344e-06,
+      "gate": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy_static_positron_capture_8.0",
+      "error": 5.2886217849490436e-08,
+      "gate": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy_static_positron_capture_20.0",
+      "error": 3.884885610538902e-06,
+      "gate": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "invalid_control_{'energy_order': 4.5}",
+      "error": 0.0,
+      "gate": 0.5,
+      "passed": true
+    },
+    {
+      "name": "invalid_control_{'angle_order': True}",
+      "error": 0.0,
+      "gate": 0.5,
+      "passed": true
+    },
+    {
+      "name": "invalid_control_{'tail': 0}",
+      "error": 0.0,
+      "gate": 0.5,
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "channel": "nu_n_to_p",
+      "E_MeV": 0.1,
+      "chi_orders_24_48_96": [
+        34555.77065694184,
+        34555.770655194065,
+        34555.770655194065
+      ],
+      "independent_chi": 34555.77065519409,
+      "original_error24": -1.464672827466984e-11
+    },
+    {
+      "channel": "nu_n_to_p",
+      "E_MeV": 1.0,
+      "chi_orders_24_48_96": [
+        123545.99182101853,
+        123545.99182090441,
+        123545.99182090441
+      ],
+      "independent_chi": 123545.9918209044,
+      "original_error24": -1.60403912374818e-11
+    },
+    {
+      "channel": "nu_n_to_p",
+      "E_MeV": 5.0,
+      "chi_orders_24_48_96": [
+        1989219.2283023184,
+        1989219.2283024243,
+        1989219.2283024243
+      ],
+      "independent_chi": 1989219.2283024248,
+      "original_error24": -5.5289106626332796e-14
+    },
+    {
+      "channel": "antinu_p_to_n",
+      "E_MeV": 1.0,
+      "chi_orders_24_48_96": [
+        2.5827260597216505e-29,
+        2.5827260597217973e-29,
+        2.58272605972143e-29
+      ],
+      "independent_chi": 2.582726059721493e-29,
+      "original_error24": -1.49741330446318e-11
+    },
+    {
+      "channel": "antinu_p_to_n",
+      "E_MeV": 1.5,
+      "chi_orders_24_48_96": [
+        0.5399332301557237,
+        0.5399332301557237,
+        0.5399332301557237
+      ],
+      "independent_chi": 0.5399332301557219,
+      "original_error24": 3.2570166075274187e-07
+    },
+    {
+      "channel": "antinu_p_to_n",
+      "E_MeV": 1.8,
+      "chi_orders_24_48_96": [
+        66.0406943915004,
+        66.04068849675782,
+        66.04068849683384
+      ],
+      "independent_chi": 66.04068849683382,
+      "original_error24": 9.287264551405272e-06
+    },
+    {
+      "channel": "antinu_p_to_n",
+      "E_MeV": 2.0,
+      "chi_orders_24_48_96": [
+        178.2234995341778,
+        178.22349953020048,
+        178.22349953020048
+      ],
+      "independent_chi": 178.2234995302004,
+      "original_error24": 1.1471411514030194e-06
+    },
+    {
+      "channel": "antinu_p_to_n",
+      "E_MeV": 3.0,
+      "chi_orders_24_48_96": [
+        1375.625564479706,
+        1375.6255644805149,
+        1375.6255644805137
+      ],
+      "independent_chi": 1375.6255644805017,
+      "original_error24": 4.036548872932144e-12
+    }
+  ],
+  "fresh_threshold_reference": 66.04068849683382,
+  "scope": "Numerical integration change only; frozen leading allowed current/NR phase space model",
+  "source_sha256": {
+    "capture_endpoint/check_mapped.py": "d1906b77e8f1ba4f46e6bb24bc49f64327bdce783f9adab14c487f55372b6bd8",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "crossed_opacity/probe_frozen_capture.py": "fc9d7cdca2e44da944152437a4bf940f3bdeed71ba40b611e8d8bc36c41d4ee5"
+  }
+}
