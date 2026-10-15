@@ -1,0 +1,780 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "0.12 pinnedactual Yp",
+      "error": 2.4068301924823505e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.12 pinnedactual mu",
+      "error": 1.4102561866426374e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.12 pinnedactual Ye",
+      "error": 4.258238032853381e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.12 pinnedactual Ymu",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.12 pinnedactual Phi",
+      "error": 2.7566686181743224e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.12 pinnedactual total_energy",
+      "error": 5.30433777982385e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.12 pinnedactual total_pressure",
+      "error": 9.365787654086918e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.12 pinnedactual total_mun",
+      "error": 5.889609933525235e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.2 pinnedactual Yp",
+      "error": 4.774228783216421e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.2 pinnedactual mu",
+      "error": 7.871292319544856e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.2 pinnedactual Ye",
+      "error": 2.3053615898195376e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.2 pinnedactual Ymu",
+      "error": 4.628859233707494e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.2 pinnedactual Phi",
+      "error": 1.493716569377014e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.2 pinnedactual total_energy",
+      "error": 8.984055989881737e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.2 pinnedactual total_pressure",
+      "error": 6.638855456049916e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.2 pinnedactual total_mun",
+      "error": 4.512436981290406e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.27808452804707523 pinnedactual Yp",
+      "error": 6.282442014461629e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.27808452804707523 pinnedactual mu",
+      "error": 4.821066832122857e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.27808452804707523 pinnedactual Ye",
+      "error": 1.1109539677083679e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.27808452804707523 pinnedactual Ymu",
+      "error": 2.1541541915904995e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.27808452804707523 pinnedactual Phi",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.27808452804707523 pinnedactual total_energy",
+      "error": 8.76900135686446e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.27808452804707523 pinnedactual total_pressure",
+      "error": 5.909797911518685e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.27808452804707523 pinnedactual total_mun",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.34397893887478437 pinnedactual Yp",
+      "error": 1.6989590780047438e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.34397893887478437 pinnedactual mu",
+      "error": 7.123505645915453e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.34397893887478437 pinnedactual Ye",
+      "error": 2.051864885615435e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.34397893887478437 pinnedactual Ymu",
+      "error": 2.5776136091989356e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.34397893887478437 pinnedactual Phi",
+      "error": 3.4031362604057704e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.34397893887478437 pinnedactual total_energy",
+      "error": 7.937370455348563e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.34397893887478437 pinnedactual total_pressure",
+      "error": 4.383068101881059e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.34397893887478437 pinnedactual total_mun",
+      "error": 2.010892514453963e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.6 pinnedactual Yp",
+      "error": 4.730023573321033e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.6 pinnedactual mu",
+      "error": 8.655544042635851e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.6 pinnedactual Ye",
+      "error": 2.0900030976823912e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.6 pinnedactual Ymu",
+      "error": 2.859527298428311e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.6 pinnedactual Phi",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.6 pinnedactual total_energy",
+      "error": 4.6931473138435776e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.6 pinnedactual total_pressure",
+      "error": 1.5073981165567684e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.6 pinnedactual total_mun",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "nB": 0.12,
+      "pinned_source": {
+        "Yp": 0.03747901328167971,
+        "mu": 100.76789486762274,
+        "Ye": 0.03747901328167972,
+        "Ymu": 0.0,
+        "Phi": 226.82363899183258,
+        "energy": 113.86177699569012,
+        "pressure": 1.9559145031782923,
+        "mu_n": 965.1474291572368
+      },
+      "own_matched_legacy_electron_mass": {
+        "nB": 0.12,
+        "Yp": 0.0374790132816798,
+        "Ye": 0.03747901328167988,
+        "Ymu": 0.0,
+        "mu_lepton": 100.76789486762289,
+        "electron": {
+          "mu": 100.76789486762289,
+          "mass": 0.51099895,
+          "kF_MeV": 100.76659920889162,
+          "density": 0.004497481593801585,
+          "energy": 0.3399056841172328,
+          "pressure": 0.11329606828985174,
+          "susceptibility": 0.00013389970856841226
+        },
+        "muon": {
+          "mu": 100.76789486762289,
+          "mass": 105.6583755,
+          "kF_MeV": 0.0,
+          "density": 0.0,
+          "energy": 0.0,
+          "pressure": 0.0,
+          "susceptibility": 0.0
+        },
+        "nuclear": {
+          "nB": 0.12,
+          "temperature": 0.0,
+          "Yp": 0.0374790132816798,
+          "phi_mev": 226.8236389918332,
+          "omega_mev": 169.259190707904,
+          "rho_mev": -48.298956635055355,
+          "dirac_mass_mev": 712.1763610081669,
+          "density_defined_landau_n_mev": 771.7387601318046,
+          "density_defined_landau_p_mev": 719.2698218992371,
+          "kinetic_mu_n_mev": 771.7387601318046,
+          "kinetic_mu_p_mev": 719.2698218992371,
+          "mu_n_mev": 965.1474291572363,
+          "mu_p_mev": 864.3795342896134,
+          "energy_density": 113.52187131156685,
+          "pressure": 1.8426184348882573,
+          "free_energy_density": 113.52187131156685,
+          "entropy_density": 0.0,
+          "kinetic_energy_density": 89.65522240235758,
+          "scalar_field_energy_density": 12.370740601916353,
+          "vector_field_energy_density": 11.49590830729291,
+          "scalar_density": 0.11444197628020937,
+          "antiparticle_density": 0.0,
+          "max_normalized_equation_residual": 6.143812310751192e-16,
+          "branch": "local GM1 branch continued from cold first scalar upcrossing",
+          "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+        },
+        "nuclear_hessian": [
+          [
+            505.8952017479237,
+            -365.6999070929556
+          ],
+          [
+            -365.6999070929556,
+            1001.9938992380964
+          ]
+        ],
+        "charge_relaxed_hessian": [
+          [
+            505.8952017479237,
+            -365.6999070929556
+          ],
+          [
+            -365.6999070929556,
+            8470.270049287208
+          ]
+        ],
+        "nuclear_eigenvalues": [
+          312.05666713269676,
+          1195.8324338533234
+        ],
+        "charge_relaxed_eigenvalues": [
+          489.13862740045096,
+          8487.026623634682
+        ],
+        "scalar_curvature": 0.11567874340428674,
+        "energy_density": 113.86177699568408,
+        "pressure": 1.955914503178109,
+        "delta_e_MeV": 95.76386633553759,
+        "delta_mu_MeV": 196.5304655444292,
+        "neutrality_residual": 7.632783294297951e-17,
+        "beta_residual_MeV": 0.0
+      },
+      "default_minus_legacy": {
+        "Yp": -2.824129818890242e-15,
+        "mu": 6.821210263296962e-13
+      }
+    },
+    {
+      "nB": 0.2,
+      "pinned_source": {
+        "Yp": 0.08720437438985652,
+        "mu": 144.43223946762237,
+        "Ye": 0.0662176669204888,
+        "Ymu": 0.020986707469367708,
+        "Phi": 342.4952097576601,
+        "energy": 192.66154465879995,
+        "pressure": 8.891342515890937,
+        "mu_n": 1007.7644358734544
+      },
+      "own_matched_legacy_electron_mass": {
+        "nB": 0.2,
+        "Yp": 0.08720437438985648,
+        "Ye": 0.06621766692048896,
+        "Ymu": 0.020986707469367805,
+        "mu_lepton": 144.43223946762248,
+        "electron": {
+          "mu": 144.43223946762248,
+          "mass": 0.51099895,
+          "kF_MeV": 144.43133551174324,
+          "density": 0.013243533384097792,
+          "energy": 1.434603866879236,
+          "pressure": 0.4781893182387649,
+          "susceptibility": 0.000275084687643336
+        },
+        "muon": {
+          "mu": 144.43223946762248,
+          "mass": 105.6583755,
+          "kF_MeV": 98.47324247902901,
+          "density": 0.004197341493873561,
+          "energy": 0.5453824882783554,
+          "pressure": 0.060848943492179106,
+          "susceptibility": 0.00018755265990300077
+        },
+        "nuclear": {
+          "nB": 0.2,
+          "temperature": 0.0,
+          "Yp": 0.08720437438985648,
+          "phi_mev": 342.4952097576596,
+          "omega_mev": 282.09865117984,
+          "rho_mev": -71.84394003374906,
+          "dirac_mass_mev": 596.5047902423404,
+          "density_defined_landau_n_mev": 689.7438146767404,
+          "density_defined_landau_p_mev": 617.1555152428668,
+          "kinetic_mu_n_mev": 689.7438146767404,
+          "kinetic_mu_p_mev": 617.1555152428668,
+          "mu_n_mev": 1007.7644358734549,
+          "mu_p_mev": 863.3321964058324,
+          "energy_density": 190.68155830362505,
+          "pressure": 8.352304254165896,
+          "free_energy_density": 190.68155830362505,
+          "entropy_density": 0.0,
+          "kinetic_energy_density": 129.94089523837837,
+          "scalar_field_energy_density": 29.56511153000978,
+          "vector_field_energy_density": 31.175551535236906,
+          "scalar_density": 0.18393029576005315,
+          "antiparticle_density": 0.0,
+          "max_normalized_equation_residual": 1.7867651802561113e-15,
+          "branch": "local GM1 branch continued from cold first scalar upcrossing",
+          "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+        },
+        "nuclear_hessian": [
+          [
+            835.7556740906389,
+            -47.35359040136839
+          ],
+          [
+            -47.35359040136839,
+            1018.0268609929138
+          ]
+        ],
+        "charge_relaxed_hessian": [
+          [
+            835.7556740906389,
+            -47.35359040136839
+          ],
+          [
+            -47.35359040136839,
+            3179.5471215245007
+          ]
+        ],
+        "nuclear_eigenvalues": [
+          824.1875240968969,
+          1029.5950109866558
+        ],
+        "charge_relaxed_eigenvalues": [
+          834.7993398778708,
+          3180.5034557372687
+        ],
+        "scalar_curvature": 0.1329864282685393,
+        "energy_density": 192.66154465878265,
+        "pressure": 8.89134251589684,
+        "delta_e_MeV": 43.5628319807783,
+        "delta_mu_MeV": 89.52092501349253,
+        "neutrality_residual": 2.7755575615628914e-16,
+        "beta_residual_MeV": 0.0
+      },
+      "default_minus_legacy": {
+        "Yp": -1.790234627208065e-15,
+        "mu": 6.821210263296962e-13
+      }
+    },
+    {
+      "nB": 0.27808452804707523,
+      "pinned_source": {
+        "Yp": 0.13253879089566445,
+        "mu": 176.8594613189945,
+        "Ye": 0.08744243009013863,
+        "Ymu": 0.04509636080552583,
+        "Phi": 436.00427623495807,
+        "energy": 273.55364405874,
+        "pressure": 23.192619405968834,
+        "mu_n": 1067.1081399195084
+      },
+      "own_matched_legacy_electron_mass": {
+        "nB": 0.27808452804707523,
+        "Yp": 0.13253879089566453,
+        "Ye": 0.08744243009013873,
+        "Ymu": 0.045096360805525926,
+        "mu_lepton": 176.8594613189946,
+        "electron": {
+          "mu": 176.8594613189946,
+          "mass": 0.51099895,
+          "kF_MeV": 176.85872310439777,
+          "density": 0.0243163869029056,
+          "energy": 3.225450779013142,
+          "pressure": 1.075132309848663,
+          "susceptibility": 0.0004124730967216436
+        },
+        "muon": {
+          "mu": 176.8594613189946,
+          "mass": 105.6583755,
+          "kF_MeV": 141.8293930916506,
+          "density": 0.012540600211245298,
+          "energy": 1.8982325145005614,
+          "pressure": 0.3196912834771522,
+          "susceptibility": 0.00033077706288839375
+        },
+        "nuclear": {
+          "nB": 0.27808452804707523,
+          "temperature": 0.0,
+          "Yp": 0.13253879089566453,
+          "phi_mev": 436.00427623495807,
+          "omega_mev": 392.23635138031153,
+          "rho_mev": -88.92285251035405,
+          "dirac_mass_mev": 502.995723765042,
+          "density_defined_landau_n_mev": 630.4103622840198,
+          "density_defined_landau_p_mev": 542.4737534753793,
+          "kinetic_mu_n_mev": 630.4103622840198,
+          "kinetic_mu_p_mev": 542.4737534753793,
+          "mu_n_mev": 1067.1081399195084,
+          "mu_p_mev": 890.2486786005138,
+          "energy_density": 268.42996076520234,
+          "pressure": 21.797795812656727,
+          "free_energy_density": 268.42996076520234,
+          "entropy_density": 0.0,
+          "kinetic_energy_density": 159.78413740061012,
+          "scalar_field_energy_density": 49.56508988267031,
+          "vector_field_energy_density": 59.08073348192189,
+          "scalar_density": 0.24441098592285646,
+          "antiparticle_density": 0.0,
+          "max_normalized_equation_residual": 2.7447709327452563e-16,
+          "branch": "local GM1 branch continued from cold first scalar upcrossing",
+          "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+        },
+        "nuclear_hessian": [
+          [
+            1118.452965718958,
+            232.88426152844337
+          ],
+          [
+            232.88426152844337,
+            1200.4551173934258
+          ]
+        ],
+        "charge_relaxed_hessian": [
+          [
+            1118.452965718958,
+            232.88426152844337
+          ],
+          [
+            232.88426152844337,
+            2545.8971426257813
+          ]
+        ],
+        "nuclear_eigenvalues": [
+          922.98804508427,
+          1395.9200380281138
+        ],
+        "charge_relaxed_eigenvalues": [
+          1081.4192358040084,
+          2582.930872540731
+        ],
+        "scalar_curvature": 0.15206050089552103,
+        "energy_density": 273.55364405871603,
+        "pressure": 23.19261940598254,
+        "delta_e_MeV": -1.666080606810283e-10,
+        "delta_mu_MeV": 35.02933001258057,
+        "neutrality_residual": 1.3877787807814457e-16,
+        "beta_residual_MeV": 0.0
+      },
+      "default_minus_legacy": {
+        "Yp": -1.1379786002407855e-15,
+        "mu": 3.410605131648481e-13
+      }
+    },
+    {
+      "nB": 0.34397893887478437,
+      "pinned_source": {
+        "Yp": 0.16336812331127476,
+        "mu": 199.49243282133673,
+        "Ye": 0.10145249747026099,
+        "Ymu": 0.06191562584101388,
+        "Phi": 501.09735118890285,
+        "energy": 345.90008699004045,
+        "pressure": 43.040420992606144,
+        "mu_n": 1130.7102384086056
+      },
+      "own_matched_legacy_electron_mass": {
+        "nB": 0.34397893887478437,
+        "Yp": 0.16336812331127504,
+        "Ye": 0.10145249747026078,
+        "Ymu": 0.06191562584101372,
+        "mu_lepton": 199.4924328213366,
+        "electron": {
+          "mu": 199.4924328213366,
+          "mass": 0.51099895,
+          "kF_MeV": 199.49177835953188,
+          "density": 0.03489752242601705,
+          "energy": 5.22136086478237,
+          "pressure": 1.7404307834124857,
+          "susceptibility": 0.0005247981224999111
+        },
+        "muon": {
+          "mu": 199.4924328213366,
+          "mass": 105.6583755,
+          "kF_MeV": 169.2144746754145,
+          "density": 0.021297671276560078,
+          "energy": 3.5509844418926364,
+          "pressure": 0.6977398144974337,
+          "susceptibility": 0.0004451483632043285
+        },
+        "nuclear": {
+          "nB": 0.34397893887478437,
+          "temperature": 0.0,
+          "Yp": 0.16336812331127504,
+          "phi_mev": 501.097351188903,
+          "omega_mev": 485.1799734542465,
+          "rho_mev": -100.76556637255001,
+          "dirac_mass_mev": 437.90264881109704,
+          "density_defined_landau_n_mev": 595.1474817680838,
+          "density_defined_landau_p_mev": 496.4206153192972,
+          "kinetic_mu_n_mev": 595.1474817680838,
+          "kinetic_mu_p_mev": 496.4206153192972,
+          "mu_n_mev": 1130.7102384086054,
+          "mu_p_mev": 931.2178055872688,
+          "energy_density": 337.127741683338,
+          "pressure": 40.60225039471509,
+          "free_energy_density": 337.127741683338,
+          "entropy_density": 0.0,
+          "kinetic_energy_density": 180.9494647472561,
+          "scalar_field_energy_density": 66.89839283147917,
+          "vector_field_energy_density": 89.27988410460281,
+          "scalar_density": 0.28839101047995636,
+          "antiparticle_density": 0.0,
+          "max_normalized_equation_residual": 2.8241413550631325e-16,
+          "branch": "local GM1 branch continued from cold first scalar upcrossing",
+          "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+        },
+        "nuclear_hessian": [
+          [
+            1322.9959509513983,
+            448.2037906682995
+          ],
+          [
+            448.2037906682995,
+            1388.5037490135903
+          ]
+        ],
+        "charge_relaxed_hessian": [
+          [
+            1322.9959509513983,
+            448.2037906682995
+          ],
+          [
+            448.2037906682995,
+            2419.48846284957
+          ]
+        ],
+        "nuclear_eigenvalues": [
+          906.3508559124451,
+          1805.1488440525434
+        ],
+        "charge_relaxed_eigenvalues": [
+          1163.1033821410847,
+          2579.381031659884
+        ],
+        "scalar_curvature": 0.17197470934111683,
+        "energy_density": 345.900086990013,
+        "pressure": 43.04042099262501,
+        "delta_e_MeV": -30.277303684117356,
+        "delta_mu_MeV": 2.842170943040401e-14,
+        "neutrality_residual": -5.273559366969494e-16,
+        "beta_residual_MeV": 2.842170943040401e-14
+      },
+      "default_minus_legacy": {
+        "Yp": -1.1379786002407855e-15,
+        "mu": 6.821210263296962e-13
+      }
+    },
+    {
+      "nB": 0.6,
+      "pinned_source": {
+        "Yp": 0.23471828573692496,
+        "mu": 262.69137367128496,
+        "Ye": 0.1328016003727797,
+        "Ymu": 0.10191668536414536,
+        "Phi": 656.8803440048962,
+        "energy": 675.8498210949093,
+        "pressure": 202.8777866391768,
+        "mu_n": 1464.5460128901436
+      },
+      "own_matched_legacy_electron_mass": {
+        "nB": 0.6,
+        "Yp": 0.23471828573692485,
+        "Ye": 0.13280160037277997,
+        "Ymu": 0.10191668536414565,
+        "mu_lepton": 262.6913736712852,
+        "electron": {
+          "mu": 262.6913736712852,
+          "mass": 0.51099895,
+          "kF_MeV": 262.69087666186635,
+          "density": 0.07968096022366797,
+          "energy": 15.698655373365707,
+          "pressure": 5.232845523235475,
+          "susceptibility": 0.0009099795774265275
+        },
+        "muon": {
+          "mu": 262.6913736712852,
+          "mass": 105.6583755,
+          "kF_MeV": 240.50585333419184,
+          "density": 0.06115001121848739,
+          "energy": 12.889653735520769,
+          "pressure": 3.1739267114781846,
+          "susceptibility": 0.0008331291043174036
+        },
+        "nuclear": {
+          "nB": 0.6,
+          "temperature": 0.0,
+          "Yp": 0.23471828573692485,
+          "phi_mev": 656.8803440048962,
+          "omega_mev": 846.2959535395198,
+          "rho_mev": -138.51079606327733,
+          "dirac_mass_mev": 282.1196559951039,
+          "density_defined_landau_n_mev": 548.994661318985,
+          "density_defined_landau_p_mev": 424.8140837109773,
+          "kinetic_mu_n_mev": 548.994661318985,
+          "kinetic_mu_p_mev": 424.8140837109773,
+          "mu_n_mev": 1464.5460128901436,
+          "mu_p_mev": 1201.8546392188584,
+          "energy_density": 647.2615119859911,
+          "pressure": 194.47101440449373,
+          "free_energy_density": 647.2615119859911,
+          "entropy_density": 0.0,
+          "kinetic_energy_density": 262.0303594754695,
+          "scalar_field_energy_density": 120.31905202158283,
+          "vector_field_energy_density": 264.91210048893873,
+          "scalar_density": 0.39839996709058306,
+          "antiparticle_density": 0.0,
+          "max_normalized_equation_residual": 2.0816681711721685e-16,
+          "branch": "local GM1 branch continued from cold first scalar upcrossing",
+          "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+        },
+        "nuclear_hessian": [
+          [
+            1739.9363232325054,
+            958.5057190213512
+          ],
+          [
+            958.5057190213512,
+            1887.1226095341588
+          ]
+        ],
+        "charge_relaxed_hessian": [
+          [
+            1739.9363232325054,
+            958.5057190213512
+          ],
+          [
+            958.5057190213512,
+            2460.8103035220793
+          ]
+        ],
+        "nuclear_eigenvalues": [
+          852.2026935763663,
+          2774.856239190298
+        ],
+        "charge_relaxed_eigenvalues": [
+          1076.3381395374138,
+          3124.4084872171707
+        ],
+        "scalar_curvature": 0.28725297413856243,
+        "energy_density": 675.8498210948776,
+        "pressure": 202.8777866392074,
+        "delta_e_MeV": -109.33958583167407,
+        "delta_mu_MeV": -87.15456250399956,
+        "neutrality_residual": 7.771561172376096e-16,
+        "beta_residual_MeV": 0.0
+      },
+      "default_minus_legacy": {
+        "Yp": -5.828670879282072e-16,
+        "mu": 4.547473508864641e-13
+      }
+    }
+  ],
+  "runtime_seconds": 0.7162867921870202,
+  "scope": "Actual pinned selectedcoldfunctions executed with JAX64, not fullNMBpackage/test suite nor externalphysicalvalidation",
+  "sources": {
+    "rmf_reference/source_snapshot/rmft.py": "4a717efc9ae79895876e2529c2d2f0325cd5adfb36251bf3c60ea1eac0cc377c",
+    "rmf_reference/source_snapshot/constants.py": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317",
+    "gm1_beta_thresholds/source_snapshot/leptons.py": "369daa890f3ddc12587ff89e043ce43e60c0bc232057e87e9ba003bef2e1b0f5"
+  },
+  "mass_convention": {
+    "own_default_electron": 0.51099895069,
+    "pinned_electron": 0.51099895,
+    "muon": 105.6583755,
+    "common_bare_nucleon": 939.0
+  }
+}

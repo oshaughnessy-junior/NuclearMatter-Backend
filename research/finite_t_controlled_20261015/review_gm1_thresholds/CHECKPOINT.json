@@ -1,0 +1,29 @@
+{
+  "status": "ACCEPT_SELECTED_COLD_PHYSICS_AND_AST_REGRESSION_WITH_TERMINAL_NEWLINE_QUALIFICATION",
+  "checks": 123,
+  "physics_failures": 0,
+  "strict_source_byte_identity": "Leptons differs by one terminal newline; literal executed functions and complete AST identical; original failed strict check retained",
+  "external_GM1_forward": "OPEN",
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "sha256": {
+    "review_gm1_thresholds/independent_leptons_fetch.json": "438dfbd643411581ecd5f524345a3fa7c0c88161c5729bbb776b42fba3a63715",
+    "review_gm1_thresholds/initial_strict_byte_identity_failure.json": "d500d15d9cf380ae5218a4fc158b84d9ad22c347a623a99a422db3cb58fa47e3",
+    "review_gm1_thresholds/initial_driver_syntax_failure.py": "0fa0a36a3842dca3a7b32888f1cb7b660bf0c37c03d1f77e684246964aa14fc3",
+    "review_gm1_thresholds/results.json": "6c7ecc6d9fd95f41b3f4484a1c12763cbec4a1f2cfae6ecba2f0275a2af97fe4",
+    "review_gm1_thresholds/probe.py": "7ed4a8fc705f43300ed866b53f9a32bdf6100bdf2f99cd2cd76279e25e7af464",
+    "review_gm1_thresholds/initial_strict_byte_identity_driver.py": "a52a656ec7287ccf788aace6f7d57f0ece79f3a6fe8c5459e45fd6295a99d844",
+    "review_gm1_thresholds/REVIEW.md": "fc073937183658932113d1fca1f73b8270455d7790da974be571be8b4eccc3cb",
+    "review_gm1_thresholds/github_refetch.json": "6d7f12f11e2f6db776876329b9432be46e054574e6e1610c7da51e9071a9c257",
+    "gm1_beta_thresholds/cold_beta.py": "040a52a1b1b787445a2adb4c13fa6742de0643d55908af9fe707e5d57b76042d",
+    "gm1_beta_thresholds/study.py": "1f672e4c008ae5a05e3529b5a7549ba0104ab8c1beefc778f556ff61e73025a5",
+    "gm1_beta_thresholds/pinned_compare.py": "47f9186bdb6f258c82eddf5579f9fd521f7d86dd8c3f30ed6de28cdb6560b8e4",
+    "gm1_beta_thresholds/source_snapshot/leptons.py": "369daa890f3ddc12587ff89e043ce43e60c0bc232057e87e9ba003bef2e1b0f5",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_reference/source_snapshot/rmft.py": "4a717efc9ae79895876e2529c2d2f0325cd5adfb36251bf3c60ea1eac0cc377c",
+    "rmf_reference/source_snapshot/constants.py": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317"
+  }
+}

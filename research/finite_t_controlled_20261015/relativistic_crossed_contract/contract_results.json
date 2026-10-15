@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "direct crossed spinors vs scalar pointVA invariant",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "electron neutron decay support",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron proton decay support",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon neutron decay support",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon proton decay support",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "1.7 crossed baryon KMS",
+      "error": 2.220446049250313e-16,
+      "tolerance": 7e-13,
+      "passed": true
+    },
+    {
+      "name": "1.7 electron incoming vs outgoing products",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 7e-13,
+      "passed": true
+    },
+    {
+      "name": "0.23 crossed baryon KMS",
+      "error": 4.440892098500626e-16,
+      "tolerance": 7e-13,
+      "passed": true
+    },
+    {
+      "name": "0.23 electron incoming vs outgoing products",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 7e-13,
+      "passed": true
+    },
+    {
+      "name": "muon vacuum",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "proton beta+",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "noninteger order",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bool order",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nonfinite mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "negative mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bad current",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "endpoint electron spectrum",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nonfinite spectrum",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "negative weak mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nonfinite weak mass",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid inverse flag",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "branch": "neutron decay",
+      "lepton": "electron",
+      "allowed_free_vacuum": true,
+      "Qmax_squared": 1.6727085934232269,
+      "lepton_mass_squared": 0.26111992760628105
+    },
+    {
+      "branch": "proton decay",
+      "lepton": "electron",
+      "allowed_free_vacuum": false,
+      "Qmax_squared": 1.6727085934232269,
+      "lepton_mass_squared": 0.26111992760628105
+    },
+    {
+      "branch": "neutron decay",
+      "lepton": "muon",
+      "allowed_free_vacuum": false,
+      "Qmax_squared": 1.6727085934232269,
+      "lepton_mass_squared": 11163.692313299001
+    },
+    {
+      "branch": "proton decay",
+      "lepton": "muon",
+      "allowed_free_vacuum": false,
+      "Qmax_squared": 1.6727085934232269,
+      "lepton_mass_squared": 11163.692313299001
+    }
+  ]
+}

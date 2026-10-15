@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "independent adaptive direct-El vs frozen electron chi",
+      "error": 2.2900841223361112e-09,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "independent adaptive direct-El vs frozen electron j",
+      "error": 2.2900841223361112e-09,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "independently accumulated coefficients KMS",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "completed_integral": {
+    "chi": 958899.1217295825,
+    "j": 745802386.2662604,
+    "angular_order": 12,
+    "upper": 600.0,
+    "estimated_scaled_adaptive_error": 1.4387869373531587e-12,
+    "edges": [
+      27.76211388019217,
+      67.76072567904059
+    ]
+  },
+  "provenance": "One COMPLETE independent adaptive DIRECT-El integral at12angular; attempted20angular/900MeV refinement was interrupted by108s experiment guard and remains partial. No20order rate or independent tail/refinement result claimed."
+}
