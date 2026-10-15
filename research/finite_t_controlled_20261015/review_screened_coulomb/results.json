@@ -1,0 +1,583 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "independent density gate",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent total mu",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "natural screening susceptibility",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "ks\u00b2 normalization",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "ion neutrality",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "independent positron diagnostic",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "absolute q\u00b2 collision frequency 0.013",
+      "error": -2.9976021664879227e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.013, 0.2)",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.013, 1.0)",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.013, 8.0)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening monotonic 0.013",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "absolute q\u00b2 collision frequency 0.19",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.19, 0.2)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.19, 1.0)",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.19, 8.0)",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening monotonic 0.19",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "absolute q\u00b2 collision frequency 0.83",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.83, 0.2)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.83, 1.0)",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (0.83, 8.0)",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening monotonic 0.83",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "absolute q\u00b2 collision frequency 2.7",
+      "error": -6.661338147750939e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (2.7, 0.2)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (2.7, 1.0)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (2.7, 8.0)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening monotonic 2.7",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "absolute q\u00b2 collision frequency 8.1",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (8.1, 0.2)",
+      "error": -5.551115123125783e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (8.1, 1.0)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening dependence (8.1, 8.0)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "screening monotonic 8.1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Weyl spin-averaged cross section (0.027, -0.62)",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Weyl spin-averaged cross section (0.68, 0.19)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Weyl spin-averaged cross section (3.7, -0.97)",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "oblique dipole exact l1 eigenvalue",
+      "error": -2.853273173286652e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "nested q\u00b2/momentum K0",
+      "error": 3.774758283725532e-15,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "nested q\u00b2/momentum K1",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "nested q\u00b2/momentum K2",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "derived sigma",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "derived kappa_open",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "derived seebeck",
+      "error": -2.3314683517128287e-15,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "negative charge open circuit",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "open circuit heat",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Kelvin Peltier sign",
+      "error": -2.220446049250313e-15,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "Onsager symmetric",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "positive Onsager eigenvalues",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Onsager entropy [0.7, -0.4]",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Onsager entropy [-0.2, 0.9]",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "new density WF 0.017",
+      "error": 0.0009237642605302021,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "new density Drude 0.017",
+      "error": 0.0005940551486793844,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "new density WF 0.0085",
+      "error": 0.00023107445132430904,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "new density Drude 0.0085",
+      "error": 0.000148588701750052,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "new density WF 0.00425",
+      "error": 5.777693054809241e-05,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "new density Drude 0.00425",
+      "error": 3.7151860362794054e-05,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "WF T\u00b2 convergence",
+      "error": 0.00014439418957595818,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "WF T\u00b2 convergence",
+      "error": 3.599583150570851e-05,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "pair rich",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bad Zbool",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero density",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NaN angle",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero screening",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bad transport tail",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NR unscreened Rutherford normalization",
+      "error": 9.113736432198039e-10,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "Born lowvelocity weight finite bounds",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact elastic Pauli cancellation 0.91",
+      "error": 0.0,
+      "tolerance": 3e-16,
+      "passed": true
+    },
+    {
+      "name": "exact elastic Pauli cancellation 0.999999",
+      "error": 0.0,
+      "tolerance": 3e-16,
+      "passed": true
+    },
+    {
+      "name": "exact elastic Pauli cancellation 0.017",
+      "error": 0.0,
+      "tolerance": 3e-16,
+      "passed": true
+    },
+    {
+      "name": "all frozen bytes unchanged",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "fresh_state": {
+        "T": 0.041,
+        "ne_fm3": 5.3e-08,
+        "Z": 2,
+        "mu": 2.346911873506782,
+        "screening_squared": 0.049999853872627065,
+        "ni_natural": 0.20361289759052698,
+        "screening_susceptibility_natural": 0.5452473223780425,
+        "pair_log_ratio": -76.52418198646066,
+        "pair_ratio_representable": true,
+        "pair_ratio": 5.83404844510335e-34,
+        "gas": {
+          "temperature": 0.041,
+          "mass": 0.51099895069,
+          "chemical_potential": 2.346911873506782,
+          "kinetic_chemical_potential": 1.835912922816782,
+          "density": 5.300000000000009e-08,
+          "kinetic_energy_density": 6.856967679862183e-08,
+          "energy_density": 9.565262118519187e-08,
+          "pressure": 2.91263156695464e-08,
+          "entropy_density": 9.575794118989673e-09,
+          "free_energy_density": 9.52600136263133e-08,
+          "cv_fixed_density": 9.563014595970627e-09,
+          "dn_dmu_fixed_temperature": 7.096335356945662e-08,
+          "dn_dtemperature_fixed_mu": 8.351398202177003e-09,
+          "dmu_dtemperature_fixed_density": -0.11768607009254331,
+          "log_antiparticle_density": -93.27715590985494,
+          "antiparticle_density": 3.0920456759048066e-41,
+          "antiparticle_density_representable": true,
+          "log_antiparticle_to_particle_ratio": -76.52418198646066
+        }
+      },
+      "independent_mu": 2.34691187350678,
+      "independent_ks2": 0.04999985387262699
+    },
+    {
+      "nested_K": [
+        793.5806233805656,
+        7.1364671538889555,
+        4.461609620727111
+      ],
+      "derived_sigma": 72.77232473535292,
+      "derived_kappa": 107.25446830892355,
+      "derived_Seebeck": -0.724303798024443,
+      "author": {
+        "K": [
+          793.5806233805687,
+          7.136467153888968,
+          4.4616096207271285
+        ],
+        "sigma": 72.77232473535321,
+        "kappa_open": 107.25446830892398,
+        "kappa_Estar_zero": 108.81974684700313,
+        "seebeck": -0.7243037980244413,
+        "peltier": -0.029696455719002098,
+        "Lorenz_ratio": 35.947218275551705,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 72.67982816843914,
+        "born_Zalpha_over_vF": 0.01495269756243177,
+        "controls": {
+          "tail": 60.0,
+          "rtol": 2e-10,
+          "energy_window": [
+            -44.778363971141026,
+            60.0
+          ]
+        },
+        "estimated_scaled_error": 1.1876353764072852e-10,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.041,
+          "ne_fm3": 5.3e-08,
+          "Z": 2,
+          "mu": 2.346911873506782,
+          "screening_squared": 0.049999853872627065,
+          "ni_natural": 0.20361289759052698,
+          "screening_susceptibility_natural": 0.5452473223780425,
+          "pair_log_ratio": -76.52418198646066,
+          "pair_ratio_representable": true,
+          "pair_ratio": 5.83404844510335e-34,
+          "gas": {
+            "temperature": 0.041,
+            "mass": 0.51099895069,
+            "chemical_potential": 2.346911873506782,
+            "kinetic_chemical_potential": 1.835912922816782,
+            "density": 5.300000000000009e-08,
+            "kinetic_energy_density": 6.856967679862183e-08,
+            "energy_density": 9.565262118519187e-08,
+            "pressure": 2.91263156695464e-08,
+            "entropy_density": 9.575794118989673e-09,
+            "free_energy_density": 9.52600136263133e-08,
+            "cv_fixed_density": 9.563014595970627e-09,
+            "dn_dmu_fixed_temperature": 7.096335356945662e-08,
+            "dn_dtemperature_fixed_mu": 8.351398202177003e-09,
+            "dmu_dtemperature_fixed_density": -0.11768607009254331,
+            "log_antiparticle_density": -93.27715590985494,
+            "antiparticle_density": 3.0920456759048066e-41,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -76.52418198646066
+          }
+        }
+      }
+    },
+    {
+      "degenerate": {
+        "T_over_TF": 0.017,
+        "WF_error": 0.0009237642605302021,
+        "Drude_error": 0.0005940551486793844,
+        "born_Zalpha_over_vF": 0.007606896117395568
+      }
+    },
+    {
+      "degenerate": {
+        "T_over_TF": 0.0085,
+        "WF_error": 0.00023107445132430904,
+        "Drude_error": 0.000148588701750052,
+        "born_Zalpha_over_vF": 0.007606896117395568
+      }
+    },
+    {
+      "degenerate": {
+        "T_over_TF": 0.00425,
+        "WF_error": 5.777693054809241e-05,
+        "Drude_error": 3.7151860362794054e-05,
+        "born_Zalpha_over_vF": 0.007606896117395568
+      }
+    },
+    {
+      "Born_diagnostic": {
+        "p_below_which_Zalpha_over_v_exceeds_one": 0.007458673422669089,
+        "K0_weight_fraction_in_that_region": 2.4777345117259586e-31,
+        "born_Zalpha_over_vF": 0.01495269756243177,
+        "NOT_a_nonBorn_error_bound": true
+      }
+    }
+  ],
+  "initial_hashes": {
+    "screened_coulomb_transport/SOURCES.json": "b09227870b7456a96765a87c3bd3c93feb29f5ffc0019163a893ff5385a1a667",
+    "screened_coulomb_transport/check_physics.py": "414f09272b00cbe5360ddc75c90208060d0b0472f78d9d8e054fb9391701d5e4",
+    "screened_coulomb_transport/physics_results.json": "f4cb06b4269ec7de9f4fe978dc48ca26764ba822057f9cf6eebf8e9911cb4f3f",
+    "screened_coulomb_transport/CHECKPOINT.json": "5a3c3da6abed6e5385d0cbc501b7894f911531c4f66e34ef81f52b7d9447e2b3",
+    "screened_coulomb_transport/lorentz.py": "15f4c1b5604aeef2dd89aa2991c2fe48a08326ecd1878444969d95cae5f513ae",
+    "screened_coulomb_transport/results.json": "87579df32ddbe6b57e153d9b761593838e83bcc01c6618164b42c74567a03093",
+    "screened_coulomb_transport/RESEARCH_NOTE.md": "abfa9c3a0ff173879e2085d6bd411b2804fb0eb79a8c4ba71fad010913b2962c",
+    "screened_coulomb_transport/validate.py": "082443d66851d7796718e0db7eeac1cf139496e9b48a1d6be3ef0a999e414d60",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "final_hashes": {
+    "screened_coulomb_transport/SOURCES.json": "b09227870b7456a96765a87c3bd3c93feb29f5ffc0019163a893ff5385a1a667",
+    "screened_coulomb_transport/check_physics.py": "414f09272b00cbe5360ddc75c90208060d0b0472f78d9d8e054fb9391701d5e4",
+    "screened_coulomb_transport/physics_results.json": "f4cb06b4269ec7de9f4fe978dc48ca26764ba822057f9cf6eebf8e9911cb4f3f",
+    "screened_coulomb_transport/CHECKPOINT.json": "5a3c3da6abed6e5385d0cbc501b7894f911531c4f66e34ef81f52b7d9447e2b3",
+    "screened_coulomb_transport/lorentz.py": "15f4c1b5604aeef2dd89aa2991c2fe48a08326ecd1878444969d95cae5f513ae",
+    "screened_coulomb_transport/results.json": "87579df32ddbe6b57e153d9b761593838e83bcc01c6618164b42c74567a03093",
+    "screened_coulomb_transport/RESEARCH_NOTE.md": "abfa9c3a0ff173879e2085d6bd411b2804fb0eb79a8c4ba71fad010913b2962c",
+    "screened_coulomb_transport/validate.py": "082443d66851d7796718e0db7eeac1cf139496e9b48a1d6be3ef0a999e414d60",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "runtime_seconds": 0.09445279208011925
+}

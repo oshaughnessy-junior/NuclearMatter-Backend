@@ -1,0 +1,18 @@
+{
+  "status": "frozen selected static Born/Lorentz reference; independent review pending",
+  "checks": 129,
+  "source_sha256": "15f4c1b5604aeef2dd89aa2991c2fe48a08326ecd1878444969d95cae5f513ae",
+  "files": {
+    "SOURCES.json": "b09227870b7456a96765a87c3bd3c93feb29f5ffc0019163a893ff5385a1a667",
+    "check_physics.py": "414f09272b00cbe5360ddc75c90208060d0b0472f78d9d8e054fb9391701d5e4",
+    "physics_results.json": "f4cb06b4269ec7de9f4fe978dc48ca26764ba822057f9cf6eebf8e9911cb4f3f",
+    "lorentz.py": "15f4c1b5604aeef2dd89aa2991c2fe48a08326ecd1878444969d95cae5f513ae",
+    "results.json": "87579df32ddbe6b57e153d9b761593838e83bcc01c6618164b42c74567a03093",
+    "RESEARCH_NOTE.md": "abfa9c3a0ff173879e2085d6bd411b2804fb0eb79a8c4ba71fad010913b2962c",
+    "validate.py": "082443d66851d7796718e0db7eeac1cf139496e9b48a1d6be3ef0a999e414d60"
+  },
+  "upstream_sha256": {
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  }
+}
