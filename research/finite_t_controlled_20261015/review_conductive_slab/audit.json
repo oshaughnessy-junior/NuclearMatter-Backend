@@ -1,0 +1,259 @@
+{
+  "checks": [
+    {
+      "name": "frozen pilot.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen thermal_profiles.png",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen figure_provenance.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen thermal_profiles.pdf",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_slab.py.txt",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_validate.py.txt",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen make_figure.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_entropy_gate_failure.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen results.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen RESEARCH_NOTE.md",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen validate.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen pilot.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen slab.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen screened_coulomb_transport/lorentz.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen relativistic_free_eos/free_baryons.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen thermodynamics/lepton_reference.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "independent diffusivity SI",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "independent time SI",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "independent mfp SI",
+      "error": 2.2318813464039522e-10,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "independent Kn",
+      "error": 2.2318813464039522e-10,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "fixed external ion density",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "actual Cv heldout 0.96",
+      "error": 1.3746781490908688e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "fixed-density first law du=Tds 0.96",
+      "error": 1.6504442257314622e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "open circuit thermoelectric covariance 0.96",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "pair-free heldout domain 0.96",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "actual Cv heldout 1.037",
+      "error": 7.094813625485585e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "fixed-density first law du=Tds 1.037",
+      "error": 9.730705130550632e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "open circuit thermoelectric covariance 1.037",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "pair-free heldout domain 1.037",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "saved endpoint actual EOS energy isolated",
+      "error": -5.204170427930421e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "saved endpoint actual EOS entropy isolated",
+      "error": 6.071532165918825e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "saved independent boundary energy isolated",
+      "error": -6.750849879111342e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "saved physical entropy total isolated",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "saved endpoint actual EOS energy reservoir",
+      "error": -3.2526065174565133e-19,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "saved endpoint actual EOS entropy reservoir",
+      "error": -1.4094628242311558e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "saved independent boundary energy reservoir",
+      "error": -2.113118707791628e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "saved physical entropy total reservoir",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "figure references exact final raw results",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "isolated",
+      "material_energy": 0.0035855582406310316,
+      "material_entropy_change": 0.0011661374132883946,
+      "boundary_entropy": 0.0,
+      "total_entropy": 0.0011661374132883946,
+      "independent_face_discrepancy": -1.8294007784825164e-06
+    },
+    {
+      "label": "reservoir",
+      "material_energy": 0.0009721933340890564,
+      "material_entropy_change": 0.0004454311722597113,
+      "boundary_entropy": -0.0009708736378574189,
+      "total_entropy": 0.0014163048101171302,
+      "independent_face_discrepancy": -1.338927370086204e-05
+    },
+    {
+      "SI_heat_capacity_J_m3_K": 132031665389122.5,
+      "SI_conductivity_W_m_K": 11401091720383.043,
+      "SI_diffusivity": 0.08635119224454112,
+      "SI_diffusion_time": 1.158061601706741e-07,
+      "Fermi_velocity_m_s": 292614928.4440446,
+      "Fermi_collision_time_s": 3.0096235021827795e-18
+    }
+  ],
+  "all_pass": true
+}

@@ -1,0 +1,42 @@
+{
+  "status": "FROZEN author selected-coefficient pilot; independent review pending",
+  "passed_selected_checks": 124,
+  "preserved_coarse_failures": 6,
+  "original_syntax_driver_failure": "initial_isolation_syntax_failure.txt",
+  "source_sha256": "6291c802fe8e4b86572c2c7582df28dd9518980500ef67b2d7dec99dc3eeb4e6",
+  "files": {
+    "RESEARCH_NOTE.md": "a558035af743bc6bb19280b3cff1ac958fab40fddf4ee0ccf2d74951465e720a",
+    "check_physics.py": "c31e3ab1ad62508d044484cf7d6497b404915216409fda18fb8bb4df1beb70c9",
+    "initial_coarse_results.json": "8a259770e21c3e1073865b9c75ac316ac19da5a8cc36dde1646a96c8d46fe4a8",
+    "initial_isolate_controls.py.txt": "32b2a71d0eee75fc4bfcb0c17c5f80dfd665242dcf0e83863cdeb299434c76db",
+    "initial_isolation_syntax_failure.txt": "e608e76f095a7a4290ab7b58dbcb15015190ab0b73f35ca1a8edc6ad14db4664",
+    "isolate_controls.py": "2b7935d6a510a14e82b4b87992855cf39edb5ffc32e8996a7c8874dc0efa856d",
+    "isolated_controls.json": "d7121c322e8cdb667efc3cdb007775428e79028616ab501266ec678c7d08d58a",
+    "pc_kernel.py": "6291c802fe8e4b86572c2c7582df28dd9518980500ef67b2d7dec99dc3eeb4e6",
+    "physics_checks.json": "81890b63d68e1d448a98043627f41ca2a0292b9f45e61262d563e65e50cbfceb",
+    "refine.py": "f9f4f4260e6683d361dee374937d3bea896746d895f7b4e6a5722e6fab946f07",
+    "refinement.json": "828b06e48574cc9d044562faf0fc04dfbcd370a7dfb9710a78ff86f2285cfbc4",
+    "results.json": "8a259770e21c3e1073865b9c75ac316ac19da5a8cc36dde1646a96c8d46fe4a8",
+    "study.py": "f08fad84a8a0c40e4b99a6c55bb595d117b1f534dd7085c61fcad0f6e16c1b49",
+    "vacuum_anchor.json": "a2fac3a77e95140d702998bc8328553c0b2108a214dceb06a65ec421b1961458",
+    "vacuum_anchor.py": "69d73093394ad92ead830bbeb345d969727f7fedce5acf4d902c4ebb9458c5e2"
+  },
+  "upstream": {
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e"
+  },
+  "accepted_author_scope": "named free positron capture/inverse at T2 nB1e-7 Ye.3 Eanti5 only; two selected differential witnesses and moving support/vacuum anchors",
+  "unqualified": [
+    "independent review pending",
+    "total neutrino number/energy moments",
+    "combined neutron decay+positron capture in same bath",
+    "material source feedback/entropy evolution",
+    "broad cold/degenerate/high-q domain"
+  ]
+}

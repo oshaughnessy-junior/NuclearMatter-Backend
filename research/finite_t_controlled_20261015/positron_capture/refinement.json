@@ -1,0 +1,261 @@
+{
+  "phase": "complete",
+  "checks": [
+    {
+      "name": "outer16vs20 j",
+      "error": -1.4593752570846164e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent CM vs response20 j",
+      "error": 1.2087583001196833e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer16vs20 chi",
+      "error": -1.4593752570846164e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent CM vs response20 chi",
+      "error": 1.2087582512698702e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "inner_angle_tail j",
+      "error": -4.72123928840773e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "final independent absolute j",
+      "error": 7.36634313547313e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "inner_angle_tail chi",
+      "error": -4.72123928840773e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "final independent absolute chi",
+      "error": 7.366342646974999e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "direct KMS",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "response16",
+      "result": {
+        "j": {
+          "value": 0.33022155270767556,
+          "log": -1.1079914779494242,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.9874064086398289,
+          "log": -0.012673562759327517,
+          "representable": true,
+          "reason": null
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "Enu": 5.0,
+        "antinu_equilibrium_mu": 2.8093641696198066,
+        "log_kms_expected": -1.0953179151900967,
+        "log_kms_actual": -1.0953179151900967,
+        "controls": {
+          "lepton_order": 16,
+          "angle_order": 12,
+          "energy_order": 20,
+          "phi_order": 4,
+          "tail": 50.0,
+          "outer_tail": 24.0
+        },
+        "upper_Epositron": 67.70666763999998,
+        "panels_Epositron": [
+          0.51099895069,
+          1.7066676399999778,
+          1.8255366679917362,
+          3.706667639999978,
+          3.825536667991736,
+          5.706667639999978,
+          7.706667639999979,
+          7.825536667991736,
+          11.706667639999978,
+          15.825536667991736,
+          19.706667639999974,
+          67.70666763999998
+        ],
+        "max_reciprocal_vertex_error": 0,
+        "calls": 2112,
+        "runtime": 6.055240167072043,
+        "units": "j,chi s^-1 for ONE antinue helicity; relaxation=j+chi; DOS E\u03bd\u00b2/(2\u03c0\u00b2hc\u00b3)",
+        "channel": "n+e+ -> p+antinue and antinue+p -> n+e+ ONLY",
+        "current": {
+          "gv": 1.0,
+          "ga": 1.2723,
+          "xi": 3.706,
+          "vector_mass": 840.0,
+          "axial_mass": 1000.0,
+          "pion_mass": 139.57,
+          "weak_magnetism": true,
+          "pseudoscalar": true,
+          "q2_dependence": true
+        }
+      }
+    },
+    {
+      "label": "response20",
+      "result": {
+        "j": {
+          "value": 0.3302220346255422,
+          "log": -1.1079900185731022,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.9874078496384133,
+          "log": -0.012672103383005506,
+          "representable": true,
+          "reason": null
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "Enu": 5.0,
+        "antinu_equilibrium_mu": 2.8093641696198066,
+        "log_kms_expected": -1.0953179151900967,
+        "log_kms_actual": -1.0953179151900967,
+        "controls": {
+          "lepton_order": 20,
+          "angle_order": 12,
+          "energy_order": 20,
+          "phi_order": 4,
+          "tail": 50.0,
+          "outer_tail": 24.0
+        },
+        "upper_Epositron": 67.70666763999998,
+        "panels_Epositron": [
+          0.51099895069,
+          1.7066676399999778,
+          1.8255366679917362,
+          3.706667639999978,
+          3.825536667991736,
+          5.706667639999978,
+          7.706667639999979,
+          7.825536667991736,
+          11.706667639999978,
+          15.825536667991736,
+          19.706667639999974,
+          67.70666763999998
+        ],
+        "max_reciprocal_vertex_error": 0,
+        "calls": 2640,
+        "runtime": 7.45802104100585,
+        "units": "j,chi s^-1 for ONE antinue helicity; relaxation=j+chi; DOS E\u03bd\u00b2/(2\u03c0\u00b2hc\u00b3)",
+        "channel": "n+e+ -> p+antinue and antinue+p -> n+e+ ONLY",
+        "current": {
+          "gv": 1.0,
+          "ga": 1.2723,
+          "xi": 3.706,
+          "vector_mass": 840.0,
+          "axial_mass": 1000.0,
+          "pion_mass": 139.57,
+          "weak_magnetism": true,
+          "pseudoscalar": true,
+          "q2_dependence": true
+        }
+      }
+    },
+    {
+      "label": "inner_angle_tail_refinement",
+      "result": {
+        "j": {
+          "value": 0.3302220190349698,
+          "log": -1.1079900657854962,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.987407803020526,
+          "log": -0.0126721505953995,
+          "representable": true,
+          "reason": null
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "Enu": 5.0,
+        "antinu_equilibrium_mu": 2.8093641696198066,
+        "log_kms_expected": -1.0953179151900967,
+        "log_kms_actual": -1.0953179151900967,
+        "controls": {
+          "lepton_order": 20,
+          "angle_order": 16,
+          "energy_order": 28,
+          "phi_order": 8,
+          "tail": 70.0,
+          "outer_tail": 32.0
+        },
+        "upper_Epositron": 83.70666763999998,
+        "panels_Epositron": [
+          0.51099895069,
+          1.7066676399999778,
+          1.8255366679917362,
+          3.706667639999978,
+          3.825536667991736,
+          5.706667639999978,
+          7.706667639999979,
+          7.825536667991736,
+          11.706667639999978,
+          15.825536667991736,
+          19.706667639999974,
+          83.70666763999998
+        ],
+        "max_reciprocal_vertex_error": 0,
+        "calls": 3520,
+        "runtime": 24.09453145810403,
+        "units": "j,chi s^-1 for ONE antinue helicity; relaxation=j+chi; DOS E\u03bd\u00b2/(2\u03c0\u00b2hc\u00b3)",
+        "channel": "n+e+ -> p+antinue and antinue+p -> n+e+ ONLY",
+        "current": {
+          "gv": 1.0,
+          "ga": 1.2723,
+          "xi": 3.706,
+          "vector_mass": 840.0,
+          "axial_mass": 1000.0,
+          "pion_mass": 139.57,
+          "weak_magnetism": true,
+          "pseudoscalar": true,
+          "q2_dependence": true
+        }
+      }
+    }
+  ],
+  "all_pass": true,
+  "initial_failed_controls": "initial_coarse_results.json"
+}

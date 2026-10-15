@@ -1,0 +1,79 @@
+"""Analytic diffusion, actual nonlinear energy ledgers and steady-flux oracle."""
+from pathlib import Path
+import sys,json,time,math
+import numpy as np
+from scipy.integrate import quad
+from scipy.optimize import brentq
+sys.dont_write_bytecode=True
+from slab import *
+H=Path(__file__).parent;start=time.monotonic();checks=[];rows=[]
+def gate(n,e,t):checks.append(dict(name=n,error=float(e),tolerance=t,passed=bool(math.isfinite(e)and abs(e)<=t)))
+def save(phase):
+ (H/'results.json').write_text(json.dumps(dict(phase=phase,passed=phase=='complete'and all(c['passed']for c in checks),checks=checks,rows=rows,runtime_seconds=time.monotonic()-start),indent=2)+'\n')
+# Constant-coefficient finite-volume sine mode, true imposed coefficients1.
+def linear(N,steps,duration=.03,A=.001):
+ x=(np.arange(N)+.5)/N;mode=np.sin(math.pi*x);theta=A*mode;dx=1/N;dt=duration/steps
+ if dt/dx**2>.45:raise ValueError('linear diffusion unstable')
+ for _ in range(steps):
+  q=np.zeros(N+1);q[1:-1]=-np.diff(theta)/dx;q[0]=-theta[0]/(dx/2);q[-1]=theta[-1]/(dx/2);theta+=dt*(q[:-1]-q[1:])/dx
+ amp=float(theta@mode/(mode@mode));lam=4*math.sin(math.pi/(2*N))**2/dx**2
+ return dict(N=N,steps=steps,duration=duration,amplitude=amp,analytic_continuum=A*math.exp(-math.pi**2*duration),analytic_discrete=A*(1-lam*dt)**steps,analytic_semidiscrete=A*math.exp(-lam*duration),shape_error=float(np.max(abs(theta-amp*mode))),CFL=dt/dx**2)
+spatial=[]
+for N in[8,16,32]:
+ r=linear(N,math.ceil(.03*N*N/.05));rows.append(dict(linear=r));spatial.append(abs(r['amplitude']/r['analytic_continuum']-1));gate('sine discrete amplitude N'+str(N),r['amplitude']/r['analytic_discrete']-1,2e-12);gate('sine mode shape N'+str(N),r['shape_error'],3e-16)
+for a,b in zip(spatial[:-1],spatial[1:]):gate('sine spatial second order',b/a-.25,.003)
+temporal=[]
+for steps in[64,128,256]:
+ r=linear(16,steps);rows.append(dict(linear_time=r));temporal.append(abs(r['amplitude']/r['analytic_semidiscrete']-1))
+for a,b in zip(temporal[:-1],temporal[1:]):gate('sine time first order',b/a-.5,.003)
+save('constant-coefficient analytic gate complete')
+p=Physics();ref=p.thermo(p.T0);scales=p.scales();rows.append(dict(reference_state=ref.asdict(),reference_transport=p.transport(p.T0),scales=scales,source_fingerprint=p.fingerprint))
+gate('hbar c unit conversion',scales['hbar_c_consistency_relative'],1e-8);gate('selected Knudsen small',float(scales['Knudsen_Fermi']>1e-3),0.)
+for h in[.001,.0005]:
+ Uplus=p.thermo(p.T0*(1+h)).gas['energy_density'];Uminus=p.thermo(p.T0*(1-h)).gas['energy_density'];cv=(Uplus-Uminus)/(2*p.T0*h);gate('matched Cv energy derivative '+str(h),cv/p.cv0-1,2e-6)
+# Same spatial grid time-halving; initial and conserved EOS energy tested separately.
+for label,res in [('isolated',None),('reservoir',(1.08,.92))]:
+ runs=[]
+ for steps in[16,32,64]:
+  x=(np.arange(8)+.5)/8;theta=1+.12*np.cos(math.pi*x)if res is None else np.ones(8)
+  r=evolve(p,theta,.02,steps,reservoirs=res);runs.append(r);rows.append(dict(label=label,result=r));save(label+' checkpoint '+str(steps))
+  energy_errors=[];entropyproduction=[]
+  for item in r['history']:
+   energy_errors.append(item['material_energy']-r['initial_energy']-item['boundary_energy_in']+item['boundary_energy_out'])
+   entropyproduction.append(item['entropy']-r['initial_entropy']-item['boundary_entropy'])
+  gate(label+' actual EOS integrated energy ledger '+str(steps),max(map(abs,energy_errors)),3e-10)
+  gate(label+' nonnegative actual entropy production '+str(steps),min(0.,min(entropyproduction)),1e-12)
+  gate(label+' EOS inversion residual '+str(steps),r['max_inversion_residual'],5e-11)
+  last=r['history'][-1];actual=last['entropy']-r['initial_entropy']-last['boundary_entropy'];face=last['face_entropy_production_integral'];r['entropy_production_discrepancy']=actual-face
+  gate(label+' bounded maximum principle '+str(steps),float(min(r['theta'])<min(list(theta)+(list(res)if res else[]))-1e-8 or max(r['theta'])>max(list(theta)+(list(res)if res else[]))+1e-8),0.)
+ diffs=[float(np.max(abs(np.array(runs[i]['theta'])-runs[i+1]['theta'])))for i in[0,1]]
+ gate(label+' nonlinear temporal order',diffs[1]/diffs[0]-.5,.03)
+ ent=[abs(r['entropy_production_discrepancy'])for r in runs];gate(label+' entropy quadrature temporal order',ent[2]/ent[1]-.5,.03)
+ rows.append(dict(label=label+'_refinement',time_differences=diffs,entropy_face_discrepancies=ent))
+# Actual conductivity integral defines independent continuum steady state:
+# G(theta)=int_thetaR^theta k(t)dt, G(theta(x))=G(thetaL)*(1-x).
+left,right=1.08,.92
+G=lambda theta:quad(lambda t:p.k(t),right,theta,epsabs=2e-12,epsrel=2e-10)[0]
+flux=G(left);steady_errors=[]
+for N in[4,8]:
+ x=(np.arange(N)+.5)/N;theta=np.array([brentq(lambda t:G(t)-flux*(1-xx),right,left,xtol=2e-12)for xx in x]);allT=np.r_[left,theta,right];positions=np.r_[0.,x,1.];kk=np.array([p.k(t)for t in allT]);faces=-(2*kk[:-1]*kk[1:]/(kk[:-1]+kk[1:]))*np.diff(allT)/np.diff(positions);err=float(np.max(abs(faces/flux-1)));steady_errors.append(err)
+ rows.append(dict(steady=dict(N=N,continuum_flux_from_integral=flux,theta=theta.tolist(),FV_fluxes=faces.tolist(),max_relative_flux_error=err)))
+ gate('independent steady flux N'+str(N),err,.003)
+ save('steady flux checkpoint '+str(N))
+gate('steady spatial convergence',steady_errors[1]/steady_errors[0]-.25,.04)
+# Uniform equilibrium and exact-state cache fingerprint contract, no interpolation.
+r=evolve(p,np.ones(4),.001,4);gate('uniform exact equilibrium',max(abs(np.array(r['theta'])-1)),0.);gate('uniform exact energy',r['history'][-1]['material_energy'],0.)
+old=p.rtol;p.rtol=1e-9
+try:p.thermo(p.T0);rejected=False
+except RuntimeError:rejected=True
+p.rtol=old;gate('changed-controls cache rejects',float(not rejected),0.)
+old=p.T0;p.T0*=1.01
+try:p.thermo(old);rejected=False
+except RuntimeError:rejected=True
+p.T0=old;gate('changed-reference-temperature cache rejects',float(not rejected),0.)
+for name,fn in [('bad T',lambda:p.thermo(float('nan'))),('negative slab T',lambda:evolve(p,[1,1,-1,1],.1,4)),('bad reservoir',lambda:evolve(p,np.ones(4),.01,4,reservoirs=(0,1))),('unstable CFL',lambda:evolve(p,np.ones(8),.1,1))]:
+ try:fn();rejected=False
+ except ValueError:rejected=True
+ gate(name,float(not rejected),0.)
+rows.append(dict(total_source_evaluations=dict(EOS=p.eos_calls,transport=p.transport_calls,exact_thermo_cache=len(p.thermo_cache),exact_transport_cache=len(p.transport_cache))))
+save('complete');print(json.dumps(dict(passed=all(c['passed']for c in checks),checks=len(checks),failed=[c for c in checks if not c['passed']],runtime=time.monotonic()-start)))
