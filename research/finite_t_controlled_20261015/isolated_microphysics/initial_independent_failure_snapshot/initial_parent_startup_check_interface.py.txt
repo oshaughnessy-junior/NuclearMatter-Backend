@@ -1,0 +1,56 @@
+"""Bounded real subprocess values, collision sentinels and contract rejection."""
+from __future__ import annotations
+import sys,types,json,hashlib,time,copy,subprocess,math
+from pathlib import Path
+import client as C
+P=C.P;HERE=Path(__file__).resolve().parent;checks=[];rows=[];start=time.monotonic()
+def gate(n,e,t):checks.append(dict(name=n,error=float(e),tolerance=t,passed=bool(math.isfinite(e)and abs(e)<=t)))
+def reject(n,fn):
+ try:fn();bad=1
+ except (ValueError,RuntimeError,TypeError):bad=0
+ gate(n,bad,0)
+def frozen():
+ dirs=['hot_beta_moments','positron_capture_moments','review_pc_moments','relativistic_crossed_contract','relativistic_crossed_thermal','relativistic_free_eos','thermodynamics','relativistic_tensor','relativistic_capture_oracle','muon_full_current','muon_vacuum','transparent_antinu_element']
+ return {str(f.relative_to(P.ROOT)):hashlib.sha256(f.read_bytes()).hexdigest()for d in dirs for f in sorted((P.ROOT/d).rglob('*'))if f.is_file()and'__pycache__'not in str(f)}
+before=frozen();sentinels={}
+for name in ['study','potential','current','free_baryons','hot_moments','kernel','beta','vacuum_cc','events','protocol']:
+ m=types.ModuleType(name);m.sentinel='must remain exactly this object';sys.modules[name]=m;sentinels[name]=m
+# Parent module/path snapshots are AFTER intentional collision insertion.
+modules_before=dict(sys.modules);path_before=list(sys.path)
+for name,text in [('sentinel_input.json','{"do_not_touch":true}\n'),('sentinel_output.json','preserve original output\n')]:
+ (HERE/name).write_text(text)
+files_before={n:hashlib.sha256((HERE/n).read_bytes()).hexdigest()for n in['sentinel_input.json','sentinel_output.json']}
+c=C.Client();old=P.loads((P.ROOT/'transparent_antinu_element/results.json').read_text());initial=old['runs'][0]['initial'];changed=old['runs'][-1]['final']
+for tag,s,profile in [('initial',initial,'base'),('changed',changed,'fine'),('initial_repeat',initial,'fine'),('changed_reordered',changed,'base')]:
+ mat=C.MaterialState(s['T'],s['nB'],s['Ye']);ctl=C.Controls(profile);req=c.request(mat,ctl);out=c.evaluate(mat,ctl);rows.append(dict(tag=tag,request=req,response=out))
+ ref=next(x[profile=='fine'and'fine'or'coarse']for x in old['source_refinement']if x['tag']==('initial'if tag.startswith('initial')else'changed_endpoint'))
+ for key,col in [('number','R'),('energy','Q')]:gate(tag+' actual frozen physical '+key,out['sources']['total'][key]['value']/ref[col]-1,2e-12)
+ for key in ['energy_density','pressure','entropy_density','cv']:
+  orig=s[dict(entropy_density='entropy').get(key,key)];gate(tag+' actual matched EOS '+key,out['eos'][key]/orig-1,2e-12)
+ gate(tag+' source identity',int(out['identity']!=P.digest(c._pins)),0)
+ gate(tag+' forward species roots',out['eos']['density_residual'],2e-9)
+ for name,m in sentinels.items():gate(tag+' parent module collision preserved '+name,int(sys.modules.get(name)is not m),0)
+ gate(tag+' parent path unchanged',int(sys.path!=path_before),0)
+# No physical dependency appears in the parent during subprocess calls.
+gate('parent module cache exact object preservation',int(any(sys.modules.get(k)is not v for k,v in modules_before.items())),0)
+gate('no new parent modules from workers',len(set(sys.modules)-set(modules_before)),0)
+gate('parent sentinel files unchanged',int(any(hashlib.sha256((HERE/n).read_bytes()).hexdigest()!=h for n,h in files_before.items())),0)
+out=rows[0]['response'];req=rows[0]['request']
+for name,mutate in [('wrongstate',lambda z:z['request']['state'].update(T=2.01)),('wrongcontrols',lambda z:z['request'].update(controls=P.CONTROLS['fine'])),('staleidentity',lambda z:z.update(identity='0'*64)),('extrafield',lambda z:z.update(ghost=1)),('negativerate',lambda z:z['sources']['total']['number'].update(value=-1)),('fakelog',lambda z:z['sources']['channels']['positron_capture']['energy'].update(log=0)),('NaNenergy',lambda z:z['eos'].update(energy_density=float('nan'))),('chargecorruption',lambda z:z['eos']['densities'].update(proton=1e-8)),('signedsource',lambda z:z['sources']['signed'].update(material_energy=1)),('fakemass',lambda z:z['eos']['masses'].update(neutron=939)),('unexpectedinverse',lambda z:z['sources'].update(inverse=P.represented(-10))),('runtime',lambda z:z['runtime'].update(python='bad'))]:
+ z=copy.deepcopy(out);mutate(z);reject('reject malformed response '+name,lambda z=z:c.validate(z,req))
+for s in [C.MaterialState(float('nan'),1e-7,.3),C.MaterialState(2.,2e-7,.3),C.MaterialState(2.,1e-7,True)]:reject('reject out-of-contract state '+str(s),lambda s=s:c.request(s))
+reject('reject unknown control profile',lambda:c.request(C.MaterialState(2.,1e-7,.3),C.Controls('ghost')))
+for raw in ['{"x":1,"x":2}','{"x":NaN}','{} trailing']:
+ reject('reject strict JSON '+raw,lambda raw=raw:P.loads(raw))
+for raw in ['{}',P.dumps(dict(req,state=dict(T=-1.,nB=1e-7,Ye=.3))),P.dumps(dict(req,identity='stale')),'{"version":1,"version":2}']:
+ done=subprocess.run([sys.executable,'-I','-B',str(HERE/'worker_entry.py')],input=raw,text=True,capture_output=True,timeout=10,cwd=HERE)
+ z=P.loads(done.stdout);gate('worker rejects malformed stdin',int(done.returncode!=2 or z['status']!='error'or bool(done.stderr)),0)
+# Synthetic pin mutation rejects before evaluating or touching frozen files.
+save=c._pins;c._pins=copy.deepcopy(save);c._pins['sources']['muon_vacuum/vacuum_cc.py']='0'*64
+reject('reject changed expected source pin before call',lambda:c.evaluate(C.MaterialState(2.,1e-7,.3)));c._pins=save
+for log in [-55933.,-1000.,1000.,-7.]:
+ z=P.represented(log);P.validate_positive(z);gate('log status retains exact log '+str(log),z['log']-log,0)
+gate('ordinary underflow None no floor',int(P.represented(-55933.)!=dict(status='unrepresented',value=None,log=-55933.,reason='underflow')),0)
+gate('frozen campaign artifact bytes unchanged',int(before!=frozen()),0)
+result=dict(checks=checks,passed=sum(x['passed']for x in checks),failed=[x for x in checks if not x['passed']],real_calls=rows,frozen_before=before,frozen_after=frozen(),pins=c._pins,seconds=time.monotonic()-start)
+(HERE/'results.json').write_text(json.dumps(result,indent=2));print(json.dumps({k:result[k]for k in['passed','failed','seconds']},indent=2))

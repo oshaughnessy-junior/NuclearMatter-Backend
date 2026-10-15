@@ -1,0 +1,1647 @@
+{
+  "checks": [
+    {
+      "name": "initial actual frozen physical number",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial actual frozen physical energy",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial actual matched EOS energy_density",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial actual matched EOS pressure",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial actual matched EOS entropy_density",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial actual matched EOS cv",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial source identity",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial forward species roots",
+      "error": 1.887379141862766e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved study",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved potential",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved current",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved free_baryons",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved hot_moments",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved kernel",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved beta",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved vacuum_cc",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved events",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent module collision preserved protocol",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial parent path unchanged",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed actual frozen physical number",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed actual frozen physical energy",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed actual matched EOS energy_density",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed actual matched EOS pressure",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed actual matched EOS entropy_density",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed actual matched EOS cv",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed source identity",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed forward species roots",
+      "error": 3.652633751016765e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved study",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved potential",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved current",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved free_baryons",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved hot_moments",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved kernel",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved beta",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved vacuum_cc",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved events",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent module collision preserved protocol",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed parent path unchanged",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat actual frozen physical number",
+      "error": 6.661338147750939e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat actual frozen physical energy",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat actual matched EOS energy_density",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat actual matched EOS pressure",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat actual matched EOS entropy_density",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat actual matched EOS cv",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat source identity",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat forward species roots",
+      "error": 1.887379141862766e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved study",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved potential",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved current",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved free_baryons",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved hot_moments",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved kernel",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved beta",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved vacuum_cc",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved events",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent module collision preserved protocol",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "initial_repeat parent path unchanged",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered actual frozen physical number",
+      "error": -4.440892098500626e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered actual frozen physical energy",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered actual matched EOS energy_density",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered actual matched EOS pressure",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered actual matched EOS entropy_density",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered actual matched EOS cv",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered source identity",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered forward species roots",
+      "error": 3.652633751016765e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved study",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved potential",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved current",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved free_baryons",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved hot_moments",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved kernel",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved beta",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved vacuum_cc",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved events",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent module collision preserved protocol",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "changed_reordered parent path unchanged",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "parent module cache exact object preservation",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "no new parent modules from workers",
+      "error": 27.0,
+      "tolerance": 0,
+      "passed": false
+    },
+    {
+      "name": "parent sentinel files unchanged",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response wrongstate",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response wrongcontrols",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response staleidentity",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response extrafield",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response negativerate",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response fakelog",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response NaNenergy",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response chargecorruption",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response signedsource",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response fakemass",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response unexpectedinverse",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject malformed response runtime",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject out-of-contract state MaterialState(T=nan, nB=1e-07, Ye=0.3)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject out-of-contract state MaterialState(T=2.0, nB=2e-07, Ye=0.3)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject out-of-contract state MaterialState(T=2.0, nB=1e-07, Ye=True)",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject unknown control profile",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject strict JSON {\"x\":1,\"x\":2}",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject strict JSON {\"x\":NaN}",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject strict JSON {} trailing",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "worker rejects malformed stdin",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "worker rejects malformed stdin",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "worker rejects malformed stdin",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "worker rejects malformed stdin",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject changed expected source pin before call",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "log status retains exact log -55933.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "log status retains exact log -1000.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "log status retains exact log 1000.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "log status retains exact log -7.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "ordinary underflow None no floor",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen campaign artifact bytes unchanged",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 108,
+  "failed": [
+    {
+      "name": "no new parent modules from workers",
+      "error": 27.0,
+      "tolerance": 0,
+      "passed": false
+    }
+  ],
+  "real_calls": [
+    {
+      "tag": "initial",
+      "request": {
+        "version": "nmb-isolated-1",
+        "state": {
+          "T": 2.0,
+          "nB": 1e-07,
+          "Ye": 0.3
+        },
+        "controls": {
+          "beta": [
+            16,
+            12,
+            6,
+            8
+          ],
+          "pc": [
+            28,
+            44,
+            10,
+            60.0
+          ]
+        },
+        "conventions": {
+          "current": "accepted physical-mass full one-body V/A/F2/GP current; no radiative/Coulomb/NN corrections",
+          "material": "physical-mass free particle-only n,p plus equilibrium e-/e+ pairs; muons/photons absent",
+          "radiation": "empty incoming antinu_e, freely escaping; ONLY neutron beta + positron capture",
+          "rest": "all material energies and chemical potentials include rest mass; no added Q",
+          "units": "T,mu MeV; n fm^-3; epsilon,P MeV fm^-3; entropy kB fm^-3; R fm^-3 s^-1; Q MeV fm^-3 s^-1"
+        },
+        "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088"
+      },
+      "response": {
+        "eos": {
+          "cv": 4.926946211714515e-06,
+          "densities": {
+            "electron": 2.034286367843283e-07,
+            "neutron": 6.999999999999867e-08,
+            "positron": 1.7342863678432833e-07,
+            "proton": 3.000000000000039e-08
+          },
+          "density_residual": 1.887379141862766e-14,
+          "energy_density": 9.661269043697038e-05,
+          "entropy_density": 2.852471234557156e-06,
+          "masses": {
+            "electron": 0.51099895069,
+            "neutron": 939.56542052,
+            "proton": 938.27208816
+          },
+          "pressure": 9.9084688806109e-07,
+          "total_mu": {
+            "electron": 0.17446333200826397,
+            "neutron": 919.8287578100662,
+            "proton": 916.8449303084382
+          }
+        },
+        "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088",
+        "request": {
+          "controls": {
+            "beta": [
+              16,
+              12,
+              6,
+              8
+            ],
+            "pc": [
+              28,
+              44,
+              10,
+              60.0
+            ]
+          },
+          "conventions": {
+            "current": "accepted physical-mass full one-body V/A/F2/GP current; no radiative/Coulomb/NN corrections",
+            "material": "physical-mass free particle-only n,p plus equilibrium e-/e+ pairs; muons/photons absent",
+            "radiation": "empty incoming antinu_e, freely escaping; ONLY neutron beta + positron capture",
+            "rest": "all material energies and chemical potentials include rest mass; no added Q",
+            "units": "T,mu MeV; n fm^-3; epsilon,P MeV fm^-3; entropy kB fm^-3; R fm^-3 s^-1; Q MeV fm^-3 s^-1"
+          },
+          "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088",
+          "state": {
+            "T": 2.0,
+            "Ye": 0.3,
+            "nB": 1e-07
+          },
+          "version": "nmb-isolated-1"
+        },
+        "runtime": {
+          "numpy": "2.4.6",
+          "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+          "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+          "scipy": "1.17.1"
+        },
+        "sources": {
+          "channels": {
+            "neutron_beta": {
+              "energy": {
+                "log": -24.623471813007935,
+                "reason": null,
+                "status": "positive",
+                "value": 2.023774252597065e-11
+              },
+              "number": {
+                "log": -23.879462794194467,
+                "reason": null,
+                "status": "positive",
+                "value": 4.25873951815167e-11
+              }
+            },
+            "positron_capture": {
+              "energy": {
+                "log": -11.331052712281041,
+                "reason": null,
+                "status": "positive",
+                "value": 1.199461555911276e-05
+              },
+              "number": {
+                "log": -13.704578240810163,
+                "reason": null,
+                "status": "positive",
+                "value": 1.1173192809464983e-06
+              }
+            }
+          },
+          "inverse": {
+            "log": null,
+            "reason": "empty_incident_radiation",
+            "status": "zero",
+            "value": 0.0
+          },
+          "residuals": {
+            "beta_density": -1.5543122344752192e-15,
+            "energy": 0.0,
+            "pc_density": -1.8037382698565807e-10
+          },
+          "signed": {
+            "antineutrino_e": 1.1173618683416792e-06,
+            "electron_net": 1.1173618683416792e-06,
+            "material_Le": 1.1173618683416792e-06,
+            "material_energy": -1.1994635796855287e-05,
+            "neutron": -1.1173618683416792e-06,
+            "proton": 1.1173618683416792e-06,
+            "radiation_Le": -1.1173618683416792e-06,
+            "radiation_energy": 1.1994635796855287e-05
+          },
+          "total": {
+            "energy": {
+              "log": -11.331051025046852,
+              "reason": null,
+              "status": "positive",
+              "value": 1.1994635796855286e-05
+            },
+            "number": {
+              "log": -13.704540125846693,
+              "reason": null,
+              "status": "positive",
+              "value": 1.117361868341679e-06
+            }
+          }
+        },
+        "status": "ok",
+        "version": "nmb-isolated-1"
+      }
+    },
+    {
+      "tag": "changed",
+      "request": {
+        "version": "nmb-isolated-1",
+        "state": {
+          "T": 1.995541068003036,
+          "nB": 1e-07,
+          "Ye": 0.3219401286112853
+        },
+        "controls": {
+          "beta": [
+            24,
+            20,
+            10,
+            12
+          ],
+          "pc": [
+            32,
+            52,
+            12,
+            70.0
+          ]
+        },
+        "conventions": {
+          "current": "accepted physical-mass full one-body V/A/F2/GP current; no radiative/Coulomb/NN corrections",
+          "material": "physical-mass free particle-only n,p plus equilibrium e-/e+ pairs; muons/photons absent",
+          "radiation": "empty incoming antinu_e, freely escaping; ONLY neutron beta + positron capture",
+          "rest": "all material energies and chemical potentials include rest mass; no added Q",
+          "units": "T,mu MeV; n fm^-3; epsilon,P MeV fm^-3; entropy kB fm^-3; R fm^-3 s^-1; Q MeV fm^-3 s^-1"
+        },
+        "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088"
+      },
+      "response": {
+        "eos": {
+          "cv": 4.893697488950793e-06,
+          "densities": {
+            "electron": 2.0334968399027084e-07,
+            "neutron": 6.7805987138869e-08,
+            "positron": 1.7115567112914232e-07,
+            "proton": 3.219401286112951e-08
+          },
+          "density_residual": 3.652633751016765e-14,
+          "energy_density": 9.658915683790724e-05,
+          "entropy_density": 2.843654041389687e-06,
+          "masses": {
+            "electron": 0.51099895069,
+            "neutron": 939.56542052,
+            "proton": 938.27208816
+          },
+          "pressure": 9.837569436431138e-07,
+          "total_mu": {
+            "electron": 0.18804398944032738,
+            "neutron": 919.8159101636137,
+            "proton": 917.040252820259
+          }
+        },
+        "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088",
+        "request": {
+          "controls": {
+            "beta": [
+              24,
+              20,
+              10,
+              12
+            ],
+            "pc": [
+              32,
+              52,
+              12,
+              70.0
+            ]
+          },
+          "conventions": {
+            "current": "accepted physical-mass full one-body V/A/F2/GP current; no radiative/Coulomb/NN corrections",
+            "material": "physical-mass free particle-only n,p plus equilibrium e-/e+ pairs; muons/photons absent",
+            "radiation": "empty incoming antinu_e, freely escaping; ONLY neutron beta + positron capture",
+            "rest": "all material energies and chemical potentials include rest mass; no added Q",
+            "units": "T,mu MeV; n fm^-3; epsilon,P MeV fm^-3; entropy kB fm^-3; R fm^-3 s^-1; Q MeV fm^-3 s^-1"
+          },
+          "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088",
+          "state": {
+            "T": 1.995541068003036,
+            "Ye": 0.3219401286112853,
+            "nB": 1e-07
+          },
+          "version": "nmb-isolated-1"
+        },
+        "runtime": {
+          "numpy": "2.4.6",
+          "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+          "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+          "scipy": "1.17.1"
+        },
+        "sources": {
+          "channels": {
+            "neutron_beta": {
+              "energy": {
+                "log": -24.657948831438247,
+                "reason": null,
+                "status": "positive",
+                "value": 1.955189640402427e-11
+              },
+              "number": {
+                "log": -23.913864259551456,
+                "reason": null,
+                "status": "positive",
+                "value": 4.1147240131356906e-11
+              }
+            },
+            "positron_capture": {
+              "energy": {
+                "log": -11.382201469753165,
+                "reason": null,
+                "status": "positive",
+                "value": 1.1396531881685583e-05
+              },
+              "number": {
+                "log": -13.753609836847668,
+                "reason": null,
+                "status": "positive",
+                "value": 1.063856720977667e-06
+              }
+            }
+          },
+          "inverse": {
+            "log": null,
+            "reason": "empty_incident_radiation",
+            "status": "zero",
+            "value": 0.0
+          },
+          "residuals": {
+            "beta_density": -2.2870594307278225e-14,
+            "energy": -5.945889524147563e-16,
+            "pc_density": -7.260259060615226e-11
+          },
+          "signed": {
+            "antineutrino_e": 1.0638978682177986e-06,
+            "electron_net": 1.0638978682177986e-06,
+            "material_Le": 1.0638978682177986e-06,
+            "material_energy": -1.1396551433581986e-05,
+            "neutron": -1.0638978682177986e-06,
+            "proton": 1.0638978682177986e-06,
+            "radiation_Le": -1.0638978682177986e-06,
+            "radiation_energy": 1.1396551433581986e-05
+          },
+          "total": {
+            "energy": {
+              "log": -11.382199754154083,
+              "reason": null,
+              "status": "positive",
+              "value": 1.1396551433581983e-05
+            },
+            "number": {
+              "log": -13.75357116016912,
+              "reason": null,
+              "status": "positive",
+              "value": 1.0638978682177995e-06
+            }
+          }
+        },
+        "status": "ok",
+        "version": "nmb-isolated-1"
+      }
+    },
+    {
+      "tag": "initial_repeat",
+      "request": {
+        "version": "nmb-isolated-1",
+        "state": {
+          "T": 2.0,
+          "nB": 1e-07,
+          "Ye": 0.3
+        },
+        "controls": {
+          "beta": [
+            24,
+            20,
+            10,
+            12
+          ],
+          "pc": [
+            32,
+            52,
+            12,
+            70.0
+          ]
+        },
+        "conventions": {
+          "current": "accepted physical-mass full one-body V/A/F2/GP current; no radiative/Coulomb/NN corrections",
+          "material": "physical-mass free particle-only n,p plus equilibrium e-/e+ pairs; muons/photons absent",
+          "radiation": "empty incoming antinu_e, freely escaping; ONLY neutron beta + positron capture",
+          "rest": "all material energies and chemical potentials include rest mass; no added Q",
+          "units": "T,mu MeV; n fm^-3; epsilon,P MeV fm^-3; entropy kB fm^-3; R fm^-3 s^-1; Q MeV fm^-3 s^-1"
+        },
+        "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088"
+      },
+      "response": {
+        "eos": {
+          "cv": 4.926946211714515e-06,
+          "densities": {
+            "electron": 2.034286367843283e-07,
+            "neutron": 6.999999999999867e-08,
+            "positron": 1.7342863678432833e-07,
+            "proton": 3.000000000000039e-08
+          },
+          "density_residual": 1.887379141862766e-14,
+          "energy_density": 9.661269043697038e-05,
+          "entropy_density": 2.852471234557156e-06,
+          "masses": {
+            "electron": 0.51099895069,
+            "neutron": 939.56542052,
+            "proton": 938.27208816
+          },
+          "pressure": 9.9084688806109e-07,
+          "total_mu": {
+            "electron": 0.17446333200826397,
+            "neutron": 919.8287578100662,
+            "proton": 916.8449303084382
+          }
+        },
+        "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088",
+        "request": {
+          "controls": {
+            "beta": [
+              24,
+              20,
+              10,
+              12
+            ],
+            "pc": [
+              32,
+              52,
+              12,
+              70.0
+            ]
+          },
+          "conventions": {
+            "current": "accepted physical-mass full one-body V/A/F2/GP current; no radiative/Coulomb/NN corrections",
+            "material": "physical-mass free particle-only n,p plus equilibrium e-/e+ pairs; muons/photons absent",
+            "radiation": "empty incoming antinu_e, freely escaping; ONLY neutron beta + positron capture",
+            "rest": "all material energies and chemical potentials include rest mass; no added Q",
+            "units": "T,mu MeV; n fm^-3; epsilon,P MeV fm^-3; entropy kB fm^-3; R fm^-3 s^-1; Q MeV fm^-3 s^-1"
+          },
+          "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088",
+          "state": {
+            "T": 2.0,
+            "Ye": 0.3,
+            "nB": 1e-07
+          },
+          "version": "nmb-isolated-1"
+        },
+        "runtime": {
+          "numpy": "2.4.6",
+          "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+          "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+          "scipy": "1.17.1"
+        },
+        "sources": {
+          "channels": {
+            "neutron_beta": {
+              "energy": {
+                "log": -24.62347181821947,
+                "reason": null,
+                "status": "positive",
+                "value": 2.0237742420500923e-11
+              },
+              "number": {
+                "log": -23.879462796915085,
+                "reason": null,
+                "status": "positive",
+                "value": 4.2587395065652654e-11
+              }
+            },
+            "positron_capture": {
+              "energy": {
+                "log": -11.33105271196245,
+                "reason": null,
+                "status": "positive",
+                "value": 1.199461556293414e-05
+              },
+              "number": {
+                "log": -13.70457824060251,
+                "reason": null,
+                "status": "positive",
+                "value": 1.1173192811785124e-06
+              }
+            }
+          },
+          "inverse": {
+            "log": null,
+            "reason": "empty_incident_radiation",
+            "status": "zero",
+            "value": 0.0
+          },
+          "residuals": {
+            "beta_density": -2.5757174171303632e-14,
+            "energy": 1.4123529239737695e-16,
+            "pc_density": -7.241296451354629e-11
+          },
+          "signed": {
+            "antineutrino_e": 1.1173618685735781e-06,
+            "electron_net": 1.1173618685735781e-06,
+            "material_Le": 1.1173618685735781e-06,
+            "material_energy": -1.1994635800676568e-05,
+            "neutron": -1.1173618685735781e-06,
+            "proton": 1.1173618685735781e-06,
+            "radiation_Le": -1.1173618685735781e-06,
+            "radiation_energy": 1.1994635800676568e-05
+          },
+          "total": {
+            "energy": {
+              "log": -11.33105102472827,
+              "reason": null,
+              "status": "positive",
+              "value": 1.1994635800676566e-05
+            },
+            "number": {
+              "log": -13.70454012563915,
+              "reason": null,
+              "status": "positive",
+              "value": 1.117361868573579e-06
+            }
+          }
+        },
+        "status": "ok",
+        "version": "nmb-isolated-1"
+      }
+    },
+    {
+      "tag": "changed_reordered",
+      "request": {
+        "version": "nmb-isolated-1",
+        "state": {
+          "T": 1.995541068003036,
+          "nB": 1e-07,
+          "Ye": 0.3219401286112853
+        },
+        "controls": {
+          "beta": [
+            16,
+            12,
+            6,
+            8
+          ],
+          "pc": [
+            28,
+            44,
+            10,
+            60.0
+          ]
+        },
+        "conventions": {
+          "current": "accepted physical-mass full one-body V/A/F2/GP current; no radiative/Coulomb/NN corrections",
+          "material": "physical-mass free particle-only n,p plus equilibrium e-/e+ pairs; muons/photons absent",
+          "radiation": "empty incoming antinu_e, freely escaping; ONLY neutron beta + positron capture",
+          "rest": "all material energies and chemical potentials include rest mass; no added Q",
+          "units": "T,mu MeV; n fm^-3; epsilon,P MeV fm^-3; entropy kB fm^-3; R fm^-3 s^-1; Q MeV fm^-3 s^-1"
+        },
+        "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088"
+      },
+      "response": {
+        "eos": {
+          "cv": 4.893697488950793e-06,
+          "densities": {
+            "electron": 2.0334968399027084e-07,
+            "neutron": 6.7805987138869e-08,
+            "positron": 1.7115567112914232e-07,
+            "proton": 3.219401286112951e-08
+          },
+          "density_residual": 3.652633751016765e-14,
+          "energy_density": 9.658915683790724e-05,
+          "entropy_density": 2.843654041389687e-06,
+          "masses": {
+            "electron": 0.51099895069,
+            "neutron": 939.56542052,
+            "proton": 938.27208816
+          },
+          "pressure": 9.837569436431138e-07,
+          "total_mu": {
+            "electron": 0.18804398944032738,
+            "neutron": 919.8159101636137,
+            "proton": 917.040252820259
+          }
+        },
+        "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088",
+        "request": {
+          "controls": {
+            "beta": [
+              16,
+              12,
+              6,
+              8
+            ],
+            "pc": [
+              28,
+              44,
+              10,
+              60.0
+            ]
+          },
+          "conventions": {
+            "current": "accepted physical-mass full one-body V/A/F2/GP current; no radiative/Coulomb/NN corrections",
+            "material": "physical-mass free particle-only n,p plus equilibrium e-/e+ pairs; muons/photons absent",
+            "radiation": "empty incoming antinu_e, freely escaping; ONLY neutron beta + positron capture",
+            "rest": "all material energies and chemical potentials include rest mass; no added Q",
+            "units": "T,mu MeV; n fm^-3; epsilon,P MeV fm^-3; entropy kB fm^-3; R fm^-3 s^-1; Q MeV fm^-3 s^-1"
+          },
+          "identity": "b319990639ca365a317080affd350a6fa98728df1a2d87d52fe9dafe53b10088",
+          "state": {
+            "T": 1.995541068003036,
+            "Ye": 0.3219401286112853,
+            "nB": 1e-07
+          },
+          "version": "nmb-isolated-1"
+        },
+        "runtime": {
+          "numpy": "2.4.6",
+          "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+          "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+          "scipy": "1.17.1"
+        },
+        "sources": {
+          "channels": {
+            "neutron_beta": {
+              "energy": {
+                "log": -24.657948826203288,
+                "reason": null,
+                "status": "positive",
+                "value": 1.9551896506377652e-11
+              },
+              "number": {
+                "log": -23.91386425683037,
+                "reason": null,
+                "status": "positive",
+                "value": 4.114724024332214e-11
+              }
+            },
+            "positron_capture": {
+              "energy": {
+                "log": -11.382201470079613,
+                "reason": null,
+                "status": "positive",
+                "value": 1.1396531877965206e-05
+              },
+              "number": {
+                "log": -13.75360983706434,
+                "reason": null,
+                "status": "positive",
+                "value": 1.0638567207471582e-06
+              }
+            }
+          },
+          "inverse": {
+            "log": null,
+            "reason": "empty_incident_radiation",
+            "status": "zero",
+            "value": 0.0
+          },
+          "residuals": {
+            "beta_density": -2.4646951146678475e-14,
+            "energy": -1.486472381522132e-16,
+            "pc_density": -1.905580138128471e-10
+          },
+          "signed": {
+            "antineutrino_e": 1.0638978679874012e-06,
+            "electron_net": 1.0638978679874012e-06,
+            "material_Le": 1.0638978679874012e-06,
+            "material_energy": -1.1396551429861717e-05,
+            "neutron": -1.0638978679874012e-06,
+            "proton": 1.0638978679874012e-06,
+            "radiation_Le": -1.0638978679874012e-06,
+            "radiation_energy": 1.1396551429861717e-05
+          },
+          "total": {
+            "energy": {
+              "log": -11.38219975448052,
+              "reason": null,
+              "status": "positive",
+              "value": 1.139655142986172e-05
+            },
+            "number": {
+              "log": -13.75357116038568,
+              "reason": null,
+              "status": "positive",
+              "value": 1.0638978679874008e-06
+            }
+          }
+        },
+        "status": "ok",
+        "version": "nmb-isolated-1"
+      }
+    }
+  ],
+  "frozen_before": {
+    "hot_beta_moments/CHECKPOINT.json": "07c3f9b0294f33f3c440cec464d833a3e90cdaf4a1eedfad9779d59d2f860b67",
+    "hot_beta_moments/RESEARCH_NOTE.md": "31c3b5e1fa5856e7efc4eb8356986201eb43023cb3c76670f355032c4ac18d76",
+    "hot_beta_moments/SOURCES.json": "4039d5cc29b4388304d0d401a0eea226dbdee3f2d0aa4aa61f61799e95228bc8",
+    "hot_beta_moments/bookkeeping.json": "7720571dcb9879430ee9bf53f70d7e781cee67306052956b3d30a4a0e61d0e1c",
+    "hot_beta_moments/bookkeeping.py": "44f163ca70a79052053a5a4759c2cfcaec66b7c7b9125cadca8255ad5989eebb",
+    "hot_beta_moments/conditional.py": "656858a96b77890a2ee9d480a2023484534cfcda500afaeef2aaa1958eaff64c",
+    "hot_beta_moments/controls.json": "dc92226d6a66a2c10df55f3dce88a75d523adfe061d89ef50125fb69f8535696",
+    "hot_beta_moments/controls.py": "222a67fffc4df10163e2321d7f869da4db4d2feacb16f088733c3b8a7bb9e3dd",
+    "hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+    "hot_beta_moments/hot_spectrum.py": "084a5c50836a4d3617c00245ecf7081f4036cdfc63f801b8db260366f622416b",
+    "hot_beta_moments/initial_study_syntax.py.txt": "ec509804cff12da3b86b257d8898030798bcce5cce74fabea1106fe56ced653a",
+    "hot_beta_moments/initial_syntax_failure.txt": "9474cc5bebab671b6525c328da2906186c2731525251ad4217424c942e6329c5",
+    "hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88",
+    "hot_beta_moments/study.py": "1ad8aef43808ed329b62b6d15474cc41fc68f92b0bce4d2f32cde5ef86982dbd",
+    "positron_capture_moments/CHECKPOINT.json": "a2393261a628d7ed6223526fccea56519af9dcdacf3fa531b14fb2ed0cdaa507",
+    "positron_capture_moments/MATCHED_STATE.json": "abfb9572ac0ddfa6e52179e03d162ff07648ae3ec15528d98f08f6db1226306e",
+    "positron_capture_moments/RESEARCH_NOTE.md": "d3d0ad2d9f44d0284601637f7700c2681905162858e6a69e63f79c8f2945b226",
+    "positron_capture_moments/check_controls_anchor.py": "71a513e4ecb5309423967b0f3973b7f87cd7c3ffd2dacb001a1600cfed7bb9e7",
+    "positron_capture_moments/check_guard_identity.py": "d4c758d34fdbaa298bccd9fe3ac10ba1f6bb00ad703f2a4fa976b977b3b39f21",
+    "positron_capture_moments/complete_refinement.py": "0ce4b01d57eb39c2fe5912ebe140b4510d403c6ac324e323e90cea5ffd52fa98",
+    "positron_capture_moments/conditional.py": "7d2999d2f1d6e786ed7cfc56df97dc40f86138edf83408a18176bdfd82061991",
+    "positron_capture_moments/controls_anchor.json": "e937a6fef89b8bcc36feca933f6cf7342b8b72bfbfc1f011b960765a8e72e8e1",
+    "positron_capture_moments/guard_identity.json": "a7c7603b7fb3dae047be0856cb3c891d5bc1e2a6c846b880f6ca24915c8e868c",
+    "positron_capture_moments/initial_check_guard_identity.py.txt": "d7f48cf9d677ec7e109364b12d026bfb9592fd9c8ba94041f29d24819e7d3090",
+    "positron_capture_moments/initial_guard_reporting_failure.txt": "b490af77ec93ac3f0851a3f1e5f6f76247b415575c42e012bb1ece2ba850e92a",
+    "positron_capture_moments/initial_refinement_partial.json": "915b0f9a6a47d6e7147cc43bc32ea41b0734cc5b42f350a61493725dc3036588",
+    "positron_capture_moments/initial_refinement_timeout.txt": "9eed5deb7f5e892e199ab3a4357743128aaec10de7c7a3e5932a24c47c3a7994",
+    "positron_capture_moments/moments.py": "376c05dfe75f9788a9d9ab7559db899de9c6c559e48c9a8989dcc45ae8276a12",
+    "positron_capture_moments/refine.py": "b65c92fa7fd443d633ca4adf2b8e69e63539d61600c82a7a2cc07b1118e7d844",
+    "positron_capture_moments/refinement.json": "524488939b55d563977d874f17fb42699f382187814d2dd1c36be95d96e77cf9",
+    "positron_capture_moments/results.json": "03beb7882dc8f89f42a151cf343e4332be6dbc6fa701abcdb28524a73ef48931",
+    "positron_capture_moments/study.py": "c651515821a11729047be837ae0170263e4304df1c74c027ed38e2eca8af060d",
+    "review_pc_moments/MANIFEST.json": "7e3830a718c3f6a69f2ce8ac05b387aaadf7520008f5737db5b4fc54b2d4a575",
+    "review_pc_moments/REVIEW.md": "87a52b64c780a8714d1b6c8f99cfd6fb8c02807b063390480c6b2b40786102c1",
+    "review_pc_moments/conditional_results.json": "a954af73a6f7e0fded60aef7fe4fb6ecd376a7652fd174b95e605a3c56bd4697",
+    "review_pc_moments/conditional_review.py": "b52311316aa84a536962b67c35fbcb1062b0ecbf8f6fce8295406f57f08c892e",
+    "review_pc_moments/probe.py": "7413684c86afb2477bba01c35ee5a4c1f3cea4df1183839b31620155eed41f49",
+    "review_pc_moments/qualification.json": "21d9fc7ec23faf30aa6e571874241c1db924f6e4c8ef53411f8ab79c72f760ab",
+    "review_pc_moments/qualification.py": "02aa38ca5fc4db1a5ca9bb4712c02871241121b4fbdded3c380426c8ca4ca7c0",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+    "review_pc_moments/results.json": "489838f436a82cd19fe3a5f98bb0720efea2af3e3c1c8e8535f965ec17f8a752",
+    "relativistic_crossed_contract/CHECKPOINT.json": "1df56d1648dc0ece74c335c7209a306852fae958db841c3cb29f113be6e17791",
+    "relativistic_crossed_contract/RESEARCH_CONTRACT.md": "350752e686f55b80e9df77656cbb73d01567661baccdd34c52ced7ec6113ea7d",
+    "relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+    "relativistic_crossed_contract/check_contract.py": "c1015f5c8dd0823c14d71c84275657cd49231479fbdeb0ee11237543cee3e176",
+    "relativistic_crossed_contract/check_static.py": "551e5544f2fca6293484d3763207cc5dad000950ed57d88129605217ec71d43a",
+    "relativistic_crossed_contract/contract_results.json": "622d0a264c1d688fc6df96a9591cc49a1ac9547301444348120ccc97d0feee7d",
+    "relativistic_crossed_contract/probes.py": "5d5d317254f0272af52c2a60d2e709be97c423d519cd45dfbc967d0ec339190a",
+    "relativistic_crossed_contract/results.json": "7e96bbeb56b3b8a35539d70e7c72d4ddf506cb174aa70cea03caa38c82a48e5d",
+    "relativistic_crossed_contract/static_results.json": "da83aae2ecd969403ba36c6134b4d86e8d80ef1a72065dfe317a4738cfff0d47",
+    "relativistic_crossed_thermal/MANIFEST.json": "2b22730f08468c7931f1c12b3230c82d327bacbc5c8785e327e773e66f8194dd",
+    "relativistic_crossed_thermal/RESEARCH_NOTE.md": "d9acb2fb1bff949446dc292695a8b86864e4b23ff160d4d9369776d0d17292ca",
+    "relativistic_crossed_thermal/event_spectrum.py": "78998da20c1eec0a67b0a8b0ebade47f54374435145ae799e5fa6a3040a74c7f",
+    "relativistic_crossed_thermal/event_spectrum_results.json": "43c09a30040f79ac86106cdfc3e3f1a6927b15fb17c2002658bfff688b191bc3",
+    "relativistic_crossed_thermal/initial_Qrest_coarse_failure.json": "78c75380bc8a28e0a06a443cc20d1f5687c8c92aec5e004dad7659d87cbd31bd",
+    "relativistic_crossed_thermal/initial_Qrest_coarse_validate.py.txt": "37386414dd56a9630f6f8f60b733adc132c241395cc324b26bd4b324b834e959",
+    "relativistic_crossed_thermal/initial_pilot.py.txt": "fe27e05caa1a89ca85042436ef455308bb93ae7c090c6d1c1210b25b1629af63",
+    "relativistic_crossed_thermal/initial_pilot_failure.json": "89e41e27eadd154df326dcf3b8d5d136fd4380e8aa7cea9097a5e7e6f300a627",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "relativistic_crossed_thermal/oracles.py": "b1a83cf437903b3755dbb167ea9f1e322d0065982c63987c2ba06175f319c1d3",
+    "relativistic_crossed_thermal/pilot.json": "5698ca39c7ec39c5d6d6d3fbae7a472bd3def3cb08d0ef77375f6226db86f0b9",
+    "relativistic_crossed_thermal/pilot.py": "56e282efd6852a064f6cad438727cd3bdb21af5a23c6c10503396ff0052bc251",
+    "relativistic_crossed_thermal/results.json": "68ae3e28d58cd93b4697af05ba9c279b18817ff7400239c607c4c7077a96ca79",
+    "relativistic_crossed_thermal/validate.py": "3a0902775594ba624943f0578cfa2f9f848f17e3424e7233134e80d142acdee5",
+    "relativistic_free_eos/CHECKPOINT.json": "ddbccb16f98ca2d5988f57f9d24fbe9f35482605f7e444376a33aa2cd9b03173",
+    "relativistic_free_eos/MANIFEST.json": "225ef8e8005d9a216e462ab3303f0c6605d6c4875ef57944b455df747d762ee4",
+    "relativistic_free_eos/RESEARCH_NOTE.md": "658bdcf52c228bf1e55604bf19346ce85212c1ed72fe85bfe7e060aad8bb8457",
+    "relativistic_free_eos/extra_checks.py": "1ab3f4ef83bd0a43ca3c57cd0ad265a85d75e7016c71f6840336b9a6a0ec5f3f",
+    "relativistic_free_eos/extra_results.json": "556461b63a5fd71de90cabc6405124eb5f817f236f21db5f96a0a4e94d836d0c",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "relativistic_free_eos/initial_antiparticle_exclusion.txt": "628ca10518955f237270ba21f6a45cd08c47d3343018ac4eb79cde35d9fbb0f8",
+    "relativistic_free_eos/initial_antiparticle_exclusion_results.json": "1269b1e48f31e61dbf3a1d82f021587cdeec32b2c6e59ebfa0440a485dc6658b",
+    "relativistic_free_eos/initial_cold_roundoff_failure.txt": "0ee3d7c68c58092ab0db9c5e38c65892874d1ed87378192f4bd568733663d9d7",
+    "relativistic_free_eos/initial_cold_roundoff_free_baryons.py": "b30b5b2ed3fc1ee53d57bf415df63cef598cabcd51713df3d0ef3033808c0260",
+    "relativistic_free_eos/initial_cold_roundoff_results.json": "50aad735efc456114015c9a36e9eb88d5120fea2e35cf2b43edd7c1fbf01c6a0",
+    "relativistic_free_eos/initial_cold_roundoff_validate.py": "dc4223beb2ccec88fee4a23e47dd3c273689dcf34055a83b571a3223e591d16a",
+    "relativistic_free_eos/initial_validate_antiparticle_exclusion.py": "a5a2f57a0a3b5b7abc24a9a01b71013399e8bf731076afcf20577f195c164082",
+    "relativistic_free_eos/results.json": "7d926cfd8bd899913ed563694376ac4ffcbb8142e171408348a38ddba6107af3",
+    "relativistic_free_eos/validate.py": "49d522d078153efb202a777f11bb7acf6087f20c4055d34955a2f2980b3b42ca",
+    "thermodynamics/CHECKPOINT.json": "c232ac55b64238da30d3c248f0dd11dfe1d4439735f878badbf2bedafed77ed2",
+    "thermodynamics/RESEARCH_NOTE.md": "f8c31d2dd1ee265fa440177245429038ffabffaaa8cbf649dd71ebb958ee2d07",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "thermodynamics/validate_reference.py": "c6a7c8dbc58ab75fe14e109d3229fb70c06ad1b2e2b8d3e74ee3cd173bdec4cf",
+    "thermodynamics/validation_results.json": "16bf9e2e5caa1b3f9e152674e21e0d3e2ff40ff0587a13ca695293310aa3ed9b",
+    "relativistic_tensor/CHECKPOINT.json": "d26b1af74a16434233c2dd6149fc56f5212af772d22cfd11f9c7d58fa1876096",
+    "relativistic_tensor/RESEARCH_NOTE.md": "6c804deb548af22d23cfecffdddfe289e8ec2413f3f34588296a24dfa3a08338",
+    "relativistic_tensor/SOURCES.json": "efa35fa0af26e683ea72aabc9231e32775e95522456806877314a0da7f3c9212",
+    "relativistic_tensor/compare_oracle.py": "0250b2bd0ef5e2c5897464b8062ea1fc0ac75c0d0384f4d88ceea5cfb96f7669",
+    "relativistic_tensor/initial_fixed_phase_velocity_NR_failure.json": "32ffb27746a0458c2fac5f70cec3e6e082d596ffd8a662351108fa823c1703c1",
+    "relativistic_tensor/initial_tensor_before_log_guard.py": "b3b5472e893e3e4682c3c1d079077da53c6aa7fd69439d67344e6ddb365df476",
+    "relativistic_tensor/initial_validate.py": "57ce5874cd293dd2444274182735c5cd71d2cfd974f3d190101e1e9d8d3642ba",
+    "relativistic_tensor/oracle_comparison.json": "4af505794cae7cef457fd2de73eb5d672ec23fe0f498c0f540bcb277ce55902e",
+    "relativistic_tensor/results.json": "1234a25302af2271f97cb658bb8ce70c720ca102a5d628344e8033bed15e4dcd",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "relativistic_tensor/validate.py": "ba79da704a2ca325a4275bdf1c1e85c10ce4aebe35d01a7c2badcc23550ab0d7",
+    "relativistic_capture_oracle/CHECKPOINT.json": "3e018ec7c9fa117d7d4071af4b73f4562ca1ecde09ff1281821d2852ada63c6b",
+    "relativistic_capture_oracle/RESEARCH_NOTE.md": "b530d29738a5d18597748cb4a8c01a6ae8beaad41ffdd3d6ec5b8d70a1d9532b",
+    "relativistic_capture_oracle/anchor_results.json": "8f48b3c58f14d8337c901f263ec82d94a7660e4ae2e0c706f7fd2b22c92ed43a",
+    "relativistic_capture_oracle/check_controls.py": "0503361f47aab7dbb19adc65968a02c3a6faf102245ddd17953234912e0e9a10",
+    "relativistic_capture_oracle/check_spinors.py": "b43a8bf3948d904744819e6d238dc1e97db04bd149a74bf6da1ac3bf3c1d5562",
+    "relativistic_capture_oracle/control_results.json": "aa1895ba221314215d2d118fa00366a5e3013510ea91de624c28a8a977801125",
+    "relativistic_capture_oracle/dilute_anchor.py": "02bac6b4ccd45c26251fb45802e5760a2a51385af5dcc675fea4587a0bd1fd4e",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_capture_oracle/initial_anchor_reporting.py": "4e54a96e912a462502b15b43181fb87b3c7168b0ba016becb8f60fcf6cbf094c",
+    "relativistic_capture_oracle/initial_linear_kinetic_events.py": "c0f4fd589f260531a7cfa795fbd297f0f8d9e44a907e34366a29216469939024",
+    "relativistic_capture_oracle/initial_linear_kinetic_results.json": "ec1740e6e458c01c3411e3dab0059dfb248c886600bcb5f06065a9c967cb1cc6",
+    "relativistic_capture_oracle/initial_refine_reporting.py": "0e9cf34bc77df22334d88b091dad2313af90cb8f1b894ce555a795ffd0d7b2fe",
+    "relativistic_capture_oracle/recover_refinement.py": "16046fe794b43b7ea645444beac31829d5b26b5767d1aa454633af28ae21c944",
+    "relativistic_capture_oracle/refine.py": "5c53c18a80d585dc67fed370a90009a7970951851096d3d82e2c9a406beebc05",
+    "relativistic_capture_oracle/refinement.json": "20ef1505457c17f75594c295937125a6906866f3c16417b3e91841078ddc32cb",
+    "relativistic_capture_oracle/refinement_partial.json": "557e4442d4f1ffe448a4b6804446aefac64b16b5df23f4cecca8dc0deb3ff9cb",
+    "relativistic_capture_oracle/results.json": "5efa636172309b3762e6742cf48d755c527e0602b620722f87487e1e12c0b908",
+    "relativistic_capture_oracle/run.py": "733542dd038c230127b0b0fe33ab975dfd27a77b638ea835fbc6dbf11f1833f0",
+    "relativistic_capture_oracle/spinor_results.json": "0f5fbd7a4a219601a60871033e8f9217b8535f544a3be04b353e4fd55c650323",
+    "muon_full_current/CHECKPOINT.json": "cff79ba75493ef08645d0cdf5c22a611c607c339410905f4e38f586032f5f637",
+    "muon_full_current/RESEARCH_NOTE.md": "09775b8ad06a92516996aa057e7cddeb11c9258c182e2fdc030070ee68ad6b88",
+    "muon_full_current/SOURCES.json": "7f0c96f49466d2bd5aafa5719d2d89e11f979967da2157447f0f10ca7e714f46",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_full_current/results.json": "37b2ec9faf357b76a5ea92da32183aa7f9502a8e2bc79e9914e5807e21b89b17",
+    "muon_full_current/source_polynomial.py": "a31fb9baa0ae836d64ab6d40da6d0965dfc75c5b9d26655201504bf1266766db",
+    "muon_full_current/validate.py": "5f710056539e476c6f24a4ebc4440a5ed72b1c8e440fb9316431161bf9d819a3",
+    "muon_vacuum/CHECKPOINT.json": "05c4b9593abfd40e911f004cfb84f44d267dbaa34adefd2acd2fd079c36d5e0d",
+    "muon_vacuum/RESEARCH_NOTE.md": "8c62881a731086cda71c16dba82ccd3cb7f1d359b5ea754a56a0fd1195b5bec8",
+    "muon_vacuum/SOURCES.json": "79e3b62ec82cc9a944673dd163a2b5cfa04b5b38428e830bddc24c9b42af3734",
+    "muon_vacuum/initial_exothermic_threshold_failure.json": "d82f388193253ff8930c2b20edf4fadc29a4029d110848d223ebc993f2f77d5f",
+    "muon_vacuum/initial_threshold_asymptotic_failure.json": "f43305811ae43647558418477bf6696c8522f4c0b2bd31fa613b7096f4699959",
+    "muon_vacuum/initial_threshold_validate.py": "7b37171f7478da0ee73d32da8fc6414bfc6d00b81bcd80b8627c48075899823e",
+    "muon_vacuum/initial_validate.py": "75eb8e46a9b526fd0ab25a6a6a9ad642cb57d786df501c6d0b7c2322ee7d9f65",
+    "muon_vacuum/results.json": "2d8bd4e8fce4d2aa0e20a466a727b738607792bc422def1467f1385f84361f44",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "muon_vacuum/validate.py": "3f4732711544f45b3772e37975d6336995c94bd9711c0c2d3986380e29006f50",
+    "transparent_antinu_element/CHECKPOINT.json": "fa778d3b51293980bfc9675e9b8f36314cd8e8b8b5e737eca8a9a7d8880a921c",
+    "transparent_antinu_element/MANIFEST.json": "cdf2dd26e92b10d5a36d6b69ea1a6cafae4e14bf077fb5faef2c2af46ac14725",
+    "transparent_antinu_element/RESEARCH_NOTE.md": "d63b8d6a59928d94acf08d02bdb09b3d635c2231468105292ad6757914a61d19",
+    "transparent_antinu_element/accidental_hot_beta_results.json": "75687cb035952d9f998b1cc3f9568059484709de13947b270d1ba49eef450c8f",
+    "transparent_antinu_element/accidental_upstream_results.json": "75687cb035952d9f998b1cc3f9568059484709de13947b270d1ba49eef450c8f",
+    "transparent_antinu_element/element.py": "20295acc73d60235448485da397c201ff934275113b0f9d6568b0a207f3c7635",
+    "transparent_antinu_element/extra_controls.json": "b81eda33baaed8a668a8472f922f1e378d81a4558d5a10f52cc8859005cd46ea",
+    "transparent_antinu_element/extra_controls.py": "9754a18f96f0d85edfee012834d5622e440a5f3251f40e34c5b5c1bdde4007b4",
+    "transparent_antinu_element/initial_extra_controls_import_failure.py.txt": "b4b7e8c51a633b0f51cec3f6d6fe680720168b910fbc94d8412c541926eb19e0",
+    "transparent_antinu_element/initial_extra_controls_import_failure.txt": "09df7d7023514c4d4278a25f255385d1c449bafc5c031e51dac17f569e34abd2",
+    "transparent_antinu_element/initial_provenance_element.py.txt": "150232f3380ec97d404b75953188491dcd1cead1aa4921a59e74ac576b9c0ac8",
+    "transparent_antinu_element/initial_provenance_partial_trajectories.json.txt": "6140283e34f4382329151d7181f9b0ccd1f32399cb31cc2ef33c66798ca7883d",
+    "transparent_antinu_element/initial_provenance_results.json.txt": "91beeacac25873db1285f4c7114f76f3aad5384153aff42a1fe765b84cda34fb",
+    "transparent_antinu_element/partial_trajectories.json": "b3ab9b20d7155968e722b17bf95e3eecdd12c6a36b77b1153296d8777df1fc08",
+    "transparent_antinu_element/results.json": "576d2991cd95a6f7baeb625be0306071d191ce39e242e17844e3e6f945e1494b",
+    "transparent_antinu_element/study.py": "28de1c9acbb4230c9f68c416eaf2dd2f4dc78985aec22c1e577f0eaea3e10a70"
+  },
+  "frozen_after": {
+    "hot_beta_moments/CHECKPOINT.json": "07c3f9b0294f33f3c440cec464d833a3e90cdaf4a1eedfad9779d59d2f860b67",
+    "hot_beta_moments/RESEARCH_NOTE.md": "31c3b5e1fa5856e7efc4eb8356986201eb43023cb3c76670f355032c4ac18d76",
+    "hot_beta_moments/SOURCES.json": "4039d5cc29b4388304d0d401a0eea226dbdee3f2d0aa4aa61f61799e95228bc8",
+    "hot_beta_moments/bookkeeping.json": "7720571dcb9879430ee9bf53f70d7e781cee67306052956b3d30a4a0e61d0e1c",
+    "hot_beta_moments/bookkeeping.py": "44f163ca70a79052053a5a4759c2cfcaec66b7c7b9125cadca8255ad5989eebb",
+    "hot_beta_moments/conditional.py": "656858a96b77890a2ee9d480a2023484534cfcda500afaeef2aaa1958eaff64c",
+    "hot_beta_moments/controls.json": "dc92226d6a66a2c10df55f3dce88a75d523adfe061d89ef50125fb69f8535696",
+    "hot_beta_moments/controls.py": "222a67fffc4df10163e2321d7f869da4db4d2feacb16f088733c3b8a7bb9e3dd",
+    "hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+    "hot_beta_moments/hot_spectrum.py": "084a5c50836a4d3617c00245ecf7081f4036cdfc63f801b8db260366f622416b",
+    "hot_beta_moments/initial_study_syntax.py.txt": "ec509804cff12da3b86b257d8898030798bcce5cce74fabea1106fe56ced653a",
+    "hot_beta_moments/initial_syntax_failure.txt": "9474cc5bebab671b6525c328da2906186c2731525251ad4217424c942e6329c5",
+    "hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88",
+    "hot_beta_moments/study.py": "1ad8aef43808ed329b62b6d15474cc41fc68f92b0bce4d2f32cde5ef86982dbd",
+    "positron_capture_moments/CHECKPOINT.json": "a2393261a628d7ed6223526fccea56519af9dcdacf3fa531b14fb2ed0cdaa507",
+    "positron_capture_moments/MATCHED_STATE.json": "abfb9572ac0ddfa6e52179e03d162ff07648ae3ec15528d98f08f6db1226306e",
+    "positron_capture_moments/RESEARCH_NOTE.md": "d3d0ad2d9f44d0284601637f7700c2681905162858e6a69e63f79c8f2945b226",
+    "positron_capture_moments/check_controls_anchor.py": "71a513e4ecb5309423967b0f3973b7f87cd7c3ffd2dacb001a1600cfed7bb9e7",
+    "positron_capture_moments/check_guard_identity.py": "d4c758d34fdbaa298bccd9fe3ac10ba1f6bb00ad703f2a4fa976b977b3b39f21",
+    "positron_capture_moments/complete_refinement.py": "0ce4b01d57eb39c2fe5912ebe140b4510d403c6ac324e323e90cea5ffd52fa98",
+    "positron_capture_moments/conditional.py": "7d2999d2f1d6e786ed7cfc56df97dc40f86138edf83408a18176bdfd82061991",
+    "positron_capture_moments/controls_anchor.json": "e937a6fef89b8bcc36feca933f6cf7342b8b72bfbfc1f011b960765a8e72e8e1",
+    "positron_capture_moments/guard_identity.json": "a7c7603b7fb3dae047be0856cb3c891d5bc1e2a6c846b880f6ca24915c8e868c",
+    "positron_capture_moments/initial_check_guard_identity.py.txt": "d7f48cf9d677ec7e109364b12d026bfb9592fd9c8ba94041f29d24819e7d3090",
+    "positron_capture_moments/initial_guard_reporting_failure.txt": "b490af77ec93ac3f0851a3f1e5f6f76247b415575c42e012bb1ece2ba850e92a",
+    "positron_capture_moments/initial_refinement_partial.json": "915b0f9a6a47d6e7147cc43bc32ea41b0734cc5b42f350a61493725dc3036588",
+    "positron_capture_moments/initial_refinement_timeout.txt": "9eed5deb7f5e892e199ab3a4357743128aaec10de7c7a3e5932a24c47c3a7994",
+    "positron_capture_moments/moments.py": "376c05dfe75f9788a9d9ab7559db899de9c6c559e48c9a8989dcc45ae8276a12",
+    "positron_capture_moments/refine.py": "b65c92fa7fd443d633ca4adf2b8e69e63539d61600c82a7a2cc07b1118e7d844",
+    "positron_capture_moments/refinement.json": "524488939b55d563977d874f17fb42699f382187814d2dd1c36be95d96e77cf9",
+    "positron_capture_moments/results.json": "03beb7882dc8f89f42a151cf343e4332be6dbc6fa701abcdb28524a73ef48931",
+    "positron_capture_moments/study.py": "c651515821a11729047be837ae0170263e4304df1c74c027ed38e2eca8af060d",
+    "review_pc_moments/MANIFEST.json": "7e3830a718c3f6a69f2ce8ac05b387aaadf7520008f5737db5b4fc54b2d4a575",
+    "review_pc_moments/REVIEW.md": "87a52b64c780a8714d1b6c8f99cfd6fb8c02807b063390480c6b2b40786102c1",
+    "review_pc_moments/conditional_results.json": "a954af73a6f7e0fded60aef7fe4fb6ecd376a7652fd174b95e605a3c56bd4697",
+    "review_pc_moments/conditional_review.py": "b52311316aa84a536962b67c35fbcb1062b0ecbf8f6fce8295406f57f08c892e",
+    "review_pc_moments/probe.py": "7413684c86afb2477bba01c35ee5a4c1f3cea4df1183839b31620155eed41f49",
+    "review_pc_moments/qualification.json": "21d9fc7ec23faf30aa6e571874241c1db924f6e4c8ef53411f8ab79c72f760ab",
+    "review_pc_moments/qualification.py": "02aa38ca5fc4db1a5ca9bb4712c02871241121b4fbdded3c380426c8ca4ca7c0",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+    "review_pc_moments/results.json": "489838f436a82cd19fe3a5f98bb0720efea2af3e3c1c8e8535f965ec17f8a752",
+    "relativistic_crossed_contract/CHECKPOINT.json": "1df56d1648dc0ece74c335c7209a306852fae958db841c3cb29f113be6e17791",
+    "relativistic_crossed_contract/RESEARCH_CONTRACT.md": "350752e686f55b80e9df77656cbb73d01567661baccdd34c52ced7ec6113ea7d",
+    "relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+    "relativistic_crossed_contract/check_contract.py": "c1015f5c8dd0823c14d71c84275657cd49231479fbdeb0ee11237543cee3e176",
+    "relativistic_crossed_contract/check_static.py": "551e5544f2fca6293484d3763207cc5dad000950ed57d88129605217ec71d43a",
+    "relativistic_crossed_contract/contract_results.json": "622d0a264c1d688fc6df96a9591cc49a1ac9547301444348120ccc97d0feee7d",
+    "relativistic_crossed_contract/probes.py": "5d5d317254f0272af52c2a60d2e709be97c423d519cd45dfbc967d0ec339190a",
+    "relativistic_crossed_contract/results.json": "7e96bbeb56b3b8a35539d70e7c72d4ddf506cb174aa70cea03caa38c82a48e5d",
+    "relativistic_crossed_contract/static_results.json": "da83aae2ecd969403ba36c6134b4d86e8d80ef1a72065dfe317a4738cfff0d47",
+    "relativistic_crossed_thermal/MANIFEST.json": "2b22730f08468c7931f1c12b3230c82d327bacbc5c8785e327e773e66f8194dd",
+    "relativistic_crossed_thermal/RESEARCH_NOTE.md": "d9acb2fb1bff949446dc292695a8b86864e4b23ff160d4d9369776d0d17292ca",
+    "relativistic_crossed_thermal/event_spectrum.py": "78998da20c1eec0a67b0a8b0ebade47f54374435145ae799e5fa6a3040a74c7f",
+    "relativistic_crossed_thermal/event_spectrum_results.json": "43c09a30040f79ac86106cdfc3e3f1a6927b15fb17c2002658bfff688b191bc3",
+    "relativistic_crossed_thermal/initial_Qrest_coarse_failure.json": "78c75380bc8a28e0a06a443cc20d1f5687c8c92aec5e004dad7659d87cbd31bd",
+    "relativistic_crossed_thermal/initial_Qrest_coarse_validate.py.txt": "37386414dd56a9630f6f8f60b733adc132c241395cc324b26bd4b324b834e959",
+    "relativistic_crossed_thermal/initial_pilot.py.txt": "fe27e05caa1a89ca85042436ef455308bb93ae7c090c6d1c1210b25b1629af63",
+    "relativistic_crossed_thermal/initial_pilot_failure.json": "89e41e27eadd154df326dcf3b8d5d136fd4380e8aa7cea9097a5e7e6f300a627",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "relativistic_crossed_thermal/oracles.py": "b1a83cf437903b3755dbb167ea9f1e322d0065982c63987c2ba06175f319c1d3",
+    "relativistic_crossed_thermal/pilot.json": "5698ca39c7ec39c5d6d6d3fbae7a472bd3def3cb08d0ef77375f6226db86f0b9",
+    "relativistic_crossed_thermal/pilot.py": "56e282efd6852a064f6cad438727cd3bdb21af5a23c6c10503396ff0052bc251",
+    "relativistic_crossed_thermal/results.json": "68ae3e28d58cd93b4697af05ba9c279b18817ff7400239c607c4c7077a96ca79",
+    "relativistic_crossed_thermal/validate.py": "3a0902775594ba624943f0578cfa2f9f848f17e3424e7233134e80d142acdee5",
+    "relativistic_free_eos/CHECKPOINT.json": "ddbccb16f98ca2d5988f57f9d24fbe9f35482605f7e444376a33aa2cd9b03173",
+    "relativistic_free_eos/MANIFEST.json": "225ef8e8005d9a216e462ab3303f0c6605d6c4875ef57944b455df747d762ee4",
+    "relativistic_free_eos/RESEARCH_NOTE.md": "658bdcf52c228bf1e55604bf19346ce85212c1ed72fe85bfe7e060aad8bb8457",
+    "relativistic_free_eos/extra_checks.py": "1ab3f4ef83bd0a43ca3c57cd0ad265a85d75e7016c71f6840336b9a6a0ec5f3f",
+    "relativistic_free_eos/extra_results.json": "556461b63a5fd71de90cabc6405124eb5f817f236f21db5f96a0a4e94d836d0c",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "relativistic_free_eos/initial_antiparticle_exclusion.txt": "628ca10518955f237270ba21f6a45cd08c47d3343018ac4eb79cde35d9fbb0f8",
+    "relativistic_free_eos/initial_antiparticle_exclusion_results.json": "1269b1e48f31e61dbf3a1d82f021587cdeec32b2c6e59ebfa0440a485dc6658b",
+    "relativistic_free_eos/initial_cold_roundoff_failure.txt": "0ee3d7c68c58092ab0db9c5e38c65892874d1ed87378192f4bd568733663d9d7",
+    "relativistic_free_eos/initial_cold_roundoff_free_baryons.py": "b30b5b2ed3fc1ee53d57bf415df63cef598cabcd51713df3d0ef3033808c0260",
+    "relativistic_free_eos/initial_cold_roundoff_results.json": "50aad735efc456114015c9a36e9eb88d5120fea2e35cf2b43edd7c1fbf01c6a0",
+    "relativistic_free_eos/initial_cold_roundoff_validate.py": "dc4223beb2ccec88fee4a23e47dd3c273689dcf34055a83b571a3223e591d16a",
+    "relativistic_free_eos/initial_validate_antiparticle_exclusion.py": "a5a2f57a0a3b5b7abc24a9a01b71013399e8bf731076afcf20577f195c164082",
+    "relativistic_free_eos/results.json": "7d926cfd8bd899913ed563694376ac4ffcbb8142e171408348a38ddba6107af3",
+    "relativistic_free_eos/validate.py": "49d522d078153efb202a777f11bb7acf6087f20c4055d34955a2f2980b3b42ca",
+    "thermodynamics/CHECKPOINT.json": "c232ac55b64238da30d3c248f0dd11dfe1d4439735f878badbf2bedafed77ed2",
+    "thermodynamics/RESEARCH_NOTE.md": "f8c31d2dd1ee265fa440177245429038ffabffaaa8cbf649dd71ebb958ee2d07",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "thermodynamics/validate_reference.py": "c6a7c8dbc58ab75fe14e109d3229fb70c06ad1b2e2b8d3e74ee3cd173bdec4cf",
+    "thermodynamics/validation_results.json": "16bf9e2e5caa1b3f9e152674e21e0d3e2ff40ff0587a13ca695293310aa3ed9b",
+    "relativistic_tensor/CHECKPOINT.json": "d26b1af74a16434233c2dd6149fc56f5212af772d22cfd11f9c7d58fa1876096",
+    "relativistic_tensor/RESEARCH_NOTE.md": "6c804deb548af22d23cfecffdddfe289e8ec2413f3f34588296a24dfa3a08338",
+    "relativistic_tensor/SOURCES.json": "efa35fa0af26e683ea72aabc9231e32775e95522456806877314a0da7f3c9212",
+    "relativistic_tensor/compare_oracle.py": "0250b2bd0ef5e2c5897464b8062ea1fc0ac75c0d0384f4d88ceea5cfb96f7669",
+    "relativistic_tensor/initial_fixed_phase_velocity_NR_failure.json": "32ffb27746a0458c2fac5f70cec3e6e082d596ffd8a662351108fa823c1703c1",
+    "relativistic_tensor/initial_tensor_before_log_guard.py": "b3b5472e893e3e4682c3c1d079077da53c6aa7fd69439d67344e6ddb365df476",
+    "relativistic_tensor/initial_validate.py": "57ce5874cd293dd2444274182735c5cd71d2cfd974f3d190101e1e9d8d3642ba",
+    "relativistic_tensor/oracle_comparison.json": "4af505794cae7cef457fd2de73eb5d672ec23fe0f498c0f540bcb277ce55902e",
+    "relativistic_tensor/results.json": "1234a25302af2271f97cb658bb8ce70c720ca102a5d628344e8033bed15e4dcd",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "relativistic_tensor/validate.py": "ba79da704a2ca325a4275bdf1c1e85c10ce4aebe35d01a7c2badcc23550ab0d7",
+    "relativistic_capture_oracle/CHECKPOINT.json": "3e018ec7c9fa117d7d4071af4b73f4562ca1ecde09ff1281821d2852ada63c6b",
+    "relativistic_capture_oracle/RESEARCH_NOTE.md": "b530d29738a5d18597748cb4a8c01a6ae8beaad41ffdd3d6ec5b8d70a1d9532b",
+    "relativistic_capture_oracle/anchor_results.json": "8f48b3c58f14d8337c901f263ec82d94a7660e4ae2e0c706f7fd2b22c92ed43a",
+    "relativistic_capture_oracle/check_controls.py": "0503361f47aab7dbb19adc65968a02c3a6faf102245ddd17953234912e0e9a10",
+    "relativistic_capture_oracle/check_spinors.py": "b43a8bf3948d904744819e6d238dc1e97db04bd149a74bf6da1ac3bf3c1d5562",
+    "relativistic_capture_oracle/control_results.json": "aa1895ba221314215d2d118fa00366a5e3013510ea91de624c28a8a977801125",
+    "relativistic_capture_oracle/dilute_anchor.py": "02bac6b4ccd45c26251fb45802e5760a2a51385af5dcc675fea4587a0bd1fd4e",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_capture_oracle/initial_anchor_reporting.py": "4e54a96e912a462502b15b43181fb87b3c7168b0ba016becb8f60fcf6cbf094c",
+    "relativistic_capture_oracle/initial_linear_kinetic_events.py": "c0f4fd589f260531a7cfa795fbd297f0f8d9e44a907e34366a29216469939024",
+    "relativistic_capture_oracle/initial_linear_kinetic_results.json": "ec1740e6e458c01c3411e3dab0059dfb248c886600bcb5f06065a9c967cb1cc6",
+    "relativistic_capture_oracle/initial_refine_reporting.py": "0e9cf34bc77df22334d88b091dad2313af90cb8f1b894ce555a795ffd0d7b2fe",
+    "relativistic_capture_oracle/recover_refinement.py": "16046fe794b43b7ea645444beac31829d5b26b5767d1aa454633af28ae21c944",
+    "relativistic_capture_oracle/refine.py": "5c53c18a80d585dc67fed370a90009a7970951851096d3d82e2c9a406beebc05",
+    "relativistic_capture_oracle/refinement.json": "20ef1505457c17f75594c295937125a6906866f3c16417b3e91841078ddc32cb",
+    "relativistic_capture_oracle/refinement_partial.json": "557e4442d4f1ffe448a4b6804446aefac64b16b5df23f4cecca8dc0deb3ff9cb",
+    "relativistic_capture_oracle/results.json": "5efa636172309b3762e6742cf48d755c527e0602b620722f87487e1e12c0b908",
+    "relativistic_capture_oracle/run.py": "733542dd038c230127b0b0fe33ab975dfd27a77b638ea835fbc6dbf11f1833f0",
+    "relativistic_capture_oracle/spinor_results.json": "0f5fbd7a4a219601a60871033e8f9217b8535f544a3be04b353e4fd55c650323",
+    "muon_full_current/CHECKPOINT.json": "cff79ba75493ef08645d0cdf5c22a611c607c339410905f4e38f586032f5f637",
+    "muon_full_current/RESEARCH_NOTE.md": "09775b8ad06a92516996aa057e7cddeb11c9258c182e2fdc030070ee68ad6b88",
+    "muon_full_current/SOURCES.json": "7f0c96f49466d2bd5aafa5719d2d89e11f979967da2157447f0f10ca7e714f46",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_full_current/results.json": "37b2ec9faf357b76a5ea92da32183aa7f9502a8e2bc79e9914e5807e21b89b17",
+    "muon_full_current/source_polynomial.py": "a31fb9baa0ae836d64ab6d40da6d0965dfc75c5b9d26655201504bf1266766db",
+    "muon_full_current/validate.py": "5f710056539e476c6f24a4ebc4440a5ed72b1c8e440fb9316431161bf9d819a3",
+    "muon_vacuum/CHECKPOINT.json": "05c4b9593abfd40e911f004cfb84f44d267dbaa34adefd2acd2fd079c36d5e0d",
+    "muon_vacuum/RESEARCH_NOTE.md": "8c62881a731086cda71c16dba82ccd3cb7f1d359b5ea754a56a0fd1195b5bec8",
+    "muon_vacuum/SOURCES.json": "79e3b62ec82cc9a944673dd163a2b5cfa04b5b38428e830bddc24c9b42af3734",
+    "muon_vacuum/initial_exothermic_threshold_failure.json": "d82f388193253ff8930c2b20edf4fadc29a4029d110848d223ebc993f2f77d5f",
+    "muon_vacuum/initial_threshold_asymptotic_failure.json": "f43305811ae43647558418477bf6696c8522f4c0b2bd31fa613b7096f4699959",
+    "muon_vacuum/initial_threshold_validate.py": "7b37171f7478da0ee73d32da8fc6414bfc6d00b81bcd80b8627c48075899823e",
+    "muon_vacuum/initial_validate.py": "75eb8e46a9b526fd0ab25a6a6a9ad642cb57d786df501c6d0b7c2322ee7d9f65",
+    "muon_vacuum/results.json": "2d8bd4e8fce4d2aa0e20a466a727b738607792bc422def1467f1385f84361f44",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "muon_vacuum/validate.py": "3f4732711544f45b3772e37975d6336995c94bd9711c0c2d3986380e29006f50",
+    "transparent_antinu_element/CHECKPOINT.json": "fa778d3b51293980bfc9675e9b8f36314cd8e8b8b5e737eca8a9a7d8880a921c",
+    "transparent_antinu_element/MANIFEST.json": "cdf2dd26e92b10d5a36d6b69ea1a6cafae4e14bf077fb5faef2c2af46ac14725",
+    "transparent_antinu_element/RESEARCH_NOTE.md": "d63b8d6a59928d94acf08d02bdb09b3d635c2231468105292ad6757914a61d19",
+    "transparent_antinu_element/accidental_hot_beta_results.json": "75687cb035952d9f998b1cc3f9568059484709de13947b270d1ba49eef450c8f",
+    "transparent_antinu_element/accidental_upstream_results.json": "75687cb035952d9f998b1cc3f9568059484709de13947b270d1ba49eef450c8f",
+    "transparent_antinu_element/element.py": "20295acc73d60235448485da397c201ff934275113b0f9d6568b0a207f3c7635",
+    "transparent_antinu_element/extra_controls.json": "b81eda33baaed8a668a8472f922f1e378d81a4558d5a10f52cc8859005cd46ea",
+    "transparent_antinu_element/extra_controls.py": "9754a18f96f0d85edfee012834d5622e440a5f3251f40e34c5b5c1bdde4007b4",
+    "transparent_antinu_element/initial_extra_controls_import_failure.py.txt": "b4b7e8c51a633b0f51cec3f6d6fe680720168b910fbc94d8412c541926eb19e0",
+    "transparent_antinu_element/initial_extra_controls_import_failure.txt": "09df7d7023514c4d4278a25f255385d1c449bafc5c031e51dac17f569e34abd2",
+    "transparent_antinu_element/initial_provenance_element.py.txt": "150232f3380ec97d404b75953188491dcd1cead1aa4921a59e74ac576b9c0ac8",
+    "transparent_antinu_element/initial_provenance_partial_trajectories.json.txt": "6140283e34f4382329151d7181f9b0ccd1f32399cb31cc2ef33c66798ca7883d",
+    "transparent_antinu_element/initial_provenance_results.json.txt": "91beeacac25873db1285f4c7114f76f3aad5384153aff42a1fe765b84cda34fb",
+    "transparent_antinu_element/partial_trajectories.json": "b3ab9b20d7155968e722b17bf95e3eecdd12c6a36b77b1153296d8777df1fc08",
+    "transparent_antinu_element/results.json": "576d2991cd95a6f7baeb625be0306071d191ce39e242e17844e3e6f945e1494b",
+    "transparent_antinu_element/study.py": "28de1c9acbb4230c9f68c416eaf2dd2f4dc78985aec22c1e577f0eaea3e10a70"
+  },
+  "pins": {
+    "sources": {
+      "hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+      "relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+      "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+      "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+      "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+      "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+      "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+      "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+      "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+      "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+      "isolated_microphysics/client.py": "cd8353ee7ca3049bb2f760c1b9681a04cc1d738af0a8efa0025e73a40fb6b0a1",
+      "isolated_microphysics/protocol.py": "a6b261280bc292e51ec9724c075e77da4be04d85e8784ce1e0e03b909f12ee45",
+      "isolated_microphysics/worker_entry.py": "f77035421d3dfe123e468b2654257a6280b7dedde1efbea374fb479eadc33ebe"
+    },
+    "runtime": {
+      "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+    }
+  },
+  "seconds": 6.811531083192676
+}
