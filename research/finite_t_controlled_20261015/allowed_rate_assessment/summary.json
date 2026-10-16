@@ -1,0 +1,99 @@
+{
+  "numerical_passed": 158,
+  "numerical_failed": [],
+  "model_assessment_failures": 20,
+  "model_accuracy": "EC/PC fail1% atfourstates;beta passes1%;allfour deltaYe fail.001",
+  "independent_review": "PENDING",
+  "grid_acceptance": {
+    "accepted": true,
+    "review": "review_transparent_balance_grid/REVIEW.md",
+    "sha256": "0b2fe53e9a343a8a75f3cfbd38ea5afbb6bdc34895553202975c616deb9a988e",
+    "scope": "Three selected free-npe fixed-T empty-radiation beta+PC+EC baths only"
+  },
+  "rows": [
+    {
+      "label": "original_anchor",
+      "T": 2.0,
+      "nB": 1e-07,
+      "deltaYe": 0.019275018357354234,
+      "delta_affinity": -0.1680570031570205,
+      "errors": {
+        "EC": [
+          -0.022593261211943383,
+          -0.024411940143641453
+        ],
+        "PC": [
+          0.06872220239310267,
+          0.08423100578873477
+        ],
+        "beta": [
+          0.0047286954399334835,
+          0.0021246625345945347
+        ]
+      }
+    },
+    {
+      "label": "new_state_0",
+      "T": 1.0,
+      "nB": 1e-07,
+      "deltaYe": 0.005818280684699806,
+      "delta_affinity": -0.03580110031082173,
+      "errors": {
+        "EC": [
+          -0.012351047299681062,
+          -0.013638176138502378
+        ],
+        "PC": [
+          0.034804059820526145,
+          0.04200033174243445
+        ],
+        "beta": [
+          0.003072242713373363,
+          0.0020567709145711266
+        ]
+      }
+    },
+    {
+      "label": "new_state_1",
+      "T": 3.0,
+      "nB": 1e-07,
+      "deltaYe": 0.031003210508028012,
+      "delta_affinity": -0.3864401604229099,
+      "errors": {
+        "EC": [
+          -0.03197958254407307,
+          -0.03397352025899736
+        ],
+        "PC": [
+          0.10388076686031789,
+          0.12823002026112262
+        ],
+        "beta": [
+          0.006306105036697929,
+          0.002107200176318713
+        ]
+      }
+    },
+    {
+      "label": "new_state_2",
+      "T": 2.0,
+      "nB": 1e-06,
+      "deltaYe": 0.009140642331422255,
+      "delta_affinity": -0.13496711687273155,
+      "errors": {
+        "EC": [
+          -0.02244367743349407,
+          -0.0241924453582133
+        ],
+        "PC": [
+          0.06828163952316157,
+          0.08389819724641834
+        ],
+        "beta": [
+          0.004579002687314038,
+          0.0019916181813406375
+        ]
+      }
+    }
+  ]
+}

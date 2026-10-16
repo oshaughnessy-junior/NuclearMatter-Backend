@@ -1,0 +1,210 @@
+{
+  "checks": [
+    {
+      "name": "reject material (True, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject material (nan, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject material (1.0, inf, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject material (1.0, 1e-07, False)",
+      "passed": true
+    },
+    {
+      "name": "reject material (2.0, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject material (1.0, 1e-07, 0.049)",
+      "passed": true
+    },
+    {
+      "name": "reject material (1.0, 1e-07, 0.901)",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral refined0",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral tail_extended0",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral refined1",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral tail_extended1",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral refined'true'",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral tail_extended'true'",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral refinedNone",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral tail_extendedNone",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral refinednan",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral tail_extendednan",
+      "passed": true
+    },
+    {
+      "name": "reject before preparation flag integer",
+      "passed": true
+    },
+    {
+      "name": "reject before preparation flag false",
+      "passed": true
+    },
+    {
+      "name": "reject before preparation source hash",
+      "passed": true
+    },
+    {
+      "name": "reject before preparation review hash",
+      "passed": true
+    },
+    {
+      "name": "changed current source rejects before preparation",
+      "passed": true
+    },
+    {
+      "name": "all eleven loaded physical files source pinned",
+      "passed": true
+    },
+    {
+      "name": "changed transitive current rejects before preparation",
+      "passed": true
+    },
+    {
+      "name": "root absolute gross 0",
+      "passed": true
+    },
+    {
+      "name": "root net Le 0",
+      "passed": true
+    },
+    {
+      "name": "Q arithmetic 0",
+      "passed": true
+    },
+    {
+      "name": "thermostat heat positive 0",
+      "passed": true
+    },
+    {
+      "name": "independent species energy 0",
+      "passed": true
+    },
+    {
+      "name": "pair consumption at root 0",
+      "passed": true
+    },
+    {
+      "name": "kinetic affinity nonzero 0",
+      "passed": true
+    },
+    {
+      "name": "chemical root actual drift differs 0",
+      "passed": true
+    },
+    {
+      "name": "all separate paired profiles tested 0",
+      "passed": true
+    },
+    {
+      "name": "root absolute gross 1",
+      "passed": true
+    },
+    {
+      "name": "root net Le 1",
+      "passed": true
+    },
+    {
+      "name": "Q arithmetic 1",
+      "passed": true
+    },
+    {
+      "name": "thermostat heat positive 1",
+      "passed": true
+    },
+    {
+      "name": "independent species energy 1",
+      "passed": true
+    },
+    {
+      "name": "pair consumption at root 1",
+      "passed": true
+    },
+    {
+      "name": "kinetic affinity nonzero 1",
+      "passed": true
+    },
+    {
+      "name": "chemical root actual drift differs 1",
+      "passed": true
+    },
+    {
+      "name": "all separate paired profiles tested 1",
+      "passed": true
+    },
+    {
+      "name": "root absolute gross 2",
+      "passed": true
+    },
+    {
+      "name": "root net Le 2",
+      "passed": true
+    },
+    {
+      "name": "Q arithmetic 2",
+      "passed": true
+    },
+    {
+      "name": "thermostat heat positive 2",
+      "passed": true
+    },
+    {
+      "name": "independent species energy 2",
+      "passed": true
+    },
+    {
+      "name": "pair consumption at root 2",
+      "passed": true
+    },
+    {
+      "name": "kinetic affinity nonzero 2",
+      "passed": true
+    },
+    {
+      "name": "chemical root actual drift differs 2",
+      "passed": true
+    },
+    {
+      "name": "all separate paired profiles tested 2",
+      "passed": true
+    }
+  ],
+  "passed": 51,
+  "failed": []
+}
