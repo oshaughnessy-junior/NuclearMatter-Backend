@@ -1,0 +1,129 @@
+{
+  "status": "LOCKED_BEFORE_DATA",
+  "training": [
+    {
+      "T": 1.0,
+      "nB": 1e-07,
+      "Ye": 0.2
+    },
+    {
+      "T": 1.0,
+      "nB": 1e-07,
+      "Ye": 0.5
+    },
+    {
+      "T": 1.0,
+      "nB": 1e-06,
+      "Ye": 0.2
+    },
+    {
+      "T": 1.0,
+      "nB": 1e-06,
+      "Ye": 0.5
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-07,
+      "Ye": 0.2
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-07,
+      "Ye": 0.5
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-06,
+      "Ye": 0.2
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-06,
+      "Ye": 0.5
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-07,
+      "Ye": 0.2
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-07,
+      "Ye": 0.5
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-06,
+      "Ye": 0.2
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-06,
+      "Ye": 0.5
+    }
+  ],
+  "heldout": [
+    {
+      "T": 1.35,
+      "nB": 2e-07,
+      "Ye": 0.3
+    },
+    {
+      "T": 1.35,
+      "nB": 2e-07,
+      "Ye": 0.45
+    },
+    {
+      "T": 1.35,
+      "nB": 6e-07,
+      "Ye": 0.3
+    },
+    {
+      "T": 1.35,
+      "nB": 6e-07,
+      "Ye": 0.45
+    },
+    {
+      "T": 2.65,
+      "nB": 2e-07,
+      "Ye": 0.3
+    },
+    {
+      "T": 2.65,
+      "nB": 2e-07,
+      "Ye": 0.45
+    },
+    {
+      "T": 2.65,
+      "nB": 6e-07,
+      "Ye": 0.3
+    },
+    {
+      "T": 2.65,
+      "nB": 6e-07,
+      "Ye": 0.45
+    }
+  ],
+  "basis": [
+    "1",
+    "T",
+    "T\u00b2",
+    "eta_e",
+    "eta_e\u00b2",
+    "T*eta_e",
+    "(nB/1e-6)*T^-1.5"
+  ],
+  "eta": "actual EOS total mu_e/T",
+  "outputs": [
+    "log(R_EC_full/R_EC_allowed)",
+    "log(Q_EC_full/Q_EC_allowed)",
+    "log(R_PC_full/R_PC_allowed)",
+    "log(Q_PC_full/Q_PC_allowed)"
+  ],
+  "coefficient_count": 28,
+  "source_refinement_gate": 3e-06,
+  "heldout_gate": 0.01,
+  "fit_method": "Unweighted linear least squares locked7basis; no basis/degrees retuning after heldout",
+  "scope": "Optional approximate positive separate moments, detailed physical source remains reference/default. No net source/root/derivative/current/EOS-family inference.",
+  "source_controls": "Exact two existing accepted event profiles each state; all EOS/finite-input guards retained. If state outside physical API admission, stop and preserve blocker without relaxation."
+}

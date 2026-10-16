@@ -1,0 +1,3 @@
+# Author candidate frozen; different independent review pending
+
+The original12-point plan remains blocked at one EC API-rejected corner. Parent-authorized REVISED_LOCK2 removed only that state before rates, yielding11training+8heldout points. Same7basis,28coefficients andheldoutgates. All actual physical source profiles pass; all32heldoutoutputs pass1%, max0.00687%. Detailed physical phase integrals remain reference/default. The optional function returns only separate positive EC/PC moments, with actual EOS intersection admission and no net source/root/AD claim. See original STATUS.md/LOCK.json/preflight.json for retained first-plan failure, and RESEARCH_NOTE.md for the qualified candidate chronology.

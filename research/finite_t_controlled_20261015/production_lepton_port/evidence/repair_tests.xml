@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="81" time="6.792" timestamp="2026-10-15T21:32:48.021038-04:00" hostname="COS-MATH2519.endpoint.rit.edu"><testcase classname="" name="test_massless_exact_forward_and_responses[1.0-0.0]" time="0.005" /><testcase classname="" name="test_massless_exact_forward_and_responses[10.0-3.0]" time="0.005" /><testcase classname="" name="test_massless_exact_forward_and_responses[10.0--3.0]" time="0.004" /><testcase classname="" name="test_massless_exact_forward_and_responses[0.01-100.0]" time="0.006" /><testcase classname="" name="test_independent_momentum_forward[1.0-2.0-0.51099895]" time="0.018" /><testcase classname="" name="test_independent_momentum_forward[10.0-0.0-0.51099895]" time="0.015" /><testcase classname="" name="test_independent_momentum_forward[2.0--1.0-0.51099895]" time="0.019" /><testcase classname="" name="test_independent_momentum_forward[20.0--100.0-105.6583755]" time="0.017" /><testcase classname="" name="test_independent_momentum_forward[0.1-110.0-105.6583755]" time="0.021" /><testcase classname="" name="test_nonrelativistic_maxwell_boltzmann" time="0.016" /><testcase classname="" name="test_massive_cold_sommerfeld_and_stable_thermal_energy" time="0.040" /><testcase classname="" name="test_density_inversion_and_thermodynamic_identities[10.0-1e-06-0.51099895]" time="0.121" /><testcase classname="" name="test_density_inversion_and_thermodynamic_identities[0.001-0.01-0.51099895]" time="0.129" /><testcase classname="" name="test_density_inversion_and_thermodynamic_identities[20.0-0.005-105.6583755]" time="0.232" /><testcase classname="" name="test_density_inversion_and_thermodynamic_identities[0.01-0.002-105.6583755]" time="0.154" /><testcase classname="" name="test_density_inversion_and_thermodynamic_identities[0.1--1e-12-0.51099895]" time="0.179" /><testcase classname="" name="test_tiny_signed_net_number_root[0.01--1e-18]" time="0.031" /><testcase classname="" name="test_tiny_signed_net_number_root[0.01-1e-18]" time="0.030" /><testcase classname="" name="test_tiny_signed_net_number_root[0.01--1e-24]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[0.01-1e-24]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[0.01--1e-30]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[0.01-1e-30]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[1.0--1e-18]" time="0.025" /><testcase classname="" name="test_tiny_signed_net_number_root[1.0-1e-18]" time="0.025" /><testcase classname="" name="test_tiny_signed_net_number_root[1.0--1e-24]" time="0.025" /><testcase classname="" name="test_tiny_signed_net_number_root[1.0-1e-24]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[1.0--1e-30]" time="0.025" /><testcase classname="" name="test_tiny_signed_net_number_root[1.0-1e-30]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[10.0--1e-18]" time="0.025" /><testcase classname="" name="test_tiny_signed_net_number_root[10.0-1e-18]" time="0.025" /><testcase classname="" name="test_tiny_signed_net_number_root[10.0--1e-24]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[10.0-1e-24]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[10.0--1e-30]" time="0.026" /><testcase classname="" name="test_tiny_signed_net_number_root[10.0-1e-30]" time="0.026" /><testcase classname="" name="test_pair_zero_and_particle_antiparticle_symmetry[0.51099895-1.0]" time="0.217" /><testcase classname="" name="test_pair_zero_and_particle_antiparticle_symmetry[105.6583755-20.0]" time="0.259" /><testcase classname="" name="test_responses_after_forward_gate[10.0-1e-06-0.51099895]" time="0.353" /><testcase classname="" name="test_responses_after_forward_gate[20.0-0.005-105.6583755]" time="0.664" /><testcase classname="" name="test_responses_after_forward_gate[0.01-0.002-105.6583755]" time="0.436" /><testcase classname="" name="test_responses_after_forward_gate[0.1--1e-12-0.51099895]" time="0.508" /><testcase classname="" name="test_public_scalar_admission[True]" time="0.000" /><testcase classname="" name="test_public_scalar_admission[False]" time="0.000" /><testcase classname="" name="test_public_scalar_admission[bad2]" time="0.000" /><testcase classname="" name="test_public_scalar_admission[None]" time="0.000" /><testcase classname="" name="test_public_scalar_admission[1]" time="0.000" /><testcase classname="" name="test_public_scalar_admission[(1+0j)]" time="0.000" /><testcase classname="" name="test_public_scalar_admission[nan]" time="0.000" /><testcase classname="" name="test_public_scalar_admission[inf]" time="0.000" /><testcase classname="" name="test_public_scalar_admission[-inf]" time="0.000" /><testcase classname="" name="test_invalid_physical_or_quadrature_domain[kwargs0]" time="0.000" /><testcase classname="" name="test_invalid_physical_or_quadrature_domain[kwargs1]" time="0.000" /><testcase classname="" name="test_invalid_physical_or_quadrature_domain[kwargs2]" time="0.000" /><testcase classname="" name="test_invalid_physical_or_quadrature_domain[kwargs3]" time="0.000" /><testcase classname="" name="test_invalid_physical_or_quadrature_domain[kwargs4]" time="0.000" /><testcase classname="" name="test_invalid_physical_or_quadrature_domain[kwargs5]" time="0.000" /><testcase classname="" name="test_invalid_physical_or_quadrature_domain[kwargs6]" time="0.000" /><testcase classname="" name="test_susceptibility_underflow_is_not_an_absent_pair_claim" time="0.036" /><testcase classname="" name="test_thermal_state_validation_and_immutability" time="0.218" /><testcase classname="" name="test_existing_cold_sector_limit_with_explicit_units[False]" time="0.594" /><testcase classname="" name="test_existing_cold_sector_limit_with_explicit_units[True]" time="0.064" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[0.0-40.0]" time="0.054" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[0.0-100.0]" time="0.053" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[0.0-300.0]" time="0.053" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[0.0-600.0]" time="0.053" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[0.4-40.0]" time="0.034" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[0.4-100.0]" time="0.034" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[0.4-300.0]" time="0.033" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[0.4-600.0]" time="0.033"><failure message="AssertionError: &#10;Not equal to tolerance rtol=3e-10, atol=0&#10;&#10;Mismatched elements: 1 / 1 (100%)&#10;Max absolute difference among violations: 4.48942084e-269&#10;Max relative difference among violations: 0.14392839&#10; ACTUAL: array(2.670262e-268)&#10; DESIRED: array(3.119204e-268)">z = 600.0, alpha = 0.4
+
+    @pytest.mark.parametrize("z", [40., 100., 300., 600.])
+    @pytest.mark.parametrize("alpha", [0., .4, -.4])
+    def test_resolved_dilute_all_fields_against_relativistic_bessel(z, alpha):
+        # The exact classical relativistic moments use scaled Bessel functions.
+        # At z&gt;=40 and |mu/T|&lt;=.4, FD corrections are &lt;7e-18.
+        from scipy.special import kve
+        T, m = M_E/z, M_E
+        mu = alpha*T
+        base = math.exp(2*math.log(m)+math.log(T)-math.log(math.pi**2*HBARC**3)
+                        +math.log(kve(2, z))-z)
+        na, nb = base*math.exp(alpha), base*math.exp(-alpha)
+        total, net = na+nb, na-nb
+        mean = 3*T+m*kve(1, z)/kve(2, z)
+        square = m*m+3*m*T*kve(1, z)/kve(2, z)+12*T*T
+        first = mean*net-mu*total
+        second = (square+mu*mu)*total-2*mu*mean*net
+        energy, pressure = total*mean, total*T
+        entropy = (energy+pressure-mu*net)/T
+        expected = dict(net_density=net, particle_density=na,
+                        antiparticle_density=nb, energy_density=energy,
+                        pressure=pressure, entropy_density=entropy,
+                        free_energy_density=mu*net-pressure,
+                        cv_fixed_net_density=(second-first*first/total)/(T*T),
+                        dn_dmu_fixed_temperature=total/T,
+                        dn_dtemperature_fixed_mu=first/(T*T),
+                        dmu_dtemperature_fixed_net_density=-first/(T*total))
+        s = state_mu(T, mu, m)
+        fine = state_mu(T, mu, m, tail=90., rtol=5e-13)
+        for field, value in expected.items():
+            actual = getattr(s, field)
+            if value == 0:
+                assert actual == 0.
+            else:
+&gt;               np.testing.assert_allclose(actual, value, rtol=3e-10, atol=0.)
+E               AssertionError: 
+E               Not equal to tolerance rtol=3e-10, atol=0
+E               
+E               Mismatched elements: 1 / 1 (100%)
+E               Max absolute difference among violations: 4.48942084e-269
+E               Max relative difference among violations: 0.14392839
+E                ACTUAL: array(2.670262e-268)
+E                DESIRED: array(3.119204e-268)
+
+outputs/nmb-finite-t-20261015/production_lepton_port/staged/tests/test_finite_t_leptons.py:238: AssertionError</failure></testcase><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[-0.4-40.0]" time="0.033" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[-0.4-100.0]" time="0.033" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[-0.4-300.0]" time="0.033" /><testcase classname="" name="test_resolved_dilute_all_fields_against_relativistic_bessel[-0.4-600.0]" time="0.033"><failure message="AssertionError: &#10;Not equal to tolerance rtol=3e-10, atol=0&#10;&#10;Mismatched elements: 1 / 1 (100%)&#10;Max absolute difference among violations: 4.48942084e-269&#10;Max relative difference among violations: 0.14392839&#10; ACTUAL: array(2.670262e-268)&#10; DESIRED: array(3.119204e-268)">z = 600.0, alpha = -0.4
+
+    @pytest.mark.parametrize("z", [40., 100., 300., 600.])
+    @pytest.mark.parametrize("alpha", [0., .4, -.4])
+    def test_resolved_dilute_all_fields_against_relativistic_bessel(z, alpha):
+        # The exact classical relativistic moments use scaled Bessel functions.
+        # At z&gt;=40 and |mu/T|&lt;=.4, FD corrections are &lt;7e-18.
+        from scipy.special import kve
+        T, m = M_E/z, M_E
+        mu = alpha*T
+        base = math.exp(2*math.log(m)+math.log(T)-math.log(math.pi**2*HBARC**3)
+                        +math.log(kve(2, z))-z)
+        na, nb = base*math.exp(alpha), base*math.exp(-alpha)
+        total, net = na+nb, na-nb
+        mean = 3*T+m*kve(1, z)/kve(2, z)
+        square = m*m+3*m*T*kve(1, z)/kve(2, z)+12*T*T
+        first = mean*net-mu*total
+        second = (square+mu*mu)*total-2*mu*mean*net
+        energy, pressure = total*mean, total*T
+        entropy = (energy+pressure-mu*net)/T
+        expected = dict(net_density=net, particle_density=na,
+                        antiparticle_density=nb, energy_density=energy,
+                        pressure=pressure, entropy_density=entropy,
+                        free_energy_density=mu*net-pressure,
+                        cv_fixed_net_density=(second-first*first/total)/(T*T),
+                        dn_dmu_fixed_temperature=total/T,
+                        dn_dtemperature_fixed_mu=first/(T*T),
+                        dmu_dtemperature_fixed_net_density=-first/(T*total))
+        s = state_mu(T, mu, m)
+        fine = state_mu(T, mu, m, tail=90., rtol=5e-13)
+        for field, value in expected.items():
+            actual = getattr(s, field)
+            if value == 0:
+                assert actual == 0.
+            else:
+&gt;               np.testing.assert_allclose(actual, value, rtol=3e-10, atol=0.)
+E               AssertionError: 
+E               Not equal to tolerance rtol=3e-10, atol=0
+E               
+E               Mismatched elements: 1 / 1 (100%)
+E               Max absolute difference among violations: 4.48942084e-269
+E               Max relative difference among violations: 0.14392839
+E                ACTUAL: array(2.670262e-268)
+E                DESIRED: array(3.119204e-268)
+
+outputs/nmb-finite-t-20261015/production_lepton_port/staged/tests/test_finite_t_leptons.py:238: AssertionError</failure></testcase><testcase classname="" name="test_massless_dimensionful_scale_closed_form[0.0-1e-30]" time="0.008" /><testcase classname="" name="test_massless_dimensionful_scale_closed_form[0.0-1e-09]" time="0.008" /><testcase classname="" name="test_massless_dimensionful_scale_closed_form[0.0-1000000.0]" time="0.008" /><testcase classname="" name="test_massless_dimensionful_scale_closed_form[0.37-1e-30]" time="0.011" /><testcase classname="" name="test_massless_dimensionful_scale_closed_form[0.37-1e-09]" time="0.009" /><testcase classname="" name="test_massless_dimensionful_scale_closed_form[0.37-1000000.0]" time="0.009" /><testcase classname="" name="test_massless_dimensionful_scale_closed_form[-0.37-1e-30]" time="0.009" /><testcase classname="" name="test_massless_dimensionful_scale_closed_form[-0.37-1e-09]" time="0.009" /><testcase classname="" name="test_massless_dimensionful_scale_closed_form[-0.37-1000000.0]" time="0.009" /></testsuite></testsuites>

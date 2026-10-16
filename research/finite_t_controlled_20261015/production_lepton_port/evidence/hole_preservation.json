@@ -1,0 +1,16 @@
+{
+  "pin_sets_unchanged": {
+    "PRE_QUADRATURE_REPAIR_PIN.json": 31,
+    "PRE_SCIPY17_REPAIR_PIN.json": 75,
+    "PRE_HOLE_BOUND_REPAIR_PIN.json": 98,
+    "INITIAL_INDEPENDENT_REVIEW_PIN.json": 20,
+    "INDEPENDENT_QUADRATURE_REVIEW_PIN.json": 15,
+    "INDEPENDENT_COMPATIBILITY_REVIEW_PIN.json": 12
+  },
+  "exact_baseline_blobs": 71,
+  "candidate_source_sha256": "e0c16fc5899d5a9bfe2e8c89ba7255a60e80f0bb620c4f3103a7e4bc68487b90",
+  "candidate_tests": 85,
+  "cold_tests": 13,
+  "preservation_functional_checks": 35,
+  "previous_two_functional_failures_reproduced_and_now_resolved": true
+}

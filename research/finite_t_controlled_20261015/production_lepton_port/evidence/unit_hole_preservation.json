@@ -1,0 +1,18 @@
+{
+  "pin_sets_unchanged": {
+    "PRE_QUADRATURE_REPAIR_PIN.json": 31,
+    "PRE_SCIPY17_REPAIR_PIN.json": 75,
+    "PRE_HOLE_BOUND_REPAIR_PIN.json": 98,
+    "INITIAL_INDEPENDENT_REVIEW_PIN.json": 20,
+    "INDEPENDENT_QUADRATURE_REVIEW_PIN.json": 15,
+    "INDEPENDENT_COMPATIBILITY_REVIEW_PIN.json": 12,
+    "PRE_UNIT_HOLE_REPAIR_PIN.json": 427,
+    "INDEPENDENT_THERMAL_BOUND_REVIEW_PIN.json": 29
+  },
+  "exact_baseline_blobs": 71,
+  "candidate_source_sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+  "candidate_tests": 90,
+  "cold_tests": 13,
+  "preservation_functional_checks": 42,
+  "previous_four_muon_functional_failures_reproduced_and_now_resolved": true
+}

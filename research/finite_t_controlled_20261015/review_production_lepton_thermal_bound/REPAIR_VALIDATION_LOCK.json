@@ -1,0 +1,32 @@
+{
+  "locked_utc": "2026-10-16T02:08:17.576192+00:00",
+  "initial_review_sha256": "9d3360f9f5badf7d2acc416654e818fe26ec1b5924c7e61f2a20052bfb9e7775",
+  "retain_all_initial_extreme_and_nearbound_states": true,
+  "new_massless_cases": [
+    {
+      "T": 0.64,
+      "mu": 6.4e-35,
+      "mass": 0.0,
+      "purpose": "normalizedt\u00b2(1-t) analytic1/12 limitingkernel with vacancyabout1/2"
+    },
+    {
+      "T": 0.8,
+      "mu": 1.7,
+      "mass": 0.0,
+      "purpose": "independentoriginalenergyquadforhole"
+    }
+  ],
+  "new_regular_case": {
+    "T": 0.0037,
+    "mu": 71.3,
+    "mass": 0.51099895,
+    "purpose": "deepdegenerate narrowhole, mapmustretainkinematic/occupationpanels"
+  },
+  "gates": {
+    "independent_total": 3e-10,
+    "oldnew_regular_thermal": 3e-12,
+    "subnormal_hole_absolute_ULP": 1,
+    "represented_hole_must_nonzero": true
+  },
+  "no_candidate_repair_imported": true
+}
