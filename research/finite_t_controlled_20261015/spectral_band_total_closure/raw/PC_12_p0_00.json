@@ -1,0 +1,81 @@
+{
+  "lock_sha256": "cc7a622aa0cd4ea4afdffbbf719a146ff0cb807c49fd61b6b462cb2913685d90",
+  "source_pin_sha256": "576a9a2584a730bab076726cb968ac9d0cc696a741876b55bd3a9e86fe082f50",
+  "candidate_manifest_sha256": "dcfbafe85645caa4ac6f2ea1f4cd3a7cb55775d030eddc0c9c5a8c9211a8b216",
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "model": "fixed physical free fullGuo electronCC",
+  "source": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/weak_reference.py",
+  "channel": "PC",
+  "order": 12,
+  "panel_index": 0,
+  "all_band_edges_MeV": [
+    0.05,
+    2.0,
+    6.0,
+    15.0,
+    30.0,
+    60.0
+  ],
+  "panel_rule": {
+    "nodes": [
+      0.06797838160944875,
+      0.14348567503878706,
+      0.2743448926605529,
+      0.4523649945705479,
+      0.6663642884767744,
+      0.9028974267013178,
+      1.1471025732986824,
+      1.3836357115232256,
+      1.597635005429452,
+      1.775655107339447,
+      1.906514324961213,
+      1.9820216183905512
+    ],
+    "weights": [
+      0.0459959529768485,
+      0.10426584284543579,
+      0.1560763703297627,
+      0.19808824105498923,
+      0.227655223124896,
+      0.2429183696680679,
+      0.2429183696680679,
+      0.227655223124896,
+      0.19808824105498923,
+      0.1560763703297627,
+      0.10426584284543579,
+      0.0459959529768485
+    ],
+    "lower": 0.05,
+    "upper": 2.0
+  },
+  "first_index": 0,
+  "last_index_exclusive": 4,
+  "controls": {
+    "lepton_order": 12,
+    "angle_order": 16,
+    "energy_order": 16,
+    "phi_order": 6,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 110.0
+  },
+  "worker_sha256": "f824a7699026369c4eb7acf8a67761024c27dcf99da6cfe52a927c649a26bc02",
+  "common_harness_sha256": "db89b2fc222465de4bafb76584d6a008324c0b8d0784975d2afb48d7db601397",
+  "rows": [],
+  "complete": false,
+  "whole_moment_qualified": false,
+  "seconds": 0.01248841593042016,
+  "error": {
+    "type": "ArithmeticError",
+    "message": "Final positive-energy baryon shell unresolved"
+  }
+}

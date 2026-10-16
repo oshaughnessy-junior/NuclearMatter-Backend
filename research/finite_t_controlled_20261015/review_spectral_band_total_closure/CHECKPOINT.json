@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN ACCEPTED DIAGNOSTIC SCOPE: ECselected agreement;PCblocked;betaunqualified",
+  "utc": "2026-10-16T08:35:40.203088+00:00",
+  "review_sha256": "3a9ef29c03376d09b44d61aa63bb18f0398ad7b0ed795fd8dd0f720790d5f6db",
+  "manifest_sha256": "363fb6a6c12cdbca8172d736cf499379874a2c09f638f4acc5da040145f92cbc",
+  "main_consistency_pass": 747,
+  "semantic_adversary_pass": 8,
+  "new_review_fail": 0,
+  "retained_numeric_fail": 12,
+  "blocked": 6,
+  "author_all253paths_unchanged": true,
+  "source16pins_unchanged": true,
+  "static_preregistration_unchanged": true,
+  "actual_review_physical_calls": 3,
+  "new_grid_calls": 0,
+  "actual_band_nodes": {
+    "EC": 160,
+    "PC": 0,
+    "NEUTRON_DECAY": 160
+  },
+  "witness_tail_relative_errors": {
+    "j": 0.00022377617918348388,
+    "true_chi": 0.00022377617918348388
+  },
+  "EC_max_band_event": 4.412417675681013e-08,
+  "beta_max_band_event": 1.1623058515652929e-08,
+  "beta_upperpanel_error": 1.9777877325322102e-05,
+  "PC_band_moments_admitted": false,
+  "whole_moment_qualified": false,
+  "infinite_tails": "OPEN",
+  "no_source_study_edits": true,
+  "latest_exact_quota_utc": "2026-10-16T08:35:10Z",
+  "used_percent": 30,
+  "baseline_identity_confirmed": true
+}

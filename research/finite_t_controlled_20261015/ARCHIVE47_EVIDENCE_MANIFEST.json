@@ -1,0 +1,1658 @@
+{
+  "spectral_band_total_closure/ANALYSIS.json": {
+    "encoding": "gzip",
+    "stored_path": "spectral_band_total_closure/ANALYSIS.json.gz",
+    "original_sha256": "4c94bf9525f362d695f68b9833740519fbff3a38f19c34148a559d3063390073",
+    "stored_sha256": "4c2bd309c218695e9ed634c0f8c1f77134e870a6c14e6a770be9031c6d0327de"
+  },
+  "spectral_band_total_closure/CANONICAL_BAND_DIAGNOSTIC.json": {
+    "encoding": "gzip",
+    "stored_path": "spectral_band_total_closure/CANONICAL_BAND_DIAGNOSTIC.json.gz",
+    "original_sha256": "47a51d64fbdaab690173f389167c1f2e00ffd7d77fe07f9ab0d76d3fb1e2952d",
+    "stored_sha256": "de1aaa662dfc0dc41e12fd4e9fd23c420b52cf8f496d3f2a696db49b05db69c6"
+  },
+  "spectral_band_total_closure/CHECKPOINT.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/CHECKPOINT.json",
+    "original_sha256": "750414803c066017fba2b24c5f09cff234f579613557a2e43ce5efcc148cfeb9",
+    "stored_sha256": "750414803c066017fba2b24c5f09cff234f579613557a2e43ce5efcc148cfeb9"
+  },
+  "spectral_band_total_closure/COMMANDS.md": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/COMMANDS.md",
+    "original_sha256": "83abf25cfd1b9cc517c935f961d3f93ff7dbce1687186243470cbd3f93639b7a",
+    "stored_sha256": "83abf25cfd1b9cc517c935f961d3f93ff7dbce1687186243470cbd3f93639b7a"
+  },
+  "spectral_band_total_closure/CONTROL_ASSESSMENT.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/CONTROL_ASSESSMENT.json",
+    "original_sha256": "df0e4964bab8c2a4edec2d30dcc85fdba677c67bc08eb11b80a32602c14fe858",
+    "stored_sha256": "df0e4964bab8c2a4edec2d30dcc85fdba677c67bc08eb11b80a32602c14fe858"
+  },
+  "spectral_band_total_closure/EC_BAND_RESULTS.json": {
+    "encoding": "gzip",
+    "stored_path": "spectral_band_total_closure/EC_BAND_RESULTS.json.gz",
+    "original_sha256": "eaca644100e2759388f0b320cefb292582bcc59915d9cb692b707bd9532975ca",
+    "stored_sha256": "c5a544363604609ef59da6874051253bb13d8bec0343705bebd9998b66ff0ff3"
+  },
+  "spectral_band_total_closure/EC_JOB_STATUS.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/EC_JOB_STATUS.json",
+    "original_sha256": "03ef9d4465331092a11abc2da2c3922057c54af1634881a550fc165486f9cff7",
+    "stored_sha256": "03ef9d4465331092a11abc2da2c3922057c54af1634881a550fc165486f9cff7"
+  },
+  "spectral_band_total_closure/LOCK.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/LOCK.json",
+    "original_sha256": "cc7a622aa0cd4ea4afdffbbf719a146ff0cb807c49fd61b6b462cb2913685d90",
+    "stored_sha256": "cc7a622aa0cd4ea4afdffbbf719a146ff0cb807c49fd61b6b462cb2913685d90"
+  },
+  "spectral_band_total_closure/MANIFEST.json": {
+    "encoding": "gzip",
+    "stored_path": "spectral_band_total_closure/MANIFEST.json.gz",
+    "original_sha256": "7c94c16b1d5824d76f0cd629a8d72c31975dce7b3c6884d50ef86f86d79d8dcb",
+    "stored_sha256": "860428fc6cef7dce4d020b1dab983c288bc91273629769d9b9791e3d241bc67a"
+  },
+  "spectral_band_total_closure/NEUTRON_DECAY_BAND_RESULTS.json": {
+    "encoding": "gzip",
+    "stored_path": "spectral_band_total_closure/NEUTRON_DECAY_BAND_RESULTS.json.gz",
+    "original_sha256": "c9c72390f1c47a228f8bc820f2f2e7a407f25e77ff99af57cebdcb8097105c02",
+    "stored_sha256": "775b48e35268c66ece5aa81a204c93572e60cd490733a490aa8ba209eb5af2d4"
+  },
+  "spectral_band_total_closure/NEUTRON_DECAY_JOB_STATUS.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/NEUTRON_DECAY_JOB_STATUS.json",
+    "original_sha256": "1ade6d029dc203bb66af69c2593a5fbd23d34e1773fb514c877addab77424fbf",
+    "stored_sha256": "1ade6d029dc203bb66af69c2593a5fbd23d34e1773fb514c877addab77424fbf"
+  },
+  "spectral_band_total_closure/PC_BAND_RESULTS.json": {
+    "encoding": "gzip",
+    "stored_path": "spectral_band_total_closure/PC_BAND_RESULTS.json.gz",
+    "original_sha256": "6771f8b156bae4c50a5572c1a283ea52aefe7e3a8329409fe609fb7753ed8873",
+    "stored_sha256": "7afe1d663fcd7f5ea2d3bc5bfb2a574481e5726e8ad20475c28e9ed0afdd10f2"
+  },
+  "spectral_band_total_closure/PC_JOB_STATUS.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/PC_JOB_STATUS.json",
+    "original_sha256": "281a544e3b4b1b3be477a268eac405a9e44ecc27c53fe0688966226167b835cf",
+    "stored_sha256": "281a544e3b4b1b3be477a268eac405a9e44ecc27c53fe0688966226167b835cf"
+  },
+  "spectral_band_total_closure/PUBLISHED_SOURCE.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/PUBLISHED_SOURCE.json",
+    "original_sha256": "a680b42af5f170d891872d846f49cab48008561fd9e83b5d70cf9bab781bdf0f",
+    "stored_sha256": "a680b42af5f170d891872d846f49cab48008561fd9e83b5d70cf9bab781bdf0f"
+  },
+  "spectral_band_total_closure/README.md": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/README.md",
+    "original_sha256": "7fb9337cd3add3b3f8cd8b4b1c347fdddc8094ceab247bd6eb58d0cdc20c2421",
+    "stored_sha256": "7fb9337cd3add3b3f8cd8b4b1c347fdddc8094ceab247bd6eb58d0cdc20c2421"
+  },
+  "spectral_band_total_closure/REPORT.md": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/REPORT.md",
+    "original_sha256": "83acefd6b1930ce69511419435194b04b46f1f7472a2e1227071e113c1685cf0",
+    "stored_sha256": "83acefd6b1930ce69511419435194b04b46f1f7472a2e1227071e113c1685cf0"
+  },
+  "spectral_band_total_closure/SOURCE_PIN.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/SOURCE_PIN.json",
+    "original_sha256": "576a9a2584a730bab076726cb968ac9d0cc696a741876b55bd3a9e86fe082f50",
+    "stored_sha256": "576a9a2584a730bab076726cb968ac9d0cc696a741876b55bd3a9e86fe082f50"
+  },
+  "spectral_band_total_closure/analyze.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/analyze.py",
+    "original_sha256": "bc3419748195861027d27f9ea23437d36755ff077a59410c400258cd1051c747",
+    "stored_sha256": "bc3419748195861027d27f9ea23437d36755ff077a59410c400258cd1051c747"
+  },
+  "spectral_band_total_closure/batch_controls.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/batch_controls.py",
+    "original_sha256": "c93738fbac7d7b302175c002acc72cafe7d8db0b6708666b5af24676062bcb1d",
+    "stored_sha256": "c93738fbac7d7b302175c002acc72cafe7d8db0b6708666b5af24676062bcb1d"
+  },
+  "spectral_band_total_closure/batch_events.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/batch_events.py",
+    "original_sha256": "479b5b0459483c5742c62223f4ce2b9286e69c4ad87d134efa5f8fcaa7986a51",
+    "stored_sha256": "479b5b0459483c5742c62223f4ce2b9286e69c4ad87d134efa5f8fcaa7986a51"
+  },
+  "spectral_band_total_closure/batch_nodes.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/batch_nodes.py",
+    "original_sha256": "0d52fa047396dbf7477cce68e4d6e523dca60d0021d49139ac831792dfa4655b",
+    "stored_sha256": "0d52fa047396dbf7477cce68e4d6e523dca60d0021d49139ac831792dfa4655b"
+  },
+  "spectral_band_total_closure/common.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/common.py",
+    "original_sha256": "db89b2fc222465de4bafb76584d6a008324c0b8d0784975d2afb48d7db601397",
+    "stored_sha256": "db89b2fc222465de4bafb76584d6a008324c0b8d0784975d2afb48d7db601397"
+  },
+  "spectral_band_total_closure/control_worker.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/control_worker.py",
+    "original_sha256": "a3cc69652c9f0f111af5d2081752da1996fe68751266e18a5f8b3ba921c9e1e3",
+    "stored_sha256": "a3cc69652c9f0f111af5d2081752da1996fe68751266e18a5f8b3ba921c9e1e3"
+  },
+  "spectral_band_total_closure/controls/control_00_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_00_0.json",
+    "original_sha256": "7fc23bf2aaf1077b8970d4eaad0100749c9d02c846bac908c72e721f03c3b48c",
+    "stored_sha256": "7fc23bf2aaf1077b8970d4eaad0100749c9d02c846bac908c72e721f03c3b48c"
+  },
+  "spectral_band_total_closure/controls/control_00_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_00_0.stdout.txt",
+    "original_sha256": "431f0316c40808d83696dfc4e7da04e1d4fdcbee942067428196423748e2b9b1",
+    "stored_sha256": "431f0316c40808d83696dfc4e7da04e1d4fdcbee942067428196423748e2b9b1"
+  },
+  "spectral_band_total_closure/controls/control_00_1.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_00_1.json",
+    "original_sha256": "d2bd35413e86276b468c1bcb82af76baec9d36efa70485fdf3ad426a4c1e0db4",
+    "stored_sha256": "d2bd35413e86276b468c1bcb82af76baec9d36efa70485fdf3ad426a4c1e0db4"
+  },
+  "spectral_band_total_closure/controls/control_00_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_00_1.stdout.txt",
+    "original_sha256": "f67eab1ea614289480ef74e0c96fc72bc32e1b0f80ca50b92c8560dc013c7bd4",
+    "stored_sha256": "f67eab1ea614289480ef74e0c96fc72bc32e1b0f80ca50b92c8560dc013c7bd4"
+  },
+  "spectral_band_total_closure/controls/control_01_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_01_0.json",
+    "original_sha256": "b012fdc3619ac21e8d1b04d1db3386a1643c340bd6e9bb95b8870b93f7a5742b",
+    "stored_sha256": "b012fdc3619ac21e8d1b04d1db3386a1643c340bd6e9bb95b8870b93f7a5742b"
+  },
+  "spectral_band_total_closure/controls/control_01_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_01_0.stdout.txt",
+    "original_sha256": "0f35cf429c1de23b0b7d819b561eb378f8e6a7e04300ff03c03799abceaa4f6b",
+    "stored_sha256": "0f35cf429c1de23b0b7d819b561eb378f8e6a7e04300ff03c03799abceaa4f6b"
+  },
+  "spectral_band_total_closure/controls/control_01_1.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_01_1.json",
+    "original_sha256": "774fe543b2c840a938e06d3e821869a32683d8654aadf02c19d0cd7fb26c2348",
+    "stored_sha256": "774fe543b2c840a938e06d3e821869a32683d8654aadf02c19d0cd7fb26c2348"
+  },
+  "spectral_band_total_closure/controls/control_01_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_01_1.stdout.txt",
+    "original_sha256": "401a7e1981a8e4073bada6a7707f73d4e8d807e7a9af1fc7f212571f21b261a3",
+    "stored_sha256": "401a7e1981a8e4073bada6a7707f73d4e8d807e7a9af1fc7f212571f21b261a3"
+  },
+  "spectral_band_total_closure/controls/control_02_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_02_0.json",
+    "original_sha256": "0387b7f27bd23cde337d6c4cc39bae201f589d4ec1c7388d33a2823c927ae178",
+    "stored_sha256": "0387b7f27bd23cde337d6c4cc39bae201f589d4ec1c7388d33a2823c927ae178"
+  },
+  "spectral_band_total_closure/controls/control_02_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_02_0.stdout.txt",
+    "original_sha256": "898f9092b363ea13df36ee740dcdd89f78702d728ef0d17dea67246e7919c66c",
+    "stored_sha256": "898f9092b363ea13df36ee740dcdd89f78702d728ef0d17dea67246e7919c66c"
+  },
+  "spectral_band_total_closure/controls/control_02_1.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_02_1.json",
+    "original_sha256": "22d3f8d4dbe8838dfe32b5fc1d7aade5cb02a9710b3377128503ceddf3c0393a",
+    "stored_sha256": "22d3f8d4dbe8838dfe32b5fc1d7aade5cb02a9710b3377128503ceddf3c0393a"
+  },
+  "spectral_band_total_closure/controls/control_02_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_02_1.stdout.txt",
+    "original_sha256": "acabbf9691a768a697739bd68190979dabf85929d7523b72ca0e44ed4f9414ab",
+    "stored_sha256": "acabbf9691a768a697739bd68190979dabf85929d7523b72ca0e44ed4f9414ab"
+  },
+  "spectral_band_total_closure/controls/control_03_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_03_0.json",
+    "original_sha256": "a1fb72cc81e25dcf9e35ab903951880ed3892383c87c228df0bd0cf9c504191c",
+    "stored_sha256": "a1fb72cc81e25dcf9e35ab903951880ed3892383c87c228df0bd0cf9c504191c"
+  },
+  "spectral_band_total_closure/controls/control_03_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_03_0.stdout.txt",
+    "original_sha256": "a437db5bf27b80c8c9f4477d3740d313a8c1337de8c0bfcf5febec35a11c96f6",
+    "stored_sha256": "a437db5bf27b80c8c9f4477d3740d313a8c1337de8c0bfcf5febec35a11c96f6"
+  },
+  "spectral_band_total_closure/controls/control_03_1.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_03_1.json",
+    "original_sha256": "d02660e132580cd49dc287890a27856715b9f147632d1712a2279cb5d234794d",
+    "stored_sha256": "d02660e132580cd49dc287890a27856715b9f147632d1712a2279cb5d234794d"
+  },
+  "spectral_band_total_closure/controls/control_03_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_03_1.stdout.txt",
+    "original_sha256": "840f144e520d5c6fd2e43b94f5c0f3721bfeed563039ebd4c750234da75f696e",
+    "stored_sha256": "840f144e520d5c6fd2e43b94f5c0f3721bfeed563039ebd4c750234da75f696e"
+  },
+  "spectral_band_total_closure/controls/control_04_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_04_0.json",
+    "original_sha256": "a1923318e1bdeb0cc1c964fcd62075dc06d424b61dde39747e36dbf0fef2f2d3",
+    "stored_sha256": "a1923318e1bdeb0cc1c964fcd62075dc06d424b61dde39747e36dbf0fef2f2d3"
+  },
+  "spectral_band_total_closure/controls/control_04_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_04_0.stdout.txt",
+    "original_sha256": "c29821851f3a69f0a29c3851b56cc42df67c0709b684a6f774ef5cc320d0e1b3",
+    "stored_sha256": "c29821851f3a69f0a29c3851b56cc42df67c0709b684a6f774ef5cc320d0e1b3"
+  },
+  "spectral_band_total_closure/controls/control_04_1.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_04_1.json",
+    "original_sha256": "34bdd3347d8db5d365fae23792c5899a8c45fb4dc0e498b266d249aca9220ff3",
+    "stored_sha256": "34bdd3347d8db5d365fae23792c5899a8c45fb4dc0e498b266d249aca9220ff3"
+  },
+  "spectral_band_total_closure/controls/control_04_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_04_1.stdout.txt",
+    "original_sha256": "a5ae35b9f34c7fb7ec51b211493eefbf358306ab1e4b178902e838f8dd404b01",
+    "stored_sha256": "a5ae35b9f34c7fb7ec51b211493eefbf358306ab1e4b178902e838f8dd404b01"
+  },
+  "spectral_band_total_closure/controls/control_05_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_05_0.json",
+    "original_sha256": "1329b3ef8c688624f2538276926f350c9c2dcd9027fc349a4447f2b73181c735",
+    "stored_sha256": "1329b3ef8c688624f2538276926f350c9c2dcd9027fc349a4447f2b73181c735"
+  },
+  "spectral_band_total_closure/controls/control_05_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_05_0.stdout.txt",
+    "original_sha256": "93149238b2ec9fb575fbcbba8340d8e48083ef3393c7ee3f28179b1c3de6b4aa",
+    "stored_sha256": "93149238b2ec9fb575fbcbba8340d8e48083ef3393c7ee3f28179b1c3de6b4aa"
+  },
+  "spectral_band_total_closure/controls/control_05_1.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_05_1.json",
+    "original_sha256": "d3df4431ca297ca2fdf3f27ef27a604449d936f98a372f0139436d251248d1d5",
+    "stored_sha256": "d3df4431ca297ca2fdf3f27ef27a604449d936f98a372f0139436d251248d1d5"
+  },
+  "spectral_band_total_closure/controls/control_05_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_05_1.stdout.txt",
+    "original_sha256": "03cebebf3fdafdaed09dd19ffb2f52dd0cf800880983f39666763503e1bb73f9",
+    "stored_sha256": "03cebebf3fdafdaed09dd19ffb2f52dd0cf800880983f39666763503e1bb73f9"
+  },
+  "spectral_band_total_closure/controls/control_06_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_06_0.json",
+    "original_sha256": "fbc9ff518bd041895b56be5467ccd1dd817d6886ce21b0af3f48e3fb43b129ce",
+    "stored_sha256": "fbc9ff518bd041895b56be5467ccd1dd817d6886ce21b0af3f48e3fb43b129ce"
+  },
+  "spectral_band_total_closure/controls/control_06_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_06_0.stdout.txt",
+    "original_sha256": "c3f9c91c4343b064e816f2cf19dec95d9c15b3d5073606e24d50b5e068a8f880",
+    "stored_sha256": "c3f9c91c4343b064e816f2cf19dec95d9c15b3d5073606e24d50b5e068a8f880"
+  },
+  "spectral_band_total_closure/controls/control_06_1.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_06_1.json",
+    "original_sha256": "515ab5cd5614a48152553e01365bd5c76f969f9d74f36fea06121307f10daad3",
+    "stored_sha256": "515ab5cd5614a48152553e01365bd5c76f969f9d74f36fea06121307f10daad3"
+  },
+  "spectral_band_total_closure/controls/control_06_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_06_1.stdout.txt",
+    "original_sha256": "44d0842bd0a26df14d36aec9c99686513f10879572fe7fd626d63ccd011b690e",
+    "stored_sha256": "44d0842bd0a26df14d36aec9c99686513f10879572fe7fd626d63ccd011b690e"
+  },
+  "spectral_band_total_closure/controls/control_07_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_07_0.json",
+    "original_sha256": "990974b490ab93faeb61745503a0fefc98b0489b6796ffedfcc72f6553f2caa6",
+    "stored_sha256": "990974b490ab93faeb61745503a0fefc98b0489b6796ffedfcc72f6553f2caa6"
+  },
+  "spectral_band_total_closure/controls/control_07_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_07_0.stdout.txt",
+    "original_sha256": "0f448a367325b9ad45f70462a8509fdb4322212ca142f17efee6689ec1eec688",
+    "stored_sha256": "0f448a367325b9ad45f70462a8509fdb4322212ca142f17efee6689ec1eec688"
+  },
+  "spectral_band_total_closure/controls/control_07_1.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_07_1.json",
+    "original_sha256": "0f4a9bd3857ddc779676a261fc740bf377b88f10e2114b428c6cac6674662c0c",
+    "stored_sha256": "0f4a9bd3857ddc779676a261fc740bf377b88f10e2114b428c6cac6674662c0c"
+  },
+  "spectral_band_total_closure/controls/control_07_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_07_1.stdout.txt",
+    "original_sha256": "2ea92b1caf664371e1cd016316a2b2bbec97307678c9e9cbd5b595e184e7d113",
+    "stored_sha256": "2ea92b1caf664371e1cd016316a2b2bbec97307678c9e9cbd5b595e184e7d113"
+  },
+  "spectral_band_total_closure/controls/control_08_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_08_0.json",
+    "original_sha256": "fc45feed5f13bb086e95b54f984d61eb566666d794341d0c69073ff9c4dfc7bc",
+    "stored_sha256": "fc45feed5f13bb086e95b54f984d61eb566666d794341d0c69073ff9c4dfc7bc"
+  },
+  "spectral_band_total_closure/controls/control_08_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_08_0.stdout.txt",
+    "original_sha256": "22bf4e2ac32ed6c3ad6410c83cb3019f99ad16be6f2923c2ed50376ced0e21df",
+    "stored_sha256": "22bf4e2ac32ed6c3ad6410c83cb3019f99ad16be6f2923c2ed50376ced0e21df"
+  },
+  "spectral_band_total_closure/controls/control_09_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_09_0.json",
+    "original_sha256": "eef2f78ba1151e9241a3bb1a7e3c26bafdba904fdd4f086c299a95a4f913b7f7",
+    "stored_sha256": "eef2f78ba1151e9241a3bb1a7e3c26bafdba904fdd4f086c299a95a4f913b7f7"
+  },
+  "spectral_band_total_closure/controls/control_09_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_09_0.stdout.txt",
+    "original_sha256": "61f81c15c1c3cfb0178a8be31e261f91a95d362c8ef2cebf0c0245873a9b3c9d",
+    "stored_sha256": "61f81c15c1c3cfb0178a8be31e261f91a95d362c8ef2cebf0c0245873a9b3c9d"
+  },
+  "spectral_band_total_closure/controls/control_10_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_10_0.json",
+    "original_sha256": "5570ca575758d202bcc9e2a2ecd3031f8c6884911c70b1c1f7b463dc5dccff26",
+    "stored_sha256": "5570ca575758d202bcc9e2a2ecd3031f8c6884911c70b1c1f7b463dc5dccff26"
+  },
+  "spectral_band_total_closure/controls/control_10_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_10_0.stdout.txt",
+    "original_sha256": "87d3e0e3134d9732b5b00f020a017094baa458115d512eb5212dddb64478a5e7",
+    "stored_sha256": "87d3e0e3134d9732b5b00f020a017094baa458115d512eb5212dddb64478a5e7"
+  },
+  "spectral_band_total_closure/controls/control_11_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_11_0.json",
+    "original_sha256": "fac8436f02d62f8b47d82cd7bfaac310b01484e0ebc5fd8643c5175ba94c0009",
+    "stored_sha256": "fac8436f02d62f8b47d82cd7bfaac310b01484e0ebc5fd8643c5175ba94c0009"
+  },
+  "spectral_band_total_closure/controls/control_11_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_11_0.stdout.txt",
+    "original_sha256": "e8214c00dc05bb7d0f833fb91035be54db4b75b0b2ac90bad3e5d687bc0e61bd",
+    "stored_sha256": "e8214c00dc05bb7d0f833fb91035be54db4b75b0b2ac90bad3e5d687bc0e61bd"
+  },
+  "spectral_band_total_closure/controls/control_12_0.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_12_0.json",
+    "original_sha256": "26fac2772a1b696736d0a2e15cf4ca41a9ae88d0ecb236b51351ac98584128db",
+    "stored_sha256": "26fac2772a1b696736d0a2e15cf4ca41a9ae88d0ecb236b51351ac98584128db"
+  },
+  "spectral_band_total_closure/controls/control_12_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/controls/control_12_0.stdout.txt",
+    "original_sha256": "a07f5944e212fc898ba2a867d36f743ccf32896735012d4d7fe025bd4768bb87",
+    "stored_sha256": "a07f5944e212fc898ba2a867d36f743ccf32896735012d4d7fe025bd4768bb87"
+  },
+  "spectral_band_total_closure/event_worker.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/event_worker.py",
+    "original_sha256": "f8508673ee6401ab640a23fbd7754bfa096c7429cf23e4b59b2820c3024396f3",
+    "stored_sha256": "f8508673ee6401ab640a23fbd7754bfa096c7429cf23e4b59b2820c3024396f3"
+  },
+  "spectral_band_total_closure/events/EC_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/EC_0.stdout.txt",
+    "original_sha256": "0dc6d312a0b06783e440cfc15e0fd4a126d1dfdd5539fb0ffe21e16ef5b8dc6d",
+    "stored_sha256": "0dc6d312a0b06783e440cfc15e0fd4a126d1dfdd5539fb0ffe21e16ef5b8dc6d"
+  },
+  "spectral_band_total_closure/events/EC_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/EC_1.stdout.txt",
+    "original_sha256": "cfa31af1ef975324e19eb30c3051593e88a6bfcb4b9ce8face61405c97ff1870",
+    "stored_sha256": "cfa31af1ef975324e19eb30c3051593e88a6bfcb4b9ce8face61405c97ff1870"
+  },
+  "spectral_band_total_closure/events/EC_2.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/EC_2.stdout.txt",
+    "original_sha256": "b38eafbdfb6fedbd17725d880131186cb6778214744b6f5578bb9cb8f02e1174",
+    "stored_sha256": "b38eafbdfb6fedbd17725d880131186cb6778214744b6f5578bb9cb8f02e1174"
+  },
+  "spectral_band_total_closure/events/EC_LTE.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/EC_LTE.json",
+    "original_sha256": "617c273671a196223eb0cb56c0d1cbee6b1828710a707c8ca9cdc429eb16300f",
+    "stored_sha256": "617c273671a196223eb0cb56c0d1cbee6b1828710a707c8ca9cdc429eb16300f"
+  },
+  "spectral_band_total_closure/events/EC_common_changed_affinity.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/EC_common_changed_affinity.json",
+    "original_sha256": "b908ba9440985e631d9fcaad9c1216510a8e783fc8db21126febbdad5d29a266",
+    "stored_sha256": "b908ba9440985e631d9fcaad9c1216510a8e783fc8db21126febbdad5d29a266"
+  },
+  "spectral_band_total_closure/events/EC_empty.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/EC_empty.json",
+    "original_sha256": "10c7dc59ad5ca125ea1d4ae168ca55480000af8e48ec4096a502f3fcd489d0a0",
+    "stored_sha256": "10c7dc59ad5ca125ea1d4ae168ca55480000af8e48ec4096a502f3fcd489d0a0"
+  },
+  "spectral_band_total_closure/events/NEUTRON_DECAY_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/NEUTRON_DECAY_0.stdout.txt",
+    "original_sha256": "53522a86dabd9ac291ca72c8f43b0b74f8e02a474599a61b90c2c774b1a68246",
+    "stored_sha256": "53522a86dabd9ac291ca72c8f43b0b74f8e02a474599a61b90c2c774b1a68246"
+  },
+  "spectral_band_total_closure/events/NEUTRON_DECAY_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/NEUTRON_DECAY_1.stdout.txt",
+    "original_sha256": "604feb6043c5eafe219819863358d8dd92f600347cfb9c911acd741019bd0379",
+    "stored_sha256": "604feb6043c5eafe219819863358d8dd92f600347cfb9c911acd741019bd0379"
+  },
+  "spectral_band_total_closure/events/NEUTRON_DECAY_2.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/NEUTRON_DECAY_2.stdout.txt",
+    "original_sha256": "1b06b32544baa6c5b1364ba256ced50ab9ca06e9705dc9801b809cd93a0ba943",
+    "stored_sha256": "1b06b32544baa6c5b1364ba256ced50ab9ca06e9705dc9801b809cd93a0ba943"
+  },
+  "spectral_band_total_closure/events/NEUTRON_DECAY_LTE.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/NEUTRON_DECAY_LTE.json",
+    "original_sha256": "245e894a0523d9995ed4184ea7e90a6d95e184c37f39b50c38bb6e3b7688ed4d",
+    "stored_sha256": "245e894a0523d9995ed4184ea7e90a6d95e184c37f39b50c38bb6e3b7688ed4d"
+  },
+  "spectral_band_total_closure/events/NEUTRON_DECAY_common_changed_affinity.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/NEUTRON_DECAY_common_changed_affinity.json",
+    "original_sha256": "42a71e3739674f2778530579a2267362d1c6b326849d2d94fb6b7644a28d898d",
+    "stored_sha256": "42a71e3739674f2778530579a2267362d1c6b326849d2d94fb6b7644a28d898d"
+  },
+  "spectral_band_total_closure/events/NEUTRON_DECAY_empty.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/NEUTRON_DECAY_empty.json",
+    "original_sha256": "57b2d1d5200f354aa0905158992bdf1c7089785bc944e6421db2bb5192ec5862",
+    "stored_sha256": "57b2d1d5200f354aa0905158992bdf1c7089785bc944e6421db2bb5192ec5862"
+  },
+  "spectral_band_total_closure/events/PC_0.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/PC_0.stdout.txt",
+    "original_sha256": "7b5a324e21710b7cbeae1a718935222dd9f27671b692cb74ed685383fef3e6d9",
+    "stored_sha256": "7b5a324e21710b7cbeae1a718935222dd9f27671b692cb74ed685383fef3e6d9"
+  },
+  "spectral_band_total_closure/events/PC_1.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/PC_1.stdout.txt",
+    "original_sha256": "8aa61718cd6870803eccc23773b4e6b55e024b91b3180e04303c61d2aa27ba2e",
+    "stored_sha256": "8aa61718cd6870803eccc23773b4e6b55e024b91b3180e04303c61d2aa27ba2e"
+  },
+  "spectral_band_total_closure/events/PC_2.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/PC_2.stdout.txt",
+    "original_sha256": "976db3f40e74d64dd4da1e8791d17aaa61e79f8899e5f963130c2d0b5508c0b5",
+    "stored_sha256": "976db3f40e74d64dd4da1e8791d17aaa61e79f8899e5f963130c2d0b5508c0b5"
+  },
+  "spectral_band_total_closure/events/PC_LTE.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/PC_LTE.json",
+    "original_sha256": "f590a8acd774e0474de2776078e82b680bf042fd506ec1f52e6d272e9179f9aa",
+    "stored_sha256": "f590a8acd774e0474de2776078e82b680bf042fd506ec1f52e6d272e9179f9aa"
+  },
+  "spectral_band_total_closure/events/PC_common_changed_affinity.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/PC_common_changed_affinity.json",
+    "original_sha256": "beb2e049f56a66638d49f416c699e5a6db268e995e35245068f7cedf27ca616b",
+    "stored_sha256": "beb2e049f56a66638d49f416c699e5a6db268e995e35245068f7cedf27ca616b"
+  },
+  "spectral_band_total_closure/events/PC_empty.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/events/PC_empty.json",
+    "original_sha256": "7a73f446be095af31958ac66d7709593c2756dea5fe466dfb4430d5fd5ec9444",
+    "stored_sha256": "7a73f446be095af31958ac66d7709593c2756dea5fe466dfb4430d5fd5ec9444"
+  },
+  "spectral_band_total_closure/freeze.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/freeze.py",
+    "original_sha256": "222288f9712917a2a4a578c50179773dc0810185d18e94daecbc6083a3311781",
+    "stored_sha256": "222288f9712917a2a4a578c50179773dc0810185d18e94daecbc6083a3311781"
+  },
+  "spectral_band_total_closure/initial_freeze_key_failure.py.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/initial_freeze_key_failure.py.txt",
+    "original_sha256": "19bdb9418f891811b15725cea33b61134892c5b6cb623feef506dd379b285b96",
+    "stored_sha256": "19bdb9418f891811b15725cea33b61134892c5b6cb623feef506dd379b285b96"
+  },
+  "spectral_band_total_closure/initial_freeze_key_failure.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/initial_freeze_key_failure.txt",
+    "original_sha256": "da9fd140a1f9ccc7d7e80120bca5e635c3bf05133dca7a61949799e6ce4d717f",
+    "stored_sha256": "da9fd140a1f9ccc7d7e80120bca5e635c3bf05133dca7a61949799e6ce4d717f"
+  },
+  "spectral_band_total_closure/node_worker.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/node_worker.py",
+    "original_sha256": "f824a7699026369c4eb7acf8a67761024c27dcf99da6cfe52a927c649a26bc02",
+    "stored_sha256": "f824a7699026369c4eb7acf8a67761024c27dcf99da6cfe52a927c649a26bc02"
+  },
+  "spectral_band_total_closure/postprocess.py": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/postprocess.py",
+    "original_sha256": "0f6e8ecc898e6b567cc76114b35068ce4e9c946a8784f108ceb4fc59d3eb5039",
+    "stored_sha256": "0f6e8ecc898e6b567cc76114b35068ce4e9c946a8784f108ceb4fc59d3eb5039"
+  },
+  "spectral_band_total_closure/raw/EC_12_p0_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p0_00.json",
+    "original_sha256": "a15796899c32f77da4cec3b63ff2b754534b0b169adc989930e52bd6ead782c2",
+    "stored_sha256": "a15796899c32f77da4cec3b63ff2b754534b0b169adc989930e52bd6ead782c2"
+  },
+  "spectral_band_total_closure/raw/EC_12_p0_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p0_00.stdout.txt",
+    "original_sha256": "027f1bda5f62518f1781f618af7e8b21b65beaf9a0c26b8e15e1b2fa94733d11",
+    "stored_sha256": "027f1bda5f62518f1781f618af7e8b21b65beaf9a0c26b8e15e1b2fa94733d11"
+  },
+  "spectral_band_total_closure/raw/EC_12_p0_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p0_04.json",
+    "original_sha256": "731a99dbc07e2cb3b8646828379208019a33c21d612fcdd7b27c44768dfc5156",
+    "stored_sha256": "731a99dbc07e2cb3b8646828379208019a33c21d612fcdd7b27c44768dfc5156"
+  },
+  "spectral_band_total_closure/raw/EC_12_p0_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p0_04.stdout.txt",
+    "original_sha256": "ae4f31f41c952262e436978ac92db18631c8516178857adb2696155c23f3e973",
+    "stored_sha256": "ae4f31f41c952262e436978ac92db18631c8516178857adb2696155c23f3e973"
+  },
+  "spectral_band_total_closure/raw/EC_12_p0_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p0_08.json",
+    "original_sha256": "93833ed43824fd5c839f6fb85711d01571a6dfcef7a793a00eb02a2d9edd7a2b",
+    "stored_sha256": "93833ed43824fd5c839f6fb85711d01571a6dfcef7a793a00eb02a2d9edd7a2b"
+  },
+  "spectral_band_total_closure/raw/EC_12_p0_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p0_08.stdout.txt",
+    "original_sha256": "6a607caed031429040346041ee26a49c7b880f8276ff99c292184afd72bd7aae",
+    "stored_sha256": "6a607caed031429040346041ee26a49c7b880f8276ff99c292184afd72bd7aae"
+  },
+  "spectral_band_total_closure/raw/EC_12_p1_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p1_00.json",
+    "original_sha256": "564f3b999c18381d553770a5078f9327334add3190027a157b70f08b4ad4c5f9",
+    "stored_sha256": "564f3b999c18381d553770a5078f9327334add3190027a157b70f08b4ad4c5f9"
+  },
+  "spectral_band_total_closure/raw/EC_12_p1_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p1_00.stdout.txt",
+    "original_sha256": "e7205e5f96e93cfda89fb04574d26f3309789dfd6b6f7a2a6e83985b6547ac4b",
+    "stored_sha256": "e7205e5f96e93cfda89fb04574d26f3309789dfd6b6f7a2a6e83985b6547ac4b"
+  },
+  "spectral_band_total_closure/raw/EC_12_p1_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p1_04.json",
+    "original_sha256": "07a15f89fbd0cf4975733aaf3656f8c900e0a22b4a3613e272c72d251e6cd1d1",
+    "stored_sha256": "07a15f89fbd0cf4975733aaf3656f8c900e0a22b4a3613e272c72d251e6cd1d1"
+  },
+  "spectral_band_total_closure/raw/EC_12_p1_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p1_04.stdout.txt",
+    "original_sha256": "0c2ce5ceb96fced2ce586867a520566e5854a0fa2de1b252fe11d99dea9a37f0",
+    "stored_sha256": "0c2ce5ceb96fced2ce586867a520566e5854a0fa2de1b252fe11d99dea9a37f0"
+  },
+  "spectral_band_total_closure/raw/EC_12_p1_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p1_08.json",
+    "original_sha256": "f2d7535d0f07cc2941f61d82f7e94bef7fddf9b6d81af1d3fb7828ebb324002c",
+    "stored_sha256": "f2d7535d0f07cc2941f61d82f7e94bef7fddf9b6d81af1d3fb7828ebb324002c"
+  },
+  "spectral_band_total_closure/raw/EC_12_p1_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p1_08.stdout.txt",
+    "original_sha256": "66768a916dbaa05b7a7288f48d03e7d2280b318788581dcf2c6af5366718d8ba",
+    "stored_sha256": "66768a916dbaa05b7a7288f48d03e7d2280b318788581dcf2c6af5366718d8ba"
+  },
+  "spectral_band_total_closure/raw/EC_12_p2_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p2_00.json",
+    "original_sha256": "26c3407fa10b0f0d9ae9c5fdc7e9c6faa05cfa67dc03feeb58997a5b0cce9dcf",
+    "stored_sha256": "26c3407fa10b0f0d9ae9c5fdc7e9c6faa05cfa67dc03feeb58997a5b0cce9dcf"
+  },
+  "spectral_band_total_closure/raw/EC_12_p2_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p2_00.stdout.txt",
+    "original_sha256": "5e99eb3ea19c35e70a75ee041b0d1a072fe9be5bfe43f041b0230648dbfd03ab",
+    "stored_sha256": "5e99eb3ea19c35e70a75ee041b0d1a072fe9be5bfe43f041b0230648dbfd03ab"
+  },
+  "spectral_band_total_closure/raw/EC_12_p2_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p2_04.json",
+    "original_sha256": "80d0d8edd9a1f877f66055952a737371b0a4af80326904e5a0b4d62818c1009c",
+    "stored_sha256": "80d0d8edd9a1f877f66055952a737371b0a4af80326904e5a0b4d62818c1009c"
+  },
+  "spectral_band_total_closure/raw/EC_12_p2_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p2_04.stdout.txt",
+    "original_sha256": "8cc3b12b26dd2ae61660bf6b205d0a44ffe2b2d2be936d4949b85b9e19652951",
+    "stored_sha256": "8cc3b12b26dd2ae61660bf6b205d0a44ffe2b2d2be936d4949b85b9e19652951"
+  },
+  "spectral_band_total_closure/raw/EC_12_p2_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p2_08.json",
+    "original_sha256": "10565c338bdc33ef09efcbd9cf3003517dc89fe7b7111211331f94c2e91eb258",
+    "stored_sha256": "10565c338bdc33ef09efcbd9cf3003517dc89fe7b7111211331f94c2e91eb258"
+  },
+  "spectral_band_total_closure/raw/EC_12_p2_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p2_08.stdout.txt",
+    "original_sha256": "b7d825c3a3e4fa694a41038d3767277f8b41a8f06c326948b92e7819f3c009b0",
+    "stored_sha256": "b7d825c3a3e4fa694a41038d3767277f8b41a8f06c326948b92e7819f3c009b0"
+  },
+  "spectral_band_total_closure/raw/EC_12_p3_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p3_00.json",
+    "original_sha256": "c6a3c11ce64df7595ec1bc204fd86a80804e705059f1db43e61cd088c806f13f",
+    "stored_sha256": "c6a3c11ce64df7595ec1bc204fd86a80804e705059f1db43e61cd088c806f13f"
+  },
+  "spectral_band_total_closure/raw/EC_12_p3_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p3_00.stdout.txt",
+    "original_sha256": "827fe346fad7bc7609aa02bdd9b59a9e75811be4aaf3866864b8411848840029",
+    "stored_sha256": "827fe346fad7bc7609aa02bdd9b59a9e75811be4aaf3866864b8411848840029"
+  },
+  "spectral_band_total_closure/raw/EC_12_p3_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p3_04.json",
+    "original_sha256": "7fcb7097a67109ae9f73aa924b12921ff00c786c21479b155bf10ff6a5c8b4ec",
+    "stored_sha256": "7fcb7097a67109ae9f73aa924b12921ff00c786c21479b155bf10ff6a5c8b4ec"
+  },
+  "spectral_band_total_closure/raw/EC_12_p3_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p3_04.stdout.txt",
+    "original_sha256": "87eca51974b764ac4e8e0146f3ee4127648cf3ceea828fe7def81343d95da5bc",
+    "stored_sha256": "87eca51974b764ac4e8e0146f3ee4127648cf3ceea828fe7def81343d95da5bc"
+  },
+  "spectral_band_total_closure/raw/EC_12_p3_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p3_08.json",
+    "original_sha256": "2df93d379f0781cf479ce609e28ac78481ac71b5bbde1be4077719e44e35fe93",
+    "stored_sha256": "2df93d379f0781cf479ce609e28ac78481ac71b5bbde1be4077719e44e35fe93"
+  },
+  "spectral_band_total_closure/raw/EC_12_p3_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p3_08.stdout.txt",
+    "original_sha256": "c7cc18178ce9a7232cc0b267b3160e309b0825493c2bb73016edee79cc589d87",
+    "stored_sha256": "c7cc18178ce9a7232cc0b267b3160e309b0825493c2bb73016edee79cc589d87"
+  },
+  "spectral_band_total_closure/raw/EC_12_p4_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p4_00.json",
+    "original_sha256": "5aafb4b985409e699d60a42ebf713b1254a606d838b93b9d6948e8b909db2435",
+    "stored_sha256": "5aafb4b985409e699d60a42ebf713b1254a606d838b93b9d6948e8b909db2435"
+  },
+  "spectral_band_total_closure/raw/EC_12_p4_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p4_00.stdout.txt",
+    "original_sha256": "4baf5f93ea661d22a28d8b9d384c757172dca1ad61aac77885f175b5f8d8925f",
+    "stored_sha256": "4baf5f93ea661d22a28d8b9d384c757172dca1ad61aac77885f175b5f8d8925f"
+  },
+  "spectral_band_total_closure/raw/EC_12_p4_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p4_04.json",
+    "original_sha256": "8db920807887b3f11062bdd3fe5acc5cbc95819347c66f39c0edd9e0e576dbad",
+    "stored_sha256": "8db920807887b3f11062bdd3fe5acc5cbc95819347c66f39c0edd9e0e576dbad"
+  },
+  "spectral_band_total_closure/raw/EC_12_p4_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p4_04.stdout.txt",
+    "original_sha256": "16036475d34a70104fec44d520167592526677459d46a0a2b76a0f8ae2310a99",
+    "stored_sha256": "16036475d34a70104fec44d520167592526677459d46a0a2b76a0f8ae2310a99"
+  },
+  "spectral_band_total_closure/raw/EC_12_p4_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p4_08.json",
+    "original_sha256": "c04bf6f3a4b75b198e3b0fe0aae23635c85126aac48125b6516fd24c0cf2e5c7",
+    "stored_sha256": "c04bf6f3a4b75b198e3b0fe0aae23635c85126aac48125b6516fd24c0cf2e5c7"
+  },
+  "spectral_band_total_closure/raw/EC_12_p4_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_12_p4_08.stdout.txt",
+    "original_sha256": "3b8f43c27a5013ca1ec6ae27dee5eb00921e804e21d3a638ffb4ff42a301ebc0",
+    "stored_sha256": "3b8f43c27a5013ca1ec6ae27dee5eb00921e804e21d3a638ffb4ff42a301ebc0"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_00.json",
+    "original_sha256": "5cfa7d8be62dadba9a5f2ca1d3aa1ca5cf89ccdb1a1186ac49c6c8ce39f2c6bd",
+    "stored_sha256": "5cfa7d8be62dadba9a5f2ca1d3aa1ca5cf89ccdb1a1186ac49c6c8ce39f2c6bd"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_00.stdout.txt",
+    "original_sha256": "c21c570dfcd7c8c24cf58474740a48d2369189a15da80a3f0b7a66999246cf76",
+    "stored_sha256": "c21c570dfcd7c8c24cf58474740a48d2369189a15da80a3f0b7a66999246cf76"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_04.json",
+    "original_sha256": "224e3ce3d220fcdc8cd7dfde4babdd5e8749ca94d8eb0f1ea8067fa4a156f884",
+    "stored_sha256": "224e3ce3d220fcdc8cd7dfde4babdd5e8749ca94d8eb0f1ea8067fa4a156f884"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_04.stdout.txt",
+    "original_sha256": "086a20ae38846acec8429bd77006f26fd0dc6e2933a0bff69b98d87eda565fba",
+    "stored_sha256": "086a20ae38846acec8429bd77006f26fd0dc6e2933a0bff69b98d87eda565fba"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_08.json",
+    "original_sha256": "4b00de974323d6a375d735b6881693d086d85cfc9c2a148283015c81641e40a6",
+    "stored_sha256": "4b00de974323d6a375d735b6881693d086d85cfc9c2a148283015c81641e40a6"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_08.stdout.txt",
+    "original_sha256": "ebb413655d24187a2aef0f450185f11d7a969697b07e5d96479a222cf22f6aca",
+    "stored_sha256": "ebb413655d24187a2aef0f450185f11d7a969697b07e5d96479a222cf22f6aca"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_12.json",
+    "original_sha256": "2342d76f2779de61c887da2a39b9acc4f9efcd1bd27db1d5c0a0968900aa6024",
+    "stored_sha256": "2342d76f2779de61c887da2a39b9acc4f9efcd1bd27db1d5c0a0968900aa6024"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_12.stdout.txt",
+    "original_sha256": "4efb6e8807cb74499dc028695707529a072ce37390b3d43307f73dc5877945e1",
+    "stored_sha256": "4efb6e8807cb74499dc028695707529a072ce37390b3d43307f73dc5877945e1"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_16.json",
+    "original_sha256": "55386353138b7ca8e7f2b7b66a2d72fbd877a1763683564d6a892f2476cde9a9",
+    "stored_sha256": "55386353138b7ca8e7f2b7b66a2d72fbd877a1763683564d6a892f2476cde9a9"
+  },
+  "spectral_band_total_closure/raw/EC_20_p0_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p0_16.stdout.txt",
+    "original_sha256": "46610f1d7a9062116bb57fb928417770d0073853a6c03ea6e7ead5b9a16a2d1c",
+    "stored_sha256": "46610f1d7a9062116bb57fb928417770d0073853a6c03ea6e7ead5b9a16a2d1c"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_00.json",
+    "original_sha256": "d6dc405139a02de4ce15ab67bff3dc7416e6531e5e0d59f699c005ec6665dc62",
+    "stored_sha256": "d6dc405139a02de4ce15ab67bff3dc7416e6531e5e0d59f699c005ec6665dc62"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_00.stdout.txt",
+    "original_sha256": "7748d7c6fe0b27fc209c4b7f4249f77a159ed22ffe4fefee888bd9bc0d5e770d",
+    "stored_sha256": "7748d7c6fe0b27fc209c4b7f4249f77a159ed22ffe4fefee888bd9bc0d5e770d"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_04.json",
+    "original_sha256": "6754a8f029ae18fff4c07630660e4bbcea1adb3bb22fb4adb17b9d80dc6b41d3",
+    "stored_sha256": "6754a8f029ae18fff4c07630660e4bbcea1adb3bb22fb4adb17b9d80dc6b41d3"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_04.stdout.txt",
+    "original_sha256": "306ec8c3d3a4a49a14beaea7291637d9cc89258918133bb648c489b7541ef0bd",
+    "stored_sha256": "306ec8c3d3a4a49a14beaea7291637d9cc89258918133bb648c489b7541ef0bd"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_08.json",
+    "original_sha256": "93d411eed0cce621bcc662119890e820120005e417c7f0c3a585ddbb87352d5d",
+    "stored_sha256": "93d411eed0cce621bcc662119890e820120005e417c7f0c3a585ddbb87352d5d"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_08.stdout.txt",
+    "original_sha256": "e34dd79a520829f4380e9959aebdac09a85b4efba294412c8820e48bf30a2284",
+    "stored_sha256": "e34dd79a520829f4380e9959aebdac09a85b4efba294412c8820e48bf30a2284"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_12.json",
+    "original_sha256": "af03184a144b4c5c79fcd09c5eabdc7d4c873141f121fa6614db3c97225aa33a",
+    "stored_sha256": "af03184a144b4c5c79fcd09c5eabdc7d4c873141f121fa6614db3c97225aa33a"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_12.stdout.txt",
+    "original_sha256": "b8d7d3bfe63aa4f244a3b4ee1bb0931ec1ed5fcb878f1efb30d8ff18ae82a7ea",
+    "stored_sha256": "b8d7d3bfe63aa4f244a3b4ee1bb0931ec1ed5fcb878f1efb30d8ff18ae82a7ea"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_16.json",
+    "original_sha256": "42527cea1ac9f9a4882bfc0038a2061c396dd32934b208011f2bdf644152ae4d",
+    "stored_sha256": "42527cea1ac9f9a4882bfc0038a2061c396dd32934b208011f2bdf644152ae4d"
+  },
+  "spectral_band_total_closure/raw/EC_20_p1_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p1_16.stdout.txt",
+    "original_sha256": "4e78a0269ea54bebbdfe9f14c762261312e6beaaadea6857850847a7975e232b",
+    "stored_sha256": "4e78a0269ea54bebbdfe9f14c762261312e6beaaadea6857850847a7975e232b"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_00.json",
+    "original_sha256": "0201a86c0d653413228f4c68882e2049702d9fd268507c67b4e78e2e70b8bcce",
+    "stored_sha256": "0201a86c0d653413228f4c68882e2049702d9fd268507c67b4e78e2e70b8bcce"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_00.stdout.txt",
+    "original_sha256": "405ffd0abbc9e24f05575a084c7c015c80d0c476792824212ffb24282b0ef0ae",
+    "stored_sha256": "405ffd0abbc9e24f05575a084c7c015c80d0c476792824212ffb24282b0ef0ae"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_04.json",
+    "original_sha256": "5eeb22795337dfd43a42d355a338cbcde9d651a7f465e205c4f290acb6232762",
+    "stored_sha256": "5eeb22795337dfd43a42d355a338cbcde9d651a7f465e205c4f290acb6232762"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_04.stdout.txt",
+    "original_sha256": "52e4e30963945eba2bb2ce0b503ba0a57dbff08871304961c32d907ec1f0b64c",
+    "stored_sha256": "52e4e30963945eba2bb2ce0b503ba0a57dbff08871304961c32d907ec1f0b64c"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_08.json",
+    "original_sha256": "f04494d0686576dbba677377bddd98198a9622b9525d86d863b987df2f8bcae6",
+    "stored_sha256": "f04494d0686576dbba677377bddd98198a9622b9525d86d863b987df2f8bcae6"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_08.stdout.txt",
+    "original_sha256": "07d5316b9aaa9ef6cfbea2577832d6d12f6668d2a22990e5dba3cf9531d1d52d",
+    "stored_sha256": "07d5316b9aaa9ef6cfbea2577832d6d12f6668d2a22990e5dba3cf9531d1d52d"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_12.json",
+    "original_sha256": "c22a7513b91261b3aa58601b1ff7e654b08bcc35aa9f9cb9065d9634e6af55bd",
+    "stored_sha256": "c22a7513b91261b3aa58601b1ff7e654b08bcc35aa9f9cb9065d9634e6af55bd"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_12.stdout.txt",
+    "original_sha256": "6ba1617fd56c44d1e037b6114255c9c7ba6b171c7b3ef782c5154ad5d2bb4da2",
+    "stored_sha256": "6ba1617fd56c44d1e037b6114255c9c7ba6b171c7b3ef782c5154ad5d2bb4da2"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_16.json",
+    "original_sha256": "c4547c90c02138956a6089bd66c49d8fb3eeb6534b6b3cb239928eea5de8d224",
+    "stored_sha256": "c4547c90c02138956a6089bd66c49d8fb3eeb6534b6b3cb239928eea5de8d224"
+  },
+  "spectral_band_total_closure/raw/EC_20_p2_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p2_16.stdout.txt",
+    "original_sha256": "510436694d48411fdcb494727fefd8b58325121496e1fb0d7fcb8ef768397bf9",
+    "stored_sha256": "510436694d48411fdcb494727fefd8b58325121496e1fb0d7fcb8ef768397bf9"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_00.json",
+    "original_sha256": "79cc95029fa5764608c4f2ea4ca9e00005e102982014ff25ae348c0775983e8e",
+    "stored_sha256": "79cc95029fa5764608c4f2ea4ca9e00005e102982014ff25ae348c0775983e8e"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_00.stdout.txt",
+    "original_sha256": "a9135cc80980727e6d26e181572f4ad84e6ce821cb952ae90edbc735b1cf3142",
+    "stored_sha256": "a9135cc80980727e6d26e181572f4ad84e6ce821cb952ae90edbc735b1cf3142"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_04.json",
+    "original_sha256": "ff4dc225fe85b02a4413dea8bf0073c7e5bfe6afd36b84a925b111ee071b689a",
+    "stored_sha256": "ff4dc225fe85b02a4413dea8bf0073c7e5bfe6afd36b84a925b111ee071b689a"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_04.stdout.txt",
+    "original_sha256": "32aa662b73fc79ee18c16954f9009c51514dca3dafc3fcc2e4988bec32fad639",
+    "stored_sha256": "32aa662b73fc79ee18c16954f9009c51514dca3dafc3fcc2e4988bec32fad639"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_08.json",
+    "original_sha256": "4aa87aa8f4b3779017a77d0a275cbd0e9a160da745e9d205a7342607d8b4b440",
+    "stored_sha256": "4aa87aa8f4b3779017a77d0a275cbd0e9a160da745e9d205a7342607d8b4b440"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_08.stdout.txt",
+    "original_sha256": "ce144b9f60c81e1b19d56551b0bed82a48173afdd554a114822f64d24c6aff97",
+    "stored_sha256": "ce144b9f60c81e1b19d56551b0bed82a48173afdd554a114822f64d24c6aff97"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_12.json",
+    "original_sha256": "2e3af7cbdf3464859a9eb8c10c980fb5af620133af17b5610de8d1a522e871c7",
+    "stored_sha256": "2e3af7cbdf3464859a9eb8c10c980fb5af620133af17b5610de8d1a522e871c7"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_12.stdout.txt",
+    "original_sha256": "56c9f246d25eda226ee933248dda61a0cf39cce3133557c02346fb2136230cc2",
+    "stored_sha256": "56c9f246d25eda226ee933248dda61a0cf39cce3133557c02346fb2136230cc2"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_16.json",
+    "original_sha256": "5cb91d759ce97784e14c83c0fa4615add766f53de6cbd20dee88a9ffdfccecac",
+    "stored_sha256": "5cb91d759ce97784e14c83c0fa4615add766f53de6cbd20dee88a9ffdfccecac"
+  },
+  "spectral_band_total_closure/raw/EC_20_p3_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p3_16.stdout.txt",
+    "original_sha256": "67a32b11077dde9e2997a8f2590bbb88eff6d677bd8146fc5af26422223ea6e2",
+    "stored_sha256": "67a32b11077dde9e2997a8f2590bbb88eff6d677bd8146fc5af26422223ea6e2"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_00.json",
+    "original_sha256": "fa3abd2a19cda00c6cb48963a5f80490e9c108b9725ca71f417925c91d1b9bd4",
+    "stored_sha256": "fa3abd2a19cda00c6cb48963a5f80490e9c108b9725ca71f417925c91d1b9bd4"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_00.stdout.txt",
+    "original_sha256": "516ec30625e1b5afd7c25bed9b0e76035629dc41f8857f2265a3d24612cf669e",
+    "stored_sha256": "516ec30625e1b5afd7c25bed9b0e76035629dc41f8857f2265a3d24612cf669e"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_04.json",
+    "original_sha256": "be4e7ea05fe6f81287093c65551a6ca644f2d9aace63546682d94639c45dc6a7",
+    "stored_sha256": "be4e7ea05fe6f81287093c65551a6ca644f2d9aace63546682d94639c45dc6a7"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_04.stdout.txt",
+    "original_sha256": "dc608b26fb6da26ffb7538defe55a392f7a7b7070f4127c2a2f067fe2671dbc7",
+    "stored_sha256": "dc608b26fb6da26ffb7538defe55a392f7a7b7070f4127c2a2f067fe2671dbc7"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_08.json",
+    "original_sha256": "b1256f2482e77c6d2e00d80ee6e5d211fc9103eb3b90d08e8a6160610ec4ff1b",
+    "stored_sha256": "b1256f2482e77c6d2e00d80ee6e5d211fc9103eb3b90d08e8a6160610ec4ff1b"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_08.stdout.txt",
+    "original_sha256": "9c3058fee64809cf9510d53a6df195103882e2539152a9f011f95c3ded83a982",
+    "stored_sha256": "9c3058fee64809cf9510d53a6df195103882e2539152a9f011f95c3ded83a982"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_12.json",
+    "original_sha256": "5422ad3ea128744cb2dbb5d4e487eae6ca491783f1a732a7d79f5c7a765a3361",
+    "stored_sha256": "5422ad3ea128744cb2dbb5d4e487eae6ca491783f1a732a7d79f5c7a765a3361"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_12.stdout.txt",
+    "original_sha256": "e933b9a639199ace5516c468696ebc70d3dbb1487ad282ed9fcbab4f57855e8a",
+    "stored_sha256": "e933b9a639199ace5516c468696ebc70d3dbb1487ad282ed9fcbab4f57855e8a"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_16.json",
+    "original_sha256": "074320b188948425967429a23cea4ed5b1fb09aadbabe547cd6cb1b5b28e5758",
+    "stored_sha256": "074320b188948425967429a23cea4ed5b1fb09aadbabe547cd6cb1b5b28e5758"
+  },
+  "spectral_band_total_closure/raw/EC_20_p4_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/EC_20_p4_16.stdout.txt",
+    "original_sha256": "665b565680913284b27091784a3dafb10338c866cffe14ac1aa6ea8efbbc7a29",
+    "stored_sha256": "665b565680913284b27091784a3dafb10338c866cffe14ac1aa6ea8efbbc7a29"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_00.json",
+    "original_sha256": "9251468c9786ad0490a8e5197763e6ec4f6cafb61f233aea13a036de17a1b757",
+    "stored_sha256": "9251468c9786ad0490a8e5197763e6ec4f6cafb61f233aea13a036de17a1b757"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_00.stdout.txt",
+    "original_sha256": "5e5783b13892972b8643a18086d80ede7a373cae91419ae77d8816689642e0c8",
+    "stored_sha256": "5e5783b13892972b8643a18086d80ede7a373cae91419ae77d8816689642e0c8"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_04.json",
+    "original_sha256": "189cc8fc11abe43e0aff8481d80e93163be797e857062920d7ba4da03bdd110c",
+    "stored_sha256": "189cc8fc11abe43e0aff8481d80e93163be797e857062920d7ba4da03bdd110c"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_04.stdout.txt",
+    "original_sha256": "e83dc07ce178d3f5b69dfb4fb704a6a53fdf7392f2d27425d7ee25dc54cd01ab",
+    "stored_sha256": "e83dc07ce178d3f5b69dfb4fb704a6a53fdf7392f2d27425d7ee25dc54cd01ab"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_08.json",
+    "original_sha256": "2cf7aa0a4902133c8b39bb8d17af8deb2d14766dad12f22ec54e86d9ac9a169d",
+    "stored_sha256": "2cf7aa0a4902133c8b39bb8d17af8deb2d14766dad12f22ec54e86d9ac9a169d"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p0_08.stdout.txt",
+    "original_sha256": "916f08d5e8aacea1d2e2b0a77b8910a41e27cdad94a804235eeab0704d45f21e",
+    "stored_sha256": "916f08d5e8aacea1d2e2b0a77b8910a41e27cdad94a804235eeab0704d45f21e"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_00.json",
+    "original_sha256": "b2e6a16627db3dc51c902130bf6d4aa7e5820dddd5c1d10913a90050cd7ac1b0",
+    "stored_sha256": "b2e6a16627db3dc51c902130bf6d4aa7e5820dddd5c1d10913a90050cd7ac1b0"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_00.stdout.txt",
+    "original_sha256": "1424c6615f8894ec554ba1f76d5f1f3cd4fba6ccd1cdc6fc6e4543d0b32dfd38",
+    "stored_sha256": "1424c6615f8894ec554ba1f76d5f1f3cd4fba6ccd1cdc6fc6e4543d0b32dfd38"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_04.json",
+    "original_sha256": "5e744710b1eff4978dd025cdb1bc4dcf4baa8082bbd9913b74cc6b9cd11a1961",
+    "stored_sha256": "5e744710b1eff4978dd025cdb1bc4dcf4baa8082bbd9913b74cc6b9cd11a1961"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_04.stdout.txt",
+    "original_sha256": "a741ffcf69a001142fedf3e11e0de7160519289d17b8eb3e25bfe610a0c002bd",
+    "stored_sha256": "a741ffcf69a001142fedf3e11e0de7160519289d17b8eb3e25bfe610a0c002bd"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_08.json",
+    "original_sha256": "7a63d495af18307034fabb4ec547d037f903153e33cd369a539e80cb0f605190",
+    "stored_sha256": "7a63d495af18307034fabb4ec547d037f903153e33cd369a539e80cb0f605190"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p1_08.stdout.txt",
+    "original_sha256": "f5a26d16d1d8c6594c3fd6c816a3056c898e689e8a878b60d2103696af43911c",
+    "stored_sha256": "f5a26d16d1d8c6594c3fd6c816a3056c898e689e8a878b60d2103696af43911c"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_00.json",
+    "original_sha256": "dbcb133dc21bc0a9e19650be9134a4d363bcb5c0de1f037136bf4cae0382814f",
+    "stored_sha256": "dbcb133dc21bc0a9e19650be9134a4d363bcb5c0de1f037136bf4cae0382814f"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_00.stdout.txt",
+    "original_sha256": "6465b94e8197c6cb11fd671422a07cae98723477890768db37d7917de2b9b692",
+    "stored_sha256": "6465b94e8197c6cb11fd671422a07cae98723477890768db37d7917de2b9b692"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_04.json",
+    "original_sha256": "b3109f50e3c549fb6132b582485eb4a6527076f7e18cb7914696dab41161bd4c",
+    "stored_sha256": "b3109f50e3c549fb6132b582485eb4a6527076f7e18cb7914696dab41161bd4c"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_04.stdout.txt",
+    "original_sha256": "0c0acbd867045f5688fdb6a417f77d1b3c8c334eefc3f8375c8c03f7044828ec",
+    "stored_sha256": "0c0acbd867045f5688fdb6a417f77d1b3c8c334eefc3f8375c8c03f7044828ec"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_08.json",
+    "original_sha256": "2f5505d964502db052c78d7f3abb465e3f5f4c69ec985831e47c75c8ccfd405b",
+    "stored_sha256": "2f5505d964502db052c78d7f3abb465e3f5f4c69ec985831e47c75c8ccfd405b"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p2_08.stdout.txt",
+    "original_sha256": "de3f5a2df6ac834ade8e1682e6d8345ee043aa7ca53e73bd6fcb5e0d9e521a75",
+    "stored_sha256": "de3f5a2df6ac834ade8e1682e6d8345ee043aa7ca53e73bd6fcb5e0d9e521a75"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_00.json",
+    "original_sha256": "f0075edabeb48cee95aadc7ae6c9b47ab4a474888bec34280f811f8e70ecedcd",
+    "stored_sha256": "f0075edabeb48cee95aadc7ae6c9b47ab4a474888bec34280f811f8e70ecedcd"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_00.stdout.txt",
+    "original_sha256": "fb40455d27c40bac15baa185340bc4c202a5ae676779a488071ffe28ad53bc64",
+    "stored_sha256": "fb40455d27c40bac15baa185340bc4c202a5ae676779a488071ffe28ad53bc64"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_04.json",
+    "original_sha256": "77d0cd3841407ab33d4b67a17d5cf6cd2d032976c2cdb2a9e171cd130ab78c88",
+    "stored_sha256": "77d0cd3841407ab33d4b67a17d5cf6cd2d032976c2cdb2a9e171cd130ab78c88"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_04.stdout.txt",
+    "original_sha256": "eeb75033a3fb533fa5523648318841ef89eadcd948eaa53aa88bcc5ae3ad7a67",
+    "stored_sha256": "eeb75033a3fb533fa5523648318841ef89eadcd948eaa53aa88bcc5ae3ad7a67"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_08.json",
+    "original_sha256": "45e87b93cfdf31e16805fe60364e5a13a625a0ac61c667345203bae4818f0124",
+    "stored_sha256": "45e87b93cfdf31e16805fe60364e5a13a625a0ac61c667345203bae4818f0124"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p3_08.stdout.txt",
+    "original_sha256": "71884d1709114e752c303be15e9ee81850015857ea143a76cb03fd6636f443f7",
+    "stored_sha256": "71884d1709114e752c303be15e9ee81850015857ea143a76cb03fd6636f443f7"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_00.json",
+    "original_sha256": "060d31801be8603df9ac45c7b17dbc57ca368f6b6d676539321ec610e6ec9ae4",
+    "stored_sha256": "060d31801be8603df9ac45c7b17dbc57ca368f6b6d676539321ec610e6ec9ae4"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_00.stdout.txt",
+    "original_sha256": "3337f187d65adb9c727588b6eba1b8c43864c755c1fb194ee5d6cd728dee8799",
+    "stored_sha256": "3337f187d65adb9c727588b6eba1b8c43864c755c1fb194ee5d6cd728dee8799"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_04.json",
+    "original_sha256": "3ce26d96b2ac461abfc1b59cd46274980ac29b6e5f884e680d1c339f3a976dc3",
+    "stored_sha256": "3ce26d96b2ac461abfc1b59cd46274980ac29b6e5f884e680d1c339f3a976dc3"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_04.stdout.txt",
+    "original_sha256": "6dcbc07ffae6b1bce68ccca90757874309704e9f688fab38e21e52559af504ee",
+    "stored_sha256": "6dcbc07ffae6b1bce68ccca90757874309704e9f688fab38e21e52559af504ee"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_08.json",
+    "original_sha256": "668f3684b9c5cce8f319c72edf4b6ecccd637e7e378905bdcff7b543a15fa988",
+    "stored_sha256": "668f3684b9c5cce8f319c72edf4b6ecccd637e7e378905bdcff7b543a15fa988"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_12_p4_08.stdout.txt",
+    "original_sha256": "732281e1a7de719ed30cd1a2e25a5528a1071d4ba0d816bd5a2ca14256fda05a",
+    "stored_sha256": "732281e1a7de719ed30cd1a2e25a5528a1071d4ba0d816bd5a2ca14256fda05a"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_00.json",
+    "original_sha256": "84c0fad658878b823cc6296bf1f543c10bfa05d13f8cafd3483449ef6a32a9b5",
+    "stored_sha256": "84c0fad658878b823cc6296bf1f543c10bfa05d13f8cafd3483449ef6a32a9b5"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_00.stdout.txt",
+    "original_sha256": "78a1fdbfbcb96570dc10318aca67c859eb5c78abbcc64a9e26befd1af4fb5fed",
+    "stored_sha256": "78a1fdbfbcb96570dc10318aca67c859eb5c78abbcc64a9e26befd1af4fb5fed"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_04.json",
+    "original_sha256": "2a07db33e3e8f9435a6eaefa5856ec124c1d6f4862dd0ac6eb6bc9b506360f4f",
+    "stored_sha256": "2a07db33e3e8f9435a6eaefa5856ec124c1d6f4862dd0ac6eb6bc9b506360f4f"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_04.stdout.txt",
+    "original_sha256": "50c5e8909dd77824dafaaa79f37b5bbe2edc0595f5ee879c1a4559613911ed03",
+    "stored_sha256": "50c5e8909dd77824dafaaa79f37b5bbe2edc0595f5ee879c1a4559613911ed03"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_08.json",
+    "original_sha256": "80e32798bb09aa88978892329d605dfee791a0217b4ad5eb8a8d9cfcf17bbf02",
+    "stored_sha256": "80e32798bb09aa88978892329d605dfee791a0217b4ad5eb8a8d9cfcf17bbf02"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_08.stdout.txt",
+    "original_sha256": "92c46761a160afe6f84b9850e511aacbd7e8908f87f60561618bfde2d042d727",
+    "stored_sha256": "92c46761a160afe6f84b9850e511aacbd7e8908f87f60561618bfde2d042d727"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_12.json",
+    "original_sha256": "4834f5e8cf48e8d91ea82f4a3a79e5cb3010d479bc3abaddc85cb47e038cb733",
+    "stored_sha256": "4834f5e8cf48e8d91ea82f4a3a79e5cb3010d479bc3abaddc85cb47e038cb733"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_12.stdout.txt",
+    "original_sha256": "666532582d47a3505905f91696f0e412e4650316c1325929adc80509c8000da9",
+    "stored_sha256": "666532582d47a3505905f91696f0e412e4650316c1325929adc80509c8000da9"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_16.json",
+    "original_sha256": "32d77deca977b9f1ce16e494e04d1e134d665a2ea8c347ec33d7d2a5714841b5",
+    "stored_sha256": "32d77deca977b9f1ce16e494e04d1e134d665a2ea8c347ec33d7d2a5714841b5"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p0_16.stdout.txt",
+    "original_sha256": "3daa730485abb62e078c4e507d44436c9876f6a6f9dc86ed84acafca374a48cb",
+    "stored_sha256": "3daa730485abb62e078c4e507d44436c9876f6a6f9dc86ed84acafca374a48cb"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_00.json",
+    "original_sha256": "d322a77e36dfdfabd2351d8b6434298d5b6d9a4c4df4adcd3177fd8a8583e153",
+    "stored_sha256": "d322a77e36dfdfabd2351d8b6434298d5b6d9a4c4df4adcd3177fd8a8583e153"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_00.stdout.txt",
+    "original_sha256": "711d36cfc566a8632dcaf04c979d7cd86b5a8d19c686c3730676adce6152078b",
+    "stored_sha256": "711d36cfc566a8632dcaf04c979d7cd86b5a8d19c686c3730676adce6152078b"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_04.json",
+    "original_sha256": "fd3f69fa2b5c4e9ea92f22cb922e8eed428022830e87a4566ac22dd9b243f3ff",
+    "stored_sha256": "fd3f69fa2b5c4e9ea92f22cb922e8eed428022830e87a4566ac22dd9b243f3ff"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_04.stdout.txt",
+    "original_sha256": "fd3f3f08e9365adb76022d34b20382e94390564c21c6e9e0f083846dd582d573",
+    "stored_sha256": "fd3f3f08e9365adb76022d34b20382e94390564c21c6e9e0f083846dd582d573"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_08.json",
+    "original_sha256": "2c787abb4069beaba94bcb53c400e36df0e44f3652db8b95722ffc1ba2f398bf",
+    "stored_sha256": "2c787abb4069beaba94bcb53c400e36df0e44f3652db8b95722ffc1ba2f398bf"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_08.stdout.txt",
+    "original_sha256": "8e9f5089d35706c9b13f769449e8fc8e4f43395fa16bd2de71845ba7b3732f79",
+    "stored_sha256": "8e9f5089d35706c9b13f769449e8fc8e4f43395fa16bd2de71845ba7b3732f79"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_12.json",
+    "original_sha256": "90cb80c79e2a393e1c13b96c264aea8530a39a549c4235cc2bc40e95a7dbe10e",
+    "stored_sha256": "90cb80c79e2a393e1c13b96c264aea8530a39a549c4235cc2bc40e95a7dbe10e"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_12.stdout.txt",
+    "original_sha256": "1ede5133fafe61e142881993f8cf1b26a8df8feb42d5b6bf6881096bb5667995",
+    "stored_sha256": "1ede5133fafe61e142881993f8cf1b26a8df8feb42d5b6bf6881096bb5667995"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_16.json",
+    "original_sha256": "66dbefb6f49267482b5440f6bf8ea86789c838da5a697366525845e0520ea7e3",
+    "stored_sha256": "66dbefb6f49267482b5440f6bf8ea86789c838da5a697366525845e0520ea7e3"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p1_16.stdout.txt",
+    "original_sha256": "8f19c93fd6f0703c25ad0644b8929f61d6e945187cb2c2021807351e425303dc",
+    "stored_sha256": "8f19c93fd6f0703c25ad0644b8929f61d6e945187cb2c2021807351e425303dc"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_00.json",
+    "original_sha256": "f15ea18f46a23497290d1873ed1705cc07cd43cb01e63c39f305998d0a2dfc9b",
+    "stored_sha256": "f15ea18f46a23497290d1873ed1705cc07cd43cb01e63c39f305998d0a2dfc9b"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_00.stdout.txt",
+    "original_sha256": "4cecd705451560161c13722b15ec11a8bdac1b62655e62354f6abac509396fe3",
+    "stored_sha256": "4cecd705451560161c13722b15ec11a8bdac1b62655e62354f6abac509396fe3"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_04.json",
+    "original_sha256": "9a2d94f1c28f10d4410d3ecd3bfc376fb2bf5ca5d5b31546878cf43bd5c806e2",
+    "stored_sha256": "9a2d94f1c28f10d4410d3ecd3bfc376fb2bf5ca5d5b31546878cf43bd5c806e2"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_04.stdout.txt",
+    "original_sha256": "fc5efcd36b9fdda2e7a920d33631e782f9151c232f3c2b1dfedfd8ca07c9bfb7",
+    "stored_sha256": "fc5efcd36b9fdda2e7a920d33631e782f9151c232f3c2b1dfedfd8ca07c9bfb7"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_08.json",
+    "original_sha256": "5b0e24c38b1ca7433014f78c7c3b0c23f2e0ed988992a3cde3ad5b5cc408dcab",
+    "stored_sha256": "5b0e24c38b1ca7433014f78c7c3b0c23f2e0ed988992a3cde3ad5b5cc408dcab"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_08.stdout.txt",
+    "original_sha256": "4add16d052185c281e1d0ac1458282e983c09cbbffa235e9d02fbc73f6e4ba6c",
+    "stored_sha256": "4add16d052185c281e1d0ac1458282e983c09cbbffa235e9d02fbc73f6e4ba6c"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_12.json",
+    "original_sha256": "92b02d3fd9f58bf2334dca7a6fa649aef21158d63df7434fb287d6c378b22d76",
+    "stored_sha256": "92b02d3fd9f58bf2334dca7a6fa649aef21158d63df7434fb287d6c378b22d76"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_12.stdout.txt",
+    "original_sha256": "eaec71451758d22ee9368eefd0af7212f5de799ebeae65f278f01fdebd362c87",
+    "stored_sha256": "eaec71451758d22ee9368eefd0af7212f5de799ebeae65f278f01fdebd362c87"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_16.json",
+    "original_sha256": "da4558dc7aaee8291ca9024a53f4de3de2b4ed10fb555516ac07ccfb912118de",
+    "stored_sha256": "da4558dc7aaee8291ca9024a53f4de3de2b4ed10fb555516ac07ccfb912118de"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p2_16.stdout.txt",
+    "original_sha256": "6bfc49b5cb45c1b2fb93f37629960ec7b046d073824fd6e7a55fca5de1434c12",
+    "stored_sha256": "6bfc49b5cb45c1b2fb93f37629960ec7b046d073824fd6e7a55fca5de1434c12"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_00.json",
+    "original_sha256": "e6c87ad9106070eeffb9c6efdddda0b53ff9d501c43b745ad3446c298963f09d",
+    "stored_sha256": "e6c87ad9106070eeffb9c6efdddda0b53ff9d501c43b745ad3446c298963f09d"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_00.stdout.txt",
+    "original_sha256": "3a2926c4fd7f8a68e9e8928da66958d382b3b0ef5bc522c4dcd60b6f60fc42a9",
+    "stored_sha256": "3a2926c4fd7f8a68e9e8928da66958d382b3b0ef5bc522c4dcd60b6f60fc42a9"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_04.json",
+    "original_sha256": "4740f3c5ec3f473f0986db30f10b346781f5e68d5434c8d2dacf5b1be860f27e",
+    "stored_sha256": "4740f3c5ec3f473f0986db30f10b346781f5e68d5434c8d2dacf5b1be860f27e"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_04.stdout.txt",
+    "original_sha256": "b55aa820d2d19493731815cc10717c6e110a1c1170cf44364e3db2f84ec20fa9",
+    "stored_sha256": "b55aa820d2d19493731815cc10717c6e110a1c1170cf44364e3db2f84ec20fa9"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_08.json",
+    "original_sha256": "1a27943633d7e13259102e37c56498eaacadbbfa2e5fd9b4f204a15877f79f32",
+    "stored_sha256": "1a27943633d7e13259102e37c56498eaacadbbfa2e5fd9b4f204a15877f79f32"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_08.stdout.txt",
+    "original_sha256": "0798df242e9a1e65ffbe1a6ce50ec0e82478161de848fcb7f5b15d4c27d46753",
+    "stored_sha256": "0798df242e9a1e65ffbe1a6ce50ec0e82478161de848fcb7f5b15d4c27d46753"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_12.json",
+    "original_sha256": "57acd823c7a783da9cd3a6eeb8b2ddc2ad241e53a987b3e40956811f17077d98",
+    "stored_sha256": "57acd823c7a783da9cd3a6eeb8b2ddc2ad241e53a987b3e40956811f17077d98"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_12.stdout.txt",
+    "original_sha256": "719abcba80ca008d745c84adcc4f0de4115e9fcafef0a459703fde65b73dc399",
+    "stored_sha256": "719abcba80ca008d745c84adcc4f0de4115e9fcafef0a459703fde65b73dc399"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_16.json",
+    "original_sha256": "444bc05564504497bea1230808a57c88658500a4a7ae03c04f6dbbcfaf582f41",
+    "stored_sha256": "444bc05564504497bea1230808a57c88658500a4a7ae03c04f6dbbcfaf582f41"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p3_16.stdout.txt",
+    "original_sha256": "fa92d6109c660ab4d8523f82b57ab2c6a1bd7d035eaca20b5b5a0bdc40c073a9",
+    "stored_sha256": "fa92d6109c660ab4d8523f82b57ab2c6a1bd7d035eaca20b5b5a0bdc40c073a9"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_00.json",
+    "original_sha256": "e7e788b26cb57d45141c53c564ec71df1f09982b402f495e9c9195fbf7c38a8e",
+    "stored_sha256": "e7e788b26cb57d45141c53c564ec71df1f09982b402f495e9c9195fbf7c38a8e"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_00.stdout.txt",
+    "original_sha256": "34b01bf7813116391a5c9a843a8f859624971394d635bf286690f5eaeb64e9db",
+    "stored_sha256": "34b01bf7813116391a5c9a843a8f859624971394d635bf286690f5eaeb64e9db"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_04.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_04.json",
+    "original_sha256": "2e7f24b85536445a27fae4a37518c4efa8619ce860c13647312d0ecc91343c3c",
+    "stored_sha256": "2e7f24b85536445a27fae4a37518c4efa8619ce860c13647312d0ecc91343c3c"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_04.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_04.stdout.txt",
+    "original_sha256": "b5387b7fa925158ad8b3b2b6d0acf4ea2cca26310f9ba53279843a9fe2035ab6",
+    "stored_sha256": "b5387b7fa925158ad8b3b2b6d0acf4ea2cca26310f9ba53279843a9fe2035ab6"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_08.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_08.json",
+    "original_sha256": "65c2ff53533731f14666c1137c93f87942213fc370adfc0c8b0b199bdaef70bf",
+    "stored_sha256": "65c2ff53533731f14666c1137c93f87942213fc370adfc0c8b0b199bdaef70bf"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_08.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_08.stdout.txt",
+    "original_sha256": "ecd91595de3250ca037f217de41d44a62fceba00ef40648b8d442c22f2e02225",
+    "stored_sha256": "ecd91595de3250ca037f217de41d44a62fceba00ef40648b8d442c22f2e02225"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_12.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_12.json",
+    "original_sha256": "dee5cfbc79059dc8703c972ab86519c384b6f21c8b8ea7da6aa62edba65c7092",
+    "stored_sha256": "dee5cfbc79059dc8703c972ab86519c384b6f21c8b8ea7da6aa62edba65c7092"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_12.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_12.stdout.txt",
+    "original_sha256": "d2838e83cf89e35dab58915fd17e89bc1953de10e6a8972fa65f66ae8e3c35c1",
+    "stored_sha256": "d2838e83cf89e35dab58915fd17e89bc1953de10e6a8972fa65f66ae8e3c35c1"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_16.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_16.json",
+    "original_sha256": "697e9394e3a03927669c6fc7bc947e808747f0ed495a7e14e4b0e70d3781c1af",
+    "stored_sha256": "697e9394e3a03927669c6fc7bc947e808747f0ed495a7e14e4b0e70d3781c1af"
+  },
+  "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_16.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/NEUTRON_DECAY_20_p4_16.stdout.txt",
+    "original_sha256": "a98d2a432fca42c2f113eb107d26a74176d119153f90ddbfe67608e413ce1a2c",
+    "stored_sha256": "a98d2a432fca42c2f113eb107d26a74176d119153f90ddbfe67608e413ce1a2c"
+  },
+  "spectral_band_total_closure/raw/PC_12_p0_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/PC_12_p0_00.json",
+    "original_sha256": "43b779715ec4dbc90566e0e2d6d97dfd351c037a8ef7f1ad1fbaf9cde2dc660a",
+    "stored_sha256": "43b779715ec4dbc90566e0e2d6d97dfd351c037a8ef7f1ad1fbaf9cde2dc660a"
+  },
+  "spectral_band_total_closure/raw/PC_12_p0_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/PC_12_p0_00.stdout.txt",
+    "original_sha256": "f4b7c20c010877846a972719e810737a9f8ded828bdf8cf44c8a8f2b65f6598d",
+    "stored_sha256": "f4b7c20c010877846a972719e810737a9f8ded828bdf8cf44c8a8f2b65f6598d"
+  },
+  "spectral_band_total_closure/raw/PC_20_p0_00.json": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/PC_20_p0_00.json",
+    "original_sha256": "715d513dfa068e6abb3ab59b2abbd630adeddd7c694942fefec5d1faca7f9cf3",
+    "stored_sha256": "715d513dfa068e6abb3ab59b2abbd630adeddd7c694942fefec5d1faca7f9cf3"
+  },
+  "spectral_band_total_closure/raw/PC_20_p0_00.stdout.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/raw/PC_20_p0_00.stdout.txt",
+    "original_sha256": "8a81522f5b70e724b65533d06ffd33320a2802aba25ccafd3f466a7b9e3ceb51",
+    "stored_sha256": "8a81522f5b70e724b65533d06ffd33320a2802aba25ccafd3f466a7b9e3ceb51"
+  },
+  "spectral_band_total_closure/second_freeze_count_failure.py.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/second_freeze_count_failure.py.txt",
+    "original_sha256": "fc77f28c67c6e3c55485aefdcea197c14d0b97819442a6115189bd06fdc711dd",
+    "stored_sha256": "fc77f28c67c6e3c55485aefdcea197c14d0b97819442a6115189bd06fdc711dd"
+  },
+  "spectral_band_total_closure/second_freeze_count_failure.txt": {
+    "encoding": "utf-8",
+    "stored_path": "spectral_band_total_closure/second_freeze_count_failure.txt",
+    "original_sha256": "61ca2936511cfe6adb1d5b296e448764990c201139d56271e65f1359aa7fae55",
+    "stored_sha256": "61ca2936511cfe6adb1d5b296e448764990c201139d56271e65f1359aa7fae55"
+  },
+  "review_spectral_band_total_closure/CHECKPOINT.json": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/CHECKPOINT.json",
+    "original_sha256": "66533d2d98b08a3188a56cd8cadc36d0a13d3fc575a89869fb6f911a0c6c1283",
+    "stored_sha256": "66533d2d98b08a3188a56cd8cadc36d0a13d3fc575a89869fb6f911a0c6c1283"
+  },
+  "review_spectral_band_total_closure/HANDOFF_PIN.json": {
+    "encoding": "gzip",
+    "stored_path": "review_spectral_band_total_closure/HANDOFF_PIN.json.gz",
+    "original_sha256": "6de2fb27571a4eed0b15d597372a69bd643ea38dfbe674fa6e9c9af36b131302",
+    "stored_sha256": "5d21fd0c6f441987f6e6ce34f43505f066b96e02fa1ea2eaf71e7e265fd96ebf"
+  },
+  "review_spectral_band_total_closure/LOCK.json": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/LOCK.json",
+    "original_sha256": "7631ed84e0fe94b27878c82d3e1488edb06807d02513c2f6256e171fea3320f9",
+    "stored_sha256": "7631ed84e0fe94b27878c82d3e1488edb06807d02513c2f6256e171fea3320f9"
+  },
+  "review_spectral_band_total_closure/MANIFEST.json": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/MANIFEST.json",
+    "original_sha256": "363fb6a6c12cdbca8172d736cf499379874a2c09f638f4acc5da040145f92cbc",
+    "stored_sha256": "363fb6a6c12cdbca8172d736cf499379874a2c09f638f4acc5da040145f92cbc"
+  },
+  "review_spectral_band_total_closure/PREPARATION_CHECKPOINT.json": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/PREPARATION_CHECKPOINT.json",
+    "original_sha256": "3dae34261ff792ad9bacae94e2311d9478be05dadd815809917ee463950391e4",
+    "stored_sha256": "3dae34261ff792ad9bacae94e2311d9478be05dadd815809917ee463950391e4"
+  },
+  "review_spectral_band_total_closure/PREPARATION_MANIFEST.json": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/PREPARATION_MANIFEST.json",
+    "original_sha256": "dfa50f2f459edf9bccfcc28a25ccb4f0eabcacd8ba9320ccb2c417db8a3f4fae",
+    "stored_sha256": "dfa50f2f459edf9bccfcc28a25ccb4f0eabcacd8ba9320ccb2c417db8a3f4fae"
+  },
+  "review_spectral_band_total_closure/RESULTS.json": {
+    "encoding": "gzip",
+    "stored_path": "review_spectral_band_total_closure/RESULTS.json.gz",
+    "original_sha256": "9b4a5a3a21bff8551e06645355a650535c79f8482f401c99e9718e5675e8426f",
+    "stored_sha256": "5f9709d90258d248f001322241e3a9cc177cf3adb83e4249529155171bd6b491"
+  },
+  "review_spectral_band_total_closure/REVIEW.md": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/REVIEW.md",
+    "original_sha256": "3a9ef29c03376d09b44d61aa63bb18f0398ad7b0ed795fd8dd0f720790d5f6db",
+    "stored_sha256": "3a9ef29c03376d09b44d61aa63bb18f0398ad7b0ed795fd8dd0f720790d5f6db"
+  },
+  "review_spectral_band_total_closure/REVIEW_PLAN.md": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/REVIEW_PLAN.md",
+    "original_sha256": "fdee1a7b84ad6f21cfe0a82e0327ee7e12358646349f7283f3d8ee4cfc9e05b3",
+    "stored_sha256": "fdee1a7b84ad6f21cfe0a82e0327ee7e12358646349f7283f3d8ee4cfc9e05b3"
+  },
+  "review_spectral_band_total_closure/SEMANTIC_ADVERSARIES.json": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/SEMANTIC_ADVERSARIES.json",
+    "original_sha256": "7b640eca431903eb85f908cb00e9be3057b7bd0472f2c1f3097864eedc57d9bf",
+    "stored_sha256": "7b640eca431903eb85f908cb00e9be3057b7bd0472f2c1f3097864eedc57d9bf"
+  },
+  "review_spectral_band_total_closure/WITNESS_RESULTS.json": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/WITNESS_RESULTS.json",
+    "original_sha256": "64c8a919866d767f235e103e23281229568d52cb967676939b65ec525f6f6f2c",
+    "stored_sha256": "64c8a919866d767f235e103e23281229568d52cb967676939b65ec525f6f6f2c"
+  },
+  "review_spectral_band_total_closure/analyze.stderr": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/analyze.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stored_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "review_spectral_band_total_closure/analyze.stdout": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/analyze.stdout",
+    "original_sha256": "b4db32a0fd557e782238bef88c82944b20a80e99ea998b628084d7b5a572d750",
+    "stored_sha256": "b4db32a0fd557e782238bef88c82944b20a80e99ea998b628084d7b5a572d750"
+  },
+  "review_spectral_band_total_closure/analyze_independent.py": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/analyze_independent.py",
+    "original_sha256": "a62c30851497b0e7e4bc3a4864cac6bd91c7fde86c1b27137471dd473fe829bf",
+    "stored_sha256": "a62c30851497b0e7e4bc3a4864cac6bd91c7fde86c1b27137471dd473fe829bf"
+  },
+  "review_spectral_band_total_closure/semantic_adversaries.py": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/semantic_adversaries.py",
+    "original_sha256": "cf53a90430ee5c3f026f14c2bb7cc290cc0029a2af911223ae3006643e73fc3a",
+    "stored_sha256": "cf53a90430ee5c3f026f14c2bb7cc290cc0029a2af911223ae3006643e73fc3a"
+  },
+  "review_spectral_band_total_closure/witnesses.py": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/witnesses.py",
+    "original_sha256": "7d46a0708b00ff7838f0dbeea4276be397e974f957e9ef0ad94e3f91b174279f",
+    "stored_sha256": "7d46a0708b00ff7838f0dbeea4276be397e974f957e9ef0ad94e3f91b174279f"
+  },
+  "review_spectral_band_total_closure/witnesses.stderr": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/analyze.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stored_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "review_spectral_band_total_closure/witnesses.stdout": {
+    "encoding": "utf-8",
+    "stored_path": "review_spectral_band_total_closure/witnesses.stdout",
+    "original_sha256": "3bc07a76ee28c41ff8b6e413054d919cb790c9297bf2451283cae665f744eea5",
+    "stored_sha256": "3bc07a76ee28c41ff8b6e413054d919cb790c9297bf2451283cae665f744eea5"
+  },
+  "archive47/AUTHOR_PREPARATION.json": {
+    "encoding": "gzip",
+    "stored_path": "archive47/AUTHOR_PREPARATION.json.gz",
+    "original_sha256": "647590434ca45d30aacd772ee919c681923314eeea6872b6c8895aabb8722254",
+    "stored_sha256": "8edf53ff2c014204ec8aaf6385825ec99b8e9a0ab2bcc11c8c6f79f132b55e5b"
+  },
+  "archive47/AUTHOR_SOURCE_RESOLUTION.json": {
+    "encoding": "utf-8",
+    "stored_path": "archive47/AUTHOR_SOURCE_RESOLUTION.json",
+    "original_sha256": "5bae600b2aa2bc34af886a5938be471967b42c0023fb1bbec83be39df18e26b9",
+    "stored_sha256": "5bae600b2aa2bc34af886a5938be471967b42c0023fb1bbec83be39df18e26b9"
+  },
+  "archive47/PREREQUISITE_RESOLUTION_NOTE.json": {
+    "encoding": "utf-8",
+    "stored_path": "archive47/PREREQUISITE_RESOLUTION_NOTE.json",
+    "original_sha256": "c202fe8315cbe0d8710f9b932462e68f4b1bfaf32de8391ddabb02531624289e",
+    "stored_sha256": "c202fe8315cbe0d8710f9b932462e68f4b1bfaf32de8391ddabb02531624289e"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "channel": "PC",
+  "failed_paths": [
+    {
+      "order": 12,
+      "panel": 0,
+      "first": 0,
+      "error": {
+        "type": "ArithmeticError",
+        "message": "Final positive-energy baryon shell unresolved"
+      },
+      "complete": false
+    },
+    {
+      "order": 20,
+      "panel": 0,
+      "first": 0,
+      "error": {
+        "type": "ArithmeticError",
+        "message": "Final positive-energy baryon shell unresolved"
+      },
+      "complete": false
+    }
+  ],
+  "seconds": 3.6089587919414043,
+  "scope": "Any missing/incomplete node forbids complete band assembly; no skip or zero-fill"
+}
