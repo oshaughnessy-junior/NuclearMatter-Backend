@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_PACKAGING_IMPORT_SCOPE_PASS_CURRENT_ENV_ONLY",
+  "passed": 19,
+  "failed": 0,
+  "candidate_manifest_sha256": "5e9a2793bc0de9c2e2a01c78061bd7a76f093b260cb8a7564971aae18a1bf282",
+  "source_sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+  "wheel_sha256": "8baeb76730f8c0d3d144232529c14f572fb849751c6abc406b6b1a7e7341494c",
+  "minimum_runtime": false,
+  "full_repo_CI": false,
+  "installed": false,
+  "source_artifacts_unchanged": true,
+  "files": {
+    "PREPARATION.json": "475848d2225f0307dba1d4689eebe6d96a58060c12a2f18a57830b6c650bbbfc",
+    "example_stdout.json": "cf4cec7690ddf554276d5252698d81e89e2e2aa3f667984b530c33d54dbbd056",
+    "initial_import_stdout.txt": "496a48da95f67705362bd9f70f9edaf79a8da1966900d755ad4efc5f5711d0d2",
+    "build_stdout.txt": "0847e0d5d9af93b86c1ab268a8dd2a95d31b17f178f30572fe0ca8f3d031e281",
+    "initial_fixture_failure.json": "5b5f724dd064fd76dfc0fa5d88607415fb935380a1e4e1cb770928cf921b535c",
+    "import_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial_wheel_results.json": "c9eb4f38b391368aa94a7b4f9684af324c30e9d6f8e4d2692e88a0282155b95a",
+    "wheel_results.json": "85f58a2ac331a464cc75e63cdc486aaee47e38644195b3b6024d197fab8912c1",
+    "initial_import_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check_wheel.py": "92b776ab6e126058fbf60bd809204e8447da94e191d51e2cc1ab28d154bb126e",
+    "wheel_METADATA.txt": "5904e7cd4c2b38ef218eede57af7af258f643c98ddc0613e94d386cd310c868e",
+    "REVIEW.md": "d75faf78dff91a64750794beba68677c6cd0e9827f6a163b8353fd2a6d4b2115",
+    "build_stderr.txt": "6cf81cd82cb7b55a62f856d488a5d2249f643ccbe57febf4369d7c647bcfc968",
+    "initial_check_wheel.py": "86c7e53a79e02523527ee9b4c81412e9eb52884ce372ff76157fa99fd85893b6",
+    "prepare.py": "ba514421cbeabae47a6186cae029100514b55349ee4c06603d0a6688324b9a58",
+    "import_stdout.txt": "84362764f2b613fca74c66f61aa4a707f146b7faa5fc5a5e377ff21f6d7c9ed4"
+  }
+}

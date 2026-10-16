@@ -1,0 +1,6 @@
+{
+  "cause": "Audit invented requirement that every output field be builtin Python float; module promises CPU scalar NumPy/SciPy states and permits numpy floating scalars. Wheel build/import/example/cold API all succeeded.",
+  "old_gate": "all(type(v)is float for v in s.asdict().values())",
+  "correct_gate": "scalar float or NumPy floating, no array/JAX value",
+  "scientific_or_packaging_failure": false
+}
