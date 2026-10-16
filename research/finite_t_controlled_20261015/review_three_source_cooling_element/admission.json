@@ -1,0 +1,151 @@
+{
+  "checks": [
+    {
+      "name": "T nan",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "T bool",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "Ye bool",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "T low",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "Ye high",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "nB changed",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "photon integer",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "nonliteral empty action",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "unknown profile",
+      "passed": true,
+      "result": "Exact source/control identity required"
+    },
+    {
+      "name": "wrong identity",
+      "passed": true,
+      "result": "Exact source/control identity required"
+    },
+    {
+      "name": "pin record accepted integer",
+      "passed": true,
+      "result": "Exact mandatory source/review set and literal acceptance required"
+    },
+    {
+      "name": "pin record accepted false",
+      "passed": true,
+      "result": "Exact mandatory source/review set and literal acceptance required"
+    },
+    {
+      "name": "pin record missing review",
+      "passed": true,
+      "result": "Exact mandatory source/review set and literal acceptance required"
+    },
+    {
+      "name": "pin record missing loaded path",
+      "passed": true,
+      "result": "Exact mandatory source/review set and literal acceptance required"
+    },
+    {
+      "name": "pin record extra loaded path",
+      "passed": true,
+      "result": "Exact mandatory source/review set and literal acceptance required"
+    },
+    {
+      "name": "returned packet photon missing energy",
+      "passed": true,
+      "result": "Photon/material energy or Cv accounting mismatch"
+    },
+    {
+      "name": "returned packet source energy derivative sign",
+      "passed": true,
+      "result": "Conservative source derivative/sign mismatch"
+    },
+    {
+      "name": "returned packet source Ye derivative sign",
+      "passed": true,
+      "result": "Conservative source derivative/sign mismatch"
+    },
+    {
+      "name": "returned packet temperature derivative wrong",
+      "passed": true,
+      "result": "Conservative source derivative/sign mismatch"
+    },
+    {
+      "name": "returned packet nu/antinu number wrong",
+      "passed": true,
+      "result": "Species/lepton ledger mismatch"
+    },
+    {
+      "name": "returned packet pair particle source wrong",
+      "passed": true,
+      "result": "Species/lepton ledger mismatch"
+    },
+    {
+      "name": "returned packet state photon Cv double count",
+      "passed": true,
+      "result": "Photon/material energy or Cv accounting mismatch"
+    },
+    {
+      "name": "returned packet loaded source absent",
+      "passed": true,
+      "result": "Incomplete loaded-source identity"
+    },
+    {
+      "name": "returned packet source controls altered",
+      "passed": true,
+      "result": "Source control/channel mismatch"
+    },
+    {
+      "name": "returned packet separate moment zero",
+      "passed": true,
+      "result": "Positive separate channel moments required"
+    },
+    {
+      "name": "worker bad request before physical()",
+      "passed": true,
+      "result": "Selected fixed-nB warm material admission only"
+    },
+    {
+      "name": "no physical preparation ran in entry-point adversary",
+      "passed": true,
+      "result": []
+    },
+    {
+      "name": "fresh genuine source packet admits",
+      "passed": true,
+      "result": "exact request/control/loaded sets, source signs, photon energy and counts"
+    },
+    {
+      "name": "all frozen files unchanged",
+      "passed": true,
+      "result": "byte comparison"
+    }
+  ],
+  "passed": 29,
+  "failed": []
+}
