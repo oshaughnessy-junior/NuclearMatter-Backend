@@ -1,0 +1,74 @@
+{
+  "source_sha256": {
+    "heavy_baryon_limit_assessment/comparison.csv": "daca4ac7c5ede666fc3242bc1af4cf37a2d21bbda1e69218659ffda9a25b3e9d",
+    "review_heavy_baryon_limit_assessment/REVIEW.md": "f3e36fde255b100227c418029cf357fdb46db56e36c526c282fd632004bdfee1",
+    "heavy_baryon_limit_assessment/LOCK.json": "04b8b93d18d3cd88859fcf0cf5314216720f3b60fc8eadb0f06523b1805acb30"
+  },
+  "T_MeV": 3,
+  "nB_fm3": 1e-07,
+  "Ye": 0.5490065797957709,
+  "Q_MeV": 1.2933323600000222,
+  "point_current": "F1=1, GA=1.2723, F2=GP=0",
+  "allowed_anchors": {
+    "R_EC_fm-3s-1": 4.849878328817105e-06,
+    "Q_EC_MeVfm-3s-1": 7.070093372165171e-05,
+    "R_PC_fm-3s-1": 5.53052313526957e-06,
+    "Q_PC_MeVfm-3s-1": 8.813485608730491e-05
+  },
+  "rows": [
+    {
+      "lambda": 1.0,
+      "mn_MeV": 939.56542052,
+      "mp_MeV": 938.27208816,
+      "R_EC_fm-3s-1": 4.77420417775936e-06,
+      "Q_EC_MeVfm-3s-1": 6.913346531502322e-05,
+      "R_PC_fm-3s-1": 5.285079311610378e-06,
+      "Q_PC_MeVfm-3s-1": 8.322237664494651e-05,
+      "R_EC_relative_allowed": -0.015603309181614455,
+      "Q_EC_relative_allowed": -0.02217040602037279,
+      "R_PC_relative_allowed": -0.044379856598724565,
+      "Q_PC_relative_allowed": -0.05573821369257326
+    },
+    {
+      "lambda": 2.0,
+      "mn_MeV": 1878.48417486,
+      "mp_MeV": 1877.1908425,
+      "R_EC_fm-3s-1": 4.811502409108334e-06,
+      "Q_EC_MeVfm-3s-1": 6.99034131261675e-05,
+      "R_PC_fm-3s-1": 5.4050289940630394e-06,
+      "Q_PC_MeVfm-3s-1": 8.561128856993228e-05,
+      "R_EC_relative_allowed": -0.007912759270835346,
+      "Q_EC_relative_allowed": -0.011280198909734862,
+      "R_PC_relative_allowed": -0.022691188181859778,
+      "Q_PC_relative_allowed": -0.028633024769142756
+    },
+    {
+      "lambda": 4.0,
+      "mn_MeV": 3756.32168354,
+      "mp_MeV": 3755.02835118,
+      "R_EC_fm-3s-1": 4.830552962112285e-06,
+      "Q_EC_MeVfm-3s-1": 7.029863495455956e-05,
+      "R_PC_fm-3s-1": 5.467060132822695e-06,
+      "Q_PC_MeVfm-3s-1": 8.685556665530019e-05,
+      "R_EC_relative_allowed": -0.003984711655546591,
+      "Q_EC_relative_allowed": -0.00569014786531663,
+      "R_PC_relative_allowed": -0.01147504510778663,
+      "Q_PC_relative_allowed": -0.0145151361084368
+    },
+    {
+      "lambda": 8.0,
+      "mn_MeV": 7511.996700899999,
+      "mp_MeV": 7510.70336854,
+      "R_EC_fm-3s-1": 4.840181054917584e-06,
+      "Q_EC_MeVfm-3s-1": 7.049888940294322e-05,
+      "R_PC_fm-3s-1": 5.4986098256581265e-06,
+      "Q_PC_MeVfm-3s-1": 8.749074907752275e-05,
+      "R_EC_relative_allowed": -0.001999488078268108,
+      "Q_EC_relative_allowed": -0.002857731971460664,
+      "R_PC_relative_allowed": -0.0057703961869221,
+      "Q_PC_relative_allowed": -0.007308198349403439
+    }
+  ],
+  "saved_arithmetic_checks": 24,
+  "scope": "Four reviewed artificial-mass points; no new physical integration/fit/uncertainty/AD."
+}

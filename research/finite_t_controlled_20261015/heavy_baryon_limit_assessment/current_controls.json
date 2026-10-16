@@ -1,0 +1,768 @@
+{
+  "checks": [
+    {
+      "name": "physicalQfixed 1.0",
+      "error": 0.0,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (1.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (1.0, False, 4.7)",
+      "error": -4.440892098500626e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (1.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (1.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (1.0, False, 4.7, 'pa')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (1.0, False, 4.7, 'pb')",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (1.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (1.0, False, 17.3)",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (1.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (1.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (1.0, False, 17.3, 'pa')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (1.0, False, 17.3, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (1.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (1.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (1.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (1.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (1.0, True, 4.7, 'pa')",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (1.0, True, 4.7, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (1.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (1.0, True, 17.3)",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (1.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (1.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (1.0, True, 17.3, 'pa')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (1.0, True, 17.3, 'pb')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "physicalQfixed 2.0",
+      "error": 0.0,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (2.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (2.0, False, 4.7)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (2.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (2.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (2.0, False, 4.7, 'pa')",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (2.0, False, 4.7, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (2.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (2.0, False, 17.3)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (2.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (2.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (2.0, False, 17.3, 'pa')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (2.0, False, 17.3, 'pb')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (2.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (2.0, True, 4.7)",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (2.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (2.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (2.0, True, 4.7, 'pa')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (2.0, True, 4.7, 'pb')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (2.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (2.0, True, 17.3)",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (2.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (2.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (2.0, True, 17.3, 'pa')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (2.0, True, 17.3, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "physicalQfixed 4.0",
+      "error": 0.0,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (4.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (4.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (4.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (4.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (4.0, False, 4.7, 'pa')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (4.0, False, 4.7, 'pb')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (4.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (4.0, False, 17.3)",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (4.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (4.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (4.0, False, 17.3, 'pa')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (4.0, False, 17.3, 'pb')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (4.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (4.0, True, 4.7)",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (4.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (4.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (4.0, True, 4.7, 'pa')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (4.0, True, 4.7, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (4.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (4.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (4.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (4.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (4.0, True, 17.3, 'pa')",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (4.0, True, 17.3, 'pb')",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "physicalQfixed 8.0",
+      "error": -9.094947017729282e-13,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (8.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (8.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (8.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (8.0, False, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (8.0, False, 4.7, 'pa')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (8.0, False, 4.7, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (8.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (8.0, False, 17.3)",
+      "error": -3.3306690738754696e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (8.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (8.0, False, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (8.0, False, 17.3, 'pa')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (8.0, False, 17.3, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (8.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (8.0, True, 4.7)",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (8.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (8.0, True, 4.7)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (8.0, True, 4.7, 'pa')",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (8.0, True, 4.7, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literalpointFF (8.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "scaledliteralDiractrace (8.0, True, 17.3)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positiveon-shellamp (8.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactkinematicfourmomentum (8.0, True, 17.3)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (8.0, True, 17.3, 'pa')",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "deformedonshellmass (8.0, True, 17.3, 'pb')",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    }
+  ],
+  "passed": 100,
+  "failed": [],
+  "rows": [
+    {
+      "scale": 1.0,
+      "anti": false,
+      "Enu": 4.7,
+      "cos": -0.61,
+      "ma": 939.56542052,
+      "mb": 938.27208816,
+      "scalar": 1.596645164813916e-13,
+      "trace": 1.5966451648139167e-13
+    },
+    {
+      "scale": 1.0,
+      "anti": false,
+      "Enu": 17.3,
+      "cos": 0.22,
+      "ma": 939.56542052,
+      "mb": 938.27208816,
+      "scalar": 1.6711535129247976e-12,
+      "trace": 1.671153512924798e-12
+    },
+    {
+      "scale": 1.0,
+      "anti": true,
+      "Enu": 4.7,
+      "cos": -0.61,
+      "ma": 938.27208816,
+      "mb": 939.56542052,
+      "scalar": 8.94897512796322e-14,
+      "trace": 8.94897512796322e-14
+    },
+    {
+      "scale": 1.0,
+      "anti": true,
+      "Enu": 17.3,
+      "cos": 0.22,
+      "ma": 938.27208816,
+      "mb": 939.56542052,
+      "scalar": 1.401095542463343e-12,
+      "trace": 1.4010955424633432e-12
+    },
+    {
+      "scale": 2.0,
+      "anti": false,
+      "Enu": 4.7,
+      "cos": -0.61,
+      "ma": 1878.48417486,
+      "mb": 1877.1908425,
+      "scalar": 6.38911785970726e-13,
+      "trace": 6.389117859707258e-13
+    },
+    {
+      "scale": 2.0,
+      "anti": false,
+      "Enu": 17.3,
+      "cos": 0.22,
+      "ma": 1878.48417486,
+      "mb": 1877.1908425,
+      "scalar": 6.6916344268663165e-12,
+      "trace": 6.691634426866316e-12
+    },
+    {
+      "scale": 2.0,
+      "anti": true,
+      "Enu": 4.7,
+      "cos": -0.61,
+      "ma": 1877.1908425,
+      "mb": 1878.48417486,
+      "scalar": 3.6053467048065783e-13,
+      "trace": 3.605346704806579e-13
+    },
+    {
+      "scale": 2.0,
+      "anti": true,
+      "Enu": 17.3,
+      "cos": 0.22,
+      "ma": 1877.1908425,
+      "mb": 1878.48417486,
+      "scalar": 5.68409778703811e-12,
+      "trace": 5.684097787038111e-12
+    },
+    {
+      "scale": 4.0,
+      "anti": false,
+      "Enu": 4.7,
+      "cos": -0.61,
+      "ma": 3756.32168354,
+      "mb": 3755.02835118,
+      "scalar": 2.556164281410813e-12,
+      "trace": 2.556164281410813e-12
+    },
+    {
+      "scale": 4.0,
+      "anti": false,
+      "Enu": 17.3,
+      "cos": 0.22,
+      "ma": 3756.32168354,
+      "mb": 3755.02835118,
+      "scalar": 2.6781209164573548e-11,
+      "trace": 2.678120916457355e-11
+    },
+    {
+      "scale": 4.0,
+      "anti": true,
+      "Enu": 4.7,
+      "cos": -0.61,
+      "ma": 3755.02835118,
+      "mb": 3756.32168354,
+      "scalar": 1.4473383820856504e-12,
+      "trace": 1.4473383820856506e-12
+    },
+    {
+      "scale": 4.0,
+      "anti": true,
+      "Enu": 17.3,
+      "cos": 0.22,
+      "ma": 3755.02835118,
+      "mb": 3756.32168354,
+      "scalar": 2.2900754774065273e-11,
+      "trace": 2.2900754774065273e-11
+    },
+    {
+      "scale": 8.0,
+      "anti": false,
+      "Enu": 4.7,
+      "cos": -0.61,
+      "ma": 7511.996700899999,
+      "mb": 7510.70336854,
+      "scalar": 1.0225701191387757e-11,
+      "trace": 1.0225701191387757e-11
+    },
+    {
+      "scale": 8.0,
+      "anti": false,
+      "Enu": 17.3,
+      "cos": 0.22,
+      "ma": 7511.996700899999,
+      "mb": 7510.70336854,
+      "scalar": 1.0715483126039366e-10,
+      "trace": 1.071548312603937e-10
+    },
+    {
+      "scale": 8.0,
+      "anti": true,
+      "Enu": 4.7,
+      "cos": -0.61,
+      "ma": 7510.70336854,
+      "mb": 7511.996700899999,
+      "scalar": 5.799801794672272e-12,
+      "trace": 5.7998017946722725e-12
+    },
+    {
+      "scale": 8.0,
+      "anti": true,
+      "Enu": 17.3,
+      "cos": 0.22,
+      "ma": 7510.70336854,
+      "mb": 7511.996700899999,
+      "scalar": 9.193685696808255e-11,
+      "trace": 9.193685696808253e-11
+    }
+  ]
+}
