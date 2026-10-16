@@ -171,3 +171,11 @@ only if acceleration is needed. Full detail in [`docs/roadmap.md`](docs/roadmap.
 CompOSE/tabular ingestion · proper SLy/BPS crust · self-consistent RMFT Lagrangian
 solver · NN surrogates (Zhu 2604.05428) · rotating NS (RNS) · gwkokab population
 adapter · GP/nonparametric EOS · optional RePrimAnd and Zhu C++ δ-TOV backends.
+
+## Free finite-temperature charged-current CPU reference
+
+For explicitly prescribed free chemical baths, `nmbackend.reference.weak_reference`
+provides detailed EC, positron-capture and neutron-decay TOTAL number/energy moments.
+See [scope and conventions](docs/weak_reference.md) and
+[example](examples/free_weak_reference.py). This separately imported CPU reference
+does not provide spectral opacity, an EOS solve, AD or a full weak-interaction inventory.
