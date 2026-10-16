@@ -171,3 +171,11 @@ only if acceleration is needed. Full detail in [`docs/roadmap.md`](docs/roadmap.
 CompOSE/tabular ingestion · proper SLy/BPS crust · self-consistent RMFT Lagrangian
 solver · NN surrogates (Zhu 2604.05428) · rotating NS (RNS) · gwkokab population
 adapter · GP/nonparametric EOS · optional RePrimAnd and Zhu C++ δ-TOV backends.
+
+### Finite-temperature particle-only baryon reference
+
+`nmbackend.reference.finite_t_baryons` provides separately imported scalar CPU
+ideal spin-two particle states with rest-inclusive MeV/fm units and fixed-mass
+responses. It omits antiparticles and interactions. See
+[the particle-only reference contract](docs/finite_temperature_baryons.md) and
+[example](examples/finite_t_baryons.py).
