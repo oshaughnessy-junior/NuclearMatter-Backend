@@ -1,0 +1,25 @@
+{
+  "local_inputs": {
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "thermodynamics/validate_reference.py": "c6a7c8dbc58ab75fe14e109d3229fb70c06ad1b2e2b8d3e74ee3cd173bdec4cf",
+    "thermodynamics/RESEARCH_NOTE.md": "f8c31d2dd1ee265fa440177245429038ffabffaaa8cbf649dd71ebb958ee2d07",
+    "thermodynamics/CHECKPOINT.json": "c232ac55b64238da30d3c248f0dd11dfe1d4439735f878badbf2bedafed77ed2",
+    "thermodynamics/validation_results.json": "16bf9e2e5caa1b3f9e152674e21e0d3e2ff40ff0587a13ca695293310aa3ed9b",
+    "review_numerics/REVIEW.md": "fd28c1760e8e25c9657f8953a3392858ee426ae56a57ea1eb7a0155e63a29586",
+    "review_numerics/repair_verification.md": "8ae57823800babd19749afc7d338428212907a7e309b0b1cb3b2d1b7cd7be568",
+    "review_numerics/repair_verification.json": "c57d32dffdfe21c11491888a54c554b3175356d5a299f587532d0eaf1f3bb16d",
+    "review_numerics/repaired_source_hashes.json": "0ec8aa9048b953bf24d60dac4cecb00a681cc70bd4465b5d25efbb970d81bdad",
+    "review_numerics/review_results.json": "dae24d2e166bbe73231b6a633a8c4fe32b5fca7ff611f413ea173ced8a52236b",
+    "gm1_beta_thresholds/source_snapshot/leptons.py": "369daa890f3ddc12587ff89e043ce43e60c0bc232057e87e9ba003bef2e1b0f5",
+    "papers/PLAN-FINITE-T-CONTROLLED-TRANSPORT.md": "171ebe9fd3d973a3d9cc8f48d8194bcf9ec5b372798487feb5bc9f201ab335c6"
+  },
+  "checked_ancestor_instruction_paths": {
+    "/AGENTS.md": false,
+    "/Users/AGENTS.md": false,
+    "/Users/rossma/AGENTS.md": false,
+    "/Users/rossma/NuclearMatter-Backend/AGENTS.md": false
+  },
+  "research_code_modified": false,
+  "production_modified": false,
+  "numerical_experiments_run": false
+}

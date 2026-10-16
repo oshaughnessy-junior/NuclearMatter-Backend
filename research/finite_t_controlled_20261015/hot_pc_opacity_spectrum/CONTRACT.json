@@ -1,0 +1,12 @@
+{
+ "channel":"n+e+ <-> p+antinue only",
+ "material":{"T_MeV":2.0,"nB_fm-3":1e-7,"Ye":0.3,"species":"particle-only free n,p + actual equilibrium e-/e+; muons absent","signed_positron_mu":"-mu_e"},
+ "crossing":{"absorption_order":"initialproton Ea -> finalneutron Ea+omega; q=kanti-pplus=pn-pp","vertex":"Diracadjoint Gamma_np(-q), audited byliteral vspinors and originaldeltashell","amplitude":"frozen fullanti Guo scalar amplitude averaged4 initialn/e+ spins inemission; unaveraged reciprocal sum4timesit"},
+ "occupations":{"j":"fn(Ea+omega)*(1-fp(Ea))*fplus(El)","chi":"fp(Ea)*(1-fn(Ea+omega))*(1-fplus(El))","construction":"separate positive integrals, NOTKMSgeneratedinverse","anti_mu_eq":"mu_n-mu_p-mu_e"},
+ "normalization":{"differential_prefactor":"pe/[32pi^3 q Eanti hbar] integral dEa avgphi amplitude_avg4","units":"differential s^-1MeV^-1 per dcos; integrated j,chi s^-1 peroccupation","radiation_DOS":"oneactiveantihelicity E^2/(2pi^2HC^3),fm^-3MeV^-1","absorption":"truechi","relaxation":"j+chi"},
+ "timelike":"Withfuturemasslessk andmassivepositronl, timelikeq=k-l mustbepast; suchqcannotconvertlighterp intoheaviern withpositiveenergies. ExactPCtimelikebranchesempty; movingtargetspacelikesupportretained, no stationary1.806MeVcut.",
+ "stoichiometry":{"neutron":-1,"proton":1,"positron":-1,"electron_net":1,"antinue":1,"matter_Le":1,"radiation_Le":-1},
+ "energy":"restinclusive materialloss equals escapedantinu energy, noextraQ",
+ "closures":"emptyincoming orprescribedcommonT FDantinu; noEOSfeedback/evolution",
+ "omitted":["neutronbeta channel","fullantiinventory","allflavoropacity","Coulomb/radiative corrections","meanfields/correlations","hydro/transport evolution","AD/physicaluncertainty certificate"]
+}

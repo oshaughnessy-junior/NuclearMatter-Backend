@@ -1,0 +1,17 @@
+{
+  "status": "READ_ONLY_INTEGRATION_FEASIBILITY_AUDIT_COMPLETE",
+  "time_utc": "2026-10-16T00:46:01.416873+00:00",
+  "research_baseline": "25e68182f726e5bd9c0b372c9a667536940fbd07",
+  "observed_main": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "main_only_changed_path": ".github/workflows/private-review-dispatch.yml",
+  "conclusion": "Scoped installed CPU lepton-state reference PR ready to implement; no port or merge qualification yet; native AD finiteT EOS requires distinct forward/derivative/interface gates",
+  "production_changes": false,
+  "numerical_experiments": false,
+  "files": {
+    "final_head_readback.json": "059faea8cf90280dc9765bf3be6c8bfa521f2766ac9d81321d9efc74b39c3ee7",
+    "local_read_evidence.json": "6f5034fad3dd10a4194dd713e8116ca87b60b8cde13f9f7acca7718ccff866fc",
+    "AUDIT.md": "3fc5259ae7f5b3264827d59af40c5c21c07172f9865f5c5dcd1d1dbe7782ce3a",
+    "github_additional_evidence.json": "ac1bdd697285dc5590845c7452a0c0f5bc45f849d36fec4777d56105b892cf1c",
+    "github_read_evidence.json": "f8dba67baddc963bc10818d10c0456320d037daf23765e4311ed65dfad015083"
+  }
+}

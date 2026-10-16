@@ -1,0 +1,78 @@
+from pathlib import Path
+import ast,copy,contextlib,hashlib,importlib.util,io,json,math,sys,time,types
+from unittest.mock import patch
+sys.dont_write_bytecode=True
+D=Path(__file__).resolve().parent; A=D.parent/'hot_pc_opacity_spectrum'; R=D.parent/'review_hot_pc_opacity_spectrum'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+checks=[]
+def check(name,passed,**kw):checks.append(dict(name=name,passed=bool(passed),**kw))
+before={str(p):sha(p)for root in[A,R]for p in root.rglob('*')if p.is_file()}
+expected={'total.py':'64dd5e0c02055bf55fb7240821e8c12f44fa4410c50795360168190fda305365','spectrum.py':'5fbc8fc21fc6b3b26bf43331ebe04b31bf66145b1f7bf51c977dfa47e5f78b0b','MANIFEST.json':'339a980391a905cbdc975b2db18616e9b751487c6ea2ed95126420f8c79b1b33'}
+for f,h in expected.items():assert sha(A/f)==h,(f,sha(A/f))
+def consumer(name,text):
+ m=types.ModuleType(name);m.__file__=str(A/'total.py');sys.modules[name]=m
+ exec(compile(text,str(A/'total.py'),'exec'),m.__dict__);return m
+# Original location is deliberately retained for unchanged source/data resolution.
+old=consumer('independent_PC_old_consumer',(A/'pre_admission_repair/total.py').read_text())
+new=consumer('independent_PC_fixed_consumer',(A/'total.py').read_text())
+b,meta=new.S.matched(); c=new.contract('fine')
+def accepted(m,row,contract=c):
+ try:m.validate_row(contract,row,b,meta);return True
+ except (RuntimeError,ValueError,TypeError,ArithmeticError):return False
+initial=json.loads((R/'assembly_results.json').read_text()); witness=initial['false_zero_mutation']; baseline=initial['false_zero_original']
+check('exact preserved false-zero accepted by ORIGINAL source',accepted(old,witness))
+check('exact preserved false-zero rejected by REPAIRED source',not accepted(new,witness))
+check('original review FAIL remains recorded',len(initial['failed'])==1 and initial['failed'][0]['passed']is False)
+rows_by_rule={}
+for rule,nparts in [('coarse',1),('middle',3),('fine',4)]:
+ cc=new.contract(rule); rows=[r for i in range(nparts)for r in json.loads((A/f'total_{rule}_{i}.json').read_text())['rows']];rows_by_rule[rule]=rows
+ for r in rows:check(f'old/new admit actual {rule} {r["index"]}',accepted(old,r,cc)and accepted(new,r,cc))
+check('exactly144 original physical rows',sum(map(len,rows_by_rule.values()))==144)
+def derived(row):
+ v=row['spectrum'];j,x=v['j'],v['chi'];v['log_kms_actual']=j['log']-x['log']if j['log']is not None and x['log']is not None else None
+ v['relaxation']=j['value']+x['value']if j['representable']and x['representable']else None
+for keys in [('j',),('chi',),('j','chi')]:
+ for what in ['empty','zero','nan','boolean_log','boolean_value','boolean_flag']:
+  r=copy.deepcopy(baseline)
+  for k in keys:
+   coeff=r['spectrum'][k]
+   if what=='empty':r['spectrum'][k]=new.S.represented(None)
+   elif what=='zero':coeff['value']=0.
+   elif what=='nan':coeff['log']=float('nan')
+   elif what=='boolean_log':coeff['log']=False
+   elif what=='boolean_value':coeff['value']=True
+   else:coeff['representable']=1
+  derived(r);check(f'reject {keys} {what}',not accepted(new,r))
+# Preserve chemistry but push both channels to ordinary underflow. No zero floor.
+r=copy.deepcopy(baseline);jlog=-14000.;xlog=jlog-r['spectrum']['log_kms_expected']
+r['spectrum']['j']=new.S.represented(jlog);r['spectrum']['chi']=new.S.represented(xlog);derived(r)
+check('finite-log underflow accepted independently',accepted(new,r))
+check('finite-log underflow keeps None values and false flags',all(r['spectrum'][k]['value']is None and r['spectrum'][k]['representable']is False and r['spectrum'][k]['reason']=='underflow' for k in ['j','chi']))
+# Real differential point: past-timelike transfer, unlike the integrated channel.
+dold=old.S.differential(b,2.,3.,1.);dnew=new.S.differential(b,2.,3.,1.)
+check('genuine empty differential identical',dold==dnew and dnew['j']['log']is None and dnew['chi']['value']==0.)
+# No physical rule may change when consumer is replayed. Writes intercepted only.
+def aggregate(m):
+ captured=[]
+ def capture(path,text,*args,**kwargs):
+  if path!=A/'total_results.json':raise AssertionError('Unexpected output path')
+  captured.append(text);return len(text)
+ with patch.object(Path,'write_text',capture),contextlib.redirect_stdout(io.StringIO()):m.combine()
+ assert len(captured)==1
+ return captured[0]
+a=aggregate(old);z=aggregate(new)
+check('complete old/new aggregate byte-identical',a==z)
+check('aggregate byte-identical to frozen original',z==(A/'total_results.json').read_text())
+check('all10 original coarse numerical failures retained',len(json.loads(z)['failed'])==10)
+# AST check: physics, controls, integration, output aggregation bodies unchanged.
+def funcs(p):return {x.name:ast.dump(x,include_attributes=False)for x in ast.parse(p.read_text()).body if isinstance(x,ast.FunctionDef)}
+f0=funcs(A/'pre_admission_repair/total.py');f1=funcs(A/'total.py')
+for name in f0:
+ if name!='validate_row':check('unchanged function AST '+name,f0[name]==f1[name])
+pin=json.loads((A/'PRE_ADMISSION_REPAIR_PIN.json').read_text())
+for name,h in pin['original_files'].items():check('exact original snapshot '+name,sha(A/'pre_admission_repair'/name)==h)
+for name,h in pin['independent_initial_review_files'].items():check('initial independent review unchanged '+name,sha(R/name)==h)
+for name,h in json.loads((A/'MANIFEST.json').read_text())['files'].items():check('current manifest '+name,sha(A/name)==h)
+for p,h in before.items():check('read-only probe '+str(Path(p).relative_to(D.parent)),sha(Path(p))==h)
+out=dict(status='ACCEPTED_NARROW_ASSEMBLY_REPAIR'if all(x['passed']for x in checks)else'BLOCKED',checks=checks,passed=sum(x['passed']for x in checks),failed=[x for x in checks if not x['passed']],source_hashes=expected,aggregate_sha=hashlib.sha256(z.encode()).hexdigest(),underflow_witness=r,empty_differential=dnew,original_failure_preserved=initial['failed'],method='Execute original text with original location for source/data resolution; pure consumer only. All output writes intercepted. No physical grid regenerated.')
+(D/'results.json').write_text(json.dumps(out,indent=2)+'\n');print(out['status'],out['passed'],out['failed'])
