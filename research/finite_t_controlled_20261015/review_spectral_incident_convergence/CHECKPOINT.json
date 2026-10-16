@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN ACCEPTED selected FINE finite intervals;29originalcoarseFAIL preserved; wholeenergyOPEN",
+  "utc": "2026-10-16T08:14:01.661145+00:00",
+  "review_sha256": "0b443d1739681ba370c2b9e6986cbb2d3563d198db9ff52dfcb5f233c507e0ec",
+  "manifest_sha256": "38d54a3e7b31de0480fefb0b2326bd62d5f9a88f4c56d35a73a81eb5b86b8e1a",
+  "lock_sha256": "7dede2dcb2e6d212475d8470cecd48b265e6e5cd3b6db1d105cec055d8840ad6",
+  "main_passed": 582,
+  "formal_admission_hash_passed": 8,
+  "new_failed": 0,
+  "retained_original_coarse_failed": 29,
+  "old_nodes": 252,
+  "original_execution_ECPC": 168,
+  "successor_execution_beta": 84,
+  "new_actual_order20_nodes": 60,
+  "new_maxima": {
+    "EC": 4.440892098500626e-15,
+    "PC": 2.7457813800424447e-11,
+    "NEUTRON_DECAY": 2.3110037217222157e-09
+  },
+  "max_single_chunk_seconds": 8.964981583878398,
+  "sum_scientific_chunk_seconds": 91.27633375045843,
+  "all197study_files_unchanged": true,
+  "all122old_checkpoint_paths_unchanged": true,
+  "no_source_study_edits": true,
+  "whole_energy_tails": "OPEN",
+  "exact_quota_time": "2026-10-16T08:12:13Z",
+  "used_percent": 30,
+  "baseline_identity_confirmed": true
+}

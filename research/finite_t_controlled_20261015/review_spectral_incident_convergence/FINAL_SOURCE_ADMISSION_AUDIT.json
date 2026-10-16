@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": 8,
+  "different_review_sha256": "89cd023016062705490e1a58dcc88ff1fbd757a11a7cc936e2be7213acf4f096",
+  "different_checkpoint_sha256": "313b9c52d789e5a07efed74ea80ef81378ad2dadb860019066a0f75466374ff1",
+  "source_proof_sha256": "b7a3639c9d96bd0daa14362cd119ded21d996a627125d7b0cca330387ea5773a",
+  "original_execution_still_168": true,
+  "successor_execution_still_84": true,
+  "source_changed": false,
+  "ordinary_precision_note": "np.longdouble == binary64 on current arm64; no extra precision claimed, algorithm distinct from author log accumulation"
+}
