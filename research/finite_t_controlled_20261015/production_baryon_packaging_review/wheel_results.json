@@ -1,0 +1,471 @@
+{
+  "status": "PASS",
+  "passed": 112,
+  "failed": [],
+  "checks": [
+    {
+      "name": "module exact candidate SHA",
+      "passed": true
+    },
+    {
+      "name": "Python3.9 grammar",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/adapters/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/adapters/rift.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/constants.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/README.md",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/build_nscool.sh",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/isothermal.py",
+      "passed": true
+    },
+    {
+      "name": "preexisting packaging omission src/nmbackend/cooling/nscool_isothermal_tail.f",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/nscool_nmbackend.patch",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/runner.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/validate.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/data/crust_sly_dh2001.dat",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/data/frib_scenario_ladder.yaml",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/durca.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/ejecta.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/base.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/compose.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/coolcomp.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/crust.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/ddrmf.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/hybrid.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/leptons.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/metamodel.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/polytrope.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/rmft.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/eos/skyrme.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/inference/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/inference/fisher.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/inference/synthetic.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/ipad.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/lab_likelihood.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/nscool_io.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/postmerger.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/priors/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/priors/bridge.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/priors/gp_pca.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/reference/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/reference/reprimand.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/reference/scipy_tov.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/rift/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/rift/compressed.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/rift/evidence.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/rift/sequence.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/tov/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/tov/central.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/tov/family.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/tov/phase_transition.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/tov/solver.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/validation/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/validation/model_diagnostic.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/validation/reference_matrix.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/_spline.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/blanket.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/conduct.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/core_conduct.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/core_nu.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/crust.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/crust_nu.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/curve.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/envelope.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/gaps.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/geometry.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/heat.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/native.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/reference.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/star.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/superfluid.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline wheel src/nmbackend/cooling/physics/whole.py",
+      "passed": true
+    },
+    {
+      "name": "metadata Requires-Python: >=3.9",
+      "passed": true
+    },
+    {
+      "name": "metadata Requires-Dist: numpy>=1.21",
+      "passed": true
+    },
+    {
+      "name": "metadata Requires-Dist: scipy>=1.7",
+      "passed": true
+    },
+    {
+      "name": "README candidate included",
+      "passed": true
+    },
+    {
+      "name": "reference initializer packaged",
+      "passed": true
+    },
+    {
+      "name": "nmbackend actual wheel import",
+      "passed": true
+    },
+    {
+      "name": "constants actual wheel import",
+      "passed": true
+    },
+    {
+      "name": "baryon actual wheel import",
+      "passed": true
+    },
+    {
+      "name": "public API narrow",
+      "passed": true
+    },
+    {
+      "name": "immutable state",
+      "passed": true
+    },
+    {
+      "name": "NMB neutron mass exact",
+      "passed": true
+    },
+    {
+      "name": "NMB proton mass exact",
+      "passed": true
+    },
+    {
+      "name": "actualwheel fresh root (939.565421, 7e-08)",
+      "passed": true
+    },
+    {
+      "name": "rest accounting (939.565421, 7e-08)",
+      "passed": true
+    },
+    {
+      "name": "free energy (939.565421, 7e-08)",
+      "passed": true
+    },
+    {
+      "name": "scalar finite fields (939.565421, 7e-08)",
+      "passed": true
+    },
+    {
+      "name": "actualwheel fresh root (938.272088, 3e-08)",
+      "passed": true
+    },
+    {
+      "name": "rest accounting (938.272088, 3e-08)",
+      "passed": true
+    },
+    {
+      "name": "free energy (938.272088, 3e-08)",
+      "passed": true
+    },
+    {
+      "name": "scalar finite fields (938.272088, 3e-08)",
+      "passed": true
+    },
+    {
+      "name": "actualwheel fresh root (939.56542052, 0.002)",
+      "passed": true
+    },
+    {
+      "name": "rest accounting (939.56542052, 0.002)",
+      "passed": true
+    },
+    {
+      "name": "free energy (939.56542052, 0.002)",
+      "passed": true
+    },
+    {
+      "name": "scalar finite fields (939.56542052, 0.002)",
+      "passed": true
+    },
+    {
+      "name": "actualwheel fresh root (938.27208816, 0.001)",
+      "passed": true
+    },
+    {
+      "name": "rest accounting (938.27208816, 0.001)",
+      "passed": true
+    },
+    {
+      "name": "free energy (938.27208816, 0.001)",
+      "passed": true
+    },
+    {
+      "name": "scalar finite fields (938.27208816, 0.001)",
+      "passed": true
+    },
+    {
+      "name": "invalid state reject (0.0, 1e-07)",
+      "passed": true
+    },
+    {
+      "name": "invalid state reject (2.0, 0.0)",
+      "passed": true
+    },
+    {
+      "name": "invalid state reject (2.0, -1e-07)",
+      "passed": true
+    },
+    {
+      "name": "invalid state reject (True, 1e-07)",
+      "passed": true
+    },
+    {
+      "name": "invalid state reject (2.0, nan)",
+      "passed": true
+    },
+    {
+      "name": "cold JAX API charge closure",
+      "passed": true
+    },
+    {
+      "name": "example wheel neutron",
+      "passed": true
+    },
+    {
+      "name": "example wheel proton",
+      "passed": true
+    },
+    {
+      "name": "example explicit units",
+      "passed": true
+    },
+    {
+      "name": "example species independent",
+      "passed": true
+    },
+    {
+      "name": "all pinned author files unchanged",
+      "passed": true
+    }
+  ],
+  "author_changed": [],
+  "wheel": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_packaging_review/wheels/nmbackend-0.0.1-py3-none-any.whl",
+  "wheel_sha256": "93b273058e1285a6d4cd6ee5fcfcd95bcf02546d91e6c61df14e2e31408f07fd",
+  "module_origin": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_packaging_review/wheels/nmbackend-0.0.1-py3-none-any.whl/nmbackend/reference/finite_t_baryons.py",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "jax": "0.10.1",
+    "diffrax": "0.7.2",
+    "setuptools": "82.0.1",
+    "wheel": "0.47.0"
+  },
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "installation_performed": false,
+  "network_used": false,
+  "min_runtime_executed": false
+}

@@ -1,0 +1,36 @@
+{
+  "model": "particle-only ideal gas; independent species, fixed supplied masses",
+  "units": "T/mu/m MeV; particle n/s/Cv fm^-3; energy/pressure MeV fm^-3",
+  "neutron": {
+    "temperature": 2.0,
+    "mass": 939.565421,
+    "chemical_potential": 939.479300570021,
+    "kinetic_chemical_potential": -0.08612042997901881,
+    "particle_density": 0.0009999999999999842,
+    "kinetic_energy_density": 0.0033956320497301,
+    "energy_density": 0.9429610530497153,
+    "pressure": 0.002257359556792346,
+    "entropy_density": 0.0028695560182507313,
+    "free_energy_density": 0.9372219410132139,
+    "cv_fixed_particle_density": 0.001414572721803932,
+    "dn_dmu_fixed_temperature": 0.00039822833519575205,
+    "dn_dtemperature_fixed_mu": 0.0007693950852252001,
+    "dmu_dtemperature_fixed_particle_density": -1.93204505361729
+  },
+  "proton": {
+    "temperature": 2.0,
+    "mass": 938.272088,
+    "chemical_potential": 934.5590726995108,
+    "kinetic_chemical_potential": -3.7130153004892463,
+    "particle_density": 0.0002000000000000059,
+    "kinetic_energy_density": 0.0006173082503752656,
+    "energy_density": 0.1882717258503808,
+    "pressure": 0.0004104332237424708,
+    "entropy_density": 0.0008851722671078039,
+    "free_energy_density": 0.18650138131616517,
+    "cv_fixed_particle_density": 0.0002976822926891606,
+    "dn_dmu_fixed_temperature": 9.504882173568426e-05,
+    "dn_dtemperature_fixed_mu": 0.0003268680755981618,
+    "dmu_dtemperature_fixed_particle_density": -3.4389492644856774
+  }
+}

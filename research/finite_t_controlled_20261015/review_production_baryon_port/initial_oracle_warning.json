@@ -1,0 +1,4 @@
+{
+  "cause": "Independent entropy evaluator rounded f to1 before vacancy entropy; original scalarquad emitted roundoff/subdivision warnings despite126comparisongatespass. Candidate never imported. Oracle warnings cannot be claimed resolved.",
+  "repair": "Use exact stable softplus/logFD entropy scaledbefore evaluating vacancy; numericalindependent integrand only, no candidatechange."
+}
