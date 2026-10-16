@@ -1,0 +1,15 @@
+{
+ "fixed_bath":"T2MeV,nB1e-7fm^-3,Ye.3; fresh matched FD roots; muons absent",
+ "selected_energies_MeV":[2,5,10],
+ "selected_rules":[[6,8,8,4,40,24],[8,12,12,4,50,30],[12,20,16,8,70,40]],
+ "controls_order":"lepton,angle,baryonenergy,periodicphi,innertailT,outertailT",
+ "refinement_gate":0.000003,
+ "KMS_and_LTE_gate":0.000000000003,
+ "differential_forward_gate":0.0000000003,
+ "spectral_reconstruction":"onehelicityDOS E^2/(2pi^2HC^3) j(E) integrated over E; compare actual accepted CM EC empty number and escaped-energy totals; no extra spin/DOS",
+ "initial_total_rules":[{"nu_order":24,"upper":50,"controls":[8,12,12,4,50,30]},{"nu_order":32,"upper":60,"controls":[12,20,16,4,70,40]}],
+ "total_gate":0.000003,
+ "followup":"If total agreement/refinement fails preserve failure and independently vary neutrino rule versus material rule/tails, within bounded work. Do not infer convergence from KMS.",
+ "time_limit_seconds_per_experiment":110,
+ "total_source_join":false
+}

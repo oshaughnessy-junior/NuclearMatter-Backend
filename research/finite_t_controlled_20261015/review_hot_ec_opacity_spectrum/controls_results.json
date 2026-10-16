@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "name": "invalidincident nan",
+      "passed": true
+    },
+    {
+      "name": "invalidincident inf",
+      "passed": true
+    },
+    {
+      "name": "invalidincident True",
+      "passed": true
+    },
+    {
+      "name": "invalidincident 0.0",
+      "passed": true
+    },
+    {
+      "name": "invalidincident -1.0",
+      "passed": true
+    },
+    {
+      "name": "invalidincident 60.01",
+      "passed": true
+    },
+    {
+      "name": "invalidcontrol lepton_order",
+      "passed": true
+    },
+    {
+      "name": "invalidcontrol angle_order",
+      "passed": true
+    },
+    {
+      "name": "invalidcontrol energy_order",
+      "passed": true
+    },
+    {
+      "name": "invalidcontrol phi_order",
+      "passed": true
+    },
+    {
+      "name": "invalidcontrol tail",
+      "passed": true
+    },
+    {
+      "name": "invalidcontrol outer_tail",
+      "passed": true
+    },
+    {
+      "name": "invalidcontrol budget_seconds",
+      "passed": true
+    },
+    {
+      "name": "rejectchangedmatchedstate",
+      "passed": true
+    },
+    {
+      "name": "representation empty",
+      "passed": true
+    },
+    {
+      "name": "representation underflow",
+      "passed": true
+    },
+    {
+      "name": "representation overflow",
+      "passed": true
+    },
+    {
+      "name": "representation positiveunit",
+      "passed": true
+    },
+    {
+      "name": "rejectnonfinitelog nan",
+      "passed": true
+    },
+    {
+      "name": "rejectnonfinitelog inf",
+      "passed": true
+    }
+  ],
+  "passed": 20,
+  "failed": []
+}

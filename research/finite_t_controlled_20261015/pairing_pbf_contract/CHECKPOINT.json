@@ -1,0 +1,23 @@
+{
+  "status": "SUBNORMAL_ADMISSION_REPAIR_FROZEN_PENDING_SEPARATE_RECHECK",
+  "passing_controls": {
+    "results.json": 101,
+    "alternate_integral_results.json": 16,
+    "endpoint_results.json": 6,
+    "fortran_results.json": 8,
+    "normalization_results.json": 1
+  },
+  "total_pass": 132,
+  "failed_selected": [],
+  "raw_endpoint_failed_exact_zero_gates": 4,
+  "preserved_helper_failure": "initial_small_gap_log_failure.json",
+  "scope": "Exact legacy scalar/source audit + independently normalized dimensionless BCS A/B phase integrals; no full conserving current/pairedEOS/cooling-profile qualification",
+  "quota_percent": 21,
+  "reset": 1792652325,
+  "utc": "2026-10-16T00:12:58.371170+00:00",
+  "repair_pass": 66,
+  "repair_failed": [],
+  "original_independent_review": "92PASS2subnormalFAIL4knownrawendpointFAIL preserved in review_pairing_pbf_contract/",
+  "input_admission": "exact zero OR normal positivefloat64; priorupperboundsunchanged",
+  "uniform_log_certificate": false
+}

@@ -1,0 +1,199 @@
+{
+  "checks": [
+    {
+      "name": "bad incident True",
+      "passed": true
+    },
+    {
+      "name": "bad incident False",
+      "passed": true
+    },
+    {
+      "name": "bad incident nan",
+      "passed": true
+    },
+    {
+      "name": "bad incident inf",
+      "passed": true
+    },
+    {
+      "name": "bad incident 0.0",
+      "passed": true
+    },
+    {
+      "name": "bad incident -1.0",
+      "passed": true
+    },
+    {
+      "name": "bad incident 60.01",
+      "passed": true
+    },
+    {
+      "name": "bad incident 2",
+      "passed": true
+    },
+    {
+      "name": "bad incident None",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'lepton_order': True}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'lepton_order': 3}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'angle_order': False}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'angle_order': 3}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'energy_order': True}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'energy_order': 7}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'phi_order': False}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'phi_order': 3}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'tail': nan}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'tail': 29.9}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'tail': 100.1}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'outer_tail': True}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'outer_tail': inf}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'outer_tail': 19.9}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'budget_seconds': True}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'budget_seconds': 0}",
+      "passed": true
+    },
+    {
+      "name": "bad controls {'budget_seconds': 120.1}",
+      "passed": true
+    },
+    {
+      "name": "arbitrary unmatched bath",
+      "passed": true
+    },
+    {
+      "name": "bad differential (True, 6.0, 0.1)",
+      "passed": true
+    },
+    {
+      "name": "bad differential (5.0, 0.51099895069, 0.1)",
+      "passed": true
+    },
+    {
+      "name": "bad differential (5.0, nan, 0.1)",
+      "passed": true
+    },
+    {
+      "name": "bad differential (5.0, 6.0, nan)",
+      "passed": true
+    },
+    {
+      "name": "bad differential (5.0, 6.0, 1.01)",
+      "passed": true
+    },
+    {
+      "name": "ordinary/log convention -800.0",
+      "passed": true
+    },
+    {
+      "name": "ordinary/log convention 800.0",
+      "passed": true
+    },
+    {
+      "name": "ordinary/log convention None",
+      "passed": true
+    },
+    {
+      "name": "ordinary/log convention -3.0",
+      "passed": true
+    },
+    {
+      "name": "endpoint emissivity 2",
+      "passed": true
+    },
+    {
+      "name": "true absorption at filled state 2",
+      "passed": true
+    },
+    {
+      "name": "relaxation slope 2",
+      "passed": true
+    },
+    {
+      "name": "endpoint emissivity 5",
+      "passed": true
+    },
+    {
+      "name": "true absorption at filled state 5",
+      "passed": true
+    },
+    {
+      "name": "relaxation slope 5",
+      "passed": true
+    },
+    {
+      "name": "endpoint emissivity 10",
+      "passed": true
+    },
+    {
+      "name": "true absorption at filled state 10",
+      "passed": true
+    },
+    {
+      "name": "relaxation slope 10",
+      "passed": true
+    },
+    {
+      "name": "exact matched EOS metadata",
+      "passed": true
+    },
+    {
+      "name": "parent sys.path restored",
+      "passed": true
+    },
+    {
+      "name": "parent generic aliases restored",
+      "passed": true
+    }
+  ],
+  "passed": 48,
+  "failed": [],
+  "scope": "admission/algebra/representation only; no broad source-state domain or generic security sandbox"
+}
