@@ -1,0 +1,58 @@
+--- initial/CONTRACT.md
++++ repaired/CONTRACT.md
+@@ -52,18 +52,31 @@
+ 
+ ## Absolute invariant normalization and current
+ 
+-Metric (+,−,−,−), gamma5=i gamma0 gamma1 gamma2 gamma3, sigma^{mu nu}=i[gamma^mu,gamma^nu]/2. For n->p baryon current with q=p_p−p_n, use the frozen source convention
++Metric (+,−,−,−), gamma5=i gamma0 gamma1 gamma2 gamma3, sigma^{mu nu}=i[gamma^mu,gamma^nu]/2. For the n->p baryon current define the ORIENTED four-transfer q_Gamma=p_p−p_n. This is a current argument, distinct from a positive spatial transfer magnitude or a future-directed pair momentum. Use the frozen source convention
+ 
+     Gamma^mu = GV gamma^mu − GA gamma^mu gamma5
+-               + i F2 sigma^{mu nu} q_nu/(2 Mweak)
+-               − GP q^mu gamma5/Mweak.
+-    Mweak=(MN+MP)/2, physical free q²; amplitude GF Vud/sqrt(2) times currents.
++               + i F2 sigma^{mu nu} (q_Gamma)_nu/(2 Mweak)
++               − GP q_Gamma^mu gamma5/Mweak.
++    Mweak=(MN+MP)/2, physical free q_Gamma²; amplitude GF Vud/sqrt(2) times currents.
+ 
+-Use Guo Eqs26–29 and47a–h with GV(0)=1, GA(0)=1.2723, F2(0)=3.706, MV=840, MA=1000, mpi=139.57 MeV and GP=2 Mweak² GA(q²)/(mpi²−q²). Full q² parameterization is pinned in `_weak_current`; preserve the denominator `(1−q²/(4Mweak²))*(1−q²/MV²)^2` and vector numerator `1−(1+3.706)q²/(4Mweak²)`. Reciprocal vertex is the actual Dirac adjoint at reversed transfer, not the same matrices blindly reused. Antineutrino/positron v-spinors and VA/AF crossing signs require literal-spinor versus invariant-polynomial forward gates. Recoil is exact phase space; a static point current or F2=0 is a distinct model switch, not a quadrature approximation.
++Use Guo Eqs26–29 and47a–h with GV(0)=1, GA(0)=1.2723, F2(0)=3.706, MV=840, MA=1000, mpi=139.57 MeV and GP=2 Mweak² GA(q²)/(mpi²−q²). Full q² parameterization is pinned in `_weak_current`; preserve the denominator `(1−q²/(4Mweak²))*(1−q²/MV²)^2` and vector numerator `1−(1+3.706)q²/(4Mweak²)`. Define the reciprocal p->n vertex by Gamma_pn(q_pn)=DiracAdjoint[Gamma_np(−q_pn)], where q_pn=p_n−p_p=−q_Gamma; do not blindly reuse matrices at the same oriented transfer. Form factors use the common invariant q_Gamma²=q_pn², but equal squares do NOT identify the linear F2/GP transfer terms. In these source form-factor expressions, q² always denotes q_Gamma². Antineutrino/positron v-spinors and VA/AF crossing signs require literal-spinor versus invariant-polynomial forward gates. Recoil is exact phase space; a static point current or F2=0 is a distinct model switch, not a quadrature approximation.
++
++Current orientation by reaction (the four-vectors p_n,p_p always label the physical neutron/proton, not generic initial/final slots):
++
++| Process | Baryon current used | Transfer identities |
++|---|---|---|
++| nue+n -> p+e− (EC inverse absorption) | Gamma_np(q_Gamma) | q_Gamma=k_nue−p_e−=Q_abs |
++| p+e− -> n+nue (EC emission) | Gamma_pn(q_pn) | q_pn=−q_Gamma=p_e−−k_nue |
++| n+e+ -> p+antinue (PC emission) | Gamma_np(q_Gamma) | q_Gamma=p_e+−k_antinue=−Q_abs |
++| antinue+p -> n+e+ (PC inverse absorption) | Gamma_pn(q_pn) | q_pn=k_antinue−p_e+=Q_abs |
++| n -> p+e−+antinue (decay emission) | Gamma_np(q_Gamma) | q_Gamma=−(p_e−+k_antinue)=−Q_leptons |
++| p+e−+antinue -> n (inverse decay) | Gamma_pn(q_pn) | q_pn=p_e−+k_antinue=Q_leptons |
++
++These are labels for the already pinned amplitudes and on-shell conservation equations, not new current prescriptions. Literal reciprocal spinor/trace gates remain necessary in every channel; a scalar invariant formula must carry its own source crossing signs. Free physical and kinetic four-momenta coincide; that fact does not turn q_Gamma into its negative. The later mean-field adapter must preserve the same orientation before distinguishing physical from kinetic transfers.
+ 
+ Master event measure is the covariant `(2pi)^4 delta4 * sum_spins|M|² * product[d³p/((2pi)^3 2E)]`, with all initial occupations/final holes. No spin averages in this master sum; no extra helicity average. A coefficient at fixed incoming neutrino momentum has its `1/(2Enu)` flux leg, and conversion to physical rates supplies 1/HBAR and the needed HBARC^-3 for volume moments. Keep one convention from amplitude through phase, not ad hoc dimension restoration. Existing EC/PC scalar amplitudes average FOUR initial baryon/charged-lepton spins; their equivalent unaveraged amplitude is four times that value. Decay averages the neutron spin TWO and combines a spin-two parent density measure: no additional p/e spin or anti-helicity factor.
+ 
+-For q-axis capture reduction with q=|k−pl|, omega=Enu−El, El TOTAL and pe=sqrt(El²−me²), the accepted differential prefactor for the avg-four scalar amplitude A is
++For the capture response geometry define Q_abs=k_nu−p_lepton=(omega,vector_Q_abs), with omega=Enu−El and positive spatial magnitude q=|vector_Q_abs|=|k−pl|. For nue absorption n->p, Q_abs=q_Gamma; for antinue absorption p->n, Q_abs=q_pn=−q_Gamma. Thus q in the following phase prefactor is a MAGNITUDE, not the oriented current four-vector. With El TOTAL and pe=sqrt(El²−me²), the accepted differential prefactor for the avg-four scalar amplitude A is
+ 
+     d(j or chi)/(dEl dcos) = pe/[32pi³ q Enu HBAR]
+                              * integral dEa <A>phi * appropriate occupations.
+@@ -76,7 +89,7 @@
+ 
+ Capture support solves the exact unequal-mass positive-energy shell before FD quadrature, retaining spacelike, applicable timelike and lightlike limiting branches. PC physical free n/e+ inverse support is strictly spacelike; do not transplant the EC n->p support ordering. A stationary proton anti-capture threshold1.8060662080187608 MeV is a vacuum target-rest witness, NOT a finite-T cutoff: moving targets permit below-threshold response. EC initial incoming p/e threshold depends on proton momentum and incident angle, not one fixed lepton cutoff.
+ 
+-Decay q=kanti+pe is future timelike, me²<=q²<=(MN−MP)². Neutron-rest anti endpoint E0=.7820077025790402MeV is not a lab cutoff. With parent rapidity eta, lab Eanti=gamma E*(1+beta cos*); for E>E0 parent pmin=MN sinh(log(E/E0)). Conditional phase must resolve the moving lower parent bound/cone. The frozen alternative reduction has rest spin-averaged dGamma*/(dEanti* dEe*)=Aavg2/(64pi³ MN HBAR), parent spin-two p²dp/(pi² HBARC³) and MN/En time dilation. Use actual electron/proton blocking after boosts. Inverse is the same covariant measure with swapped occupancies, not a newly time-dilated inverse proper lifetime.
++For decay, define the FUTURE-directed lepton-pair momentum Q_leptons=kanti+pe=p_n−p_p=−q_Gamma. It is Q_leptons that is future timelike, with me²<=Q_leptons²=q_Gamma²<=(MN−MP)². The pinned decay current still takes q_Gamma=p_p−p_n, which is past-directed on this decay support. Substituting Q_leptons into the same n->p vertex solely because the squares agree would reverse linear transfer terms and is forbidden. Neutron-rest anti endpoint E0=.7820077025790402MeV is not a lab cutoff. With parent rapidity eta, lab Eanti=gamma E*(1+beta cos*); for E>E0 parent pmin=MN sinh(log(E/E0)). Conditional phase must resolve the moving lower parent bound/cone. The frozen alternative reduction has rest spin-averaged dGamma*/(dEanti* dEe*)=Aavg2/(64pi³ MN HBAR), parent spin-two p²dp/(pi² HBARC³) and MN/En time dilation. Use actual electron/proton blocking after boosts. Inverse is the same covariant measure with swapped occupancies, not a newly time-dilated inverse proper lifetime.
+ 
+ Endpoint maps, Fermi-edge panels, log occupations, separately nonnegative integration and exact angular support precede refinement. Number/energy must refine independently (selected target3e-6 relative when resolved, absolute gross-scaled cancellation gates preregistered). Compare different phase coordinates and literal traces, not just increased orders within one shared formula. Tail and angular/refinement controls have separate metadata; a combined global coarse/fine test is not an isolated tail bound. Numerical limits do not authorize nuclear collision widths, arbitrary smearing or triangle-threshold fits.
+ 
+@@ -95,7 +108,7 @@
+ - Current module imports `vacuum_cc` through sys.path and vacuum wrappers derive weak M from their channel masses. Separate free bare current normalization from on-shell mass records now, so a future Hartree adapter cannot accidentally feed mD into Mweak.
+ - Source coupling's `three_source_cooling_element/worker.py` hardcodes NB=1e−7; do not expose it as a generic density API. Process-isolated source prototypes repair and pin admission but are not a security sandbox or portable installed backend. A package client should have no mutable alias/global cfg to isolate in the first place.
+ 
+-Later GM1 binding must explicitly provide common939 bare-Hamiltonian fields mD,U and total/kinetic chemical potentials, qphysical versus qstar, and independently matched thermodynamics. This is a DIFFERENT model: cannot pass free physical unequal masses or reuse the bare weak mass by accident; no in-medium CVC reduction without a stated prescription. Require the accepted Hartree forward/stability gates and maintain external native GM1 reference OPEN. No density-dependent rearrangement or arbitrary effective-mass substitution into fixed-mass CPU partials.
++Later GM1 binding must explicitly provide common939 bare-Hamiltonian fields mD,U and total/kinetic chemical potentials, consistently ORIENTED physical versus kinetic current transfers q_Gamma,physical and q_Gamma,star (and their negatives for the reciprocal channel), and independently matched thermodynamics. This is a DIFFERENT model: cannot pass free physical unequal masses or reuse the bare weak mass by accident; no in-medium CVC reduction without a stated prescription. Require the accepted Hartree forward/stability gates and maintain external native GM1 reference OPEN. No density-dependent rearrangement or arbitrary effective-mass substitution into fixed-mass CPU partials.
+ 
+ ## Required gates before port acceptance
+ 

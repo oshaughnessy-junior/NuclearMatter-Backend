@@ -1,0 +1,13 @@
+{
+  "status": "FROZEN transfer-notation repair; DIFFERENT recheck required; implementation NOT authorized",
+  "utc": "2026-10-16T05:18:52.585951+00:00",
+  "contract_sha256": "60adb59adecb0d0bd827c25a10cde117e12a79a7bb77ec7aeedd6d77659c22c4",
+  "manifest_sha256": "fae2e5f7cbb12f613569112549ddc3e6efce9b39c6514c0d067aae9cd3dae983",
+  "initial_review_sha256": "eea460add17722f8487dd853c54a5a4040759fd3f08a439b0f4e323fb17f5295",
+  "initial_review_preserved": "168PASS1requiredclarification",
+  "original_author_files_preserved": 12,
+  "external_files_unchanged": 60,
+  "new_physical_calls": 0,
+  "old_audit_result": "70PASS0FAIL; not rerun or relabelled as repair acceptance",
+  "repair_scope": "CONTRACT-only transfer labels + required provenance/manifest/checkpoint"
+}
