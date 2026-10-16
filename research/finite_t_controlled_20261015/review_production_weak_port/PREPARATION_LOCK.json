@@ -1,0 +1,125 @@
+{
+  "locked_utc": "2026-10-16T05:31:28.348319+00:00",
+  "candidate_imported": false,
+  "actual_new_rate_calls": 0,
+  "author_lock": "f65f8e9bb59ae17cfb535a9d72ada558bbc0ec2485f929c2f847ab91ea9968d5",
+  "baths": [
+    {
+      "T": 1.73,
+      "mu_n": 923.6494205199999,
+      "mu_p": 923.2210881599999,
+      "mu_e": 0.6401,
+      "label": "explicitintentionallyNONNEUTRALparticlebaryonsande\u00b1; noEOS/neutrality/betafactory",
+      "radiation": {
+        "empty": null,
+        "LTE": {
+          "T": 1.73,
+          "mu_nue": 0.2117676399999482,
+          "mu_antinue": -0.2117676399999482
+        },
+        "emission_dominated": {
+          "T": 1.73,
+          "mu_nue": -0.48023236000005187,
+          "mu_antinue": -0.9037676399999482
+        },
+        "inverse_dominated": {
+          "T": 1.73,
+          "mu_nue": 1.2497676399999482,
+          "mu_antinue": 0.8262323600000518
+        }
+      }
+    },
+    {
+      "T": 2.61,
+      "mu_n": 914.5094205199999,
+      "mu_p": 914.52108816,
+      "mu_e": -0.7308,
+      "label": "explicitintentionallyNONNEUTRALparticlebaryonsande\u00b1; noEOS/neutrality/betafactory",
+      "radiation": {
+        "empty": null,
+        "LTE": {
+          "T": 2.61,
+          "mu_nue": -0.7191323600000032,
+          "mu_antinue": 0.7191323600000032
+        },
+        "emission_dominated": {
+          "T": 2.61,
+          "mu_nue": -1.7631323600000033,
+          "mu_antinue": -0.3248676399999968
+        },
+        "inverse_dominated": {
+          "T": 2.61,
+          "mu_nue": 0.8468676399999966,
+          "mu_antinue": 2.285132360000003
+        }
+      }
+    }
+  ],
+  "profiles": {
+    "base": {
+      "EC": [
+        24,
+        10,
+        8,
+        70
+      ],
+      "PC": [
+        24,
+        40,
+        10,
+        65
+      ],
+      "NEUTRON_DECAY": [
+        20,
+        10,
+        8,
+        12,
+        80
+      ]
+    },
+    "fine": {
+      "EC": [
+        32,
+        12,
+        10,
+        90
+      ],
+      "PC": [
+        32,
+        52,
+        12,
+        85
+      ],
+      "NEUTRON_DECAY": [
+        28,
+        16,
+        12,
+        16,
+        100
+      ]
+    }
+  },
+  "gates": {
+    "F_B_number_energy": 3e-06,
+    "all_species_energy": 3e-06,
+    "density": 3e-09,
+    "on_shell": 2e-10,
+    "net_gross": 3e-09,
+    "LTE_net_gross": 2e-10,
+    "entropy_gross": 3e-09,
+    "current_literal": 3e-10
+  },
+  "sourcepins": {
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "review_hot_electron_capture/probe.py": "0f5ea2abb261b2f4c29d3b0121c28402b6557e3e0402e02cddcf3bff1201bf71",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+    "review_crossed_moments/reference.py": "7629a91bab827bd0bd586881c6d2e6f2ae3bbc3c0215387dece8078e9e27acbc",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "review_production_baryon_port/oracle.py": "ae532cba2faf8c3eebc888504bb717d322fb35f371b0945a890a6ba271559088",
+    "hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88"
+  },
+  "independence": "SelectedpurefunctionsAST-extractedwithoutdriver/importsideeffects. EC originalp/invariant-s/boostaxis phase+Diractrace vsruntimephase; PC independentreviewerGuopolynomial+differentp maps; beta reviewerflatDalitz/directparentp/scalarcurrent vsruntimecoordinates. SamephysicalHamiltonian/noexternalvalidation.",
+  "changes_to_reused_purefunctions": "Only explicitradiationlist/arraylength/entropy diagnostics/parenttail parameter; amplitude,event,andphasefunctionsotherwiseunchanged; ASTproof recorded. No monkeypatchingglobalgenericmodules.",
+  "policy": "FDdensity+mass/chemistryforwardBEFORErates. No candidatecomparisons untilFROZEN. No spectra/opacity/AD/EOSfactory/neutrality/fullinventory/modeluncertaintyclaim. No source/driver imports orhotbetaoverwrite. Physicalexperimentsserial<112s thread1 quotaexactguarded."
+}

@@ -1,0 +1,29 @@
+{
+  "sourcepins": {
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "review_hot_electron_capture/probe.py": "0f5ea2abb261b2f4c29d3b0121c28402b6557e3e0402e02cddcf3bff1201bf71",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+    "review_crossed_moments/reference.py": "7629a91bab827bd0bd586881c6d2e6f2ae3bbc3c0215387dece8078e9e27acbc",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "review_production_baryon_port/oracle.py": "ae532cba2faf8c3eebc888504bb717d322fb35f371b0945a890a6ba271559088",
+    "hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88"
+  },
+  "unchanged_AST": {
+    "EC": {
+      "dot": true,
+      "slash": true,
+      "trace_amp": true
+    },
+    "PC": {
+      "dot": true,
+      "boost": true,
+      "amplitude": true
+    },
+    "BETA": {
+      "events": true
+    }
+  },
+  "import_policy": "Onlyselecteddefinitions, scopedglobals explicitlyinjected. NOupstreamtop-leveldriver/sys.path/globalalias/filewrites executed.",
+  "intentional_integrator_changes": "Only explicitradiationlist/arraylength/entropy diagnostics/parenttail parameter; amplitude,event,andphasefunctionsotherwiseunchanged; ASTproof recorded. No monkeypatchingglobalgenericmodules."
+}

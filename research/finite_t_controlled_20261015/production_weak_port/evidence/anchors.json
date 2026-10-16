@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "name": "EC5.0CMcross_refine",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "EC5.0absolute_primary_trace_cm2",
+      "error": 3.3306690738754696e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "EC20.0CMcross_refine",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "EC20.0absolute_primary_trace_cm2",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "PC5.0CMcross_refine",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "PC5.0absolute_primary_trace_cm2",
+      "error": 2.6867397195928788e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "PC20.0CMcross_refine",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "PC20.0absolute_primary_trace_cm2",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "vacuum beta absolute pair/electron",
+      "error": 2.9485303087994907e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "vacuum beta source_absolute",
+      "error": 2.9480862195896407e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked FDdensity quad",
+      "error": 1.9984014443252818e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "thermal proper lifetime",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "thermal Doppler neutrino energy",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 13,
+  "failed": 0,
+  "cross_sections": [
+    {
+      "channel": "EC",
+      "Enu": 5.0,
+      "sigma_cm2": 3.7220035703514824e-42,
+      "independent_source_trace": 3.7220035703514697e-42
+    },
+    {
+      "channel": "EC",
+      "Enu": 20.0,
+      "sigma_cm2": 4.3197433669070475e-41,
+      "independent_source_trace": 4.319743366907046e-41
+    },
+    {
+      "channel": "PC",
+      "Enu": 5.0,
+      "sigma_cm2": 1.2308283399124909e-42,
+      "independent_source_trace": 1.2308283399124579e-42
+    },
+    {
+      "channel": "PC",
+      "Enu": 20.0,
+      "sigma_cm2": 2.822889709026283e-41,
+      "independent_source_trace": 2.8228897090262815e-41
+    }
+  ],
+  "rest_rate": 0.001053384620918292,
+  "rest_lifetime": 949.3208654672083,
+  "unblocked_actual": {
+    "rate": 7.350210699334475e-11,
+    "neutrino_energy": 3.534161250381222e-11
+  },
+  "independent_density": 6.999999999999856e-08,
+  "independent_proper_density": 6.977708382458537e-08,
+  "model": "same declared full tree current; no empirical lifetime or uncertainty estimate"
+}
