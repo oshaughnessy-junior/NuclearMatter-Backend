@@ -6,7 +6,7 @@
 - `PC`: n+e+ -> p+antinue and antinue+p -> n+e+;
 - `NEUTRON_DECAY`: n -> p+e−+antinue and p+e−+antinue -> n.
 
-This is not a full neutrino-interaction inventory or a full Urca model. Muons, mean fields, baryon antiparticles, pairing, modified Urca, correlations, Coulomb/radiative corrections, photon/electromagnetic equilibration dynamics, hydro and AD are absent. Spectral j/true-absorption chi, relaxation and transport opacities are **not available** in Stage A; `spectral_coefficients` raises `NotImplementedError`. A total volume rate must not be labelled a per-occupation opacity or divided by an arbitrary density/length.
+This is not a full neutrino-interaction inventory or a full Urca model. Muons, mean fields, baryon antiparticles, pairing, modified Urca, correlations, Coulomb/radiative corrections, photon/electromagnetic equilibration dynamics, hydro and AD are absent. Stage A totals retain their original request domain. The Stage B opt-in below supplies selected fixed-bath j/true-absorption chi and relaxation; angular transport opacities remain unavailable. Without explicit SpectralControls, `spectral_coefficients` retains the Stage A `NotImplementedError` behavior. A total volume rate must not be labelled a per-occupation opacity or divided by an arbitrary density/length.
 
 ## Inputs and fixed model
 
@@ -40,7 +40,7 @@ Decay uses two exact rest-Dalitz maps (`pair` or `electron`), actual full-curren
 
 Moment tuple order is `number, neutrino_energy, charged_lepton_energy, proton_energy, neutron_energy, material_energy_loss`, also available as `result.names`. Forward/backward entries are positive/log quantities; net entries are signed/log quantities accumulated directly with stable expm1 differences, rather than subtracting completed nearly equal branch totals. Empty incoming radiation gives exactly zero backward branch with reason `absent_initial_neutrino_occupation`. A finite log with `value=None` is ordinary underflow/overflow with retained positive support; it is not zero or forbidden kinematics. Positive/log constructors reject inconsistent falsezero/value/flag records. `None` energy-ledger diagnostics mean ordinary representation is unavailable, not a passing energy gate.
 
-Volume number: fm^-3s^-1; energy: MeVfm^-3s^-1; entropy: kBfm^-3s^-1. Number cgs multiplies1e39; energy cgs multiplies1e39*1.602176634e−6. No neutrino occupation DOS needs adding to these event totals. A later spectral API would have D(E)=E²/[2pi²HBARC³] for one active helicity and j/chi in s^-1 per occupation, independently reconstructed against these totals; Stage A supplies no such coefficients.
+Volume number: fm^-3s^-1; energy: MeVfm^-3s^-1; entropy: kBfm^-3s^-1. Number cgs multiplies1e39; energy cgs multiplies1e39*1.602176634e−6. No neutrino occupation DOS needs adding to these event totals. A later spectral API would have D(E)=E²/[2pi²HBARC³] for one active helicity and j/chi in s^-1 per occupation, independently reconstructed against these totals; Stage A totals supply no such coefficients; the separate fixed-bath spectral opt-in below does.
 
 FD material occupation products, BEFORE radiation factors:
 
@@ -64,4 +64,72 @@ For common-T FD, direct phase entropy is sum[(F−B)log(F/B)]>=0, independently 
 
 The INTERNAL JSON fixture labels saved research source paths/hashes/rows; it is never read at package import/runtime. Forward current/trace checks precede moment interpretation. Validation separately records actual three-channel total regressions, fresh predeclared chemical baths, positive F/B moment/refinement/tail tests and independently assembled phase/current controls. Shared-model method agreement estimates numerical error, not physical uncertainty. Retained campaign coarse/cold/falsezero/fit failures are not relabelled PASS by this candidate.
 
-No spectral convenience guard, full flavor/inverse inventory, high degeneracy/cold generic accuracy, interacting/paired response, radiative corrections, global composition equilibrium, optional moment-fit qualification or AD/Hessian fidelity is granted. Independent numerical/physics and packaging review plus normal CI/minimum-runtime qualification are separate gates. This is a CPU research-reference candidate, not a cold API replacement or production transport backend.
+No broad spectral accuracy, full flavor/inverse inventory, high degeneracy/cold generic accuracy, interacting/paired response, radiative corrections, global composition equilibrium, optional moment-fit qualification or AD/Hessian fidelity is granted. Independent numerical/physics and packaging review plus normal CI/minimum-runtime qualification are separate gates. This is a CPU research-reference candidate, not a cold API replacement or production transport backend.
+
+## Stage B: explicit selected spectral opt-in
+
+```
+ctl = w.SpectralControls()             # declared base rule, not a convergence flag
+fine = w.SpectralControls.fine()
+r = w.spectral_coefficients('EC', bath, 5., controls=ctl)
+d = w.capture_differential_coefficients('PC', bath, 1.7,
+        .5987748936352157, -.1995027501115606, controls=fine)
+rule = w.EnergyRule.gauss(2., 6., 4)
+pilot = w.reconstruct_spectral_moments('EC', bath, w.Radiation.empty(), rule, ctl)
+```
+
+Only EXACT bath T2,mu_n919.8287578100662,mu_p916.8449303084382,
+mu_e.17446333200826397MeV is admitted; no chemical/EOS factory is hidden.
+Capture requests require0<E<=60MeV, neutron decay0<E<=1.4MeV; these are
+numerical request limits rather than physical endpoints or uniform accuracy.
+The current/masses/constants remain exactly those above. `controls=None`
+keeps the old unavailable behavior; explicit `SpectralControls` opts in.
+Total APIs/constructors and their request domain are unchanged.
+
+`r.j` and `r.true_chi` are independently integrated material branches stripped
+of external neutrino occupation. `r.relaxation` is their log-safe sum. They
+have units s^-1 per one active occupation, while a capture differential has
+s^-1MeV^-1 per cosine. `r.absorption_cm_inverse`=true_chi/c and
+`r.absorption_km_inverse`=true_chi/c*1e5 use c=2.99792458e10cm/s. Differential
+results reject length conversion. None of these is angular transport opacity.
+The local source is j(1-f)-chi*f; empty radiation sets the inverse SOURCE zero,
+never chi zero. KMS is checked after independent branches, not imposed.
+
+The capture primitive uses exact positive-energy q-axis particle-hole support
+with physical species ordering and the same avg4 current. The measure is
+pe/(32pi³qE HBAR) integral dEa <A>phi times material FD products. No extra
+spin2, neutrino average or volume HC factor is inserted. Actual lepton total
+energy is integrated with El=ME+y². q_abs=k-lepton is q_Gamma for EC absorption
+and -q_Gamma for PC absorption; the physical source current handles crossing.
+
+Conditional beta uses the electron–proton invariant pair and actual moving
+parent boosts. E_lab=gamma E_star(1+v cosstar), the energy-delta Jacobian is
+1/[gamma(1+v cosstar)], and neutron proper time supplies1/gamma. Above the
+rest endpoint E0, pmin=MN*sinh(log(E/E0)); a finite-T moving bath has positive
+lab spectrum there. The future lepton-pair Q=pn-pp=-q_Gamma does not change
+the oriented current definition. After the direct conditional dR/dE integral,
+divide ONCE by D(E)=E²/(2pi²HC³) for one helicity to obtain per-occupation j/chi.
+
+New `SpectralQuantity` is separate from Stage A total quantities. Positive
+support requires a finite logarithm; ordinary under/overflow uses valueNone
+with its representation reason. Exact zero is allowed only for an analytic
+empty differential-support witness. Integrated finite-T j AND chi require
+positive finite logs. Unresolved coordinates, collapsed weighted panels,
+timeouts and incomplete computations raise instead of becoming physicalzero.
+No geometric-width/ordinary-underflow panel skipping is implemented.
+
+`EnergyRule` stores explicit positive interior nodes/weights and finite range.
+Reconstruction computes fresh spectral nodes, applies exactly one neutrino
+hole/occupation, and integrates D(E) times the source. It returns separate
+positive F/B number and energy, directly accumulated signed nets, and FD
+entropy from (F-B)log(F/B). Exactly empty radiation has no finite initial
+radiation entropy derivative. Radiation T and both flavor chemical potentials
+are explicit; PC and beta scenario labels do not imply the same mu_antinue.
+
+`complete_finite_range=True` means all declared nodes completed; it does not
+mean infinite-energy convergence. `whole_moment_qualified=False` is always
+returned by this first pilot. No total species-energy moments are invented
+from j/chi. Material lost energy equals the neutrino-bin net energy, with no
+extraQ; materialLe plus nue-antinue conserves per named event. Quantitative
+numerical scope, preserved failures and remaining gates are in
+[weak spectral validation](weak_spectral_validation.md).
