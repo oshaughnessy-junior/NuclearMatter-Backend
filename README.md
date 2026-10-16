@@ -61,6 +61,15 @@ jax.jacfwd(lambda L: solve_structure(
 eos = EOSConcreteNMB(mm, params)                 # .lambda_from_m, .pressure_density_on_grid, .mMaxMsun
 ```
 
+## Finite-temperature lepton reference
+
+`nmbackend.reference.finite_t_leptons` provides CPU ideal electron/muon pair
+states at independent total chemical potentials or signed net number densities,
+with explicit MeV/fm units. It is separate from the cold JAX EOS and NSCool paths
+and makes no JAX AD or full-matter EOS claim. Run
+`PYTHONPATH=src python examples/finite_t_leptons.py`; see
+[the API, limits and units](docs/finite_temperature_leptons.md).
+
 ## Layout
 
 ```
