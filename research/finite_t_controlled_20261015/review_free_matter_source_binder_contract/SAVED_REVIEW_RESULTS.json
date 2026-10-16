@@ -1,0 +1,725 @@
+{
+  "passed": 107,
+  "failed": [],
+  "checks": [
+    {
+      "name": "allfrozenauthor/upstreampins",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredactualAPI PR51",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredactualAPI PR52",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredactualAPI PR54",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "savedimmutablepublishedpublicsourcebytes",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "forward0neutronactualPARTICLE",
+      "error": -1.7394426595400812e-14,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0protonactualPARTICLE",
+      "error": 1.0146748847317038e-14,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0actualNETelectron",
+      "error": -4.411629933616148e-16,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0neutronchemical_potential",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0neutronenergy_density",
+      "error": 1.4378219205237005e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0neutronpressure",
+      "error": 7.562725073544491e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0neutronentropy_density",
+      "error": -6.112664235299619e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0protonchemical_potential",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0protonenergy_density",
+      "error": -2.8795950315298744e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0protonpressure",
+      "error": -2.205806311668158e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0protonentropy_density",
+      "error": -1.869111691685699e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0electronchemical_potential",
+      "error": 3.50000574054673e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0electronenergy_density",
+      "error": -4.5993074723202425e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0electronpressure",
+      "error": -3.480904321930006e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward0electronentropy_density",
+      "error": -4.395313061614347e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1neutronactualPARTICLE",
+      "error": -4.734868734178309e-15,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1protonactualPARTICLE",
+      "error": 4.468265656856971e-14,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1actualNETelectron",
+      "error": 2.0622764570109977e-15,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1neutronchemical_potential",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1neutronenergy_density",
+      "error": -3.278630718826195e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1neutronpressure",
+      "error": 6.456492166801117e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1neutronentropy_density",
+      "error": -1.953450990331014e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1protonchemical_potential",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1protonenergy_density",
+      "error": -5.617762499551816e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1protonpressure",
+      "error": -1.7185391606712809e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1protonentropy_density",
+      "error": -2.075374473181119e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1electronchemical_potential",
+      "error": 1.8136610939751054e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1electronenergy_density",
+      "error": 6.758042467091164e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1electronpressure",
+      "error": 2.3015743570689964e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward1electronentropy_density",
+      "error": -1.1707440735367288e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2neutronactualPARTICLE",
+      "error": -4.4019122700909204e-16,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2protonactualPARTICLE",
+      "error": 1.3017768375593373e-14,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2actualNETelectron",
+      "error": -2.241948998018888e-14,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2neutronchemical_potential",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2neutronenergy_density",
+      "error": 4.774534177579681e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2neutronpressure",
+      "error": -5.869197609840024e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2neutronentropy_density",
+      "error": -2.0986260574859045e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2protonchemical_potential",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2protonenergy_density",
+      "error": 6.545875825271916e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2protonpressure",
+      "error": -4.821376905847437e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2protonentropy_density",
+      "error": 2.916439997903217e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2electronchemical_potential",
+      "error": 5.897125337219554e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2electronenergy_density",
+      "error": -2.375256405311213e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2electronpressure",
+      "error": -2.314891461786687e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward2electronentropy_density",
+      "error": -3.1484601396973613e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3neutronactualPARTICLE",
+      "error": 2.040166865180403e-14,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3protonactualPARTICLE",
+      "error": -2.2040118739557488e-14,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3actualNETelectron",
+      "error": -7.600040944674996e-16,
+      "gate": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3neutronchemical_potential",
+      "error": 1.2297190281543785e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3neutronenergy_density",
+      "error": 5.756291046222506e-14,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3neutronpressure",
+      "error": 5.753022428952293e-14,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3neutronentropy_density",
+      "error": 5.146025746407332e-14,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3protonchemical_potential",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3protonenergy_density",
+      "error": -2.2736817245317515e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3protonpressure",
+      "error": -2.6599173965718212e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3protonentropy_density",
+      "error": -9.682537530155593e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3electronchemical_potential",
+      "error": 1.8866623667155012e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3electronenergy_density",
+      "error": -3.375067905246447e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3electronpressure",
+      "error": -3.4039338725279132e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "forward3electronentropy_density",
+      "error": -2.4838487262212168e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "genuineforwardbeforederived",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fixedNET/PARTICLE eY",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "fixedTdensity en",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "fixeddensities Cv",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "sum energy",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "sum pressure",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "sum entropy",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "LTEphoton energy",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "LTEphoton pressure",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "LTEphoton entropy",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "LTEphoton cv",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "PLUSsignenthalpy identity",
+      "error": -1.6496987992584574e-13,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "ECactual vs saved bath T",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "ECactual vs saved bath mu_n",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "ECactual vs saved bath mu_p",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "ECactual vs saved bath mu_e",
+      "error": -6.106226635438361e-16,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "ECpositiveF_before_signed",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ECbaryonchargeLe",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "PCactual vs saved bath T",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "PCactual vs saved bath mu_n",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "PCactual vs saved bath mu_p",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "PCactual vs saved bath mu_e",
+      "error": -6.106226635438361e-16,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "PCpositiveF_before_signed",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "PCbaryonchargeLe",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYactual vs saved bath T",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYactual vs saved bath mu_n",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYactual vs saved bath mu_p",
+      "error": 0.0,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYactual vs saved bath mu_e",
+      "error": -6.106226635438361e-16,
+      "gate": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYpositiveF_before_signed",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYbaryonchargeLe",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "sourceR independent signed sum",
+      "error": 6.51099177152423e-11,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "sourceQ independent signed sum",
+      "error": 3.514765554272228e-11,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "Ye dot units",
+      "error": 6.510993939995203e-11,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "densityenergy Tdot",
+      "error": -3.722839075863247e-11,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "specificenergy equivalent chain",
+      "error": 3.8539238732038185e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "entropy mechanwork cancels",
+      "error": -1.4239892912414984e-14,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "directmaterialloss no extra Q",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "antibaryonsabsent in actual B API",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author SAVED R_fm3_s",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "author SAVED Q_MeV_fm3_s",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "author SAVED Ye_dot_s",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "author SAVED T_dot_MeV_s",
+      "error": 0.0,
+      "gate": 3e-09,
+      "passed": true
+    }
+  ],
+  "source_counts": {
+    "author": 12,
+    "upstream": 23
+  },
+  "source_attribution": "Previously executed saved forward/events, not fresh binder calls; current published source equality checked separately",
+  "derived": {
+    "R": 7.86475833838614e-07,
+    "Q": 1.5155020638488612e-05,
+    "Tdot": -1.7284560792876476,
+    "sigma_dot": -64.72761805315272,
+    "pair_total_vs_net_ratio": 6.780954559477579
+  },
+  "saved_bath_offsets": [
+    {
+      "channel": "EC",
+      "key": "T",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "EC",
+      "key": "mu_n",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "EC",
+      "key": "mu_p",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "EC",
+      "key": "mu_e",
+      "absolute_offset": -6.106226635438361e-16
+    },
+    {
+      "channel": "PC",
+      "key": "T",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "PC",
+      "key": "mu_n",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "PC",
+      "key": "mu_p",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "PC",
+      "key": "mu_e",
+      "absolute_offset": -6.106226635438361e-16
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "key": "T",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "key": "mu_n",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "key": "mu_p",
+      "absolute_offset": 0.0
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "key": "mu_e",
+      "absolute_offset": -6.106226635438361e-16
+    }
+  ],
+  "proposed_anti_bound_computed": false,
+  "new_physical_calls": 0,
+  "contract_implementation_qualified": false
+}
