@@ -1,0 +1,253 @@
+{
+  "status": "PASS",
+  "passed": 26,
+  "failed": [],
+  "checks": [
+    {
+      "name": "actual source refinement ECnumber",
+      "error": -3.475930654417425e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "accepted prior samebath absolute ECnumber",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source refinement ECneutrino_energy",
+      "error": -2.4042878798979928e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "accepted prior samebath absolute ECneutrino_energy",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source refinement PCnumber",
+      "error": -2.421679523578746e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "accepted prior samebath absolute PCnumber",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source refinement PCneutrino_energy",
+      "error": -3.6267011616075706e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "accepted prior samebath absolute PCneutrino_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source refinement betanumber",
+      "error": 2.7205673269747876e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "accepted prior samebath absolute betanumber",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source refinement betaneutrino_energy",
+      "error": 5.2119091265012685e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "accepted prior samebath absolute betaneutrino_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "instant first law/Q base",
+      "error": 1.1178248683875335e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "thermal weak plus composition/Q base",
+      "error": 0.0,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "instant first law/Q fine",
+      "error": 1.117824868061077e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "thermal weak plus composition/Q fine",
+      "error": 0.0,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "invalid binding state (True, 1e-07, 0.3)",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid binding state (2.0, 0.0, 0.3)",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid binding state (2.0, 1e-07, 0.0)",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid binding state (2.0, 1e-07, 0.05)",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid binding state (2.0, 1e-07, 0.9)",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "invalid binding state (nan, 1e-07, 0.3)",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "literal closure None",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "literal closure 0",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "literal closure 1",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "literal closure LTE",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    }
+  ],
+  "accepted_probes": {
+    "forward_results.json": {
+      "passed": 116,
+      "failed": 0
+    },
+    "partial_results.json": {
+      "passed": 56,
+      "failed": 0
+    },
+    "cycle_32.json": {
+      "passed": 9,
+      "failed": 0
+    },
+    "cycle_64.json": {
+      "passed": 9,
+      "failed": 0
+    },
+    "cycle_summary.json": {
+      "passed": 37,
+      "failed": 0
+    },
+    "weak_base.json": {
+      "passed": 7,
+      "failed": 0
+    },
+    "weak_fine.json": {
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "total_current_passed": 267,
+  "initial_failures": {
+    "wrong_sign_check_identity": 8,
+    "JSON_numpy_count_reporter": 1,
+    "LOCK_literal_timestamp_typo": 1
+  },
+  "max_individual_source_refinement": 5.2119091265012685e-09,
+  "weak_instantaneous": {
+    "ndot": 2.5e-08,
+    "Ye_dot": 7.864758337874067,
+    "T_dot": -1.7284560792233,
+    "EMpair_sources": {
+      "electron": 2.165820759581011e-07,
+      "positron": 2.1658207593951323e-07
+    },
+    "photon_comparison": {
+      "Cv_on": 7.667252165205712e-06,
+      "Cv_off": 4.926946211714496e-06,
+      "Tdot_on": -1.7284560792233,
+      "Tdot_off": -2.7824996835174383,
+      "ansatz": "same instantaneous weak moments; mechanical density history, internal trapped photons vs absent"
+    }
+  },
+  "cycle": {
+    "T_min": 1.5815874774211915,
+    "T_max": 2.5297599618977307,
+    "gross_absolute_work64": 40.54403829134046,
+    "work64": 3.3413157796147175e-09,
+    "return_delta_u64": -2.579482725195703e-07,
+    "quarter_work64": [
+      {
+        "start": 0.0,
+        "end": 0.25,
+        "work": 11.38751440892401,
+        "delta_u": 11.387499058874596,
+        "relative_ledger": 1.3479718982954523e-06
+      },
+      {
+        "start": 0.25,
+        "end": 0.5,
+        "work": -11.387514393530026,
+        "delta_u": -11.38749919266229,
+        "relative_ledger": 1.3348714399636475e-06
+      },
+      {
+        "start": 0.5,
+        "end": 0.75,
+        "work": -8.88450475046955,
+        "delta_u": -8.884509801107242,
+        "relative_ledger": 5.68477122227157e-07
+      },
+      {
+        "start": 0.75,
+        "end": 1.0,
+        "work": 8.88450473841688,
+        "delta_u": 8.884509676946664,
+        "relative_ledger": 5.558587596753724e-07
+      }
+    ]
+  }
+}
