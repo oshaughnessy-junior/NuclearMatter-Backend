@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_packaging_review/check_wheel.py", line 36, in <module>
+    reject('legacy emptycall stub',lambda:W.spectral_coefficients(),NotImplementedError)
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_packaging_review/check_wheel.py", line 7, in reject
+    try:fn()
+        ^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_packaging_review/check_wheel.py", line 36, in <lambda>
+    reject('legacy emptycall stub',lambda:W.spectral_coefficients(),NotImplementedError)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: spectral_coefficients() missing 3 required positional arguments: 'channel', 'bath', and 'E_MeV'

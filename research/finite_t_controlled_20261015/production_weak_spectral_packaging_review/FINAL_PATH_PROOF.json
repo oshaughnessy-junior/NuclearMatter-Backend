@@ -1,0 +1,61 @@
+{
+  "README.md": {
+    "candidate_sha256": "ec13bc77ff68d073593c44f2ac9d1a11a40cd61762b85184656c63ec0b421851",
+    "copy_sha256": "ec13bc77ff68d073593c44f2ac9d1a11a40cd61762b85184656c63ec0b421851",
+    "git_blob": "bbc65d8760d1544e45b2b0c041856f16449f5582"
+  },
+  "docs/weak_reference.md": {
+    "candidate_sha256": "fe5bdac938fe3f52cd4b22b349311b47e55d9110e0e663586edb350a99707c76",
+    "copy_sha256": "fe5bdac938fe3f52cd4b22b349311b47e55d9110e0e663586edb350a99707c76",
+    "git_blob": "16509685e0725aa021bef452726a225c97858310"
+  },
+  "docs/weak_spectral_validation.md": {
+    "candidate_sha256": "ece4c3b14f170d5812ac3d61df84b96ab57e98ebfe110a6210249e67b8cfee82",
+    "copy_sha256": "ece4c3b14f170d5812ac3d61df84b96ab57e98ebfe110a6210249e67b8cfee82",
+    "git_blob": "4779ed36154438e03782e4903e3b3edf6de57818"
+  },
+  "examples/free_weak_reference.py": {
+    "candidate_sha256": "5a7f1dc7e1d86ce435c40f38d8da3d8528fb9ca453a7f6db1d0e9f9f5e2d28a6",
+    "copy_sha256": "5a7f1dc7e1d86ce435c40f38d8da3d8528fb9ca453a7f6db1d0e9f9f5e2d28a6",
+    "git_blob": "4bcff10d34796f96437c943e36badf4eecb94b49"
+  },
+  "src/nmbackend/reference/_weak_spectral_capture.py": {
+    "candidate_sha256": "4384208e51ff0e2b78a1e6587beccbb5f8fe1400f7dd911f5fa90464cbd2e684",
+    "copy_sha256": "4384208e51ff0e2b78a1e6587beccbb5f8fe1400f7dd911f5fa90464cbd2e684",
+    "git_blob": "7208e8c357c58056aa346dc59010279f2129dbd3",
+    "wheel_sha256": "4384208e51ff0e2b78a1e6587beccbb5f8fe1400f7dd911f5fa90464cbd2e684"
+  },
+  "src/nmbackend/reference/_weak_spectral_common.py": {
+    "candidate_sha256": "572acb57fcca43f9f0a4173c4f7bad5fbd1c99d02f643950b18a05bc504c36d3",
+    "copy_sha256": "572acb57fcca43f9f0a4173c4f7bad5fbd1c99d02f643950b18a05bc504c36d3",
+    "git_blob": "6881d28b3f47526d1896b914731c145d74c7ae69",
+    "wheel_sha256": "572acb57fcca43f9f0a4173c4f7bad5fbd1c99d02f643950b18a05bc504c36d3"
+  },
+  "src/nmbackend/reference/_weak_spectral_decay.py": {
+    "candidate_sha256": "148142642df36c1d392333ee26b3479c53a523d14764ca67154a6ed664b5cc86",
+    "copy_sha256": "148142642df36c1d392333ee26b3479c53a523d14764ca67154a6ed664b5cc86",
+    "git_blob": "0029e8e2a42621b25e92edaa8324ff589df44545",
+    "wheel_sha256": "148142642df36c1d392333ee26b3479c53a523d14764ca67154a6ed664b5cc86"
+  },
+  "src/nmbackend/reference/weak_reference.py": {
+    "candidate_sha256": "76e569023bcde176086384ffbcdff861d120b6b9ba9cafe84041ceabb598b5f9",
+    "copy_sha256": "76e569023bcde176086384ffbcdff861d120b6b9ba9cafe84041ceabb598b5f9",
+    "git_blob": "266df26cd45c0f1a49a2e5465af87c3db20df4e5",
+    "wheel_sha256": "76e569023bcde176086384ffbcdff861d120b6b9ba9cafe84041ceabb598b5f9"
+  },
+  "tests/data/free_weak_spectral_reference.json": {
+    "candidate_sha256": "d4b984aa5b4426901ec273becbc1e9393852971f7d01ac90b575fcb4d6f75a81",
+    "copy_sha256": "d4b984aa5b4426901ec273becbc1e9393852971f7d01ac90b575fcb4d6f75a81",
+    "git_blob": "59a470a38ce2fb161596a532983a9a170b60e07b"
+  },
+  "tests/test_weak_reference_reconstruction.py": {
+    "candidate_sha256": "164495f87e4b1e403cae59f3ad2262589bc7375aa0f010c6a60d5262496425cc",
+    "copy_sha256": "164495f87e4b1e403cae59f3ad2262589bc7375aa0f010c6a60d5262496425cc",
+    "git_blob": "51ca45601caf38fadede963786c679059a19d76e"
+  },
+  "tests/test_weak_reference_spectra.py": {
+    "candidate_sha256": "e11e2fe1e122ec272aba9c540499d9b058781ca67dafc1b42c9b46ec6949dbbc",
+    "copy_sha256": "e11e2fe1e122ec272aba9c540499d9b058781ca67dafc1b42c9b46ec6949dbbc",
+    "git_blob": "7ea16ce9af9ec78f3f74fb9ad726c6c11c86788e"
+  }
+}

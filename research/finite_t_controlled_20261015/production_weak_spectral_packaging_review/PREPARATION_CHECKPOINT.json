@@ -1,0 +1,25 @@
+{
+  "status": "FROZEN_BASE_PREPARATION_ONLY_WAITING_ROOT_NUMERICAL_ACCEPTANCE",
+  "utc": "2026-10-16T07:10:19.810096+00:00",
+  "base_commit": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+  "baseline_blobs": 71,
+  "fresh_PR54_overlay_reads": 11,
+  "pyproject_license_reads": 2,
+  "base_pinned_files": 86,
+  "mutable_candidate_read": false,
+  "candidate_imports": false,
+  "wheel_build": false,
+  "physical_calls": 0,
+  "acceptance": false,
+  "files": {
+    "BASE_PIN.json": "441db5dab0736e4d514b34e5ccbdcc04de448ebe06e4bccd9424e07c5a6693e2",
+    "PR54_COMMIT_READ.json": "fe085539c361e52a58abf57c21762c1b3f16b140a39a92ac739d330bdac7ddef",
+    "PR54_METADATA_READ.json": "66d12fb54af3b3abf87be072af08d920358e6ed3e1f63f5b16887388f44501d8",
+    "PR54_SOURCE_READ.json": "1ea9e3953bc3f5f0855056606a1f34c77bb6425440e10606be6bbb3bb2e126cc",
+    "PREPARATION.json": "3aeaaa082d810fc25457fce56c269837f942991e83fffaa05d210d226af1e5cf",
+    "REVIEW_PLAN.md": "f5563ca5d227e22a5e846ed01317306b78c695f9052c874554cf18c9098b93f4",
+    "preparation_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "preparation_stdout.txt": "3aeaaa082d810fc25457fce56c269837f942991e83fffaa05d210d226af1e5cf",
+    "prepare_base.py": "bb10f38ff0a364590d9a0856c275bf81ac6641f99d87852070cb43f67f263bd7"
+  }
+}
