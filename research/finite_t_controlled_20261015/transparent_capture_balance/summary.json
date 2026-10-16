@@ -1,0 +1,33 @@
+{
+  "kinetic_Ye": 0.5560448218021664,
+  "chemical_Ye": 0.6145204990481219,
+  "difference_Ye": -0.05847567724595548,
+  "kinetic_affinity_MeV": 0.5161979084599162,
+  "kinetic_rates": {
+    "EC": 6.594770053855551e-07,
+    "beta": 2.6164196365578852e-11,
+    "PC": 6.59450841022285e-07
+  },
+  "kinetic_energy": {
+    "EC": 6.30369151677084e-06,
+    "beta": 1.242694734373899e-11,
+    "PC": 7.07262555394997e-06
+  },
+  "escaping_energy": 1.3376329497668154e-05,
+  "escaping_energy_per_baryon_MeV_s": 133.76329497668155,
+  "root_relative_number_residual": -1.2654312330975906e-10,
+  "root_dYe_dt": -1.6690456000378927e-09,
+  "chemical_dYe_dt": -1.7764633995502506,
+  "max_individual_moment_refinement": 5.5987539049340285e-09,
+  "max_isolated_tail_change": 1.732558541078788e-11,
+  "max_energy_ledger": 7.926840916050212e-14,
+  "max_integrated_density_error": 2.944489096989855e-10,
+  "source_checks": 328,
+  "controls_tail_checks": 43,
+  "preflight": 5,
+  "pre_acceptance_controls": 8,
+  "actual_source_trial_pairs": 9,
+  "experiment_seconds": 66.9242105842568,
+  "independent_review": "pending",
+  "admitted_inventory": "free electron charged-current beta+PC+EC, exactly empty incoming radiation, actual matched FD matter"
+}

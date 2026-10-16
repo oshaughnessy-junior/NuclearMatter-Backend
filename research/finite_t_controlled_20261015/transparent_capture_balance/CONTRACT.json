@@ -1,0 +1,12 @@
+{
+ "scope":"Selected transparent free-npe charged-current composition balance; not general equilibrium",
+ "fixed_material":{"T_MeV":2.0,"nB_fm-3":1e-7,"muons":"absent","baryon_antiparticles":"excluded with EOS diagnostics","electron_pairs":"actual equilibrium FD at signed electron mu"},
+ "radiation":{"nue":"exactly empty incoming","antinue":"exactly empty incoming","closure":"all emitted energy escapes; no rescattering/trapping"},
+ "reaction_stoichiometry":{"beta":{"n":-1,"p":1,"electron_net":1,"nue":0,"antinue":1},"PC":{"n":-1,"p":1,"electron_net":1,"nue":0,"antinue":1},"EC":{"n":1,"p":-1,"electron_net":-1,"nue":1,"antinue":0}},
+ "source_units":{"number":"fm^-3 s^-1","energy":"MeV fm^-3 s^-1","dYe_dt":"s^-1 = netmaterialelectronnumbersource/nB"},
+ "root":{"bracket":[0.3,0.8],"root_algorithm_absolute_Ye_tolerance":2e-9,"normalized_number_gate":1e-7,"source_individual_moment_refinement_gate":3e-6,"FD_density_gate":3e-8,"EOS_density_gate":1e-10,"energy_ledger_gate":3e-10},
+ "approximations":["physical free relativistic n,p,e±","source-labelled full treelevel Guo charged current and formfactors","no Coulomb or radiative corrections","particle-only baryons","no interacting EOS","no additional beta-Q in restinclusive energy"],
+ "not_included":["pair annihilation energy source","bremsstrahlung","modified Urca","muon processes","neutralcurrent transport","hydrodynamics","evolving temperature or composition","sensitivity/error/uncertainty certificate"],
+ "thermostat":"At a measured zero material composition drift, heat supply equals the positive escaping energy in this declared inventory; source balance is not thermal equilibrium.",
+ "uncertainty":"Numerical method agreement/refinement is not a physical uncertainty bound; root solver tolerance is not rate-model or composition-accuracy certificate."
+}

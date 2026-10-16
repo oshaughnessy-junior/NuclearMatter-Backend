@@ -1,0 +1,67 @@
+{
+  "status": "frozen author slice; independent review pending",
+  "time_utc": "2026-10-15T23:49:31.887190+00:00",
+  "source_sha256": "bbcf98a41d1c5eb6907eb0611da397c175e55681435193bf3af577b7bb8419c5",
+  "main_experiment_source_sha256": "9ad971b7830bb0e870b2f317932b91aa4f37be378196e2cf055724e2a619a60f",
+  "checks": {
+    "main": 328,
+    "controls_tail": 43,
+    "preflight": 5,
+    "pre_acceptance": 8
+  },
+  "physical_failures_new": 0,
+  "preserved_operational_failure": "initial module export AttributeError before source evaluation; exact source/error retained",
+  "quota": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "used_percent": 21,
+    "reset": 1792652325,
+    "checked": "2026-10-15T23:47:55Z"
+  },
+  "upstream": {
+    "crossed_thermal_moments/moments.py": "55a84c8eb1d6bf78e3f6247c9f814f1cf72471c92a21c09bbd4028df26dba405",
+    "crossed_thermal_moments/spectrum_anchor.py": "69801c7d01c027021313b4f8d03e6e1e2fe9998b82ca02d92b2def4a46a1e97a",
+    "relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+    "positron_capture_moments/moments.py": "376c05dfe75f9788a9d9ab7559db899de9c6c559e48c9a8989dcc45ae8276a12",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133"
+  },
+  "files": {
+    "CONTRACT.json": "d984cfd161777ed7d3e782714468028fcf132fb5f753717849f10b0c79f9ebc6",
+    "EC_REVIEW_ACCEPTANCE.json": "1000781eeae26cb5ce1ea8a9f96bd99151de90587a09c59a562bcf66294eb5b8",
+    "PREFLIGHT.md": "68bfc35d3025932832a2adcf252db5a4200b393780f25fc078ed8d50205e556a",
+    "PRE_ACCEPTANCE_PREFLIGHT.json": "af48b5c1b4f439e17c323263f1edfa1d7b598bb63a6d0c778bdf93fbd43d07a8",
+    "RESEARCH_NOTE.md": "2ee6db879bc6fbac609917823aa7c03437c3c0da7dd2bd9f189e616d48ff6aa3",
+    "UPSTREAM.json": "7469b29456825e239b3d94084562935ac2a47ab20825e10f7fd7ce885bbf5042",
+    "balance.py": "bbcf98a41d1c5eb6907eb0611da397c175e55681435193bf3af577b7bb8419c5",
+    "check_controls_tail.py": "8375ffe94e9145de5bf6b54a90551aeb64615bbe2c50aecd60e175976000b63b",
+    "control_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "control_stdout.txt": "6aed5ab92afd4d78af781859fc28534e929cac9007d385951eb3887cde1c96b5",
+    "controls_tail.json": "993f0f2905b102409b09684b6bec75693f4c149883c50101e9882c5fc628f49b",
+    "experiment_balance_source.py.txt": "9ad971b7830bb0e870b2f317932b91aa4f37be378196e2cf055724e2a619a60f",
+    "initial_preflight_attribute_failure.py.txt": "684029e450fdf51e9fb82aa5b96f8adcf70f0b040ffead7c9aec5929a3bc9fe4",
+    "initial_preflight_error.txt": "8341bf94dac6881bac33af46e645f246b08b905472b6fe385bd984ad6255f801",
+    "partial_results.json": "1b44d0e0cf028c9746b88f814fd5054ec34859e635dc2f4f82f5a97e2d3bc4dc",
+    "pre_acceptance_controls.json": "57a1c05c688f79746cfae48f7351139fedb17ef62c52d59ec8c6033584f41291",
+    "preflight.json": "af48b5c1b4f439e17c323263f1edfa1d7b598bb63a6d0c778bdf93fbd43d07a8",
+    "results.json": "8d7d377948df53a2cb2cfd6f05d011fdba29e0ffbb14d95f733257475c7167e8",
+    "run_balance.py": "88c5943ba41d482fd56218899b435727c3cdc20e84877952e5b8c8099f9a78e5",
+    "run_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "run_stdout.txt": "6b69813b35473e15ab2249d6932e9f539315f8cc01ccbff459362dc61b5b776d",
+    "summary.json": "6c96b8b9d1ed329f1f04e7b50a7eb3cd0a080c3fadfdce38ecbebc4075e4c09b"
+  },
+  "limits": [
+    "selected fixed T2nB1e-7 transparent free electron charged-current inventory",
+    "new root compositions require independent review",
+    "not thermal equilibrium",
+    "not full neutrino energy inventory",
+    "no ODE/hydro/interacting EOS",
+    "no physical uncertainty/derivative certificate"
+  ]
+}

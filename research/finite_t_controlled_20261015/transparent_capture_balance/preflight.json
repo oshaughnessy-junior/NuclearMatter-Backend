@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "name": "same physical masses weakmass GF Vud",
+      "passed": true
+    },
+    {
+      "name": "actual neutral pair bath",
+      "passed": true
+    },
+    {
+      "name": "current matrices [-0.4, 1.2, -0.6, 2.3]",
+      "passed": true
+    },
+    {
+      "name": "current matrices [1.0, 0.2, -0.3, 0.1]",
+      "passed": true
+    },
+    {
+      "name": "chemical root sameEOS",
+      "passed": true
+    }
+  ],
+  "passed": 5,
+  "chemical_balance_Ye": 0.6145204990481219,
+  "chemical_balance_state": {
+    "T": 2.0,
+    "nB": 1e-07,
+    "Ye": 0.6145204990481219,
+    "neutron": {
+      "temperature": 2.0,
+      "mass": 939.56542052,
+      "chemical_potential": 918.6355567516871,
+      "kinetic_chemical_potential": -20.929863768312885,
+      "density": 3.8547950095186544e-08,
+      "kinetic_energy_density": 1.1595148593842123e-07,
+      "energy_density": 3.633427242730634e-05,
+      "pressure": 7.709628809433345e-08,
+      "entropy_density": 4.999255590363662e-07,
+      "free_energy_density": 3.533442130923361e-05,
+      "cv_fixed_density": 5.812850328100072e-08,
+      "dn_dmu_fixed_temperature": 1.927378109761896e-08,
+      "dn_dtemperature_fixed_mu": 2.3068653216402349e-07,
+      "dmu_dtemperature_fixed_density": -11.968929759844682,
+      "log_antiparticle_density": -935.706909602364,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -918.635546688791
+    },
+    "proton": {
+      "temperature": 2.0,
+      "mass": 938.27208816,
+      "chemical_potential": 918.2790663886974,
+      "kinetic_chemical_potential": -19.99302177130255,
+      "density": 6.145204990481237e-08,
+      "kinetic_energy_density": 1.8484780344581603e-07,
+      "energy_density": 5.784359098934664e-05,
+      "pressure": 1.2290508765280985e-07,
+      "entropy_density": 7.681825313683557e-07,
+      "free_energy_density": 5.630722592660993e-05,
+      "cv_fixed_density": 9.266734522989025e-08,
+      "dn_dmu_fixed_temperature": 3.072553103897375e-08,
+      "dn_dtemperature_fixed_mu": 3.5335968542578203e-07,
+      "dmu_dtemperature_fixed_density": -11.5005232937248,
+      "log_antiparticle_density": -934.8840589562539,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -918.2790503136697
+    },
+    "electron": {
+      "temperature": 2.0,
+      "chemical_potential": 0.3564903629897861,
+      "mass": 0.51099895069,
+      "net_density": 6.145204990481217e-08,
+      "particle_density": 2.2091299669340367e-07,
+      "antiparticle_density": 1.5946094678859137e-07,
+      "energy_density": 2.419272875205119e-06,
+      "pressure": 7.991652274700722e-07,
+      "entropy_density": 1.598265519549081e-06,
+      "free_energy_density": -7.772581638930431e-07,
+      "cv_fixed_net_density": 4.751071265377011e-06,
+      "dn_dmu_fixed_temperature": 1.7349776952390085e-07,
+      "dn_dtemperature_fixed_mu": 6.185828510924708e-08,
+      "dmu_dtemperature_fixed_net_density": -0.3565364861980289
+    },
+    "muons": "absent"
+  },
+  "EC_independent_acceptance_present": false,
+  "scientific_source_join_performed": false,
+  "pins": {
+    "hot_electron_capture_moments/electron_capture.py": "b9954da0a2324376c19e4277013436b135d1432f9cb9904b03761be30bd1b3d1",
+    "hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133"
+  }
+}
