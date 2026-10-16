@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-16T06:33:39.202178+00:00",
+  "status": "DESIGNACCEPTED after weightedpanelcontractclarification; implementation NOTQUALIFIED/AUTHORIZED",
+  "review_sha256": "555b90948743d6fb342a9da875264b5bdf5e1f3226fe61a8032bb306a8c73ee4",
+  "manifest_sha256": "01cf6541debf1fc10b8c47d5ec52d680b685181c8a683cfdf2dc6dfa70128c46",
+  "repair_review_sha256": "58f3186edd46b6ccc9d5f94275977c97a927ba65d9332032d3604ad66a6ba1c2",
+  "initial_passed": 2157,
+  "initial_failed_required_clarifications": 1,
+  "recheck_passed": 198,
+  "recheck_failed": 0,
+  "new_physical_calls": 0,
+  "scientific_source_imports": 0,
+  "repaired_contract": "5fa8a528cba8022a05aac8e821afdb07ecda1baaa260a1c59eb5997718af0340",
+  "repaired_author_manifest": "deb946afc6896dfd00ddfacbdea546e30e3acbb8607a3adb4dbeaf108b5060a8",
+  "all95pins_unchanged": true,
+  "all_initial_review_unchanged": true,
+  "quota": {
+    "utc": "2026-10-16 06:31:24 UTC",
+    "usedPercent": 28,
+    "accountId": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "windowDurationMins": 10080,
+    "resetsAt": 1792652325
+  }
+}

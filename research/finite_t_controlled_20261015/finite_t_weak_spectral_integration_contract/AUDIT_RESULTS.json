@@ -1,0 +1,532 @@
+{
+  "utc": "2026-10-16T06:07:36.477432+00:00",
+  "kind": "saved-row arithmetic and exact source preservation ONLY",
+  "new_physical_calls": 0,
+  "saved_reconstruction": {
+    "EC": {
+      "saved_nodes": 32,
+      "source_chunks": [
+        "hot_ec_opacity_spectrum/total_fine_part0.json",
+        "hot_ec_opacity_spectrum/total_fine_part1.json"
+      ],
+      "R_fm3_s": 3.308860338875077e-07,
+      "Q_MeV_fm3_s": 3.160384777809387e-06,
+      "relative_to_saved_totals": [
+        -1.1102230246251565e-16,
+        0.0
+      ],
+      "new_physical_calls": 0
+    },
+    "PC": {
+      "saved_nodes": 64,
+      "source_chunks": [
+        "hot_pc_opacity_spectrum/total_fine_0.json",
+        "hot_pc_opacity_spectrum/total_fine_1.json",
+        "hot_pc_opacity_spectrum/total_fine_2.json",
+        "hot_pc_opacity_spectrum/total_fine_3.json"
+      ],
+      "R_fm3_s": 1.1173192771062817e-06,
+      "Q_MeV_fm3_s": 1.1994615318987422e-05,
+      "relative_to_saved_totals": [
+        0.0,
+        0.0
+      ],
+      "new_physical_calls": 0
+    },
+    "NEUTRON_DECAY": {
+      "saved_nodes": 80,
+      "source_chunks": [
+        "hot_beta_opacity_spectrum/total_fine_0.json",
+        "hot_beta_opacity_spectrum/total_fine_1.json"
+      ],
+      "R_fm3_s": 4.258739504697108e-11,
+      "Q_MeV_fm3_s": 2.0237742400762588e-11,
+      "relative_to_saved_totals": [
+        0.0,
+        0.0
+      ],
+      "new_physical_calls": 0,
+      "above_rest_endpoint_R": 4.4026907290437803e-13,
+      "above_rest_endpoint_Q": 3.5381924963599153e-13,
+      "above_rest_endpoint_number_fraction": 0.010338013687354916,
+      "above_rest_endpoint_energy_fraction": 0.017483138317970638
+    }
+  },
+  "checks": [
+    {
+      "name": "saved KMS arithmetic ('EC', 2)",
+      "error": 2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('EC', 5)",
+      "error": 2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('EC', 10)",
+      "error": 2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('PC', 2.0)",
+      "error": -2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('PC', 5.0)",
+      "error": -2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('PC', 10.0)",
+      "error": -2.6645352591003757e-15,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('NEUTRON_DECAY', 0.2)",
+      "error": -4.884981308350689e-15,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('NEUTRON_DECAY', 0.42)",
+      "error": -8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('NEUTRON_DECAY', 0.5)",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "saved KMS arithmetic ('NEUTRON_DECAY', 0.8)",
+      "error": 4.884981308350689e-15,
+      "passed": true
+    },
+    {
+      "name": "EC complete disjoint saved node coverage",
+      "passed": true
+    },
+    {
+      "name": "EC saved DOS R arithmetic",
+      "error": -1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "EC saved DOS Q arithmetic",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "PC complete disjoint saved node coverage",
+      "passed": true
+    },
+    {
+      "name": "PC saved DOS R arithmetic",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "PC saved DOS Q arithmetic",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY complete disjoint saved node coverage",
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY saved DOS R arithmetic",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY saved DOS Q arithmetic",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_electron_capture_moments/electron_capture.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_electron_capture_moments/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_hot_electron_capture/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_hot_electron_capture/CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_pc_moments/reference.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_pc_moments/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_pc_moments/MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged positron_capture/pc_kernel.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged positron_capture_moments/moments.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_moments/hot_moments.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_moments/results.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_moments/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_hot_beta/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_ec_opacity_spectrum/spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_ec_opacity_spectrum/total.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_ec_opacity_spectrum/results.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_ec_opacity_spectrum/total_results.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_ec_opacity_spectrum/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_hot_ec_opacity_spectrum/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/total.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/results.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/total_results.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_hot_pc_opacity_spectrum/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_hot_pc_assembly_repair/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_opacity_spectrum/spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_opacity_spectrum/total.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_opacity_spectrum/pilot_results.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_opacity_spectrum/total_results.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_opacity_spectrum/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_hot_beta_opacity_spectrum/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged muon_full_current/current.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged muon_full_current/SOURCES.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged muon_vacuum/vacuum_cc.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged relativistic_capture_oracle/events.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged relativistic_tensor/tensor.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged relativistic_crossed_contract/beta.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged relativistic_crossed_thermal/kernel.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged relativistic_free_eos/free_baryons.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged thermodynamics/lepton_reference.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged transparent_capture_balance/balance.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged transparent_balance_grid/grid.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged three_source_cooling_element/worker.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged isolated_microphysics/client.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged isolated_microphysics/protocol.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged isolated_microphysics/worker_entry.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged installed_free_matter_binding/matter.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged installed_weak_density_element/element.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged free_capture_moment_fit/approximation.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged free_capture_moment_fit/collect.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged free_capture_moment_fit/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged free_capture_moment_fit/COEFFICIENT_FREEZE.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged free_capture_moment_fit/REVISED_LOCK2.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_free_capture_moment_fit/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_free_capture_moment_fit_repair/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged allowed_rate_assessment/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged cold_capture/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged emission_only/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged finite_t_rmf_integration_contract/CONTRACT.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged finite_t_weak_reference_integration_contract/CONTRACT.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged finite_t_weak_reference_integration_contract/MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_finite_t_weak_reference_integration_contract/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/CANDIDATE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/AUTHOR_REPORT.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/SIGNED_LOG_REPAIR.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_production_weak_port/INITIAL_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_production_weak_port/INITIAL_REVIEW_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_production_weak_port/INITIAL_REVIEW_CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_production_weak_port/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_production_weak_port/MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_production_weak_port/CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged review_hot_pc_assembly_repair/results.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/README.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/tests/test_weak_reference_current.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/tests/test_weak_reference_moments.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/docs/weak_reference.md",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/examples/free_weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/src/nmbackend/reference/_weak_decay.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/src/nmbackend/reference/weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/src/nmbackend/reference/_weak_two_body.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/src/nmbackend/reference/_weak_current.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/src/nmbackend/reference/_weak_quadrature.py",
+      "passed": true
+    },
+    {
+      "name": "source unchanged production_weak_port/staged/tests/data/free_weak_reference.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_ec_opacity_spectrum/total_fine_part0.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_ec_opacity_spectrum/total_fine_part1.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/total_fine_0.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/total_fine_1.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/total_fine_2.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_pc_opacity_spectrum/total_fine_3.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_opacity_spectrum/total_fine_0.json",
+      "passed": true
+    },
+    {
+      "name": "source unchanged hot_beta_opacity_spectrum/total_fine_1.json",
+      "passed": true
+    }
+  ],
+  "passed": 114,
+  "failed": 0,
+  "preserved_audit_errors": "AUDIT_ERRORS.json; exploratory missing EC filename and unexecuted inline syntax typo"
+}
