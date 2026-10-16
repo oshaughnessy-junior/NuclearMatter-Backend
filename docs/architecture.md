@@ -84,7 +84,8 @@ fixed-step `scan` backend is the reverse-mode path behind the same
 `solve_structure` seam.  It runs RK4 in σ = √((h_c − h)/(h_c − h_min)) on a frozen
 mesh made of sin-mapped base steps, the table nodes and EOS-placed points, with y
 in a node-anchored picture.  At n_steps = 2000 it matches diffrax to ~1e-5 (M, R),
-~5e-5 (Λ) and ~6e-5 (gradients).  Before 2026-10-14 it stepped uniformly in h and
+~5e-5 (Λ) and ~6e-5 (first derivatives).  Second derivatives through it are O(1)
+wrong and not supported.  Before 2026-10-14 it stepped uniformly in h and
 was wrong at every h_c (`docs/devlog/2026-10-14-tov-scan-accuracy.md`).
 
 **Tidal integration is optional.** `solve_structure(..., tidal=False)` drops `y`;

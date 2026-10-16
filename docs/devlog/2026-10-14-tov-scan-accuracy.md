@@ -118,9 +118,62 @@ was the C⁰ node c_s² interpolated in h.
 | (on main) frozen mesh, no y picture | the steep-joint row above: dΛ/dscale −150% |
 
 ## Not changed
-- The diffrax backend, the EOS interpolation, and the central series start.
+- The EOS interpolation and the central series start.
+- The diffrax backend's values and tangents.  Its `_derivs_x` now gets the cell
+  EOS from `_cell_eos`, which the scan shares, with the same operations in the
+  same order.
 - `_derivs` (the old h-RHS of the scan, through `EOSTable.at_h_tidal`) had no
   other caller and is removed.
+
+## Review follow-ups (2026-10-16)
+Measured on the #46 head after the review, MetaModel unless stated.
+
+Second derivatives through the scan are O(1) wrong at any n_steps.  The frozen
+mesh and the first-order y picture keep only first-order terms.  The Hessian also
+disagrees with FD of the scan's own `jacrev` by the same amounts, so the cause is
+not discretisation.  Now documented in `solve_structure` and pinned by a test.
+
+| Hessian diagonal / FD(diffrax jacfwd at rtol 1e-12) − 1 | n=2000 | n=8000 |
+|---|---|---|
+| d²(M, R, Λ)/dh_c², h_c = 0.2 | −0.49, +0.93, −0.096 | same |
+| d²(M, R, Λ)/dh_c², h_c = 0.3 | −0.46, −0.63, −0.090 | same |
+| steep joint d²(M, R, Λ)/dscale² | −0.087, −0.087, +7.2 | same |
+
+Second-order AD through `MetaModelEOS.eos_table` fails outright, inside its
+equinox loop, for either backend.
+
+AD of the scan against central FD of the scan's own values, n_steps = 2000 and
+8000, h_c ∈ {0.1, 0.2, 0.3}: ≤ 2.2e-7 at the smallest steps (ΔL_sym = 0.002, Δh_c = 1e-6).
+Larger steps differ by the FD truncation error.  An earlier review note of 3e-6
+came from the abandoned first version.
+
+Worst first-derivative error over h_c ∈ {0.1, 0.2, 0.3}, both columns:
+
+| n_steps | 500 | 1000 | 2000 | 4000 | 8000 | 16000 |
+|---|---|---|---|---|---|---|
+| dM | 1.9e-3 | 3.9e-4 | 6.1e-5 | 6.1e-6 | 4.3e-7 | 4.4e-8 |
+| dR | 4.0e-4 | 7.1e-5 | 8.0e-6 | 6.5e-7 | 7.9e-8 | 4.9e-8 |
+| dΛ | 1.0e-3 | 1.9e-4 | 2.3e-5 | 1.9e-6 | 1.7e-7 | 5.3e-8 |
+
+That is about n^-2.5 below 2000 steps and n^-3.5 above.  The 16000 column is near
+the diffrax reference's own accuracy (~5e-8).
+
+EOS-point weights.  The review asked whether node c_s² (a diagnostic since #44)
+should be replaced by the variation of the integrated tidal term dε/dh within
+each cell.  Worst Λ error (values for the tables, first derivatives for MetaModel
+and the steep joint) at n_steps = 2000:
+
+| weights | MetaModel | steep | GM1 | SLy4 | bridge1 | bridge2 |
+|---|---|---|---|---|---|---|
+| node c_s² (kept) | 2.3e-5 | 7.1e-6 | 4.5e-5 | 4.9e-5 | 7.8e-5 | 1.0e-4 |
+| dε/dh within the cell | 2.3e-5 | 7.1e-6 | 4.5e-5 | 4.9e-5 | 5.5e-4 | 1.0e-3 |
+| both | 2.3e-5 | 7.1e-6 | 4.5e-5 | 4.9e-5 | 9.3e-5 | 2.8e-4 |
+
+The node c_s² weights are never worse, so they stay.
+
+The scan at n_steps = 2000 is 5.7e-5 off the SciPy radius-domain reference in M
+at 0.2 h_max, the same as diffrax (5.6e-5).  `test_scan_converges_to_reference`
+now bounds that at 3e-4; it used to check only that the error decreases.
 
 ## Callers of `backend="scan"` (2026-10-14)
 Only NMB's own tests use it:
@@ -140,5 +193,8 @@ scan.
 - `jacrev` of the scan vs `jacfwd` of diffrax on MetaModel (L_sym, h_c), tidal on
   and off.
 - `jacrev` on the steep-joint table vs FD.  This one fails without the y picture.
+- Second derivatives through the scan are pinned as unsupported.
+- `n_steps < 1` raises.
 
-Every check fails on the old scan.
+The first three fail on the old scan.  `test_scan_converges_to_reference` in
+`tests/test_validation_reference.py` now has an absolute bound.

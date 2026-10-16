@@ -45,13 +45,25 @@ Two backends sit behind one seam, ``solve_structure``:
   path (``jax.grad`` / ``jax.jacrev``, with or without the tidal sector).  It
   steps in sigma = sqrt((h_c - h) / (h_c - h_min)), in which the centre is
   regular, on a frozen mesh: sin-mapped base steps, every table node, and
-  points where the EOS varies fastest (``_scan_mesh``); y is carried in a
-  node-anchored picture like the diffrax path's.  At the default
-  n_steps=2000 it agrees with the diffrax backend to ~1e-5 in M, R and ~5e-5
-  in Lambda, and its reverse-mode gradients with diffrax's forward-mode
-  tangents to ~6e-5; both converge as n_steps^-4.  Before 2026-10-14 it
-  stepped uniformly in h and was wrong at every h_c -- M off by up to +210%,
-  Lambda NaN (docs/devlog/2026-10-14-tov-scan-accuracy.md).
+  points where the EOS varies fastest (``_scan_mesh``).  y is carried in a
+  node-anchored picture like the diffrax path's.  Measured at the default
+  n_steps=2000, against the diffrax backend:
+
+  - values: ~1e-5 in M and R, ~5e-5 in Lambda (worst at 0.26 Msun); error
+    falls as n_steps^-4;
+  - first derivatives (forward or reverse mode): ~6e-5; error falls as about
+    n_steps^-3.5 above 2000 steps, slower below;
+  - the AD derivative equals the finite difference of the scan's own values
+    to ~2e-7 (the mesh is frozen; FD steps that move a node across a mesh
+    point see small kinks);
+  - SECOND derivatives are NOT supported: O(1) wrong at any n_steps (see
+    solve_structure).
+
+  Cost: at least len(table.h) steps whatever n_steps is (every node is a
+  mesh point), and a tidal reverse-mode gradient costs ~16x a value solve.
+  Before 2026-10-14 it stepped uniformly in h and was wrong at every h_c, with
+  M off by up to +210% and Lambda NaN
+  (docs/devlog/2026-10-14-tov-scan-accuracy.md).
 
 WARNING (see docs/validation-plan.md): neither backend yet handles strong
 first-order phase transitions (cs^2 -> 0 plateaus / density discontinuities) with
@@ -172,22 +184,33 @@ def _shift(x, lo_u, lo_h, dhdx):
     return (lo_h - lo_u) + (x - lo_u) * (dhdx - 1.0)
 
 
+def _cell_eos(table: EOSTable, i, t, dh, aux, tidal: bool):
+    """(eps, p, tidal term) in table cell ``i`` (nodes i-1, i; h-width ``dh``)
+    at local ``t`` (extrapolated outside [0, 1]); the tidal term is 0.0 unless
+    ``tidal``.  ``aux`` is ``eos.base._degenerate_cells(table.h, table.eps,
+    table.p)``.  Shared by the adaptive (:func:`_derivs_x`) and scan backends."""
+    from ..eos.base import _floor_eps_p, _hermite_cell_t, _tidal_term
+    if not tidal:
+        eps, p = _hermite_cell_t(i, t, dh, table.p, table.eps)
+        eps, p = _floor_eps_p(eps, p, jnp)
+        return eps, p, 0.0
+    eps, p, deps = _hermite_cell_t(i, t, dh, table.p, table.eps, deps=True)
+    eps, p = _floor_eps_p(eps, p, jnp)
+    return eps, p, _tidal_term(i, t, dh, deps, eps, p, *aux, jnp)
+
+
 def _derivs_x(x, state, table: EOSTable, ua, aux, tidal: bool = True):
     """d(r, m, y)/dx (adaptive backend): r, m in h (x == h), y in the
     node-anchored picture (see the note above).  ``aux`` is
     ``eos.base._degenerate_cells(table.h, table.eps, table.p)``."""
-    from ..eos.base import _floor_eps_p, _hermite_cell_t, _tidal_term
     i, lo_u, lo_h, dhdx = _u_cell(table, x, ua)
     dh = table.h[i] - lo_h
-    eps, p = _hermite_cell_t(i, (x - lo_h) / dh, dh, table.p, table.eps)
-    eps, p = _floor_eps_p(eps, p, jnp)
+    eps, p, _ = _cell_eos(table, i, (x - lo_h) / dh, dh, aux, False)
     f = _rhs(eps, p, 0.0, state, False)           # (dr/dh, dm/dh, 0)
     if not tidal:
         return f
     t_y = (x - lo_u) * dhdx / dh                  # == (h(x) - h_{i-1}) / dh
-    eps_y, p_y, deps_y = _hermite_cell_t(i, t_y, dh, table.p, table.eps, deps=True)
-    eps_y, p_y = _floor_eps_p(eps_y, p_y, jnp)
-    deps_y = _tidal_term(i, t_y, dh, deps_y, eps_y, p_y, *aux, jnp)
+    eps_y, p_y, deps_y = _cell_eos(table, i, t_y, dh, aux, True)
     s_y = state + f * _shift(x, lo_u, lo_h, dhdx)  # r, m at h(x); f[2] == 0
     fy = _rhs(eps_y, p_y, deps_y, s_y, True)[2] * dhdx
     return jnp.stack([f[0], f[1], fy])
@@ -254,22 +277,6 @@ def _finish(R, M, y, h_c, tidal):
 # its boundary term to the tangent.  sigma~ == sigma in value, and it equals
 # sigma at both ends of the star (sigma0 and the surface), so no start or end
 # correction is needed.
-def _cell_eos(h, table, i, aux, tidal):
-    """(eps, p, tidal term) at ``h`` from table cell ``i`` (nodes i-1, i),
-    extrapolated outside it; the tidal term is 0 unless ``tidal``.  ``aux`` is
-    ``eos.base._degenerate_cells(table.h, table.eps, table.p)``."""
-    from ..eos.base import _floor_eps_p, _hermite_cell_t, _tidal_term
-    h0 = table.h[i - 1]
-    dh = table.h[i] - h0
-    t = (h - h0) / dh
-    if not tidal:
-        eps, p = _floor_eps_p(*_hermite_cell_t(i, t, dh, table.p, table.eps), jnp)
-        return eps, p, 0.0
-    eps, p, deps = _hermite_cell_t(i, t, dh, table.p, table.eps, deps=True)
-    eps, p = _floor_eps_p(eps, p, jnp)
-    return eps, p, _tidal_term(i, t, dh, deps, eps, p, *aux, jnp)
-
-
 def _scan_mesh(table, h_c, dh0, n_steps, aux):
     """Frozen sigma mesh, increasing from sigma0 = sqrt(dh0 / H) to 1 (static
     length n_steps + n_steps//4 + len(table.h)), and the table cell of each step.
@@ -339,27 +346,35 @@ def _solve_scan(table, h_c, n_steps, tidal):
     aux = _degenerate_cells(table.h, table.eps, table.p, jnp)
     sig, cell = _scan_mesh(table, h_c, dh0, n_steps, aux)
     H = h_c - h_min
-    # y picture per step: the cell's ends in sigma, live (a, b) and frozen (A, B);
-    # the top cell ends at the start sigma0, the bottom one at the surface 1
-    s0 = jnp.sqrt(dh0 / H)
-    top = table.h[cell] >= h_c - dh0
-    a = jnp.where(top, s0, jnp.sqrt(jnp.where(top, 1.0, (h_c - table.h[cell]) / H)))
-    b = jnp.sqrt((h_c - table.h[cell - 1]) / H)
-    A, B = sg(a), sg(b)
-    g = (b - a) / jnp.where(B > A, B - A, 1.0)               # d sigma~/d sigma
+    lo_h = table.h[cell - 1]
+    dh = table.h[cell] - lo_h
+    xs = (sig[:-1], jnp.diff(sig), cell, lo_h, dh)
+    if tidal:
+        # y picture per step: the cell's ends in sigma, live (a, b) and frozen
+        # (A, B); the top cell ends at the start sigma0, the bottom one at 1
+        s0 = jnp.sqrt(dh0 / H)
+        top = table.h[cell] >= h_c - dh0
+        a = jnp.where(top, s0,
+                      jnp.sqrt(jnp.where(top, 1.0, (h_c - table.h[cell]) / H)))
+        b = jnp.sqrt((h_c - lo_h) / H)
+        A, B = sg(a), sg(b)
+        g = (b - a) / jnp.where(B > A, B - A, 1.0)           # d sigma~/d sigma
+        xs = xs + (a, A, g)
 
     def step(state, sd):
-        s_lo, ds, i, a, A, g = sd
+        s_lo, ds, i, lo, w = sd[:5]
 
         def f(s, X):            # d(r, m, y)/dsigma
-            dhds = -2.0 * H * s
-            eps, p, _ = _cell_eos(h_c - H * s * s, table, i, aux, False)
-            frm = _rhs(eps, p, 0.0, X, False) * dhds        # (dr, dm, 0)
+            eps, p, _ = _cell_eos(table, i, (h_c - H * s * s - lo) / w, w, aux,
+                                  False)
+            frm = _rhs(eps, p, 0.0, X, False) * (-2.0 * H * s)  # (dr, dm, 0)
             if not tidal:
                 return frm
-            shift = (a - A) + (s - A) * (g - 1.0)           # sigma~ - sigma == 0
+            a, A, g = sd[5:]
+            shift = _shift(s, A, a, g)                      # sigma~ - sigma == 0
             st = s + shift
-            eps, p, d = _cell_eos(h_c - H * st * st, table, i, aux, True)
+            eps, p, d = _cell_eos(table, i, (h_c - H * st * st - lo) / w, w, aux,
+                                  True)
             fy = _rhs(eps, p, d, X + frm * shift, True)[2] * (-2.0 * H * st) * g
             return frm.at[2].set(fy)
 
@@ -369,8 +384,7 @@ def _solve_scan(table, h_c, n_steps, tidal):
         k4 = f(s_lo + ds, state + ds * k3)
         return state + (ds / 6.0) * (k1 + 2.0 * k2 + 2.0 * k3 + k4), None
 
-    state, _ = jax.lax.scan(step, state0,
-                            (sig[:-1], jnp.diff(sig), cell, a, A, g))
+    state, _ = jax.lax.scan(step, state0, xs)
     return _finish(state[0], state[1], state[2], h_c, tidal)
 
 
@@ -554,11 +568,11 @@ def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
     tidal   : integrate the tidal sector (k2, Lambda).  ``tidal=False`` drops y
               (cheaper; k2 and Lambda are NaN placeholders).
     rtol, atol : diffrax tolerances.
-    n_steps : scan-backend base step count; the scan takes
+    n_steps : scan-backend base step count (>= 1); the scan takes
               n_steps + n_steps // 4 + len(table.h) - 1 steps (table nodes and
-              EOS-placed points, ``_scan_mesh``).  Errors fall as n_steps^-4:
-              at 2000, ~1e-5 in M, R and ~5e-5 in Lambda (worst at 0.26 Msun),
-              gradients ~6e-5.
+              EOS-placed points, ``_scan_mesh``), so its cost never falls below
+              len(table.h) steps.  At 2000: ~1e-5 in M, R and ~5e-5 in Lambda
+              (worst at 0.26 Msun), first derivatives ~6e-5.
     adjoint : optional diffrax adjoint override (default ForwardMode()).
     jump_nodes : (diffrax) stop steps at every EOS table node (default).  False
               was an opt-out for bulk value-only scans of tables with thousands
@@ -581,8 +595,14 @@ def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
               tangents and values are unchanged.
 
     Derivatives: forward-mode first derivatives in h_c and in any EOS
-    parameter, and mixed d^2/dh_c dtheta, are supported.  Second derivatives
-    in h_c (d^2 X/dh_c^2) are NOT: they are wrong by orders of magnitude.
+    parameter, and mixed d^2/dh_c dtheta, are supported.  With
+    backend="scan", first derivatives in either mode are supported, and NO
+    second derivatives (jax.hessian, jacfwd(jacrev)): the frozen mesh and the
+    first-order y picture leave them O(1) wrong at any n_steps (MetaModel,
+    h_c = 0.2: d^2(M, R, Lambda)/dh_c^2 off by -0.49, +0.93, -0.10; pinned by
+    tests/test_tov_scan.py).  With the diffrax backend, second derivatives
+    in h_c (d^2 X/dh_c^2) are NOT supported: they are wrong by orders of
+    magnitude.
     Nor are second derivatives in EOS parameters (d^2/dtheta^2): on the
     MetaModel star of tests/test_tov_jump_ts.py, d^2(M, R, Lambda)/dL_sym^2 are
     off by O(1) (and were off by 5, 10 and 900x before 2026-10-14); the tidal
@@ -593,5 +613,7 @@ def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
         return _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=adjoint,
                               jump_nodes=jump_nodes, centre_refine=centre_refine)
     elif backend == "scan":
-        return _solve_scan(table, h_c, n_steps, tidal)
+        if int(n_steps) < 1:
+            raise ValueError(f"n_steps must be at least 1 (got {n_steps})")
+        return _solve_scan(table, h_c, int(n_steps), tidal)
     raise ValueError(f"unknown backend {backend!r} (use 'diffrax' or 'scan')")
