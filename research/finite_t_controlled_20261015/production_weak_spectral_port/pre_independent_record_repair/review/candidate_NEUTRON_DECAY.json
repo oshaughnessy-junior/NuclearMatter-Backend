@@ -1,0 +1,295 @@
+{
+  "channel": "NEUTRON_DECAY",
+  "checks": [
+    {
+      "name": "exactphysicalconstant MN",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactphysicalconstant MP",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactphysicalconstant ME",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactphysicalconstant MW",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactphysicalconstant HC",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "exactphysicalconstant HBAR",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "actualFDdensitybeforecandidate",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "integratedpositive j0.337",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "independentintegrated j0.337",
+      "error": 1.065814103640156e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "integratedpositive chi0.337",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "independentintegrated chi0.337",
+      "error": 7.105427357601027e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "relaxation 0.337",
+      "error": 0.0,
+      "gate": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "KMSposterior 0.337",
+      "error": -1.5543122344752192e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "lengthcm 0.337",
+      "error": -8.881784197001252e-16,
+      "gate": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "lengthkm 0.337",
+      "error": 8.881784197001252e-16,
+      "gate": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "trueabsorptiondiffersrelax 0.337",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "integratedpositive j0.873",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "independentintegrated j0.873",
+      "error": -6.463138082363135e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "integratedpositive chi0.873",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "independentintegrated chi0.873",
+      "error": -6.4631370165491e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "relaxation 0.873",
+      "error": -4.440892098500626e-16,
+      "gate": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "KMSposterior 0.873",
+      "error": -1.2989609388114332e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "lengthcm 0.873",
+      "error": -4.3298697960381105e-15,
+      "gate": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "lengthkm 0.873",
+      "error": -2.55351295663786e-15,
+      "gate": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "trueabsorptiondiffersrelax 0.873",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "kind": "heldoutintegrated",
+      "E": 0.337,
+      "reference": "pure_NEUTRON_DECAY_0.337_fine.json",
+      "candidate": {
+        "channel": "NEUTRON_DECAY",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 0.337,
+        "j": {
+          "value": 0.09023040298756063,
+          "log": -2.405388846759827,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 0.026211135705925485,
+          "log": -3.6415709315697313,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "conditional lab E; ep pair; theta cone map",
+          [
+            0.0,
+            24.52186512345258,
+            61.30466280863145,
+            122.6093256172629,
+            214.56631983021006,
+            306.52331404315726,
+            429.1326396604201,
+            531.6750113985046
+          ],
+          0.0,
+          0.7820077025790402,
+          215040,
+          4.440892098500626e-16
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      }
+    },
+    {
+      "kind": "heldoutintegrated",
+      "E": 0.873,
+      "reference": "high_NEUTRON_DECAY_0.873.json",
+      "candidate": {
+        "channel": "NEUTRON_DECAY",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 0.873,
+        "j": {
+          "value": 3.6390510454625857e-05,
+          "log": -10.221202519106193,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 1.3820126256070465e-05,
+          "log": -11.189384603916086,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "conditional lab E; ep pair; theta cone map",
+          [
+            103.62783011037673,
+            122.6093256172629,
+            214.56631983021006,
+            306.52331404315726,
+            429.1326396604201,
+            543.1503776394061
+          ],
+          103.62783011037673,
+          0.7820077025790402,
+          153600,
+          4.440892098500626e-16
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      }
+    }
+  ],
+  "stage": "COMPLETE",
+  "complete": true,
+  "independent_forward_densities": {
+    "neutron": {
+      "original_p": 6.999999999999839e-08,
+      "Bessel_fugacity": 6.999999999999864e-08,
+      "saved": 6.999999999999867e-08
+    },
+    "proton": {
+      "original_p": 3.000000000000042e-08,
+      "Bessel_fugacity": 3.0000000000000394e-08,
+      "saved": 3.000000000000039e-08
+    }
+  },
+  "passed": 25,
+  "failed": [],
+  "seconds": 0.7556457919999957,
+  "origin": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_spectral_port/candidate_copy/src/nmbackend/reference/weak_reference.py"
+}

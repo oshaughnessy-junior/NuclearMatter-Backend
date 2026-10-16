@@ -1,0 +1,206 @@
+{
+  "result": {
+    "channel": "NEUTRON_DECAY",
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "radiation": {
+      "mode": "FD",
+      "temperature": 2.0,
+      "mu_nue": -2.809364169619812,
+      "mu_antinue": 2.809364169619812
+    },
+    "rule": {
+      "nodes": [
+        0.3267949192431123,
+        0.6732050807568878
+      ],
+      "weights": [
+        0.30000000000000004,
+        0.30000000000000004
+      ],
+      "lower": 0.2,
+      "upper": 0.8
+    },
+    "controls": {
+      "lepton_order": 8,
+      "angle_order": 12,
+      "energy_order": 12,
+      "phi_order": 4,
+      "tail": 50.0,
+      "outer_tail": 30.0,
+      "parent_order": 8,
+      "cone_order": 10,
+      "electron_order": 10,
+      "decay_phi_order": 6,
+      "budget_seconds": 110.0
+    },
+    "nodes": [
+      {
+        "channel": "NEUTRON_DECAY",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 0.3267949192431123,
+        "j": {
+          "value": 0.09276378067116794,
+          "log": -2.3776990098664257,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 0.026809911304073952,
+          "log": -3.618983635054775,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 8,
+          "angle_order": 12,
+          "energy_order": 12,
+          "phi_order": 4,
+          "tail": 50.0,
+          "outer_tail": 30.0,
+          "parent_order": 8,
+          "cone_order": 10,
+          "electron_order": 10,
+          "decay_phi_order": 6,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "conditional lab E; ep pair; theta cone map",
+          [
+            0.0,
+            24.52186512345258,
+            61.30466280863145,
+            122.6093256172629,
+            214.56631983021006,
+            306.52331404315726,
+            429.1326396604201,
+            444.87423403024815
+          ],
+          0.0,
+          0.7820077025790402,
+          33600,
+          4.440892098500626e-16
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      },
+      {
+        "channel": "NEUTRON_DECAY",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 0.6732050807568878,
+        "j": {
+          "value": 0.023127252743345792,
+          "log": -3.766743584399805,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 0.007948093989322166,
+          "log": -4.834823128831264,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 8,
+          "angle_order": 12,
+          "energy_order": 12,
+          "phi_order": 4,
+          "tail": 50.0,
+          "outer_tail": 30.0,
+          "parent_order": 8,
+          "cone_order": 10,
+          "electron_order": 10,
+          "decay_phi_order": 6,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "conditional lab E; ep pair; theta cone map",
+          [
+            0.0,
+            24.52186512345258,
+            61.30466280863145,
+            122.6093256172629,
+            141.28773897434277,
+            214.56631983021006,
+            306.52331404315726,
+            429.1326396604201,
+            444.87423403024815
+          ],
+          0.0,
+          0.7820077025790402,
+          38400,
+          4.440892098500626e-16
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      }
+    ],
+    "forward": [
+      {
+        "value": 9.696314285291513e-12,
+        "log": -25.35927527321483,
+        "reason": "represented"
+      },
+      {
+        "value": 5.0056191006612115e-12,
+        "log": -26.02046001437533,
+        "reason": "represented"
+      }
+    ],
+    "backward": [
+      {
+        "value": 9.696314285291547e-12,
+        "log": -25.359275273214827,
+        "reason": "represented"
+      },
+      {
+        "value": 5.005619100661229e-12,
+        "log": -26.020460014375328,
+        "reason": "represented"
+      }
+    ],
+    "net": [
+      {
+        "value": -1.4129259527393394e-26,
+        "log_abs": -59.521549719805165,
+        "sign": -1
+      },
+      {
+        "value": -9.511889301173882e-27,
+        "log_abs": -59.917254989326096,
+        "sign": -1
+      }
+    ],
+    "entropy_production": {
+      "value": 3.7647910195719217e-41,
+      "log": -93.08029645913433,
+      "reason": "represented"
+    },
+    "complete_finite_range": true,
+    "whole_moment_qualified": false,
+    "scope": "finite-range quadrature PILOT; omitted incident-energy tails and continuum convergence OPEN",
+    "units": [
+      "fm^-3 s^-1",
+      "MeV fm^-3 s^-1"
+    ]
+  },
+  "seconds": 0.2600232088007033
+}

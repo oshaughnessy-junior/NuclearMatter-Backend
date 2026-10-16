@@ -1,0 +1,48 @@
+{
+  "row": {
+    "Enu": 0.873,
+    "density_allowed": 8.969149382803443e-09,
+    "max_energy_residual": 3.865796571744795e-13,
+    "points": 829440,
+    "controls": {
+      "parent": 18,
+      "nu": 24,
+      "electron": 24,
+      "phi": 16,
+      "tail": 85.0
+    },
+    "rapidity_edges": [
+      0.11007096549748062,
+      0.15,
+      0.23,
+      0.35,
+      0.5,
+      0.6024031872160466
+    ],
+    "seconds": 0.9623195831663907,
+    "logj": -10.22120245447481,
+    "logchi": -11.189384539284713,
+    "E": 0.873,
+    "channel": "NEUTRON_DECAY"
+  },
+  "checks": [
+    {
+      "name": "j fine/highrefinement",
+      "error": -1.417920078407723e-06,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "chi fine/highrefinement",
+      "error": -1.417920078407723e-06,
+      "gate": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 2,
+  "failed": [],
+  "complete": true,
+  "candidate_imported": false,
+  "seconds": 0.9632422081194818,
+  "scope": "Oneextraindependentreferencequad rung; originalcoarsegatesunchanged"
+}

@@ -1,0 +1,137 @@
+{
+  "stage": "beta",
+  "profile": "fine",
+  "row": {
+    "Enu": 0.337,
+    "density_allowed": 6.999999999999867e-08,
+    "max_energy_residual": 3.79585252119341e-13,
+    "points": 294912,
+    "controls": {
+      "parent": 12,
+      "nu": 16,
+      "electron": 16,
+      "phi": 12,
+      "tail": 85.0
+    },
+    "rapidity_edges": [
+      0.0,
+      0.02,
+      0.05,
+      0.09,
+      0.15,
+      0.23,
+      0.35,
+      0.5,
+      0.5928361583349022
+    ],
+    "seconds": 0.4485440419521183,
+    "logj": -2.4053888467598377,
+    "logchi": -3.6415709315697384,
+    "E": 0.337,
+    "channel": "NEUTRON_DECAY"
+  },
+  "checks": [
+    {
+      "name": "actualpositivefinitelog logj",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "actualpositivefinitelog logchi",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "KMSafterdirectactualproducts",
+      "error": -5.10702591327572e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fixedlabenergyandledger",
+      "error": 4.040008751165625e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged relativistic_delta_oracle/oracle.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged relativistic_capture_oracle/events.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged hot_electron_capture_moments/electron_capture.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged review_pc_moments/reference.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged review_hot_beta_opacity_spectrum/reference.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged review_hot_ec_opacity_spectrum/results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged hot_ec_opacity_spectrum/results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged hot_pc_opacity_spectrum/results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged hot_beta_opacity_spectrum/pilot_results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged hot_beta_moments/results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged finite_t_weak_spectral_integration_contract/CONTRACT.md",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceunchanged review_finite_t_weak_spectral_integration_contract/CHECKPOINT.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 16,
+  "failed": [],
+  "complete": true,
+  "candidate_imported": false,
+  "seconds": 0.44922675006091595,
+  "qualification": "Finite selectednumericalreferenceprofile; no infiniterange/transport/domaincertificate"
+}

@@ -1,0 +1,48 @@
+{
+  "locked_utc": "2026-10-16T07:03:12.893320+00:00",
+  "before_data": true,
+  "isolated_controls": {
+    "EC_E7_3": [
+      "tail90",
+      "outer_tail50",
+      "phi_order10",
+      "lepton_order16",
+      "angle_order24",
+      "energy_order24"
+    ],
+    "beta_E_83": [
+      "tail90",
+      "parent_order16",
+      "cone_order20",
+      "electron_order20",
+      "decay_phi_order14"
+    ]
+  },
+  "gate": 3e-06,
+  "reconstruction": {
+    "EC": [
+      2,
+      6
+    ],
+    "PC": [
+      2,
+      6
+    ],
+    "NEUTRON_DECAY": [
+      0.2,
+      0.8
+    ],
+    "orders": [
+      2,
+      4
+    ],
+    "profiles": "base",
+    "radiation": [
+      "empty",
+      "LTE",
+      "common each flavor mu_eq-.8"
+    ],
+    "gate": "Pilot ONLY; compare finite-rule convergence diagnostics without whole-moment qualification. Energy/DOS/Le/entropy algebra3e-9 gross normalized.",
+    "outer_boundary": "Not infinite total. Lower/upper omitted ranges nonzero and OPEN."
+  }
+}

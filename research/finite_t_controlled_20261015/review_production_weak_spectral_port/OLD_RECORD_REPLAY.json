@@ -1,0 +1,29 @@
+{
+  "kind": "ExpectedBADoldacceptance replay; NOTphysicalvalidation/waiver",
+  "passed": 4,
+  "failed": [],
+  "rows": [
+    {
+      "name": "REQUIRED FDmetadata changed while staleaggregates retained",
+      "old_wrong_acceptance_reproduced": true,
+      "exact_json_identity": true
+    },
+    {
+      "name": "REQUIRED positiveaggregate changed while actualnodes retained",
+      "old_wrong_acceptance_reproduced": true,
+      "exact_json_identity": true
+    },
+    {
+      "name": "REQUIRED changedBOTHbranches preservingnet but stalepositiveF/B",
+      "old_wrong_acceptance_reproduced": true,
+      "exact_json_identity": true
+    },
+    {
+      "name": "REQUIRED exactempty forged at provedpositivepoint",
+      "old_wrong_acceptance_reproduced": true,
+      "exact_json_identity": true
+    }
+  ],
+  "physical_calls": 0,
+  "source": "ownimmutableinitialcandidate_copy"
+}

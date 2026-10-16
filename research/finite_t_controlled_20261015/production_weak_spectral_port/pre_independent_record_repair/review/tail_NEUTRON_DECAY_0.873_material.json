@@ -1,0 +1,56 @@
+{
+  "channel": "NEUTRON_DECAY",
+  "E": 0.873,
+  "kind": "material",
+  "controls": {
+    "parent": 18,
+    "nu_order": 24,
+    "electron": 24,
+    "phi_order": 16,
+    "tail": 95.0
+  },
+  "row": {
+    "Enu": 0.873,
+    "density_allowed": 8.969149382803443e-09,
+    "max_energy_residual": 3.865796571744795e-13,
+    "points": 829440,
+    "controls": {
+      "parent": 18,
+      "nu": 24,
+      "electron": 24,
+      "phi": 16,
+      "tail": 95.0
+    },
+    "rapidity_edges": [
+      0.11007096549748062,
+      0.15,
+      0.23,
+      0.35,
+      0.5,
+      0.6347144078778618
+    ],
+    "seconds": 0.992479917127639,
+    "logj": -10.22120245447481,
+    "logchi": -11.189384539284713
+  },
+  "checks": [
+    {
+      "name": "material onlyextension j",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "material onlyextension chi",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 2,
+  "failed": [],
+  "complete": true,
+  "candidate_imported": false,
+  "seconds": 0.993211624911055,
+  "scope": "Isolatedboundextensiononly, no rigorousinfinitedomainerrorcertificate"
+}

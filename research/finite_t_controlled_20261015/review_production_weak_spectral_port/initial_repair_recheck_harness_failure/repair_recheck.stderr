@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_spectral_port/repair_recheck.py", line 35, in <module>
+    values=list(getattr(r,key));old=values[index];values[index]=W.PositiveQuantity(old.value*1.1,old.log+math.log(1.1));reject(key+str(index)+'changed',lambda key=key,values=values:dataclasses.replace(r,**{key:tuple(values)}))
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PositiveQuantity.__init__() missing 1 required positional argument: 'reason'

@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-16T07:11:04.605566+00:00",
+  "candidate_calls": 0,
+  "representation_case": {
+    "logj": -13836.073477186033,
+    "logchi": -13837.46326796703,
+    "ordinary_values": null,
+    "expected": "strictpositive_support finite logs; not coefficientzero; accuracy NOTqualified"
+  },
+  "weighted_panel_case": {
+    "logwidth": -750.0,
+    "logintegrand": 100.0,
+    "ordinarywidth": 0.0,
+    "weighted_contribution": 5.111951948651156e-283
+  },
+  "differential_PC_empty": {
+    "E": 4.61,
+    "El": 5.897,
+    "cosine": 0.99987,
+    "t": 0.049562323070461156,
+    "omega": -1.287,
+    "Ea_star": -5454.481435723118,
+    "expected": "analytic supportempty frompositiveenergyshell violation; conditionalonly"
+  },
+  "singular_coordinate": "derivedlimit/alternatemap or unresolvedexception; never widthonlyskip/falsezero",
+  "future_reconstruction_cases": [
+    "finiteintervalcoverage explicit, complete=False cannotbequalified",
+    "missing/overlapping/reorderednode/state/current/control/radiationidentitywrong rejects",
+    "ordinaryNonefiniteLOGadmitted vsbool/NaN/logNone falsezero rejects",
+    "emptyincomingradiation Bsourcezero butpositivechi mandatory",
+    "PCnoneq mur=2.009364169619812 !=betaemissionmur1.209364169619812; cannotjoinlabels"
+  ],
+  "not_executed_API_tests": true
+}

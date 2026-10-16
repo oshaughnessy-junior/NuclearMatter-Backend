@@ -1,0 +1,38 @@
+{
+  "status": "FROZEN initial StageB candidate; DIFFERENT numerical/physics+packaging reviews pending",
+  "base_commit": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+  "files": {
+    "README.md": "ec13bc77ff68d073593c44f2ac9d1a11a40cd61762b85184656c63ec0b421851",
+    "docs/weak_reference.md": "fe5bdac938fe3f52cd4b22b349311b47e55d9110e0e663586edb350a99707c76",
+    "docs/weak_spectral_validation.md": "e660d3a2ecbaf766f08fd7532c4bd1bcd632649d98f6f3f72f3097b1c5b70176",
+    "examples/free_weak_reference.py": "5a7f1dc7e1d86ce435c40f38d8da3d8528fb9ca453a7f6db1d0e9f9f5e2d28a6",
+    "src/nmbackend/reference/_weak_spectral_capture.py": "4384208e51ff0e2b78a1e6587beccbb5f8fe1400f7dd911f5fa90464cbd2e684",
+    "src/nmbackend/reference/_weak_spectral_common.py": "ece8364c40bf55cdbb4560e363a893adde5252e4b827fcbd3641381e79c07bd9",
+    "src/nmbackend/reference/_weak_spectral_decay.py": "148142642df36c1d392333ee26b3479c53a523d14764ca67154a6ed664b5cc86",
+    "src/nmbackend/reference/weak_reference.py": "76e569023bcde176086384ffbcdff861d120b6b9ba9cafe84041ceabb598b5f9",
+    "tests/data/free_weak_spectral_reference.json": "d4b984aa5b4426901ec273becbc1e9393852971f7d01ac90b575fcb4d6f75a81",
+    "tests/test_weak_reference_reconstruction.py": "6bf0fe51cb2199233032fbcb1692e7598084cce1e89e100e8d11fcf4bf51db43",
+    "tests/test_weak_reference_spectra.py": "1f2d6c49b698d15761210d661f3b0aeeced19416d76346029c9c538c92ec4ee4"
+  },
+  "modified": [
+    "README.md",
+    "docs/weak_reference.md",
+    "examples/free_weak_reference.py",
+    "src/nmbackend/reference/weak_reference.py"
+  ],
+  "new": [
+    "docs/weak_spectral_validation.md",
+    "src/nmbackend/reference/_weak_spectral_capture.py",
+    "src/nmbackend/reference/_weak_spectral_common.py",
+    "src/nmbackend/reference/_weak_spectral_decay.py",
+    "tests/data/free_weak_spectral_reference.json",
+    "tests/test_weak_reference_reconstruction.py",
+    "tests/test_weak_reference_spectra.py"
+  ],
+  "lock_sha256": "c051e3c23f290b657b4caad069a34d4ce7ee85a4e535368fb674bd5590ec188a",
+  "source_pin_sha256": "f695de35210bad5768f06447360948846122dd20f64d5109c724ab76d5cbcc3f",
+  "model": "physical free fixed T2 chemical bath, full Guo current, direct EC/PC/beta spectra",
+  "reconstruction": "finite-range pilot only; whole moments/tails OPEN",
+  "compatibility": "explicit SpectralControls opt-in; no-controls legacy NotImplementedError retained",
+  "stageA_helpers_and_tests_unchanged": true
+}

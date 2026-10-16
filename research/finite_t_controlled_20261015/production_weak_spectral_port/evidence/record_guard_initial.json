@@ -1,0 +1,14 @@
+[
+  {
+    "name": "missing all nodes",
+    "expected": "ValueError",
+    "actual": "accepted",
+    "passed": false
+  },
+  {
+    "name": "forged whole-moment qualification",
+    "expected": "ValueError",
+    "actual": "accepted",
+    "passed": false
+  }
+]

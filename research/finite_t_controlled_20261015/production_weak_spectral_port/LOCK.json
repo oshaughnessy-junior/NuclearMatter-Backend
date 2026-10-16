@@ -1,0 +1,134 @@
+{
+  "created_utc": "2026-10-16T06:57:17.919695+00:00",
+  "base_commit": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+  "paths": [
+    "src/nmbackend/reference/weak_reference.py",
+    "src/nmbackend/reference/_weak_spectral_common.py",
+    "src/nmbackend/reference/_weak_spectral_capture.py",
+    "src/nmbackend/reference/_weak_spectral_decay.py",
+    "tests/test_weak_reference_spectra.py",
+    "tests/test_weak_reference_reconstruction.py",
+    "tests/data/free_weak_spectral_reference.json",
+    "examples/free_weak_reference.py",
+    "docs/weak_reference.md",
+    "README.md",
+    "docs/weak_spectral_validation.md"
+  ],
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "compatibility": "Root authorized explicit SpectralControls opt-in; controls=None preserves Stage A NotImplementedError; original proposed contract signature retained historically.",
+  "domain": {
+    "capture_E": [
+      0,
+      60
+    ],
+    "decay_E": [
+      0,
+      1.4
+    ],
+    "E_zero": "excluded",
+    "bath": "exact fixed four chemical inputs only",
+    "orders": [
+      4,
+      32
+    ],
+    "tail": [
+      30,
+      100
+    ],
+    "outer_tail": [
+      20,
+      60
+    ],
+    "budget_seconds": [
+      0,
+      120
+    ]
+  },
+  "profiles": {
+    "base": {
+      "lepton_order": 8,
+      "angle_order": 12,
+      "energy_order": 12,
+      "phi_order": 4,
+      "tail": 50.0,
+      "outer_tail": 30.0,
+      "parent_order": 8,
+      "cone_order": 10,
+      "electron_order": 10,
+      "decay_phi_order": 6
+    },
+    "fine": {
+      "lepton_order": 12,
+      "angle_order": 16,
+      "energy_order": 16,
+      "phi_order": 6,
+      "tail": 70.0,
+      "outer_tail": 40.0,
+      "parent_order": 12,
+      "cone_order": 16,
+      "electron_order": 16,
+      "decay_phi_order": 10
+    }
+  },
+  "new_points": {
+    "EC": [
+      3.7,
+      7.3
+    ],
+    "PC": [
+      3.3,
+      8.2
+    ],
+    "NEUTRON_DECAY": [
+      0.31,
+      0.63,
+      0.83
+    ]
+  },
+  "new_differential": [
+    [
+      "EC",
+      4.3,
+      5.59,
+      0.27
+    ],
+    [
+      "EC",
+      4.3,
+      5.59,
+      0.9999
+    ],
+    [
+      "PC",
+      1.73,
+      0.62,
+      -0.24
+    ]
+  ],
+  "saved_rows": 10,
+  "gates": {
+    "saved_and_refinement": 3e-06,
+    "phase_current": 3e-10,
+    "KMS": 2e-09,
+    "shell_scaled": 1e-10,
+    "ledger_gross": 3e-09
+  },
+  "panel_policy": "No omission. Collapsed physical or transformed panel raises unresolved. Exact empty allowed only analytic support proof differential; integrated j and chi finite log positive mandatory.",
+  "reconstruction": "Finite-range pilot only unless independently closed full moment/tail gates. Fresh nodes, exact state/current/control/radiation identity; no cache. Explicit coverage, complete status, whole_moment_qualified=False.",
+  "holds": [
+    "no EOS",
+    "no RMF",
+    "no AD",
+    "no uniform-domain certificate",
+    "no transport opacity",
+    "no full inventory",
+    "no implementation empirical uncertainty"
+  ],
+  "base_validation": "unchanged53 Stage A tests + repaired guard before new spectrum interpretation",
+  "resource": "serial process <120s, thread1, max vector batch250000, no installs"
+}

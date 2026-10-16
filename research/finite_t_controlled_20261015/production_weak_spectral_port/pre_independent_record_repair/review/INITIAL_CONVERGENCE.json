@@ -1,0 +1,93 @@
+{
+  "passed": 2,
+  "failed": [
+    {
+      "name": "EC6.431j originalcoarse/fine",
+      "error": 1.231860822316219e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "EC6.431chi originalcoarse/fine",
+      "error": 1.2318608224494474e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "PC4.237j originalcoarse/fine",
+      "error": 3.20800533539298e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "PC4.237chi originalcoarse/fine",
+      "error": 3.20800533539298e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY0.873j originalcoarse/fine",
+      "error": -1.015917450981822e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY0.873chi originalcoarse/fine",
+      "error": -1.015917450981822e-05,
+      "gate": 3e-06,
+      "passed": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "EC6.431j originalcoarse/fine",
+      "error": 1.231860822316219e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "EC6.431chi originalcoarse/fine",
+      "error": 1.2318608224494474e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "PC4.237j originalcoarse/fine",
+      "error": 3.20800533539298e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "PC4.237chi originalcoarse/fine",
+      "error": 3.20800533539298e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY0.337j originalcoarse/fine",
+      "error": 1.3500311979442815e-13,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY0.337chi originalcoarse/fine",
+      "error": 1.3500311979442815e-13,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY0.873j originalcoarse/fine",
+      "error": -1.015917450981822e-05,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY0.873chi originalcoarse/fine",
+      "error": -1.015917450981822e-05,
+      "gate": 3e-06,
+      "passed": false
+    }
+  ],
+  "candidate_imported": false,
+  "kind": "Originalreferenceaccuracygates remainFAIL; no gatechange"
+}

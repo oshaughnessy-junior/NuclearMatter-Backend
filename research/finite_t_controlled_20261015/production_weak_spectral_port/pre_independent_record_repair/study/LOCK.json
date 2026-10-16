@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-10-16T07:25:35.085516+00:00",
+  "before_new_study_physical_calls": true,
+  "kind": "research harness finite-range incident quadrature; candidate independent acceptance PENDING",
+  "candidate_manifest_sha256": "18da0dfe7f52c8fea7c59d9fe7e1687b5893738c36cf836091587cff02406ad0",
+  "source_pin_sha256": "1bdaa55b6364c82060077f39292a8d9f7700e873c28e307e9788d95556b8b49c",
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "channels": {
+    "EC": [
+      2.0,
+      6.0
+    ],
+    "PC": [
+      2.0,
+      6.0
+    ],
+    "NEUTRON_DECAY": [
+      0.2,
+      0.8
+    ]
+  },
+  "incident_orders": [
+    4,
+    8,
+    16,
+    24,
+    32
+  ],
+  "incident_map": "Gauss-Legendre directly in lab neutrino energy; no endpoint/tail extrapolation",
+  "controls": {
+    "lepton_order": 12,
+    "angle_order": 16,
+    "energy_order": 16,
+    "phi_order": 6,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 110.0
+  },
+  "radiation": [
+    {
+      "name": "empty",
+      "mode": "empty",
+      "T": null,
+      "mu_nue": null,
+      "mu_antinue": null
+    },
+    {
+      "name": "LTE",
+      "mode": "FD",
+      "T": 2.0,
+      "mu_nue": -2.809364169619812,
+      "mu_antinue": 2.809364169619812
+    },
+    {
+      "name": "common_changed_affinity",
+      "mode": "FD",
+      "T": 2.0,
+      "mu_nue": -3.6093641696198118,
+      "mu_antinue": 2.009364169619812
+    }
+  ],
+  "gates": {
+    "positive_F_B_number_energy_consecutive": 3e-06,
+    "required_finest_comparison": [
+      24,
+      32
+    ],
+    "LTE_net_over_gross": 2e-09,
+    "source_entropy_ledger_gross": 3e-09,
+    "public_API_postprocess_agreement": 3e-12
+  },
+  "public_reconstruction_agreement": "Actual public reconstruct at order4 for all3channels, empty andLTE, fine sameprofile, not saved output substitution.",
+  "convergence": "All four positive FD R/Q branches and both positive empty F R/Q must pass consecutive rule changes, including24to32; exact absent empty B is structural notrelative. No gate changes. Failures retained. Stopat32.",
+  "postprocessing": "Compute each actualj/chi node once for its channel/order/energy. Immutable source/state/control/energy/rule identity preserved; reuse only in explicit radiation postprocessing. Own harness, no officialReconstructionResult forged.",
+  "resources": {
+    "chunk_nodes": 4,
+    "subprocess_timeout_seconds": 119,
+    "serial": true,
+    "threads": 1,
+    "no_installs": true
+  },
+  "source_change_policy": "Stop on any pin change. Guard-only update requires root formal numericalidentity admission; no silent inheritance.",
+  "scope": "FINITE RANGE ONLY. Whole energy moments/nonzero omitted low/highranges/tails OPEN regardless convergence; no sourceevolution/transportclosure/AD/inventory/modeluncertainty claim."
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/evidence/validate_saved_pilots.py", line 8, in <module>
+    data=json.loads(p.read_text())['result'];b=W.FreeElectronBath(**data['bath']);c=W.SpectralControls(**data['controls']);rad=W.Radiation(**data['radiation']);rule=W.EnergyRule(tuple(data['rule']['nodes']),tuple(data['rule']['weights']),data['rule']['lower'],data['rule']['upper'])
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
