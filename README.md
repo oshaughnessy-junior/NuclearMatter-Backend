@@ -178,4 +178,8 @@ For explicitly prescribed free chemical baths, `nmbackend.reference.weak_referen
 provides detailed EC, positron-capture and neutron-decay TOTAL number/energy moments.
 See [scope and conventions](docs/weak_reference.md) and
 [example](examples/free_weak_reference.py). This separately imported CPU reference
-does not provide spectral opacity, an EOS solve, AD or a full weak-interaction inventory.
+does not provide an EOS solve, AD or a full weak-interaction inventory.
+Selected fixed-T2 chemical-bath j/true-absorption coefficients are available only
+with explicit `SpectralControls`; see [spectral validation](docs/weak_spectral_validation.md).
+Finite-range reconstruction is a pilot with whole moments/tails open; no angular
+transport opacity or arbitrary-bath spectral certificate is implied.

@@ -1,7 +1,8 @@
 """Detailed CPU total moments for three free electron charged-current channels.
 
-Explicit chemical baths, physical masses and full Guo current. No EOS, spectral
-opacity, hydro, JAX/AD or correlated/interacting Urca qualification is implied.
+Explicit chemical baths, physical masses and full Guo current. Selected fixed-bath
+spectra require explicit controls; no EOS, angular transport, hydro, JAX/AD or
+correlated/interacting Urca qualification is implied.
 """
 from __future__ import annotations
 
@@ -206,6 +207,44 @@ def channel_moments(channel, bath, radiation=None, controls=None):
                         entropy, kms, tuple(sorted(metadata.items())), stoichiometry, energy, direct)
 
 
-def spectral_coefficients(*args, **kwargs):
-    """Not implemented in Stage A: no spectral/opacity result can be inferred."""
-    raise NotImplementedError('Stage A provides TOTAL named-channel moments, no spectral j/chi or opacity')
+def _spectral_evaluate(channel, bath, energy, controls, timer):
+    from . import _weak_spectral_capture as capture
+    from . import _weak_spectral_decay as decay
+    from ._weak_spectral_common import validate
+    energy = validate(channel, bath, energy, controls)
+    return (decay if channel == 'NEUTRON_DECAY' else capture).integrate(channel,bath,energy,controls,timer)
+
+
+def spectral_coefficients(channel, bath, E_MeV, controls=None):
+    """Direct j/true chi at the exact declared T2 chemical bath, explicit opt-in.
+
+    controls=None retains the Stage A unavailable behavior for compatibility.
+    Numerical request bounds and a completed call do not certify convergence.
+    """
+    if controls is None:
+        raise NotImplementedError('Spectra require explicit SpectralControls opt-in')
+    from ._weak_quadrature import Timer
+    from ._weak_spectral_common import validate
+    validate(channel,bath,E_MeV,controls)
+    return _spectral_evaluate(channel,bath,E_MeV,controls,Timer(controls.budget_seconds))
+
+
+def capture_differential_coefficients(channel,bath,E_MeV,El_total_MeV,cosine,controls=None):
+    """Original exact baryon delta-shell; units s^-1 MeV^-1 per cosine."""
+    from ._weak_spectral_common import validate
+    from ._weak_spectral_capture import differential
+    from ._weak_quadrature import Timer
+    validate(channel,bath,E_MeV,controls)
+    return differential(channel,bath,E_MeV,El_total_MeV,cosine,controls,Timer(controls.budget_seconds))
+
+
+def reconstruct_spectral_moments(channel,bath,radiation,energy_rule,controls=None):
+    """Fresh explicit finite-range R/Q quadrature; whole moments remain OPEN."""
+    from ._weak_spectral_common import reconstruct
+    return reconstruct(channel,bath,radiation,energy_rule,controls,_spectral_evaluate)
+
+
+from ._weak_spectral_common import (SpectralControls, SpectralQuantity, SpectralResult,
+                                    EnergyRule, ReconstructionResult)
+__all__ += ['SpectralControls','SpectralQuantity','SpectralResult','EnergyRule',
+            'ReconstructionResult','capture_differential_coefficients','reconstruct_spectral_moments']
