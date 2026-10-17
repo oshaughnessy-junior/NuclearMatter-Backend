@@ -1,0 +1,261 @@
+{
+  "candidate_sha256": "5083e7857f3a9e256f4565b6ba19ce87f572b84abf48a381774f2bb364262e2f",
+  "rows": [
+    {
+      "E_MeV": 0.1,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 8,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -3786.5848597671957,
+      "log_true_chi_s-1": -3787.9395418520076,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 8498.883134642389,
+      "threshold_initial_momentum_MeV": 8446.931988887367,
+      "events": 30976,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 3.6548541970660153e-13,
+      "max_four_conservation_scaled": 2.0306332055900266e-14,
+      "max_unsquared_delta_scaled": 4.279984826195271e-16,
+      "KMS_log_residual": 1.9808599205362043e-12,
+      "seconds": 0.018327875062823296
+    },
+    {
+      "E_MeV": 0.1,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 16,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -3786.58485976719,
+      "log_true_chi_s-1": -3787.9395418520076,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 8498.883134642389,
+      "threshold_initial_momentum_MeV": 8446.931988887367,
+      "events": 61952,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 3.7903014060702844e-13,
+      "max_four_conservation_scaled": 2.4471943256314343e-14,
+      "max_unsquared_delta_scaled": 4.280242302492689e-16,
+      "KMS_log_residual": 7.437828131173774e-12,
+      "seconds": 0.03152554202824831
+    },
+    {
+      "E_MeV": 0.1,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 24,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -3786.584859767191,
+      "log_true_chi_s-1": -3787.939541852008,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 8498.883134642389,
+      "threshold_initial_momentum_MeV": 8446.931988887367,
+      "events": 92928,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 3.7903014060702844e-13,
+      "max_four_conservation_scaled": 2.7534647289674726e-14,
+      "max_unsquared_delta_scaled": 4.280336001258174e-16,
+      "KMS_log_residual": 6.98308078028731e-12,
+      "seconds": 0.049200375098735094
+    },
+    {
+      "E_MeV": 0.1,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 32,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -3786.584859767178,
+      "log_true_chi_s-1": -3787.9395418520076,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 8498.883134642389,
+      "threshold_initial_momentum_MeV": 8446.931988887367,
+      "events": 123904,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 4.063416270128073e-13,
+      "max_four_conservation_scaled": 2.2794826432164682e-14,
+      "max_unsquared_delta_scaled": 4.280384531495977e-16,
+      "KMS_log_residual": 1.9716006605108305e-11,
+      "seconds": 0.061647458001971245
+    },
+    {
+      "E_MeV": 0.15,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 8,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -2381.239481736938,
+      "log_true_chi_s-1": -2382.5691638217377,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 5687.568400492851,
+      "threshold_initial_momentum_MeV": 5609.641681860319,
+      "events": 30976,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 3.1108449149996886e-13,
+      "max_four_conservation_scaled": 9.538541051675502e-15,
+      "max_unsquared_delta_scaled": 3.1975676555225133e-16,
+      "KMS_log_residual": -1.038835684141759e-11,
+      "seconds": 0.0157170828897506
+    },
+    {
+      "E_MeV": 0.15,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 16,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -2381.239481736932,
+      "log_true_chi_s-1": -2382.5691638217377,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 5687.568400492851,
+      "threshold_initial_momentum_MeV": 5609.641681860319,
+      "events": 61952,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 3.519406988061746e-13,
+      "max_four_conservation_scaled": 8.84024241749595e-15,
+      "max_unsquared_delta_scaled": 3.1978550875699595e-16,
+      "KMS_log_residual": -4.021893929007092e-12,
+      "seconds": 0.031652041943743825
+    },
+    {
+      "E_MeV": 0.15,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 24,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -2381.239481736933,
+      "log_true_chi_s-1": -2382.569163821737,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 5687.568400492851,
+      "threshold_initial_momentum_MeV": 5609.641681860319,
+      "events": 92928,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 3.519406988061746e-13,
+      "max_four_conservation_scaled": 9.370271737691836e-15,
+      "max_unsquared_delta_scaled": 3.197959691839902e-16,
+      "KMS_log_residual": -5.8408833325529486e-12,
+      "seconds": 0.04706770903430879
+    },
+    {
+      "E_MeV": 0.15,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 32,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -2381.2394817369373,
+      "log_true_chi_s-1": -2382.5691638217377,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 5687.568400492851,
+      "threshold_initial_momentum_MeV": 5609.641681860319,
+      "events": 123904,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 3.519406988061746e-13,
+      "max_four_conservation_scaled": 1.0718327577954893e-14,
+      "max_unsquared_delta_scaled": 4.791977105838453e-16,
+      "KMS_log_residual": -9.478862139644662e-12,
+      "seconds": 0.061761457938700914
+    }
+  ]
+}

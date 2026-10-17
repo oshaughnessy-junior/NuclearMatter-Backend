@@ -1,0 +1,36 @@
+{
+  "job": {
+    "kind": "oracle",
+    "E": 0.1,
+    "radial": 24,
+    "incoming": 18,
+    "outgoing": 18,
+    "phi": 10
+  },
+  "result": {
+    "log_j": -3786.5848597671716,
+    "log_chi": -3787.9395418520025,
+    "ordinary_j": null,
+    "ordinary_chi": null,
+    "KMS_posterior": 2.1080248657767697e-11,
+    "threshold_Ep": 8498.883134642378,
+    "events": 77760,
+    "max_shell": 4.063416270128073e-13,
+    "max_four": 2.895030415683349e-14,
+    "max_unsquared_delta": 6.409925278949216e-16,
+    "radial_domain": "semi-infinite",
+    "coordinates": "threshold targetenergy/genLaguerre alpha1.5 + original cap xi/Jacobi beta.5; nu lab z and proton conditional polarcap",
+    "current": "old independent literal-spinor inverse avg2; no candidate/current import",
+    "normalization": "unreduced g2target measure \u00d7 Moellerflux \u00d7 physical d\u03c3/d\u03a9*/hbar",
+    "seconds": 2.167605083901435
+  },
+  "source_sha256": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+  "selected_AST_functions": [
+    "spinors",
+    "adj",
+    "vertices",
+    "amplitude",
+    "boost"
+  ],
+  "complete": true
+}

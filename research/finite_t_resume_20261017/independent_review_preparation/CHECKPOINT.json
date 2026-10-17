@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN PREPARATION COMPLETE; WAIT ROOT AUTHOR HANDOFF",
+  "utc": "2026-10-17T18:57:19.743042+00:00",
+  "lock_sha256": "bf7b384066c7ecd3de77253ee709b255a33a4441d8b33bf56ab5462f454e4b0e",
+  "plan_sha256": "2a77210e0f752c2291fef957837a951054ca17c520f31bc3940d23c5f569a90c",
+  "analytic_anchors_sha256": "c0dc71bc2cbfde44423166db168337bc0dcb4da83bc9a73b7da0ba65e34ae3c7",
+  "saved_anchors_sha256": "f2e46ffcb7a5b921a28fac74ed79c974cda0b1be0d34b6aedbc60e30831d6f4b",
+  "manifest_sha256": "476fbc5b57d9cfddc1a0cc9bd6de501fb6992543e934a4c745b5ac0bb8e67240",
+  "prior_sourcepins_verified": 16,
+  "new_candidate_read": false,
+  "new_candidate_imported": false,
+  "new_physical_calls": 0,
+  "analytic_decimal_support_cases": 3,
+  "saved_old_anchors": 3,
+  "soft_jchi_numerically_qualified": false,
+  "binder_implementation_or_AD_qualified": false,
+  "scope": "Threshold-centred independent CM reduction/current/flux conventions; separate momentum EOS/entropy roots and prelocked heldout/gross gates",
+  "latest_quota_record": {
+    "utc": "2026-10-17T18:57:18Z",
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "limit": "codex",
+    "window_minutes": 10080,
+    "resetsAt": 1792652325,
+    "used_percent": 91,
+    "identity_confirmed": true
+  },
+  "quota_policy": "stop new calls97; checkpoint99; stoponaccount/window/resetchange/unavailable; neverreset",
+  "no_prior_files_changed": true
+}

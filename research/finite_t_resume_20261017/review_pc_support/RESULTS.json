@@ -1,0 +1,468 @@
+{
+  "status": "ACCEPTED_SELECTED_SOFT_PC_REFERENCE",
+  "created_utc": "2026-10-17T19:18:15.562885+00:00",
+  "checks": [
+    {
+      "name": "author unchanged ASSESSMENT.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged CONVERGENCE_RAW.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged FIRST_CANDIDATE.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged ORIGINAL_FAILURE.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged ORIGINAL_SOURCE_PIN.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged PHASE_JACOBIAN_RAW.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged PRE_LAGUERRE_CONVERGENCE_RAW.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged README.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged REPORT.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged SEMI_INFINITE_RADIAL_RAW.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged UNMAPPED_INCOMING_ENDPOINT_RAW.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged assess.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged conditional_pc.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged phase_jacobian.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/__init__.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/_weak_current.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/_weak_decay.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/_weak_quadrature.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/_weak_spectral_capture.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/_weak_spectral_common.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/_weak_spectral_decay.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/_weak_two_body.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pr55_reference/weak_reference.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pre_incoming_map_candidate.py.txt",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged pre_laguerre_candidate.py.txt",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged reproduce_original.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged run_convergence.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged run_semi_infinite.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "candidate-blind prep unchanged prepare_static.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "candidate-blind prep unchanged LOCK.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "candidate-blind prep unchanged ORACLE_PLAN.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "candidate-blind prep unchanged ANALYTIC_SUPPORT_ANCHORS.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "candidate-blind prep unchanged SAVED_ANCHORS.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author manifest unchanged",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "job0 complete",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "job1 complete",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "job2 complete",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "job3 complete",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle_0.1_coarse_fine log_j",
+      "error": 2.2737367544349055e-12,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "oracle_0.1_coarse_fine log_chi",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "oracle_0.1_vs_frozen_author log_j",
+      "error": 8.640199666880145e-12,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "oracle_0.1_vs_frozen_author log_chi",
+      "error": 5.0022208597636164e-12,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "heldout_0.13_oracle_candidate log_j",
+      "error": 5.456968210652459e-12,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "heldout_0.13_oracle_candidate log_chi",
+      "error": 3.63797880709833e-12,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "oracle0 massshell",
+      "error": 3.519406988061746e-13,
+      "gate": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "oracle0 four",
+      "error": 2.5835782603562492e-14,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle0 unsquared delta",
+      "error": 6.374415137651663e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle0 posterior KMS",
+      "error": 2.3353985412200018e-11,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "oracle0 ordinary underflow retained",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle0 finite log_j",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle0 finite log_chi",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle1 massshell",
+      "error": 4.063416270128073e-13,
+      "gate": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "oracle1 four",
+      "error": 2.895030415683349e-14,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle1 unsquared delta",
+      "error": 6.409925278949216e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle1 posterior KMS",
+      "error": 2.1080248657767697e-11,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "oracle1 ordinary underflow retained",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle1 finite log_j",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle1 finite log_chi",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle2 massshell",
+      "error": 3.519406988061746e-13,
+      "gate": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "oracle2 four",
+      "error": 1.0970481383065824e-14,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle2 unsquared delta",
+      "error": 4.1639884713579104e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle2 posterior KMS",
+      "error": 7.438494264988549e-13,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "oracle2 ordinary underflow retained",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle2 finite log_j",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle2 finite log_chi",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Decimal60 threshold vs oracle",
+      "error": 1.709743457922741e-14,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "unreduced invariant measure coefficient",
+      "error": 0.0,
+      "gate": 1e-17,
+      "passed": true
+    }
+  ],
+  "pass": 67,
+  "fail": 0,
+  "comparisons": [
+    {
+      "test": "oracle_0.1_coarse_fine",
+      "branch": "log_j",
+      "relative_error": 2.2737367544349055e-12
+    },
+    {
+      "test": "oracle_0.1_coarse_fine",
+      "branch": "log_chi",
+      "relative_error": 0.0
+    },
+    {
+      "test": "oracle_0.1_vs_frozen_author",
+      "branch": "log_j",
+      "relative_error": 8.640199666880145e-12
+    },
+    {
+      "test": "oracle_0.1_vs_frozen_author",
+      "branch": "log_chi",
+      "relative_error": 5.0022208597636164e-12
+    },
+    {
+      "test": "heldout_0.13_oracle_candidate",
+      "branch": "log_j",
+      "relative_error": 5.456968210652459e-12
+    },
+    {
+      "test": "heldout_0.13_oracle_candidate",
+      "branch": "log_chi",
+      "relative_error": 3.63797880709833e-12
+    }
+  ],
+  "fresh_integral_calls": 4,
+  "fresh_integral_seconds": 4.708762416848913,
+  "candidate_sha256": "5083e7857f3a9e256f4565b6ba19ce87f572b84abf48a381774f2bb364262e2f",
+  "author_manifest_sha256": "3323579161e95b79d378bfdb0d4692bbb0c281dfa12d0b7d6be65202cbaa9c7c",
+  "scope": {
+    "independent_integrated_incident_energies_MeV": [
+      0.1,
+      0.13
+    ],
+    "author_only_additional_incident_energy_MeV": 0.15,
+    "whole_energy_qualified": false,
+    "uniform_domain_qualified": false,
+    "external_physics_validation": false
+  },
+  "preserved_failures": {
+    "original_qaxis_shell": "4003ee6bdd5b9673a1353f57d4a87f2844f23be25e28507bda1227950c3b78ca",
+    "original_incoming_endpoint": "3882726262b519039ea9fe295f40989d5b4f760debac76b716030c5e4b777cd9"
+  },
+  "quota_guards_UTC": {
+    "job0": "19:16:56 92%",
+    "job1": "19:17:22 93%",
+    "job2": "19:17:26 93%",
+    "job3": "19:17:29 93%"
+  },
+  "all_quota_guards_exact_reset": 1792652325,
+  "same_physical_model": true
+}
