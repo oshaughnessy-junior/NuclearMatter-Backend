@@ -1,0 +1,40 @@
+{
+  "mode": "new",
+  "E": 1.2,
+  "tag": "E120_PANEL",
+  "complete": true,
+  "result": {
+    "E_MeV": 1.2,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 12,
+      "cone": 16,
+      "electron": 16,
+      "phi": 10,
+      "family": "panels",
+      "tail": 70.0,
+      "budget": 85.0
+    },
+    "parent_min_energy_MeV": 1027.031832217411,
+    "parent_min_momentum_MeV": 414.74233561444856,
+    "log_j_s-1": -53.594717997827054,
+    "log_true_chi_s-1": -54.39940008263696,
+    "j_s-1": 5.297972679238955e-24,
+    "true_chi_s-1": 2.369412772715448e-24,
+    "max_shell_relative": 4.440892098500626e-16,
+    "max_lab_energy_scaled": 3.5310929203763315e-16,
+    "max_unsquared_rest_delta_scaled": 1.209993846502954e-16,
+    "literal_current_reciprocity": 7.771561172376096e-16,
+    "KMS_actual_products": 1.2212453270876722e-15,
+    "events": 245760,
+    "seconds": 0.5107845419552177,
+    "radial_domain": "finite parent excess z0..tail"
+  },
+  "seconds": 0.6686152499169111,
+  "candidate_sha256": "148c99c37dc0550ca983b53d86123e25125469b15fd2fde9edc16c169c2ac191"
+}

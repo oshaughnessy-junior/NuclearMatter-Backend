@@ -1,0 +1,40 @@
+{
+  "mode": "new",
+  "E": 1.3,
+  "tag": "E130_SEMI16",
+  "complete": true,
+  "result": {
+    "E_MeV": 1.3,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 16,
+      "cone": 20,
+      "electron": 20,
+      "phi": 14,
+      "family": "laguerre",
+      "tail": 70.0,
+      "budget": 85.0
+    },
+    "parent_min_energy_MeV": 1063.556159853881,
+    "parent_min_momentum_MeV": 498.36585529730013,
+    "log_j_s-1": -72.28178199277569,
+    "log_true_chi_s-1": -73.03646407758558,
+    "j_s-1": 4.059017637111801e-32,
+    "true_chi_s-1": 1.9083879839194994e-32,
+    "max_shell_relative": 4.440892098500626e-16,
+    "max_lab_energy_scaled": 3.3743583367198183e-16,
+    "max_unsquared_rest_delta_scaled": 1.209993846502954e-16,
+    "literal_current_reciprocity": 8.881784197001252e-16,
+    "KMS_actual_products": -1.7208456881689926e-14,
+    "events": 89600,
+    "seconds": 0.13657670910470188,
+    "radial_domain": "semi-infinite"
+  },
+  "seconds": 0.2543225418776274,
+  "candidate_sha256": "148c99c37dc0550ca983b53d86123e25125469b15fd2fde9edc16c169c2ac191"
+}

@@ -1,0 +1,604 @@
+{
+  "status": "ACCEPTED_SELECTED_ALTERNATE_BETA_REFERENCE",
+  "created_utc": "2026-10-17T19:43:59.520023+00:00",
+  "checks": [
+    {
+      "name": "author unchanged ASSESSMENT.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged E120_PANEL.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged E120_SEMI16.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged E120_SEMI24.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged E130_PANEL.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged E130_SEMI16.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged E130_SEMI24.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged OLD_TAIL70.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged OLD_TAIL90.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged ORIGINAL_SOURCE_PIN.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged PHASE_JACOBIAN_RAW.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged PRIOR_BAND_REPORT.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged PRIOR_CONTROL_ASSESSMENT.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged README.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged REPORT.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged assess.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/__init__.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/_weak_current.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/_weak_decay.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/_weak_quadrature.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/_weak_spectral_capture.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/_weak_spectral_common.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/_weak_spectral_decay.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/_weak_two_body.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged beta_pr55_reference/weak_reference.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged conditional_beta.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged phase_jacobian.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author unchanged run_one.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "blindprep unchanged ANALYTIC_SUPPORT.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "blindprep unchanged LOCK.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "blindprep unchanged ORACLE_PLAN.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "blindprep unchanged SAVED_FAILED_GATES.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "blindprep unchanged prepare.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author manifest unchanged",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_moments/conditional.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_moments/hot_moments.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_moments/results.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_moments/hot_spectrum.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_crossed_contract/beta.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_crossed_contract/check_contract.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_capture_oracle/events.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_crossed_thermal/kernel.py",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/REPORT.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/ANALYSIS.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/LOCK.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/SOURCE_PIN.json",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original source unchanged /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_spectral_band_total_closure/REVIEW.md",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "independent_E1.2_lower_higherlog_j",
+      "error": 7.105427357601027e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_E1.2_lower_higherlog_chi",
+      "error": 2.1316282072803233e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_E1.2_authorlog_j",
+      "error": 8.95283847058127e-13,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent_E1.2_authorlog_chi",
+      "error": 8.95283847058127e-13,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "heldout_E1.27_oracle_candidatelog_j",
+      "error": 8.95283847058127e-13,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "heldout_E1.27_oracle_candidatelog_chi",
+      "error": 9.094947017733418e-13,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "oracle0 shell",
+      "error": 1.7763568394002505e-15,
+      "gate": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "oracle0 four",
+      "error": 3.948636093183939e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle0 original unsquared delta",
+      "error": 2.2126283767181226e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle0 posteriorKMS",
+      "error": 1.2989609388114332e-14,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "oracle0 reciprocal",
+      "error": 7.771561172376096e-16,
+      "gate": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "oracle0 separately positive representable",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle1 shell",
+      "error": 3.1086244689504383e-15,
+      "gate": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "oracle1 four",
+      "error": 3.9775787818939877e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle1 original unsquared delta",
+      "error": 2.2130290618521412e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle1 posteriorKMS",
+      "error": 1.2212453270876722e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "oracle1 reciprocal",
+      "error": 7.771561172376096e-16,
+      "gate": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "oracle1 separately positive representable",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "oracle2 shell",
+      "error": 3.1086244689504383e-15,
+      "gate": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "oracle2 four",
+      "error": 4.45955666684242e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle2 original unsquared delta",
+      "error": 2.160095076829121e-16,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "oracle2 posteriorKMS",
+      "error": 2.4424906541753444e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "oracle2 reciprocal",
+      "error": 8.881784197001252e-16,
+      "gate": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "oracle2 separately positive representable",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Decimal60 threshold 1027.031832217411",
+      "error": 1.1546319456101628e-14,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Decimal60 threshold 1052.2094587940524",
+      "error": 1.2989609388114332e-14,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "covariant absolute coefficient",
+      "error": 0.0,
+      "gate": 1e-17,
+      "passed": true
+    }
+  ],
+  "pass": 74,
+  "fail": 0,
+  "comparisons": [
+    {
+      "comparison": "independent_E1.2_lower_higher",
+      "branch": "log_j",
+      "relative_error": 7.105427357601027e-15
+    },
+    {
+      "comparison": "independent_E1.2_lower_higher",
+      "branch": "log_chi",
+      "relative_error": 2.1316282072803233e-14
+    },
+    {
+      "comparison": "independent_E1.2_author",
+      "branch": "log_j",
+      "relative_error": 8.95283847058127e-13
+    },
+    {
+      "comparison": "independent_E1.2_author",
+      "branch": "log_chi",
+      "relative_error": 8.95283847058127e-13
+    },
+    {
+      "comparison": "heldout_E1.27_oracle_candidate",
+      "branch": "log_j",
+      "relative_error": 8.95283847058127e-13
+    },
+    {
+      "comparison": "heldout_E1.27_oracle_candidate",
+      "branch": "log_chi",
+      "relative_error": 9.094947017733418e-13
+    }
+  ],
+  "fresh_calls": 4,
+  "integration_seconds": 1.0246364171616733,
+  "original_failed_local_reproductions": [
+    {
+      "name": "original tail70-to90 j",
+      "error": 0.00022377617918348388,
+      "gate": 3e-06,
+      "passed": false,
+      "classification": "RETAINED ORIGINAL FAIL"
+    },
+    {
+      "name": "original tail70-to90 true_chi",
+      "error": 0.00022377617918348388,
+      "gate": 3e-06,
+      "passed": false,
+      "classification": "RETAINED ORIGINAL FAIL"
+    }
+  ],
+  "prior_12_beta_failures": [
+    {
+      "name": "NEUTRON_DECAY E1.2 isolated_parent_tail90 j",
+      "error": 0.00022377617918348388,
+      "gate": 3e-06,
+      "category": "inner_control",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY E1.2 isolated_parent_tail90 true_chi",
+      "error": 0.00022377617918348388,
+      "gate": 3e-06,
+      "category": "inner_control",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY empty panel412to20 forward0",
+      "error": -1.977787732618628e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY empty panel412to20 forward1",
+      "error": -1.8209768908724924e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY LTE panel412to20 forward0",
+      "error": -1.9174228551771008e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY LTE panel412to20 forward1",
+      "error": -1.7644893922699483e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY LTE panel412to20 backward0",
+      "error": -1.917422858019217e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY LTE panel412to20 backward1",
+      "error": -1.764489395112069e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY common_changed_affinity panel412to20 forward0",
+      "error": -1.924997129325847e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY common_changed_affinity panel412to20 forward1",
+      "error": -1.7715746797874004e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY common_changed_affinity panel412to20 backward0",
+      "error": -1.924997132167963e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY common_changed_affinity panel412to20 backward1",
+      "error": -1.7715746826295212e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    }
+  ],
+  "source_candidate_sha256": "148c99c37dc0550ca983b53d86123e25125469b15fd2fde9edc16c169c2ac191",
+  "source_author_manifest_sha256": "acec26c884203ed396e7d9ff0684a31568f172826a692b50a52fb589380547f6",
+  "same_literal_current_contraction_algebra": true,
+  "independent_phase": "rest-Dalitz energies and original energy-cone delta rather than pair-CM/cone map",
+  "shared_radial_family": "threshold-shifted semi-infinite generalized Laguerre alpha1.5",
+  "whole_energy_qualified": false,
+  "upper_incident_panel_qualified": false,
+  "uniform_domain_qualified": false,
+  "new_independent_current_physics_validation": false,
+  "quota_guards": {
+    "job0": "2026-10-17 19:43:14 UTC 94%",
+    "job1": "2026-10-17 19:43:16 UTC 94%",
+    "job2": "2026-10-17 19:43:17 UTC 94%",
+    "job3": "2026-10-17 19:43:19 UTC 94%"
+  },
+  "all_exact_account_window_reset": 1792652325
+}
