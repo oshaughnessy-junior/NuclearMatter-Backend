@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN private benchmark; independent evolution review pending",
+  "passed": 17,
+  "failed": [],
+  "fresh_complete_source_groups": 5,
+  "source_seconds": [
+    8.597549959085882,
+    8.632173750083894,
+    7.9419271249789745,
+    8.027150542009622,
+    8.00686345808208
+  ],
+  "driver_sha256": "195fc3e0c4b094811bdbd95522a7c293c6dfad8f36ef35fa5a47c832d06b8847",
+  "prelock_sha256": "5f0258786585931887bc51c921f196b9afea3f48533b270a95bd55581b4ecc76",
+  "frozen_binder_unchanged": true,
+  "no_public_ODE": true
+}

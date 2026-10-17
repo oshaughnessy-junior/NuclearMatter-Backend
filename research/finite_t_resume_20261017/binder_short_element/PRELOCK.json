@@ -1,0 +1,73 @@
+{
+  "model": "free-npe-pair-physical-masses-PR51-52-54-no-muons-v1",
+  "initial": {
+    "T": 2.0,
+    "nB": 1e-07,
+    "Ye": 0.3,
+    "photons": "absent",
+    "radiation": "empty"
+  },
+  "duration_s": 0.0002,
+  "rungs": [
+    2,
+    4
+  ],
+  "method": "Explicit Euler in actual (T,Ye), fixed density; no trajectory accuracy claim from two rungs",
+  "max_fresh_source_groups": 6,
+  "planned_unique_groups": 5,
+  "per_group_seconds": 88,
+  "controls": {
+    "EC": {
+      "radial_order": 28,
+      "lepton_order": 48,
+      "polar_order": 12,
+      "azimuth_order": 12,
+      "rest_order": 16,
+      "parent_order": 20,
+      "orient_order": 8,
+      "decay_azimuth_order": 12,
+      "decay_coordinate": "pair",
+      "parent_coordinate": "laguerre",
+      "tail": 60.0,
+      "budget_seconds": 110.0
+    },
+    "PC": {
+      "radial_order": 32,
+      "lepton_order": 52,
+      "polar_order": 12,
+      "azimuth_order": 12,
+      "rest_order": 16,
+      "parent_order": 20,
+      "orient_order": 8,
+      "decay_azimuth_order": 12,
+      "decay_coordinate": "pair",
+      "parent_coordinate": "laguerre",
+      "tail": 60.0,
+      "budget_seconds": 110.0
+    },
+    "NEUTRON_DECAY": {
+      "radial_order": 20,
+      "lepton_order": 32,
+      "polar_order": 8,
+      "azimuth_order": 8,
+      "rest_order": 24,
+      "parent_order": 28,
+      "orient_order": 10,
+      "decay_azimuth_order": 16,
+      "decay_coordinate": "electron",
+      "parent_coordinate": "direct_p",
+      "tail": 80.0,
+      "budget_seconds": 110.0
+    }
+  },
+  "driver_sha256": "195fc3e0c4b094811bdbd95522a7c293c6dfad8f36ef35fa5a47c832d06b8847",
+  "binder_manifest_sha256": "7b40760f63ce34a9633a4f6d95d65724e51d82a7ab57b6649077ea3a47586fbf",
+  "gates": {
+    "energy_defect_over_gross_escaped": 0.02,
+    "lepton_defect_over_gross_emitted": 2e-10,
+    "number_closure_relative": 2e-09,
+    "instant_source_energy_scaled": 2e-08,
+    "entropy_chain_defect_over_integrated_abs": 0.02
+  },
+  "time_error_policy": "Report h versus h/2 differences and ledger errors, without extrapolated certificate; preserve all failures"
+}

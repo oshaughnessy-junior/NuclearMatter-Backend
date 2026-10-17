@@ -1,0 +1,8 @@
+# Resumed archive5: short-element temporal diagnostic
+
+137reviewPASS2EuleraccuracyFAIL underindependentprelocked3e-6 escape-normalizedenergy. Author17ownPASSunder2%preserved. ONLYselectedHeunselfconsistency/endpointagreementaccepted; notEuleraccuracy/order/domain/model/APIcert.12reviewgroups36channelcalls+5authorgroups; allactualrawstages/roots/ledgers/defects preserved. No newscience/import/build/sourcechange/remoteaction byarchiver, winddownexistingtaskonly.
+
+Exactbinder126pins andexplicitPR51/52/54baselineunion resolve archive2 ratherthan copyingbaseline. Samephysicalcurrent/EOS source model. Heunenergy+Ye withfreshEOSinversion comparedtoEulerT+Ye; two rungsnotasymptoticorder. Materialentropydecrease nottotalentropyclaim. No publicODE/fullinventory/longtime/AD/wholephysicsqualification.
+
+Canonicaldedup/originalstoredSHA/deterministicgzip;allpreflight saferestorer rejectsunsafe/corrupt/changedoutputs withoutpartialwrites. Allsourcebytesunchanged. Resourceledgerbackendonly.
+
