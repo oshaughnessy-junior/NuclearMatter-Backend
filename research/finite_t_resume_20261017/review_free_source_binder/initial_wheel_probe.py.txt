@@ -1,0 +1,16 @@
+from pathlib import Path
+from dataclasses import asdict
+import sys,os,json,signal,time
+P=Path(__file__).resolve().parent;sys.dont_write_bytecode=True;sys.path.insert(0,str(P/'wheel_import'));os.chdir('/private/tmp');signal.alarm(89);start=time.monotonic()
+from nmbackend.reference import free_matter as F,weak_reference as W,_free_matter_sources as S
+import nmbackend,numpy,scipy,jax,pytest
+jax.config.update('jax_enable_x64',True)
+s=F.state_density(2,1e-7,.3,photons='absent');source=F.source_moments(s,radiation=W.Radiation.empty(),controls=F.SourceControls.fine());rhs=F.instantaneous_rhs(s,source,baryon_density_dot_fm3_s=2.5e-8)
+ref=json.loads((P.parent/'free_source_binder/source_0.json').read_text());checks=[]
+for label,a,b in [('R',source.proton_number_source.value,ref['R']['value']),('Q',source.neutrino_energy_escape.value,ref['Q']['value']),('Tdot',rhs.temperature_dot_mev_s,ref['rhs']['temperature_dot_mev_s'])]:
+ err=a/b-1;checks.append(dict(name='actual wheel fresh source '+label,error=err,gate=3e-6,passed=bool(abs(err)<=3e-6)))
+origins={m.__name__:m.__file__for m in[nmbackend,F,W,F.L,F.B]}
+checks.append(dict(name='fresh -I real unpacked wheel origins',passed=all(str(P/'wheel_import')in x for x in origins.values())))
+rc=pytest.main([str(P/'cold_tests'),'-q','-p','no:cacheprovider','--junitxml='+str(P/'COLD_TESTS.xml')]);checks.append(dict(name='13unchanged actualwheelcoldregressions',passed=rc==0))
+(P/'WHEEL_RESULTS.json').write_text(json.dumps(dict(checks=checks,passed=sum(x['passed']for x in checks),failed=[x for x in checks if not x['passed']],origins=origins,source=S._payload(source),rhs=asdict(rhs),python=sys.version,numpy=numpy.__version__,scipy=scipy.__version__,jax=jax.__version__,seconds=time.monotonic()-start,scope='No install/dependency resolution/minimum runtime/CI claim'),indent=2)+'\n')
+print('WHEEL',sum(x['passed']for x in checks),'PASS',sum(not x['passed']for x in checks),'FAIL');signal.alarm(0)

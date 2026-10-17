@@ -1,0 +1,789 @@
+{
+  "mode": "direct",
+  "bath": {
+    "T": 1.7,
+    "mu_n": 922.8966933804672,
+    "mu_p": 919.9159864231927,
+    "mu_e": 0.17446745675700603
+  },
+  "results": [
+    {
+      "channel": "EC",
+      "bath": {
+        "T": 1.7,
+        "mu_n": 922.8966933804672,
+        "mu_p": 919.9159864231927,
+        "mu_e": 0.17446745675700603
+      },
+      "radiation": {
+        "mode": "empty",
+        "temperature": null,
+        "mu_nue": null,
+        "mu_antinue": null
+      },
+      "controls": {
+        "radial_order": 28,
+        "lepton_order": 48,
+        "polar_order": 12,
+        "azimuth_order": 12,
+        "rest_order": 16,
+        "parent_order": 20,
+        "orient_order": 8,
+        "decay_azimuth_order": 12,
+        "decay_coordinate": "pair",
+        "parent_coordinate": "laguerre",
+        "tail": 60.0,
+        "budget_seconds": 110.0
+      },
+      "current": {
+        "source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "neutron_mass": 939.56542052,
+        "proton_mass": 938.27208816,
+        "electron_mass": 0.51099895069,
+        "weak_mass": 938.91875434
+      },
+      "forward": [
+        {
+          "value": 1.0048615546063945e-07,
+          "log": -16.113245875547147,
+          "reason": "represented"
+        },
+        {
+          "value": 8.077583441285601e-07,
+          "log": -14.029002902207186,
+          "reason": "represented"
+        },
+        {
+          "value": 9.369544283037681e-07,
+          "log": -13.880631191639125,
+          "reason": "represented"
+        },
+        {
+          "value": 9.454250007595775e-05,
+          "log": -9.266461088312093,
+          "reason": "represented"
+        },
+        {
+          "value": 9.467169616013288e-05,
+          "log": -9.265095481430336,
+          "reason": "represented"
+        },
+        {
+          "value": 8.077583441285601e-07,
+          "log": -14.029002902207186,
+          "reason": "represented"
+        }
+      ],
+      "backward": [
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        }
+      ],
+      "net": [
+        {
+          "value": 1.0048615546063945e-07,
+          "log_abs": -16.113245875547147,
+          "sign": 1
+        },
+        {
+          "value": 8.077583441285601e-07,
+          "log_abs": -14.029002902207186,
+          "sign": 1
+        },
+        {
+          "value": 9.369544283037681e-07,
+          "log_abs": -13.880631191639125,
+          "sign": 1
+        },
+        {
+          "value": 9.454250007595775e-05,
+          "log_abs": -9.266461088312093,
+          "sign": 1
+        },
+        {
+          "value": 9.467169616013288e-05,
+          "log_abs": -9.265095481430336,
+          "sign": 1
+        },
+        {
+          "value": 8.077583441285601e-07,
+          "log_abs": -14.029002902207186,
+          "sign": 1
+        }
+      ],
+      "entropy_production": null,
+      "max_event_kms_error": 0.0,
+      "diagnostics": [
+        [
+          "incoming_kinetic_upper",
+          102.0
+        ],
+        [
+          "lepton_total_upper",
+          103.29333236000002
+        ],
+        [
+          "max_event_energy_residual",
+          5.400124791776761e-13
+        ],
+        [
+          "max_four_residual",
+          5.400124791776761e-13
+        ],
+        [
+          "max_mass_relative",
+          1.0549845039067402e-15
+        ],
+        [
+          "parent_particle_density",
+          2.1600000000000058e-08
+        ],
+        [
+          "points",
+          2322432
+        ]
+      ],
+      "particle_stoichiometry": [
+        [
+          "neutron",
+          1
+        ],
+        [
+          "proton",
+          -1
+        ],
+        [
+          "electron_net",
+          -1
+        ],
+        [
+          "nue",
+          1
+        ]
+      ],
+      "energy_ledger_scaled": -1.0053660777174349e-13,
+      "direct_energy_ledger_scaled": 0.0
+    },
+    {
+      "channel": "PC",
+      "bath": {
+        "T": 1.7,
+        "mu_n": 922.8966933804672,
+        "mu_p": 919.9159864231927,
+        "mu_e": 0.17446745675700603
+      },
+      "radiation": {
+        "mode": "empty",
+        "temperature": null,
+        "mu_nue": null,
+        "mu_antinue": null
+      },
+      "controls": {
+        "radial_order": 32,
+        "lepton_order": 52,
+        "polar_order": 12,
+        "azimuth_order": 12,
+        "rest_order": 16,
+        "parent_order": 20,
+        "orient_order": 8,
+        "decay_azimuth_order": 12,
+        "decay_coordinate": "pair",
+        "parent_coordinate": "laguerre",
+        "tail": 60.0,
+        "budget_seconds": 110.0
+      },
+      "current": {
+        "source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "neutron_mass": 939.56542052,
+        "proton_mass": 938.27208816,
+        "electron_mass": 0.51099895069,
+        "weak_mass": 938.91875434
+      },
+      "forward": [
+        {
+          "value": 4.3159971230917257e-07,
+          "log": -14.655767270130836,
+          "reason": "represented"
+        },
+        {
+          "value": 4.001224570739462e-06,
+          "log": -12.428910101011628,
+          "reason": "represented"
+        },
+        {
+          "value": 3.4469769594336404e-06,
+          "log": -12.578012954689298,
+          "reason": "represented"
+        },
+        {
+          "value": 0.00040607111137235446,
+          "log": -7.808982262536281,
+          "reason": "represented"
+        },
+        {
+          "value": 0.00040662535898366043,
+          "log": -7.807618290333988,
+          "reason": "represented"
+        },
+        {
+          "value": 4.001224570739462e-06,
+          "log": -12.428910101011628,
+          "reason": "represented"
+        }
+      ],
+      "backward": [
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        }
+      ],
+      "net": [
+        {
+          "value": 4.3159971230917257e-07,
+          "log_abs": -14.655767270130836,
+          "sign": 1
+        },
+        {
+          "value": 4.001224570739462e-06,
+          "log_abs": -12.428910101011628,
+          "sign": 1
+        },
+        {
+          "value": 3.4469769594336404e-06,
+          "log_abs": -12.578012954689298,
+          "sign": 1
+        },
+        {
+          "value": 0.00040607111137235446,
+          "log_abs": -7.808982262536281,
+          "sign": 1
+        },
+        {
+          "value": 0.00040662535898366043,
+          "log_abs": -7.807618290333988,
+          "sign": 1
+        },
+        {
+          "value": 4.001224570739462e-06,
+          "log_abs": -12.428910101011628,
+          "sign": 1
+        }
+      ],
+      "entropy_production": null,
+      "max_event_kms_error": 0.0,
+      "diagnostics": [
+        [
+          "incoming_kinetic_upper",
+          102.0
+        ],
+        [
+          "lepton_total_upper",
+          102.51099895069
+        ],
+        [
+          "max_event_energy_residual",
+          5.400124791776761e-13
+        ],
+        [
+          "max_four_residual",
+          5.400124791776761e-13
+        ],
+        [
+          "max_mass_relative",
+          1.0578949304333473e-15
+        ],
+        [
+          "parent_particle_density",
+          5.8399999999999385e-08
+        ],
+        [
+          "points",
+          2875392
+        ]
+      ],
+      "particle_stoichiometry": [
+        [
+          "neutron",
+          -1
+        ],
+        [
+          "proton",
+          1
+        ],
+        [
+          "positron",
+          -1
+        ],
+        [
+          "electron_net",
+          1
+        ],
+        [
+          "antinue",
+          1
+        ]
+      ],
+      "energy_ledger_scaled": -3.5987882831235183e-14,
+      "direct_energy_ledger_scaled": 0.0
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "bath": {
+        "T": 1.7,
+        "mu_n": 922.8966933804672,
+        "mu_p": 919.9159864231927,
+        "mu_e": 0.17446745675700603
+      },
+      "radiation": {
+        "mode": "empty",
+        "temperature": null,
+        "mu_nue": null,
+        "mu_antinue": null
+      },
+      "controls": {
+        "radial_order": 20,
+        "lepton_order": 32,
+        "polar_order": 8,
+        "azimuth_order": 8,
+        "rest_order": 24,
+        "parent_order": 28,
+        "orient_order": 10,
+        "decay_azimuth_order": 16,
+        "decay_coordinate": "electron",
+        "parent_coordinate": "direct_p",
+        "tail": 80.0,
+        "budget_seconds": 110.0
+      },
+      "current": {
+        "source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "neutron_mass": 939.56542052,
+        "proton_mass": 938.27208816,
+        "electron_mass": 0.51099895069,
+        "weak_mass": 938.91875434
+      },
+      "forward": [
+        {
+          "value": 3.6381210503707894e-11,
+          "log": -24.036968669513413,
+          "reason": "represented"
+        },
+        {
+          "value": 1.725238650871123e-11,
+          "log": -24.78307063368934,
+          "reason": "represented"
+        },
+        {
+          "value": 2.9921849718340316e-11,
+          "log": -24.23243214259614,
+          "reason": "represented"
+        },
+        {
+          "value": 3.422820013321003e-08,
+          "log": -17.190215967346518,
+          "reason": "represented"
+        },
+        {
+          "value": 3.427537436943702e-08,
+          "log": -17.188838689035816,
+          "reason": "represented"
+        },
+        {
+          "value": 1.7252386508711352e-11,
+          "log": -24.783070633689334,
+          "reason": "represented"
+        }
+      ],
+      "backward": [
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        }
+      ],
+      "net": [
+        {
+          "value": 3.6381210503707894e-11,
+          "log_abs": -24.036968669513413,
+          "sign": 1
+        },
+        {
+          "value": 1.725238650871123e-11,
+          "log_abs": -24.78307063368934,
+          "sign": 1
+        },
+        {
+          "value": 2.9921849718340316e-11,
+          "log_abs": -24.23243214259614,
+          "sign": 1
+        },
+        {
+          "value": 3.422820013321003e-08,
+          "log_abs": -17.190215967346518,
+          "sign": 1
+        },
+        {
+          "value": 3.427537436943702e-08,
+          "log_abs": -17.188838689035816,
+          "sign": 1
+        },
+        {
+          "value": 1.7252386508711352e-11,
+          "log_abs": -24.783070633689334,
+          "sign": 1
+        }
+      ],
+      "entropy_production": null,
+      "max_event_kms_error": 0.0,
+      "diagnostics": [
+        [
+          "max_event_energy_residual",
+          4.0822900615467006e-13
+        ],
+        [
+          "max_four_residual",
+          4.0822900615467006e-13
+        ],
+        [
+          "parent_particle_density",
+          5.8399999999999034e-08
+        ],
+        [
+          "parent_proper_density",
+          5.824185747953651e-08
+        ],
+        [
+          "points",
+          15482880
+        ],
+        [
+          "rest_neutrino_energy",
+          0.0005048801786060124
+        ],
+        [
+          "rest_rate",
+          0.0010533846209151876
+        ]
+      ],
+      "particle_stoichiometry": [
+        [
+          "neutron",
+          -1
+        ],
+        [
+          "proton",
+          1
+        ],
+        [
+          "electron_net",
+          1
+        ],
+        [
+          "antinue",
+          1
+        ]
+      ],
+      "energy_ledger_scaled": 3.456597280389796e-12,
+      "direct_energy_ledger_scaled": -7.116964491483109e-15
+    }
+  ],
+  "checks": [
+    {
+      "name": "ECforward0new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "ECforward1new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "ECforward2new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "ECforward3new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "ECforward4new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "ECforward5new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "ECbackward0empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "ECbackward1empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "ECbackward2empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "ECbackward3empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "ECbackward4empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "ECbackward5empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "PCforward0new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PCforward1new absolute direct-root log",
+      "error": -1.7763568394002505e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PCforward2new absolute direct-root log",
+      "error": -1.7763568394002505e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PCforward3new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PCforward4new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PCforward5new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PCbackward0empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "PCbackward1empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "PCbackward2empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "PCbackward3empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "PCbackward4empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "PCbackward5empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYforward0new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYforward1new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYforward2new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYforward3new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYforward4new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYforward5new absolute direct-root log",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYbackward0empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYbackward1empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYbackward2empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYbackward3empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYbackward4empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAYbackward5empty inverse",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 36,
+  "failed": [],
+  "seconds": 7.977582207880914,
+  "independence": "Fresh independent momentum chemical roots plus unmodified shared event/current APIs; independent assembly not different physical amplitude"
+}

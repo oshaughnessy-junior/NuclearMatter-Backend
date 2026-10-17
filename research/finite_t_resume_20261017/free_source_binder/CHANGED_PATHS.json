@@ -1,0 +1,25 @@
+{
+  "base": "Explicit prerequisite union in PREREQUISITES.json; not main",
+  "changed": [
+    "README.md",
+    "src/nmbackend/reference/free_matter.py",
+    "src/nmbackend/reference/_free_matter_sources.py",
+    "tests/test_free_matter_reference.py",
+    "tests/test_free_matter_sources.py",
+    "tests/data/free_matter_reference_internal.json",
+    "examples/free_matter_reference.py",
+    "docs/free_matter_reference.md"
+  ],
+  "baseline_files_checked": 86,
+  "unchanged_baseline_files": 85,
+  "hashes": {
+    "README.md": "b1f5299e9ffe1c2579d60d07e4a5b2843761f41854c8c944c963e24451f154a5",
+    "src/nmbackend/reference/free_matter.py": "8541366391867d8c7500deea3759c1c05746c40db3642d93d3d29e85a0242d9f",
+    "src/nmbackend/reference/_free_matter_sources.py": "9b3130d23eb2b8a229cdd1d0dda88df3898f048b069ad8e87d172d49b0320401",
+    "tests/test_free_matter_reference.py": "6a86261b61fe0d91c753943c677954a0b0d0826d23142332bd6b567bc9562624",
+    "tests/test_free_matter_sources.py": "e61cc7b5e64c256f1f7b7184f1bfba40cabb1c5843ac05aeb81aec88304e2c68",
+    "tests/data/free_matter_reference_internal.json": "d426cdc4ae90084065658ca4accc90180cfb73e0ae8af5fdfa616238dc871fdb",
+    "examples/free_matter_reference.py": "b540f01df28f3b7b6d7fcf894f387695b835dc7553debb2ea3a966ab7696f0d7",
+    "docs/free_matter_reference.md": "8720ad6e4fc1b66fd8901bafdb2f0bdee23f47f7a126c1ccc5d36b45f82aadbb"
+  }
+}
