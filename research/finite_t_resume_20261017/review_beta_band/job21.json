@@ -1,0 +1,33 @@
+{
+  "job": {
+    "kind": "oracle",
+    "E": 1.39074118280041,
+    "parent": 24,
+    "rest_nu": 24,
+    "electron": 24,
+    "phi": 12,
+    "node_index": 21,
+    "weight_MeV": 0.006641615822612913,
+    "role": "incident24"
+  },
+  "result": {
+    "log_j": -90.65051208782023,
+    "log_chi": -91.35982358122992,
+    "j": 4.275459713554481e-40,
+    "chi": 2.1034527022477403e-40,
+    "threshold_En": 1099.6295658889562,
+    "events": 165888,
+    "max_shell": 3.219646771412954e-15,
+    "max_four": 3.9663848918744477e-16,
+    "max_unsquared_delta": 2.0669776438913069e-16,
+    "reciprocal_literal": 8.881784197001252e-16,
+    "KMS_posterior": -1.2323475573339238e-14,
+    "seconds": 0.3426540840882808,
+    "radial_domain": "semi-infinite threshold-shifted",
+    "current": "old explicit crossed-contract spinors, not candidate current import",
+    "coordinates": "rest neutrino energy Jacobi; rest electron Dalitz energy; relative azimuth; original conditional lab-energy cone"
+  },
+  "complete": true,
+  "old_spinor_sha256": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+  "old_beta_sha256": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971"
+}
