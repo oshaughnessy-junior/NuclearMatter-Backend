@@ -1,0 +1,434 @@
+{
+  "checks": [
+    {
+      "name": "fresh physical muon density",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent refinement forward number",
+      "error": -9.310367243831053e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison forward number",
+      "error": 2.636269869071839e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement forward electron_energy",
+      "error": -1.6878265229891554e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison forward electron_energy",
+      "error": 1.4383974011877854e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement forward antinue_energy",
+      "error": 6.679846609181084e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison forward antinue_energy",
+      "error": 4.463465597126515e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement forward numu_energy",
+      "error": -1.1937393862293533e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison forward numu_energy",
+      "error": 2.509198182565342e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement forward parent_energy",
+      "error": -9.616864082850896e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison forward parent_energy",
+      "error": 2.627685624645437e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement backward number",
+      "error": -9.31036715501321e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison backward number",
+      "error": 2.636269869071839e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement backward electron_energy",
+      "error": -1.6878265229891554e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison backward electron_energy",
+      "error": 1.4383965130093657e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement backward antinue_energy",
+      "error": 6.679846586976623e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison backward antinue_energy",
+      "error": 4.463464708948095e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement backward numu_energy",
+      "error": -1.1937393862293533e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison backward numu_energy",
+      "error": 2.509198182565342e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement backward parent_energy",
+      "error": -9.616864082850896e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison backward parent_energy",
+      "error": 2.6276851805562274e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement net number",
+      "error": -9.310367088399829e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison net number",
+      "error": 2.6362705352056537e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement net electron_energy",
+      "error": -1.6878265263198244e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison net electron_energy",
+      "error": 1.4383971791431804e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement net antinue_energy",
+      "error": 6.679846542567702e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison net antinue_energy",
+      "error": 4.4634660412157245e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement net numu_energy",
+      "error": -1.193739377347569e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison net numu_energy",
+      "error": 2.5091999589221814e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent refinement net parent_energy",
+      "error": -9.616863994033054e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "absolute author comparison net parent_energy",
+      "error": 2.627686512823857e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent event energy",
+      "error": 4.683846215119712e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "local product chemical affinity",
+      "error": 6.156186671546493e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "parent-electron-radiation independent energy",
+      "error": -4.2024540127232926e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent entropy affinity",
+      "error": 5.773159728050814e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "author matter heat",
+      "error": 2.9760764963526753e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "author total entropy",
+      "error": 2.636274976097752e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "positive entropy sign",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "state": {
+        "T": 3.0,
+        "nB": 8e-05,
+        "Ye": 0.25,
+        "Ymu": 0.015
+      },
+      "bath": {
+        "T": 3.0,
+        "mu_mu": 92.45401004472521,
+        "mu_e": 14.799143077584498
+      },
+      "radiation": {
+        "temperature": 3.0,
+        "mu_anti_e": 8.0,
+        "mu_nu_mu": 68.4548669671407
+      }
+    },
+    {
+      "independent_muon_density": 1.2000000000000016e-06,
+      "independent_antimuon_density": 2.055084893461116e-33
+    },
+    {
+      "independent": {
+        "forward": [
+          0.006748554515961694,
+          0.17605717057289916,
+          0.14358010756288134,
+          0.45742193795119546,
+          0.7770592160869757
+        ],
+        "backward": [
+          0.004523691373813455,
+          0.11801465068332992,
+          0.09624462431135244,
+          0.3066190945051559,
+          0.5208783694998382
+        ],
+        "net": [
+          0.0022248631421482425,
+          0.058042519889569294,
+          0.0473354832515289,
+          0.15080284344603956,
+          0.2561808465871378
+        ],
+        "event_error": 4.566994813641437e-16,
+        "local_affinity_error": 5.21249710061511e-14,
+        "runtime": 8.431939583038911,
+        "order": 24
+      }
+    },
+    {
+      "independent": {
+        "forward": [
+          0.006748555144276962,
+          0.17605720028830038,
+          0.14358009797195104,
+          0.45742199255546034,
+          0.7770592908157116
+        ],
+        "backward": [
+          0.00452369179498577,
+          0.11801467060215903,
+          0.09624461788235962,
+          0.30661913110748923,
+          0.5208784195920079
+        ],
+        "net": [
+          0.0022248633492911877,
+          0.05804252968614142,
+          0.047335480089591465,
+          0.15080286144797095,
+          0.25618087122370375
+        ],
+        "event_error": 4.683846215119712e-16,
+        "local_affinity_error": 6.156186671546493e-14,
+        "runtime": 32.81560029205866,
+        "order": 32
+      }
+    },
+    {
+      "author_fresh": {
+        "forward": {
+          "number": {
+            "value": 0.006748555162067974,
+            "log": -4.998426847073687,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.17605720054154061,
+            "log": -1.7369463336691098,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.14358009861281587,
+            "log": -1.9408622210196058,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.4574219937032228,
+            "log": -0.7821489143710139,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.777059292857579,
+            "log": -0.2522386215419341,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.004523691806911442,
+            "log": -5.39842684707369,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.11801467077191093,
+            "log": -2.136946333669113,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.09624461831194409,
+            "log": -2.340862221019609,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.3066191318768574,
+            "log": -1.1821489143710164,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.5208784209607124,
+            "log": -0.6522386215419367,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": 0.0022248633551565293,
+          "electron_energy": 0.05804252976962963,
+          "antinue_energy": 0.04733548030087178,
+          "numu_energy": 0.1508028618263655,
+          "parent_energy": 0.2561808718968668
+        },
+        "ledgers": {
+          "material_electron_number": 0.0022248633551565293,
+          "material_muon_number": -0.0022248633551565293,
+          "antinue_number": 0.0022248633551565293,
+          "numu_number": 0.0022248633551565293,
+          "material_energy": -0.19813834212723727,
+          "radiation_energy": 0.19813834212723727,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": {
+          "material": -0.008455624754163551,
+          "radiation": 0.009345570096226172,
+          "total": 0.0008899453420626209,
+          "units": "kB fm^-3 s^-1; prescribed FD baths; no grid entropy claim"
+        },
+        "bath": {
+          "T": 3.0,
+          "mu_mu": 92.45401004472521,
+          "mu_e": 14.799143077584498
+        },
+        "radiation": {
+          "temperature": 3.0,
+          "mu_anti_e": 8.0,
+          "mu_nu_mu": 68.4548669671407
+        },
+        "controls": {
+          "parent_order": 32,
+          "pair_order": 40,
+          "pair_angle": 24,
+          "orientation_order": 20,
+          "azimuth_order": 32,
+          "tail": 60.0,
+          "phase": "pair",
+          "electron_blocking": true,
+          "parent_kinetic_upper": 180.0
+        },
+        "max_event_energy_residual": 5.485831686265282e-16,
+        "evaluations": 58982400,
+        "runtime_seconds": 9.84531716699712,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    }
+  ],
+  "all_pass": true
+}

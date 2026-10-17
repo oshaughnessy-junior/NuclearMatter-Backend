@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN DESIGN ONLY for DIFFERENT independent review; no StageB implementation authorized",
+  "utc": "2026-10-16T06:09:37.909123+00:00",
+  "contract_sha256": "a64ce4ab738103f522d9520c42f2807440c4af51bddbf79c317cd8ff1cde3f6e",
+  "manifest_sha256": "46fe58b89fa59fe9b6d25c15dfb34c43ac82b301f8800b181130b313f9f65388",
+  "report_sha256": "3bf3816fdca387f3fded3f7c80dd475340b55851716aa804a854209b889a9cbb",
+  "source_files_unchanged": 95,
+  "saved_spectral_rows": 10,
+  "saved_total_scenario_groups": 3,
+  "saved_nodes_arithmetic_only": 176,
+  "audit_pass": 114,
+  "audit_fail": 0,
+  "new_physical_calls": 0,
+  "proposed_changed_paths": 11,
+  "prerequisite": "StageA repaired selected numerical/physics accepted separately; packaging/CI/minruntime/merge separate",
+  "remaining": [
+    "DIFFERENT design review",
+    "explicit actual implementation commission",
+    "future predata numerical/heldout LOCK",
+    "actual independent spectral/phase/current/convergence/tail/total reconstruction",
+    "packaging/CI/minruntime",
+    "no AD/EOS/RMF/transport/fullinventory claim"
+  ]
+}

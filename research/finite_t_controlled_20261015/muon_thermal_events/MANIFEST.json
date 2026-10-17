@@ -1,0 +1,36 @@
+{
+  "status": "frozen selected author event moments; independent review pending",
+  "qualified_checks": 268,
+  "physical_checks": 221,
+  "unchanged_source_contract_checks": 47,
+  "excluded_coarse_diagnostics": 20,
+  "excluded_failures": 18,
+  "files": {
+    "pilot.py": "10b62c908acd8c5ba25b6e2b6a34f2624a4a5a3e94c4f04d1e52a4adbc8219a5",
+    "initial_pilot.py.txt": "012a2c59421e72e7cb30e7faa3a29d06382b54aa20a4493aee0edcc25e79d87d",
+    "initial_import_failure.json": "d56f477efb9461f649e911ef8fc17a16d8a749a19431f98173be96133b569c34",
+    "results.json": "ee44177829f2ebad2bd02d8d3d9b6428fc2609c52c8846fbb4728a7accc8515e",
+    "RESEARCH_NOTE.md": "a8042ae8c114f0ab222fead9923cc743c8e1967c80c924f40fbda9497a77d5f6",
+    "muon_events.py": "24caed4dcd68b5785b994a89f1a84d253b9fae3c8acf2c1eed2867ef192e4884",
+    "validate.py": "232320a88ded23456003bf98e345c9e044762ab5067df632f0d4a3157018702b",
+    "qualified_results.json": "8a56e3e9cebd860a6342e6b8fbce099680b9e81b150c7878ab0d603d7ff883ed",
+    "pilot.json": "1b5b19eed8feb32fc82e54cb146efbf55bf34f8706d3086dc2c2826e20897c99",
+    "tail_contract_results.json": "01c73c46327a4dfa0201db74f811f9dcc52bad1eef13647ae946b7fe567eb36c",
+    "initial_validation.py.txt": "232320a88ded23456003bf98e345c9e044762ab5067df632f0d4a3157018702b",
+    "initial_refinement_results.json": "ee44177829f2ebad2bd02d8d3d9b6428fc2609c52c8846fbb4728a7accc8515e",
+    "pre_inverse_tail_source.py.txt": "1d316496e4afc6ec5623542205ed6479cec08cf41b392dacaace81176749683e",
+    "qualify.py": "a5c25fe9c5155199c57ff4fb5f0e52ea19daea2b8820de0bd2b702c5dd1387ed",
+    "check_tail_contract.py": "9a26947ef1a5efc31e234c9b46dac27ad334c5d6976b1d5f5c5c2eacf0fea7aa"
+  },
+  "upstream": {
+    "muon_decay_contract/decay.py": "a05e3db13d57ba3e7890fc58aa3e6e57342cea6ced95f2f77efd1c9dac1f441a",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  }
+}

@@ -1,0 +1,1 @@
+Review-only reporting failure: json.dumps rejected numpy.bool in check passed field. All values had been computed but no report written. Preserved initial script, converted bool explicitly, reran unchanged physics/numerics. No author edits.

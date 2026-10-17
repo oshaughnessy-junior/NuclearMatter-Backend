@@ -1,0 +1,30 @@
+{
+  "E_MeV": 0.1,
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "rule": {
+    "radial": 6,
+    "incoming": 8,
+    "outgoing": 8,
+    "phi": 4,
+    "tail": 70.0,
+    "literal": false,
+    "budget": 85.0
+  },
+  "log_j_s-1": -3786.5846069456984,
+  "log_true_chi_s-1": -3787.939289030508,
+  "ordinary_j_s-1": null,
+  "ordinary_true_chi_s-1": null,
+  "threshold_initial_proton_energy_MeV": 8498.883134642389,
+  "threshold_initial_momentum_MeV": 8446.931988887367,
+  "events": 12288,
+  "max_shell_relative": 3.519406988061746e-13,
+  "max_four_conservation_scaled": 2.623735796479441e-14,
+  "max_unsquared_delta_scaled": 4.280536363916075e-16,
+  "KMS_log_residual": -2.928768338961163e-13,
+  "seconds": 0.020984083879739046
+}

@@ -1,0 +1,128 @@
+{
+  "checks": [
+    {
+      "name": "gv_nan",
+      "passed": true,
+      "message": "Boolean charge and finite real gv required"
+    },
+    {
+      "name": "gv_inf",
+      "passed": true,
+      "message": "Boolean charge and finite real gv required"
+    },
+    {
+      "name": "gv_bool",
+      "passed": true,
+      "message": "Boolean charge and finite real gv required"
+    },
+    {
+      "name": "gv_complex",
+      "passed": true,
+      "message": "Boolean charge and finite real gv required"
+    },
+    {
+      "name": "raising_nan",
+      "passed": true,
+      "message": "Boolean charge and finite real gv required"
+    },
+    {
+      "name": "raising_integer",
+      "passed": true,
+      "message": "Boolean charge and finite real gv required"
+    },
+    {
+      "name": "transfer_nan",
+      "passed": true,
+      "message": "Finite three-transfer required"
+    },
+    {
+      "name": "transfer_complex",
+      "passed": true,
+      "message": "Real transfer required"
+    },
+    {
+      "name": "transfer_shape",
+      "passed": true,
+      "message": "Finite three-transfer required"
+    },
+    {
+      "name": "antisym_complex",
+      "passed": true,
+      "message": "Real external momenta required"
+    },
+    {
+      "name": "(False, 0.73, 'seagull') independent MeV^-3 scale",
+      "error": 2.865217476961461e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(False, 0.73, 'pion_flight') independent MeV^-3 scale",
+      "error": 4.2657193563935347e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(False, 0.73, 'total') independent MeV^-3 scale",
+      "error": 2.879739014463344e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(False, 1.37, 'seagull') independent MeV^-3 scale",
+      "error": 1.5893366966984784e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(False, 1.37, 'pion_flight') independent MeV^-3 scale",
+      "error": 2.6454868410116056e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(False, 1.37, 'total') independent MeV^-3 scale",
+      "error": 2.396087694600397e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(True, 0.73, 'seagull') independent MeV^-3 scale",
+      "error": 2.865217476961461e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(True, 0.73, 'pion_flight') independent MeV^-3 scale",
+      "error": 4.2657193563935347e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(True, 0.73, 'total') independent MeV^-3 scale",
+      "error": 2.879739014463344e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(True, 1.37, 'seagull') independent MeV^-3 scale",
+      "error": 1.5893366966984784e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(True, 1.37, 'pion_flight') independent MeV^-3 scale",
+      "error": 2.6454868410116056e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(True, 1.37, 'total') independent MeV^-3 scale",
+      "error": 2.396087694600397e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "passed": 22,
+  "failed": []
+}

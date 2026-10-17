@@ -1,0 +1,484 @@
+{
+  "checks": [
+    {
+      "name": "dilute forward density",
+      "error": 8.659739592076221e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "dilute independent momentum density",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute independent momentum kinetic_energy_density",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute independent momentum pressure",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute independent momentum entropy_density",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute independent momentum Cv",
+      "error": 8.926193117986259e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute Euler thermodynamic identity",
+      "error": 1.6653345369377348e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute Cv FD 0.0001",
+      "error": 3.5221159322418316e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute muT FD 0.0001",
+      "error": 1.7289639411007726e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute Cv FD 5e-05",
+      "error": 5.6128435232949414e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute muT FD 5e-05",
+      "error": 4.146282222262401e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute susceptibility FD",
+      "error": 1.6440095951253397e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute tail/refinement chemical_potential",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute tail/refinement pressure",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute tail/refinement entropy_density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute tail/refinement cv_fixed_density",
+      "error": 1.7763568394002505e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD forward density",
+      "error": 2.5424107263916085e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "warmFD independent momentum density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD independent momentum kinetic_energy_density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD independent momentum pressure",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD independent momentum entropy_density",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD independent momentum Cv",
+      "error": 2.3314683517128287e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD Euler thermodynamic identity",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD Cv FD 0.0001",
+      "error": 6.080181913503679e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmFD muT FD 0.0001",
+      "error": 9.395715311508412e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmFD Cv FD 5e-05",
+      "error": 6.748351877305936e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmFD muT FD 5e-05",
+      "error": 1.0987198036477327e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmFD susceptibility FD",
+      "error": 2.131721466014369e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmFD tail/refinement chemical_potential",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD tail/refinement pressure",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD tail/refinement entropy_density",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmFD tail/refinement cv_fixed_density",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD forward density",
+      "error": 4.440892098500626e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "coldFD independent momentum density",
+      "error": 1.887379141862766e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD independent momentum kinetic_energy_density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD independent momentum pressure",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD independent momentum entropy_density",
+      "error": 1.1235457009206584e-13,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD independent momentum Cv",
+      "error": 5.861977570020827e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD Euler thermodynamic identity",
+      "error": 2.8008961816539113e-10,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD Cv FD 0.0001",
+      "error": 2.115387749745956e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "coldFD muT FD 0.0001",
+      "error": 3.722248830468697e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "coldFD Cv FD 5e-05",
+      "error": 2.075502040010946e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "coldFD muT FD 5e-05",
+      "error": 3.722248830468697e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "coldFD susceptibility FD",
+      "error": 2.6908375527767703e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "coldFD tail/refinement chemical_potential",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD tail/refinement pressure",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD tail/refinement entropy_density",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "coldFD tail/refinement cv_fixed_density",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel forward density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "warmrel independent momentum density",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel independent momentum kinetic_energy_density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel independent momentum pressure",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel independent momentum entropy_density",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel independent momentum Cv",
+      "error": 2.3314683517128287e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel Euler thermodynamic identity",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel Cv FD 0.0001",
+      "error": 2.893907335987933e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmrel muT FD 0.0001",
+      "error": 5.914507713031005e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmrel Cv FD 5e-05",
+      "error": 5.773592715030418e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmrel muT FD 5e-05",
+      "error": 1.3338280990515784e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmrel susceptibility FD",
+      "error": 1.4328398467711168e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warmrel tail/refinement chemical_potential",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel tail/refinement pressure",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel tail/refinement entropy_density",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warmrel tail/refinement cv_fixed_density",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "dilute",
+      "state": {
+        "temperature": 5.0,
+        "mass": 939.56542052,
+        "chemical_potential": 873.592121623421,
+        "kinetic_chemical_potential": -65.97329889657897,
+        "density": 1.0000000000000088e-08,
+        "kinetic_energy_density": 7.54962786989223e-08,
+        "energy_density": 9.471150483899004e-06,
+        "pressure": 5.000001636321818e-08,
+        "entropy_density": 1.570458568055872e-07,
+        "free_energy_density": 8.685921199871068e-06,
+        "cv_fixed_density": 1.5197971280568502e-08,
+        "dn_dmu_fixed_temperature": 1.9999986909434796e-09,
+        "dn_dtemperature_fixed_mu": 2.940915244898323e-08,
+        "dmu_dtemperature_fixed_density": -14.704585849058608,
+        "log_antiparticle_density": -367.857528738792,
+        "antiparticle_density": 1.7438340048565972e-160,
+        "antiparticle_density_representable": true,
+        "log_antiparticle_to_particle_ratio": -349.43684799483964
+      }
+    },
+    {
+      "label": "warmFD",
+      "state": {
+        "temperature": 2.0,
+        "mass": 938.27208816,
+        "chemical_potential": 940.084377757203,
+        "kinetic_chemical_potential": 1.812289597203062,
+        "density": 0.0019999999999999493,
+        "kinetic_energy_density": 0.007548898429075109,
+        "energy_density": 1.8840930747490274,
+        "pressure": 0.005017435631787918,
+        "entropy_density": 0.004470877433228498,
+        "free_energy_density": 1.8751513198825704,
+        "cv_fixed_density": 0.002661137253842519,
+        "dn_dmu_fixed_temperature": 0.0006658480509828171,
+        "dn_dtemperature_fixed_mu": 0.0009016464260426698,
+        "dmu_dtemperature_fixed_density": -1.354132410107389,
+        "log_antiparticle_density": -945.7867146405066,
+        "antiparticle_density": 0.0,
+        "antiparticle_density_representable": false,
+        "log_antiparticle_to_particle_ratio": -939.5721065420844
+      }
+    },
+    {
+      "label": "coldFD",
+      "state": {
+        "temperature": 0.05,
+        "mass": 939.56542052,
+        "chemical_potential": 975.6913609133728,
+        "kinetic_chemical_potential": 36.125940393372844,
+        "density": 0.08000000000000036,
+        "kinetic_energy_density": 1.7433875667940708,
+        "energy_density": 76.90862120839441,
+        "pressure": 1.1467154998855789,
+        "entropy_density": 0.0005567041962844483,
+        "free_energy_density": 76.90859337318459,
+        "cv_fixed_density": 0.0005567021518489254,
+        "dn_dmu_fixed_temperature": 0.0033843565520359875,
+        "dn_dtemperature_fixed_mu": 8.420986705253362e-06,
+        "dmu_dtemperature_fixed_density": -0.0024882090807445806,
+        "log_antiparticle_density": -38317.27925600001,
+        "antiparticle_density": 0.0,
+        "antiparticle_density_representable": false,
+        "log_antiparticle_to_particle_ratio": -38314.7535273557
+      }
+    },
+    {
+      "label": "warmrel",
+      "state": {
+        "temperature": 40.0,
+        "mass": 938.27208816,
+        "chemical_potential": 836.7347577569003,
+        "kinetic_chemical_potential": -101.53733040309965,
+        "density": 0.010000000000000002,
+        "kinetic_energy_density": 0.6390744259526091,
+        "energy_density": 10.02179530755261,
+        "pressure": 0.4052203325863862,
+        "entropy_density": 0.05149170156424981,
+        "free_energy_density": 7.962127244982618,
+        "cv_fixed_density": 0.016385234095919295,
+        "dn_dmu_fixed_temperature": 0.00024364913033372097,
+        "dn_dtemperature_fixed_mu": 0.0010128845492712354,
+        "dmu_dtemperature_fixed_density": -4.157144119020286,
+        "log_antiparticle_density": -46.41578834587186,
+        "antiparticle_density": 6.948310989880912e-21,
+        "antiparticle_density_representable": true,
+        "log_antiparticle_to_particle_ratio": -41.81061815988377
+      }
+    }
+  ],
+  "failures": [],
+  "runtime_seconds": 0.3857195000164211
+}

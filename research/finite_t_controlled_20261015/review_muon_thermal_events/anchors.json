@@ -1,0 +1,342 @@
+{
+  "checks": [
+    {
+      "name": "frozen pilot.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_pilot.py.txt",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_import_failure.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen results.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen RESEARCH_NOTE.md",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen muon_events.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen validate.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen qualified_results.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen pilot.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen tail_contract_results.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_validation.py.txt",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen initial_refinement_results.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen pre_inverse_tail_source.py.txt",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen qualify.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen check_tail_contract.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen muon_decay_contract/decay.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen relativistic_capture_oracle/events.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen relativistic_free_eos/free_baryons.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "frozen thermodynamics/lepton_reference.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "analytic finite mass absolute rest lifetime",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "rest flavor energy sum",
+      "error": -1.5427138835068646e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "independent rest marginal rate",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent rest marginal energy_e",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent rest marginal energy_anti_e",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent rest marginal energy_nu_mu",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent net electron density",
+      "error": -4.5075054799781356e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent neutral charge composition",
+      "error": -4.2521541843143495e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh moving proper lifetime",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh exact Doppler electron_energy",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh exact Doppler antinue_energy",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh exact Doppler numu_energy",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh parent energy",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "reject mixed temperature",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject ambiguous blocking",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolean quadrature",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "inverse tail chemical center",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "all_pass": true,
+  "data": {
+    "rest_independent_marginal": [
+      457089.0316305324,
+      16905099.0285537,
+      14487908.079899443,
+      16902277.432497025
+    ],
+    "rest_analytic_rate": 457089.03163053247,
+    "mu_minus_density": 1.2000000000000016e-06,
+    "mean_m_over_E": 0.9587943914739939,
+    "net_electron_density": 1.99999999999991e-05,
+    "net_muon_density": 1.2000000000000016e-06,
+    "fresh_unblocked": {
+      "forward": {
+        "number": {
+          "value": 0.5259052799179609,
+          "log": -0.6426341586616884,
+          "representable": true,
+          "reason": null
+        },
+        "electron_energy": {
+          "value": 20.286118834264467,
+          "log": 3.0099368508812616,
+          "representable": true,
+          "reason": null
+        },
+        "antinue_energy": {
+          "value": 17.38548969587935,
+          "log": 2.8556359327869845,
+          "representable": true,
+          "reason": null
+        },
+        "numu_energy": {
+          "value": 20.28273291899645,
+          "log": 3.0097699289631126,
+          "representable": true,
+          "reason": null
+        },
+        "parent_energy": {
+          "value": 57.95434144914028,
+          "log": 4.059655484134749,
+          "representable": true,
+          "reason": null
+        }
+      },
+      "backward": {
+        "number": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "exact_zero"
+        },
+        "electron_energy": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "exact_zero"
+        },
+        "antinue_energy": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "exact_zero"
+        },
+        "numu_energy": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "exact_zero"
+        },
+        "parent_energy": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "exact_zero"
+        }
+      },
+      "net": {
+        "number": 0.5259052799179608,
+        "electron_energy": 20.28611883426446,
+        "antinue_energy": 17.385489695879357,
+        "numu_energy": 20.282732918996444,
+        "parent_energy": 57.95434144914026
+      },
+      "ledgers": {
+        "material_electron_number": 0.5259052799179608,
+        "material_muon_number": -0.5259052799179608,
+        "antinue_number": 0.5259052799179608,
+        "numu_number": 0.5259052799179608,
+        "material_energy": -37.6682226148758,
+        "radiation_energy": 37.6682226148758,
+        "electric_charge_rate": 0.0,
+        "Yp_number_rate": 0.0
+      },
+      "entropy": null,
+      "bath": {
+        "T": 3.0,
+        "mu_mu": 92.45401004472521,
+        "mu_e": 14.799143077584498
+      },
+      "radiation": null,
+      "controls": {
+        "parent_order": 20,
+        "pair_order": 28,
+        "pair_angle": 12,
+        "orientation_order": 8,
+        "azimuth_order": 12,
+        "tail": 60.0,
+        "phase": "pair",
+        "electron_blocking": false,
+        "parent_kinetic_upper": 180.0
+      },
+      "max_event_energy_residual": 4.1932765200072893e-16,
+      "evaluations": 1935360,
+      "runtime_seconds": 0.19656758406199515,
+      "units": {
+        "number": "fm^-3 s^-1",
+        "energy": "MeV fm^-3 s^-1"
+      }
+    }
+  }
+}

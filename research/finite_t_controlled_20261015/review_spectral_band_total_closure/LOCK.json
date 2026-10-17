@@ -1,0 +1,186 @@
+{
+  "utc": "2026-10-16T08:18:21.103774+00:00",
+  "status": "STATIC_REVIEW_PREPARATION_ONLY_WAIT_ROOT_FROZEN_HANDOFF",
+  "author_lock_sha256": "cc7a622aa0cd4ea4afdffbbf719a146ff0cb807c49fd61b6b462cb2913685d90",
+  "author_source_pin_sha256": "576a9a2584a730bab076726cb968ac9d0cc696a741876b55bd3a9e86fe082f50",
+  "sourcepins": {
+    "production_weak_spectral_port/CANDIDATE_MANIFEST.json": "dcfbafe85645caa4ac6f2ea1f4cd3a7cb55775d030eddc0c9c5a8c9211a8b216",
+    "production_weak_spectral_port/AUTHOR_REPORT.md": "c090139637e868a5f3a495e75d5601a9a2e97d1386f9f87cc5b99b62ee0403ed",
+    "production_weak_spectral_port/MANIFEST.json": "f90bb7d3ee0bbd0ae6025f68edb8ed14b431a5bbcf7a0d7bcf5fa16c2c5ed78c",
+    "production_weak_spectral_port/LOCK.json": "c051e3c23f290b657b4caad069a34d4ce7ee85a4e535368fb674bd5590ec188a",
+    "production_weak_spectral_port/INDEPENDENT_RECORD_ADMISSION_REPAIR.md": "80483604f6c61efa3b40650591197f739a3a8be4cb05c52311f8471f5c62e793",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/weak_reference.py": "76e569023bcde176086384ffbcdff861d120b6b9ba9cafe84041ceabb598b5f9",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_current.py": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_quadrature.py": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_two_body.py": "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_decay.py": "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_common.py": "572acb57fcca43f9f0a4173c4f7bad5fbd1c99d02f643950b18a05bc504c36d3",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_capture.py": "4384208e51ff0e2b78a1e6587beccbb5f8fe1400f7dd911f5fa90464cbd2e684",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_decay.py": "148142642df36c1d392333ee26b3479c53a523d14764ca67154a6ed664b5cc86",
+    "review_production_weak_spectral_port/REVIEW.md": "89cd023016062705490e1a58dcc88ff1fbd757a11a7cc936e2be7213acf4f096",
+    "review_production_weak_spectral_port/REPAIR_RECHECK.md": "2d760af394f96a523599ce00da6b5492615c2e5750f14141d69d48723866a9fa",
+    "review_production_weak_spectral_port/CHECKPOINT.json": "313b9c52d789e5a07efed74ea80ef81378ad2dadb860019066a0f75466374ff1"
+  },
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "fine_controls": {
+    "lepton_order": 12,
+    "angle_order": 16,
+    "energy_order": 16,
+    "phi_order": 6,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 110.0
+  },
+  "panels_MeV": {
+    "EC": [
+      0.05,
+      2.0,
+      6.0,
+      15.0,
+      30.0,
+      60.0
+    ],
+    "PC": [
+      0.05,
+      2.0,
+      6.0,
+      15.0,
+      30.0,
+      60.0
+    ],
+    "NEUTRON_DECAY": [
+      0.001,
+      0.2,
+      0.5,
+      0.8,
+      1.1,
+      1.4
+    ]
+  },
+  "incident_orders": [
+    12,
+    20
+  ],
+  "radiation": [
+    {
+      "name": "empty",
+      "mode": "empty",
+      "T": null,
+      "mu_nue": null,
+      "mu_antinue": null
+    },
+    {
+      "name": "LTE",
+      "mode": "FD",
+      "T": 2.0,
+      "mu_nue": -2.809364169619812,
+      "mu_antinue": 2.809364169619812
+    },
+    {
+      "name": "common_changed_affinity",
+      "mode": "FD",
+      "T": 2.0,
+      "mu_nue": -3.6093641696198118,
+      "mu_antinue": 2.009364169619812
+    }
+  ],
+  "gates": {
+    "inner_j_and_chi_relative": 3e-06,
+    "incident_panel_FBRQ_relative": 3e-06,
+    "incident_band_FBRQ_relative": 3e-06,
+    "band_vs_fresh_event_positive_FBRQ_relative": 3e-06,
+    "LTE_net_over_positive_gross": 2e-09,
+    "source_Le_energy_entropy_gross": 3e-09
+  },
+  "candidate_manifest": "dcfbafe85645caa4ac6f2ea1f4cd3a7cb55775d030eddc0c9c5a8c9211a8b216",
+  "published_PR55_head": "440094516498eb445ab5de2e6ebf89b361fea212",
+  "mutable_raw_read": false,
+  "scientific_calls": 0,
+  "preregistered_possible_calls": [
+    {
+      "channel": "PC",
+      "energy_MeV": 0.1,
+      "controls": {
+        "lepton_order": 12,
+        "angle_order": 16,
+        "energy_order": 16,
+        "phi_order": 6,
+        "tail": 70.0,
+        "outer_tail": 40.0,
+        "parent_order": 12,
+        "cone_order": 16,
+        "electron_order": 16,
+        "decay_phi_order": 10,
+        "budget_seconds": 110.0
+      },
+      "purpose": "reproduce unresolved shell; preserve actual failure, not substitute zero"
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "energy_MeV": 1.2,
+      "controls": {
+        "lepton_order": 12,
+        "angle_order": 16,
+        "energy_order": 16,
+        "phi_order": 6,
+        "tail": 70.0,
+        "outer_tail": 40.0,
+        "parent_order": 12,
+        "cone_order": 16,
+        "electron_order": 16,
+        "decay_phi_order": 10,
+        "budget_seconds": 110.0
+      },
+      "purpose": "actual fine baseline for unchanged tail-sensitivity witness"
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "energy_MeV": 1.2,
+      "controls": {
+        "lepton_order": 12,
+        "angle_order": 16,
+        "energy_order": 16,
+        "phi_order": 6,
+        "tail": 90.0,
+        "outer_tail": 40.0,
+        "parent_order": 12,
+        "cone_order": 16,
+        "electron_order": 16,
+        "decay_phi_order": 10,
+        "budget_seconds": 110.0
+      },
+      "purpose": "isolated parameter change ALSO resamples parent Gauss map; not pure infinite-tail error"
+    }
+  ],
+  "actual_call_budget_max": 3,
+  "eventual_resources": {
+    "subprocess_timeout": 119,
+    "serial": true,
+    "threads": 1,
+    "fresh_exact_quota_before_each": true
+  },
+  "known_findings_not_new_review_outputs": [
+    {
+      "kind": "PC.1 unresolved shell",
+      "required_classification": "BLOCKED band qualification unless independently rigorous full weighted j AND chi bound; no smallness/zero-fill waiver"
+    },
+    {
+      "kind": "beta1.2 tail70to90",
+      "reported_relative": 0.000223776,
+      "gate": 3e-06,
+      "required_classification": "FAIL sensitivity; coupled higher-order same-tail9.94e-7 does not erase failure"
+    }
+  ],
+  "review_admission": "Only root exact FROZEN manifest/report/source handoff authorizes physical/output comparisons; no mutable outputs read",
+  "whole_moment_qualified": false,
+  "physics_tail_bound_claimed": false
+}

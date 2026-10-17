@@ -1,0 +1,150 @@
+{
+  "written_before_any_candidate_validation": "2026-10-16T05:27:03.962685+00:00",
+  "base": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "fresh_main_confirmed": "2026-10-16T05:27UTC",
+  "instructions": "fresh owning AGENTS absent404 root/src/src-nmbackend/reference/tests; README read",
+  "model": {
+    "MN": 939.56542052,
+    "MP": 938.27208816,
+    "ME": 0.51099895069,
+    "HC": 197.3269804,
+    "HBAR": 6.582119569e-22,
+    "GF": 1.1663785e-11,
+    "Vud": 0.974,
+    "gA": 1.2723,
+    "F2": 3.706,
+    "MV": 840,
+    "MA": 1000,
+    "mpi": 139.57,
+    "Mweak": "(MN+MP)/2",
+    "current_transfer": "qGamma=pp-pn; decayQ=pe+kanti=-qGamma; reciprocal adjoint at opposite argument"
+  },
+  "scope": [
+    "free particle baryons",
+    "e\u00b1 opposite total mu",
+    "no EOS/neutrality factory",
+    "empty or commonT FD independent nue/anti mu",
+    "TOTAL EC PC NEUTRON_DECAY only",
+    "no spectral/opacity/transport/AD"
+  ],
+  "admission": {
+    "T": [
+      1,
+      3
+    ],
+    "baryon_eta": [
+      -100,
+      -5
+    ],
+    "abs_mu_e_over_T_max": 3,
+    "abs_mu_rad_over_T_max": 10,
+    "orders_integer": [
+      4,
+      64
+    ],
+    "tail": [
+      30,
+      100
+    ],
+    "budget_seconds": [
+      0,
+      120
+    ]
+  },
+  "heldouts": [
+    {
+      "T": 1.6,
+      "mu_n": 921.96542052,
+      "mu_p": 921.63208816,
+      "mu_e": 0.672
+    },
+    {
+      "T": 2.7,
+      "mu_n": 912.02542052,
+      "mu_p": 911.8120881599999,
+      "mu_e": -0.81
+    }
+  ],
+  "saved_bath": {
+    "T": 2,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "profiles": {
+    "base": {
+      "EC": [
+        20,
+        32,
+        8,
+        8,
+        8,
+        50
+      ],
+      "PC": [
+        28,
+        44,
+        10,
+        10,
+        10,
+        60
+      ],
+      "NEUTRON_DECAY": [
+        16,
+        20,
+        8,
+        12,
+        "pair",
+        "laguerre",
+        60
+      ]
+    },
+    "fine": {
+      "EC": [
+        28,
+        48,
+        12,
+        12,
+        12,
+        60
+      ],
+      "PC": [
+        32,
+        52,
+        12,
+        12,
+        12,
+        60
+      ],
+      "NEUTRON_DECAY": [
+        24,
+        28,
+        10,
+        16,
+        "electron",
+        "direct_p",
+        80
+      ]
+    }
+  },
+  "isolated_tail": {
+    "EC": 80,
+    "PC": 80,
+    "NEUTRON_DECAY": 100
+  },
+  "gates": {
+    "individual_F_B_number_energy_relative": 3e-06,
+    "source_species_energy_relative": 3e-06,
+    "literal_current_relative": 3e-10,
+    "on_shell_relative": 2e-10,
+    "kms_log_absolute": 2e-09,
+    "source_energy_gross_relative": 3e-09,
+    "source_Le_charge_baryon_gross_relative": 2e-12,
+    "entropy_vs_affinity_relative_or_gross_absolute": 3e-09,
+    "LTE_net_gross": 2e-10,
+    "vacuum_phase_relative": 3e-06,
+    "rest_lifetime_time_dilation_relative": 3e-06
+  },
+  "source_pin_sha256": "0355096d7b1cf43bd3a1c646ee8666cce3f1719c2f25054f5d2c10c5407bc5ae",
+  "rules": "preserve every failed gate; no profile/tolerance retuning; new refinements separately labelled; forward before responses; each process<120s thread1"
+}

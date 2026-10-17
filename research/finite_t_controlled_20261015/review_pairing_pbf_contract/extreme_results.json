@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "name": "reproduce preserved old tinygap failure",
+      "passed": true,
+      "error_message": "math domain error"
+    },
+    {
+      "name": "FB tinygap analytic 1e-280",
+      "passed": true,
+      "error": 2.273736754432579e-13,
+      "tolerance": 3e-10,
+      "classification": "selected"
+    },
+    {
+      "name": "FB tinygap analytic 1e-307",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "classification": "selected"
+    },
+    {
+      "name": "FB tinygap analytic 1e-320",
+      "passed": false,
+      "error": 3.917239779050859e-06,
+      "tolerance": 3e-10,
+      "classification": "new boundary-extension probe"
+    },
+    {
+      "name": "FB tinygap analytic 5e-324",
+      "passed": false,
+      "error": 0.031754163466144236,
+      "tolerance": 3e-10,
+      "classification": "new boundary-extension probe"
+    }
+  ],
+  "passed": 3,
+  "failed": [
+    {
+      "name": "FB tinygap analytic 1e-320",
+      "passed": false,
+      "error": 3.917239779050859e-06,
+      "tolerance": 3e-10,
+      "classification": "new boundary-extension probe"
+    },
+    {
+      "name": "FB tinygap analytic 5e-324",
+      "passed": false,
+      "error": 0.031754163466144236,
+      "tolerance": 3e-10,
+      "classification": "new boundary-extension probe"
+    }
+  ],
+  "rows": [
+    {
+      "v": 1e-280,
+      "logFA": -1289.955006095445,
+      "logFB": -1289.261858914885,
+      "analytic_logFB": -1289.2618589148851,
+      "relative_error": 2.273736754432579e-13,
+      "warnings": [],
+      "status": "selectedpass"
+    },
+    {
+      "v": 1e-307,
+      "logFA": -1414.2946011171234,
+      "logFB": -1413.6014539365635,
+      "analytic_logFB": -1413.6014539365635,
+      "relative_error": 0.0,
+      "warnings": [],
+      "status": "selectedpass"
+    },
+    {
+      "v": 1e-320,
+      "logFA": -1474.1618358007272,
+      "logFB": -1473.4686847029352,
+      "analytic_logFB": -1473.4686886201673,
+      "relative_error": 3.917239779050859e-06,
+      "warnings": [
+        "The maximum number of subdivisions (120) has been achieved.\n  If increasing the limit yields no improvement it is advised to analyze \n  the integrand in order to determine the difficulties.  If the position of a \n  local difficulty can be determined (singularity, discontinuity) one will \n  probably gain from splitting up the interval and calling the integrator \n  on the subranges.  Perhaps a special-purpose integrator should be used."
+      ],
+      "status": "excluded subnormal-input boundary extension; not an author selected benchmark"
+    },
+    {
+      "v": 5e-324,
+      "logFA": -1489.3874978615418,
+      "logFB": -1488.6630902559955,
+      "analytic_logFB": -1488.6943506809819,
+      "relative_error": 0.031754163466144236,
+      "warnings": [],
+      "status": "excluded subnormal-input boundary extension; not an author selected benchmark"
+    }
+  ],
+  "seconds": 0.2530482499860227
+}

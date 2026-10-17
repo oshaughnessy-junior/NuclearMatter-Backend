@@ -1,0 +1,16 @@
+{
+  "verified_primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2006.12051v2",
+      "use": "full current/form factors23-29;phase measure28;particle-hole integral"
+    },
+    {
+      "url": "https://arxiv.org/html/1612.02764v2",
+      "use": "spin normalization/tensor prefactor3-14; no generic CC CVC81"
+    }
+  ],
+  "contract": "relativistic_response_contract/RESEARCH_CONTRACT.md independently reviewed before implementation",
+  "upstream_current": "muon_full_current/current.py vertices reused;vacuumtrace NOT used",
+  "oracle": "relativistic_delta_oracle frozen forwarddata only compared,implementation not used",
+  "scope": "free U0 positiveenergy particlehole tensor/differentialjchi only"
+}

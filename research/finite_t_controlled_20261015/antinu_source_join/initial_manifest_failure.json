@@ -1,0 +1,7 @@
+{
+  "stage": "accepted manifest construction before first successful build",
+  "failure": "FileNotFoundError: review_pc_moments/CHECKPOINT.json; actual frozen review uses MANIFEST.json",
+  "follow_on": "build correctly stopped because ACCEPTED_MANIFEST.json had not been created",
+  "source_preserved": "pre_manifest_name_join.py.txt",
+  "repair": "required path changed to actual reviewed MANIFEST.json; no author or physical source changed"
+}

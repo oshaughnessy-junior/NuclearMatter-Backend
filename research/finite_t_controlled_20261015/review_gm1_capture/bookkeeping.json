@@ -1,0 +1,370 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "mu_q16.json true chi separated from relaxation",
+      "error": -5.551115123125783e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "mu_q16.json independently reported KMS",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "mu_q20.json true chi separated from relaxation",
+      "error": -7.771561172376096e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "mu_q20.json independently reported KMS",
+      "error": 3.774758283725532e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "mu_q24.json true chi separated from relaxation",
+      "error": -7.771561172376096e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "mu_q24.json independently reported KMS",
+      "error": 3.774758283725532e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "mu_cos20.json true chi separated from relaxation",
+      "error": -1.3322676295501878e-15,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "mu_cos20.json independently reported KMS",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "earlier muon q refinement still fails original1e-6",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "later muon q refinement unchanged1e-6",
+      "error": -2.0362128394513235e-07,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "muon coordinate comparison unchanged1e-6",
+      "error": -9.462201902010747e-07,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "physical energy transfer",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "kinetic energy transfer includes potential difference",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "form factor invariant physical",
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "vertex invariant kinetic",
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "bare mass separate",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero field0 common939",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero field0 vectors",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero field1 common939",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero field1 vectors",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "file": "mu_q16.json",
+      "j": 82200055.14495502,
+      "chi": 16495809.79240532,
+      "relaxation": 98695864.93736029
+    },
+    {
+      "file": "mu_q20.json",
+      "j": 82200204.57127006,
+      "chi": 16495839.779101392,
+      "relaxation": 98696044.35037138
+    },
+    {
+      "file": "mu_q24.json",
+      "j": 82200221.30898467,
+      "chi": 16495843.138006153,
+      "relaxation": 98696064.44699074
+    },
+    {
+      "file": "mu_cos20.json",
+      "j": 82200143.52947533,
+      "chi": 16495827.52930632,
+      "relaxation": 98695971.05878152
+    },
+    {
+      "zero_field_evidence": [
+        {
+          "j": {
+            "value": 1540636.554117452,
+            "log": 14.247706235815059,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 65509533.24992234,
+            "log": 17.99770623581506,
+            "representable": true,
+            "reason": null
+          },
+          "relaxation": {
+            "value": 67050169.80403986,
+            "log": 18.020951700187485,
+            "representable": true,
+            "reason": null
+          },
+          "kms_expected": -3.75,
+          "kms_actual": -3.75,
+          "state": {
+            "T": 8.0,
+            "dirac_mass": 939.0,
+            "potential_a": 0.0,
+            "potential_b": 0.0,
+            "total_mu_a": 947.0,
+            "total_mu_b": 932.0,
+            "weak_bare_mass": 939.0
+          },
+          "Enu": 40.0,
+          "lepton_mass": 0.51099895069,
+          "mu_lepton_effective": 25.0,
+          "antineutrino": false,
+          "form_factors": {
+            "gv": 1.0,
+            "ga": 1.2723,
+            "xi": 3.706,
+            "vector_mass": 840.0,
+            "axial_mass": 1000.0,
+            "pion_mass": 139.57,
+            "weak_magnetism": true,
+            "pseudoscalar": true,
+            "q2_dependence": true
+          },
+          "mapping": "physical omega=Enu-El; kinetic w=omega-Ub+Ua; physical-q2 form factors and kinetic-qstar WM/PS vertices; common bare939, no extra Q",
+          "controls": {
+            "lepton_order": 12,
+            "angle_order": 12,
+            "inner_order": 16,
+            "phi_order": 4,
+            "inner_tail": 60.0,
+            "outer_tail": 32.0,
+            "coordinate": "cos",
+            "kernel": "gm1"
+          },
+          "angular_support": "Exact common-positive-mass particle-hole condition q>|w|",
+          "panels_El": [
+            0.51099895069,
+            4.115241506173774,
+            8.0,
+            9.0,
+            14.557620753086887,
+            17.0,
+            19.115241506173774,
+            24.0,
+            25.0,
+            29.557620753086887,
+            32.0,
+            33.0,
+            35.44237924691311,
+            40.0,
+            40.00163199954754,
+            41.0,
+            45.884758493826226,
+            48.0,
+            50.44237924691311,
+            56.0,
+            57.0,
+            60.884758493826226,
+            66.76951698765245,
+            72.0,
+            81.76951698765245,
+            89.0,
+            104.0,
+            108.5390339753049,
+            123.5390339753049,
+            379.5390339753049
+          ],
+          "upper_El": 379.5390339753049,
+          "calls": 4176,
+          "empty_nodes": 0,
+          "empty_energy_nodes": 0,
+          "seconds": 19.712187667144462,
+          "units": "occupation capture j, true absorption chi and relaxation j+chi in s^-1",
+          "scope": "Capture and inverse capture ONLY; no crossed decay, no RPA, external GM1 forward OPEN"
+        },
+        {
+          "j": {
+            "value": 1540635.593666043,
+            "log": 14.247705612402804,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 65509492.41048921,
+            "log": 17.997705612402804,
+            "representable": true,
+            "reason": null
+          },
+          "relaxation": {
+            "value": 67050128.00415532,
+            "log": 18.02095107677523,
+            "representable": true,
+            "reason": null
+          },
+          "kms_expected": -3.75,
+          "kms_actual": -3.75,
+          "state": {
+            "T": 8.0,
+            "dirac_mass": 939.0,
+            "potential_a": 0.0,
+            "potential_b": 0.0,
+            "total_mu_a": 947.0,
+            "total_mu_b": 932.0,
+            "weak_bare_mass": 939.0
+          },
+          "Enu": 40.0,
+          "lepton_mass": 0.51099895069,
+          "mu_lepton_effective": 25.0,
+          "antineutrino": false,
+          "form_factors": {
+            "gv": 1.0,
+            "ga": 1.2723,
+            "xi": 3.706,
+            "vector_mass": 840.0,
+            "axial_mass": 1000.0,
+            "pion_mass": 139.57,
+            "weak_magnetism": true,
+            "pseudoscalar": true,
+            "q2_dependence": true
+          },
+          "mapping": "physical omega=Enu-El; kinetic w=omega-Ub+Ua; physical-q2 form factors and kinetic-qstar WM/PS vertices; common bare939, no extra Q",
+          "controls": {
+            "lepton_order": 24,
+            "angle_order": 24,
+            "inner_order": 16,
+            "phi_order": 4,
+            "inner_tail": 60.0,
+            "outer_tail": 32.0,
+            "coordinate": "q",
+            "kernel": "free_zero_field"
+          },
+          "angular_support": "Exact common-positive-mass particle-hole condition q>|w|",
+          "panels_El": [
+            0.51099895069,
+            4.115241506173774,
+            8.0,
+            9.0,
+            14.557620753086887,
+            17.0,
+            19.115241506173774,
+            24.0,
+            25.0,
+            29.557620753086887,
+            32.0,
+            33.0,
+            35.44237924691311,
+            40.0,
+            40.00163199954754,
+            41.0,
+            45.884758493826226,
+            48.0,
+            50.44237924691311,
+            56.0,
+            57.0,
+            60.884758493826226,
+            66.76951698765245,
+            72.0,
+            81.76951698765245,
+            89.0,
+            104.0,
+            108.5390339753049,
+            123.5390339753049,
+            379.5390339753049
+          ],
+          "upper_El": 379.5390339753049,
+          "calls": 16704,
+          "empty_nodes": 0,
+          "empty_energy_nodes": 0,
+          "seconds": 74.53233737498522,
+          "units": "occupation capture j, true absorption chi and relaxation j+chi in s^-1",
+          "scope": "Capture and inverse capture ONLY; no crossed decay, no RPA, external GM1 forward OPEN"
+        }
+      ],
+      "mapping_probe": {
+        "ordered_total_state": {
+          "T": 8,
+          "dirac_mass": 568.5572415829281,
+          "potential_a": 338.0682785735156,
+          "potential_b": 282.54875402213236,
+          "total_mu_a": 1000.1139607177219,
+          "total_mu_b": 890.2455022016085,
+          "weak_bare_mass": 939.0
+        },
+        "physical_omega": -140.0,
+        "kinetic_omega": -84.48047544861674,
+        "q": 195.75423743061643,
+        "physical_q2": -18719.721472042147,
+        "kinetic_qstar2": -31182.77074001781,
+        "prescription": "Guo: physicalq\u00b2 form factors; kineticq* WM/PSvertices; bareMweak independent ofmD",
+        "physical_current_scope": "Phenomenological Hartree free-quasiparticle ansatz, noRPA/vertexconservation reconstruction"
+      },
+      "muon_coarse_relative": -1.8178338583307863e-06,
+      "muon_fine_relative": -2.0362128394513235e-07,
+      "muon_coordinate_relative": -9.462201902010747e-07
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "commands": [
+    "/Users/rossma/miniconda3/envs/junior_tools/bin/python outputs/nmb-finite-t-20261015/pairing_pbf_contract/check_contract.py",
+    "/Users/rossma/miniconda3/envs/junior_tools/bin/python outputs/nmb-finite-t-20261015/pairing_pbf_contract/check_alternate_integral.py",
+    "/Users/rossma/miniconda3/envs/junior_tools/bin/python outputs/nmb-finite-t-20261015/pairing_pbf_contract/endpoint_probe.py",
+    "/Users/rossma/miniconda3/envs/junior_tools/bin/python outputs/nmb-finite-t-20261015/pairing_pbf_contract/fortran_probe.py",
+    "/Users/rossma/miniconda3/bin/python outputs/nmb-finite-t-20261015/pairing_pbf_contract/normalization_anchor.py"
+  ],
+  "max_experiment_seconds": 120,
+  "no_installs": true,
+  "no_production_changes": true
+}

@@ -1,0 +1,198 @@
+{
+  "checks": [
+    {
+      "name": "R",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Q",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Tdot",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    }
+  ],
+  "passed": 3,
+  "failed": [],
+  "origins": {
+    "nmbackend": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/__init__.py",
+    "nmbackend.reference.free_matter": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/free_matter.py",
+    "nmbackend.reference.weak_reference": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/weak_reference.py"
+  },
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "nmbackend_version": "0.0.1",
+  "numpy": "2.3.5",
+  "scipy": "1.15.2",
+  "jax": "0.10.1",
+  "source_state": {
+    "temperature_mev": 2.0,
+    "baryon_density_fm3": 1e-07,
+    "Ye": 0.3,
+    "photons": "absent",
+    "neutron": {
+      "temperature": 2.0,
+      "mass": 939.56542052,
+      "chemical_potential": 919.8287578100662,
+      "kinetic_chemical_potential": -19.73666270993374,
+      "particle_density": 6.999999999999877e-08,
+      "kinetic_energy_density": 2.1055950732222924e-07,
+      "energy_density": 6.598013894372107e-05,
+      "pressure": 1.4000127913834665e-07,
+      "entropy_density": 8.660635880779546e-07,
+      "free_energy_density": 6.424801176756517e-05,
+      "cv_fixed_particle_density": 1.0555650416858379e-07,
+      "dn_dmu_fixed_temperature": 3.499936044283608e-08,
+      "dn_dtemperature_fixed_mu": 3.9802468257801e-07,
+      "dmu_dtemperature_fixed_particle_density": -11.372341595444235
+    },
+    "proton": {
+      "temperature": 2.0,
+      "mass": 938.27208816,
+      "chemical_potential": 916.8449303084382,
+      "kinetic_chemical_potential": -21.427157851561788,
+      "particle_density": 3.00000000000003e-08,
+      "kinetic_energy_density": 9.023964651475466e-08,
+      "energy_density": 2.8238402291315037e-05,
+      "pressure": 6.000023542792126e-08,
+      "entropy_density": 3.965273087447683e-07,
+      "free_energy_density": 2.74453476738255e-05,
+      "cv_fixed_particle_density": 4.523894800630404e-08,
+      "dn_dmu_fixed_temperature": 1.4999882286989275e-08,
+      "dn_dtemperature_fixed_mu": 1.832622459848081e-07,
+      "dmu_dtemperature_fixed_particle_density": -12.217578943520635
+    },
+    "electron": {
+      "temperature": 2.0,
+      "chemical_potential": 0.17446333200826458,
+      "mass": 0.51099895069,
+      "net_density": 2.9999999999999984e-08,
+      "particle_density": 2.0342863678432727e-07,
+      "antiparticle_density": 1.7342863678432727e-07,
+      "energy_density": 2.3941492019342745e-06,
+      "pressure": 7.908453734948194e-07,
+      "entropy_density": 1.5898803377344247e-06,
+      "free_energy_density": -7.856114735345714e-07,
+      "cv_fixed_net_density": 4.776150759539608e-06,
+      "dn_dmu_fixed_temperature": 1.7222345217073018e-07,
+      "dn_dtemperature_fixed_mu": 3.0272896310705266e-08,
+      "dmu_dtemperature_fixed_net_density": -0.17577685227616296
+    },
+    "muons_absent": true,
+    "model": "free-npe-pair-physical-masses-PR51-52-54-no-muons-v1",
+    "eos_controls": {
+      "rtol": 2e-12,
+      "tail": 60.0
+    },
+    "energy_density": 9.661269043697039e-05,
+    "pressure": 9.908468880610873e-07,
+    "free_energy_density": 9.09077479678561e-05,
+    "entropy_density": 2.8524712345571476e-06,
+    "cv_fixed_nB_Ye": 4.926946211714496e-06,
+    "denergy_dYe_fixed_nB_T": -7.673357689146609e-08,
+    "denergy_dnB_fixed_T_Ye": 942.3432402702803,
+    "h_n": 942.5734410009547,
+    "h_p": 941.2800881954795,
+    "h_e": 0.5260170365605905,
+    "photon_energy_density": 0.0,
+    "photon_pressure": 0.0,
+    "photon_entropy_density": 0.0,
+    "photon_cv": 0.0,
+    "anti_bounds": [
+      {
+        "species": "neutron",
+        "log_density_upper_bound": -936.3035101315536,
+        "log_fraction_upper_bound": -919.8287395366565,
+        "fraction_limit": 1e-08,
+        "meaning": "Omitted equilibrium FD antiparticle density <= spin2 Maxwell-Boltzmann bound; not added to EOS"
+      },
+      {
+        "species": "proton",
+        "log_density_upper_bound": -934.1669909161242,
+        "log_fraction_upper_bound": -916.8449224608399,
+        "fraction_limit": 1e-08,
+        "meaning": "Omitted equilibrium FD antiparticle density <= spin2 Maxwell-Boltzmann bound; not added to EOS"
+      }
+    ],
+    "provenance": [
+      [
+        "nmbackend.constants",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/constants.py",
+        "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317"
+      ],
+      [
+        "nmbackend.reference.finite_t_leptons",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/finite_t_leptons.py",
+        "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719"
+      ],
+      [
+        "nmbackend.reference.finite_t_baryons",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/finite_t_baryons.py",
+        "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b"
+      ],
+      [
+        "nmbackend.reference.weak_reference",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/weak_reference.py",
+        "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172"
+      ],
+      [
+        "nmbackend.reference._weak_current",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/_weak_current.py",
+        "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc"
+      ],
+      [
+        "nmbackend.reference._weak_quadrature",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/_weak_quadrature.py",
+        "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69"
+      ],
+      [
+        "nmbackend.reference._weak_two_body",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/_weak_two_body.py",
+        "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366"
+      ],
+      [
+        "nmbackend.reference._weak_decay",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/_weak_decay.py",
+        "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc"
+      ],
+      [
+        "free_matter.py",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/free_matter.py",
+        "8541366391867d8c7500deea3759c1c05746c40db3642d93d3d29e85a0242d9f"
+      ],
+      [
+        "_free_matter_sources.py",
+        "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/_free_matter_sources.py",
+        "9b3130d23eb2b8a229cdd1d0dda88df3898f048b069ad8e87d172d49b0320401"
+      ]
+    ]
+  },
+  "source_identity": "415aa51acc3abe4571c2644393f8ab9ae0aaa69c4c672c2f3fed1637cb139d41",
+  "R": {
+    "value": 7.864758338386145e-07,
+    "log_abs": -14.055703841126604,
+    "sign": 1
+  },
+  "Q": {
+    "value": 1.5155020638488609e-05,
+    "log_abs": -11.097178685628407,
+    "sign": 1
+  },
+  "rhs": {
+    "temperature_dot_mev_s": -2.782499683617574,
+    "Ye_dot_s": 7.864758338386145,
+    "baryon_density_dot_fm3_s": 2.5e-08,
+    "material_entropy_per_baryon_dot_s": -64.72761805315271,
+    "energy_work_density_source": 2.440088433125787e-05,
+    "state_identity": "3cb679523f7f97fb03325fbf693505e064aee133dfd72c56609cc2ac0e053f2d",
+    "source_identity": "415aa51acc3abe4571c2644393f8ab9ae0aaa69c4c672c2f3fed1637cb139d41"
+  },
+  "seconds": 7.848098957911134,
+  "qualification": "Offline wheel built with existing backend, unpacked/imported in fresh process from /private/tmp; not a clean dependency installation/minimum-version test"
+}

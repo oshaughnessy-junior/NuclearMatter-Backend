@@ -1,0 +1,56 @@
+{
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "checks": 327,
+  "files_sha256": {
+    "initial_pinned_composition_only.py": "2b0ddce78116624cebb1e21db449aec3b1beb3f549a3be0a51297a63154e770d",
+    "pinned_compare.py": "47f9186bdb6f258c82eddf5579f9fd521f7d86dd8c3f30ed6de28cdb6560b8e4",
+    "SOURCES.json": "45125f8c8cdc2e7c4bf2a73dccaa80fedadd18e832fc29397cd6ecc87896f034",
+    "pinned_results.json": "e33142cc58a98881b06429b798f50a39b24b23c0f905068d327ff9237582bde2",
+    "make_figure.py": "db25e2acda0079922d9bea70bad11ddd132ed9f1b8a770f95df2c825fc0bdba5",
+    "initial_pinned_composition_only_results.json": "c5c4d957af5d30a36cf42fcbaf872b001598730fcf1e1ea0c379ec0a2fd15d67",
+    "initial_tuple_report_partial.json": "c2ef0f8a372a4ce86dca805027eb0395f0de920383dde55556601a3e3ec9692a",
+    "initial_tuple_report_failure.py": "680b0c249cce93b3eff5e9e3f463fc1d549206841c6d94d3c8d018d220ea6be5",
+    "cold_beta.py": "040a52a1b1b787445a2adb4c13fa6742de0643d55908af9fe707e5d57b76042d",
+    "results.json": "4e8289fe7c43bab1a4b951c1cfbfe38f9625ef346445fbfd2733476a2a3e9aa9",
+    "RESEARCH_NOTE.md": "b2e0dafc0eb1c5ca178ad4f91ae8396c2836c1d749abc326857462f975e2e2e8",
+    "initial_before_full_warm_provenance.py": "7b84fae05de8da4537368b2ab7f64615110b01570db5e01cc78930ccfab86280",
+    "initial_tuple_report_failure.txt": "9afe3f2e51c7e496a4d5da05947bd1edf017db0b65fe0505567852cb1f6b05a9",
+    "check_surface_momenta.py": "06177ca561839f5291cbc633656d415e0009dd6ed5235842b5eac3b5890f7e5d",
+    "surface_results.json": "473dc52fa943f56c3a1c0880489c10f640a9c4b9cbca1cc7d9cb2ffbeb567b0c",
+    "cold_beta_thresholds.pdf": "2a1e5da9d5e1ea33a70dc42db325c30958703879e3e4602bf1dcdd03f6be693e",
+    "study.py": "1f672e4c008ae5a05e3529b5a7549ba0104ab8c1beefc778f556ff61e73025a5",
+    "cold_beta_thresholds.png": "cb1c72df11aace25440ce8da793c29c630f44d79792c2b82f6a1adba502a28b3",
+    "initial_before_full_warm_provenance.json": "572893b3fa4c13760d330e3eb33c81941b3cc51c647d6cb95a974c6379394616",
+    "source_snapshot/leptons.py": "369daa890f3ddc12587ff89e043ce43e60c0bc232057e87e9ba003bef2e1b0f5"
+  },
+  "physical_sources": {
+    "gm1_beta_thresholds/cold_beta.py": "040a52a1b1b787445a2adb4c13fa6742de0643d55908af9fe707e5d57b76042d",
+    "gm1_beta_thresholds/study.py": "1f672e4c008ae5a05e3529b5a7549ba0104ab8c1beefc778f556ff61e73025a5",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "rmf_reference/source_snapshot/rmft.py": "4a717efc9ae79895876e2529c2d2f0325cd5adfb36251bf3c60ea1eac0cc377c",
+    "rmf_reference/source_snapshot/constants.py": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317",
+    "gm1_beta_thresholds/source_snapshot/leptons.py": "369daa890f3ddc12587ff89e043ce43e60c0bc232057e87e9ba003bef2e1b0f5",
+    "gm1_differential_response/adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9"
+  },
+  "base_environment": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+    "executable": "/Users/rossma/miniconda3/bin/python",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+  },
+  "pinned_comparison_environment": {
+    "python": "3.12.12 conda-forge",
+    "executable": "/Users/rossma/miniconda3/envs/junior_tools/bin/python",
+    "jax": "0.10.1",
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "jax_enable_x64": true
+  },
+  "scope": "Cold common939GM1 beta onset geometry only; warmfixedcompositionpreps, norates/widths"
+}

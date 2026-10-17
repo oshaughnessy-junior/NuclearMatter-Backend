@@ -1,0 +1,29 @@
+{
+  "status": "author_frozen_contract_independent_review_required",
+  "utc": "2026-10-15T15:42:25.243985+00:00",
+  "checks": 30,
+  "all_passed": true,
+  "runtime_seconds": 4.008995207957923,
+  "quota_used_percent": 9,
+  "quota_reset": 1792652325,
+  "implemented": "kinematic/KMS/NRnormalization/diluteMaxwellJuttner target witnesses;NOT finiteT tensor",
+  "open_gates": [
+    "independent derivation review",
+    "free tensor implementation with timelike/spacelike exact support",
+    "independent fullphase versus tensor integration",
+    "inverse/crossed and multiflavor moments",
+    "GM1 explicitq/qstar andweakbaremass mapping/externalforwardgate"
+  ],
+  "sha256": {
+    "RESEARCH_CONTRACT.md": "b0d87b151dc643da11e5f988af41a2b97e7a4339392428f5b295bc1aaf0d2a8f",
+    "SOURCES.json": "0e7b2e6375e03e8978b3a4fd31a750eae4e476cb0b21528793a994bc5d3095cd",
+    "probes.py": "1c4fb91653adb78a89930b3c79294c595c4f2a7e7d161f39712a498e044a5fcd",
+    "results.json": "7c74f68962c0de046f669dc59f63bfc0d6a088fccf713bf621d20446d8df6c4d"
+  },
+  "upstream_sha256": {
+    "relativistic_response_contract/probes.py": "1c4fb91653adb78a89930b3c79294c595c4f2a7e7d161f39712a498e044a5fcd",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c"
+  }
+}

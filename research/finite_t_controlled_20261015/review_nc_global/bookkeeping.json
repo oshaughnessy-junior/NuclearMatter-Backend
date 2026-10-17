@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "isotropic one-helicity DOS from solid angle",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "directpositive event scale vs halftriangle sum forward",
+      "error": 1.1109530706487902e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "directpositive event scale vs halftriangle sum reverse",
+      "error": 1.1111705244815084e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "finite-number FD entropy chemical sign",
+      "error": 3.5403080977878357e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "derived_DOS": 6.5934216306906245e-09,
+  "scope": "Measure/gross-event/FD entropy bookkeeping; does not add physical quadrature"
+}

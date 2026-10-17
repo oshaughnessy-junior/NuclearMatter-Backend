@@ -1,0 +1,5 @@
+{
+  "exception": "TypeError: Object of type bool is not JSON serializable",
+  "cause": "NumPy bool pair-density checks in extra metadata audit; physical state results already complete and unaffected.",
+  "resolution": "Cast stored pass flags to native bool before JSON reporting."
+}

@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "manual value",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "complex mu",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "complex pressure",
+      "error": -8.881784197001252e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "complex entropy",
+      "error": -4.336808689942018e-19,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "complex/FD Hessian",
+      "error": 1.3808379608077003e-09,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "complex/FD Hessian",
+      "error": 3.3403386920322397e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "Euler",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "entropy derivative Cv",
+      "error": 1.3800072196090696e-12,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "manual value",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "complex mu",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "complex pressure",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "complex entropy",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "complex/FD Hessian",
+      "error": 1.1571934052142174e-09,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "complex/FD Hessian",
+      "error": 2.8619696005243835e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "Euler",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "entropy derivative Cv",
+      "error": 7.386202760528704e-12,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "manual value",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "complex mu",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "complex pressure",
+      "error": -8.881784197001252e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "complex entropy",
+      "error": 6.938893903907228e-18,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "complex/FD Hessian",
+      "error": 1.1105033310999471e-09,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "complex/FD Hessian",
+      "error": 2.779431976899372e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "Euler",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "entropy derivative Cv",
+      "error": 3.13959969133748e-12,
+      "tolerance": 2e-07,
+      "passed": true
+    }
+  ],
+  "meaning": "structural potential identities, not independent physical EOS validation"
+}

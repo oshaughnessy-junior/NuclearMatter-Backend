@@ -1,0 +1,349 @@
+{
+  "checks": [
+    {
+      "name": "savedforwardstagepassed",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('EC', 'number')",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('EC', 'neutrino_energy')",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('EC', 'electron_energy')",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('EC', 'proton_energy')",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('EC', 'neutron_energy')",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('EC', 'material_energy_loss')",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independentrapidity allowedanchor ('EC', 0)",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independentrapidity allowedanchor ('EC', 1)",
+      "error": 8.881784197001252e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('PC', 0)",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('PC', 1)",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('PC', 2)",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('PC', 3)",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('PC', 4)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "savedlamb1absolute spinorphase ('PC', 5)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independentrapidity allowedanchor ('PC', 0)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independentrapidity allowedanchor ('PC', 1)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact BASELINE_FORWARD.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact CHECKPOINT.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact LOCK.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact PRE_DATA_ANCHOR.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact RESEARCH_NOTE.md",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact comparison.csv",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact current_controls.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact current_controls.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_scalar_profile0.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_scalar_profile0.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_scalar_profile0.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_scalar_profile1.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_scalar_profile1.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_scalar_profile1.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_spinor_profile0.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_spinor_profile0.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda1_spinor_profile0.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda2_scalar_profile0.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda2_scalar_profile0.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda2_scalar_profile0.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda2_scalar_profile1.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda2_scalar_profile1.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda2_scalar_profile1.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda4_scalar_profile0.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda4_scalar_profile0.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda4_scalar_profile0.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda4_scalar_profile1.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda4_scalar_profile1.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda4_scalar_profile1.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda8_scalar_profile0.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda8_scalar_profile0.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda8_scalar_profile0.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda8_scalar_profile1.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda8_scalar_profile1.stderr",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact lambda8_scalar_profile1.stdout",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact partial.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact point_current.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact study.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "frozenmanifestartifact worker.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 57,
+  "failed": [],
+  "scope": "Savedbaselinefullspinorphase andartifact audit, NOTnewfullspinorphasererun. IndepfreshWeyl/currentandnewprofile evidence separate inresults.json."
+}

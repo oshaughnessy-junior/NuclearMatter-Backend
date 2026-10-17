@@ -1,0 +1,79 @@
+{
+  "status": "quotaidentityhold no newexperiments",
+  "time_utc": "2026-10-16T00:32:39.527200+00:00",
+  "baseline": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "used_initial": 2,
+    "reset": 1792652325
+  },
+  "observed": {
+    "used_percent": 22,
+    "reset": 1792652326
+  },
+  "stop": "fine3 interrupted withSIGINT exit130 afterlaunch; no middle refinement or isolationrun started",
+  "completed": [
+    {
+      "file": "total_coarse_0.json",
+      "rows": 32,
+      "qualified": true
+    },
+    {
+      "file": "total_coarse_0_partial.json",
+      "rows": 32,
+      "qualified": false
+    },
+    {
+      "file": "total_fine_0.json",
+      "rows": 16,
+      "qualified": true
+    },
+    {
+      "file": "total_fine_0_partial.json",
+      "rows": 16,
+      "qualified": false
+    },
+    {
+      "file": "total_fine_1.json",
+      "rows": 16,
+      "qualified": true
+    },
+    {
+      "file": "total_fine_1_partial.json",
+      "rows": 16,
+      "qualified": false
+    },
+    {
+      "file": "total_fine_2.json",
+      "rows": 16,
+      "qualified": true
+    },
+    {
+      "file": "total_fine_2_partial.json",
+      "rows": 16,
+      "qualified": false
+    },
+    {
+      "file": "total_fine_3_partial.json",
+      "rows": 5,
+      "qualified": false
+    }
+  ],
+  "source_sha": "5fbc8fc21fc6b3b26bf43331ebe04b31bf66145b1f7bf51c977dfa47e5f78b0b",
+  "global_total": "incomplete unqualified; no assembledfineclaim",
+  "local_evidence": "25absoluteanchorPASS+23selectedspectrumPASS+17guardPASS; 32nodecoarsenumber preliminaryFAIL1.106e-5vs3e-6; allraw retained",
+  "followup": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "used_percent": 22,
+    "reset": 1792652325,
+    "window_minutes": 10080,
+    "status": "baselinevalue restored; rootnotified, holdretained pendingwindowidentity decision"
+  },
+  "resolution": {
+    "status": "baselineidentity established bytwo consecutiveexact followupreads, thenstrictprelaunchassertion",
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "reset": 1792652325,
+    "window_minutes": 10080,
+    "used_percent": 22,
+    "action": "resumeonlymissing11fine3nodes; preserveinterrupted5rowssnapshot; noresetcredit/baselinechange"
+  }
+}

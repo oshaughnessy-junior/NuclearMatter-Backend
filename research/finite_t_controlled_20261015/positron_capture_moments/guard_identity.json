@@ -1,0 +1,167 @@
+{
+  "checks": [
+    {
+      "name": "valid branch unchanged ('empty', 'forward', 'number')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'forward', 'neutrino_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'forward', 'positron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'forward', 'proton_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'forward', 'neutron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'forward', 'material_energy_loss')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'backward', 'number')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'backward', 'neutrino_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'backward', 'positron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'backward', 'proton_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'backward', 'neutron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('empty', 'backward', 'material_energy_loss')",
+      "passed": true
+    },
+    {
+      "name": "valid net unchanged empty",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'forward', 'number')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'forward', 'neutrino_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'forward', 'positron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'forward', 'proton_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'forward', 'neutron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'forward', 'material_energy_loss')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'backward', 'number')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'backward', 'neutrino_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'backward', 'positron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'backward', 'proton_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'backward', 'neutron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('LTE', 'backward', 'material_energy_loss')",
+      "passed": true
+    },
+    {
+      "name": "valid net unchanged LTE",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'forward', 'number')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'forward', 'neutrino_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'forward', 'positron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'forward', 'proton_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'forward', 'neutron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'forward', 'material_energy_loss')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'backward', 'number')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'backward', 'neutrino_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'backward', 'positron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'backward', 'proton_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'backward', 'neutron_energy')",
+      "passed": true
+    },
+    {
+      "name": "valid branch unchanged ('noneq', 'backward', 'material_energy_loss')",
+      "passed": true
+    },
+    {
+      "name": "valid net unchanged noneq",
+      "passed": true
+    },
+    {
+      "name": "forward density unchanged",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "seconds": 1.7882748330011964,
+  "meaning": "only rejects an empty scenario list; unchanged valid numerical core, not an accuracy replay"
+}

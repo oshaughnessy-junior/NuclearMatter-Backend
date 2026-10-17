@@ -1,0 +1,132 @@
+[
+  {
+    "channel": "EC",
+    "E": 2,
+    "saved_error": {
+      "j": 6.687983500339706e-13,
+      "true_chi": 6.687983500339706e-13
+    },
+    "refinement": {
+      "j": 1.4593863905778331e-09,
+      "true_chi": 1.4593863905778331e-09
+    },
+    "passed": true
+  },
+  {
+    "channel": "EC",
+    "E": 5,
+    "saved_error": {
+      "j": 2.664535259100372e-15,
+      "true_chi": 2.664535259100372e-15
+    },
+    "refinement": {
+      "j": 5.622169396703373e-13,
+      "true_chi": 5.622169396703373e-13
+    },
+    "passed": true
+  },
+  {
+    "channel": "EC",
+    "E": 10,
+    "saved_error": {
+      "j": 1.911981684106738e-11,
+      "true_chi": 1.911981684106738e-11
+    },
+    "refinement": {
+      "j": 5.415703442724794e-10,
+      "true_chi": 5.415707883616895e-10
+    },
+    "passed": true
+  },
+  {
+    "channel": "PC",
+    "E": 2.0,
+    "saved_error": {
+      "j": 2.6645352591003792e-15,
+      "true_chi": 2.6645352591003792e-15
+    },
+    "refinement": {
+      "j": 1.437534535956372e-10,
+      "true_chi": 1.437534535956372e-10
+    },
+    "passed": true
+  },
+  {
+    "channel": "PC",
+    "E": 5.0,
+    "saved_error": {
+      "j": 8.881784197001256e-16,
+      "true_chi": 8.881784197001256e-16
+    },
+    "refinement": {
+      "j": 4.786482321720497e-11,
+      "true_chi": 4.786482321720497e-11
+    },
+    "passed": true
+  },
+  {
+    "channel": "PC",
+    "E": 10.0,
+    "saved_error": {
+      "j": 1.1723955140040966e-13,
+      "true_chi": 1.1723955140040966e-13
+    },
+    "refinement": {
+      "j": 6.299192276918419e-10,
+      "true_chi": 6.299192276918419e-10
+    },
+    "passed": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 0.2,
+    "saved_error": {
+      "j": 3.5527136788004946e-15,
+      "true_chi": 7.105427357600977e-15
+    },
+    "refinement": {
+      "j": 1.7763568394002662e-14,
+      "true_chi": 2.1316282072803233e-14
+    },
+    "passed": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 0.42,
+    "saved_error": {
+      "j": 0.0,
+      "true_chi": 0.0
+    },
+    "refinement": {
+      "j": 1.957189965632043e-11,
+      "true_chi": 1.957545236999916e-11
+    },
+    "passed": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 0.5,
+    "saved_error": {
+      "j": 0.0,
+      "true_chi": 0.0
+    },
+    "refinement": {
+      "j": 2.374989094249932e-11,
+      "true_chi": 2.3746338228820602e-11
+    },
+    "passed": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 0.8,
+    "saved_error": {
+      "j": 3.5527136788004946e-15,
+      "true_chi": 0.0
+    },
+    "refinement": {
+      "j": 4.227970853364886e-09,
+      "true_chi": 4.227963747937558e-09
+    },
+    "passed": true
+  }
+]

@@ -1,0 +1,326 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "FD momentum 2.0 0.3 neutron density",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "FD momentum 2.0 0.3 proton density",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "FD momentum 2.0 0.3 electron charge",
+      "error": 1.4432899320127035e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "FD momentum 2.0 0.3 total u",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "FD momentum 2.0043814072169996 0.29489199675584404 neutron density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "FD momentum 2.0043814072169996 0.29489199675584404 proton density",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "FD momentum 2.0043814072169996 0.29489199675584404 electron charge",
+      "error": 2.220446049250313e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "FD momentum 2.0043814072169996 0.29489199675584404 total u",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent endpoint energy+escaped",
+      "error": 4.178718631549803e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent endpoint charge+escaped",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "2 row0 source T state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "2 row0 source Y state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "2 row0 Euler energy ordering",
+      "error": 2.636779683484747e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "2 row0 Euler lepton ordering",
+      "error": 2.0383000842727483e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "2 row1 source T state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "2 row1 source Y state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "2 row1 Euler energy ordering",
+      "error": 8.81239525796218e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "2 row1 Euler lepton ordering",
+      "error": 8.673617379884035e-18,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "2 reconstructed energy counter",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "2 reconstructed lepton counter",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 row0 source T state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "4 row0 source Y state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "4 row0 Euler energy ordering",
+      "error": 1.3183898417423734e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 row0 Euler lepton ordering",
+      "error": 1.7564075194265172e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 row1 source T state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "4 row1 source Y state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "4 row1 Euler energy ordering",
+      "error": 6.210310043996969e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 row1 Euler lepton ordering",
+      "error": 1.2793585635328952e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 row2 source T state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "4 row2 source Y state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "4 row2 Euler energy ordering",
+      "error": 3.400058012914542e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 row2 Euler lepton ordering",
+      "error": 5.204170427930421e-18,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 row3 source T state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "4 row3 source Y state",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "4 row3 Euler energy ordering",
+      "error": 6.522560269672795e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 row3 Euler lepton ordering",
+      "error": 1.7564075194265172e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 reconstructed energy counter",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "4 reconstructed lepton counter",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source0 lepton sign/DOS normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source0 energy sign/normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source1 lepton sign/DOS normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source1 energy sign/normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source2 lepton sign/DOS normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source2 energy sign/normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source3 lepton sign/DOS normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source3 energy sign/normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source4 lepton sign/DOS normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "raw source4 energy sign/normalization",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    }
+  ],
+  "raw": {
+    "independent_endpoint": {
+      "species": {
+        "neutron": {
+          "density": 7.051080032441557e-05,
+          "energy": 0.0003051459140157056
+        },
+        "proton": {
+          "density": 2.9489199675584496e-05,
+          "energy": 8.900375964048294e-05
+        }
+      },
+      "electron_charge": 2.948919967558434e-05,
+      "electron_energy": 0.0004474817959074589
+    }
+  },
+  "runtime_seconds": 0.5145400420296937,
+  "source_sha256": {
+    "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "fd_fluid_element/qualify_source.py": "71c9b25e184fce5a6296a9daa67c986b52f9ea10e3fe224c82635b9ec9390c83",
+    "fd_fluid_element/short_evolution.py": "ca6babcaf1fb2e49d24fadb5f2c1606dc6528139b0183294ba8e221084670ab6",
+    "fd_fluid_element/source_qualification.json": "8b8cf64d11ac0f1fa774e13981e32e82ac1ba459d9450d11db04eb3aa01b0451",
+    "fd_fluid_element/short_evolution_results.json": "f58fd8654bc204ab78465ddd9e34cb442462d7bdcdf06a1cf323b8fb4b0b8831"
+  },
+  "end_source_sha256": {
+    "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "fd_fluid_element/qualify_source.py": "71c9b25e184fce5a6296a9daa67c986b52f9ea10e3fe224c82635b9ec9390c83",
+    "fd_fluid_element/short_evolution.py": "ca6babcaf1fb2e49d24fadb5f2c1606dc6528139b0183294ba8e221084670ab6",
+    "fd_fluid_element/source_qualification.json": "8b8cf64d11ac0f1fa774e13981e32e82ac1ba459d9450d11db04eb3aa01b0451",
+    "fd_fluid_element/short_evolution_results.json": "f58fd8654bc204ab78465ddd9e34cb442462d7bdcdf06a1cf323b8fb4b0b8831"
+  },
+  "source_quadrature_status": "NOT_QUALIFIED: original88sprobe stopped during last heldout integral; unsaved integral arrays cannot serve as evidence",
+  "scope": "Independent EOS momentum quadrature, charge and recorded raw-panel/source ordering/energy-lepton ledgers only; no new physical source quadrature claim or temporal-order certificate"
+}

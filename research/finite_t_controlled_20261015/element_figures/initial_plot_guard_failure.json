@@ -1,0 +1,5 @@
+{
+  "stage": "before plotting",
+  "failure": "failed fields are empty lists, not integer zero; asserted ==0",
+  "repair": "check empty/false failed collections directly; no source data or calculation changed"
+}

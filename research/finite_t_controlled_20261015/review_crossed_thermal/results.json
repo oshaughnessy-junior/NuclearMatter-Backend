@@ -1,0 +1,599 @@
+{
+  "checks": [
+    {
+      "name": "independent_two_delta_roots_j",
+      "error": 2.5224267119486737e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_radial_refinement_j",
+      "error": 1.2789769243680985e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "kernel_energy_refinement_j",
+      "error": 1.243449787580098e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_two_delta_roots_chi",
+      "error": 1.136868377216225e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_radial_refinement_chi",
+      "error": 1.2789769243680985e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "kernel_energy_refinement_chi",
+      "error": 1.2789769243680985e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "original_mass_shell_relative",
+      "error": 1.0022352787114032e-14,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit_decay_inverse_reciprocity",
+      "error": 1.2212453270876722e-15,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "original_mass_shell_relative",
+      "error": 1.0022352787114032e-14,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit_decay_inverse_reciprocity",
+      "error": 1.5543122344752192e-15,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "total_mu_anti_KMS",
+      "error": 3.552713678800501e-15,
+      "limit": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "independent_two_delta_roots_j",
+      "error": 2.469136006766043e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_radial_refinement_j",
+      "error": 5.382361223384208e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "kernel_energy_refinement_j",
+      "error": 7.105427357601027e-15,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_two_delta_roots_chi",
+      "error": 3.9079850466797877e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_radial_refinement_chi",
+      "error": 5.400124791778219e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "kernel_energy_refinement_chi",
+      "error": 7.105427357601027e-15,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "original_mass_shell_relative",
+      "error": 1.3187306298834252e-15,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit_decay_inverse_reciprocity",
+      "error": 6.661338147750939e-16,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "original_mass_shell_relative",
+      "error": 1.5824767558601103e-15,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit_decay_inverse_reciprocity",
+      "error": 8.881784197001252e-16,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "total_mu_anti_KMS",
+      "error": 1.7763568394002505e-15,
+      "limit": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "independent_two_delta_roots_j",
+      "error": 5.684341886079186e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_radial_refinement_j",
+      "error": 6.394884621840697e-14,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "kernel_energy_refinement_j",
+      "error": 2.088995643112875e-11,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_two_delta_roots_chi",
+      "error": 6.394884621838857e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent_radial_refinement_chi",
+      "error": 5.68434188608064e-14,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "kernel_energy_refinement_chi",
+      "error": 2.0897061858486203e-11,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "original_mass_shell_relative",
+      "error": 3.6924457636735906e-15,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit_decay_inverse_reciprocity",
+      "error": 1.1102230246251565e-15,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "original_mass_shell_relative",
+      "error": 3.956191889650276e-15,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit_decay_inverse_reciprocity",
+      "error": 1.5543122344752192e-15,
+      "limit": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "total_mu_anti_KMS",
+      "error": 3.1086244689504383e-15,
+      "limit": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "reported_selected_checks",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "underflow_finite_log_original_delta_j",
+      "error": 1.2789769243681803e-13,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "underflow_finite_log_original_delta_chi",
+      "error": 0.0,
+      "limit": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "frozen_upstream_SHA_relativistic_tensor/tensor.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_upstream_SHA_muon_full_current/current.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_upstream_SHA_muon_vacuum/vacuum_cc.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_upstream_SHA_relativistic_free_eos/free_baryons.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_upstream_SHA_thermodynamics/lepton_reference.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_upstream_SHA_relativistic_crossed_contract/beta.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_upstream_SHA_relativistic_crossed_contract/results.json",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_upstream_SHA_relativistic_capture_oracle/events.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_oracles.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_pilot.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_initial_pilot.py.txt",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_kernel.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_initial_Qrest_coarse_validate.py.txt",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_initial_pilot_failure.json",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_initial_Qrest_coarse_failure.json",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_results.json",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_RESEARCH_NOTE.md",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_validate.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_event_spectrum_results.json",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_pilot.json",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen_author_SHA_event_spectrum.py",
+      "error": 0.0,
+      "limit": 0.0,
+      "passed": true
+    },
+    {
+      "name": "one_helicity_DOS_per_neutron",
+      "error": 2.1018742302203464e-12,
+      "limit": 3e-10,
+      "passed": true
+    }
+  ],
+  "passed": 58,
+  "failed": 0,
+  "bath": {
+    "T": 0.045,
+    "mu_n": 938.9042460474684,
+    "mu_p": 937.5870569017924,
+    "mu_e": 0.32639052470123836
+  },
+  "material": {
+    "T": 0.045,
+    "nB": 3e-12,
+    "Ye": 0.37,
+    "neutron": {
+      "temperature": 0.045,
+      "mass": 939.56542052,
+      "chemical_potential": 938.9042460474684,
+      "kinetic_chemical_potential": -0.6611744725315702,
+      "density": 1.890000000003301e-12,
+      "kinetic_energy_density": 1.2758264668818694e-13,
+      "energy_density": 1.7759062274325895e-09,
+      "pressure": 8.505000625320769e-14,
+      "entropy_density": 3.2494497911738776e-11,
+      "free_energy_density": 1.7744439750265611e-09,
+      "cv_fixed_density": 2.8353393235308274e-12,
+      "dn_dmu_fixed_temperature": 4.1999993824213367e-11,
+      "dn_dtemperature_fixed_mu": 6.800998551336905e-10,
+      "dmu_dtemperature_fixed_density": -16.192856074697968,
+      "log_antiparticle_density": -41756.072046249516,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -41729.07760196266
+    },
+    "proton": {
+      "temperature": 0.045,
+      "mass": 938.27208816,
+      "chemical_potential": 937.5870569017924,
+      "kinetic_chemical_potential": -0.685031258207573,
+      "density": 1.1099999999978417e-12,
+      "kinetic_energy_density": 7.492949482738036e-14,
+      "energy_density": 1.0415569473504023e-09,
+      "pressure": 4.995000216118842e-14,
+      "entropy_density": 1.9672537635499926e-11,
+      "free_energy_density": 1.0406716831568049e-09,
+      "cv_fixed_density": 1.6651995851954182e-12,
+      "dn_dmu_fixed_temperature": 2.4666664532015862e-11,
+      "dn_dtemperature_fixed_mu": 4.1250080118130735e-10,
+      "dmu_dtemperature_fixed_density": -16.72300690050355,
+      "log_antiparticle_density": -41698.06252331595,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -41670.53586221534
+    },
+    "electron": {
+      "temperature": 0.045,
+      "chemical_potential": 0.32639052470123836,
+      "mass": 0.51099895069,
+      "net_density": 1.1100000000000007e-12,
+      "particle_density": 1.1100005593405934e-12,
+      "antiparticle_density": 5.593405930044719e-19,
+      "energy_density": 6.499259877896408e-13,
+      "pressure": 5.008433128326587e-14,
+      "entropy_density": 7.504818592322938e-12,
+      "free_energy_density": 3.122091511351086e-13,
+      "cv_fixed_net_density": 1.9838749307363955e-12,
+      "dn_dmu_fixed_temperature": 2.4534833927085784e-11,
+      "dn_dtemperature_fixed_mu": 1.4139457901891005e-10,
+      "dmu_dtemperature_fixed_net_density": -5.763013494980877
+    },
+    "muons": "absent"
+  },
+  "rows": [
+    {
+      "inputs": {
+        "Enu": 0.27,
+        "Ee": 1.023,
+        "cosine": 0.15
+      },
+      "independent_runs": [
+        {
+          "j": -8.861253895126179,
+          "chi": -24.879001027899072,
+          "max_shell_absolute": 8.847564458847046e-09,
+          "max_reciprocity": 1.2212453270876722e-15,
+          "root_evaluations": 192,
+          "invariant": 0.7417550481122318,
+          "Estar": 1409.5329794820493,
+          "pstar": 1051.8691500502412,
+          "order": 12,
+          "prefactor": "GF\u00b2Vud\u00b2 pe/(256pi\u00b3 Enu hbar), full spin sums and phi average; no target or neutrino spin average"
+        },
+        {
+          "j": -8.861253895126051,
+          "chi": -24.879001027898944,
+          "max_shell_absolute": 8.847564458847046e-09,
+          "max_reciprocity": 1.5543122344752192e-15,
+          "root_evaluations": 320,
+          "invariant": 0.7417550481122318,
+          "Estar": 1409.5329794820493,
+          "pstar": 1051.8691500502412,
+          "order": 20,
+          "prefactor": "GF\u00b2Vud\u00b2 pe/(256pi\u00b3 Enu hbar), full spin sums and phi average; no target or neutrino spin average"
+        }
+      ],
+      "kernel_j": {
+        "value": 0.00014177717894798335,
+        "log": -8.861253895125799,
+        "representable": true,
+        "reason": null
+      },
+      "kernel_chi": {
+        "value": 1.5674263315992398e-11,
+        "log": -24.87900102789883,
+        "representable": true,
+        "reason": null
+      },
+      "above_rest_endpoint": false
+    },
+    {
+      "inputs": {
+        "Enu": 0.43,
+        "Ee": 0.863,
+        "cosine": -0.4
+      },
+      "independent_runs": [
+        {
+          "j": -8.840195859173523,
+          "chi": -21.30238743639086,
+          "max_shell_absolute": 1.1641532182693481e-09,
+          "max_reciprocity": 6.661338147750939e-16,
+          "root_evaluations": 192,
+          "invariant": 1.2425343244449947,
+          "Estar": 1088.8341002357424,
+          "pstar": 552.4537866790779,
+          "order": 12,
+          "prefactor": "GF\u00b2Vud\u00b2 pe/(256pi\u00b3 Enu hbar), full spin sums and phi average; no target or neutrino spin average"
+        },
+        {
+          "j": -8.840195859174061,
+          "chi": -21.3023874363914,
+          "max_shell_absolute": 1.3969838619232178e-09,
+          "max_reciprocity": 8.881784197001252e-16,
+          "root_evaluations": 320,
+          "invariant": 1.2425343244449947,
+          "Estar": 1088.8341002357424,
+          "pstar": 552.4537866790779,
+          "order": 20,
+          "prefactor": "GF\u00b2Vud\u00b2 pe/(256pi\u00b3 Enu hbar), full spin sums and phi average; no target or neutrino spin average"
+        }
+      ],
+      "kernel_j": {
+        "value": 0.0001447943845966797,
+        "log": -8.840195859174308,
+        "representable": true,
+        "reason": null
+      },
+      "kernel_chi": {
+        "value": 5.603903976696851e-10,
+        "log": -21.30238743639179,
+        "representable": true,
+        "reason": null
+      },
+      "above_rest_endpoint": false
+    },
+    {
+      "inputs": {
+        "Enu": 0.82,
+        "Ee": 0.526,
+        "cosine": 0.85
+      },
+      "independent_runs": [
+        {
+          "j": -48.7486585371018,
+          "chi": -52.54418344765253,
+          "max_shell_absolute": 3.259629011154175e-09,
+          "max_reciprocity": 1.1102230246251565e-15,
+          "root_evaluations": 192,
+          "invariant": 0.9498946927429516,
+          "Estar": 1245.4621506157628,
+          "pstar": 819.0369083236202,
+          "order": 12,
+          "prefactor": "GF\u00b2Vud\u00b2 pe/(256pi\u00b3 Enu hbar), full spin sums and phi average; no target or neutrino spin average"
+        },
+        {
+          "j": -48.74865853710173,
+          "chi": -52.54418344765247,
+          "max_shell_absolute": 3.4924596548080444e-09,
+          "max_reciprocity": 1.5543122344752192e-15,
+          "root_evaluations": 320,
+          "invariant": 0.9498946927429516,
+          "Estar": 1245.4621506157628,
+          "pstar": 819.0369083236202,
+          "order": 20,
+          "prefactor": "GF\u00b2Vud\u00b2 pe/(256pi\u00b3 Enu hbar), full spin sums and phi average; no target or neutrino spin average"
+        }
+      ],
+      "kernel_j": {
+        "value": 6.741035234593989e-22,
+        "log": -48.7486585371023,
+        "representable": true,
+        "reason": null
+      },
+      "kernel_chi": {
+        "value": 1.5147852673759324e-23,
+        "log": -52.54418344765311,
+        "representable": true,
+        "reason": null
+      },
+      "above_rest_endpoint": true
+    }
+  ],
+  "rest_endpoint": 0.7820077025790402,
+  "underflow": {
+    "bath": {
+      "T": 0.045,
+      "mu_n": 938.9042460474684,
+      "mu_p": 937.5870569017924,
+      "mu_e": -1000.0
+    },
+    "kernel_j": {
+      "value": 0.0001417772057789315,
+      "log": -8.861253705878518,
+      "representable": true,
+      "reason": null
+    },
+    "kernel_chi": {
+      "value": null,
+      "log": -22254.354345832013,
+      "representable": false,
+      "reason": "underflow"
+    },
+    "independent_logs": {
+      "j": -8.861253705878646,
+      "chi": -22254.354345832013,
+      "max_shell_absolute": 8.847564458847046e-09,
+      "max_reciprocity": 1.5543122344752192e-15,
+      "root_evaluations": 320,
+      "invariant": 0.7417550481122318,
+      "Estar": 1409.5329794820493,
+      "pstar": 1051.8691500502412,
+      "order": 20,
+      "prefactor": "GF\u00b2Vud\u00b2 pe/(256pi\u00b3 Enu hbar), full spin sums and phi average; no target or neutrino spin average"
+    },
+    "scope": "Prescribed nonneutral representation test, not matched EOS"
+  },
+  "selected_spectrum_per_neutron": 0.001409158342281915,
+  "seconds": 1.6191894591320306,
+  "scope": "Fresh dilute npe differential and above-rest-endpoint probes; no total-energy-integrated lifetime or generic spectral domain certificate"
+}

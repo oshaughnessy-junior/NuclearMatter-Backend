@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN ACCEPTED selected coefficient/API scope; whole-energy OPEN",
+  "review_sha256": "89cd023016062705490e1a58dcc88ff1fbd757a11a7cc936e2be7213acf4f096",
+  "repair_review_sha256": "2d760af394f96a523599ce00da6b5492615c2e5750f14141d69d48723866a9fa",
+  "manifest_sha256": "9899fb490605039de0731f6dccf54451fd7ca4ef373aad298db6b338cf861096",
+  "initial_review_sha256": "dd920e94bf5ed10dd1da10122fdf86fbadde2576d5677c26ed7dddaf6eac36ab",
+  "initial_counts": {
+    "passed": 221,
+    "failed": 4,
+    "distinct_findings": 2
+  },
+  "repair_counts": {
+    "passed": 254,
+    "failed": 0
+  },
+  "repaired_candidate_manifest": "dcfbafe85645caa4ac6f2ea1f4cd3a7cb55775d030eddc0c9c5a8c9211a8b216",
+  "quota_time": "2026-10-16T07:48:26Z",
+  "used_percent": 29,
+  "baseline_identity_confirmed": true,
+  "no_candidate_edits": true,
+  "whole_moment_qualified": false
+}

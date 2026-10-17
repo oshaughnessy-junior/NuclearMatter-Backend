@@ -1,0 +1,52 @@
+{
+  "status": "FROZEN accepted selected pair source with excluded printedEq17anchor",
+  "checks": 351,
+  "counts": {
+    "results.json": 102,
+    "fd_results.json": 100,
+    "limits_source_results.json": 33,
+    "final_audit_results.json": 31,
+    "angle_refinement.json": 65,
+    "azimuth_results.json": 20
+  },
+  "files": {
+    "final_audit_results.json": "98bd71623d7e58a55aafc0414906d28b78e55e4fe2e5b15ae5bfc4aeacdbe44a",
+    "fd_probe.py": "943a3b5c4f9ef9662272a61f4eac177073a93d8d8db21a327b5a6ce40206e54d",
+    "angle_refinement.json": "de80ef566c2d1af8b6fa23213a2d4996a5f033d4d3612510a5e6cfe561ebb71d",
+    "refine_fd_angle.py": "13f72dc07cde94f56a82602cd7c2f7b664366bce328b2b87ee356312b1cb5a4f",
+    "resolve_azimuth.py": "4eecef9d9d0b0a55761dc35c092fe4be66431ab9bf732f1293e6be87feb37bcb",
+    "fd_results.json": "bfa31104fe53fd20b132f761f24e25cc133e86bdf220624ec62af76b5cf68c4f",
+    "results.json": "44a730f04b58e9fab34be10f08f5dd718a2f9ce664d1ef80c1c6e63129295d95",
+    "audit_results.py": "f731bc534bd5164973d479b0087139dc328d3dcf8d8cbca6b74fad80deb5ef8f",
+    "limits_source.py": "76434908dbb15083ffc979251ff183f39df792a0d1370119b6425882123d46e3",
+    "probe.py": "75ab894520b5adb68ceca56d6bdb7ab1e2b195758e6025bad527f60916ee1231",
+    "fd_reference.py": "29835cfe0e08c769ca7f97053ae55a78bb2f067be315351ad2a32d435646dde2",
+    "reference.py": "1e94953a136db4a636cc39fd477a0fc46234f0116aec181fa23f21df87fa07b5",
+    "limits_source_results.json": "4aadf554a0195a2508b78a2ef95d593c190301f1f293911a1676aaf952bf0318",
+    "REVIEW.md": "3ad09d037aa2e031fe5ef1a7799cea70ff1223bcd4eb4ac5e48ffba40aa8b44c",
+    "azimuth_results.json": "65eda14dffd8814738ffed2172aeb42a00926fa12508adf9fd687a2dee31bcea"
+  },
+  "author_source_sha256": {
+    "leptonic_pair_annihilation/SOURCES.json": "d5eceef9a539d9aee2bd49f5bc4045ff24c236662d14d32bb2c4dd98a77fe596",
+    "leptonic_pair_annihilation/fermi_anchor.py": "d8005725535c412ac12398330d83557c2561400562b84a118e3ae871c905abd1",
+    "leptonic_pair_annihilation/check_vacuum.py": "d0ebc1df57cf090836dca4373ab1add6a0206c236a29f25c2276aacdb4edc67c",
+    "leptonic_pair_annihilation/pre_fd_pair.py.txt": "abe14fdea86f75e4bf970a24e4d01831a32e32289a39ef380bfead4b2211d88c",
+    "leptonic_pair_annihilation/CHECKPOINT.json": "ad6b2c5bc9387ef926e6bd9e6f4fbf27971c0455b02d92fbd81e69014b9391be",
+    "leptonic_pair_annihilation/pre_cleanup_fd_results.json": "8dfc8c43225d6a8f25a68a802b4ed8b0931fde312e582d7bb47638d9b84bc927",
+    "leptonic_pair_annihilation/fd_results.json": "b12a5c799042c28d50ccb0c36558412134eb28c5dcb42f58dcc9fabd39b1b49e",
+    "leptonic_pair_annihilation/RESEARCH_NOTE.md": "4a9df7e1cc999090c410b51dadfd2824d0228b1145f2275aee88c8c1e262cf32",
+    "leptonic_pair_annihilation/fermi_anchor_results.json": "64d0f51dcbc824b1de262aa681d1872acdb2ac168d60e83f22078984ba7e2cae",
+    "leptonic_pair_annihilation/check_tail_cp.py": "d6dba3cf4c5e2690b6d43644804db9cfcfe1301a3d3ca833d982adeb45bc13ca",
+    "leptonic_pair_annihilation/fd_partners.py": "23501851568f90662c39503a1514eb7321fd3f12d6c4fd244e5721944f7216fe",
+    "leptonic_pair_annihilation/thermal_results.json": "f92f37a7a3dd51f5081295d9da1dc887f269a22e9464a8a0c8c8ee05d65916f7",
+    "leptonic_pair_annihilation/tail_cp_results.json": "82a8e5002b1282cd258f7828aedb7926ededfa9e164fc7b11c952eac37652ed8",
+    "leptonic_pair_annihilation/pre_fd_thermal_results.json": "f92f37a7a3dd51f5081295d9da1dc887f269a22e9464a8a0c8c8ee05d65916f7",
+    "leptonic_pair_annihilation/vacuum_results.json": "f3b1fe2e11ef86c18c9c6f07b3ef0bc8524102c8663e877904120cc5bd76c4ae",
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "leptonic_pair_annihilation/study.py": "9589a7498bdf300c2917ccd1a6ad6f9a0a539d80ce13a43ae4d4bc9cfcfe64b0"
+  },
+  "source_primary": "https://arxiv.org/html/astro-ph/0511555",
+  "source_discrepancy": "PrintedEq17excluded; Eq6-11freshtrace+independentangular/separatedFD validated",
+  "new_numerical_margin": "Authorfixedphi12 error1.54353e-7resolved with isolatedphi24, independentagreement2.68e-12 at same2e-6gate",
+  "no_source_changes": true
+}

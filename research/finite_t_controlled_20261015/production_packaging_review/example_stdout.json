@@ -1,0 +1,43 @@
+{
+  "scope": "CPU ideal lepton pair components; no matter EOS or JAX AD",
+  "units": {
+    "temperature_chemical_potential_mass": "MeV",
+    "number_entropy_cv": "fm^-3 (k_B=1)",
+    "energy_pressure_free_energy": "MeV fm^-3",
+    "number_responses": "fm^-3 MeV^-1",
+    "dmu_dtemperature": "dimensionless"
+  },
+  "net_number_sign": "negative lepton minus positive antiparticle; charge=-e*n_net",
+  "electron": {
+    "temperature": 20.0,
+    "chemical_potential": 0.05763196076421059,
+    "mass": 0.51099895,
+    "net_density": 1.0000000000000004e-06,
+    "particle_density": 0.00019069277922315487,
+    "antiparticle_density": 0.00018969277922315493,
+    "energy_density": 0.023976630282889037,
+    "pressure": 0.00799145559127679,
+    "entropy_density": 0.0015984014121102547,
+    "free_energy_density": -0.007991397959316025,
+    "cv_fixed_net_density": 0.004795413484638184,
+    "dn_dmu_fixed_temperature": 1.735151241720623e-05,
+    "dn_dtemperature_fixed_mu": 1.0000983682169907e-07,
+    "dmu_dtemperature_fixed_net_density": -0.005763753292337023
+  },
+  "muon": {
+    "temperature": 20.0,
+    "chemical_potential": 134.0401594537219,
+    "mass": 105.6583755,
+    "net_density": 0.005000000000000006,
+    "particle_density": 0.005000013844939122,
+    "antiparticle_density": 1.3844939114726602e-08,
+    "energy_density": 0.7658143161907812,
+    "pressure": 0.1292228528181011,
+    "entropy_density": 0.01124181858701363,
+    "free_energy_density": 0.5409779444505093,
+    "cv_fixed_net_density": 0.008400071852252645,
+    "dn_dmu_fixed_temperature": 0.00016174147603346725,
+    "dn_dtemperature_fixed_mu": 0.00023809535964540245,
+    "dmu_dtemperature_fixed_net_density": -1.472073617011729
+  }
+}

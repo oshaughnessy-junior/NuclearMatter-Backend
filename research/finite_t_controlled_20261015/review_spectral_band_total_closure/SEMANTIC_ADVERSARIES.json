@@ -1,0 +1,41 @@
+{
+  "passed": 8,
+  "failed": [],
+  "checks": [
+    {
+      "name": "weight",
+      "passed": true
+    },
+    {
+      "name": "missingrow",
+      "passed": true
+    },
+    {
+      "name": "source",
+      "passed": true
+    },
+    {
+      "name": "falsezero",
+      "passed": true
+    },
+    {
+      "name": "current",
+      "passed": true
+    },
+    {
+      "name": "controls",
+      "passed": true
+    },
+    {
+      "name": "forgedincompleteflag",
+      "passed": true
+    },
+    {
+      "name": "changedrawhash rejectsBEFOREparse",
+      "passed": true
+    }
+  ],
+  "author_data_mutated": false,
+  "physical_calls": 0,
+  "method": "AST-selected OWN review admission functions; no author driver imported"
+}

@@ -1,0 +1,159 @@
+{
+  "checks": [
+    {
+      "name": "canonical rejection before any rate: anti bound species",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Stale/forged state or component/model/control/source identity"
+    },
+    {
+      "name": "canonical rejection before any rate: muons retained",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Stale/forged state or component/model/control/source identity"
+    },
+    {
+      "name": "canonical rejection before any rate: wrong net density",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Stale/forged state or component/model/control/source identity"
+    },
+    {
+      "name": "canonical rejection before any rate: wrong rest mass",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Stale/forged state or component/model/control/source identity"
+    },
+    {
+      "name": "canonical rejection before any rate: photon identity",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Stale/forged state or component/model/control/source identity"
+    },
+    {
+      "name": "canonical rejection before any rate: response forged",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Stale/forged state or component/model/control/source identity"
+    },
+    {
+      "name": "new state wrong radiation T before rates",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Exact common radiation/material T required"
+    },
+    {
+      "name": "strictEOS T True",
+      "passed": true,
+      "error": "ValueError",
+      "message": "T must be a finite non-Boolean real"
+    },
+    {
+      "name": "strictEOS T nan",
+      "passed": true,
+      "error": "ValueError",
+      "message": "T must be finite"
+    },
+    {
+      "name": "strictEOS T inf",
+      "passed": true,
+      "error": "ValueError",
+      "message": "T must be finite"
+    },
+    {
+      "name": "strictEOS T 1e+300",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Selected T/nB/Ye rectangle exceeded; no extrapolation"
+    },
+    {
+      "name": "canonical root failure precedes physical call",
+      "passed": true,
+      "error": "ArithmeticError",
+      "message": "independent canonical root sentinel"
+    },
+    {
+      "name": "stale _weak_current.py rejected before rates",
+      "passed": true,
+      "error": "RuntimeError",
+      "message": "Prerequisite source changed: _weak_current"
+    },
+    {
+      "name": "stale finite_t_leptons.py rejected before rates",
+      "passed": true,
+      "error": "RuntimeError",
+      "message": "Prerequisite source changed: finite_t_leptons"
+    },
+    {
+      "name": "stale constants.py rejected before rates",
+      "passed": true,
+      "error": "RuntimeError",
+      "message": "Prerequisite constants or HBARC changed"
+    },
+    {
+      "name": "all invalid source probes avoided physics",
+      "passed": true
+    },
+    {
+      "name": "RHS rejects receipt reconstructed",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Source is stale/altered or lacks actual factory receipt"
+    },
+    {
+      "name": "RHS rejects gross source changed",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Source is stale/altered or lacks actual factory receipt"
+    },
+    {
+      "name": "RHS rejects different flavor closure",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Source is stale/altered or lacks actual factory receipt"
+    },
+    {
+      "name": "RHS rejects wrong complete inventory",
+      "passed": true,
+      "error": "ValueError",
+      "message": "Source is stale/altered or lacks actual factory receipt"
+    },
+    {
+      "name": "strict nBdot True",
+      "passed": true,
+      "error": "ValueError",
+      "message": "nBdot must be a finite non-Boolean real"
+    },
+    {
+      "name": "strict nBdot nan",
+      "passed": true,
+      "error": "ValueError",
+      "message": "nBdot must be finite"
+    },
+    {
+      "name": "strict nBdot inf",
+      "passed": true,
+      "error": "ValueError",
+      "message": "nBdot must be finite"
+    },
+    {
+      "name": "strict nBdot 10000000000000000000",
+      "passed": true,
+      "error": "ValueError",
+      "message": "nBdot is not representable"
+    },
+    {
+      "name": "finite-log aggregate underflow retained",
+      "passed": true
+    },
+    {
+      "name": "underflow RHS rejection preserves exact source",
+      "passed": true
+    }
+  ],
+  "passed": 26,
+  "failed": [],
+  "new_physical_rate_calls": 0,
+  "scope": "synthetic saved-record fault injection only",
+  "seconds": 3.4642100839409977
+}

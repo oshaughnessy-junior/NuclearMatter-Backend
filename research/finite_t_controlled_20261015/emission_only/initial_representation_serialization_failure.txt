@@ -1,0 +1,1 @@
+After completed quadrature and representation-helper hardening, JSON serialization failed because subnormal flag was numpy.bool_ rather than Python bool. No rate/integral change. Second full experiment approximately34s; partial grid preserved. Corrected flag cast before final rerun.

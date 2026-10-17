@@ -1,0 +1,539 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "qualified inventory nine",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "qualified points exclude T=.01",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "excluded cold capture failures preserved",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "qualified source contains same pinned driver",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.1 T0.03",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.1 T0.03",
+      "error": 1.4432899320127035e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.1 T0.03",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.1 T0.03",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.1 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.1 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.1 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.1 T0.1",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.1 T0.1",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.1 T0.1",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.1 T0.1",
+      "error": 1.0880185641326534e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.1 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.1 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.1 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.1 T0.3",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.1 T0.3",
+      "error": 4.007905118896815e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.1 T0.3",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.1 T0.3",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.1 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.1 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.1 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.1111111111111111 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.1111111111111111 T0.03",
+      "error": 1.5654144647214707e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.1111111111111111 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.1111111111111111 T0.03",
+      "error": 6.994405055138486e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.1111111111111111 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.1111111111111111 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.1111111111111111 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.1111111111111111 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.1111111111111111 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.1111111111111111 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.1111111111111111 T0.1",
+      "error": 9.769962616701378e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.1111111111111111 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.1111111111111111 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.1111111111111111 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.1111111111111111 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.1111111111111111 T0.3",
+      "error": 4.39648317751562e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.1111111111111111 T0.3",
+      "error": 7.993605777301127e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.1111111111111111 T0.3",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.1111111111111111 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.1111111111111111 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.1111111111111111 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.12 T0.03",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.12 T0.03",
+      "error": 1.5765166949677223e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.12 T0.03",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.12 T0.03",
+      "error": 7.216449660063518e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.12 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.12 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.12 T0.03",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.12 T0.1",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.12 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.12 T0.1",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.12 T0.1",
+      "error": 8.43769498715119e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.12 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.12 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.12 T0.1",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed cold calibration Y0.12 T0.3",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density nn Y0.12 T0.3",
+      "error": 4.651834473179406e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density np Y0.12 T0.3",
+      "error": 1.2212453270876722e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward independent energy density ne_net Y0.12 T0.3",
+      "error": 1.6653345369377348e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_n Y0.12 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_p Y0.12 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "archived forward mu_e Y0.12 T0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "heldout forward independent density nn",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout forward independent density np",
+      "error": 9.992007221626409e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout forward independent density ne_net",
+      "error": 6.439293542825908e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout angular/adaptive tail refinement",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "heldout adaptive quadrature reported residual",
+      "error": 1.673936221269337e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "heldout author72 versus independent adaptive-cos",
+      "error": 7.105427357601027e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "heldout log KMS",
+      "error": 1.0613732115416497e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent cold support Y0.1 E0.29347303095940236",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent cold support Y0.1 E0.3243649289551289",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent cold support Y0.105 E0.15904879404711153",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent cold support Y0.105 E0.17579077236786012",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent cold support Y0.12 E0.03",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent cold support Y0.12 E0.3",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "heldout": {
+    "Y": 0.105,
+    "T": 0.047,
+    "Enu": 0.1269,
+    "offset": 55.545358586152204,
+    "author_logs": [
+      4.702613297310371,
+      7.419457541001648
+    ],
+    "independent_log_chi": 7.419457541001641,
+    "independent_quadrature_error": 1.673936221269337e-11
+  },
+  "cold_support": [
+    {
+      "Y": 0.1,
+      "E": 0.29347303095940236,
+      "critical": 0.30891897995726564,
+      "max_interval": 0.0
+    },
+    {
+      "Y": 0.1,
+      "E": 0.3243649289551289,
+      "critical": 0.30891897995726564,
+      "max_interval": 0.03415835751166618
+    },
+    {
+      "Y": 0.105,
+      "E": 0.15904879404711153,
+      "critical": 0.16741978320748582,
+      "max_interval": 0.0
+    },
+    {
+      "Y": 0.105,
+      "E": 0.17579077236786012,
+      "critical": 0.16741978320748582,
+      "max_interval": 0.01821341947671762
+    },
+    {
+      "Y": 0.12,
+      "E": 0.03,
+      "critical": 0.0,
+      "max_interval": 0.029999999999995808
+    },
+    {
+      "Y": 0.12,
+      "E": 0.3,
+      "critical": 0.0,
+      "max_interval": 0.29999999999999183
+    }
+  ],
+  "source_sha256": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+  "end_source_sha256": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+  "runtime_seconds": 1.7705291248857975,
+  "limits": "New selected point and independent density/cold-support checks; shared analytic response and weak prefactor; no new physical EOS or cold-extension qualification"
+}

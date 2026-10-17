@@ -1,0 +1,24 @@
+{
+  "scope": "Independent selected shared-physics checks; no trajectory or full suite replay",
+  "checks": [
+    {
+      "name": "neutral total-free-energy composition derivative equals weak affinity",
+      "error": 7.457339091962618e-09,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "FD baryon-plus-lepton composition energy derivative",
+      "error": 3.947448940625214e-09,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "total frozen-composition energy heat capacity",
+      "error": 3.6680695525933025e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,161 @@
+{
+  "checks": [
+    {
+      "name": "fixed_transfer_trace_exact_quadratic",
+      "error": 5.113696370699476e-16,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed_transfer_trace_exact_quadratic",
+      "error": 6.402928184536284e-16,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Boltzmann_polynomial_step_independence",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "FD_to_MB_rigorous_positive_bound",
+      "error": 1.0125233984581428e-12,
+      "limit": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed_transfer_trace_exact_quadratic",
+      "error": 6.818258592336964e-16,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed_transfer_trace_exact_quadratic",
+      "error": 4.802193931319992e-16,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Boltzmann_polynomial_step_independence",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "FD_to_MB_rigorous_positive_bound",
+      "error": 4.707345624410664e-14,
+      "limit": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed_transfer_trace_exact_quadratic",
+      "error": 5.113696370699476e-16,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed_transfer_trace_exact_quadratic",
+      "error": 6.402928184536284e-16,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Boltzmann_polynomial_step_independence",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "FD_to_MB_rigorous_positive_bound",
+      "error": 0.0,
+      "limit": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed_transfer_trace_exact_quadratic",
+      "error": 5.113674533552894e-16,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fixed_transfer_trace_exact_quadratic",
+      "error": 8.003627125759342e-16,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Boltzmann_polynomial_step_independence",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "FD_to_MB_rigorous_positive_bound",
+      "error": 0.0,
+      "limit": 3e-10,
+      "passed": true
+    }
+  ],
+  "passed": 16,
+  "failed": 0,
+  "rows": [
+    {
+      "T": 0.1,
+      "closure": "frozen_COLD_fields_densitymatched_thermal_populations",
+      "log_chi_FD": -19.61425649972734,
+      "log_chi_MB_analytic": -19.614256499728352,
+      "FD_MB_ratio": 1.0000000000010125,
+      "rigorous_ratio_interval": [
+        0.9999999999999263,
+        1.0
+      ],
+      "initial_neutron_activation_MeV": 3.0286862946553583,
+      "cold_window_gap_MeV": -3.02858676336848,
+      "trace_quadratic": true
+    },
+    {
+      "T": 0.1,
+      "closure": "selfconsistent_warm_GM1_fixed_cold_fractions",
+      "log_chi_FD": -19.614721197559565,
+      "log_chi_MB_analytic": -19.614721197559444,
+      "FD_MB_ratio": 0.9999999999998792,
+      "rigorous_ratio_interval": [
+        0.9999999999999263,
+        1.0
+      ],
+      "initial_neutron_activation_MeV": 3.0287328134648988,
+      "cold_window_gap_MeV": -3.028633282169153,
+      "trace_quadratic": true
+    },
+    {
+      "T": 0.3,
+      "closure": "frozen_COLD_fields_densitymatched_thermal_populations",
+      "log_chi_FD": 1.6752436825591015,
+      "log_chi_MB_analytic": 1.675271781311049,
+      "FD_MB_ratio": 0.9999719016428188,
+      "rigorous_ratio_interval": [
+        0.9999437856686268,
+        1.0
+      ],
+      "initial_neutron_activation_MeV": 3.0294825485283354,
+      "cold_window_gap_MeV": -3.02858676336848,
+      "trace_quadratic": true
+    },
+    {
+      "T": 0.3,
+      "closure": "selfconsistent_warm_GM1_fixed_cold_fractions",
+      "log_chi_FD": 1.6738526157867077,
+      "log_chi_MB_analytic": 1.6738806793486745,
+      "FD_MB_ratio": 0.9999719368318114,
+      "rigorous_ratio_interval": [
+        0.9999438560683446,
+        1.0
+      ],
+      "initial_neutron_activation_MeV": 3.0299012024867125,
+      "cold_window_gap_MeV": -3.0290054166417804,
+      "trace_quadratic": true
+    }
+  ],
+  "scope": "Analytic dilute-tail benchmark with actual fields/chemical roots/lepton blocking/full current; not a substitute model or width fit"
+}

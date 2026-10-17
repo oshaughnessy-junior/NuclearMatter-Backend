@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-17T18:54:56.125308+00:00",
+  "status": "PURE INDEPENDENT REVIEW PREPARATION; NEWCANDIDATESNOTREAD",
+  "prior_campaign_root": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015",
+  "sourcepins": {
+    "free_matter_source_binder_contract/CONTRACT.md": "fbf5e19043e52d9872abd7807c2eaa54f6469390fd8b129565e779467039813c",
+    "review_free_matter_source_binder_contract/REVIEW.md": "8b1a467efc9f76160672b693c55c43fc5ed99c597dfb78c0c6a6dd53e887afd9",
+    "review_free_matter_source_binder_contract/SOURCE_EXPECTATIONS.json": "88ab66fb6a3ad142c42de278615b800c3a01aec7f23c4cca31df3effc16ad351",
+    "review_spectral_band_total_closure/REVIEW.md": "3a9ef29c03376d09b44d61aa63bb18f0398ad7b0ed795fd8dd0f720790d5f6db",
+    "review_spectral_band_total_closure/WITNESS_RESULTS.json": "64c8a919866d767f235e103e23281229568d52cb967676939b65ec525f6f6f2c",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+    "review_production_baryon_port/oracle.py": "ae532cba2faf8c3eebc888504bb717d322fb35f371b0945a890a6ba271559088",
+    "review_installed_free_matter_binding/probe.py": "53066bec33286c785becf75fa9a01f13c85c62bf7907da115ae397b64cc44bce",
+    "review_installed_free_matter_binding/results.json": "5dc079b3cf1452e7a96323df2d65a06d41851c23d9a5f18cec345190edc40e0c",
+    "installed_free_matter_binding/forward_results.json": "199cd2693525c9beebc9c57ea6a6b28b41029bcea90702d547980272d7a42675",
+    "production_lepton_port/staged/src/nmbackend/reference/finite_t_leptons.py": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+    "production_baryon_port/staged/src/nmbackend/reference/finite_t_baryons.py": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b",
+    "production_weak_port/staged/src/nmbackend/reference/weak_reference.py": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+    "production_weak_port/staged/src/nmbackend/reference/_weak_current.py": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc"
+  },
+  "new_candidate_directories_read": false,
+  "new_candidate_imports": false,
+  "actual_new_physics_calls": 0,
+  "review_cases": {
+    "softPC": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397,
+      "Enu": 0.1
+    },
+    "binder_new_heldouts": [
+      {
+        "T": 1.7,
+        "nB": 8e-08,
+        "Ye": 0.27
+      },
+      {
+        "T": 2.6,
+        "nB": 1.8e-07,
+        "Ye": 0.41
+      }
+    ],
+    "photons": [
+      "absent",
+      "trapped_LTE"
+    ],
+    "weak_radiation": [
+      "empty",
+      "commonT LTE",
+      "literal independent noneq flavors"
+    ]
+  },
+  "proposed_gates": {
+    "density_relative": 1e-09,
+    "EOS_pressure_entropy_relative": 3e-08,
+    "EOS_specific_energy_absolute_MeV": 1e-07,
+    "EOS_kinetic_mu_absolute_MeV": 1e-07,
+    "analytic_response_relative": 3e-06,
+    "eY_over_n_absolute_MeV": 3e-06,
+    "thermal_enthalpy_absolute_MeV": 3e-06,
+    "finite_difference_relative": 3e-05,
+    "entropy_root_temperature_relative": 3e-06,
+    "work_gross_thermal_relative": 3e-06,
+    "source_logmoment_difference": 3e-06,
+    "positive_j_and_chi_logdifference": 3e-06,
+    "kinematic_fourmomentum_relative": 2e-12,
+    "mass_shell_relative": 2e-11
+  },
+  "fresh_call_budget_this_prep": 2,
+  "fresh_call_seconds_max": 90,
+  "quota": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "limit": "codex",
+    "window_minutes": 10080,
+    "reset": 1792652325,
+    "last_check_utc": "2026-10-17T18:49:12Z",
+    "used_percent": 91,
+    "stop_new_calls": 97,
+    "checkpoint": 99,
+    "no_reset_credits": true
+  },
+  "limits": "No candidate qualification, integration/normalization certificate, AD, physical uncertainty or uniform domain from this static preparation"
+}

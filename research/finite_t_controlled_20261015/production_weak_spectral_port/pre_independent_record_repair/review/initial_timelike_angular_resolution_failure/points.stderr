@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_spectral_port/point_worker.py", line 26, in <module>
+    eq=D.b.mu_p+D.b.mu_e-D.b.mu_n;eq=eq if ch=='EC'else-eq;ck(point['label']+ch+' KMSafterdirectproducts',ref[-1]['logj']-ref[-1]['logchi']+(point['E']-eq)/D.b.T,3e-10);gateforward()
+                                                                                                                                                                         ^^^^^^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_spectral_port/point_worker.py", line 12, in gateforward
+    if any(not c['passed']for c in checks):raise ArithmeticError('Forward/referencefailurepreserved')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ArithmeticError: Forward/referencefailurepreserved

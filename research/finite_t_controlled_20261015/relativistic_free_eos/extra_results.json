@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "independent scaled-Bessel antiparticle log 0.001",
+      "error": 2.3283064365386963e-10,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "independent scaled-Bessel antiparticle log 2.0",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "independent scaled-Bessel antiparticle log 40.0",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "zero-net-electron mu zero",
+      "error": 0.0,
+      "tolerance": 1e-20,
+      "passed": true
+    },
+    {
+      "name": "zero-net-electron particles positive",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "zero-net-electron pair equality",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "muon charge closes independent proton density",
+      "error": 2.886579864025407e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "coldT\u00b2 factor4 1.3917592468715156e-05",
+      "error": 2.1360766689904054e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "coldT\u00b2 factor4 3.479405549455805e-06",
+      "error": 7.229164380451181e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "T": 0.001,
+      "n": 1e-09,
+      "log_antiparticle": -1876559.5042213837,
+      "independent_Bessel_log": -1876559.504221384,
+      "log_ratio": -1876538.7809555468,
+      "ordinary": 0.0,
+      "representable": false
+    },
+    {
+      "T": 2.0,
+      "n": 0.002,
+      "log_antiparticle": -947.0748945229105,
+      "independent_Bessel_log": -947.0748945229105,
+      "log_ratio": -940.8602864244883,
+      "ordinary": 0.0,
+      "representable": false
+    },
+    {
+      "T": 40.0,
+      "n": 0.01,
+      "log_antiparticle": -46.41578834587186,
+      "independent_Bessel_log": -46.41578834587186,
+      "log_ratio": -41.81061815988377,
+      "ordinary": 6.948310989880912e-21,
+      "representable": true
+    },
+    {
+      "label": "cold_thermal_energy",
+      "T": 0.05,
+      "total_energy": 76.90862120839441,
+      "cold_energy": 76.90860729080194,
+      "thermal_difference": 1.3917592468715156e-05
+    },
+    {
+      "label": "cold_thermal_energy",
+      "T": 0.025,
+      "total_energy": 76.90861077020749,
+      "cold_energy": 76.90860729080194,
+      "thermal_difference": 3.479405549455805e-06
+    },
+    {
+      "label": "cold_thermal_energy",
+      "T": 0.0125,
+      "total_energy": 76.90860816065396,
+      "cold_energy": 76.90860729080194,
+      "thermal_difference": 8.698520161942724e-07
+    }
+  ],
+  "runtime_seconds": 0.1890433330554515
+}

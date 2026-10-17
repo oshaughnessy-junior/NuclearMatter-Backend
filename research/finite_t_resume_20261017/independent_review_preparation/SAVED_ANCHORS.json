@@ -1,0 +1,141 @@
+{
+  "actual_new_calls": 0,
+  "method_independence": "old independent momentum EOS and saved chain; not new candidate or new physics",
+  "anchors": [
+    {
+      "kind": "GENUINE PREVIOUSLYEXECUTED original momentum-thermodynamic oracle, NOT new state solve",
+      "source": "review_installed_free_matter_binding/results.json",
+      "source_sha256": "5dc079b3cf1452e7a96323df2d65a06d41851c23d9a5f18cec345190edc40e0c",
+      "json_pointer": "/details/forward_0/oracle",
+      "state": {
+        "T": 2,
+        "n": 1e-07,
+        "Y": 0.3
+      },
+      "oracle": {
+        "energy": 9.798284341370097e-05,
+        "pressure": 1.4475645469762608e-06,
+        "entropy": 3.765906552387378e-06,
+        "cv": 7.667252165205698e-06,
+        "e_n": 942.3432402702803,
+        "e_Y": -7.673357689146896e-08,
+        "n": {
+          "T": 2,
+          "mu": 919.8287578100658,
+          "mass": 939.56542052,
+          "number": 6.999999999998272e-08,
+          "kinetic": 2.1055950732218098e-07,
+          "energy": 6.598013894370595e-05,
+          "pressure": 1.4000127913831473e-07,
+          "entropy": 8.66063588077774e-07,
+          "free_energy": 6.424801176755039e-05,
+          "chi": 3.4999360442828074e-08,
+          "n_T": 3.980246825779273e-07,
+          "mu_T": -11.372341595444464,
+          "cv": 1.0555650416855625e-07
+        },
+        "p": {
+          "T": 2,
+          "mu": 916.8449303084382,
+          "mass": 938.27208816,
+          "number": 3.000000000000039e-08,
+          "kinetic": 9.023964651475486e-08,
+          "energy": 2.8238402291315118e-05,
+          "pressure": 6.000023542792142e-08,
+          "entropy": 3.9652730874476906e-07,
+          "free_energy": 2.744534767382558e-05,
+          "chi": 1.499988228698929e-08,
+          "n_T": 1.8326224598480855e-07,
+          "mu_T": -12.21757894352064,
+          "cv": 4.5238948006305574e-08
+        },
+        "e": {
+          "mu": 0.17446333200825484,
+          "number": 2.999999999999836e-08,
+          "energy": 2.3941492019342843e-06,
+          "pressure": 7.90845373494822e-07,
+          "entropy": 1.5898803377344296e-06,
+          "chi": 1.7222345217073023e-07,
+          "n_T": 3.0272896310703625e-08,
+          "mu_T": -0.17577685227615344,
+          "cv": 4.776150759539621e-06,
+          "h": 0.5260170365605618
+        }
+      }
+    },
+    {
+      "kind": "GENUINE PREVIOUSLYEXECUTED original momentum-thermodynamic oracle, NOT new state solve",
+      "source": "review_installed_free_matter_binding/results.json",
+      "source_sha256": "5dc079b3cf1452e7a96323df2d65a06d41851c23d9a5f18cec345190edc40e0c",
+      "json_pointer": "/details/forward_4/oracle",
+      "state": {
+        "T": 2.37,
+        "n": 2.8e-07,
+        "Y": 0.41
+      },
+      "oracle": {
+        "energy": 0.00027142362702232785,
+        "pressure": 3.151680486304833e-06,
+        "entropy": 7.526558548935079e-06,
+        "cv": 1.2880452663928765e-05,
+        "e_n": 943.180700362848,
+        "e_Y": 3.3449547797560886e-08,
+        "n": {
+          "T": 2.37,
+          "mu": 917.6073576385667,
+          "mass": 939.56542052,
+          "number": 1.6519999999999941e-07,
+          "kinetic": 5.891429321647093e-07,
+          "energy": 0.00015580535040206814,
+          "pressure": 3.915305373580867e-07,
+          "entropy": 1.9443651719559346e-06,
+          "free_energy": 0.00015119720494453259,
+          "chi": 6.970231368417855e-08,
+          "n_T": 7.506781259310416e-07,
+          "mu_T": -10.76977343008106,
+          "cv": 2.4935466349137574e-07
+        },
+        "p": {
+          "T": 2.37,
+          "mu": 915.456284796477,
+          "mass": 938.27208816,
+          "number": 1.1480000000000303e-07,
+          "kinetic": 4.0940409637416657e-07,
+          "energy": 0.00010812303981714499,
+          "pressure": 2.720791634379424e-07,
+          "entropy": 1.3927162387951946e-06,
+          "free_energy": 0.00010482230233120039,
+          "chi": 4.843769219238029e-08,
+          "n_T": 5.391929112122653e-07,
+          "mu_T": -11.131680449818901,
+          "cv": 1.7328228559731038e-07
+        },
+        "e": {
+          "mu": 0.4725328495434885,
+          "number": 1.1479999999999998e-07,
+          "energy": 4.793503600891478e-06,
+          "pressure": 1.5874930514343796e-06,
+          "entropy": 2.669514717805174e-06,
+          "chi": 2.4490891417399615e-07,
+          "n_T": 9.716611604630813e-08,
+          "mu_T": -0.39674389302659774,
+          "cv": 7.897928453703753e-06,
+          "h": 1.4128158760165248
+        }
+      }
+    },
+    {
+      "kind": "GENUINE PREVIOUS SAVED-ONLY chain reassembly, NOT a fresh source call",
+      "source": "review_free_matter_source_binder_contract/SAVED_REVIEW_RESULTS.json",
+      "source_sha256": "2d7a2b9b1aa3c119683bf9509b35753562d776c1be24901f510bd9375dd897f7",
+      "json_pointer": "/derived",
+      "derived": {
+        "R": 7.86475833838614e-07,
+        "Q": 1.5155020638488612e-05,
+        "Tdot": -1.7284560792876476,
+        "sigma_dot": -64.72761805315272,
+        "pair_total_vs_net_ratio": 6.780954559477579
+      }
+    }
+  ]
+}

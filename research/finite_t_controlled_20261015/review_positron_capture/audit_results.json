@@ -1,0 +1,166 @@
+{
+  "checks": [
+    {
+      "name": "reject nanEnu",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject negativeEnu",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject nanEl",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject badcos",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject Elrest",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolinner",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject nantail",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject negativeTail",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolouter",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject badoutertail",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject nanbudget",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject invalidYe",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "physical invariant threshold",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent reciprocal vertex",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent reciprocal vertex",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent reciprocal vertex",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "reaction electric",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reaction Le",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reaction baryon",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "six original coarse failures retained",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "rest_threshold": 1.8060662080187608,
+  "original_coarse_failed_checks": [
+    {
+      "name": "response refinement 0 j",
+      "error": 0.016043259403470067,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "response refinement 1 j",
+      "error": 0.0002116290915550323,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "absolute CM vs response j",
+      "error": -7.663755209996737e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "response refinement 0 chi",
+      "error": 0.01604325940347029,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "response refinement 1 chi",
+      "error": 0.00021162909155525433,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "absolute CM vs response chi",
+      "error": -7.663755214881718e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    }
+  ],
+  "primary_source": "https://arxiv.org/html/2006.12051v2",
+  "source_sections": "26\u201329 current and spin, 47a\u2013h invariants; free specialization only"
+}

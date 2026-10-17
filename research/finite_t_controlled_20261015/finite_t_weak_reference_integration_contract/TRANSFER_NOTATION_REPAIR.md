@@ -1,0 +1,9 @@
+# Oriented-transfer notation clarification: candidate for DIFFERENT recheck
+
+The initial DIFFERENT design review is preserved as168PASS/1requiredclarification. It found an ambiguous shared q label in the prose, not a bug in the pinned scientific current. All12 initial authored files are copied byte-exact into pre_transfer_notation_repair/ and pinned by PRE_TRANSFER_REPAIR_PIN.json. The reviewer separately preserves its original snapshot/report.
+
+Only CONTRACT.md prose/current-argument labels changed. It now defines the n->p vertex argument q_Gamma=p_p−p_n, the reciprocal p->n argument q_pn=−q_Gamma, the capture absorption geometry Q_abs, its positive spatial magnitude q, and the decay future pair Q_leptons=p_e−+k_antinue=−q_Gamma. A six-reaction table fixes EC/PC/decay emission and inverse orientations. Equal invariant squares do not identify the signed linear weak-magnetism/pseudoscalar terms. Future mean-field physical/kinetic language explicitly inherits that orientation. Current/equations/model constants, saved physical numbers, quadrature controls, gates, proposed file scope and API claims are unchanged. Stage-B path-count advisory is outside this repair.
+
+No scientific module was imported or executed, no physical calls made. All60 original scientific/evidence pins and initial reviewer report/checkpoint hashes were reverified unchanged. Initial owned SOURCE_INVENTORY, SAVED_REGRESSIONS, AUDIT_RESULTS and REPORT bytes are unchanged. Seventy old audit passes remain historical; they are not a new repair acceptance or physics certificate. A DIFFERENT recheck must assess the clarified signs before design acceptance.
+
+Exact prebatch budget check2026-10-16 05:17:53UTC:account82f4cfd9-9e20-47cf-9997-761328d89f60,codex10080minute reset1792652325,27%used; noreset. Winddown48/hard51/deadline10:27:28UTC preserved.

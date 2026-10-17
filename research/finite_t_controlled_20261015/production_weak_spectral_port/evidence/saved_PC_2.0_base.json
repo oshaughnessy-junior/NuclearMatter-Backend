@@ -1,0 +1,81 @@
+{
+  "name": "saved_PC_2.0_base",
+  "result": {
+    "channel": "PC",
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "energy": 2.0,
+    "j": {
+      "value": 0.027897666880521046,
+      "log": -3.5792122180056127,
+      "support": "positive_support",
+      "reason": "represented"
+    },
+    "true_chi": {
+      "value": 0.018613013305515715,
+      "log": -3.983894302815516,
+      "support": "positive_support",
+      "reason": "represented"
+    },
+    "controls": {
+      "lepton_order": 8,
+      "angle_order": 12,
+      "energy_order": 12,
+      "phi_order": 4,
+      "tail": 50.0,
+      "outer_tail": 30.0,
+      "parent_order": 8,
+      "cone_order": 10,
+      "electron_order": 10,
+      "decay_phi_order": 6,
+      "budget_seconds": 110.0
+    },
+    "geometry": [
+      "El=ME+y\u00b2",
+      [
+        0.51099895069,
+        0.5147804084290841,
+        0.5917936832604198,
+        0.6492306616301988,
+        0.7066676399999778,
+        0.7641046183697568,
+        0.8215415967395359,
+        0.825536667991736,
+        1.051289510218652,
+        1.2040241488664323,
+        1.395911380437326,
+        1.7066676399999778,
+        1.825536667991736,
+        2.085155120874674,
+        2.706667639999978,
+        5.825536667991736,
+        6.706667639999978,
+        11.825536667991736,
+        12.706667639999978,
+        23.825536667991734,
+        24.706667639999978,
+        60.70666763999998
+      ],
+      "exact q-axis support",
+      2016,
+      0
+    ],
+    "differential_coordinates": null,
+    "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+    "complete": true,
+    "units": "s^-1 per occupation"
+  },
+  "KMS": -2.6645352591003757e-15,
+  "relaxation": {
+    "value": 0.04651068018603676,
+    "log": -3.0680733113414203,
+    "support": "positive_support",
+    "reason": "represented"
+  },
+  "seconds": 0.7508662499021739,
+  "source": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/weak_reference.py"
+}

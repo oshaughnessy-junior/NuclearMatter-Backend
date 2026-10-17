@@ -1,0 +1,372 @@
+{
+  "tested_source_sha256": "f5051ea1e3230c6bea124f029201cc5f9529d0c0dcc36cdfacdebc4aebdfc2b6",
+  "checks": [
+    {
+      "name": "exact material dictionaries match",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty forward number",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty forward neutrino_energy",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty forward material_energy_loss",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty backward number",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty backward neutrino_energy",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty backward material_energy_loss",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty net number",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty net neutrino_energy",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic empty net material_energy_loss",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "Le conservation empty",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "charge conservation empty",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "direct material/radiation energy empty",
+      "error": 5.649411695400057e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE forward number",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE forward neutrino_energy",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE forward material_energy_loss",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE backward number",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE backward neutrino_energy",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE backward material_energy_loss",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE net number",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE net neutrino_energy",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "plain arithmetic LTE net material_energy_loss",
+      "error": 0.0,
+      "tolerance": 2e-20,
+      "passed": true
+    },
+    {
+      "name": "Le conservation LTE",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "charge conservation LTE",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "direct material/radiation energy LTE",
+      "error": 2.5632069826609362e-28,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "LTE gross scaled roundoff",
+      "error": 7.586161748333129e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicit different radiation T",
+      "passed": true,
+      "rejected": true,
+      "reason": "Unsupported radiation fields; common material temperature only"
+    },
+    {
+      "name": "net NaN",
+      "passed": true,
+      "rejected": true,
+      "reason": "Nonfinite net moment"
+    },
+    {
+      "name": "net infinity",
+      "passed": true,
+      "rejected": true,
+      "reason": "Nonfinite net moment"
+    },
+    {
+      "name": "gross positive unrepresented",
+      "passed": true,
+      "rejected": true,
+      "reason": "Positive gross moments must be represented, not floored"
+    },
+    {
+      "name": "actual -.8T vs -.4T occupations",
+      "passed": true,
+      "rejected": true,
+      "reason": "Radiation occupations differ"
+    },
+    {
+      "name": "changed physical electron root",
+      "passed": true,
+      "rejected": true,
+      "reason": "Material states/species/roots differ"
+    },
+    {
+      "name": "accepted-status empty required provenance",
+      "passed": true,
+      "rejected": true,
+      "reason": "Required author/review/upstream hash coverage missing"
+    },
+    {
+      "name": "mutated source hash metadata",
+      "passed": true,
+      "rejected": true,
+      "reason": "Changed source/evidence hot_beta_moments/results.json"
+    },
+    {
+      "name": "unsafe provenance path",
+      "passed": true,
+      "rejected": true,
+      "reason": "Invalid source path or SHA256"
+    },
+    {
+      "name": "malformed source digest",
+      "passed": true,
+      "rejected": true,
+      "reason": "Invalid source path or SHA256"
+    }
+  ],
+  "rows": [
+    {
+      "key": "empty",
+      "arithmetic_only_not_independent_physics_review": {
+        "radiation": [
+          "empty"
+        ],
+        "channels": {
+          "neutron_beta": {
+            "forward": {
+              "number": 4.2587395065654314e-11,
+              "neutrino_energy": 2.02377424204933e-11,
+              "material_energy_loss": 2.0237742420492296e-11
+            },
+            "backward": {
+              "number": 0.0,
+              "neutrino_energy": 0.0,
+              "material_energy_loss": 0.0
+            },
+            "net": {
+              "number": 4.2587395065654295e-11,
+              "neutrino_energy": 2.0237742420493317e-11,
+              "material_energy_loss": 2.0237742420492306e-11
+            }
+          },
+          "positron_capture": {
+            "forward": {
+              "number": 1.117319281268152e-06,
+              "neutrino_energy": 1.199461556398516e-05,
+              "material_energy_loss": 1.199461556398516e-05
+            },
+            "backward": {
+              "number": 0.0,
+              "neutrino_energy": 0.0,
+              "material_energy_loss": 0.0
+            },
+            "net": {
+              "number": 1.1173192812681518e-06,
+              "neutrino_energy": 1.1994615563985155e-05,
+              "material_energy_loss": 1.1994615563985148e-05
+            }
+          }
+        },
+        "scope": "Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.",
+        "forward": {
+          "number": 1.1173618686632177e-06,
+          "neutrino_energy": 1.199463580172758e-05,
+          "material_energy_loss": 1.199463580172758e-05
+        },
+        "backward": {
+          "number": 0.0,
+          "neutrino_energy": 0.0,
+          "material_energy_loss": 0.0
+        },
+        "net": {
+          "number": 1.1173618686632175e-06,
+          "neutrino_energy": 1.1994635801727575e-05,
+          "material_energy_loss": 1.1994635801727568e-05
+        },
+        "sources": {
+          "dn_n_dt": -1.1173618686632175e-06,
+          "dn_p_dt": 1.1173618686632175e-06,
+          "dn_e_net_dt": 1.1173618686632175e-06,
+          "dn_antinu_dt": 1.1173618686632175e-06,
+          "matter_Le_dt": 1.1173618686632175e-06,
+          "radiation_Le_dt": -1.1173618686632175e-06,
+          "matter_energy_dt": -1.1994635801727568e-05,
+          "radiation_energy_dt": 1.1994635801727575e-05
+        },
+        "direct_energy_residual": 6.776263578034403e-21,
+        "gross_normalized_net": 0.9999999999999998
+      }
+    },
+    {
+      "key": "LTE",
+      "arithmetic_only_not_independent_physics_review": {
+        "radiation": [
+          "common_material_T_FD",
+          2.8093641696198066
+        ],
+        "channels": {
+          "neutron_beta": {
+            "forward": {
+              "number": 1.0123482956249626e-11,
+              "neutrino_energy": 4.916491058299985e-12,
+              "material_energy_loss": 4.91649105829974e-12
+            },
+            "backward": {
+              "number": 1.0123482956249555e-11,
+              "neutrino_energy": 4.916491058299949e-12,
+              "material_energy_loss": 4.916491058299722e-12
+            },
+            "net": {
+              "number": 7.118300677956099e-26,
+              "neutrino_energy": 2.9177131485232786e-26,
+              "material_energy_loss": 2.9177131485211257e-26
+            }
+          },
+          "positron_capture": {
+            "forward": {
+              "number": 1.0455981582028755e-06,
+              "neutrino_energy": 1.1540647258568089e-05,
+              "material_energy_loss": 1.1540647258568089e-05
+            },
+            "backward": {
+              "number": 1.0455981582028736e-06,
+              "neutrino_energy": 1.1540647258568069e-05,
+              "material_energy_loss": 1.1540647258568069e-05
+            },
+            "net": {
+              "number": 1.5863595270462967e-21,
+              "neutrino_energy": 1.977086528210876e-20,
+              "material_energy_loss": 1.9770865282102845e-20
+            }
+          }
+        },
+        "scope": "Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.",
+        "forward": {
+          "number": 1.0456082816858316e-06,
+          "neutrino_energy": 1.1540652175059147e-05,
+          "material_energy_loss": 1.1540652175059147e-05
+        },
+        "backward": {
+          "number": 1.0456082816858297e-06,
+          "neutrino_energy": 1.1540652175059126e-05,
+          "material_energy_loss": 1.1540652175059126e-05
+        },
+        "net": {
+          "number": 1.5864307100530762e-21,
+          "neutrino_energy": 1.9770894459240247e-20,
+          "material_energy_loss": 1.977089445923433e-20
+        },
+        "sources": {
+          "dn_n_dt": -1.5864307100530762e-21,
+          "dn_p_dt": 1.5864307100530762e-21,
+          "dn_e_net_dt": 1.5864307100530762e-21,
+          "dn_antinu_dt": 1.5864307100530762e-21,
+          "matter_Le_dt": 1.5864307100530762e-21,
+          "radiation_Le_dt": -1.5864307100530762e-21,
+          "matter_energy_dt": -1.977089445923433e-20,
+          "radiation_energy_dt": 1.9770894459240247e-20
+        },
+        "direct_energy_residual": 5.91621604791454e-33,
+        "gross_normalized_net": 7.586161748333129e-16,
+        "affinity_over_T": 0.0,
+        "reservoir_entropy_from_source": 0.0
+      }
+    }
+  ],
+  "all_pass": true,
+  "qualification": "integration contract only; independent channel reviews required"
+}

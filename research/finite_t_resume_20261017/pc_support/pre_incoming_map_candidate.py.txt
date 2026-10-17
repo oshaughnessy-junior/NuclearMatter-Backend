@@ -1,0 +1,98 @@
+"""Fixed-antineutrino inverse-PC event phase, exact physical masses/current.
+
+No spectral surrogate, KMS inverse manufacture, or original-source mutation.
+"""
+from __future__ import annotations
+import math,time
+from dataclasses import dataclass,asdict
+import numpy as np
+from numpy.polynomial.legendre import leggauss
+from scipy.special import logsumexp
+from pr55_reference import _weak_current as C
+from pr55_reference._weak_quadrature import log_fd
+
+BATH=(2.,919.8287578100662,916.8449303084382,.17446333200826397)
+
+@dataclass(frozen=True)
+class Rule:
+    radial:int=10
+    incoming:int=12
+    outgoing:int=12
+    phi:int=6
+    tail:float=70.
+    literal:bool=False
+    budget:float=85.
+
+
+def minimum(E):
+    if not math.isfinite(E) or E<=0:raise ValueError('E>0')
+    D=((C.MN+C.ME)**2-C.MP**2)/(2*E)
+    if D<=C.MP:raise ValueError('This exact conditional branch is restricted below static target threshold')
+    emin=(D*D+C.MP*C.MP)/(2*D)
+    pmin=(D*D-C.MP*C.MP)/(2*D)
+    return D,emin,pmin
+
+
+def evaluate(E,rule=Rule()):
+    start=time.monotonic();T,mun,mup,mue=BATH
+    D,emin,pmin=minimum(E)
+    xi,wi=leggauss(rule.incoming);co,wo=leggauss(rule.outgoing)
+    u=(xi+1)/2;uw=wi/2
+    phi=2*math.pi*np.arange(rule.phi)/rule.phi
+    U,CO,PH=np.meshgrid(u,co,phi,indexing='ij')
+    UW,OW,ZZ=np.meshgrid(uw,wo,np.ones(rule.phi)*2*math.pi/rule.phi,indexing='ij')
+    U,CO,PH,W=[v.ravel() for v in (U,CO,PH,UW*OW*ZZ)]
+    x,w=leggauss(rule.radial)
+    edges=sorted({0.,rule.tail}|{v for v in (1.,2.,4.,8.,16.,32.,50.,70.,90.) if 0<v<rule.tail})
+    js=[];cs=[];mass_res=energy_res=delta_res=0.;events=0
+    for zlo,zhi in zip(edges[:-1],edges[1:]):
+      yl,yh=math.sqrt(zlo),math.sqrt(zhi)
+      ys=yl+(x+1)*(yh-yl)/2;zs=ys*ys;weights=w*(yh-yl)*ys*T
+      for z,weight in zip(zs,weights):
+        if time.monotonic()-start>rule.budget:raise TimeoutError('Bounded research event integration incomplete')
+        de=T*z;ea=emin+de;pa=math.sqrt((ea-C.MP)*(ea+C.MP))
+        R=de*(1+(ea+emin)/(pa+pmin))
+        width=R/pa
+        if not 0<width<2:raise ArithmeticError('Outside exact soft conditional branch')
+        ca=-1+width*U
+        # c near -1: retain the small transverse scale without 1-c*c cancellation.
+        sint=np.sqrt(width*U*(2-width*U))
+        proton=np.tile([ea,0.,0.,pa],(len(U),1))
+        nu=np.column_stack([np.full(len(U),E),E*sint,np.zeros(len(U)),E*ca])
+        excess=2*E*R*(1-U)
+        s=(C.MN+C.ME)**2+excess;root=np.sqrt(s)
+        pf=np.sqrt(excess*(excess+4*C.MN*C.ME))/(2*root)
+        en=(s+C.MN**2-C.ME**2)/(2*root)
+        el=(s+C.ME**2-C.MN**2)/(2*root)
+        total=proton+nu;beta=total[:,1:]/total[:,0,None]
+        kcm=C.boost(nu,-beta);axis=kcm[:,1:]/np.linalg.norm(kcm[:,1:],axis=1)[:,None]
+        ey=np.tile([0.,1.,0.],(len(U),1));ex=np.cross(ey,axis)
+        direction=CO[:,None]*axis+np.sqrt(1-CO*CO)[:,None]*(np.cos(PH)[:,None]*ex+np.sin(PH)[:,None]*ey)
+        lepton=C.boost(np.column_stack([el,pf[:,None]*direction]),beta)
+        neutron=C.boost(np.column_stack([en,-pf[:,None]*direction]),beta)
+        if np.any(neutron[:,0]<C.MN) or np.any(lepton[:,0]<C.ME):raise ArithmeticError('Positive future shell violation')
+        current=C.literal_capture if rule.literal else C.scalar_capture
+        amp=current('PC',nu,neutron,lepton,proton)
+        # avg4 forward-capture current; inverse initial nu active helicity has
+        # avg2 baryon current=2*amp, with spin2 baryon density, giving this factor.
+        base=np.log(weight*width*W*pa*pf/(64*math.pi**4*E*root*C.HBAR))+np.log(amp)
+        forward=log_fd((mun-neutron[:,0])/T)+log_fd((-mue-lepton[:,0])/T)+log_fd((ea-mup)/T)
+        backward=log_fd((mup-ea)/T)+log_fd((neutron[:,0]-mun)/T)+log_fd((lepton[:,0]+mue)/T)
+        js.append(float(logsumexp(base+forward)));cs.append(float(logsumexp(base+backward)))
+        # Direct shells are well conditioned here (gamma~9 at .1MeV), unlike
+        # q-axis enumeration at Ea3.6e6. Retain original strict relative gate.
+        mr=max(float(np.max(abs(C.dot(neutron,neutron)/C.MN**2-1))),float(np.max(abs(C.dot(lepton,lepton)/C.ME**2-1))))
+        mass_res=max(mass_res,mr)
+        er=float(np.max(abs(total-neutron-lepton)))/ea;energy_res=max(energy_res,er)
+        # Unsquared original delta: Ea+Eν-El=sqrt(Mn²+|pa+k-l|²).
+        finalvec=proton[:,1:]+nu[:,1:]-lepton[:,1:]
+        shellE=np.sqrt(C.MN*C.MN+np.sum(finalvec*finalvec,axis=1))
+        delta_res=max(delta_res,float(np.max(abs(ea+E-lepton[:,0]-shellE)))/ea)
+        if mr>1e-10 or er>1e-10 or delta_res>1e-10:raise ArithmeticError('Original strict future-shell/conservation gate failed')
+        events+=len(U)
+    lj,lc=float(logsumexp(js)),float(logsumexp(cs))
+    return {'E_MeV':E,'bath':dict(zip(('T','mu_n','mu_p','mu_e'),BATH)),'rule':asdict(rule),'log_j_s-1':lj,'log_true_chi_s-1':lc,
+            'ordinary_j_s-1':math.exp(lj) if lj>-745 else None,'ordinary_true_chi_s-1':math.exp(lc) if lc>-745 else None,
+            'threshold_initial_proton_energy_MeV':emin,'threshold_initial_momentum_MeV':pmin,'events':events,
+            'max_shell_relative':mass_res,'max_four_conservation_scaled':energy_res,'max_unsquared_delta_scaled':delta_res,
+            'KMS_log_residual':lj-lc+(E-(mun-mup-mue))/T,'seconds':time.monotonic()-start}

@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN selected controlled conductive slab accepted",
+  "checks": 55,
+  "all_pass": true,
+  "author_source_sha256": "036e45427ba33eef06cd94127487d7afac33220e50e87e6d8bf5448a40965317",
+  "files": {
+    "audit.json": "e55ca3a948ad7ab6286e3745e1bd78a709e36ef00f49161cb5f67b2359dad828",
+    "audit.py": "894233bd8174b4fadb5dd19cf7eeb1dacc3398aed98d97bd72d65d08738b862a",
+    "results.json": "77b32a28e8b163365488d27bdbeb758751257fe2393bcae8f350e906188d5907",
+    "probe.py": "5494cec2a8a8604075e8a4e30eef7a1ec441513a1e11e1055ccfc8ef76e75a1a",
+    "REVIEW.md": "3280e40d68a83672cb0707fa27169bc7d9688a888dc1a01d61dd951d2f14c306"
+  },
+  "author_entropy_assertion_failures_preserved": 6,
+  "open_gates": [
+    "nonlinear dynamic spatial convergence",
+    "physical local-FD energy thermalization",
+    "broad state/contrast/CFL qualification",
+    "realistic conductivity model uncertainty"
+  ],
+  "figure_visually_checked": true
+}

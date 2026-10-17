@@ -1,0 +1,152 @@
+{
+  "utc": "2026-10-16T06:56:56.846190+00:00",
+  "scope": "PUREindependent spectralreferenceprep only; no candidateimports",
+  "newphysicalcalls_sofar": 0,
+  "candidate_imported": false,
+  "author_lock_status": "awaitimmutableLOCKbeforeactualcalls",
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "masses": {
+    "MN": 939.56542052,
+    "MP": 938.27208816,
+    "ME": 0.51099895069,
+    "MW": 938.91875434,
+    "HC": 197.3269804,
+    "HBAR": 6.582119569e-22
+  },
+  "sourcepins": {
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "hot_electron_capture_moments/electron_capture.py": "b9954da0a2324376c19e4277013436b135d1432f9cb9904b03761be30bd1b3d1",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+    "review_hot_beta_opacity_spectrum/reference.py": "dccb6f4c417b1d7e51ecd7a74be12c6d2bdcecb1db7eba1349c0c50d738fc9a3",
+    "review_hot_ec_opacity_spectrum/results.json": "b297461d953f230c083348fc314f088944fb55daaea8ea477ebadaefc0893d32",
+    "hot_ec_opacity_spectrum/results.json": "5c64c246e174f39331ec3c0749e9657dbf5fb4829f8eb7e17901565a0c978b1e",
+    "hot_pc_opacity_spectrum/results.json": "bb0a3d0eba12795cb393e13a79936d6946ab98dc6d06c25fafa1f9a82557a2aa",
+    "hot_beta_opacity_spectrum/pilot_results.json": "ef68460791194dd8dbf678e2900da0846142c5ecd2d5d87d86b5bb5711d14983",
+    "hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88",
+    "finite_t_weak_spectral_integration_contract/CONTRACT.md": "5fa8a528cba8022a05aac8e821afdb07ecda1baaa260a1c59eb5997718af0340",
+    "review_finite_t_weak_spectral_integration_contract/CHECKPOINT.json": "2b990178cf17ae1db0dc11dfd07bdbb64c3df9e100414b5f3b10abc97447738f"
+  },
+  "differential_points": [
+    {
+      "channel": "EC",
+      "E": 4.61,
+      "El": 5.897,
+      "cosine": 0.27,
+      "label": "NEWspacelike"
+    },
+    {
+      "channel": "EC",
+      "E": 4.61,
+      "El": 5.897,
+      "cosine": 0.99987,
+      "label": "NEWpasttimelike"
+    },
+    {
+      "channel": "PC",
+      "E": 1.677,
+      "El": 0.5631,
+      "cosine": -0.283,
+      "label": "NEWbelowstationarytargetthresholdspacelike"
+    },
+    {
+      "channel": "PC",
+      "E": 8.431,
+      "El": 7.193,
+      "cosine": 0.417,
+      "label": "NEWspacelike"
+    }
+  ],
+  "capture_incident_points": [
+    {
+      "channel": "EC",
+      "E": 6.431
+    },
+    {
+      "channel": "PC",
+      "E": 4.237
+    }
+  ],
+  "beta_incident_points": [
+    0.337,
+    0.873
+  ],
+  "profiles": {
+    "differential_coarse": {
+      "order": 20,
+      "phi": 6,
+      "tail": 65.0
+    },
+    "differential_fine": {
+      "order": 32,
+      "phi": 10,
+      "tail": 85.0
+    },
+    "spinor_reference": {
+      "order": 36,
+      "phi": 10,
+      "tail": 90.0
+    },
+    "capture_coarse": {
+      "order": 6,
+      "qorder": 10,
+      "inner": 20,
+      "phi": 6,
+      "tail": 65.0,
+      "outer_tail": 40.0
+    },
+    "capture_fine": {
+      "order": 10,
+      "qorder": 16,
+      "inner": 32,
+      "phi": 10,
+      "tail": 85.0,
+      "outer_tail": 50.0
+    },
+    "beta_coarse": {
+      "parent": 8,
+      "nu_order": 10,
+      "electron": 10,
+      "phi_order": 8,
+      "tail": 65.0
+    },
+    "beta_fine": {
+      "parent": 12,
+      "nu_order": 16,
+      "electron": 16,
+      "phi_order": 12,
+      "tail": 85.0
+    }
+  },
+  "gates": {
+    "relative_profile": 3e-06,
+    "differential_literal_relative": 3e-09,
+    "current_relative": 3e-10,
+    "on_shell_relative": 3e-10,
+    "KMS_log": 3e-10,
+    "positive_finite_log": true,
+    "lightcone_conditioning_min": 1e-10,
+    "q_positive": true,
+    "job_budget_seconds": 105,
+    "hard_process_bound_seconds": 120
+  },
+  "method": {
+    "capture": "Independent q-restframes: spacelike originalpzdelta/cylindricalu, timelike shell sphere in Qrestframe; sourceEq47amplitudes with independentliteralspinoranchors. Outerlogplepton/q separatefromauthoranglemap.",
+    "beta": "Existing independent rapidity/flatDalitz deltaovercosstar and Diractrace, fixedexplicitbath replacingONLY old matched() factory; no newauthorconditionalalgorithm."
+  },
+  "representability": "Logpositivej/chi; no widthonlyskip; unresolved or nonpositivecontractionraises. Differentialexactemptyonlyfrominvarianttimelikeproof; q0/lightconedegeneracyraises.",
+  "limitations": "Selected quadrature agreement, not externalphysicalvalidation or uniformdomain; no fullinfiniterangeRQ or EOS/currentmutation/AD/transport. SavednodeRQarithmetic only untilseparatelyauthorizedfresh reconstruction.",
+  "future_adversaries": [
+    "finite-log ordinaryNone vs falsezero",
+    "weightedpanelunderflow example not widthonlyproof",
+    "singularq/lightconecoord",
+    "FDholeonce/sourceflavormuexact",
+    "finite-rangecoverage bothbranches",
+    "old PCnoneq vsbetaemissionlabelmismatch"
+  ]
+}

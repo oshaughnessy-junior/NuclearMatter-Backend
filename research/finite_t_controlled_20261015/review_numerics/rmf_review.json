@@ -1,0 +1,303 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "pinned Git blob rmft.py",
+      "actual": "1edba14f7422f37f1ae6e4eb58167dc2c2140061",
+      "expected": "1edba14f7422f37f1ae6e4eb58167dc2c2140061",
+      "passed": true
+    },
+    {
+      "name": "pinned Git blob constants.py",
+      "actual": "cbd0b9009e1f333c6c447930670bcbfedaefd68e",
+      "expected": "cbd0b9009e1f333c6c447930670bcbfedaefd68e",
+      "passed": true
+    },
+    {
+      "name": "grand-potential pressure (0.12, 15.0, 0.3)",
+      "actual": 0.9134278454385837,
+      "expected": 0.9134278454385854,
+      "error": 1.8231703196415246e-15,
+      "passed": true
+    },
+    {
+      "name": "pressure Helmholtz derivative (0.12, 15.0, 0.3)",
+      "actual": 0.9134278550835546,
+      "expected": 0.9134278454385837,
+      "error": 1.0559094493556269e-08,
+      "passed": true
+    },
+    {
+      "name": "composition entropy Maxwell (0.12, 15.0, 0.3)",
+      "actual": 0.060415118443603304,
+      "expected": 0.06041511093371809,
+      "error": 1.2430474921970983e-07,
+      "passed": true
+    },
+    {
+      "name": "Gibbs-Duhem density pressure (0.12, 15.0, 0.3)",
+      "actual": 24.54983976658368,
+      "expected": 24.54983966124757,
+      "error": 4.290704585695662e-09,
+      "passed": true
+    },
+    {
+      "name": "pressure refinement (0.12, 15.0, 0.3)",
+      "actual": 0.9134278454385837,
+      "expected": 0.9134278454385865,
+      "error": 3.0386171994025374e-15,
+      "passed": true
+    },
+    {
+      "name": "grand-potential pressure (0.4, 50.0, 0.2)",
+      "actual": 75.70574529405248,
+      "expected": 75.7057452940525,
+      "error": 3.754234149602492e-16,
+      "passed": true
+    },
+    {
+      "name": "pressure Helmholtz derivative (0.4, 50.0, 0.2)",
+      "actual": 75.70574543167885,
+      "expected": 75.70574529405248,
+      "error": 1.817911863703478e-09,
+      "passed": true
+    },
+    {
+      "name": "composition entropy Maxwell (0.4, 50.0, 0.2)",
+      "actual": 0.2976058465560538,
+      "expected": 0.2976058091650202,
+      "error": 1.256394614996943e-07,
+      "passed": true
+    },
+    {
+      "name": "Gibbs-Duhem density pressure (0.4, 50.0, 0.2)",
+      "actual": 482.4365501134852,
+      "expected": 482.4365494326343,
+      "error": 1.4112755714287808e-09,
+      "passed": true
+    },
+    {
+      "name": "pressure refinement (0.4, 50.0, 0.2)",
+      "actual": 75.70574529405248,
+      "expected": 75.7057452940525,
+      "error": 3.754234149602492e-16,
+      "passed": true
+    },
+    {
+      "name": "grand-potential pressure (0.02, 3.0, 0.2)",
+      "actual": -0.02168687240480569,
+      "expected": -0.021686872404805657,
+      "error": 1.4398121584679625e-15,
+      "passed": true
+    },
+    {
+      "name": "pressure Helmholtz derivative (0.02, 3.0, 0.2)",
+      "actual": -0.021686867285310996,
+      "expected": -0.02168687240480569,
+      "error": 2.3606422342496943e-07,
+      "passed": true
+    },
+    {
+      "name": "composition entropy Maxwell (0.02, 3.0, 0.2)",
+      "actual": 0.015608156370789867,
+      "expected": 0.015608154295894865,
+      "error": 1.3293660243264882e-07,
+      "passed": true
+    },
+    {
+      "name": "Gibbs-Duhem density pressure (0.02, 3.0, 0.2)",
+      "actual": -4.0891008700166385,
+      "expected": -4.089100871169649,
+      "error": 2.8197155515167877e-10,
+      "passed": true
+    },
+    {
+      "name": "pressure refinement (0.02, 3.0, 0.2)",
+      "actual": -0.02168687240480569,
+      "expected": -0.021686872404803034,
+      "error": 1.2238403346979161e-13,
+      "passed": true
+    },
+    {
+      "name": "gas n=dP/dnu T0.5067730717679395 nu0.0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "gas scalar=-dP/dmass T0.5067730717679395 nu0.0",
+      "actual": 8.25444629440529e-05,
+      "expected": 8.254446303910837e-05,
+      "error": 1.1515669302218397e-09,
+      "passed": true
+    },
+    {
+      "name": "gas s=dP/dT T0.5067730717679395 nu0.0",
+      "actual": 0.0011592928898871665,
+      "expected": 0.0011592930577155327,
+      "error": 1.4476785236029127e-07,
+      "passed": true
+    },
+    {
+      "name": "gas Euler T0.5067730717679395 nu0.0",
+      "actual": 0.000587498418886851,
+      "expected": 0.000587498418886851,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pair symmetry net zero",
+      "actual": 0.0,
+      "expected": 0.0,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "thermal antiparticles retained",
+      "actual": 4.802440104342739e-05,
+      "passed": true
+    },
+    {
+      "name": "gas n=dP/dnu T0.5067730717679395 nu0.5",
+      "actual": 0.01619455046767655,
+      "expected": 0.01619455049168974,
+      "error": 1.4827945211405819e-09,
+      "passed": true
+    },
+    {
+      "name": "gas scalar=-dP/dmass T0.5067730717679395 nu0.5",
+      "actual": 0.014012740370712467,
+      "expected": 0.014012740372243742,
+      "error": 1.0927734804445371e-10,
+      "passed": true
+    },
+    {
+      "name": "gas s=dP/dT T0.5067730717679395 nu0.5",
+      "actual": 0.11385657275020036,
+      "expected": 0.11385657465360409,
+      "error": 1.6717556558247323e-08,
+      "passed": true
+    },
+    {
+      "name": "gas Euler T0.5067730717679395 nu0.5",
+      "actual": 0.06579672034742715,
+      "expected": 0.06579672034742719,
+      "error": 6.327574262608567e-16,
+      "passed": true
+    },
+    {
+      "name": "Sommerfeld thermal index log-density derivative (0.16, 0.5)",
+      "actual": 1.933699894439724,
+      "expected": 1.9336998955416316,
+      "error": 5.698442032064512e-10,
+      "passed": true
+    },
+    {
+      "name": "Sommerfeld thermal index log-density derivative (0.32, 0.1)",
+      "actual": 1.9632008639338117,
+      "expected": 1.9632008648090913,
+      "error": 4.4584313416168987e-10,
+      "passed": true
+    },
+    {
+      "name": "Sommerfeld thermal index log-density derivative (0.8, 0.05)",
+      "actual": 1.5753166508332446,
+      "expected": 1.5753166496914588,
+      "error": 7.247976318033964e-10,
+      "passed": true
+    },
+    {
+      "name": "documented spinodal independently reproduced",
+      "actual": -11.340920391978797,
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "nB": 0.12,
+      "temperature": 15.0,
+      "Yp": 0.3,
+      "phi_mev": 226.46078514147734,
+      "omega_mev": 169.259190707904,
+      "rho_mev": -20.885087605536,
+      "dirac_mass_mev": 712.5392148585227,
+      "density_defined_landau_n_mev": 761.0455008212796,
+      "density_defined_landau_p_mev": 740.5018051462548,
+      "kinetic_mu_n_mev": 756.0533509632244,
+      "kinetic_mu_p_mev": 731.6344212886976,
+      "mu_n_mev": 935.7550854738964,
+      "mu_p_mev": 890.4510681938335,
+      "energy_density": 112.64150530751017,
+      "pressure": 0.9134278454385837,
+      "free_energy_density": 109.74623778934672,
+      "entropy_density": 0.19301783454422963,
+      "kinetic_energy_density": 89.90608027859103,
+      "scalar_field_energy_density": 12.329252535178476,
+      "vector_field_energy_density": 10.406172493740671,
+      "scalar_density": 0.11423449393465802,
+      "antiparticle_density": 3.4934763702222254e-44,
+      "max_normalized_equation_residual": 4.956352788505163e-16,
+      "branch": "local GM1 branch continued from cold first scalar upcrossing",
+      "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+    },
+    {
+      "nB": 0.4,
+      "temperature": 50.0,
+      "Yp": 0.2,
+      "phi_mev": 527.1217409514743,
+      "omega_mev": 564.19730235968,
+      "rho_mev": -104.42543802768,
+      "dirac_mass_mev": 411.87825904852576,
+      "density_defined_landau_n_mev": 586.509182212724,
+      "density_defined_landau_p_mev": 488.70673617908807,
+      "kinetic_mu_n_mev": 564.6166949869403,
+      "kinetic_mu_p_mev": 445.7008754719737,
+      "mu_n_mev": 1181.0267163604601,
+      "mu_p_mev": 957.6854588178137,
+      "energy_density": 413.63118304246353,
+      "pressure": 75.70574529405248,
+      "free_energy_density": 378.8376406467198,
+      "entropy_density": 0.6958708479148736,
+      "kinetic_energy_density": 219.88941161829987,
+      "scalar_field_energy_density": 74.6367846705668,
+      "vector_field_energy_density": 119.1049867535968,
+      "scalar_density": 0.30634484635511394,
+      "antiparticle_density": 2.352992895745295e-09,
+      "max_normalized_equation_residual": 1.561251128379126e-15,
+      "branch": "local GM1 branch continued from cold first scalar upcrossing",
+      "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+    },
+    {
+      "nB": 0.02,
+      "temperature": 3.0,
+      "Yp": 0.2,
+      "phi_mev": 44.437086174778194,
+      "omega_mev": 28.209865117984002,
+      "rho_mev": -5.221271901384,
+      "dirac_mass_mev": 894.5629138252219,
+      "density_defined_landau_n_mev": 907.6924865545786,
+      "density_defined_landau_p_mev": 899.7963171743394,
+      "kinetic_mu_n_mev": 907.0532557275498,
+      "kinetic_mu_p_mev": 897.9910412454811,
+      "mu_n_mev": 937.8737567962258,
+      "mu_p_mev": 923.5902704127732,
+      "energy_density": 18.798403090357137,
+      "pressure": -0.02168687240480569,
+      "free_energy_density": 18.722028062795317,
+      "entropy_density": 0.025458342520606244,
+      "kinetic_energy_density": 18.065676284986143,
+      "scalar_field_energy_density": 0.43496433848699984,
+      "vector_field_energy_density": 0.297762466883992,
+      "scalar_density": 0.019807585373311672,
+      "antiparticle_density": 7.690238375956681e-263,
+      "max_normalized_equation_residual": 1.2576745200831851e-14,
+      "branch": "local GM1 branch continued from cold first scalar upcrossing",
+      "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+    }
+  ],
+  "source_sha256": {
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_reference/validate_gm1.py": "d3a1856425432cd4162b0cda6852c2eca6530f9585139ca37b39c57912a8f761"
+  }
+}

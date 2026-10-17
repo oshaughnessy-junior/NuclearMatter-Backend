@@ -1,0 +1,147 @@
+{
+  "upstream_pins": 23,
+  "resolutions": {
+    "production_lepton_port/CANDIDATE_MANIFEST.json": {
+      "sha256": "5e9a2793bc0de9c2e2a01c78061bd7a76f093b260cb8a7564971aae18a1bf282",
+      "archive": 32,
+      "original_path": "review_production_lepton_thermal_bound/reviewed_repair_candidate/CANDIDATE_MANIFEST.json",
+      "stored_path": "review_production_lepton_thermal_bound/reviewed_repair_candidate/CANDIDATE_MANIFEST.json"
+    },
+    "production_baryon_port/CANDIDATE_MANIFEST.json": {
+      "sha256": "199716b691d88a4fc9b83ed7f8e8b48e36fbff16fcc9b1e8684d18d0922fc523",
+      "archive": 35,
+      "original_path": "production_baryon_port/CANDIDATE_MANIFEST.json",
+      "stored_path": "production_baryon_port/CANDIDATE_MANIFEST.json"
+    },
+    "production_weak_port/CANDIDATE_MANIFEST.json": {
+      "sha256": "80f0b4207003353b8bf59f1357c28baedbf85ccb06d0a85b9289bceb798a174e",
+      "archive": 41,
+      "original_path": "production_weak_port/CANDIDATE_MANIFEST.json",
+      "stored_path": "production_weak_port/CANDIDATE_MANIFEST.json"
+    },
+    "production_lepton_port/staged/src/nmbackend/reference/finite_t_leptons.py": {
+      "sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+      "archive": 32,
+      "original_path": "review_production_lepton_thermal_bound/reviewed_repair_candidate/staged/src/nmbackend/reference/finite_t_leptons.py",
+      "stored_path": "review_production_lepton_thermal_bound/reviewed_repair_candidate/staged/src/nmbackend/reference/finite_t_leptons.py"
+    },
+    "production_baryon_port/staged/src/nmbackend/reference/finite_t_baryons.py": {
+      "sha256": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b",
+      "archive": 35,
+      "original_path": "production_baryon_port/staged/src/nmbackend/reference/finite_t_baryons.py",
+      "stored_path": "production_baryon_port/staged/src/nmbackend/reference/finite_t_baryons.py"
+    },
+    "production_lepton_port/test_mirror/src/nmbackend/constants.py": {
+      "sha256": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317",
+      "current_exact_source": "production_lepton_port/test_mirror/src/nmbackend/constants.py",
+      "resolution": "ExactPR54BASE_PIN: unchanged NMBconstants Gitblob; no snapshotcopied",
+      "prerequisite_commit": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+      "repository_path": "src/nmbackend/constants.py",
+      "git_blob": "cbd0b9009e1f333c6c447930670bcbfedaefd68e"
+    },
+    "production_weak_port/staged/src/nmbackend/reference/weak_reference.py": {
+      "sha256": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+      "archive": 41,
+      "original_path": "production_weak_port/pre_signed_log_repair/staged/src/nmbackend/reference/weak_reference.py",
+      "stored_path": "production_weak_port/pre_signed_log_repair/staged/src/nmbackend/reference/weak_reference.py"
+    },
+    "production_weak_port/staged/src/nmbackend/reference/_weak_current.py": {
+      "sha256": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc",
+      "archive": 41,
+      "original_path": "production_weak_port/pre_signed_log_repair/staged/src/nmbackend/reference/_weak_current.py",
+      "stored_path": "production_weak_port/pre_signed_log_repair/staged/src/nmbackend/reference/_weak_current.py"
+    },
+    "production_weak_port/staged/src/nmbackend/reference/_weak_quadrature.py": {
+      "sha256": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69",
+      "archive": 41,
+      "original_path": "production_weak_port/staged/src/nmbackend/reference/_weak_quadrature.py",
+      "stored_path": "production_weak_port/staged/src/nmbackend/reference/_weak_quadrature.py"
+    },
+    "production_weak_port/staged/src/nmbackend/reference/_weak_two_body.py": {
+      "sha256": "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366",
+      "archive": 41,
+      "original_path": "production_weak_port/pre_signed_log_repair/staged/src/nmbackend/reference/_weak_two_body.py",
+      "stored_path": "production_weak_port/pre_signed_log_repair/staged/src/nmbackend/reference/_weak_two_body.py"
+    },
+    "production_weak_port/staged/src/nmbackend/reference/_weak_decay.py": {
+      "sha256": "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc",
+      "archive": 41,
+      "original_path": "production_weak_port/pre_signed_log_repair/staged/src/nmbackend/reference/_weak_decay.py",
+      "stored_path": "production_weak_port/pre_signed_log_repair/staged/src/nmbackend/reference/_weak_decay.py"
+    },
+    "installed_free_matter_binding/forward_results.json": {
+      "sha256": "199cd2693525c9beebc9c57ea6a6b28b41029bcea90702d547980272d7a42675",
+      "archive": 36,
+      "original_path": "installed_free_matter_binding/forward_results.json",
+      "stored_path": "installed_free_matter_binding/forward_results.json.gz"
+    },
+    "installed_free_matter_binding/partial_results.json": {
+      "sha256": "eef5e8084f972712d49e4b178a69605a52ab179151266f103a4ed472b69fc127",
+      "archive": 36,
+      "original_path": "installed_free_matter_binding/partial_results.json",
+      "stored_path": "installed_free_matter_binding/partial_results.json.gz"
+    },
+    "installed_free_matter_binding/weak_fine.json": {
+      "sha256": "c319aaa72e43c1024c9d03938bede1ef512fdd832671ff7d9bc65c71da63a6ad",
+      "archive": 36,
+      "original_path": "installed_free_matter_binding/weak_fine.json",
+      "stored_path": "installed_free_matter_binding/weak_fine.json.gz"
+    },
+    "installed_free_matter_binding/PACKAGE_PIN.json": {
+      "sha256": "c0a2c347de47402c86241e1f8659592d34ed3f3bd00144f3946621836dd58c54",
+      "archive": 36,
+      "original_path": "installed_free_matter_binding/PACKAGE_PIN.json",
+      "stored_path": "installed_free_matter_binding/PACKAGE_PIN.json"
+    },
+    "installed_free_matter_binding/LOCK.json": {
+      "sha256": "e577a01156fe048f48b182c00b93963d9fca0df35ec847274cbe75eabd3b51f5",
+      "archive": 36,
+      "original_path": "installed_free_matter_binding/LOCK.json",
+      "stored_path": "installed_free_matter_binding/LOCK.json"
+    },
+    "review_installed_free_matter_binding/REVIEW.md": {
+      "sha256": "11295739f71fe779553a3289bfc445cd44906b551a7ea7809b08968ce6fa25c7",
+      "archive": 36,
+      "original_path": "review_installed_free_matter_binding/REVIEW.md",
+      "stored_path": "review_installed_free_matter_binding/REVIEW.md"
+    },
+    "review_installed_weak_density_element/REVIEW.md": {
+      "sha256": "98acb1e0d5690216518c27eff8734e2e42397324d2e8f3ea7a476f5b256574fc",
+      "archive": 37,
+      "original_path": "review_installed_weak_density_element/REVIEW.md",
+      "stored_path": "review_installed_weak_density_element/REVIEW.md"
+    },
+    "review_production_weak_port/REVIEW.md": {
+      "sha256": "ad05069c9ed312408f4b18189358547f3f24645dfd7123b458d029e1a66d2cc3",
+      "archive": 41,
+      "original_path": "review_production_weak_port/REVIEW.md",
+      "stored_path": "review_production_weak_port/REVIEW.md"
+    },
+    "production_weak_port/AUTHOR_REPORT.md": {
+      "sha256": "f8c9cca81315df39b55321b79f3d804ccc1faa8063414cd150a35db504a448f7",
+      "archive": 41,
+      "original_path": "production_weak_port/AUTHOR_REPORT.md",
+      "stored_path": "production_weak_port/AUTHOR_REPORT.md"
+    },
+    "spectral_band_total_closure/events/EC_empty.json": {
+      "sha256": "10c7dc59ad5ca125ea1d4ae168ca55480000af8e48ec4096a502f3fcd489d0a0",
+      "archive": 47,
+      "original_path": "spectral_band_total_closure/events/EC_empty.json",
+      "stored_path": "spectral_band_total_closure/events/EC_empty.json"
+    },
+    "spectral_band_total_closure/events/PC_empty.json": {
+      "sha256": "7a73f446be095af31958ac66d7709593c2756dea5fe466dfb4430d5fd5ec9444",
+      "archive": 47,
+      "original_path": "spectral_band_total_closure/events/PC_empty.json",
+      "stored_path": "spectral_band_total_closure/events/PC_empty.json"
+    },
+    "spectral_band_total_closure/events/NEUTRON_DECAY_empty.json": {
+      "sha256": "57b2d1d5200f354aa0905158992bdf1c7089785bc944e6421db2bb5192ec5862",
+      "archive": 47,
+      "original_path": "spectral_band_total_closure/events/NEUTRON_DECAY_empty.json",
+      "stored_path": "spectral_band_total_closure/events/NEUTRON_DECAY_empty.json"
+    }
+  },
+  "new_scientific_calls": 0,
+  "no_upstream_copies": true
+}

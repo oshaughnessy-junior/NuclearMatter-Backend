@@ -1,0 +1,33 @@
+{
+  "incident_edges": [
+    0.0,
+    0.2,
+    0.5,
+    0.7,
+    0.7820077025790402,
+    0.9,
+    1.05,
+    1.2,
+    1.4
+  ],
+  "endpoint_note": "Initialmanualplanliteral mistakenfor electronkineticendpoint; preservedinitial_plan_endpoint_typo.json. Actualdriver ALWAYS usedexactS.ENDPOINT physicalantinu endpoint beforeanycollection; contract/raw physicalnodes unchanged.",
+  "coarse_order": 6,
+  "fine_order": 10,
+  "coarse_material": [
+    8,
+    10,
+    10,
+    6,
+    50.0
+  ],
+  "fine_material": [
+    12,
+    16,
+    16,
+    10,
+    70.0
+  ],
+  "relative_moment_gate": 3e-06,
+  "preregistered_before_collection": true,
+  "reference": "exactfrozenhot_beta_moments/results.json SHA57e2e89...; nofeedback reuse"
+}

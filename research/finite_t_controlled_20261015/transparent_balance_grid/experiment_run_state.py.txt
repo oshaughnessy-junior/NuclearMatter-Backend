@@ -1,0 +1,48 @@
+from pathlib import Path
+import hashlib,importlib.util,json,math,sys,time,traceback
+import numpy as np
+from scipy.optimize import brentq
+P=Path(__file__).resolve().parent;sys.dont_write_bytecode=True
+sp=importlib.util.spec_from_file_location('new_three_bath_balance_pure',P/'grid.py');M=importlib.util.module_from_spec(sp);sys.modules[sp.name]=M;sp.loader.exec_module(M)
+def run(index):
+ T,nB=M.STATES[index];start=time.monotonic();rows=[];checks=[];result=dict(T=T,nB=nB,index=index,rows=rows,checks=checks,status='RUNNING')
+ path=P/f'state_{index}.json'
+ if path.exists():raise RuntimeError('Completed or failed state evidence must not be overwritten')
+ def save():
+  result.update(seconds=time.monotonic()-start,passed=sum(c['passed']for c in checks),failed=[c for c in checks if not c['passed']]);path.write_text(json.dumps(result,indent=2)+'\n')
+ def ck(n,e,t):
+  checks.append(dict(name=n,error=float(e),tolerance=t,passed=bool(math.isfinite(e)and abs(e)<=t)));save()
+  if not checks[-1]['passed']:raise ArithmeticError('Gate failed: '+n)
+ def qualify(r,label):
+  for k,x in r['root_residuals'].items():ck(label+' EOS '+k,x,1e-10)
+  ck(label+' net charge',r['state']['electron']['net_density']/(nB*r['Ye'])-1,1e-10)
+  for k,x in r['density_integral_residuals'].items():ck(label+' integrated density '+k,x,3e-8)
+  for k in ['energy_ledger','direct_energy_ledger']:ck(label+' '+k,r[k],3e-10)
+  ck(label+' Le',r['lepton_ledger']/sum(r['rates'].values()),1e-14)
+  ck(label+' positive energy',0 if r['escaping_energy']>0 else 1,0)
+ def compare(a,b,label):
+  for ch in b['channels']:
+   for k,v in b['channels'][ch].items():
+    if k in a['channels'][ch]:ck(label+' '+ch+' '+k,a['channels'][ch][k]/v-1,3e-6)
+ def source(y):
+  if time.monotonic()-start>108:raise TimeoutError('New state budget108s before next source pair; partial evidence retained')
+  a=M.evaluate(T,nB,float(y));b=M.evaluate(T,nB,float(y),True);rows.append(dict(coarse=a,refined=b));save()
+  qualify(a,f'{y} coarse');qualify(b,f'{y} fine');compare(a,b,f'{y} quadrature');return b['net_material_number_source']
+ try:
+  result['acceptance']=M.require_acceptance()
+  ck('physical masses and weak mass',0 if M.EC.MN==M.PC.MN==M.BETA.K.MN and M.EC.MP==M.PC.MP==M.BETA.K.MP and M.EC.MW==M.PC.MW else 1,0)
+  for q in [np.array([-.4,1.2,-.6,2.3]),np.array([1.,.2,-.3,.1])]:ck('same fullcurrent matrix',np.max(abs(M.EC.E.vertices(q[None,:],M.EC.MW)-M.BETA.B.vertices(q[None,:],M.EC.MW))),1e-13)
+  chemical=brentq(lambda y:(lambda b:b.mu_n-b.mu_p-b.mu_e)(M.material(T,nB,y)[0]),.05,.9,xtol=1e-12)
+  result['chemical_Ye']=chemical;ck('chemical root residual',(lambda b:b.mu_n-b.mu_p-b.mu_e)(M.material(T,nB,chemical)[0]),1e-9)
+  # Actual source calls at every root trial; no saved-moment interpolation.
+  root=brentq(source,.2,.85,xtol=2e-9,rtol=1e-12)
+  result['kinetic_Ye']=root;source(root);r=rows[-1]['refined'];result['balanced']=r
+  ck('kinetic drift normalized gross',r['net_material_number_source']/sum(r['rates'].values()),1e-7)
+  source(chemical);result['chemical_source']=rows[-1]['refined']
+  tail=M.evaluate(T,nB,root,True,True);result['tail_extended']=tail;save();qualify(tail,'tail');compare(r,tail,'isolated tail')
+  result['status']='AUTHOR_SELECTED_PASS'
+ except Exception as e:
+  result['status']='EXCLUDED_FAILED_OR_INCOMPLETE';result['exception']=repr(e);result['traceback']=traceback.format_exc()
+ finally:save()
+ print(json.dumps(dict(index=index,status=result['status'],passed=result['passed'],failed=result['failed'],seconds=result['seconds'],kinetic_Ye=result.get('kinetic_Ye'),chemical_Ye=result.get('chemical_Ye'),exception=result.get('exception'))))
+if __name__=='__main__':run(int(sys.argv[1]))

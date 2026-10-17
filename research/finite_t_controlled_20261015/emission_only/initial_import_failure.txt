@@ -1,0 +1,5 @@
+Initial local author run, 2026-10-15 13:37 UTC:
+ModuleNotFoundError: No module named 'mapped_capture'
+Cause: log_emission.py imported the guarded capture module before adding its
+capture_endpoint dependency directory to sys.path. Fixed only in the new leaf.
+No numerical experiment or scientific gate ran before this import failure.

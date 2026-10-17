@@ -1,0 +1,52 @@
+{
+  "channel": "EC",
+  "E": 6.431,
+  "kind": "material",
+  "controls": {
+    "order": 14,
+    "qorder": 24,
+    "inner": 40,
+    "phi": 12,
+    "tail": 95.0,
+    "outer_tail": 50.0
+  },
+  "row": {
+    "E": 6.431,
+    "channel": "EC",
+    "logj": -2.165009503170893,
+    "logchi": 2.4551725816390064,
+    "controls": {
+      "order": 14,
+      "qorder": 24,
+      "inner": 40,
+      "phi": 12,
+      "tail": 95.0,
+      "outer_tail": 50.0
+    },
+    "calls": 10128,
+    "timelike": 3744,
+    "exact_empty_differentials": 0,
+    "seconds": 14.731005708919838,
+    "upperleptonenergy": 107.72433236000002
+  },
+  "checks": [
+    {
+      "name": "material onlyextension j",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "material onlyextension chi",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 2,
+  "failed": [],
+  "complete": true,
+  "candidate_imported": false,
+  "seconds": 14.733698375057429,
+  "scope": "Isolatedboundextensiononly, no rigorousinfinitedomainerrorcertificate"
+}

@@ -1,0 +1,39 @@
+{
+  "frozen_UTC": "2026-10-15T23:21:49.818827+00:00",
+  "status": "AUTHOR_FROZEN_INDEPENDENT_REVIEW_PENDING",
+  "files": {
+    "FITTING_LOCK.json": "aea52bc7dcbaf970241b1cb61d6637fce57f49e3dc3f015b9f498e4abc58774e",
+    "PREREGISTRATION.json": "e8ee27ad657a4c9d4cd9e248bb3dd84b64d8223a4ac29aa6d86c0c14c88bb3bb",
+    "QUALIFICATION.json": "3a9a0eadebbda008645663b29c78c65fef0de8836e479c934f01936ca5f958be",
+    "RESEARCH_NOTE.md": "dd0d6c6eab723a17563f0c950fb42242ec6809904f9ef2dacfeb27cf821e3819",
+    "SOURCES.md": "193423c777ab1c3b6f0871af2a28e72aba0b818dbfb2bfba6ec604ad75cbfd37",
+    "anchor.py": "f348243b8b40ba9968866025ad206f0ac19ea2036663aa2e6f06821d89124b7a",
+    "api.py": "edf38db39a3776965c97e36592fc0a95ab4e95110f35002e2bc45f2794edc658",
+    "api_results.json": "f6b562930ae06a5423b778d2597d8bcfd41a1d865061e1291b565cda537fe066",
+    "check_contract.py": "61bf5c813c972e4dfe801ed056d2efd275366c6cc5a24c2387d8997d090ab9c5",
+    "develop.py": "63e24636fc9af0e6710ad3addeca18e3699d1b2cc3c7dc676c6c214d81d969b1",
+    "development_partial.json": "d41ea305c8f817e2b62428dce42d38c3b621fac6ad12ce069dd1f8ee5257f298",
+    "final_checks.py": "3f3febf6a28de96c2fb12be32f206646f7af2abfca161ea445a411e4b8e03165",
+    "final_results.json": "a56544d13bc025d87f86240eaf93b591cc2f5285c2bb7c6616b6bf9c2ebc49c0",
+    "fit.py": "16eb752a40571b5be4ebc2e4a57de483e5f71b756ae14476e93cf5582c5bcb69",
+    "joint_moments.pdf": "f3a8d5bf78b164dfc5eb63ea7be40af9aa7b7bdc45b73a2f8f1d30381058fca1",
+    "joint_moments.png": "038b794ff4b1fa9b97954d1c6af66535220ab85ac24b79243031a1fac701de96",
+    "make_figure.py": "c8ef60a029eb664c0bd33e974e569773b140a3d6b2964d7f6c57608758cbf811",
+    "model.json": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0",
+    "phase_partial.json": "5358aebe3904f93d332c4cdcea7b97b27075dd22af5466e84e4bbd37e1792efc",
+    "phase_reference.py": "d4f463a9b5d81f68b71c93992ddaa6d3b21bfbd864603ee2772a7eef670f9e72",
+    "phase_results.json": "69eb35146622a6bbf3d0db4476dd7ed8c3b1af6b0311772018cc8608641486d5",
+    "reference.py": "66c2e1335dcde2ca0adc1f7519abc8ab6748bcfc324e149e66c4facfed860fce",
+    "training.json": "549fa0f584b8b505aae0c628a23dc9deb5bfe125f976c329042be4a2adfaa1d9",
+    "validate.py": "954289a4ee5e4386426803d88db9a0389b240bbf6271ddc10137679f1dc69f8b",
+    "validation.json": "2e48cce9936d8d63f79eb5bbd748c7eeffae8b852f17de7278fc249231acbec1",
+    "validation_partial.json": "4fc9f5084bd31a2cb50cadd11b96efd881df53222ea19a2c1c4a0bc8b24e0b34"
+  },
+  "source_pins": {
+    "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  },
+  "model_sha": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0",
+  "qualification_sha": "3a9a0eadebbda008645663b29c78c65fef0de8836e479c934f01936ca5f958be"
+}

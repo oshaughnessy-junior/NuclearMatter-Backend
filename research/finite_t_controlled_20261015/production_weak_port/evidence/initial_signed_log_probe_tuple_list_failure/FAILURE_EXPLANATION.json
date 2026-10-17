@@ -1,0 +1,6 @@
+{
+  "outcome": "original probe499PASS2FAIL preserved",
+  "finding": "dataclasses.asdict retains tuples; saved JSON restores lists. Direct Python tuple-vs-list equality always fails independent of physical values. Normalize through exact JSON representation and then require exact equality.",
+  "production_source_changed": false,
+  "numerical_gate_changed": false
+}

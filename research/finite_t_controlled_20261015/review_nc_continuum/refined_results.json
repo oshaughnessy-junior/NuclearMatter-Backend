@@ -1,0 +1,386 @@
+{
+  "checks": [
+    {
+      "name": "cold refined96 authorcomparison blocked_out_rate_s",
+      "error": 4.208003776540181e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined96 authorcomparison blocked_transport_rate_s",
+      "error": 7.240704400501841e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined96 authorcomparison energy_to_bath_MeV_s",
+      "error": 1.0962101348876985e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined96 authorcomparison absolute_energy_transfer_MeV_s",
+      "error": 1.0867312230100623e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined96 authorcomparison gain_s",
+      "error": 1.238963820426875e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined96 authorcomparison loss_s",
+      "error": 4.208003767658397e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined96 authorcomparison net_collision_s",
+      "error": 5.404427665389733e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined144 authorcomparison blocked_out_rate_s",
+      "error": 2.1834266172859884e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined144 authorcomparison blocked_transport_rate_s",
+      "error": 3.754876853889755e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined144 authorcomparison energy_to_bath_MeV_s",
+      "error": 5.335207275969367e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined144 authorcomparison absolute_energy_transfer_MeV_s",
+      "error": 5.2890737123334475e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined144 authorcomparison gain_s",
+      "error": 9.47418810071099e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined144 authorcomparison loss_s",
+      "error": 2.1834266172859884e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold refined144 authorcomparison net_collision_s",
+      "error": 2.8050840317206394e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent96->144 blocked_out_rate_s",
+      "error": 3.9896610259937404e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent96->144 blocked_transport_rate_s",
+      "error": 6.865216459761569e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent96->144 energy_to_bath_MeV_s",
+      "error": 1.0428580066168536e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent96->144 absolute_energy_transfer_MeV_s",
+      "error": 1.0338404310417104e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent96->144 gain_s",
+      "error": 1.1442218283974626e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent96->144 loss_s",
+      "error": 3.989661019332402e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent96->144 net_collision_s",
+      "error": 5.123919117888676e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T1.1Ep12.467c-0.63",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T1.1Ep14.659c0.27",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T1.1Ep13.7c0.999",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "finalblocking T1.1",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "incomingloss T1.1",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T0.2Ep17.836000000000002c-0.63",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T0.2Ep20.972c0.27",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T0.2Ep19.6c0.999",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "finalblocking T0.2",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "incomingloss T0.2",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T0.08Ep17.836000000000002c-0.63",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T0.08Ep20.972c0.27",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "actualreverse DOS T0.08Ep19.6c0.999",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "finalblocking T0.08",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "incomingloss T0.08",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "LTE actualreverse grossscaled residual",
+      "error": 5.959343426816884e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "preserved overflow reproduces at exponent720",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "cold08 independent96->144 blocked_out_rate_s",
+      "error": 7.291658512542654e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold08 independent96->144 blocked_transport_rate_s",
+      "error": 1.3444347342073115e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold08 independent96->144 energy_to_bath_MeV_s",
+      "error": 3.2153067504037125e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold08 independent96->144 absolute_energy_transfer_MeV_s",
+      "error": 3.213411437386071e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold08 independent96->144 gain_s",
+      "error": 3.106632728844261e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold08 independent96->144 loss_s",
+      "error": 7.291658519203992e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold08 independent96->144 net_collision_s",
+      "error": 7.866763651609432e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "source/data hashes unchanged",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "cold q96 E48",
+      "values": [
+        187183.38749072456,
+        217560.4648085704,
+        328049.68024589616,
+        330911.0597747235,
+        4.1716516090545643e-05,
+        0.00018887188720089973,
+        -0.00014715537111035395
+      ]
+    },
+    {
+      "label": "cold q144 E64",
+      "values": [
+        187183.31281092777,
+        217560.31544870455,
+        328049.33813701733,
+        330910.7176658445,
+        4.171651613827859e-05,
+        0.0001888718118474492,
+        -0.00014715529570917066
+      ]
+    },
+    {
+      "label": "LTE actualreverse",
+      "values": [
+        115197.56457047202,
+        118498.25794348192,
+        23592.57821211332,
+        85154.29097841191,
+        8.238990444966499,
+        8.23899044496649,
+        9.819794710363637e-15
+      ]
+    },
+    {
+      "label": "cold overflow exact integrand",
+      "T": 0.08,
+      "Ein": 19.6,
+      "Eout": 77.2,
+      "exponent": 720.0,
+      "exception": "OverflowError('math range error')"
+    },
+    {
+      "label": "cold08 independent96",
+      "values": [
+        179082.31672224138,
+        211505.11850129566,
+        328401.9775074376,
+        328595.6754703449,
+        1.842580537467649e-12,
+        2.519440547726757e-11,
+        -2.3351824939799936e-11
+      ]
+    },
+    {
+      "label": "cold08 independent144",
+      "values": [
+        179082.18614162668,
+        211504.83414685016,
+        328400.9215977375,
+        328594.6195606362,
+        1.842580536895227e-12,
+        2.5194387106380834e-11,
+        -2.3351806569485625e-11
+      ]
+    }
+  ],
+  "failures": [],
+  "source_hashes_before": {
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "nc_continuum_grid/make_figure.py": "18545d0bab96691bb249ca87ce14d8ad1ca210fd8dfef56d1e96bcb35ca21a9f",
+    "nc_continuum_grid/refine.py": "af0bd533e0773f527de42fb205279060aaa1d3e2f1a8003f0673edcccf8d76fe",
+    "nc_continuum_grid/tail_extension.py": "8ceb5f7fc0363ef33a09ba75dec411087069739bac1fdd77b0ee2e94c9b16296",
+    "nc_continuum_grid/check_controls.py": "b9c97f773f9873e4fa204ce093e9ffcbb610d7c124937489bb37e14fc03bcc0c",
+    "nc_continuum_grid/study.py": "44ecbb5f8843f630eb6645639d1bd575871c5f0e1077c90e18d308d90f848d90",
+    "nc_continuum_grid/refine_dense_grid.py": "2f4890f3ec54ceb5bcce7e5fccfb9830c9842777bc80bf53337e79cb6545bc3c",
+    "nc_continuum_grid/SOURCES.json": "1a053d71d7749da886042a3cd1b6d71ea248cdf889b78f97d6383e9e666cc023",
+    "nc_continuum_grid/refinements.json": "c191090ca05093c31aac8eb07d5bcb620ef86aed8afa14237e76bcb8ce6a0051",
+    "nc_continuum_grid/controls.json": "4f9389bb99b5fa93e0309cba82a180da76403a41d1d7677d07f2b1b6902d3b70",
+    "nc_continuum_grid/CHECKPOINT.json": "c984c6edb7547bff1daf683c1af7a8573dc2b076e096c33943e1ab9625a0a836",
+    "nc_continuum_grid/tail_extension.json": "9f7c4cf5db5fff9ba8f6e2d5cb3fb996f9ee2877690fb1e82e5ce4a78e77a734",
+    "nc_continuum_grid/results.json": "fdc0aa91452d6d91ff85cddfd17ef0a142624988b7210edbb6ddcf333d7a7644",
+    "nc_continuum_grid/dense_grid_refinement.json": "ee091fa8bc4491a0ccb2eeaec7e997aa52907461cd39d6ecff1bbdb2177a9fb7",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c"
+  },
+  "source_hashes_after": {
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "nc_continuum_grid/make_figure.py": "18545d0bab96691bb249ca87ce14d8ad1ca210fd8dfef56d1e96bcb35ca21a9f",
+    "nc_continuum_grid/refine.py": "af0bd533e0773f527de42fb205279060aaa1d3e2f1a8003f0673edcccf8d76fe",
+    "nc_continuum_grid/tail_extension.py": "8ceb5f7fc0363ef33a09ba75dec411087069739bac1fdd77b0ee2e94c9b16296",
+    "nc_continuum_grid/check_controls.py": "b9c97f773f9873e4fa204ce093e9ffcbb610d7c124937489bb37e14fc03bcc0c",
+    "nc_continuum_grid/study.py": "44ecbb5f8843f630eb6645639d1bd575871c5f0e1077c90e18d308d90f848d90",
+    "nc_continuum_grid/refine_dense_grid.py": "2f4890f3ec54ceb5bcce7e5fccfb9830c9842777bc80bf53337e79cb6545bc3c",
+    "nc_continuum_grid/SOURCES.json": "1a053d71d7749da886042a3cd1b6d71ea248cdf889b78f97d6383e9e666cc023",
+    "nc_continuum_grid/refinements.json": "c191090ca05093c31aac8eb07d5bcb620ef86aed8afa14237e76bcb8ce6a0051",
+    "nc_continuum_grid/controls.json": "4f9389bb99b5fa93e0309cba82a180da76403a41d1d7677d07f2b1b6902d3b70",
+    "nc_continuum_grid/CHECKPOINT.json": "c984c6edb7547bff1daf683c1af7a8573dc2b076e096c33943e1ab9625a0a836",
+    "nc_continuum_grid/tail_extension.json": "9f7c4cf5db5fff9ba8f6e2d5cb3fb996f9ee2877690fb1e82e5ce4a78e77a734",
+    "nc_continuum_grid/results.json": "fdc0aa91452d6d91ff85cddfd17ef0a142624988b7210edbb6ddcf333d7a7644",
+    "nc_continuum_grid/dense_grid_refinement.json": "ee091fa8bc4491a0ccb2eeaec7e997aa52907461cd39d6ecff1bbdb2177a9fb7",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c"
+  },
+  "runtime_seconds": 6.4647393331397325
+}

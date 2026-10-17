@@ -1,0 +1,317 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "independent amplitude cone j",
+      "error": 7.327471962526033e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "selected absolute response j",
+      "error": -7.366341481240823e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent amplitude cone chi",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "selected absolute response chi",
+      "error": -7.36634174769435e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "pinned source target j",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pinned source target chi",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "accepted response same actual bath",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "accepted response same energy",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "one helicity DOS",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "independent boost cone delta Jacobian",
+      "error": 5.149791704184281e-11,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "reject empty scenarios",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reject NaN tail",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reject NaN radiation",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reject budget121",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reject boolean radial",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reject conditional Ezero",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reject conditional orderbool",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/CHECKPOINT.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/initial_refinement_partial.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/moments.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/results.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/RESEARCH_NOTE.md",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/refine.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/initial_refinement_timeout.txt",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/controls_anchor.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/MATCHED_STATE.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/complete_refinement.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/check_guard_identity.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/guard_identity.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/conditional.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/initial_guard_reporting_failure.txt",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/initial_check_guard_identity.py.txt",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/check_controls_anchor.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/study.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture_moments/refinement.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes positron_capture/refinement.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "source bytes relativistic_capture_oracle/events.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "conditional_reference": {
+        "Enu": 5.0,
+        "j": {
+          "value": 0.3302219947096882,
+          "log": -1.1079901394489138,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.9874077302846928,
+          "log": -0.012672224258819753,
+          "representable": true,
+          "reason": null
+        },
+        "DOS": 1.648355407672656e-07,
+        "seconds": 0.10333149996586144,
+        "events": 67200,
+        "controls": {
+          "norder": 24,
+          "corder": 14,
+          "eorder": 20,
+          "phi_order": 10,
+          "tail": 50.0
+        },
+        "measure": "dR/dEnu divided by one-helicity DOS; CMcos delta Jacobian 1/(gamma beta Enu_star)"
+      },
+      "author_comparison": {
+        "Enu": 5.0,
+        "j": {
+          "value": 0.33022199470968583,
+          "log": -1.1079901394489209,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.987407730284691,
+          "log": -0.01267222425882153,
+          "representable": true,
+          "reason": null
+        },
+        "DOS": 1.648355407672656e-07,
+        "seconds": 3.521099249832332,
+        "events": 129024,
+        "controls": {
+          "norder": 28,
+          "corder": 16,
+          "eorder": 24,
+          "phi_order": 12,
+          "tail": 60.0
+        },
+        "measure": "dR/dEnu divided by one-helicity DOS; CMcos delta Jacobian 1/(gamma beta Enu_star)"
+      },
+      "independent_cone_jacobian": {
+        "inverse": 2.257299706135119,
+        "exact_inverse": 2.257299706251365
+      }
+    },
+    {
+      "preserved_coarse_counts": {
+        "total": 102,
+        "failed": 62
+      },
+      "runtime_exclusion": "Initial refine.py fourth requested rule n36/e72/initial12/outgoing12/phi12/tail60 exceeded the explicit110s per-integral guard. Three completed rows remain in initial_refinement_partial.json. No fourth integral or conditional spectrum was completed by that run. This is a runtime budget failure, not a demonstrated physics or convergence failure.\n"
+    }
+  ],
+  "source_hashes": {
+    "positron_capture_moments/CHECKPOINT.json": "a2393261a628d7ed6223526fccea56519af9dcdacf3fa531b14fb2ed0cdaa507",
+    "positron_capture_moments/initial_refinement_partial.json": "915b0f9a6a47d6e7147cc43bc32ea41b0734cc5b42f350a61493725dc3036588",
+    "positron_capture_moments/moments.py": "376c05dfe75f9788a9d9ab7559db899de9c6c559e48c9a8989dcc45ae8276a12",
+    "positron_capture_moments/results.json": "03beb7882dc8f89f42a151cf343e4332be6dbc6fa701abcdb28524a73ef48931",
+    "positron_capture_moments/RESEARCH_NOTE.md": "d3d0ad2d9f44d0284601637f7700c2681905162858e6a69e63f79c8f2945b226",
+    "positron_capture_moments/refine.py": "b65c92fa7fd443d633ca4adf2b8e69e63539d61600c82a7a2cc07b1118e7d844",
+    "positron_capture_moments/initial_refinement_timeout.txt": "9eed5deb7f5e892e199ab3a4357743128aaec10de7c7a3e5932a24c47c3a7994",
+    "positron_capture_moments/controls_anchor.json": "e937a6fef89b8bcc36feca933f6cf7342b8b72bfbfc1f011b960765a8e72e8e1",
+    "positron_capture_moments/MATCHED_STATE.json": "abfb9572ac0ddfa6e52179e03d162ff07648ae3ec15528d98f08f6db1226306e",
+    "positron_capture_moments/complete_refinement.py": "0ce4b01d57eb39c2fe5912ebe140b4510d403c6ac324e323e90cea5ffd52fa98",
+    "positron_capture_moments/check_guard_identity.py": "d4c758d34fdbaa298bccd9fe3ac10ba1f6bb00ad703f2a4fa976b977b3b39f21",
+    "positron_capture_moments/guard_identity.json": "a7c7603b7fb3dae047be0856cb3c891d5bc1e2a6c846b880f6ca24915c8e868c",
+    "positron_capture_moments/conditional.py": "7d2999d2f1d6e786ed7cfc56df97dc40f86138edf83408a18176bdfd82061991",
+    "positron_capture_moments/initial_guard_reporting_failure.txt": "b490af77ec93ac3f0851a3f1e5f6f76247b415575c42e012bb1ece2ba850e92a",
+    "positron_capture_moments/initial_check_guard_identity.py.txt": "d7f48cf9d677ec7e109364b12d026bfb9592fd9c8ba94041f29d24819e7d3090",
+    "positron_capture_moments/check_controls_anchor.py": "71a513e4ecb5309423967b0f3973b7f87cd7c3ffd2dacb001a1600cfed7bb9e7",
+    "positron_capture_moments/study.py": "c651515821a11729047be837ae0170263e4304df1c74c027ed38e2eca8af060d",
+    "positron_capture_moments/refinement.json": "524488939b55d563977d874f17fb42699f382187814d2dd1c36be95d96e77cf9",
+    "positron_capture/refinement.json": "828b06e48574cc9d044562faf0fc04dfbcd370a7dfb9710a78ff86f2285cfbc4",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  },
+  "runtime_seconds": 0.11066237487830222
+}

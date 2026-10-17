@@ -1,0 +1,1415 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "decimal exact threshold Falseelectron",
+      "error": 0.0,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalseelectronE17.3c-0.83",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalseelectronE17.3c-0.83",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalseelectronE17.3c-0.83",
+      "error": 1.2815014144024838e-32,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalseelectronE17.3c-0.83",
+      "error": 1.2212453270876722e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalseelectronE17.3c0.17",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalseelectronE17.3c0.17",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalseelectronE17.3c0.17",
+      "error": 1.0022004384831525e-32,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalseelectronE17.3c0.17",
+      "error": 9.992007221626409e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalseelectronE17.3c0.76",
+      "error": 5.551115123125783e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalseelectronE17.3c0.76",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalseelectronE17.3c0.76",
+      "error": 1.328261455270018e-32,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalseelectronE17.3c0.76",
+      "error": 2.9976021664879227e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total FalseelectronE17.3",
+      "error": 2.3314683517128287e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalseelectronE77.7c-0.83",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalseelectronE77.7c-0.83",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalseelectronE77.7c-0.83",
+      "error": 1.0952835919061859e-32,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalseelectronE77.7c-0.83",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalseelectronE77.7c0.17",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalseelectronE77.7c0.17",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalseelectronE77.7c0.17",
+      "error": 8.48733898906996e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalseelectronE77.7c0.17",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalseelectronE77.7c0.76",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalseelectronE77.7c0.76",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalseelectronE77.7c0.76",
+      "error": 1.4524629931427413e-32,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalseelectronE77.7c0.76",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total FalseelectronE77.7",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "decimal exact threshold Falsemuon",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "below threshold support Falsemuon",
+      "error": 0.0,
+      "tolerance": 1e-100,
+      "passed": true
+    },
+    {
+      "name": "positive nextafter threshold Falsemuon",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE137.2c-0.83",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE137.2c-0.83",
+      "error": 5.551115123125783e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE137.2c-0.83",
+      "error": 4.9911382727001234e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE137.2c-0.83",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE137.2c0.17",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE137.2c0.17",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE137.2c0.17",
+      "error": 6.70889538095305e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE137.2c0.17",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE137.2c0.76",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE137.2c0.76",
+      "error": 5.551115123125783e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE137.2c0.76",
+      "error": 5.254084479357494e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE137.2c0.76",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total FalsemuonE137.2",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE247.3c-0.83",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE247.3c-0.83",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE247.3c-0.83",
+      "error": 4.060288014274674e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE247.3c-0.83",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE247.3c0.17",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE247.3c0.17",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE247.3c0.17",
+      "error": 6.288357057082285e-34,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE247.3c0.17",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE247.3c0.76",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE247.3c0.76",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE247.3c0.76",
+      "error": 1.0444656935243978e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE247.3c0.76",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total FalsemuonE247.3",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE511.1c-0.83",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE511.1c-0.83",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE511.1c-0.83",
+      "error": 3.393091265323322e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE511.1c-0.83",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE511.1c0.17",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE511.1c0.17",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE511.1c0.17",
+      "error": 5.967187260382274e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE511.1c0.17",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace FalsemuonE511.1c0.76",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial FalsemuonE511.1c0.76",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state FalsemuonE511.1c0.76",
+      "error": 5.6324847693492104e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential FalsemuonE511.1c0.76",
+      "error": 5.551115123125783e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total FalsemuonE511.1",
+      "error": 7.771561172376096e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "decimal exact threshold Trueelectron",
+      "error": 3.1308289294429414e-14,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "below threshold support Trueelectron",
+      "error": 0.0,
+      "tolerance": 1e-100,
+      "passed": true
+    },
+    {
+      "name": "positive nextafter threshold Trueelectron",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TrueelectronE17.3c-0.83",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TrueelectronE17.3c-0.83",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TrueelectronE17.3c-0.83",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TrueelectronE17.3c-0.83",
+      "error": 1.021405182655144e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TrueelectronE17.3c0.17",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TrueelectronE17.3c0.17",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TrueelectronE17.3c0.17",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TrueelectronE17.3c0.17",
+      "error": 1.021405182655144e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TrueelectronE17.3c0.76",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TrueelectronE17.3c0.76",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TrueelectronE17.3c0.76",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TrueelectronE17.3c0.76",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total TrueelectronE17.3",
+      "error": 9.547918011776346e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TrueelectronE77.7c-0.83",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TrueelectronE77.7c-0.83",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TrueelectronE77.7c-0.83",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TrueelectronE77.7c-0.83",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TrueelectronE77.7c0.17",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TrueelectronE77.7c0.17",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TrueelectronE77.7c0.17",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TrueelectronE77.7c0.17",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TrueelectronE77.7c0.76",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TrueelectronE77.7c0.76",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TrueelectronE77.7c0.76",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TrueelectronE77.7c0.76",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total TrueelectronE77.7",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "decimal exact threshold Truemuon",
+      "error": 5.684341886080802e-14,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "below threshold support Truemuon",
+      "error": 0.0,
+      "tolerance": 1e-100,
+      "passed": true
+    },
+    {
+      "name": "positive nextafter threshold Truemuon",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE137.2c-0.83",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE137.2c-0.83",
+      "error": 5.551115123125783e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE137.2c-0.83",
+      "error": 6.548141618865697e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE137.2c-0.83",
+      "error": 2.220446049250313e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE137.2c0.17",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE137.2c0.17",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE137.2c0.17",
+      "error": 6.499088505404896e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE137.2c0.17",
+      "error": 2.886579864025407e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE137.2c0.76",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE137.2c0.76",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE137.2c0.76",
+      "error": 6.42410666412457e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE137.2c0.76",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total TruemuonE137.2",
+      "error": 2.220446049250313e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE247.3c-0.83",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE247.3c-0.83",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE247.3c-0.83",
+      "error": 4.309064118750957e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE247.3c-0.83",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE247.3c0.17",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE247.3c0.17",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE247.3c0.17",
+      "error": 3.817337599268471e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE247.3c0.17",
+      "error": 5.551115123125783e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE247.3c0.76",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE247.3c0.76",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE247.3c0.76",
+      "error": 3.4407775713787057e-33,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE247.3c0.76",
+      "error": 9.992007221626409e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total TruemuonE247.3",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE511.1c-0.83",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE511.1c-0.83",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE511.1c-0.83",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE511.1c-0.83",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE511.1c0.17",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE511.1c0.17",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE511.1c0.17",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE511.1c0.17",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor versus trace TruemuonE511.1c0.76",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full unequalmass sourcepolynomial TruemuonE511.1c0.76",
+      "error": 5.551115123125783e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "one inactive chiral incident state TruemuonE511.1c0.76",
+      "error": 0.0,
+      "tolerance": 1e-28,
+      "passed": true
+    },
+    {
+      "name": "independent dt CM differential TruemuonE511.1c0.76",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "adaptive invariant-t total TruemuonE511.1",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent static normalization antiFalsem0.51099895069M2000000.0",
+      "error": 3.48439489894492e-05,
+      "tolerance": 0.0008,
+      "passed": true
+    },
+    {
+      "name": "independent static normalization antiFalsem0.51099895069M20000000.0",
+      "error": 3.4844620904195267e-06,
+      "tolerance": 8e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy recoil convergence antiFalsem0.51099895069",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent static normalization antiFalsem105.6583755M2000000.0",
+      "error": 0.00023650682682396784,
+      "tolerance": 0.0008,
+      "passed": true
+    },
+    {
+      "name": "independent static normalization antiFalsem105.6583755M20000000.0",
+      "error": 2.3654940661699264e-05,
+      "tolerance": 8e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy recoil convergence antiFalsem105.6583755",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent static normalization antiTruem0.51099895069M2000000.0",
+      "error": 6.311115762747121e-05,
+      "tolerance": 0.0008,
+      "passed": true
+    },
+    {
+      "name": "independent static normalization antiTruem0.51099895069M20000000.0",
+      "error": 6.311371141709543e-06,
+      "tolerance": 8e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy recoil convergence antiTruem0.51099895069",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent static normalization antiTruem105.6583755M2000000.0",
+      "error": 0.0003728712000837797,
+      "tolerance": 0.0008,
+      "passed": true
+    },
+    {
+      "name": "independent static normalization antiTruem105.6583755M20000000.0",
+      "error": 3.7297096708188704e-05,
+      "tolerance": 8e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy recoil convergence antiTruem105.6583755",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "independent targetrest boost antiFalse",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "independent incoming labenergy antiFalse",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor Lorentz invariance antiFalse",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new masslesslimit antiFalse",
+      "error": 1.488897893864305e-11,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "independent targetrest boost antiTrue",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "independent incoming labenergy antiTrue",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "explicitspinor Lorentz invariance antiTrue",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new masslesslimit antiTrue",
+      "error": 1.1518563880485999e-11,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "noVAinterference purevector crossing",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "noVAinterference pureaxial crossing",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "source and preserved failures unchanged",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 17.3,
+      "c": -0.83,
+      "explicit_amp2": 3.707428922348553e-12,
+      "incoming_chiral_contributions": [
+        4.751075407786347e-44,
+        3.707428922348553e-12
+      ],
+      "source_polynomial_amp2": 3.707428922348564e-12
+    },
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 17.3,
+      "c": 0.17,
+      "explicit_amp2": 3.359693046615008e-12,
+      "incoming_chiral_contributions": [
+        3.3670858444863597e-44,
+        3.359693046615008e-12
+      ],
+      "source_polynomial_amp2": 3.3596930466150173e-12
+    },
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 17.3,
+      "c": 0.76,
+      "explicit_amp2": 3.1545426927177094e-12,
+      "incoming_chiral_contributions": [
+        4.1900574677406263e-44,
+        3.1545426927177094e-12
+      ],
+      "source_polynomial_amp2": 3.154542692717713e-12
+    },
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 77.7,
+      "c": -0.83,
+      "explicit_amp2": 6.925324967708596e-11,
+      "incoming_chiral_contributions": [
+        7.585194805749463e-43,
+        6.925324967708596e-11
+      ],
+      "source_polynomial_amp2": 6.92532496770861e-11
+    },
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 77.7,
+      "c": 0.17,
+      "explicit_amp2": 6.342855683179598e-11,
+      "incoming_chiral_contributions": [
+        5.383396634189418e-43,
+        6.342855683179598e-11
+      ],
+      "source_polynomial_amp2": 6.342855683179604e-11
+    },
+    {
+      "anti": false,
+      "lepton": "electron",
+      "E": 77.7,
+      "c": 0.76,
+      "explicit_amp2": 5.999597194946207e-11,
+      "incoming_chiral_contributions": [
+        8.714192899422362e-43,
+        5.999597194946207e-11
+      ],
+      "source_polynomial_amp2": 5.99959719494621e-11
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 137.2,
+      "c": -0.83,
+      "explicit_amp2": 1.9826310812285672e-10,
+      "incoming_chiral_contributions": [
+        9.89558587016473e-43,
+        1.9826310812285672e-10
+      ],
+      "source_polynomial_amp2": 1.9826310812285652e-10
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 137.2,
+      "c": 0.17,
+      "explicit_amp2": 1.8896470774886279e-10,
+      "incoming_chiral_contributions": [
+        1.2677444549794885e-42,
+        1.8896470774886279e-10
+      ],
+      "source_polynomial_amp2": 1.8896470774886258e-10
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 137.2,
+      "c": 0.76,
+      "explicit_amp2": 1.834890768683102e-10,
+      "incoming_chiral_contributions": [
+        9.640671109054228e-43,
+        1.834890768683102e-10
+      ],
+      "source_polynomial_amp2": 1.8348907686831e-10
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 247.3,
+      "c": -0.83,
+      "explicit_amp2": 6.485392655099606e-10,
+      "incoming_chiral_contributions": [
+        2.633256206536594e-42,
+        6.485392655099606e-10
+      ],
+      "source_polynomial_amp2": 6.485392655099607e-10
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 247.3,
+      "c": 0.17,
+      "explicit_amp2": 6.106454737395065e-10,
+      "incoming_chiral_contributions": [
+        3.8399567741651805e-43,
+        6.106454737395065e-10
+      ],
+      "source_polynomial_amp2": 6.106454737395064e-10
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 247.3,
+      "c": 0.76,
+      "explicit_amp2": 5.88468151884575e-10,
+      "incoming_chiral_contributions": [
+        6.146347963751433e-43,
+        5.88468151884575e-10
+      ],
+      "source_polynomial_amp2": 5.88468151884575e-10
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 511.1,
+      "c": -0.83,
+      "explicit_amp2": 2.702699723849847e-09,
+      "incoming_chiral_contributions": [
+        9.17050682578667e-42,
+        2.702699723849847e-09
+      ],
+      "source_polynomial_amp2": 2.702699723849846e-09
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 511.1,
+      "c": 0.17,
+      "explicit_amp2": 2.5778836857497614e-09,
+      "incoming_chiral_contributions": [
+        1.5382714688353278e-41,
+        2.5778836857497614e-09
+      ],
+      "source_polynomial_amp2": 2.5778836857497627e-09
+    },
+    {
+      "anti": false,
+      "lepton": "muon",
+      "E": 511.1,
+      "c": 0.76,
+      "explicit_amp2": 2.5063539470626222e-09,
+      "incoming_chiral_contributions": [
+        1.4117000433428497e-41,
+        2.5063539470626222e-09
+      ],
+      "source_polynomial_amp2": 2.5063539470626227e-09
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 17.3,
+      "c": -0.83,
+      "explicit_amp2": 3.026571577646735e-12,
+      "incoming_chiral_contributions": [
+        0.0,
+        3.026571577646735e-12
+      ],
+      "source_polynomial_amp2": 3.0265715776467435e-12
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 17.3,
+      "c": 0.17,
+      "explicit_amp2": 2.8128378899954407e-12,
+      "incoming_chiral_contributions": [
+        0.0,
+        2.8128378899954407e-12
+      ],
+      "source_polynomial_amp2": 2.8128378899954484e-12
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 17.3,
+      "c": 0.76,
+      "explicit_amp2": 2.687447600648764e-12,
+      "incoming_chiral_contributions": [
+        0.0,
+        2.687447600648764e-12
+      ],
+      "source_polynomial_amp2": 2.6874476006487698e-12
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 77.7,
+      "c": -0.83,
+      "explicit_amp2": 5.358113206450063e-11,
+      "incoming_chiral_contributions": [
+        0.0,
+        5.358113206450063e-11
+      ],
+      "source_polynomial_amp2": 5.358113206450065e-11
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 77.7,
+      "c": 0.17,
+      "explicit_amp2": 5.496061087173137e-11,
+      "incoming_chiral_contributions": [
+        0.0,
+        5.496061087173137e-11
+      ],
+      "source_polynomial_amp2": 5.49606108717314e-11
+    },
+    {
+      "anti": true,
+      "lepton": "electron",
+      "E": 77.7,
+      "c": 0.76,
+      "explicit_amp2": 5.6033953609114264e-11,
+      "incoming_chiral_contributions": [
+        0.0,
+        5.6033953609114264e-11
+      ],
+      "source_polynomial_amp2": 5.603395360911427e-11
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 137.2,
+      "c": -0.83,
+      "explicit_amp2": 1.5396382843329095e-10,
+      "incoming_chiral_contributions": [
+        1.0081769527639302e-42,
+        1.5396382843329095e-10
+      ],
+      "source_polynomial_amp2": 1.5396382843329092e-10
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 137.2,
+      "c": 0.17,
+      "explicit_amp2": 1.6427984891771875e-10,
+      "incoming_chiral_contributions": [
+        1.0676692777707989e-42,
+        1.6427984891771875e-10
+      ],
+      "source_polynomial_amp2": 1.642798489177188e-10
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 137.2,
+      "c": 0.76,
+      "explicit_amp2": 1.7100812121071065e-10,
+      "incoming_chiral_contributions": [
+        1.0985744110891485e-42,
+        1.7100812121071065e-10
+      ],
+      "source_polynomial_amp2": 1.7100812121071067e-10
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 247.3,
+      "c": -0.83,
+      "explicit_amp2": 3.748970813866604e-10,
+      "incoming_chiral_contributions": [
+        1.6154555616277155e-42,
+        3.748970813866604e-10
+      ],
+      "source_polynomial_amp2": 3.7489708138666034e-10
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 247.3,
+      "c": 0.17,
+      "explicit_amp2": 4.709475138846025e-10,
+      "incoming_chiral_contributions": [
+        1.7977656520337035e-42,
+        4.709475138846025e-10
+      ],
+      "source_polynomial_amp2": 4.709475138846026e-10
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 247.3,
+      "c": 0.76,
+      "explicit_amp2": 5.397962962978674e-10,
+      "incoming_chiral_contributions": [
+        1.8573189894149964e-42,
+        5.397962962978674e-10
+      ],
+      "source_polynomial_amp2": 5.397962962978674e-10
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 511.1,
+      "c": -0.83,
+      "explicit_amp2": 9.857833868654569e-10,
+      "incoming_chiral_contributions": [
+        0.0,
+        9.857833868654569e-10
+      ],
+      "source_polynomial_amp2": 9.857833868654573e-10
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 511.1,
+      "c": 0.17,
+      "explicit_amp2": 1.6615632478347755e-09,
+      "incoming_chiral_contributions": [
+        0.0,
+        1.6615632478347755e-09
+      ],
+      "source_polynomial_amp2": 1.6615632478347751e-09
+    },
+    {
+      "anti": true,
+      "lepton": "muon",
+      "E": 511.1,
+      "c": 0.76,
+      "explicit_amp2": 2.2055093357085764e-09,
+      "incoming_chiral_contributions": [
+        0.0,
+        2.2055093357085764e-09
+      ],
+      "source_polynomial_amp2": 2.2055093357085755e-09
+    }
+  ],
+  "heavy": [
+    {
+      "anti": false,
+      "m": 0.51099895069,
+      "E": 31.7,
+      "M": 2000000.0,
+      "error": 3.48439489894492e-05
+    },
+    {
+      "anti": false,
+      "m": 0.51099895069,
+      "E": 31.7,
+      "M": 20000000.0,
+      "error": 3.4844620904195267e-06
+    },
+    {
+      "anti": false,
+      "m": 105.6583755,
+      "E": 183.4,
+      "M": 2000000.0,
+      "error": 0.00023650682682396784
+    },
+    {
+      "anti": false,
+      "m": 105.6583755,
+      "E": 183.4,
+      "M": 20000000.0,
+      "error": 2.3654940661699264e-05
+    },
+    {
+      "anti": true,
+      "m": 0.51099895069,
+      "E": 31.7,
+      "M": 2000000.0,
+      "error": 6.311115762747121e-05
+    },
+    {
+      "anti": true,
+      "m": 0.51099895069,
+      "E": 31.7,
+      "M": 20000000.0,
+      "error": 6.311371141709543e-06
+    },
+    {
+      "anti": true,
+      "m": 105.6583755,
+      "E": 183.4,
+      "M": 2000000.0,
+      "error": 0.0003728712000837797
+    },
+    {
+      "anti": true,
+      "m": 105.6583755,
+      "E": 183.4,
+      "M": 20000000.0,
+      "error": 3.7297096708188704e-05
+    }
+  ],
+  "source_sha256": {
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "muon_vacuum/initial_exothermic_threshold_failure.json": "d82f388193253ff8930c2b20edf4fadc29a4029d110848d223ebc993f2f77d5f",
+    "muon_vacuum/initial_threshold_asymptotic_failure.json": "f43305811ae43647558418477bf6696c8522f4c0b2bd31fa613b7096f4699959"
+  },
+  "end_source_sha256": {
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "muon_vacuum/initial_exothermic_threshold_failure.json": "d82f388193253ff8930c2b20edf4fadc29a4029d110848d223ebc993f2f77d5f",
+    "muon_vacuum/initial_threshold_asymptotic_failure.json": "f43305811ae43647558418477bf6696c8522f4c0b2bd31fa613b7096f4699959"
+  },
+  "runtime_seconds": 0.14224520791321993,
+  "scope": "Vacuum pointV-A currents only, noWM/PS/formfactor/radiative terms or warmkernel; algebra agreement is not physicaluncertainty"
+}

@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "e Fermi surface density neutron",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "e Fermi surface density proton",
+      "error": 1.6653345369377348e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "e actualpinnedsource atonset triangle",
+      "error": 1.6652039503077808e-10,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "mu Fermi surface density neutron",
+      "error": 1.887379141862766e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "mu Fermi surface density proton",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "mu actualpinnedsource atonset triangle",
+      "error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "flavor": "e",
+      "reconstructed": [
+        {
+          "species": "neutron",
+          "kinetic_mu": 630.4103622842249,
+          "pF_MeV": 380.01648220709836,
+          "momentum_density": 0.241227540932692,
+          "target": 0.24122754093269116
+        },
+        {
+          "species": "proton",
+          "kinetic_mu": 542.4737534756414,
+          "pF_MeV": 203.1577591028243,
+          "momentum_density": 0.03685698711406108,
+          "target": 0.03685698711406114
+        }
+      ],
+      "pinned_triangle_delta_MeV": -1.6652039503077808e-10
+    },
+    {
+      "flavor": "mu",
+      "reconstructed": [
+        {
+          "species": "neutron",
+          "kinetic_mu": 595.1474817679378,
+          "pF_MeV": 403.04068680370625,
+          "momentum_density": 0.287783745172437,
+          "target": 0.28778374517243754
+        },
+        {
+          "species": "proton",
+          "kinetic_mu": 496.42061531910144,
+          "pF_MeV": 233.8262121283254,
+          "momentum_density": 0.05619519370267897,
+          "target": 0.05619519370267896
+        }
+      ],
+      "pinned_triangle_delta_MeV": 0.0
+    }
+  ]
+}

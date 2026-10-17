@@ -1,0 +1,42 @@
+{
+  "time": "2026-10-15T21:17:27.313935+00:00",
+  "status": "author frozen; independent review pending",
+  "scope": "Algebra-only off-pole common-mass Born external legs; no completed MU current/rate",
+  "checks": 199,
+  "failures": 0,
+  "preserved_initial_failed_gate": "complex momentum discarded before wrapper validation; 198/199",
+  "completed_current": false,
+  "absolute_rate": false,
+  "width": false,
+  "finite_Q_vector_conserved": false,
+  "files": {
+    "RESEARCH_NOTE.md": "fbd32e7d2c7d71f071ceb70ec8821e1f7f1edc0c01e2560bbc603c5fc881462b",
+    "check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "external_legs.py": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+    "initial_check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "initial_external_legs.py": "7aa8a929136b6422257fb9bcf13a0409f63d586b7b26ca0690ba1d17d94b4f96",
+    "initial_results.json": "bee824f532de0128ce73ff26367fb684ef1a7088fbd532eecab5c3892c6fa0e4",
+    "results.json": "5c8ef9f586970dc7d1e3c533930cf6454df381eaaf433603419f9d6444db11f8"
+  },
+  "inputs": {
+    "ope_nucleon_amplitudes/ope.py": "a4d25710817060fc4fdcfb3f4b013012f67ead9c3cb07dab9407275e6eebefd7",
+    "strong_entire_checkpoint_verified_unchanged": {
+      "RESEARCH_NOTE.md": true,
+      "SOURCES.md": true,
+      "check_ope.py": true,
+      "download_failure.txt": true,
+      "initial_charge_zero_roundoff_check.py.txt": true,
+      "initial_charge_zero_roundoff_results.json": true,
+      "initial_driver_syntax.py.txt": true,
+      "initial_driver_syntax_failure.txt": true,
+      "ope.py": true,
+      "results.json": true
+    }
+  },
+  "quota": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "weekly_used": 18,
+    "reset": 1792652325,
+    "checked_utc": "2026-10-15T21:13:24Z"
+  }
+}

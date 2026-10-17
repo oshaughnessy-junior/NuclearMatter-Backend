@@ -1,0 +1,25 @@
+{
+  "status": "accepted_restricted_finite_grid_scope",
+  "utc": "2026-10-15T15:04:12.636392+00:00",
+  "new_checks": 33,
+  "all_passed": true,
+  "author_upstream_frozen_hashes_match": {
+    "fd_fluid_element/element.py": true,
+    "quantum_slab/fixed_bath.py": true,
+    "quantum_slab/guarded_capture.py": true,
+    "capture_endpoint/mapped_capture.py": true,
+    "crossed_opacity/crossed_decay.py": true,
+    "nr_baryon_eos/free_nucleons.py": true,
+    "thermodynamics/lepton_reference.py": true,
+    "response_reference/free_density_response.py": true,
+    "thermal_box/box.py": true
+  },
+  "files_sha256": {
+    "REVIEW.md": "916f7562d71f9153ed3eb1c960afb1a32ef6081611be42ad931d02aa2e099c25",
+    "lte_probe.py": "d9fddb56a6b2e4a6aa597ace0d455f426e8a75b15bf0b95b3c854bcbdcf6888b",
+    "lte_results.json": "c38267de884b3555956095da389b488e106ed09766414e136a07d99c1059ed46",
+    "probe.py": "2da041d8cb5788bed95589df8efdfb289fbea8b9a6ca111cbad7b6ac68a9fbe5",
+    "results.json": "42345c6a19dc6b8f3edb4633091083566acd4e155c61621105e395a2a57eaa7c"
+  },
+  "scope": "Finite-bin freeFD/allowedCC closedbox; no continuum or long-time qualification"
+}

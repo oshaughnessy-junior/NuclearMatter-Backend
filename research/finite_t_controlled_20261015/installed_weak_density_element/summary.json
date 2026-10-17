@@ -1,0 +1,446 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "T absolute 2to4",
+      "error": 9.193202177293358e-08,
+      "gate": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "Ye absolute 2to4",
+      "error": -2.2572186826885776e-06,
+      "gate": 2e-06,
+      "passed": false
+    },
+    {
+      "name": "escape relative 2to4",
+      "error": -2.8979575770193833e-05,
+      "gate": 0.001,
+      "passed": true
+    },
+    {
+      "name": "T absolute 4to8",
+      "error": 2.2697510315694558e-08,
+      "gate": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "Ye absolute 4to8",
+      "error": -5.561072802251488e-07,
+      "gate": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "escape relative 4to8",
+      "error": -7.151903732238729e-06,
+      "gate": 0.001,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine ECnumber",
+      "error": -3.4812930316263646e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine ECneutrino_energy",
+      "error": -2.4027002609727788e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine ECelectron_energy",
+      "error": -3.081468413768107e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine ECproton_energy",
+      "error": -3.3473002147843545e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine ECneutron_energy",
+      "error": -3.3537506105574266e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine ECmaterial_energy_loss",
+      "error": -2.4027335676635175e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine PCnumber",
+      "error": -2.489292105778418e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine PCneutrino_energy",
+      "error": -3.685279859055868e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine PCpositron_energy",
+      "error": -2.5134261338877195e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine PCproton_energy",
+      "error": -2.8258373419021154e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine PCneutron_energy",
+      "error": -2.838749235678506e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine PCmaterial_energy_loss",
+      "error": -3.685270977271671e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine betanumber",
+      "error": 2.7209883235457255e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine betaneutrino_energy",
+      "error": 5.228768307219411e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine betaelectron_energy",
+      "error": 1.2720104969332624e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine betaproton_energy",
+      "error": 2.720992764437824e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine betaneutron_energy",
+      "error": 2.720992320348614e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint basetofine betamaterial_energy_loss",
+      "error": 5.228790289635299e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail ECnumber",
+      "error": 2.220446049250313e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail ECneutrino_energy",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail ECelectron_energy",
+      "error": 1.5543122344752192e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail ECproton_energy",
+      "error": 1.9984014443252818e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail ECneutron_energy",
+      "error": 1.9984014443252818e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail ECmaterial_energy_loss",
+      "error": 4.440892098500626e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail PCnumber",
+      "error": -2.1110557746339964e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail PCneutrino_energy",
+      "error": 4.980460488468452e-13,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail PCpositron_energy",
+      "error": -2.0693113889080905e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail PCproton_energy",
+      "error": -1.5017320720289717e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail PCneutron_energy",
+      "error": -1.4783396729001197e-11,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail PCmaterial_energy_loss",
+      "error": 4.978240042419202e-13,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail betanumber",
+      "error": -3.3306690738754696e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail betaneutrino_energy",
+      "error": -3.3306690738754696e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail betaelectron_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail betaproton_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail betaneutron_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual endpoint finetotail betamaterial_energy_loss",
+      "error": -3.3306690738754696e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "sources actually change",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "invalid locked steps True",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "invalid locked steps 0",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "invalid locked steps -2",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "invalid locked steps 3",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 46,
+  "failed": [
+    {
+      "name": "Ye absolute 2to4",
+      "error": -2.2572186826885776e-06,
+      "gate": 2e-06,
+      "passed": false
+    }
+  ],
+  "current_coarse_failures": [
+    {
+      "steps": 2,
+      "failed": [
+        {
+          "name": "fresh endpoint Simpson escape",
+          "error": 3.9600653560277126e-05,
+          "gate": 3e-05,
+          "passed": false
+        },
+        {
+          "name": "fresh endpoint Simpson netlepton",
+          "error": 0.00010770668961973641,
+          "gate": 3e-05,
+          "passed": false
+        }
+      ]
+    }
+  ],
+  "trial_counts": {
+    "2": {
+      "passed": 12,
+      "failed": 2
+    },
+    "4": {
+      "passed": 14,
+      "failed": 0
+    },
+    "8": {
+      "passed": 14,
+      "failed": 0
+    },
+    "base": {
+      "passed": 6,
+      "failed": 0
+    },
+    "fine": {
+      "passed": 6,
+      "failed": 0
+    },
+    "tail": {
+      "passed": 6,
+      "failed": 0
+    }
+  },
+  "total_passed": 104,
+  "total_failed": 3,
+  "comparison": [
+    {
+      "steps": [
+        2,
+        4
+      ],
+      "dT": 9.193202177293358e-08,
+      "dYe": -2.2572186826885776e-06,
+      "escape_relative": -2.8979575770193833e-05
+    },
+    {
+      "steps": [
+        4,
+        8
+      ],
+      "dT": 2.2697510315694558e-08,
+      "dYe": -5.561072802251488e-07,
+      "escape_relative": -7.151903732238729e-06
+    }
+  ],
+  "source_change": {
+    "R": -0.06738953144876758,
+    "Q": -0.018563171255952193
+  },
+  "final": {
+    "T": 1.9965619425382515,
+    "nB": 1.0005001250208359e-07,
+    "Ye": 0.3151886182570532,
+    "photons": true,
+    "neutron": {
+      "temperature": 1.9965619425382515,
+      "mass": 939.56542052,
+      "chemical_potential": 919.8250512611776,
+      "kinetic_chemical_potential": -19.740369258822398,
+      "particle_density": 6.851538730495067e-08,
+      "kinetic_energy_density": 2.057385518965623e-07,
+      "energy_density": 6.45804272371632e-05,
+      "pressure": 1.3679644129446647e-07,
+      "entropy_density": 8.489864513529913e-07,
+      "free_energy_density": 6.288537319866122e-05,
+      "cv_fixed_particle_density": 1.0331685702495499e-07,
+      "dn_dmu_fixed_temperature": 3.431606965586976e-08,
+      "dn_dtemperature_fixed_mu": 3.909006592225623e-07,
+      "dmu_dtemperature_fixed_particle_density": -11.391183872238653
+    },
+    "proton": {
+      "temperature": 1.9965619425382515,
+      "mass": 938.27208816,
+      "chemical_potential": 916.9865374175047,
+      "kinetic_chemical_potential": -21.285550742495275,
+      "particle_density": 3.1534625197132116e-08,
+      "kinetic_energy_density": 9.469231052576965e-08,
+      "energy_density": 2.9682750943581872e-05,
+      "pressure": 6.296109289756428e-08,
+      "entropy_density": 4.1515629970823155e-07,
+      "free_energy_density": 2.885386567537941e-05,
+      "cv_fixed_particle_density": 4.7552673397938806e-08,
+      "dn_dmu_fixed_temperature": 1.5794333109527795e-08,
+      "dn_dtemperature_fixed_mu": 1.9213957735318862e-07,
+      "dmu_dtemperature_fixed_particle_density": -12.165095925277289
+    },
+    "electron": {
+      "temperature": 1.9965619425382515,
+      "chemical_potential": 0.1840096065905323,
+      "mass": 0.51099895069,
+      "net_density": 3.153462519713256e-08,
+      "particle_density": 2.0328197618480345e-07,
+      "antiparticle_density": 1.717473509876711e-07,
+      "energy_density": 2.3786016879048966e-06,
+      "pressure": 7.856866190739603e-07,
+      "entropy_density": 1.581962255068798e-06,
+      "free_energy_density": -7.79883945097456e-07,
+      "cv_fixed_net_density": 4.750600193170231e-06,
+      "dn_dmu_fixed_temperature": 1.716725133087678e-07,
+      "dn_dtemperature_fixed_mu": 3.187446528503124e-08,
+      "dmu_dtemperature_fixed_net_density": -0.18567017323094837
+    },
+    "energy": 9.800253578153978e-05,
+    "pressure": 1.4390294575625948e-06,
+    "entropy": 3.754837752422792e-06,
+    "cv": 7.627667962471438e-06,
+    "e_Y": -7.390082951633699e-08,
+    "e_n": 942.3354448919025,
+    "h_n": 942.5682554609448,
+    "h_p": 941.2749049692404,
+    "h_e": 0.5547116083279282,
+    "photon_energy": 1.3607559128898112e-06,
+    "photon_pressure": 4.535853042966037e-07,
+    "photon_entropy": 9.087327462927711e-07,
+    "photon_cv": 2.726198238878313e-06
+  },
+  "final_accumulators": {
+    "u": 979.5354676192688,
+    "Ye": 0.3151886182570532,
+    "E_nue": 0.06462638028110014,
+    "E_antinue": 0.23555476133488817,
+    "N_nue": 0.006772298787789321,
+    "N_antinue": 0.021960917044842435,
+    "work": 0.007214623724710647,
+    "material_entropy_integral": -0.12945784700368868,
+    "weak_electron": -0.006771457143962573,
+    "weak_positron": -0.021960075401015692
+  }
+}

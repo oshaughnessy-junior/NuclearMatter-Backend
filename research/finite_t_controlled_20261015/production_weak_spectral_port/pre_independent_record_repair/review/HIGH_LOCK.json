@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-16T07:04:31.457440+00:00",
+  "reason": "ONEnewhigherquad rung afterpreserved coarsefails; no newphysics or gatechange",
+  "original_convergence_sha256": "33961285d6e6fbc90d4eb6fc88cfb304dec3c162e3162d26a4a1030610a2dbd7",
+  "profiles": {
+    "capture_high": {
+      "order": 14,
+      "qorder": 24,
+      "inner": 40,
+      "phi": 12,
+      "tail": 85.0,
+      "outer_tail": 50.0
+    },
+    "beta_high": {
+      "parent": 18,
+      "nu_order": 24,
+      "electron": 24,
+      "phi_order": 16,
+      "tail": 85.0
+    }
+  },
+  "jobs": [
+    {
+      "channel": "EC",
+      "E": 6.431
+    },
+    {
+      "channel": "PC",
+      "E": 4.237
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "E": 0.873
+    }
+  ],
+  "gate": 3e-06,
+  "budget_seconds": 105,
+  "tail_plan": "Afterconvergenceonly isolatecapturematerialtail95atfixedhigh thenoutertail60atfixedhigh; beta.337/.873 fineorhighsameorderstail95. No newpoints/domain.",
+  "candidate_imported": false
+}

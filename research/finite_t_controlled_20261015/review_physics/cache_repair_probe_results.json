@@ -1,0 +1,42 @@
+{
+  "scope": "Synthetic cache protocol only; no author cache or physics payload mutated",
+  "source_sha256": {
+    "cache_contract.py": "1f40edb4887bfed2052e241f05fc840ea9eb9f78831d5e9e3766c94360357460",
+    "run_study.py": "faf527020caf55a7efae542ecf8eedeb070d02ffdd96bc21d48e6b198b7f9fd5"
+  },
+  "checks": [
+    {
+      "name": "exact synthetic replay",
+      "passed": true
+    },
+    {
+      "name": "wrong actual state with self-consistent metadata rejected",
+      "passed": true
+    },
+    {
+      "name": "upstream hash mutated and metadata digest recomputed still rejected",
+      "passed": true
+    },
+    {
+      "name": "valid leading record followed by stale record rejects whole file",
+      "passed": true
+    },
+    {
+      "name": "duplicates rejected",
+      "passed": true
+    },
+    {
+      "name": "payload corruption rejected",
+      "passed": true
+    },
+    {
+      "name": "legacy metadata-free file rejected",
+      "passed": true
+    },
+    {
+      "name": "missing cache rejected",
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

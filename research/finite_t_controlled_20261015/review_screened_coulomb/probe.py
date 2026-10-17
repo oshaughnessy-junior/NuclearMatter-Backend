@@ -1,0 +1,114 @@
+"""Independent Yukawa-spinor, q²-angle and momentum transport review."""
+from pathlib import Path
+import sys,json,time,math,hashlib
+from dataclasses import replace
+import numpy as np
+from scipy.integrate import quad,quad_vec
+from scipy.optimize import brentq
+from scipy.special import expit,log_expit
+from numpy.polynomial.legendre import leggauss
+sys.dont_write_bytecode=True
+H=Path(__file__).resolve().parent;R=H.parent;A=R/'screened_coulomb_transport';sys.path.insert(0,str(A));import lorentz as L
+start=time.monotonic();checks=[];rows=[]
+def hashes():
+ return {str(p.relative_to(R)):hashlib.sha256(p.read_bytes()).hexdigest()for p in list(A.iterdir())+[R/'relativistic_free_eos/free_baryons.py',R/'thermodynamics/lepton_reference.py']if p.is_file()}
+initial=hashes()
+def gate(n,e,t):checks.append(dict(name=n,error=float(e),tolerance=t,passed=bool(math.isfinite(e)and abs(e)<=t)))
+alpha=1/137.035999084;e2=4*math.pi*alpha;m=.51099895069;hc=197.3269804
+# Independent finite-temperature particle density/chi directly in momentum.
+def density(T,mu,sign=1):
+ end=math.sqrt((max(m,abs(mu))+100*T)**2-m*m)
+ scale=min(0.,(sign*mu-m)/T)
+ fn=lambda p: p*p*math.exp(float(log_expit((sign*mu-math.hypot(p,m))/T))-scale)/math.pi**2
+ return math.exp(scale)*quad(fn,0,end,epsabs=1e-24,epsrel=3e-12,points=[math.sqrt(mu*mu-m*m)]if abs(mu)>m and math.sqrt(mu*mu-m*m)<end else None)[0]
+def chi(T,mu):
+ end=math.sqrt((max(m,abs(mu))+100*T)**2-m*m)
+ return quad(lambda p:p*p*expit((mu-math.hypot(p,m))/T)*expit((math.hypot(p,m)-mu)/T)/(math.pi**2*T),0,end,epsabs=1e-20,epsrel=3e-12,points=[math.sqrt(mu*mu-m*m)]if mu>m else None)[0]
+T=.041;ne=5.3e-8;Z=2;s=L.state(T,ne,Z);target=ne*hc**3
+mu=brentq(lambda mu:density(T,mu)/target-1,m-20*T,math.hypot(hc*(3*math.pi**2*ne)**(1/3),m)+20*T,xtol=2e-14)
+ks=e2*chi(T,mu);ni=target/Z
+for name,e,t in [('independent density gate',density(T,s.mu)/target-1,3e-10),('independent total mu',s.mu/mu-1,3e-12),('natural screening susceptibility',s.screening_susceptibility_natural/chi(T,mu)-1,3e-11),('ks² normalization',s.screening_squared/ks-1,3e-11),('ion neutrality',s.ni_natural*Z/target-1,1e-14)]:gate(name,e,t)
+gate('independent positron diagnostic',math.log(density(T,mu,-1)/density(T,mu))-s.pair_log_ratio,2e-9)
+rows.append(dict(fresh_state=s.asdict(),independent_mu=mu,independent_ks2=ks))
+# q² outer coordinate, u=log(1+q²/ks²), no author's dcs/I/frequency.
+def angular_frequency(p,ks2=ks,ion_density=ni,Z=Z):
+ E=math.hypot(p,m);v=p/E;upper=math.log1p(4*p*p/ks2)
+ qint=quad(lambda u:(-math.expm1(-u))*(E*E-ks2*math.expm1(u)/4),0,upper,epsabs=1e-24,epsrel=2e-12)[0]
+ return 2*math.pi*ion_density*v*Z*Z*alpha*alpha/(p**4)*qint
+for p in [.013,.19,.83,2.7,8.1]:
+ gate('absolute q² collision frequency '+str(p),L.frequency(p,s)/angular_frequency(p)-1,3e-11)
+ for mult in [.2,1.,8.]:
+  altered=replace(s,screening_squared=ks*mult)
+  gate('screening dependence '+str((p,mult)),L.frequency(p,altered)/angular_frequency(p,ks*mult)-1,3e-11)
+ gate('screening monotonic '+str(p),float(not angular_frequency(p,ks*.2)>angular_frequency(p,ks)>angular_frequency(p,ks*8)),0.)
+# Independent Weyl-basis elastic Dirac spin trace, Coulomb potential matrix.
+z=np.zeros((2,2),complex);I2=np.eye(2);I=np.eye(4);sigs=[np.array([[0,1],[1,0]]),np.array([[0,-1j],[1j,0]]),np.diag([1,-1])];G=np.array([np.block([[z,I2],[I2,z]])]+[np.block([[z,x],[-x,z]])for x in sigs]);metric=np.array([1,-1,-1,-1])
+def slash(p):return np.einsum('u,uij->ij',p*metric,G)
+for p,c in[(.027,-.62),(.68,.19),(3.7,-.97)]:
+ E=math.hypot(p,m);pa=np.array([E,0,0,p]);pb=np.array([E,p*math.sqrt(1-c*c),0,p*c]);overlap=.5*np.trace((slash(pb)+m*I)@G[0]@(slash(pa)+m*I)@G[0]).real
+ q2=2*p*p*(1-c);U=4*math.pi*Z*alpha/(q2+ks)
+ ref=E*E*U*U/(4*math.pi**2)*overlap/(4*E*E)
+ gate('Weyl spin-averaged cross section '+str((p,c)),L.dcs(p,c,ks,Z)/ref-1,3e-14)
+# Full lab-axis angular gain/loss of an oblique dipole. Independent vector dcs.
+p=1.73;ci=.43;si=math.sqrt(1-ci*ci);u,w=leggauss(280);ph=2*math.pi*np.arange(640)/640
+relative=ci*u[:,None]+si*np.sqrt(1-u*u)[:,None]*np.cos(ph)[None,:]
+q2=2*p*p*(1-relative);E=math.hypot(p,m);ds=4*Z*Z*alpha*alpha*(E*E-q2/4)/(q2+ks)**2
+collision=ni*p/E*2*math.pi*np.sum(w[:,None]*ds*(u[:,None]-ci))/len(ph)
+gate('oblique dipole exact l1 eigenvalue',collision/(-angular_frequency(p)*ci)-1,2e-10)
+# Independent actual nested full-angle + momentum moment integral.
+def nested_moments(T,mu,ks2,ion_density,Z):
+ pmax=math.sqrt((max(m,mu)+85*T)**2-m*m)
+ energies=[m,mu-20*T,mu-7*T,mu,mu+7*T,mu+20*T,max(m,mu)+85*T]
+ cuts=sorted({0.,pmax}|{math.sqrt(E*E-m*m)for E in energies if m<E<math.hypot(pmax,m)})
+ def f(p):
+  E=math.hypot(p,m);v=p/E;occ=expit((mu-E)/T)*expit((E-mu)/T)/T
+  nu=angular_frequency(p,ks2,ion_density,Z)
+  return p*p*v*v/(3*math.pi**2*nu)*occ*np.array([1.,E-mu,(E-mu)**2])
+ out=np.zeros(3)
+ for a,b in zip(cuts[:-1],cuts[1:]):out+=quad_vec(f,a,b,epsabs=1e-18,epsrel=3e-11)[0]
+ return out
+K=nested_moments(T,mu,ks,ni,Z);author=L.moments(s)
+for i in range(3):gate('nested q²/momentum K'+str(i),author['K'][i]/K[i]-1,5e-10)
+sigma=e2*K[0];kap=(K[2]-K[1]*K[1]/K[0])/T;Se=-K[1]/(math.sqrt(e2)*T*K[0])
+for name,value in [('sigma',sigma),('kappa_open',kap),('seebeck',Se)]:gate('derived '+name,author[name]/value-1,5e-10)
+rows.append(dict(nested_K=K.tolist(),derived_sigma=sigma,derived_kappa=kap,derived_Seebeck=Se,author=author))
+# Reconstruct constitutive laws at open circuit; negative electron charge.
+qe=-math.sqrt(e2);gradT=.013;Estar=Se*gradT
+j=qe*qe*K[0]*Estar-qe*K[1]/T*gradT
+JQ=qe*K[1]*Estar-K[2]/T*gradT
+gate('negative charge open circuit',j/(abs(qe*K[1]/T*gradT)),3e-14);gate('open circuit heat',JQ/(-kap*gradT)-1,3e-14)
+gate('Kelvin Peltier sign',author['peltier']/(T*Se)-1,5e-10)
+M=T*np.array([[K[0],K[1]],[K[1],K[2]]]);gate('Onsager symmetric',np.max(abs(M-M.T)),0.);gate('positive Onsager eigenvalues',float(np.min(np.linalg.eigvalsh(M))<=0),0.)
+for F in [[.7,-.4],[-.2,.9]]:gate('Onsager entropy '+str(F),min(0.,np.array(F)@M@np.array(F)),0.)
+# Heldout low-T density sequence: both rates and Drude use full forward roots.
+nelow=2.3e-8;Zlow=1;pf=hc*(3*math.pi**2*nelow)**(1/3);EF=math.hypot(pf,m);TF=EF-m;errors=[]
+for eps in [.017,.0085,.00425]:
+ sl=L.state(TF*eps,nelow,Zlow);out=L.moments(sl);ni0=nelow*hc**3
+ chi0=pf*EF/math.pi**2;ks0=e2*chi0
+ nu0=angular_frequency(pf,ks0,ni0,1);drude=e2*ni0/(EF*nu0);wf=out['Lorenz_ratio']/(math.pi**2/(3*e2))-1
+ errors.append(abs(wf));gate('new density WF '+str(eps),wf,.003);gate('new density Drude '+str(eps),out['sigma']/drude-1,.003)
+ rows.append(dict(degenerate=dict(T_over_TF=eps,WF_error=wf,Drude_error=out['sigma']/drude-1,born_Zalpha_over_vF=out['born_Zalpha_over_vF'])))
+for a,b in zip(errors[:-1],errors[1:]):gate('WF T² convergence',b/a-.25,.003)
+# Pair-rich electron-only state rejection and invalid numerical contracts.
+for name,fn in [('pair rich',lambda:L.state(.5,1e-14,1)),('bad Zbool',lambda:L.state(.01,1e-9,True)),('zero density',lambda:L.state(.01,0,1)),('NaN angle',lambda:L.dcs(1,float('nan'),.1,1)),('zero screening',lambda:L.dcs(1,0,0,1)),('bad transport tail',lambda:L.moments(s,tail=float('nan')))]:
+ try:fn();rejected=False
+ except (ValueError,ArithmeticError):rejected=True
+ gate(name,float(not rejected),0.)
+# Absolute nonrelativistic unscreened Rutherford normalization anchor.
+p=.00003;c=-.47;x=(1-c)/2;ks_tiny=4*p*p*x*1e-12
+rutherford=Z*Z*alpha*alpha*m*m/(4*p**4*x*x)
+gate('NR unscreened Rutherford normalization',L.dcs(p,c,ks_tiny,Z)/rutherford-1,1e-7)
+# Born parameter is a diagnostic of the transport-support region, not an
+# accuracy certificate for omitted non-Born physics.
+pborn=m*(Z*alpha)/math.sqrt(1-(Z*alpha)**2)
+def lowweight(p):
+ E=math.hypot(p,m);occ=expit((mu-E)/T)*expit((E-mu)/T)/T
+ return p*p*(p/E)**2/(3*math.pi**2*angular_frequency(p))*occ
+fraction=quad(lowweight,0,pborn,epsabs=1e-40,epsrel=3e-10)[0]/K[0]
+rows.append(dict(Born_diagnostic=dict(p_below_which_Zalpha_over_v_exceeds_one=pborn,K0_weight_fraction_in_that_region=fraction,born_Zalpha_over_vF=author['born_Zalpha_over_vF'],NOT_a_nonBorn_error_bound=True)))
+gate('Born lowvelocity weight finite bounds',float(not(0<=fraction<=1)),0.)
+for f,fp in[(.91,.13),(.999999,.999998),(.017,.0003)]:
+ gate('exact elastic Pauli cancellation '+str(f),fp*(1-f)-f*(1-fp)-(fp-f),3e-16)
+final=hashes();gate('all frozen bytes unchanged',float(initial!=final),0.)
+result=dict(passed=all(c['passed']for c in checks),checks=checks,rows=rows,initial_hashes=initial,final_hashes=final,runtime_seconds=time.monotonic()-start)
+(H/'results.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(dict(passed=result['passed'],checks=len(checks),failures=[c for c in checks if not c['passed']],runtime=result['runtime_seconds'])))

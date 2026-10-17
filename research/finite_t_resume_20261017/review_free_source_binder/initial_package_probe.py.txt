@@ -1,0 +1,25 @@
+from pathlib import Path
+import json,hashlib,zipfile,ast,shutil
+P=Path(__file__).resolve().parent;A=P.parent/'free_source_binder';OLD=P.parent.parent/'nmb-finite-t-20261015';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();checks=[]
+def ck(name,passed,**data):checks.append(dict(name=name,passed=bool(passed),**data))
+manifest=json.loads((A/'MANIFEST.json').read_text());ck('frozen author manifest exact',all(sha(A/n)==h for n,h in manifest.items()))
+diff=json.loads((A/'CHANGED_PATHS.json').read_text());base=json.loads((A/'STAGED_BASE_PIN.json').read_text());changed=diff['changed'];actualchanged=[n for n,h in base.items()if sha(A/'staged'/n)!=h];new=[str(p.relative_to(A/'staged'))for p in (A/'staged').rglob('*')if p.is_file()and'__pycache__'not in p.parts and str(p.relative_to(A/'staged'))not in base]
+ck('exact8paths',set(actualchanged+new)==set(changed),actual_changed=actualchanged,new=new);ck('85unchanged baseline union files',sum(sha(A/'staged'/n)==h for n,h in base.items())==85)
+for name,h in diff['hashes'].items():ck('candidate exact '+name,sha(A/'staged'/name)==h)
+req=json.loads((A/'PREREQUISITES.json').read_text())
+for name,row in req['explicit_unmerged_dependency_union'].items():ck('explicit frozen prerequisite '+name,sha(A/'staged/src/nmbackend/reference'/name)==row['sha256'] and sha(OLD/row['source'])==row['sha256'])
+wh=next((A/'wheel').glob('*.whl'));dest=P/'wheel_import';dest.mkdir();members=[]
+with zipfile.ZipFile(wh)as z:
+ for n in z.namelist():
+  rel=Path(n);assert not rel.is_absolute()and'..'not in rel.parts
+ z.extractall(dest);members=z.namelist()
+for p in (A/'staged/src/nmbackend').rglob('*.py'):
+ rel=p.relative_to(A/'staged/src');ck('actual wheel bytes '+str(rel),(dest/rel).is_file()and sha(dest/rel)==sha(p))
+for p in (A/'staged/src/nmbackend/reference').glob('*.py'):ast.parse(p.read_text(),feature_version=(3,9))
+ck('staticPython3.9grammar',True)
+# Existing13cold/unit tests copied unchanged into owned review directory only.
+ct=P/'cold_tests';ct.mkdir()
+for name in ['test_units.py','test_lepton_derivatives.py']:
+ src=OLD/'production_weak_packaging_review/cold_tests'/name;shutil.copyfile(src,ct/name);ck('unchanged coldtest '+name,sha(src)==sha(ct/name))
+(P/'PACKAGE_RESULTS.json').write_text(json.dumps(dict(checks=checks,passed=sum(x['passed']for x in checks),failed=[x for x in checks if not x['passed']],wheel_sha256=sha(wh),wheel_members=members,explicit_union_not_main=True,new_physical_calls=0),indent=2)+'\n')
+print('PACKAGE',sum(x['passed']for x in checks),'PASS',sum(not x['passed']for x in checks),'FAIL')

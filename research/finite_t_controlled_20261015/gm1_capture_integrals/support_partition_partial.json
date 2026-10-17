@@ -1,0 +1,734 @@
+[
+  {
+    "j": {
+      "value": 745802409.1235368,
+      "log": 20.429971255957916,
+      "representable": true,
+      "reason": null
+    },
+    "chi": {
+      "value": 958899.1511178263,
+      "log": 13.773541187874748,
+      "representable": true,
+      "reason": null
+    },
+    "relaxation": {
+      "value": 746761308.2746538,
+      "log": 20.43125615826643,
+      "representable": true,
+      "reason": null
+    },
+    "kms_expected": 6.656430068083168,
+    "kms_actual": 6.656430068083168,
+    "state": {
+      "T": 8.0,
+      "dirac_mass": 568.5572415829281,
+      "potential_a": 338.0682785735156,
+      "potential_b": 282.54875402213236,
+      "total_mu_a": 1000.1139607177219,
+      "total_mu_b": 890.2455022016085,
+      "weak_bare_mass": 939.0
+    },
+    "Enu": 40.0,
+    "lepton_mass": 0.51099895069,
+    "mu_lepton_effective": 203.11989906077872,
+    "antineutrino": false,
+    "form_factors": {
+      "gv": 1.0,
+      "ga": 1.2723,
+      "xi": 3.706,
+      "vector_mass": 840.0,
+      "axial_mass": 1000.0,
+      "pion_mass": 139.57,
+      "weak_magnetism": true,
+      "pseudoscalar": true,
+      "q2_dependence": true
+    },
+    "mapping": "physical omega=Enu-El; kinetic w=omega-Ub+Ua; physical-q2 form factors and kinetic-qstar WM/PS vertices; common bare939, no extra Q",
+    "controls": {
+      "lepton_order": 8,
+      "angle_order": 8,
+      "inner_order": 16,
+      "phi_order": 4,
+      "inner_tail": 60.0,
+      "outer_tail": 32.0,
+      "coordinate": "cos",
+      "kernel": "gm1"
+    },
+    "angular_support": "Exact common-positive-mass particle-hole condition q>|w|",
+    "panels_El": [
+      0.51099895069,
+      17.804614813805543,
+      31.519524551383256,
+      47.690079585623295,
+      63.519524551383256,
+      79.51952455138326,
+      87.51952455138326,
+      95.51952455138326,
+      103.51952455138326,
+      111.51952455138326,
+      125.40498932320101,
+      127.51952455138326,
+      139.11989906077872,
+      159.51952455138326,
+      171.11989906077872,
+      173.23443428896098,
+      187.11989906077872,
+      195.11989906077872,
+      203.11989906077872,
+      211.11989906077872,
+      219.11989906077872,
+      235.11989906077872,
+      250.94934402653868,
+      267.1198990607787,
+      280.83480879835645,
+      358.5497185359342,
+      406.3791635016941,
+      513.9795380110895,
+      717.238802452005,
+      824.8391769614004,
+      1080.8391769614004
+    ],
+    "upper_El": 1080.8391769614004,
+    "calls": 1816,
+    "empty_nodes": 0,
+    "empty_energy_nodes": 13,
+    "seconds": 11.987851083977148,
+    "units": "occupation capture j, true absorption chi and relaxation j+chi in s^-1",
+    "scope": "Capture and inverse capture ONLY; no crossed decay, no RPA, external GM1 forward OPEN",
+    "material_state": {
+      "nuclear": {
+        "nB": 0.22,
+        "temperature": 8.0,
+        "Yp": 0.21000000000000002,
+        "phi_mev": 370.44275841707196,
+        "omega_mev": 310.308516297824,
+        "rho_mev": -55.5195245513832,
+        "dirac_mass_mev": 568.5572415829281,
+        "density_defined_landau_n_mev": 662.8110328684895,
+        "density_defined_landau_p_mev": 609.2944242304061,
+        "kinetic_mu_n_mev": 662.0456821442064,
+        "kinetic_mu_p_mev": 607.696748179476,
+        "mu_n_mev": 1000.1139607177219,
+        "mu_p_mev": 890.2455022016085,
+        "energy_density": 207.60540487931263,
+        "pressure": 8.320946610923503,
+        "free_energy_density": 206.62820196353084,
+        "entropy_density": 0.12215036447272397,
+        "kinetic_energy_density": 136.74818346331494,
+        "scalar_field_energy_density": 34.95221179004793,
+        "vector_field_energy_density": 35.905009625949766,
+        "scalar_density": 0.20163974487259845,
+        "antiparticle_density": 7.274180590137154e-67,
+        "max_normalized_equation_residual": 1.8023101049109682e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "electron": {
+        "temperature": 8.0,
+        "chemical_potential": 203.11989906077872,
+        "mass": 0.51099895069,
+        "net_density": 0.037399999999995104,
+        "particle_density": 0.03739999999999523,
+        "antiparticle_density": 1.2684338264162345e-16,
+        "energy_density": 5.784058885145468,
+        "pressure": 1.9279958311938084,
+        "entropy_density": 0.014421311433419463,
+        "free_energy_density": 5.668688393678112,
+        "cv_fixed_net_density": 0.01433510485264866,
+        "dn_dmu_fixed_temperature": 0.0005468335248698333,
+        "dn_dtemperature_fixed_mu": 0.00014099112944442535,
+        "dmu_dtemperature_fixed_net_density": -0.2578319050171375
+      },
+      "muon": {
+        "temperature": 8.0,
+        "chemical_potential": 162.71685512607556,
+        "mass": 105.6583755,
+        "net_density": 0.008799999999999898,
+        "particle_density": 0.008799999999999898,
+        "antiparticle_density": 1.2555896836750966e-18,
+        "energy_density": 1.287139657075382,
+        "pressure": 0.2013182009260696,
+        "entropy_density": 0.007068691611500443,
+        "free_energy_density": 1.2305901241833783,
+        "cv_fixed_net_density": 0.00680434345284906,
+        "dn_dmu_fixed_temperature": 0.00026774146459060405,
+        "dn_dtemperature_fixed_mu": 0.00011817063964557713,
+        "dmu_dtemperature_fixed_net_density": -0.4413609966101759
+      },
+      "Ye": 0.17,
+      "Ymu": 0.04,
+      "nuclear_hessian": [
+        [
+          905.2529592394908,
+          40.96711697758848
+        ],
+        [
+          40.96711697758848,
+          967.262160085766
+        ]
+      ],
+      "stability_diagnostics": {
+        "eigenvalues_MeV_fm3": [
+          884.8806200802259,
+          987.634499245031
+        ],
+        "canonical_scalar_curvature_fm_minus2": 0.13668607298134977,
+        "scope": "Local nuclear stability, no global coexistence or external GM1 validation"
+      },
+      "forward_gates": {
+        "normalized_nuclear_root_residual": 1.8023101049109682e-15,
+        "nuclear_Euler_residual_MeV_fm3": -3.552713678800501e-14,
+        "field_energy_decomposition_residual": 0.0,
+        "charge_fraction_residual": -2.273181642920008e-14,
+        "antinucleon_ratio": 3.3064457227896154e-66
+      }
+    },
+    "flavor": "e"
+  },
+  {
+    "j": {
+      "value": 745802389.6150774,
+      "log": 20.429971229800238,
+      "representable": true,
+      "reason": null
+    },
+    "chi": {
+      "value": 958899.1260352507,
+      "log": 13.77354116171707,
+      "representable": true,
+      "reason": null
+    },
+    "relaxation": {
+      "value": 746761288.7411118,
+      "log": 20.43125613210875,
+      "representable": true,
+      "reason": null
+    },
+    "kms_expected": 6.656430068083168,
+    "kms_actual": 6.656430068083168,
+    "state": {
+      "T": 8.0,
+      "dirac_mass": 568.5572415829281,
+      "potential_a": 338.0682785735156,
+      "potential_b": 282.54875402213236,
+      "total_mu_a": 1000.1139607177219,
+      "total_mu_b": 890.2455022016085,
+      "weak_bare_mass": 939.0
+    },
+    "Enu": 40.0,
+    "lepton_mass": 0.51099895069,
+    "mu_lepton_effective": 203.11989906077872,
+    "antineutrino": false,
+    "form_factors": {
+      "gv": 1.0,
+      "ga": 1.2723,
+      "xi": 3.706,
+      "vector_mass": 840.0,
+      "axial_mass": 1000.0,
+      "pion_mass": 139.57,
+      "weak_magnetism": true,
+      "pseudoscalar": true,
+      "q2_dependence": true
+    },
+    "mapping": "physical omega=Enu-El; kinetic w=omega-Ub+Ua; physical-q2 form factors and kinetic-qstar WM/PS vertices; common bare939, no extra Q",
+    "controls": {
+      "lepton_order": 12,
+      "angle_order": 12,
+      "inner_order": 24,
+      "phi_order": 4,
+      "inner_tail": 60.0,
+      "outer_tail": 32.0,
+      "coordinate": "cos",
+      "kernel": "gm1"
+    },
+    "angular_support": "Exact common-positive-mass particle-hole condition q>|w|",
+    "panels_El": [
+      0.51099895069,
+      17.804614813805543,
+      31.519524551383256,
+      47.690079585623295,
+      63.519524551383256,
+      79.51952455138326,
+      87.51952455138326,
+      95.51952455138326,
+      103.51952455138326,
+      111.51952455138326,
+      125.40498932320101,
+      127.51952455138326,
+      139.11989906077872,
+      159.51952455138326,
+      171.11989906077872,
+      173.23443428896098,
+      187.11989906077872,
+      195.11989906077872,
+      203.11989906077872,
+      211.11989906077872,
+      219.11989906077872,
+      235.11989906077872,
+      250.94934402653868,
+      267.1198990607787,
+      280.83480879835645,
+      358.5497185359342,
+      406.3791635016941,
+      513.9795380110895,
+      717.238802452005,
+      824.8391769614004,
+      1080.8391769614004
+    ],
+    "upper_El": 1080.8391769614004,
+    "calls": 4080,
+    "empty_nodes": 0,
+    "empty_energy_nodes": 20,
+    "seconds": 39.63220387510955,
+    "units": "occupation capture j, true absorption chi and relaxation j+chi in s^-1",
+    "scope": "Capture and inverse capture ONLY; no crossed decay, no RPA, external GM1 forward OPEN",
+    "material_state": {
+      "nuclear": {
+        "nB": 0.22,
+        "temperature": 8.0,
+        "Yp": 0.21000000000000002,
+        "phi_mev": 370.44275841707196,
+        "omega_mev": 310.308516297824,
+        "rho_mev": -55.5195245513832,
+        "dirac_mass_mev": 568.5572415829281,
+        "density_defined_landau_n_mev": 662.8110328684895,
+        "density_defined_landau_p_mev": 609.2944242304061,
+        "kinetic_mu_n_mev": 662.0456821442064,
+        "kinetic_mu_p_mev": 607.696748179476,
+        "mu_n_mev": 1000.1139607177219,
+        "mu_p_mev": 890.2455022016085,
+        "energy_density": 207.60540487931263,
+        "pressure": 8.320946610923503,
+        "free_energy_density": 206.62820196353084,
+        "entropy_density": 0.12215036447272397,
+        "kinetic_energy_density": 136.74818346331494,
+        "scalar_field_energy_density": 34.95221179004793,
+        "vector_field_energy_density": 35.905009625949766,
+        "scalar_density": 0.20163974487259845,
+        "antiparticle_density": 7.274180590137154e-67,
+        "max_normalized_equation_residual": 1.8023101049109682e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "electron": {
+        "temperature": 8.0,
+        "chemical_potential": 203.11989906077872,
+        "mass": 0.51099895069,
+        "net_density": 0.037399999999995104,
+        "particle_density": 0.03739999999999523,
+        "antiparticle_density": 1.2684338264162345e-16,
+        "energy_density": 5.784058885145468,
+        "pressure": 1.9279958311938084,
+        "entropy_density": 0.014421311433419463,
+        "free_energy_density": 5.668688393678112,
+        "cv_fixed_net_density": 0.01433510485264866,
+        "dn_dmu_fixed_temperature": 0.0005468335248698333,
+        "dn_dtemperature_fixed_mu": 0.00014099112944442535,
+        "dmu_dtemperature_fixed_net_density": -0.2578319050171375
+      },
+      "muon": {
+        "temperature": 8.0,
+        "chemical_potential": 162.71685512607556,
+        "mass": 105.6583755,
+        "net_density": 0.008799999999999898,
+        "particle_density": 0.008799999999999898,
+        "antiparticle_density": 1.2555896836750966e-18,
+        "energy_density": 1.287139657075382,
+        "pressure": 0.2013182009260696,
+        "entropy_density": 0.007068691611500443,
+        "free_energy_density": 1.2305901241833783,
+        "cv_fixed_net_density": 0.00680434345284906,
+        "dn_dmu_fixed_temperature": 0.00026774146459060405,
+        "dn_dtemperature_fixed_mu": 0.00011817063964557713,
+        "dmu_dtemperature_fixed_net_density": -0.4413609966101759
+      },
+      "Ye": 0.17,
+      "Ymu": 0.04,
+      "nuclear_hessian": [
+        [
+          905.2529592394908,
+          40.96711697758848
+        ],
+        [
+          40.96711697758848,
+          967.262160085766
+        ]
+      ],
+      "stability_diagnostics": {
+        "eigenvalues_MeV_fm3": [
+          884.8806200802259,
+          987.634499245031
+        ],
+        "canonical_scalar_curvature_fm_minus2": 0.13668607298134977,
+        "scope": "Local nuclear stability, no global coexistence or external GM1 validation"
+      },
+      "forward_gates": {
+        "normalized_nuclear_root_residual": 1.8023101049109682e-15,
+        "nuclear_Euler_residual_MeV_fm3": -3.552713678800501e-14,
+        "field_energy_decomposition_residual": 0.0,
+        "charge_fraction_residual": -2.273181642920008e-14,
+        "antinucleon_ratio": 3.3064457227896154e-66
+      }
+    },
+    "flavor": "e"
+  },
+  {
+    "j": {
+      "value": 82208389.41187726,
+      "log": 18.224767915790284,
+      "representable": true,
+      "reason": null
+    },
+    "chi": {
+      "value": 16497482.30322865,
+      "log": 16.618718339545012,
+      "representable": true,
+      "reason": null
+    },
+    "relaxation": {
+      "value": 98705871.71510583,
+      "log": 18.40765499316214,
+      "representable": true,
+      "reason": null
+    },
+    "kms_expected": 1.606049576245269,
+    "kms_actual": 1.6060495762452724,
+    "state": {
+      "T": 8.0,
+      "dirac_mass": 568.5572415829281,
+      "potential_a": 338.0682785735156,
+      "potential_b": 282.54875402213236,
+      "total_mu_a": 1000.1139607177219,
+      "total_mu_b": 890.2455022016085,
+      "weak_bare_mass": 939.0
+    },
+    "Enu": 40.0,
+    "lepton_mass": 105.6583755,
+    "mu_lepton_effective": 162.71685512607556,
+    "antineutrino": false,
+    "form_factors": {
+      "gv": 1.0,
+      "ga": 1.2723,
+      "xi": 3.706,
+      "vector_mass": 840.0,
+      "axial_mass": 1000.0,
+      "pion_mass": 139.57,
+      "weak_magnetism": true,
+      "pseudoscalar": true,
+      "q2_dependence": true
+    },
+    "mapping": "physical omega=Enu-El; kinetic w=omega-Ub+Ua; physical-q2 form factors and kinetic-qstar WM/PS vertices; common bare939, no extra Q",
+    "controls": {
+      "lepton_order": 8,
+      "angle_order": 8,
+      "inner_order": 16,
+      "phi_order": 4,
+      "inner_tail": 60.0,
+      "outer_tail": 32.0,
+      "coordinate": "cos",
+      "kernel": "gm1"
+    },
+    "angular_support": "Exact common-positive-mass particle-hole condition q>|w|",
+    "panels_El": [
+      105.6583755,
+      111.51952455138326,
+      116.8396613649036,
+      118.45812143196923,
+      127.51952455138326,
+      130.71685512607556,
+      139.77825824548958,
+      141.3967183125552,
+      146.71685512607556,
+      154.71685512607556,
+      159.51952455138326,
+      162.71685512607556,
+      170.71685512607556,
+      178.71685512607556,
+      185.65545200666153,
+      187.27391207372716,
+      194.71685512607556,
+      208.5940488872475,
+      226.71685512607556,
+      254.47124264841946,
+      279.02829959607107,
+      346.22563017076334,
+      602.2256301707633
+    ],
+    "upper_El": 602.2256301707633,
+    "calls": 1408,
+    "empty_nodes": 0,
+    "empty_energy_nodes": 0,
+    "seconds": 8.433063957840204,
+    "units": "occupation capture j, true absorption chi and relaxation j+chi in s^-1",
+    "scope": "Capture and inverse capture ONLY; no crossed decay, no RPA, external GM1 forward OPEN",
+    "material_state": {
+      "nuclear": {
+        "nB": 0.22,
+        "temperature": 8.0,
+        "Yp": 0.21000000000000002,
+        "phi_mev": 370.44275841707196,
+        "omega_mev": 310.308516297824,
+        "rho_mev": -55.5195245513832,
+        "dirac_mass_mev": 568.5572415829281,
+        "density_defined_landau_n_mev": 662.8110328684895,
+        "density_defined_landau_p_mev": 609.2944242304061,
+        "kinetic_mu_n_mev": 662.0456821442064,
+        "kinetic_mu_p_mev": 607.696748179476,
+        "mu_n_mev": 1000.1139607177219,
+        "mu_p_mev": 890.2455022016085,
+        "energy_density": 207.60540487931263,
+        "pressure": 8.320946610923503,
+        "free_energy_density": 206.62820196353084,
+        "entropy_density": 0.12215036447272397,
+        "kinetic_energy_density": 136.74818346331494,
+        "scalar_field_energy_density": 34.95221179004793,
+        "vector_field_energy_density": 35.905009625949766,
+        "scalar_density": 0.20163974487259845,
+        "antiparticle_density": 7.274180590137154e-67,
+        "max_normalized_equation_residual": 1.8023101049109682e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "electron": {
+        "temperature": 8.0,
+        "chemical_potential": 203.11989906077872,
+        "mass": 0.51099895069,
+        "net_density": 0.037399999999995104,
+        "particle_density": 0.03739999999999523,
+        "antiparticle_density": 1.2684338264162345e-16,
+        "energy_density": 5.784058885145468,
+        "pressure": 1.9279958311938084,
+        "entropy_density": 0.014421311433419463,
+        "free_energy_density": 5.668688393678112,
+        "cv_fixed_net_density": 0.01433510485264866,
+        "dn_dmu_fixed_temperature": 0.0005468335248698333,
+        "dn_dtemperature_fixed_mu": 0.00014099112944442535,
+        "dmu_dtemperature_fixed_net_density": -0.2578319050171375
+      },
+      "muon": {
+        "temperature": 8.0,
+        "chemical_potential": 162.71685512607556,
+        "mass": 105.6583755,
+        "net_density": 0.008799999999999898,
+        "particle_density": 0.008799999999999898,
+        "antiparticle_density": 1.2555896836750966e-18,
+        "energy_density": 1.287139657075382,
+        "pressure": 0.2013182009260696,
+        "entropy_density": 0.007068691611500443,
+        "free_energy_density": 1.2305901241833783,
+        "cv_fixed_net_density": 0.00680434345284906,
+        "dn_dmu_fixed_temperature": 0.00026774146459060405,
+        "dn_dtemperature_fixed_mu": 0.00011817063964557713,
+        "dmu_dtemperature_fixed_net_density": -0.4413609966101759
+      },
+      "Ye": 0.17,
+      "Ymu": 0.04,
+      "nuclear_hessian": [
+        [
+          905.2529592394908,
+          40.96711697758848
+        ],
+        [
+          40.96711697758848,
+          967.262160085766
+        ]
+      ],
+      "stability_diagnostics": {
+        "eigenvalues_MeV_fm3": [
+          884.8806200802259,
+          987.634499245031
+        ],
+        "canonical_scalar_curvature_fm_minus2": 0.13668607298134977,
+        "scope": "Local nuclear stability, no global coexistence or external GM1 validation"
+      },
+      "forward_gates": {
+        "normalized_nuclear_root_residual": 1.8023101049109682e-15,
+        "nuclear_Euler_residual_MeV_fm3": -3.552713678800501e-14,
+        "field_energy_decomposition_residual": 0.0,
+        "charge_fraction_residual": -2.273181642920008e-14,
+        "antinucleon_ratio": 3.3064457227896154e-66
+      }
+    },
+    "flavor": "mu"
+  },
+  {
+    "j": {
+      "value": 82200022.47032344,
+      "log": 18.22466613338797,
+      "representable": true,
+      "reason": null
+    },
+    "chi": {
+      "value": 16495803.235298863,
+      "log": 16.618616557142694,
+      "representable": true,
+      "reason": null
+    },
+    "relaxation": {
+      "value": 98695825.7056223,
+      "log": 18.407553210759826,
+      "representable": true,
+      "reason": null
+    },
+    "kms_expected": 1.606049576245269,
+    "kms_actual": 1.606049576245276,
+    "state": {
+      "T": 8.0,
+      "dirac_mass": 568.5572415829281,
+      "potential_a": 338.0682785735156,
+      "potential_b": 282.54875402213236,
+      "total_mu_a": 1000.1139607177219,
+      "total_mu_b": 890.2455022016085,
+      "weak_bare_mass": 939.0
+    },
+    "Enu": 40.0,
+    "lepton_mass": 105.6583755,
+    "mu_lepton_effective": 162.71685512607556,
+    "antineutrino": false,
+    "form_factors": {
+      "gv": 1.0,
+      "ga": 1.2723,
+      "xi": 3.706,
+      "vector_mass": 840.0,
+      "axial_mass": 1000.0,
+      "pion_mass": 139.57,
+      "weak_magnetism": true,
+      "pseudoscalar": true,
+      "q2_dependence": true
+    },
+    "mapping": "physical omega=Enu-El; kinetic w=omega-Ub+Ua; physical-q2 form factors and kinetic-qstar WM/PS vertices; common bare939, no extra Q",
+    "controls": {
+      "lepton_order": 12,
+      "angle_order": 12,
+      "inner_order": 24,
+      "phi_order": 4,
+      "inner_tail": 60.0,
+      "outer_tail": 32.0,
+      "coordinate": "cos",
+      "kernel": "gm1"
+    },
+    "angular_support": "Exact common-positive-mass particle-hole condition q>|w|",
+    "panels_El": [
+      105.6583755,
+      111.51952455138326,
+      116.8396613649036,
+      118.45812143196923,
+      127.51952455138326,
+      130.71685512607556,
+      139.77825824548958,
+      141.3967183125552,
+      146.71685512607556,
+      154.71685512607556,
+      159.51952455138326,
+      162.71685512607556,
+      170.71685512607556,
+      178.71685512607556,
+      185.65545200666153,
+      187.27391207372716,
+      194.71685512607556,
+      208.5940488872475,
+      226.71685512607556,
+      254.47124264841946,
+      279.02829959607107,
+      346.22563017076334,
+      602.2256301707633
+    ],
+    "upper_El": 602.2256301707633,
+    "calls": 3168,
+    "empty_nodes": 0,
+    "empty_energy_nodes": 0,
+    "seconds": 28.18673583306372,
+    "units": "occupation capture j, true absorption chi and relaxation j+chi in s^-1",
+    "scope": "Capture and inverse capture ONLY; no crossed decay, no RPA, external GM1 forward OPEN",
+    "material_state": {
+      "nuclear": {
+        "nB": 0.22,
+        "temperature": 8.0,
+        "Yp": 0.21000000000000002,
+        "phi_mev": 370.44275841707196,
+        "omega_mev": 310.308516297824,
+        "rho_mev": -55.5195245513832,
+        "dirac_mass_mev": 568.5572415829281,
+        "density_defined_landau_n_mev": 662.8110328684895,
+        "density_defined_landau_p_mev": 609.2944242304061,
+        "kinetic_mu_n_mev": 662.0456821442064,
+        "kinetic_mu_p_mev": 607.696748179476,
+        "mu_n_mev": 1000.1139607177219,
+        "mu_p_mev": 890.2455022016085,
+        "energy_density": 207.60540487931263,
+        "pressure": 8.320946610923503,
+        "free_energy_density": 206.62820196353084,
+        "entropy_density": 0.12215036447272397,
+        "kinetic_energy_density": 136.74818346331494,
+        "scalar_field_energy_density": 34.95221179004793,
+        "vector_field_energy_density": 35.905009625949766,
+        "scalar_density": 0.20163974487259845,
+        "antiparticle_density": 7.274180590137154e-67,
+        "max_normalized_equation_residual": 1.8023101049109682e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "electron": {
+        "temperature": 8.0,
+        "chemical_potential": 203.11989906077872,
+        "mass": 0.51099895069,
+        "net_density": 0.037399999999995104,
+        "particle_density": 0.03739999999999523,
+        "antiparticle_density": 1.2684338264162345e-16,
+        "energy_density": 5.784058885145468,
+        "pressure": 1.9279958311938084,
+        "entropy_density": 0.014421311433419463,
+        "free_energy_density": 5.668688393678112,
+        "cv_fixed_net_density": 0.01433510485264866,
+        "dn_dmu_fixed_temperature": 0.0005468335248698333,
+        "dn_dtemperature_fixed_mu": 0.00014099112944442535,
+        "dmu_dtemperature_fixed_net_density": -0.2578319050171375
+      },
+      "muon": {
+        "temperature": 8.0,
+        "chemical_potential": 162.71685512607556,
+        "mass": 105.6583755,
+        "net_density": 0.008799999999999898,
+        "particle_density": 0.008799999999999898,
+        "antiparticle_density": 1.2555896836750966e-18,
+        "energy_density": 1.287139657075382,
+        "pressure": 0.2013182009260696,
+        "entropy_density": 0.007068691611500443,
+        "free_energy_density": 1.2305901241833783,
+        "cv_fixed_net_density": 0.00680434345284906,
+        "dn_dmu_fixed_temperature": 0.00026774146459060405,
+        "dn_dtemperature_fixed_mu": 0.00011817063964557713,
+        "dmu_dtemperature_fixed_net_density": -0.4413609966101759
+      },
+      "Ye": 0.17,
+      "Ymu": 0.04,
+      "nuclear_hessian": [
+        [
+          905.2529592394908,
+          40.96711697758848
+        ],
+        [
+          40.96711697758848,
+          967.262160085766
+        ]
+      ],
+      "stability_diagnostics": {
+        "eigenvalues_MeV_fm3": [
+          884.8806200802259,
+          987.634499245031
+        ],
+        "canonical_scalar_curvature_fm_minus2": 0.13668607298134977,
+        "scope": "Local nuclear stability, no global coexistence or external GM1 validation"
+      },
+      "forward_gates": {
+        "normalized_nuclear_root_residual": 1.8023101049109682e-15,
+        "nuclear_Euler_residual_MeV_fm3": -3.552713678800501e-14,
+        "field_energy_decomposition_residual": 0.0,
+        "charge_fraction_residual": -2.273181642920008e-14,
+        "antinucleon_ratio": 3.3064457227896154e-66
+      }
+    },
+    "flavor": "mu"
+  }
+]

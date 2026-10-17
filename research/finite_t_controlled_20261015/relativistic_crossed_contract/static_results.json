@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "older static reference exact matched vacuum limit",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    }
+  ],
+  "older_static_rate": 0.0010555526228422025,
+  "older_neutrino_energy_moment": 0.0005062065717043367,
+  "new_static_rate": 0.0010555526228422012,
+  "T": 0.001,
+  "mu_e": 0,
+  "blocking_bound": 1.1911746899972921e-222
+}

@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-10-15",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1801.07077",
+      "verified": "2026-10-15",
+      "equations": "1,2; dynamic kernel and density/spin Fourier convention"
+    },
+    {
+      "url": "https://arxiv.org/html/astro-ph/0404432",
+      "verified": "2026-10-15",
+      "equations": "9,14,18,20,23,33; static absolute/transport and collision measure"
+    }
+  ],
+  "frozen_dependencies": {
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "provenance": "Primary articles read via web before prefactor derivation. Equations cited; no article redistribution."
+}

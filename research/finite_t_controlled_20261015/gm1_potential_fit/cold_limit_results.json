@@ -1,0 +1,318 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "(0.248, 0.315)cold freeabs",
+      "error": 2.1363462792578503e-05,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "(0.248, 0.315)cold pressure",
+      "error": 6.662589267181218e-05,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "(0.248, 0.315)cold mu_n",
+      "error": 0.0033259074444913495,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "(0.248, 0.315)cold mu_p",
+      "error": 0.0010505184174007809,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "(0.248, 0.315)cold entropy",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "(0.248, 0.315)cold Cv",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "(0.248, 0.315)lowT exact residual",
+      "error": 1.1436839493136472e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "(0.248, 0.315)lowT fit entropy",
+      "error": 4.5059976698125226e-05,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "(0.248, 0.315)T2 coefficient versus cold DOS gamma",
+      "error": 4.5061576825267124e-05,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)cold freeabs",
+      "error": 0.00020311605851475178,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)cold pressure",
+      "error": 0.00020796104387277303,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)cold mu_n",
+      "error": 0.010178475666862141,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)cold mu_p",
+      "error": 0.006964461032453073,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)cold entropy",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)cold Cv",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)lowT exact residual",
+      "error": 4.781322242141069e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)lowT fit entropy",
+      "error": 0.0002357647654751549,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "(0.258, 0.325)T2 coefficient versus cold DOS gamma",
+      "error": 0.00023576870198183109,
+      "tolerance": 0.01,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "n": 0.248,
+      "Y": 0.315,
+      "cold": {
+        "nB": 0.248,
+        "temperature": 0.0,
+        "Yp": 0.315,
+        "phi_mev": 407.9207369620127,
+        "omega_mev": 349.8023274630016,
+        "rho_mev": -39.925325805916316,
+        "dirac_mass_mev": 531.0792630379873,
+        "density_defined_landau_n_mev": 629.5669455226156,
+        "density_defined_landau_p_mev": 591.7326094724485,
+        "kinetic_mu_n_mev": 629.5669455226156,
+        "kinetic_mu_p_mev": 591.7326094724485,
+        "mu_n_mev": 999.3319358885755,
+        "mu_p_mev": 921.5722740324919,
+        "energy_density": 232.12724123692752,
+        "pressure": 9.632494079241912,
+        "free_energy_density": 232.12724123692752,
+        "entropy_density": 0.0,
+        "kinetic_energy_density": 144.87393660814263,
+        "scalar_field_energy_density": 42.96192904938498,
+        "vector_field_energy_density": 44.29137557939991,
+        "scalar_density": 0.22588868048474492,
+        "antiparticle_density": 0.0,
+        "max_normalized_equation_residual": 5.595882180570345e-17,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "cold_prediction": {
+        "free_per_baryon": 935.9969618349447,
+        "free_energy_density": 232.1272465350663,
+        "entropy_density": -0.0,
+        "energy_density": 232.1272465350663,
+        "pressure": 9.633135852758597,
+        "mu_n": 999.33526179602,
+        "mu_p": 921.5733245509093,
+        "cv_fixed_nY": 0.0,
+        "chemical_hessian": [
+          [
+            1002.8621230948308,
+            148.8255976027346
+          ],
+          [
+            148.8255976027346,
+            1007.9681507444512
+          ]
+        ],
+        "min_chemical_eigenvalue": 856.5676432175275
+      },
+      "lowT": {
+        "nB": 0.248,
+        "temperature": 0.05,
+        "Yp": 0.315,
+        "phi_mev": 407.9206980982353,
+        "omega_mev": 349.8023274630016,
+        "rho_mev": -39.925325805916316,
+        "dirac_mass_mev": 531.0793019017648,
+        "density_defined_landau_n_mev": 629.5669783066534,
+        "density_defined_landau_p_mev": 591.7326443526396,
+        "kinetic_mu_n_mev": 629.5669491256598,
+        "kinetic_mu_p_mev": 591.7326016713747,
+        "mu_n_mev": 999.3319394916196,
+        "mu_p_mev": 921.572266231418,
+        "energy_density": 232.12726115379687,
+        "pressure": 9.632513998783416,
+        "free_energy_density": 232.12722132005115,
+        "entropy_density": 0.000796674914270293,
+        "kinetic_energy_density": 144.8739653038989,
+        "scalar_field_energy_density": 42.96192027049805,
+        "vector_field_energy_density": 44.29137557939991,
+        "scalar_density": 0.22588865505521888,
+        "antiparticle_density": 0.0,
+        "max_normalized_equation_residual": 1.1436839493136472e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "lowT_prediction": {
+        "free_per_baryon": 935.996881521341,
+        "free_energy_density": 232.12722661729256,
+        "entropy_density": 0.0007967108124233661,
+        "energy_density": 232.1272664528332,
+        "pressure": 9.633155727339453,
+        "mu_n": 999.3352652247139,
+        "mu_p": 921.5733165419566,
+        "cv_fixed_nY": 0.0007967102664283069,
+        "chemical_hessian": [
+          [
+            1002.8621110638514,
+            148.82555431717054
+          ],
+          [
+            148.82555431717054,
+            1007.968388189845
+          ]
+        ],
+        "min_chemical_eigenvalue": 856.5677970643842
+      },
+      "gamma_cold": 0.015933503719615955
+    },
+    {
+      "n": 0.258,
+      "Y": 0.325,
+      "cold": {
+        "nB": 0.258,
+        "temperature": 0.0,
+        "Yp": 0.325,
+        "phi_mev": 419.82929215345473,
+        "omega_mev": 363.9072600219936,
+        "rho_mev": -39.2900710579146,
+        "dirac_mass_mev": 519.1707078465453,
+        "density_defined_landau_n_mev": 621.091874523364,
+        "density_defined_landau_p_mev": 583.8931641556194,
+        "kinetic_mu_n_mev": 621.091874523364,
+        "kinetic_mu_p_mev": 583.8931641556194,
+        "mu_n_mev": 1004.6441700743151,
+        "mu_p_mev": 928.1553886486555,
+        "energy_density": 241.70490350663098,
+        "pressure": 11.079708050000734,
+        "free_energy_density": 241.70490350663098,
+        "entropy_density": 0.0,
+        "kinetic_energy_density": 148.17545454249455,
+        "scalar_field_energy_density": 45.69843906716684,
+        "vector_field_energy_density": 47.831009896969604,
+        "scalar_density": 0.23370741270280615,
+        "antiparticle_density": 0.0,
+        "max_normalized_equation_residual": 3.2273925134452223e-16,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "cold_prediction": {
+        "free_per_baryon": 936.8409143820701,
+        "free_energy_density": 241.70495591057409,
+        "entropy_density": -0.0,
+        "energy_density": 241.70495591057409,
+        "pressure": 11.082012197652618,
+        "mu_n": 1004.6543485499819,
+        "mu_p": 928.162353109688,
+        "cv_fixed_nY": 0.0,
+        "chemical_hessian": [
+          [
+            1039.3676889424294,
+            185.8662202688741
+          ],
+          [
+            185.8662202688741,
+            1042.5616242848328
+          ]
+        ],
+        "min_chemical_eigenvalue": 855.0915758763158
+      },
+      "lowT": {
+        "nB": 0.258,
+        "temperature": 0.05,
+        "Yp": 0.325,
+        "phi_mev": 419.8292537180632,
+        "omega_mev": 363.9072600219936,
+        "rho_mev": -39.2900710579146,
+        "dirac_mass_mev": 519.1707462819368,
+        "density_defined_landau_n_mev": 621.0919066515088,
+        "density_defined_landau_p_mev": 583.8931983305863,
+        "kinetic_mu_n_mev": 621.0918780530255,
+        "kinetic_mu_p_mev": 583.8931576545527,
+        "mu_n_mev": 1004.6441736039766,
+        "mu_p_mev": 928.155382147589,
+        "energy_density": 241.70492344907592,
+        "pressure": 11.079728062027755,
+        "free_energy_density": 241.70488356418014,
+        "entropy_density": 0.000797697915665276,
+        "kinetic_energy_density": 148.17548346757488,
+        "scalar_field_energy_density": 45.69843008453142,
+        "vector_field_energy_density": 47.831009896969604,
+        "scalar_density": 0.2337073873821764,
+        "antiparticle_density": 0.0,
+        "max_normalized_equation_residual": 4.781322242141069e-16,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "lowT_prediction": {
+        "free_per_baryon": 936.840837067525,
+        "free_energy_density": 241.70493596342143,
+        "entropy_density": 0.0007978859847272828,
+        "energy_density": 241.70497585772068,
+        "pressure": 11.082032056400953,
+        "mu_n": 1004.654351482615,
+        "mu_p": 928.1623459645198,
+        "cv_fixed_nY": 0.0007978854990311251,
+        "chemical_hessian": [
+          [
+            1039.3676345774586,
+            185.8661351809073
+          ],
+          [
+            185.8661351809073,
+            1042.5617805646066
+          ]
+        ],
+        "min_chemical_eigenvalue": 855.0917110136141
+      },
+      "gamma_cold": 0.015953963106334186
+    }
+  ],
+  "runtime_seconds": 0.3729799578431994
+}

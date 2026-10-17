@@ -1,0 +1,71 @@
+{
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "controls": {
+    "lepton_order": 12,
+    "angle_order": 16,
+    "energy_order": 16,
+    "phi_order": 6,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 85.0
+  },
+  "energy_MeV": 0.1,
+  "channel": "PC",
+  "complete": false,
+  "error": {
+    "type": "ArithmeticError",
+    "message": "Final positive-energy baryon shell unresolved",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/pc_support/reproduce_original.py\", line 11, in <module>\n    row=W.spectral_coefficients('PC',b,.1,c);z['result']=dataclasses.asdict(row);z['complete']=True\n  File \"/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/pc_support/pr55_reference/weak_reference.py\", line 229, in spectral_coefficients\n    return _spectral_evaluate(channel,bath,E_MeV,controls,Timer(controls.budget_seconds))\n  File \"/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/pc_support/pr55_reference/weak_reference.py\", line 215, in _spectral_evaluate\n    return (decay if channel == 'NEUTRON_DECAY' else capture).integrate(channel,bath,energy,controls,timer)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/pc_support/pr55_reference/_weak_spectral_capture.py\", line 135, in integrate\n    row = differential(channel,bath,energy,float(el),float(cosine),controls,timer); calls+=1\n  File \"/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/pc_support/pr55_reference/_weak_spectral_capture.py\", line 103, in differential\n    raise ArithmeticError('Final positive-energy baryon shell unresolved')\nArithmeticError: Final positive-energy baryon shell unresolved\n"
+  },
+  "witness": {
+    "energy": 0.1,
+    "el": 0.788301782324728,
+    "cosine": -0.8656312023878316,
+    "ma": 938.27208816,
+    "mb": 939.56542052,
+    "omega": -0.688301782324728,
+    "q": 0.6886354307050477,
+    "intervals": [
+      [
+        3639812.416935636,
+        null
+      ]
+    ],
+    "ea_minmax": [
+      3639813.1588701867,
+      3639951.6750010857
+    ],
+    "ca_minmax": [
+      -0.9999999999012322,
+      -0.9999999814623707
+    ],
+    "b_minmax": [
+      -3639950.7979601575,
+      3639950.9866993036
+    ],
+    "worst_index": 0,
+    "worst_shell_relative": 4.708772927131122e-09,
+    "worst_initial": [
+      3639813.1588701867,
+      51.15660349689015,
+      0.0,
+      -3639813.0375766633
+    ],
+    "worst_final": [
+      3639812.4705684045,
+      51.15660349689015,
+      0.0,
+      -3639812.3489412325
+    ]
+  },
+  "seconds": 0.0066752079874277115
+}

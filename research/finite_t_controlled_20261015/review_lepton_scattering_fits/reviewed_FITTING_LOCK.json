@@ -1,0 +1,20 @@
+{
+  "model_sha": "9067c895b38e43451cce803a39681db961abb7066eea2cb5d9fa2d7fc5dd2e9f",
+  "preregistration_sha": "d9b496c00ba0b4e6ea85d4fa504707657005d2395e64d276f687465db5054ac5",
+  "training_reference_sha": "a13290ff1b6a916272bf2e706d6c95405809a3ec19d0c2b317b29c1a100a1929",
+  "heldout_source_file_absent": true,
+  "selection_checks": [
+    {
+      "name": "training-only selection rate",
+      "passed": true
+    },
+    {
+      "name": "training-only selection transport_rate",
+      "passed": true
+    },
+    {
+      "name": "training-only selection outgoing_energy_moment",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,566 @@
+{
+  "status": "PASS",
+  "passed": 135,
+  "failed": [],
+  "checks": [
+    {
+      "name": "exact overlay README.md",
+      "passed": true
+    },
+    {
+      "name": "exact overlay tests/test_weak_reference_current.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar tests/test_weak_reference_current.py",
+      "passed": true
+    },
+    {
+      "name": "exact overlay tests/test_weak_reference_moments.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar tests/test_weak_reference_moments.py",
+      "passed": true
+    },
+    {
+      "name": "exact overlay docs/weak_reference.md",
+      "passed": true
+    },
+    {
+      "name": "exact overlay examples/free_weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar examples/free_weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "exact overlay src/nmbackend/reference/_weak_decay.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar src/nmbackend/reference/_weak_decay.py",
+      "passed": true
+    },
+    {
+      "name": "exact wheel module src/nmbackend/reference/_weak_decay.py",
+      "passed": true
+    },
+    {
+      "name": "exact overlay src/nmbackend/reference/weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar src/nmbackend/reference/weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "exact wheel module src/nmbackend/reference/weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "exact overlay src/nmbackend/reference/_weak_two_body.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar src/nmbackend/reference/_weak_two_body.py",
+      "passed": true
+    },
+    {
+      "name": "exact wheel module src/nmbackend/reference/_weak_two_body.py",
+      "passed": true
+    },
+    {
+      "name": "exact overlay src/nmbackend/reference/_weak_current.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar src/nmbackend/reference/_weak_current.py",
+      "passed": true
+    },
+    {
+      "name": "exact wheel module src/nmbackend/reference/_weak_current.py",
+      "passed": true
+    },
+    {
+      "name": "exact overlay src/nmbackend/reference/_weak_quadrature.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar src/nmbackend/reference/_weak_quadrature.py",
+      "passed": true
+    },
+    {
+      "name": "exact wheel module src/nmbackend/reference/_weak_quadrature.py",
+      "passed": true
+    },
+    {
+      "name": "exact overlay tests/data/free_weak_reference.json",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/adapters/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/adapters/rift.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/constants.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/README.md",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/build_nscool.sh",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/isothermal.py",
+      "passed": true
+    },
+    {
+      "name": "baseline omission nonPython src/nmbackend/cooling/nscool_isothermal_tail.f",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/nscool_nmbackend.patch",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/runner.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/validate.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/data/crust_sly_dh2001.dat",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/data/frib_scenario_ladder.yaml",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/durca.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/ejecta.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/base.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/compose.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/coolcomp.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/crust.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/ddrmf.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/hybrid.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/leptons.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/metamodel.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/polytrope.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/rmft.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/eos/skyrme.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/inference/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/inference/fisher.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/inference/synthetic.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/ipad.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/lab_likelihood.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/nscool_io.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/postmerger.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/priors/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/priors/bridge.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/priors/gp_pca.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/reference/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/reference/reprimand.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/reference/scipy_tov.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/rift/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/rift/compressed.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/rift/evidence.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/rift/sequence.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/tov/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/tov/central.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/tov/family.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/tov/phase_transition.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/tov/solver.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/validation/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/validation/model_diagnostic.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/validation/reference_matrix.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/_spline.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/blanket.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/conduct.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/core_conduct.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/core_nu.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/crust.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/crust_nu.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/curve.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/envelope.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/gaps.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/geometry.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/heat.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/native.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/reference.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/star.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/superfluid.py",
+      "passed": true
+    },
+    {
+      "name": "baseline unchanged src/nmbackend/cooling/physics/whole.py",
+      "passed": true
+    },
+    {
+      "name": "only five new package modules",
+      "passed": true
+    },
+    {
+      "name": "no unmerged finiteT EOS dependencies",
+      "passed": true
+    },
+    {
+      "name": "metadata Requires-Python: >=3.9",
+      "passed": true
+    },
+    {
+      "name": "metadata Requires-Dist: numpy>=1.21",
+      "passed": true
+    },
+    {
+      "name": "metadata Requires-Dist: scipy>=1.7",
+      "passed": true
+    },
+    {
+      "name": "README discovery",
+      "passed": true
+    },
+    {
+      "name": "source-only docs/example/fixture baselinepolicy",
+      "passed": true
+    },
+    {
+      "name": "actualwheel origin root",
+      "passed": true
+    },
+    {
+      "name": "actualwheel origin constants",
+      "passed": true
+    },
+    {
+      "name": "actualwheel origin public",
+      "passed": true
+    },
+    {
+      "name": "actualwheel origin current",
+      "passed": true
+    },
+    {
+      "name": "actualwheel origin quadrature",
+      "passed": true
+    },
+    {
+      "name": "actualwheel origin two_body",
+      "passed": true
+    },
+    {
+      "name": "actualwheel origin decay",
+      "passed": true
+    },
+    {
+      "name": "immutable Current",
+      "passed": true
+    },
+    {
+      "name": "immutable FreeElectronBath",
+      "passed": true
+    },
+    {
+      "name": "immutable Radiation",
+      "passed": true
+    },
+    {
+      "name": "immutable Controls",
+      "passed": true
+    },
+    {
+      "name": "immutable MomentResult",
+      "passed": true
+    },
+    {
+      "name": "immutable PositiveQuantity",
+      "passed": true
+    },
+    {
+      "name": "immutable SignedQuantity",
+      "passed": true
+    },
+    {
+      "name": "physical fixed masses",
+      "passed": true
+    },
+    {
+      "name": "no eager export",
+      "passed": true
+    },
+    {
+      "name": "exactexample three named channels",
+      "passed": true
+    },
+    {
+      "name": "example positive emitted number EC",
+      "passed": true
+    },
+    {
+      "name": "example gross energy closure EC",
+      "passed": true
+    },
+    {
+      "name": "example positive emitted number PC",
+      "passed": true
+    },
+    {
+      "name": "example gross energy closure PC",
+      "passed": true
+    },
+    {
+      "name": "example positive emitted number NEUTRON_DECAY",
+      "passed": true
+    },
+    {
+      "name": "example gross energy closure NEUTRON_DECAY",
+      "passed": true
+    },
+    {
+      "name": "StageA spectrum unavailable",
+      "passed": true
+    },
+    {
+      "name": "unsupported channel",
+      "passed": true
+    },
+    {
+      "name": "temperature mismatch",
+      "passed": true
+    },
+    {
+      "name": "Boolean bath",
+      "passed": true
+    },
+    {
+      "name": "huge scalar",
+      "passed": true
+    },
+    {
+      "name": "incompatible controls",
+      "passed": true
+    },
+    {
+      "name": "signed positive falsezero rejected",
+      "passed": true
+    },
+    {
+      "name": "signed negative falsezero rejected",
+      "passed": true
+    },
+    {
+      "name": "research runtime not imported",
+      "passed": true
+    },
+    {
+      "name": "all current author bytes unchanged",
+      "passed": true
+    }
+  ],
+  "baseline_packaging_omissions": [
+    "src/nmbackend/cooling/nscool_isothermal_tail.f"
+  ],
+  "wheel_sha256": "3b156821e3dd32c1d25fa64b48abe7d4114ee6f42edb29fa9766ff23818d4e40",
+  "wheel": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_packaging_review/wheels/nmbackend-0.0.1-py3-none-any.whl",
+  "actual_module_origin": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_packaging_review/wheels/nmbackend-0.0.1-py3-none-any.whl/nmbackend/reference/weak_reference.py",
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "jax": "0.10.1",
+    "diffrax": "0.7.2",
+    "setuptools": "82.0.1",
+    "wheel": "0.47.0"
+  },
+  "elapsed_seconds": 3.0586233749054372,
+  "physical_calls": "exact repository example: three base empty-radiation channels; no new grid",
+  "minimum_runtime_executed": false,
+  "changed": []
+}

@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-16T07:06:54.124861+00:00",
+  "allowed_by": "Afterconvergenceonly isolatecapturematerialtail95atfixedhigh thenoutertail60atfixedhigh; beta.337/.873 fineorhighsameorderstail95. No newpoints/domain.",
+  "gate": 3e-06,
+  "jobs": [
+    {
+      "channel": "EC",
+      "E": 6.431,
+      "kind": "material",
+      "material_tail": 95,
+      "outer_tail": 50
+    },
+    {
+      "channel": "EC",
+      "E": 6.431,
+      "kind": "outer",
+      "material_tail": 85,
+      "outer_tail": 60
+    },
+    {
+      "channel": "PC",
+      "E": 4.237,
+      "kind": "material",
+      "material_tail": 95,
+      "outer_tail": 50
+    },
+    {
+      "channel": "PC",
+      "E": 4.237,
+      "kind": "outer",
+      "material_tail": 85,
+      "outer_tail": 60
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "E": 0.337,
+      "kind": "material",
+      "tail": 95,
+      "quad": "fine"
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "E": 0.873,
+      "kind": "material",
+      "tail": 95,
+      "quad": "high"
+    }
+  ],
+  "no_new_quad_shapes": true,
+  "candidate_imported": false
+}

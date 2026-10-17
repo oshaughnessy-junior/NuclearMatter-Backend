@@ -1,0 +1,63 @@
+{
+  "exact_baseline_blobs": 71,
+  "candidate_paths": {
+    "README.md": "20d5de6f0bda3592f569d615e688672a8bd6d407fe6285c2cba008f9698b41ee",
+    "tests/test_finite_t_rmf_forward.py": "9eeb2992e3f1c2621ecba9a22ccf11d3b0082be61fab93b3f345a54b6457c7c8",
+    "tests/test_finite_t_rmf_response.py": "4d145f02f776ba4a38bfdeb6c80c0d5296ba1aa77b1368e33cb5baf69d3b37b1",
+    "docs/finite_temperature_rmf.md": "f3433140484da2132063a6bb8559a17ce01045b99119728d2141a9affc9de2ad",
+    "examples/finite_t_rmf.py": "d8153b2eb8eb57822be3c8c4ff7b52005351d3303056c91a16fa5afbdab84d37",
+    "tests/data/finite_t_gm1_reference.json": "e309afb29f27d51529ce6130961e9b6a06c158cfa10390f5ce51771842cc5666",
+    "src/nmbackend/reference/_rmf_response.py": "af0f9828cafb85904bfc2146eff41d417f6e465bc40d2bf536d135f8f1abe805",
+    "src/nmbackend/reference/finite_t_rmf.py": "677c17070cfc63d301abdf8faf6d3dff147b6913aefc3d90855d0be574b04f65",
+    "src/nmbackend/reference/_rmf_moments.py": "e5978b2dbb3a992080b55a4681c32078db08cfd0f91e358ecec4124c61bc6617"
+  },
+  "actual_package_origins": {
+    "nmbackend.constants": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/constants.py",
+    "nmbackend.ejecta": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/ejecta.py",
+    "nmbackend.ipad": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/ipad.py",
+    "nmbackend.postmerger": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/postmerger.py",
+    "nmbackend.eos.base": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/base.py",
+    "nmbackend.eos.leptons": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/leptons.py",
+    "nmbackend.eos.crust": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/crust.py",
+    "nmbackend.eos.metamodel": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/metamodel.py",
+    "nmbackend.eos.polytrope": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/polytrope.py",
+    "nmbackend.eos.hybrid": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/hybrid.py",
+    "nmbackend.eos.rmft": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/rmft.py",
+    "nmbackend.eos.ddrmf": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/ddrmf.py",
+    "nmbackend.eos.skyrme": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/skyrme.py",
+    "nmbackend.eos.compose": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/compose.py",
+    "nmbackend.eos": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/eos/__init__.py",
+    "nmbackend.tov.solver": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/tov/solver.py",
+    "nmbackend.tov.family": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/tov/family.py",
+    "nmbackend.tov.phase_transition": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/tov/phase_transition.py",
+    "nmbackend.tov.central": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/tov/central.py",
+    "nmbackend.tov": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/tov/__init__.py",
+    "nmbackend": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/__init__.py",
+    "nmbackend.reference.scipy_tov": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/scipy_tov.py",
+    "nmbackend.reference": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/__init__.py",
+    "nmbackend.reference._rmf_moments": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/_rmf_moments.py",
+    "nmbackend.reference._rmf_response": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/_rmf_response.py",
+    "nmbackend.reference.finite_t_rmf": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/finite_t_rmf.py"
+  },
+  "tests": {
+    "final_basic": 23,
+    "final_ladders": 2,
+    "final_remaining_cold": 20
+  },
+  "unique_candidate_tests": 32,
+  "unchanged_cold_unit_tests": 13,
+  "forward_field_checks": 65,
+  "extra_raw_response_checks": 3,
+  "python39_grammar_files": 6,
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "jax": "0.10.1",
+    "diffrax": "0.7.2",
+    "pytest": "9.0.3"
+  },
+  "external_native_executed": false,
+  "full_CI": false,
+  "minimum_runtime_executed": false
+}

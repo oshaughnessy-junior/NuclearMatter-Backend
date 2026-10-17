@@ -1,0 +1,600 @@
+{
+  "checks": [
+    {
+      "name": "heldout_warm independent forward blocked_out_rate_s",
+      "error": 5.873079800267078e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent refinement blocked_out_rate_s",
+      "error": 2.0461521366144098e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent forward blocked_transport_rate_s",
+      "error": 1.1464162952279366e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent refinement blocked_transport_rate_s",
+      "error": 5.744884568059661e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent forward energy_to_bath_MeV_s",
+      "error": 6.483480419205989e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent refinement energy_to_bath_MeV_s",
+      "error": 5.727520058229629e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent forward absolute_energy_transfer_MeV_s",
+      "error": 1.7910117833253025e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent refinement absolute_energy_transfer_MeV_s",
+      "error": 1.5871807201861543e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent forward gain_s",
+      "error": 2.533528942194607e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent refinement gain_s",
+      "error": 1.8516161937043307e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent forward loss_s",
+      "error": 5.877520692365579e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent refinement loss_s",
+      "error": 2.046154357060459e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent forward net_collision_s",
+      "error": 1.776467861702713e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm independent refinement net_collision_s",
+      "error": 8.411512275596777e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm actual cutoff1.5 blocked_out_rate_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm actual cutoff1.5 blocked_transport_rate_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm actual cutoff1.5 energy_to_bath_MeV_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm actual cutoff1.5 absolute_energy_transfer_MeV_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm actual cutoff1.5 gain_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm actual cutoff1.5 loss_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_warm actual cutoff1.5 net_collision_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent forward blocked_out_rate_s",
+      "error": 8.381347913810622e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent refinement blocked_out_rate_s",
+      "error": 0.00012301923247770574,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "heldout_cold independent forward blocked_transport_rate_s",
+      "error": 1.4444604331420585e-05,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent refinement blocked_transport_rate_s",
+      "error": 0.00021294890457990157,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "heldout_cold independent forward energy_to_bath_MeV_s",
+      "error": 2.0980593850139506e-05,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent refinement energy_to_bath_MeV_s",
+      "error": 0.0002603538686980489,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "heldout_cold independent forward absolute_energy_transfer_MeV_s",
+      "error": 2.0799171297714025e-05,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent refinement absolute_energy_transfer_MeV_s",
+      "error": 0.0002581045769871615,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "heldout_cold independent forward gain_s",
+      "error": 7.184940487015012e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent refinement gain_s",
+      "error": 1.4279745403911193e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent forward loss_s",
+      "error": 8.38134791325551e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent refinement loss_s",
+      "error": 0.0001230192324774837,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "heldout_cold independent forward net_collision_s",
+      "error": 1.0736977296810224e-05,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold independent refinement net_collision_s",
+      "error": 0.0001574890617164204,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "heldout_cold actual cutoff1.5 blocked_out_rate_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold actual cutoff1.5 blocked_transport_rate_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold actual cutoff1.5 energy_to_bath_MeV_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold actual cutoff1.5 absolute_energy_transfer_MeV_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold actual cutoff1.5 gain_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold actual cutoff1.5 loss_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_cold actual cutoff1.5 net_collision_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent forward blocked_out_rate_s",
+      "error": 5.893063814710331e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent refinement blocked_out_rate_s",
+      "error": 1.6650836265341695e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent forward blocked_transport_rate_s",
+      "error": 1.149302875091962e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent refinement blocked_transport_rate_s",
+      "error": 5.007871894946447e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent forward energy_to_bath_MeV_s",
+      "error": 6.462164137133186e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent refinement energy_to_bath_MeV_s",
+      "error": 5.769277966471975e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent forward absolute_energy_transfer_MeV_s",
+      "error": 1.7932322293745528e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent refinement absolute_energy_transfer_MeV_s",
+      "error": 1.605127752934976e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent forward gain_s",
+      "error": 5.890843368661081e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent refinement gain_s",
+      "error": 1.665096949210465e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent forward loss_s",
+      "error": 5.897504706808832e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent refinement loss_s",
+      "error": 1.665088067426268e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent forward net_collision_s",
+      "error": 2.61119459388226e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE independent refinement net_collision_s",
+      "error": 5.552433235411769e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE actual cutoff1.5 blocked_out_rate_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE actual cutoff1.5 blocked_transport_rate_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE actual cutoff1.5 energy_to_bath_MeV_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE actual cutoff1.5 absolute_energy_transfer_MeV_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE actual cutoff1.5 gain_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE actual cutoff1.5 loss_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "heldout_nearLTE actual cutoff1.5 net_collision_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "all author source/data hashes unchanged",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "heldout_warm",
+      "state": {
+        "T": 1.1,
+        "n": 0.0017,
+        "E": 13.7,
+        "radiationT": 1.8,
+        "mu": 2.3
+      },
+      "cutoff": 90.7,
+      "author_q96": {
+        "values": [
+          114952.51528590046,
+          118230.2713822909,
+          23438.53145937978,
+          84940.48406649612,
+          199.90096244733218,
+          203.8055901590514,
+          -3.9046277117191384
+        ],
+        "estimated_absolute_vector_error": 2.2020552460402765e-08,
+        "angle_order": 96,
+        "coordinate": "q",
+        "tail": 70.0,
+        "cutoff": 90.7,
+        "rtol": 2e-10
+      },
+      "independent_q32_E20": [
+        114952.515309489,
+        118230.27145034839,
+        23438.530117085156,
+        84940.48271848926,
+        199.90096281752267,
+        203.80559020087296,
+        -3.904627383350263
+      ],
+      "independent_q56_E32": [
+        114952.51528596797,
+        118230.27138242645,
+        23438.531459531747,
+        84940.48406664825,
+        199.90096244738282,
+        203.8055901591712,
+        -3.9046277117885024
+      ],
+      "absolute_cutoff_extended": [
+        114952.51528596797,
+        118230.27138242645,
+        23438.531459531747,
+        84940.48406664825,
+        199.90096244738282,
+        203.8055901591712,
+        -3.9046277117885024
+      ]
+    },
+    {
+      "label": "heldout_cold",
+      "state": {
+        "T": 0.2,
+        "n": 0.0042,
+        "E": 19.6,
+        "radiationT": 0.7,
+        "mu": 5.1
+      },
+      "cutoff": 118.22184604645699,
+      "author_q96": {
+        "values": [
+          187183.30872391758,
+          217560.30727958295,
+          328049.3206349061,
+          330910.7001637336,
+          4.1716516142230896e-05,
+          0.00018887180772357188,
+          -0.00014715529158134107
+        ],
+        "estimated_absolute_vector_error": 1.8301001324555122e-06,
+        "angle_order": 96,
+        "coordinate": "q",
+        "tail": 70.0,
+        "cutoff": 118.22184604645699,
+        "rtol": 2e-10
+      },
+      "independent_q32_E20": [
+        187204.76682945684,
+        217603.49326693395,
+        328127.84508316853,
+        330989.22528523474,
+        4.171657271504272e-05,
+        0.00018889345939332363,
+        -0.00014717688667828082
+      ],
+      "independent_q56_E32": [
+        187181.7398754835,
+        217557.16470702607,
+        328042.4379653471,
+        330903.81749539665,
+        4.171651314492404e-05,
+        0.00018887022472324034,
+        -0.00014715371157831625
+      ],
+      "absolute_cutoff_extended": [
+        187181.7398754835,
+        217557.16470702607,
+        328042.4379653471,
+        330903.81749539665,
+        4.171651314492404e-05,
+        0.00018887022472324034,
+        -0.00014715371157831625
+      ]
+    },
+    {
+      "label": "heldout_nearLTE",
+      "state": {
+        "T": 1.1,
+        "n": 0.0017,
+        "E": 13.7,
+        "radiationT": 1.10000011,
+        "mu": 3.2
+      },
+      "cutoff": 90.7,
+      "author_q96": {
+        "values": [
+          115197.56455841471,
+          118498.2579296187,
+          23592.578202008626,
+          85154.29096643487,
+          8.238998154639642,
+          8.238998308035525,
+          -1.5339588417409455e-07
+        ],
+        "estimated_absolute_vector_error": 2.2061696887450466e-08,
+        "angle_order": 96,
+        "coordinate": "q",
+        "tail": 70.0,
+        "cutoff": 90.7,
+        "rtol": 2e-10
+      },
+      "independent_q32_E20": [
+        115197.56457766394,
+        118498.2579890973,
+        23592.57684103967,
+        85154.28959975242,
+        8.238998156016368,
+        8.23899830941225,
+        -1.533958796623553e-07
+      ],
+      "independent_q56_E32": [
+        115197.5645584826,
+        118498.2579297549,
+        23592.578202161087,
+        85154.29096658758,
+        8.238998154644495,
+        8.238998308040383,
+        -1.5339588817955957e-07
+      ],
+      "absolute_cutoff_extended": [
+        115197.5645584826,
+        118498.2579297549,
+        23592.578202161087,
+        85154.29096658758,
+        8.238998154644495,
+        8.238998308040383,
+        -1.5339588817955957e-07
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "label": "cold_domain_probe",
+      "T": 0.08,
+      "n": 0.0042,
+      "E": 19.6,
+      "cutoff": 118.27309753794682,
+      "exception": "OverflowError('math range error')"
+    }
+  ],
+  "source_hashes_before": {
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "nc_continuum_grid/make_figure.py": "18545d0bab96691bb249ca87ce14d8ad1ca210fd8dfef56d1e96bcb35ca21a9f",
+    "nc_continuum_grid/refine.py": "af0bd533e0773f527de42fb205279060aaa1d3e2f1a8003f0673edcccf8d76fe",
+    "nc_continuum_grid/tail_extension.py": "8ceb5f7fc0363ef33a09ba75dec411087069739bac1fdd77b0ee2e94c9b16296",
+    "nc_continuum_grid/check_controls.py": "b9c97f773f9873e4fa204ce093e9ffcbb610d7c124937489bb37e14fc03bcc0c",
+    "nc_continuum_grid/study.py": "44ecbb5f8843f630eb6645639d1bd575871c5f0e1077c90e18d308d90f848d90",
+    "nc_continuum_grid/refine_dense_grid.py": "2f4890f3ec54ceb5bcce7e5fccfb9830c9842777bc80bf53337e79cb6545bc3c",
+    "nc_continuum_grid/SOURCES.json": "1a053d71d7749da886042a3cd1b6d71ea248cdf889b78f97d6383e9e666cc023",
+    "nc_continuum_grid/refinements.json": "c191090ca05093c31aac8eb07d5bcb620ef86aed8afa14237e76bcb8ce6a0051",
+    "nc_continuum_grid/controls.json": "4f9389bb99b5fa93e0309cba82a180da76403a41d1d7677d07f2b1b6902d3b70",
+    "nc_continuum_grid/CHECKPOINT.json": "c984c6edb7547bff1daf683c1af7a8573dc2b076e096c33943e1ab9625a0a836",
+    "nc_continuum_grid/tail_extension.json": "9f7c4cf5db5fff9ba8f6e2d5cb3fb996f9ee2877690fb1e82e5ce4a78e77a734",
+    "nc_continuum_grid/results.json": "fdc0aa91452d6d91ff85cddfd17ef0a142624988b7210edbb6ddcf333d7a7644",
+    "nc_continuum_grid/dense_grid_refinement.json": "ee091fa8bc4491a0ccb2eeaec7e997aa52907461cd39d6ecff1bbdb2177a9fb7",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c"
+  },
+  "source_hashes_after": {
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "nc_continuum_grid/make_figure.py": "18545d0bab96691bb249ca87ce14d8ad1ca210fd8dfef56d1e96bcb35ca21a9f",
+    "nc_continuum_grid/refine.py": "af0bd533e0773f527de42fb205279060aaa1d3e2f1a8003f0673edcccf8d76fe",
+    "nc_continuum_grid/tail_extension.py": "8ceb5f7fc0363ef33a09ba75dec411087069739bac1fdd77b0ee2e94c9b16296",
+    "nc_continuum_grid/check_controls.py": "b9c97f773f9873e4fa204ce093e9ffcbb610d7c124937489bb37e14fc03bcc0c",
+    "nc_continuum_grid/study.py": "44ecbb5f8843f630eb6645639d1bd575871c5f0e1077c90e18d308d90f848d90",
+    "nc_continuum_grid/refine_dense_grid.py": "2f4890f3ec54ceb5bcce7e5fccfb9830c9842777bc80bf53337e79cb6545bc3c",
+    "nc_continuum_grid/SOURCES.json": "1a053d71d7749da886042a3cd1b6d71ea248cdf889b78f97d6383e9e666cc023",
+    "nc_continuum_grid/refinements.json": "c191090ca05093c31aac8eb07d5bcb620ef86aed8afa14237e76bcb8ce6a0051",
+    "nc_continuum_grid/controls.json": "4f9389bb99b5fa93e0309cba82a180da76403a41d1d7677d07f2b1b6902d3b70",
+    "nc_continuum_grid/CHECKPOINT.json": "c984c6edb7547bff1daf683c1af7a8573dc2b076e096c33943e1ab9625a0a836",
+    "nc_continuum_grid/tail_extension.json": "9f7c4cf5db5fff9ba8f6e2d5cb3fb996f9ee2877690fb1e82e5ce4a78e77a734",
+    "nc_continuum_grid/results.json": "fdc0aa91452d6d91ff85cddfd17ef0a142624988b7210edbb6ddcf333d7a7644",
+    "nc_continuum_grid/dense_grid_refinement.json": "ee091fa8bc4491a0ccb2eeaec7e997aa52907461cd39d6ecff1bbdb2177a9fb7",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c"
+  },
+  "runtime_seconds": 4.205509207909927
+}

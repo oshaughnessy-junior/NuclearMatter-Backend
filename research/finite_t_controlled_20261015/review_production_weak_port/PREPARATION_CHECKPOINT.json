@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-16T05:45:17.936409+00:00",
+  "status": "PURE PREPARATION FROZEN; wait for author frozen candidate",
+  "candidate_imported": false,
+  "analysis_passed": 499,
+  "analysis_failed": 0,
+  "retained_coarse_density_failures": 2,
+  "retained_pre_rate_helper_exception": 1,
+  "maximum_moment_refinement": 3.118015201586388e-08,
+  "report_sha256": "330e7a93132a3e95a1452d3e95f94e37ecf42b831574873a9ac876da5f037e4d",
+  "manifest_sha256": "09224911e8afec0673bb75ea0625b68f97583cf9b0505246da5d2a2d46d73c10",
+  "preparation_lock_sha256": "8022bccc85598fc876b6b289627d899b50b0e7f52ec41d834e7944fce404d0a8",
+  "author_lock_sha256": "f65f8e9bb59ae17cfb535a9d72ada558bbc0ec2485f929c2f847ab91ea9968d5",
+  "quota": {
+    "utc": "2026-10-16 05:44:35 UTC",
+    "usedPercent": 27,
+    "accountId": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "resetsAt": 1792652325,
+    "windowDurationMins": 10080
+  },
+  "scope": "same fixed Hamiltonian; no spectra/opacity/domain/external-physics/candidate acceptance"
+}

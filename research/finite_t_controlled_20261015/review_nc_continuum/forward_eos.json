@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "T1.1 EOS inverse target",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "T1.1 independent momentum target",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "T0.2 EOS inverse target",
+      "error": 4.241051954068098e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "T0.2 independent momentum target",
+      "error": 4.241051954068098e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "T0.08 EOS inverse target",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "T0.08 independent momentum target",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "T": 1.1,
+      "target_density": 0.0017,
+      "EOS_density": 0.0017,
+      "independent_momentum_density": 0.0017000000000000006,
+      "chemical_potential": 2.4012516186484185,
+      "pF_over_M": 0.077590911128871,
+      "T_over_M": 0.0011714589989350373
+    },
+    {
+      "T": 0.2,
+      "target_density": 0.0042,
+      "EOS_density": 0.0042000000000001775,
+      "independent_momentum_density": 0.0042000000000001775,
+      "chemical_potential": 5.1592578579391395,
+      "pF_over_M": 0.1048924689792268,
+      "T_over_M": 0.00021299254526091588
+    },
+    {
+      "T": 0.08,
+      "target_density": 0.0042,
+      "EOS_density": 0.004199999999999998,
+      "independent_momentum_density": 0.004199999999999998,
+      "chemical_potential": 5.1646215451381225,
+      "pF_over_M": 0.10489246897922531,
+      "T_over_M": 8.519701810436634e-05
+    }
+  ],
+  "runtime_seconds": 0.16038587503135204
+}

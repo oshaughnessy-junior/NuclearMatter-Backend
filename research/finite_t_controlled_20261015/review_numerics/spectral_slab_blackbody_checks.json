@@ -1,0 +1,34 @@
+[
+  {
+    "flavor": "nu_e",
+    "moment": 2,
+    "actual": 1.829985297837688e+42,
+    "expected": 1.8299852978376956e+42,
+    "relative_error": 4.218847493575595e-15,
+    "passed": true
+  },
+  {
+    "flavor": "nu_e",
+    "moment": 3,
+    "actual": 1.6806857877454298e+43,
+    "expected": 1.6806857877454374e+43,
+    "relative_error": 4.551914400963142e-15,
+    "passed": true
+  },
+  {
+    "flavor": "anti_nu_e",
+    "moment": 2,
+    "actual": 1.171934832183104e+43,
+    "expected": 1.1719348321831095e+43,
+    "relative_error": 4.6629367034256575e-15,
+    "passed": true
+  },
+  {
+    "flavor": "anti_nu_e",
+    "moment": 3,
+    "actual": 1.1808109448119227e+44,
+    "expected": 1.180810944811928e+44,
+    "relative_error": 4.551914400963142e-15,
+    "passed": true
+  }
+]

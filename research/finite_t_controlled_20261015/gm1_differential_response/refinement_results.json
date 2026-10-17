@@ -1,0 +1,833 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "electronenergy_onlyj",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electronenergy_onlychi",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electronenergy_onlyabsorption",
+      "error": 1.6675846305624084e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electronenergy_onlyemission",
+      "error": 1.183775021727453e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electronphi_onlyj",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electronphi_onlychi",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electronphi_onlyabsorption",
+      "error": 1.6675846301261548e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electronphi_onlyemission",
+      "error": 1.0090950299104902e-17,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electrontail_onlyj",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electrontail_onlychi",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electrontail_onlyabsorption",
+      "error": 1.667584630059244e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "electrontail_onlyemission",
+      "error": 4.0323538527692115e-31,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muonenergy_onlyj",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muonenergy_onlychi",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muonenergy_onlyabsorption",
+      "error": 1.7581628317957236e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muonenergy_onlyemission",
+      "error": 1.7750387473568466e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muonphi_onlyj",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muonphi_onlychi",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muonphi_onlyabsorption",
+      "error": 8.595565695766628e-18,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muonphi_onlyemission",
+      "error": 8.595565695766723e-18,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muontail_onlyj",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muontail_onlychi",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muontail_onlyabsorption",
+      "error": 4.395407078490663e-17,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "muontail_onlyemission",
+      "error": 4.396956787913999e-31,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuonenergy_onlyj",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuonenergy_onlychi",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuonenergy_onlyabsorption",
+      "error": 1.7277235675338683e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuonenergy_onlyemission",
+      "error": 1.824000916672532e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuonphi_onlyj",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuonphi_onlychi",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuonphi_onlyabsorption",
+      "error": 1.1150152501673985e-17,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuonphi_onlyemission",
+      "error": 1.1150152501674005e-17,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuontail_onlyj",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuontail_onlychi",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuontail_onlyabsorption",
+      "error": 3.3744600745559217e-19,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "antimuontail_onlyemission",
+      "error": 1.2160006104055328e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "electron",
+      "runs": [
+        {
+          "control": "energy_only",
+          "j": {
+            "value": 1042.926743016851,
+            "log": 6.949786215733335,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 11464.433542357934,
+            "log": 9.347004786514319,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 598.6556001881229,
+              "upper": 606.7540989074906
+            },
+            {
+              "lower": 606.7540989074906,
+              "upper": 619.9036193755426
+            },
+            {
+              "lower": 619.9036193755426,
+              "upper": 626.7540989074906
+            },
+            {
+              "lower": 626.7540989074906,
+              "upper": 646.7540989074906
+            },
+            {
+              "lower": 646.7540989074906,
+              "upper": 659.9036193755426
+            },
+            {
+              "lower": 659.9036193755426,
+              "upper": 679.9036193755426
+            },
+            {
+              "lower": 679.9036193755426,
+              "upper": 686.7540989074906
+            },
+            {
+              "lower": 686.7540989074906,
+              "upper": 699.9036193755426
+            },
+            {
+              "lower": 699.9036193755426,
+              "upper": 739.9036193755426
+            },
+            {
+              "lower": 739.9036193755426,
+              "upper": 776.7540989074906
+            },
+            {
+              "lower": 776.7540989074906,
+              "upper": 829.9036193755426
+            },
+            {
+              "lower": 829.9036193755426,
+              "upper": 1079.9036193755426
+            }
+          ],
+          "controls": {
+            "energy_order": 24,
+            "phi_order": 16,
+            "tail": 80.0
+          }
+        },
+        {
+          "control": "phi_only",
+          "j": {
+            "value": 1042.926743016851,
+            "log": 6.949786215733335,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 11464.433542357934,
+            "log": 9.347004786514319,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 598.6556001881229,
+              "upper": 606.7540989074906
+            },
+            {
+              "lower": 606.7540989074906,
+              "upper": 619.9036193755426
+            },
+            {
+              "lower": 619.9036193755426,
+              "upper": 626.7540989074906
+            },
+            {
+              "lower": 626.7540989074906,
+              "upper": 646.7540989074906
+            },
+            {
+              "lower": 646.7540989074906,
+              "upper": 659.9036193755426
+            },
+            {
+              "lower": 659.9036193755426,
+              "upper": 679.9036193755426
+            },
+            {
+              "lower": 679.9036193755426,
+              "upper": 686.7540989074906
+            },
+            {
+              "lower": 686.7540989074906,
+              "upper": 699.9036193755426
+            },
+            {
+              "lower": 699.9036193755426,
+              "upper": 739.9036193755426
+            },
+            {
+              "lower": 739.9036193755426,
+              "upper": 776.7540989074906
+            },
+            {
+              "lower": 776.7540989074906,
+              "upper": 829.9036193755426
+            },
+            {
+              "lower": 829.9036193755426,
+              "upper": 1079.9036193755426
+            }
+          ],
+          "controls": {
+            "energy_order": 40,
+            "phi_order": 8,
+            "tail": 80.0
+          }
+        },
+        {
+          "control": "tail_only",
+          "j": {
+            "value": 1042.926743016851,
+            "log": 6.949786215733335,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 11464.433542357934,
+            "log": 9.347004786514319,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 598.6556001881229,
+              "upper": 606.7540989074906
+            },
+            {
+              "lower": 606.7540989074906,
+              "upper": 619.9036193755426
+            },
+            {
+              "lower": 619.9036193755426,
+              "upper": 626.7540989074906
+            },
+            {
+              "lower": 626.7540989074906,
+              "upper": 646.7540989074906
+            },
+            {
+              "lower": 646.7540989074906,
+              "upper": 659.9036193755426
+            },
+            {
+              "lower": 659.9036193755426,
+              "upper": 679.9036193755426
+            },
+            {
+              "lower": 679.9036193755426,
+              "upper": 686.7540989074906
+            },
+            {
+              "lower": 686.7540989074906,
+              "upper": 699.9036193755426
+            },
+            {
+              "lower": 699.9036193755426,
+              "upper": 739.9036193755426
+            },
+            {
+              "lower": 739.9036193755426,
+              "upper": 776.7540989074906
+            },
+            {
+              "lower": 776.7540989074906,
+              "upper": 829.9036193755426
+            },
+            {
+              "lower": 829.9036193755426,
+              "upper": 929.9036193755426
+            }
+          ],
+          "controls": {
+            "energy_order": 40,
+            "phi_order": 16,
+            "tail": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "label": "muon",
+      "runs": [
+        {
+          "control": "energy_only",
+          "j": {
+            "value": 0.0015187788185267001,
+            "log": -6.489848675893828,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 46351092.036535464,
+            "log": 17.651755410357392,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 608.1170726649617,
+              "upper": 619.9036193755426
+            },
+            {
+              "lower": 619.9036193755426,
+              "upper": 626.7540989074906
+            },
+            {
+              "lower": 626.7540989074906,
+              "upper": 646.7540989074906
+            },
+            {
+              "lower": 646.7540989074906,
+              "upper": 659.9036193755426
+            },
+            {
+              "lower": 659.9036193755426,
+              "upper": 679.9036193755426
+            },
+            {
+              "lower": 679.9036193755426,
+              "upper": 686.7540989074906
+            },
+            {
+              "lower": 686.7540989074906,
+              "upper": 699.9036193755426
+            },
+            {
+              "lower": 699.9036193755426,
+              "upper": 739.9036193755426
+            },
+            {
+              "lower": 739.9036193755426,
+              "upper": 776.7540989074906
+            },
+            {
+              "lower": 776.7540989074906,
+              "upper": 829.9036193755426
+            },
+            {
+              "lower": 829.9036193755426,
+              "upper": 1079.9036193755426
+            }
+          ],
+          "controls": {
+            "energy_order": 24,
+            "phi_order": 16,
+            "tail": 80.0
+          }
+        },
+        {
+          "control": "phi_only",
+          "j": {
+            "value": 0.0015187788185267001,
+            "log": -6.489848675893828,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 46351092.036535464,
+            "log": 17.651755410357392,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 608.1170726649617,
+              "upper": 619.9036193755426
+            },
+            {
+              "lower": 619.9036193755426,
+              "upper": 626.7540989074906
+            },
+            {
+              "lower": 626.7540989074906,
+              "upper": 646.7540989074906
+            },
+            {
+              "lower": 646.7540989074906,
+              "upper": 659.9036193755426
+            },
+            {
+              "lower": 659.9036193755426,
+              "upper": 679.9036193755426
+            },
+            {
+              "lower": 679.9036193755426,
+              "upper": 686.7540989074906
+            },
+            {
+              "lower": 686.7540989074906,
+              "upper": 699.9036193755426
+            },
+            {
+              "lower": 699.9036193755426,
+              "upper": 739.9036193755426
+            },
+            {
+              "lower": 739.9036193755426,
+              "upper": 776.7540989074906
+            },
+            {
+              "lower": 776.7540989074906,
+              "upper": 829.9036193755426
+            },
+            {
+              "lower": 829.9036193755426,
+              "upper": 1079.9036193755426
+            }
+          ],
+          "controls": {
+            "energy_order": 40,
+            "phi_order": 8,
+            "tail": 80.0
+          }
+        },
+        {
+          "control": "tail_only",
+          "j": {
+            "value": 0.0015187788185267001,
+            "log": -6.489848675893828,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 46351092.036535464,
+            "log": 17.651755410357392,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 608.1170726649617,
+              "upper": 619.9036193755426
+            },
+            {
+              "lower": 619.9036193755426,
+              "upper": 626.7540989074906
+            },
+            {
+              "lower": 626.7540989074906,
+              "upper": 646.7540989074906
+            },
+            {
+              "lower": 646.7540989074906,
+              "upper": 659.9036193755426
+            },
+            {
+              "lower": 659.9036193755426,
+              "upper": 679.9036193755426
+            },
+            {
+              "lower": 679.9036193755426,
+              "upper": 686.7540989074906
+            },
+            {
+              "lower": 686.7540989074906,
+              "upper": 699.9036193755426
+            },
+            {
+              "lower": 699.9036193755426,
+              "upper": 739.9036193755426
+            },
+            {
+              "lower": 739.9036193755426,
+              "upper": 776.7540989074906
+            },
+            {
+              "lower": 776.7540989074906,
+              "upper": 829.9036193755426
+            },
+            {
+              "lower": 829.9036193755426,
+              "upper": 929.9036193755426
+            }
+          ],
+          "controls": {
+            "energy_order": 40,
+            "phi_order": 16,
+            "tail": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "label": "antimuon",
+      "runs": [
+        {
+          "control": "energy_only",
+          "j": {
+            "value": 1.591794564301575e-05,
+            "log": -11.048063428398876,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 81225.36974049085,
+            "log": 11.304982912579767,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 553.8838849338756,
+              "upper": 591.1910593743287
+            },
+            {
+              "lower": 591.1910593743287,
+              "upper": 594.6347824887054
+            },
+            {
+              "lower": 594.6347824887054,
+              "upper": 639.1910593743287
+            },
+            {
+              "lower": 639.1910593743287,
+              "upper": 642.6347824887054
+            },
+            {
+              "lower": 642.6347824887054,
+              "upper": 690.6347824887054
+            },
+            {
+              "lower": 690.6347824887054,
+              "upper": 735.1910593743287
+            },
+            {
+              "lower": 735.1910593743287,
+              "upper": 786.6347824887054
+            },
+            {
+              "lower": 786.6347824887054,
+              "upper": 951.1910593743287
+            },
+            {
+              "lower": 951.1910593743287,
+              "upper": 1002.6347824887054
+            },
+            {
+              "lower": 1002.6347824887054,
+              "upper": 1602.6347824887052
+            }
+          ],
+          "controls": {
+            "energy_order": 24,
+            "phi_order": 16,
+            "tail": 80.0
+          }
+        },
+        {
+          "control": "phi_only",
+          "j": {
+            "value": 1.5917945643015723e-05,
+            "log": -11.048063428398878,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 81225.3697404907,
+            "log": 11.304982912579765,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 553.8838849338756,
+              "upper": 591.1910593743287
+            },
+            {
+              "lower": 591.1910593743287,
+              "upper": 594.6347824887054
+            },
+            {
+              "lower": 594.6347824887054,
+              "upper": 639.1910593743287
+            },
+            {
+              "lower": 639.1910593743287,
+              "upper": 642.6347824887054
+            },
+            {
+              "lower": 642.6347824887054,
+              "upper": 690.6347824887054
+            },
+            {
+              "lower": 690.6347824887054,
+              "upper": 735.1910593743287
+            },
+            {
+              "lower": 735.1910593743287,
+              "upper": 786.6347824887054
+            },
+            {
+              "lower": 786.6347824887054,
+              "upper": 951.1910593743287
+            },
+            {
+              "lower": 951.1910593743287,
+              "upper": 1002.6347824887054
+            },
+            {
+              "lower": 1002.6347824887054,
+              "upper": 1602.6347824887052
+            }
+          ],
+          "controls": {
+            "energy_order": 40,
+            "phi_order": 8,
+            "tail": 80.0
+          }
+        },
+        {
+          "control": "tail_only",
+          "j": {
+            "value": 1.5917945643015723e-05,
+            "log": -11.048063428398878,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 81225.3697404907,
+            "log": 11.304982912579765,
+            "representable": true,
+            "reason": null
+          },
+          "bounds": [
+            {
+              "lower": 553.8838849338756,
+              "upper": 591.1910593743287
+            },
+            {
+              "lower": 591.1910593743287,
+              "upper": 594.6347824887054
+            },
+            {
+              "lower": 594.6347824887054,
+              "upper": 639.1910593743287
+            },
+            {
+              "lower": 639.1910593743287,
+              "upper": 642.6347824887054
+            },
+            {
+              "lower": 642.6347824887054,
+              "upper": 690.6347824887054
+            },
+            {
+              "lower": 690.6347824887054,
+              "upper": 735.1910593743287
+            },
+            {
+              "lower": 735.1910593743287,
+              "upper": 786.6347824887054
+            },
+            {
+              "lower": 786.6347824887054,
+              "upper": 951.1910593743287
+            },
+            {
+              "lower": 951.1910593743287,
+              "upper": 1002.6347824887054
+            },
+            {
+              "lower": 1002.6347824887054,
+              "upper": 1242.6347824887052
+            }
+          ],
+          "controls": {
+            "energy_order": 40,
+            "phi_order": 16,
+            "tail": 50.0
+          }
+        }
+      ]
+    }
+  ],
+  "runtime_seconds": 0.6941161670256406
+}

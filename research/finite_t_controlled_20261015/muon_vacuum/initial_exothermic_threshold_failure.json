@@ -1,0 +1,3059 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "Clifford 00",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 01",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 02",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 03",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 10",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 11",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 12",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 13",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 20",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 21",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 22",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 23",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 30",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 31",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 32",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "Clifford 33",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "gamma5 squared",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "threshold invariant Falsee",
+      "error": 0.0016646157585199755,
+      "tolerance": 4e-16,
+      "passed": false
+    },
+    {
+      "name": "trace invariant antiFalseeE10.0c-0.97",
+      "error": -1.526770827448379e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee10.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee10.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee10.0-0.97",
+      "error": 1.2912446325416537e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee10.0-0.97",
+      "error": 7.326989711401787e-21,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee10.0-0.97",
+      "error": 1.2912446325416537e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE10.0c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee10.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee10.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee10.0-0.3",
+      "error": 1.2912446325416537e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee10.0-0.3",
+      "error": -8.435273869428947e-21,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee10.0-0.3",
+      "error": 1.2912446325416537e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE10.0c0.41",
+      "error": -5.261439915246306e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee10.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee10.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee10.00.41",
+      "error": 1.2912446325416537e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee10.00.41",
+      "error": -2.4197537450259682e-20,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee10.00.41",
+      "error": 1.2912446325416537e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE10.0c0.99",
+      "error": -3.7414622611350445e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee10.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee10.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee10.00.99",
+      "error": 1.2912446325416537e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee10.00.99",
+      "error": 2.308925329223252e-20,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee10.00.99",
+      "error": 1.2912446325416537e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Falsee10.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE50.0c-0.97",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee50.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee50.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee50.0-0.97",
+      "error": 1.191876599934662e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee50.0-0.97",
+      "error": 3.4139646224057746e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee50.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE50.0c-0.3",
+      "error": -2.321453218082884e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee50.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee50.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee50.0-0.3",
+      "error": 1.191876599934662e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee50.0-0.3",
+      "error": 3.4139646224057746e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee50.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE50.0c0.41",
+      "error": 1.2424357499199597e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee50.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee50.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee50.00.41",
+      "error": 1.191876599934662e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee50.00.41",
+      "error": -1.2418033460889991e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee50.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE50.0c0.99",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee50.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee50.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee50.00.99",
+      "error": 1.191876599934662e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee50.00.99",
+      "error": 8.069732590900549e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee50.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Falsee50.0",
+      "error": -1.8522590753353714e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE150.0c-0.97",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee150.0-0.97",
+      "error": 9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee150.0-0.97",
+      "error": 6.767706500576849e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE150.0c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee150.0-0.3",
+      "error": 9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee150.0-0.3",
+      "error": 3.800430155810233e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE150.0c0.41",
+      "error": 1.135341813477238e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee150.00.41",
+      "error": 9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee150.00.41",
+      "error": 6.767706500576849e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE150.0c0.99",
+      "error": 1.1919942978889222e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee150.00.99",
+      "error": 9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee150.00.99",
+      "error": 6.9240896615627815e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Falsee150.0",
+      "error": -2.066351928664722e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE300.0c-0.97",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee300.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee300.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee300.0-0.97",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee300.0-0.97",
+      "error": 5.448949971551079e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee300.0-0.97",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE300.0c-0.3",
+      "error": 2.2038315054063583e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee300.0-0.3",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee300.0-0.3",
+      "error": -4.485070286816602e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee300.0-0.3",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE300.0c0.41",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee300.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee300.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee300.00.41",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee300.00.41",
+      "error": 5.448949971551079e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee300.00.41",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalseeE300.0c0.99",
+      "error": -2.394681992537013e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsee300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsee300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsee300.00.99",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsee300.00.99",
+      "error": 5.448949971551079e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsee300.00.99",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Falsee300.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "threshold invariant Falsemu",
+      "error": 0.0,
+      "tolerance": 4e-16,
+      "passed": true
+    },
+    {
+      "name": "forbidden Falsemu0.999999",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "forbidden Falsemu1.0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "positive just above Falsemu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE111.16137301322262c-0.97",
+      "error": -2.047160602962799e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu111.16137301322262-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu111.16137301322262-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu111.16137301322262-0.97",
+      "error": -1.0663966933253863e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu111.16137301322262-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu111.16137301322262-0.97",
+      "error": -1.0663966933253863e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE111.16137301322262c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu111.16137301322262-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu111.16137301322262-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu111.16137301322262-0.3",
+      "error": -1.0663966933253863e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu111.16137301322262-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu111.16137301322262-0.3",
+      "error": -1.0663966933253863e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE111.16137301322262c0.41",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu111.161373013222620.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu111.161373013222620.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu111.161373013222620.41",
+      "error": -1.0663966933253863e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu111.161373013222620.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu111.161373013222620.41",
+      "error": -1.0663966933253863e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE111.16137301322262c0.99",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu111.161373013222620.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu111.161373013222620.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu111.161373013222620.99",
+      "error": -1.0663966933253863e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu111.161373013222620.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu111.161373013222620.99",
+      "error": -1.0663966933253863e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Falsemu111.16137301322262",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE130.1613730132226c-0.97",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu130.1613730132226-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu130.1613730132226-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu130.1613730132226-0.97",
+      "error": -1.0326243173022114e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu130.1613730132226-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu130.1613730132226-0.97",
+      "error": -1.0326243173022114e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE130.1613730132226c-0.3",
+      "error": 2.9759364980516023e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu130.1613730132226-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu130.1613730132226-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu130.1613730132226-0.3",
+      "error": -1.0326243173022114e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu130.1613730132226-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu130.1613730132226-0.3",
+      "error": -1.0326243173022114e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE130.1613730132226c0.41",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu130.16137301322260.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu130.16137301322260.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu130.16137301322260.41",
+      "error": -1.0326243173022114e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu130.16137301322260.41",
+      "error": -1.6134754957847053e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu130.16137301322260.41",
+      "error": -1.0326243173022114e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE130.1613730132226c0.99",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu130.16137301322260.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu130.16137301322260.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu130.16137301322260.99",
+      "error": -1.0326243173022114e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu130.16137301322260.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu130.16137301322260.99",
+      "error": -1.0326243173022114e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Falsemu130.1613730132226",
+      "error": -1.32575530428451e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE150.0c-0.97",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu150.0-0.97",
+      "error": 9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu150.0-0.97",
+      "error": -9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE150.0c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu150.0-0.3",
+      "error": 9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu150.0-0.3",
+      "error": 3.1236595057525485e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu150.0-0.3",
+      "error": -9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE150.0c0.41",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu150.00.41",
+      "error": 9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu150.00.41",
+      "error": -9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE150.0c0.99",
+      "error": 1.19906134212538e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu150.00.99",
+      "error": 9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu150.00.99",
+      "error": -9.995710418408155e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Falsemu150.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE300.0c-0.97",
+      "error": 4.319503321704696e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu300.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu300.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu300.0-0.97",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu300.0-0.97",
+      "error": 2.5149826419858546e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu300.0-0.97",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE300.0c-0.3",
+      "error": -2.244308511680776e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu300.0-0.3",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu300.0-0.3",
+      "error": -2.5149826419858546e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE300.0c0.41",
+      "error": 1.1702189687782425e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu300.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu300.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu300.00.41",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu300.00.41",
+      "error": 2.5149826419858546e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu300.00.41",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiFalsemuE300.0c0.99",
+      "error": -2.424468143037392e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Falsemu300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kFalsemu300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paFalsemu300.00.99",
+      "error": 8.047944454354735e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lFalsemu300.00.99",
+      "error": -2.5149826419858546e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbFalsemu300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Falsemu300.0",
+      "error": -2.9267736539819454e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "threshold invariant Truee",
+      "error": 0.0,
+      "tolerance": 4e-16,
+      "passed": true
+    },
+    {
+      "name": "forbidden Truee0.999999",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "forbidden Truee1.0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "positive just above Truee",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE10.0c-0.97",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee10.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee10.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee10.0-0.97",
+      "error": 2.5895392803767135e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee10.0-0.97",
+      "error": 7.346991881485675e-21,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee10.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE10.0c-0.3",
+      "error": -2.1642958592078049e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee10.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee10.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee10.0-0.3",
+      "error": 2.5895392803767135e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee10.0-0.3",
+      "error": -8.458301577844852e-21,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee10.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE10.0c0.41",
+      "error": 2.3047109183868684e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee10.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee10.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee10.00.41",
+      "error": 2.5895392803767135e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee10.00.41",
+      "error": -8.458301577844852e-21,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee10.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE10.0c0.99",
+      "error": 2.4335245800746663e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee10.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee10.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee10.00.99",
+      "error": 2.5895392803767135e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee10.00.99",
+      "error": 7.346991881485675e-21,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee10.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Truee10.0",
+      "error": 1.872368361768558e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE50.0c-0.97",
+      "error": 1.3468868484983852e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee50.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee50.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee50.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee50.0-0.97",
+      "error": 3.422928992809896e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee50.0-0.97",
+      "error": -1.195006223261072e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE50.0c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee50.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee50.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee50.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee50.0-0.3",
+      "error": 3.422928992809896e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee50.0-0.3",
+      "error": -1.195006223261072e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE50.0c0.41",
+      "error": 1.381691395309234e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee50.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee50.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee50.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee50.00.41",
+      "error": 3.422928992809896e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee50.00.41",
+      "error": -1.195006223261072e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE50.0c0.99",
+      "error": -1.3933265466296387e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee50.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee50.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee50.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee50.00.99",
+      "error": -1.2450640668036664e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee50.00.99",
+      "error": -1.195006223261072e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Truee50.0",
+      "error": 2.2347187669906757e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE150.0c-0.97",
+      "error": 3.1871851767800967e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee150.0-0.97",
+      "error": 6.78411361673529e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee150.0-0.97",
+      "error": -1.00199432633028e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE150.0c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee150.0-0.3",
+      "error": 6.78411361673529e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee150.0-0.3",
+      "error": -1.00199432633028e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE150.0c0.41",
+      "error": -1.3264587039566726e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee150.00.41",
+      "error": -2.4528209081085964e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee150.00.41",
+      "error": -1.00199432633028e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE150.0c0.99",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee150.00.99",
+      "error": 6.78411361673529e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee150.00.99",
+      "error": -1.00199432633028e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Truee150.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE300.0c-0.97",
+      "error": -2.2815119137515505e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee300.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee300.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee300.0-0.97",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee300.0-0.97",
+      "error": -4.495028702792157e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee300.0-0.97",
+      "error": 8.065813690174787e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE300.0c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee300.0-0.3",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee300.0-0.3",
+      "error": -4.495028702792157e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee300.0-0.3",
+      "error": 8.065813690174787e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE300.0c0.41",
+      "error": -2.9229695553578653e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee300.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee300.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee300.00.41",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee300.00.41",
+      "error": 5.461048535670843e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee300.00.41",
+      "error": 8.065813690174787e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTrueeE300.0c0.99",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truee300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruee300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruee300.00.99",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruee300.00.99",
+      "error": 5.461048535670843e-19,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruee300.00.99",
+      "error": 8.065813690174787e-17,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Truee300.0",
+      "error": -1.9385519438874187e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "threshold invariant Truemu",
+      "error": 0.0,
+      "tolerance": 4e-16,
+      "passed": true
+    },
+    {
+      "name": "forbidden Truemu0.999999",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "forbidden Truemu1.0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "positive just above Truemu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE114.04731059534446c-0.97",
+      "error": -5.587992041548158e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu114.04731059534446-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu114.04731059534446-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu114.04731059534446-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu114.04731059534446-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu114.04731059534446-0.97",
+      "error": -1.063766306807731e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE114.04731059534446c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu114.04731059534446-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu114.04731059534446-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu114.04731059534446-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu114.04731059534446-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu114.04731059534446-0.3",
+      "error": -1.063766306807731e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE114.04731059534446c0.41",
+      "error": -2.2013968376953434e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu114.047310595344460.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu114.047310595344460.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu114.047310595344460.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu114.047310595344460.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu114.047310595344460.41",
+      "error": -1.063766306807731e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE114.04731059534446c0.99",
+      "error": -2.1870927715754795e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu114.047310595344460.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu114.047310595344460.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu114.047310595344460.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu114.047310595344460.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu114.047310595344460.99",
+      "error": -1.063766306807731e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Truemu114.04731059534446",
+      "error": 3.8551822393796635e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE133.04731059534447c-0.97",
+      "error": 1.7757328459156435e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu133.04731059534447-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu133.04731059534447-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu133.04731059534447-0.97",
+      "error": 3.0906075296411764e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu133.04731059534447-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu133.04731059534447-0.97",
+      "error": 2.0604050197607842e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE133.04731059534447c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu133.04731059534447-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu133.04731059534447-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu133.04731059534447-0.3",
+      "error": 3.0906075296411764e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu133.04731059534447-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu133.04731059534447-0.3",
+      "error": 2.0604050197607842e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE133.04731059534447c0.41",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu133.047310595344470.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu133.047310595344470.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu133.047310595344470.41",
+      "error": 3.0906075296411764e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu133.047310595344470.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu133.047310595344470.41",
+      "error": 2.0604050197607842e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE133.04731059534447c0.99",
+      "error": 3.1666582305235546e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu133.047310595344470.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu133.047310595344470.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu133.047310595344470.99",
+      "error": 3.0906075296411764e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu133.047310595344470.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu133.047310595344470.99",
+      "error": 2.0604050197607842e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Truemu133.04731059534447",
+      "error": 1.5104665708579216e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE150.0c-0.97",
+      "error": -1.477049991437622e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu150.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu150.0-0.97",
+      "error": -1.5656161348910625e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu150.0-0.97",
+      "error": -1.00199432633028e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE150.0c-0.3",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu150.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu150.0-0.3",
+      "error": -1.5656161348910625e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu150.0-0.3",
+      "error": -1.00199432633028e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE150.0c0.41",
+      "error": -1.310306140397244e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu150.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu150.00.41",
+      "error": -3.131232269782125e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu150.00.41",
+      "error": -1.00199432633028e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE150.0c0.99",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu150.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu150.00.99",
+      "error": -1.5656161348910625e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu150.00.99",
+      "error": -1.00199432633028e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Truemu150.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE300.0c-0.97",
+      "error": 6.563971664917511e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu300.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu300.0-0.97",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu300.0-0.97",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu300.0-0.97",
+      "error": -2.520566778179621e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu300.0-0.97",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE300.0c-0.3",
+      "error": -1.7985611735791842e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu300.0-0.3",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu300.0-0.3",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu300.0-0.3",
+      "error": -2.520566778179621e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu300.0-0.3",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE300.0c0.41",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu300.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu300.00.41",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu300.00.41",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu300.00.41",
+      "error": -7.561700334538863e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu300.00.41",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "trace invariant antiTruemuE300.0c0.99",
+      "error": -2.46431772835479e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "momentum conservation Truemu300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell kTruemu300.00.99",
+      "error": 0.0,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell paTruemu300.00.99",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell lTruemu300.00.99",
+      "error": -7.561700334538863e-18,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "mass shell pbTruemu300.00.99",
+      "error": 1.6131627380349575e-16,
+      "tolerance": 2e-15,
+      "passed": true
+    },
+    {
+      "name": "angular refinement Truemu300.0",
+      "error": -2.0965921672386582e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Strumia point-current symmetricM antiFalseE120.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Strumia point-current symmetricM antiFalseE150.0",
+      "error": 2.3297313803312876e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Strumia point-current symmetricM antiFalseE300.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Strumia point-current symmetricM antiTrueE120.0",
+      "error": -2.0453159566775286e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Strumia point-current symmetricM antiTrueE150.0",
+      "error": 1.3110242589925551e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Strumia point-current symmetricM antiTrueE300.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "heavy static totalFalseeM1000000.0",
+      "error": -4.474222072780632e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalseeM1000000.0c-0.8",
+      "error": -4.7863361440378514e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalseeM1000000.0c0.0",
+      "error": -4.474222241453456e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalseeM1000000.0c0.7",
+      "error": -4.154399779954274e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static totalFalseeM10000000.0",
+      "error": -4.474430603601289e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalseeM10000000.0c-0.8",
+      "error": -4.786567904907776e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalseeM10000000.0c0.0",
+      "error": -4.474430620476738e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalseeM10000000.0c0.7",
+      "error": -4.154584715321613e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy limit convergenceFalsee",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "heavy static totalFalsemuM1000000.0",
+      "error": -0.0004376155275849807,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalsemuM1000000.0c-0.8",
+      "error": -0.00045718008105971565,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalsemuM1000000.0c0.0",
+      "error": -0.00043761557537555257,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalsemuM1000000.0c0.7",
+      "error": -0.0004184639925769077,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static totalFalsemuM10000000.0",
+      "error": -4.377452976993369e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalsemuM10000000.0c-0.8",
+      "error": -4.573225499380782e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalsemuM10000000.0c0.0",
+      "error": -4.3774530248170877e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleFalsemuM10000000.0c0.7",
+      "error": -4.185813899148885e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy limit convergenceFalsemu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "heavy static totalTrueeM1000000.0",
+      "error": -7.948849066107126e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTrueeM1000000.0c-0.8",
+      "error": -0.00010553339570509585,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTrueeM1000000.0c0.0",
+      "error": -7.948860812766131e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTrueeM1000000.0c0.7",
+      "error": -5.280021723068416e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static totalTrueeM10000000.0",
+      "error": -7.949349508152168e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTrueeM10000000.0c-0.8",
+      "error": -1.055408004532201e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTrueeM10000000.0c0.0",
+      "error": -7.949350682628901e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTrueeM10000000.0c0.7",
+      "error": -5.280290759254822e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy limit convergenceTruee",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "heavy static totalTruemuM1000000.0",
+      "error": -0.0006334856852095021,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTruemuM1000000.0c-0.8",
+      "error": -0.000781501342581844,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTruemuM1000000.0c0.0",
+      "error": -0.0006334890131513344,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTruemuM1000000.0c0.7",
+      "error": -0.0004885907279447824,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "heavy static totalTruemuM10000000.0",
+      "error": -6.337591756173019e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTruemuM10000000.0c-0.8",
+      "error": -7.818923913164356e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTruemuM10000000.0c0.0",
+      "error": -6.337595087477777e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy static angleTruemuM10000000.0c0.7",
+      "error": -4.887531720772851e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "heavy limit convergenceTruemu",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "massless lepton limitFalse",
+      "error": -3.153255064639945e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "massless lepton limitTrue",
+      "error": -2.2310131537638192e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "selected_cross_sections": [
+    {
+      "antineutrino": false,
+      "lepton": "e",
+      "E_MeV": 10.0,
+      "threshold_MeV": 0.0,
+      "sigma_cm2": 1.165394594309077e-41,
+      "point_current_static_limit_cm2": 1.1935433050441801e-41
+    },
+    {
+      "antineutrino": false,
+      "lepton": "e",
+      "E_MeV": 50.0,
+      "threshold_MeV": 0.0,
+      "sigma_cm2": 2.2018060792930142e-40,
+      "point_current_static_limit_cm2": 2.464559315605371e-40
+    },
+    {
+      "antineutrino": false,
+      "lepton": "e",
+      "E_MeV": 150.0,
+      "threshold_MeV": 0.0,
+      "sigma_cm2": 1.578943155199894e-39,
+      "point_current_static_limit_cm2": 2.1442533542570153e-39
+    },
+    {
+      "antineutrino": false,
+      "lepton": "e",
+      "E_MeV": 300.0,
+      "threshold_MeV": 0.0,
+      "sigma_cm2": 4.953237297145742e-39,
+      "point_current_static_limit_cm2": 8.503885713979478e-39
+    },
+    {
+      "antineutrino": false,
+      "lepton": "mu",
+      "E_MeV": 111.16137301322262,
+      "threshold_MeV": 110.16137301322262,
+      "sigma_cm2": 1.1607395605750359e-40,
+      "point_current_static_limit_cm2": 4.055969785998191e-40
+    },
+    {
+      "antineutrino": false,
+      "lepton": "mu",
+      "E_MeV": 130.1613730132226,
+      "threshold_MeV": 110.16137301322262,
+      "sigma_cm2": 6.1524404681904435e-40,
+      "point_current_static_limit_cm2": 9.631010398201577e-40
+    },
+    {
+      "antineutrino": false,
+      "lepton": "mu",
+      "E_MeV": 150.0,
+      "threshold_MeV": 110.16137301322262,
+      "sigma_cm2": 1.0098416778731877e-39,
+      "point_current_static_limit_cm2": 1.5347348786693912e-39
+    },
+    {
+      "antineutrino": false,
+      "lepton": "mu",
+      "E_MeV": 300.0,
+      "threshold_MeV": 110.16137301322262,
+      "sigma_cm2": 4.4590427818842034e-39,
+      "point_current_static_limit_cm2": 7.963852099299669e-39
+    },
+    {
+      "antineutrino": true,
+      "lepton": "e",
+      "E_MeV": 10.0,
+      "threshold_MeV": 1.8060662080187586,
+      "sigma_cm2": 6.80674569667557e-42,
+      "point_current_static_limit_cm2": 7.08914172672737e-42
+    },
+    {
+      "antineutrino": true,
+      "lepton": "e",
+      "E_MeV": 50.0,
+      "threshold_MeV": 1.8060662080187586,
+      "sigma_cm2": 1.8249792111385149e-40,
+      "point_current_static_limit_cm2": 2.2222449632865794e-40
+    },
+    {
+      "antineutrino": true,
+      "lepton": "e",
+      "E_MeV": 150.0,
+      "threshold_MeV": 1.8060662080187586,
+      "sigma_cm2": 1.222649542827099e-39,
+      "point_current_static_limit_cm2": 2.0715590486594275e-39
+    },
+    {
+      "antineutrino": true,
+      "lepton": "e",
+      "E_MeV": 300.0,
+      "threshold_MeV": 1.8060662080187586,
+      "sigma_cm2": 3.366071509496514e-39,
+      "point_current_static_limit_cm2": 8.358497102786596e-39
+    },
+    {
+      "antineutrino": true,
+      "lepton": "mu",
+      "E_MeV": 114.04731059534446,
+      "threshold_MeV": 113.04731059534446,
+      "sigma_cm2": 1.0578787303075246e-40,
+      "point_current_static_limit_cm2": 4.158187968824664e-40
+    },
+    {
+      "antineutrino": true,
+      "lepton": "mu",
+      "E_MeV": 133.04731059534447,
+      "threshold_MeV": 113.04731059534446,
+      "sigma_cm2": 5.400073554997854e-40,
+      "point_current_static_limit_cm2": 9.714893819875177e-40
+    },
+    {
+      "antineutrino": true,
+      "lepton": "mu",
+      "E_MeV": 150.0,
+      "threshold_MeV": 113.04731059534446,
+      "sigma_cm2": 8.11862155917659e-40,
+      "point_current_static_limit_cm2": 1.4577267259058967e-39
+    },
+    {
+      "antineutrino": true,
+      "lepton": "mu",
+      "E_MeV": 300.0,
+      "threshold_MeV": 113.04731059534446,
+      "sigma_cm2": 3.11233847477011e-39,
+      "point_current_static_limit_cm2": 7.818144605335641e-39
+    }
+  ],
+  "heavy_limits": [
+    {
+      "antineutrino": false,
+      "lepton": "e",
+      "M": 1000000.0,
+      "E": 20.0,
+      "sigma_cm2": 3.7457411109773374e-41,
+      "static_cm2": 3.7459087112517225e-41,
+      "relative_error": 4.474222072780632e-05
+    },
+    {
+      "antineutrino": false,
+      "lepton": "e",
+      "M": 10000000.0,
+      "E": 20.0,
+      "sigma_cm2": 3.7458919504431466e-41,
+      "static_cm2": 3.7459087112517225e-41,
+      "relative_error": 4.474430603601289e-06
+    },
+    {
+      "antineutrino": false,
+      "lepton": "mu",
+      "M": 1000000.0,
+      "E": 150.0,
+      "sigma_cm2": 1.4954640379666513e-39,
+      "static_cm2": 1.49611876276835e-39,
+      "relative_error": 0.0004376155275849807
+    },
+    {
+      "antineutrino": false,
+      "lepton": "mu",
+      "M": 10000000.0,
+      "E": 150.0,
+      "sigma_cm2": 1.49605327087303e-39,
+      "static_cm2": 1.49611876276835e-39,
+      "relative_error": 4.377452976993369e-05
+    },
+    {
+      "antineutrino": true,
+      "lepton": "e",
+      "M": 1000000.0,
+      "E": 20.0,
+      "sigma_cm2": 3.745610954622111e-41,
+      "static_cm2": 3.7459087112517225e-41,
+      "relative_error": 7.948849066107126e-05
+    },
+    {
+      "antineutrino": true,
+      "lepton": "e",
+      "M": 10000000.0,
+      "E": 20.0,
+      "sigma_cm2": 3.745878933714151e-41,
+      "static_cm2": 3.7459087112517225e-41,
+      "relative_error": 7.949349508152168e-06
+    },
+    {
+      "antineutrino": true,
+      "lepton": "mu",
+      "M": 1000000.0,
+      "E": 150.0,
+      "sigma_cm2": 1.495170992948763e-39,
+      "static_cm2": 1.49611876276835e-39,
+      "relative_error": 0.0006334856852095021
+    },
+    {
+      "antineutrino": true,
+      "lepton": "mu",
+      "M": 10000000.0,
+      "E": 150.0,
+      "sigma_cm2": 1.4960239448689782e-39,
+      "static_cm2": 1.49611876276835e-39,
+      "relative_error": 6.337591756173019e-05
+    }
+  ],
+  "runtime_seconds": 0.22281649988144636,
+  "model": "vacuum exact relativistic two-body point V-A nucleons; F2=GP=0; no finite-T or medium",
+  "source_sha256": {
+    "vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "validate.py": "75eb8e46a9b526fd0ab25a6a6a9ad642cb57d786df501c6d0b7c2322ee7d9f65"
+  }
+}

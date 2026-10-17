@@ -1,0 +1,76 @@
+"""Independent rapidity-Gauss ideal-pair EOS and actual NMB import probes."""
+from pathlib import Path
+import sys,math,json,hashlib,ast,dataclasses,copy
+import numpy as np
+from numpy.polynomial.legendre import leggauss
+from scipy.special import expit
+P=Path(__file__).resolve().parent;A=P.parent/'production_lepton_port';sys.dont_write_bytecode=True
+sys.path.insert(0,str(A/'test_mirror/src'))
+from nmbackend.reference import finite_t_leptons as L
+from nmbackend.constants import HBARC,M_E,M_MU
+import jax,jax.numpy as jnp
+from nmbackend.eos.leptons import lepton_sector
+jax.config.update('jax_enable_x64',True)
+checks=[];rows=[]
+def ck(n,e,t=3e-9):checks.append(dict(name=n,error=float(e),tolerance=t,passed=bool(math.isfinite(e)and abs(e)<=t)))
+def relative(a,b):return a/b-1 if b else a
+def oracle(T,mu,m,N):
+ # Original momentum p=m*sinh(y), independent Gauss panels and matrix moments.
+ Emax=max(m,abs(mu))+90*T;pmax=math.sqrt((Emax-m)*(Emax+m));end=math.asinh(pmax/m);cuts=sorted({0.,end}|{math.acosh(E/m)for z in[-40,-15,-5,-1,0,1,5,15,40]if m<(E:=abs(mu)+z*T)<Emax});x,w=leggauss(N);v=np.zeros(8)
+ for lo,hi in zip(cuts[:-1],cuts[1:]):
+  y=lo+(x+1)*(hi-lo)/2;p=m*np.sinh(y);E=m*np.cosh(y);weight=w*(hi-lo)/2*p*p*E/(math.pi**2*HBARC**3);a=expit((mu-E)/T);b=expit((-mu-E)/T);wa=a*expit((E-mu)/T);wb=b*expit((E+mu)/T)
+  v+=np.array([sum(weight*a),sum(weight*b),sum(weight*E*(a+b)),sum(weight*p*p/(3*E)*(a+b)),sum(weight*(wa+wb)),sum(weight*E*(wa-wb)),sum(weight*E*E*(wa+wb)),sum(weight*((E-mu)*wa-(E+mu)*wb))])
+ n=v[0]-v[1];s=(v[2]+v[3]-mu*n)/T;chi=v[4]/T;nt=v[7]/T**2;cv=(v[6]-v[5]**2/v[4])/T**2
+ return dict(particle_density=v[0],antiparticle_density=v[1],energy_density=v[2],pressure=v[3],net_density=n,entropy_density=s,dn_dmu_fixed_temperature=chi,dn_dtemperature_fixed_mu=nt,cv_fixed_net_density=cv,dmu_dtemperature_fixed_net_density=-nt/chi)
+# Provenance before any experiment.
+manifest=json.loads((A/'CANDIDATE_MANIFEST.json').read_text());before={str(p.relative_to(A)):hashlib.sha256(p.read_bytes()).hexdigest()for p in A.rglob('*')if p.is_file()}
+for n,h in manifest['files'].items():ck('exact staged '+n,0 if hashlib.sha256((A/'staged'/n).read_bytes()).hexdigest()==h else 1,0)
+ck('real package module candidate matches staged',0 if Path(L.__file__).read_bytes()==(A/'staged/src/nmbackend/reference/finite_t_leptons.py').read_bytes()else 1,0)
+for T,mu,m in[(.73,-.29,M_E),(3.17,4.19,M_E),(13.7,91.3,M_MU),(.41,-117.2,M_MU)]:
+ s=L.state_mu(T,mu,m);o=oracle(T,mu,m,48);f=oracle(T,mu,m,80)
+ for k in f:
+  # Cold covariance is independently cancellation-sensitive; field gate declared.
+  tol=2e-7 if k=='cv_fixed_net_density'else 3e-8
+  if abs(f[k])<1e-290:continue
+  ck(f'rapidity refinement {T}/{k}',relative(o[k],f[k]),tol)
+  ck(f'fresh forward then response {T}/{k}',relative(getattr(s,k),f[k]),tol)
+ rows.append(dict(T=T,mu=mu,mass=m,production=s.asdict(),independent=f))
+ # Same state tail/tolerance evidence independent of identities.
+ fine=L.state_mu(T,mu,m,tail=90,rtol=4e-13)
+ for k in ['net_density','energy_density','entropy_density','cv_fixed_net_density','dn_dmu_fixed_temperature']:ck(f'actual tail tolerance {T}/{k}',relative(getattr(s,k),getattr(fine,k)),3e-8)
+# Holdout massive Bessel fugacity analytic limit, not author's NR example.
+from scipy.special import kv
+T=1.7;m=M_MU;mu=m-22*T;s=L.state_mu(T,mu,m);z=m/T;nmb=m*m*T/math.pi**2/HBARC**3*kv(2,z)*math.exp(mu/T)
+ck('relativistic Maxwell-Boltzmann Bessel n',s.net_density/nmb-1,2e-9);ck('relativistic MB pressure nT',s.pressure/(s.net_density*T)-1,2e-9)
+# Signed tiny root with physical massive pair susceptibility, not massless fixture.
+for m,T in[(M_E,.83),(M_MU,17.3)]:
+ zero=L.state_mu(T,0,m)
+ for n in [-3e-29,3e-29]:
+  s=L.state_density(T,n,m);ck(f'massive tiny root {m}/{n}',s.net_density/n-1,1e-9);ck(f'massive linear susceptibility {m}/{n}',s.chemical_potential/(n/zero.dn_dmu_fixed_temperature)-1,1e-9)
+# Fresh fixed-net response after forward agreement.
+s=L.state_mu(3.17,4.19,M_E);h=3.17e-4
+lo=L.state_density(3.17-h,s.net_density,M_E);hi=L.state_density(3.17+h,s.net_density,M_E)
+ck('heldout fixed-net Cv FD',(hi.energy_density-lo.energy_density)/(2*h)/s.cv_fixed_net_density-1,3e-7);ck('heldout fixed-net muT FD',(hi.chemical_potential-lo.chemical_potential)/(2*h)/s.dmu_dtemperature_fixed_net_density-1,3e-7)
+# New real cold interface with implicit shared composition and JIT/Hessian live.
+n=.013;out=jax.jit(lambda v:lepton_sector(v,muons=True))(n);mu=float(out[0])*HBARC
+warmE=L.state_mu(.0007,mu,M_E);warmM=L.state_mu(.0007,mu,M_MU)
+ck('fresh actual cold number units',(warmE.net_density+warmM.net_density)/float(out[1]+out[2])-1,1e-7);ck('fresh actual cold energy units',(warmE.energy_density+warmM.energy_density)/(float(out[3])*HBARC)-1,1e-7)
+hessian=jax.grad(jax.grad(lambda v:lepton_sector(v,muons=True)[3]))(n);ck('actual cold Hessian finite positive',0 if math.isfinite(float(hessian))and hessian>0 else 1,0)
+# Immutable state / detached dict; arbitrary internally inconsistent states reject.
+s=L.state_density(1.13,2.7e-7);d=s.asdict();d['net_density']=0;ck('detached asdict',0 if s.net_density!=0 else 1,0)
+for field,value in [('chemical_potential',s.chemical_potential*2),('net_density',2*s.net_density),('energy_density',float('nan')),('pressure',True),('temperature',False),('mass',-1.)]:
+ try:L.thermal_energy_density(dataclasses.replace(s,**{field:value}));ok=False
+ except (ValueError,ArithmeticError):ok=True
+ ck('reject forged state '+field,0 if ok else 1,0)
+# This diagnostic is not a security promise: only relevant independent state fields
+# are used by the energy-integral calculation; unused finite output tampering noted.
+for field,value in [('energy_density',-1.),('cv_fixed_net_density',-1.)]:
+ try:r=L.thermal_energy_density(dataclasses.replace(s,**{field:value}));status='accepted-unused-field'
+ except (ValueError,ArithmeticError):status='rejected'
+ rows.append(dict(tamper_field=field,diagnostic=status))
+# Min syntax and source API compatibility remain static, not version execution.
+for n in manifest['files']:
+ if n.endswith('.py'):ast.parse((A/'staged'/n).read_text(),feature_version=(3,9));ck('Python3.9 grammar '+n,0,0)
+after={str(p.relative_to(A)):hashlib.sha256(p.read_bytes()).hexdigest()for p in A.rglob('*')if p.is_file()};ck('author all bytes unchanged',0 if before==after else 1,0)
+out=dict(checks=checks,passed=sum(c['passed']for c in checks),failed=[c for c in checks if not c['passed']],rows=rows,origins={k:v.__file__ for k,v in sys.modules.copy().items()if k.startswith('nmbackend')and hasattr(v,'__file__')},before=before,after=after,environment=dict(python=sys.version,numpy=np.__version__,jax=jax.__version__))
+(P/'results.json').write_text(json.dumps(out,indent=2)+'\n');print(out['passed'],out['failed'])

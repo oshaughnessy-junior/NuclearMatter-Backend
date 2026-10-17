@@ -1,0 +1,67 @@
+"""Restricted transparent beta+positron-capture material feedback research leaf."""
+from __future__ import annotations
+import sys,math,time,json,hashlib,importlib.util,platform
+from pathlib import Path
+import numpy as np
+from scipy.optimize import brentq
+ROOT=Path(__file__).resolve().parents[1];sys.dont_write_bytecode=True
+sys.path.insert(0,str(ROOT/'hot_beta_moments'))
+import hot_moments as H
+spec=importlib.util.spec_from_file_location('pc_review_invariants',ROOT/'review_pc_moments/reference.py');PC=importlib.util.module_from_spec(spec);spec.loader.exec_module(PC)
+K=H.K;NB=1e-7
+# Conservative transitive Python fingerprint: deliberately broader than imports.
+def identity():
+ dirs=['hot_beta_moments','crossed_thermal_moments','relativistic_crossed_contract','relativistic_crossed_thermal','relativistic_free_eos','thermodynamics','relativistic_tensor','relativistic_capture_oracle','muon_full_current','review_pc_moments','transparent_antinu_element']
+ hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()for d in dirs for p in sorted((ROOT/d).glob('*.py'))}
+ import scipy
+ return dict(sources=hashes,python=sys.version,numpy=np.__version__,scipy=scipy.__version__,platform=platform.platform())
+
+def state(T,Ye,nB=NB):
+ bath,s=K.matched_npe(T,nB,Ye)
+ n,p,e=[s[k]for k in('neutron','proton','electron')]
+ energy=sum(x['energy_density']for x in(n,p,e))
+ cv=n['cv_fixed_density']+p['cv_fixed_density']+e['cv_fixed_net_density']
+ a=lambda x,key:x['chemical_potential']-T*x[key]
+ uy=a(p,'dmu_dtemperature_fixed_density')-a(n,'dmu_dtemperature_fixed_density')+a(e,'dmu_dtemperature_fixed_net_density')
+ charge=e['particle_density']-e['antiparticle_density']
+ residual=max(abs(n['density']/(nB*(1-Ye))-1),abs(p['density']/(nB*Ye)-1),abs(charge/(nB*Ye)-1))
+ if residual>2e-9 or not cv>0:raise ArithmeticError('Forward charge/density/Cv gate failed')
+ return dict(T=T,Ye=Ye,nB=nB,u=energy/nB,energy_density=energy,cv=cv,u_T=cv/nB,u_Y=uy,entropy=sum(x['entropy_density']for x in(n,p,e)),pressure=sum(x['pressure']for x in(n,p,e)),density_residual=residual,bath=vars(bath),species=s)
+
+def invert(u,Ye,nB=NB):
+ if not math.isfinite(u):raise ValueError('Finite rest-inclusive specific energy required')
+ T=brentq(lambda T:state(T,Ye,nB)['u']-u,.5,4.,xtol=2e-12,rtol=1e-13)
+ out=state(T,Ye,nB)
+ if abs(out['u']-u)>2e-9:raise ArithmeticError('Energy inversion failed')
+ return out
+
+class Sources:
+ def __init__(self):self.pin=identity();self.cache={};self.evaluations=[]
+ def get(self,s,fine=False):
+  if identity()!=self.pin:raise RuntimeError('Current transitive source/environment changed')
+  # No saved moments loaded. Reuse only exact binary state plus all controls.
+  pc=(32,52,12,70.)if fine else(28,44,10,60.)
+  bc=(24,20,10,12)if fine else(16,12,6,8)
+  key=(s['T'].hex(),s['Ye'].hex(),s['nB'].hex(),pc,bc)
+  if key in self.cache:return self.cache[key]
+  start=time.monotonic();a=PC.integral(s['bath'],order_n=pc[0],order_e=pc[1],order_angle=pc[2],tail=pc[3],budget=90.)
+  b=H.integrate(K.Bath(**s['bath']),rest_order=bc[0],parent_order=bc[1],orient_order=bc[2],phi_order=bc[3],scenarios=[dict(name='empty',mode='empty')],budget_seconds=90.)
+  v=np.array(a['net'][0]);z=b['scenarios']['empty']['net'];r=v[0]+z['number'];q=v[1]+z['neutrino_energy']
+  nr=abs(a['neutron_density']/(s['nB']*(1-s['Ye']))-1)
+  br=abs(b['parent_density']/(s['nB']*(1-s['Ye']))-1)
+  direct=v[5]+z['material_energy_loss']; ledger=(direct-q)/q
+  if max(nr,br)>3e-8 or abs(ledger)>2e-10 or r<=0 or q<=0:raise ArithmeticError('Physical source forward/energy gate failed')
+  out=dict(T=s['T'],Ye=s['Ye'],nB=s['nB'],R=r,Q=q,pc_R=v[0],pc_Q=v[1],beta_R=z['number'],beta_Q=z['neutrino_energy'],pc_density_residual=nr,beta_density_residual=br,direct_energy_ledger=ledger,pc_controls=a['controls'],beta_controls=b['controls'],seconds=time.monotonic()-start,temperature_dot=(-q/s['nB']-s['u_Y']*r/s['nB'])/s['u_T'])
+  self.cache[key]=out;self.evaluations.append(out);return out
+
+def trajectory(steps,src,duration=.002):
+ if isinstance(steps,bool)or not isinstance(steps,int)or steps<1:raise ValueError('Positive integer steps required')
+ if not math.isfinite(duration)or not 0<duration<=.003:raise ValueError('Bounded positive duration required')
+ start=time.monotonic();s=state(2.,.3);initial=s;records=[];N=E=0.;npc=nbeta=epc=ebeta=0.;dt=duration/steps
+ for i in range(steps):
+  if time.monotonic()-start>90:raise TimeoutError('Experiment budget; no completed trajectory claim')
+  z=src.get(s);u=s['u']-dt*z['Q']/NB;Y=s['Ye']+dt*z['R']/NB
+  N+=dt*z['R'];E+=dt*z['Q'];npc+=dt*z['pc_R'];nbeta+=dt*z['beta_R'];epc+=dt*z['pc_Q'];ebeta+=dt*z['beta_Q']
+  records.append(dict(index=i,time=i*dt,state=s,source=z));s=invert(u,Y)
+ escaped=dict(number=N,energy=E,pc_number=npc,beta_number=nbeta,pc_energy=epc,beta_energy=ebeta,electron_lepton=-N)
+ return dict(steps=steps,duration=duration,initial=initial,final=s,records=records,escaped=escaped,energy_ledger=(s['energy_density']+E-initial['energy_density']),lepton_ledger=NB*(s['Ye']-initial['Ye'])-N,energy_ledger_relative_exchange=(s['energy_density']+E-initial['energy_density'])/E,seconds=time.monotonic()-start)

@@ -1,0 +1,197 @@
+{
+  "passed": 25,
+  "failed": [],
+  "checks": [
+    {
+      "name": "signedPhiT independent 0",
+      "error": 2.0348843878638006e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fieldrelaxationCv 0",
+      "error": -2.9771312419925906e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "signedPhiT independent 1",
+      "error": -4.3150893540490315e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fieldrelaxationCv 1",
+      "error": -1.8630628645990183e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "signedPhiT independent 2",
+      "error": 1.7594103000951836e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fieldrelaxationCv 2",
+      "error": 3.870398412626354e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "candidate re-solvedCv Richardson",
+      "error": -1.509781188957504e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "candidate re-solvedsignedPhiT Richardson",
+      "error": -6.178417722651478e-12,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "candidate re-solvedentropy Richardson",
+      "error": 1.3510281782203037e-10,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "projectednu0 exactNETsymmetry",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "actualT1 projectedrootforward",
+      "error": 1.7763568394002505e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualT1 projectedscalarmatchesfull",
+      "error": -1.5935391671752674e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualT1 positivefullgas",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "branchguard no_upcrossing",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "branchguard two_upcrossings",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "branchguard nonfinite_scan",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "actualcandidate tail60to85 rtolrefine energy_density",
+      "error": -3.3306690738754696e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualcandidate tail60to85 rtolrefine pressure",
+      "error": -1.4432899320127035e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualcandidate tail60to85 rtolrefine entropy_density",
+      "error": 0.0,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualcandidate tail60to85 rtolrefine cv_fixed_density_composition",
+      "error": -1.1102230246251565e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualcandidate tail60to85 rtolrefine dirac_mass",
+      "error": 0.0,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualcandidate tail60to85 rtolrefine mu_n",
+      "error": 0.0,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualcandidate tail60to85 rtolrefine mu_p",
+      "error": 0.0,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "actualcandidate tailH",
+      "error": 1.922086083423929e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "alloriginalauthorfilesunchanged",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "details": {
+    "candidateFD": [
+      {
+        "step": 0.0015,
+        "Cv": 0.16766697358385316,
+        "phiT": -0.32735700496624204,
+        "s": 0.18409991164981335
+      },
+      {
+        "step": 0.00075,
+        "Cv": 0.1676669974734938,
+        "phiT": -0.3273570625059543,
+        "s": 0.18409992324956792
+      }
+    ],
+    "projection": {
+      "zero_projection": [
+        0.0,
+        0.0
+      ],
+      "nu": 5.049126497927382,
+      "scalar": 0.15675810528300949,
+      "fullgas": {
+        "density": 0.1625190000000003,
+        "scalar": 0.15675810528300974,
+        "energy": 0.801976203494724,
+        "pressure": 0.018675739298486094,
+        "entropy": 0.014395689236915112,
+        "chi": 0.8634870284845434,
+        "scalar_nu": 0.8137777348652219,
+        "scalar_mass": -0.7646608189998103,
+        "n_temperature": 0.028374893108055035,
+        "scalar_temperature": 0.024056129183226038,
+        "s_temperature": 2.839953340391432,
+        "antiparticle_density": null,
+        "log_antiparticle_density": -1942.977921406939
+      },
+      "note": "nu0thermalpaircomponentsunderflow; analyticnetzeroisrootbracketonly,notwholephysicalEOSzero"
+    }
+  },
+  "seconds": 9.42343012499623
+}

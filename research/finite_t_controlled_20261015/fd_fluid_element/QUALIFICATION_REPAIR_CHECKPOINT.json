@@ -1,0 +1,17 @@
+{
+  "status": "provenance_repair_frozen_independent_review_pending",
+  "utc": "2026-10-15T14:06:00Z",
+  "checks": "30/30 PASS",
+  "source_qualification": "24/24 freshly rechecked; no trajectory rerun",
+  "files_sha256": {
+    "element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "qualification_contract.py": "92cbb4eede20914741d7c7b51f85c95f130e47bd6aa509f8915206ff3f12a1ff",
+    "qualify_source.py": "115df9db7339a2357a1f2f885447cd7967e31e323b793899cbc93d2c5ada3ea8",
+    "short_evolution.py": "38734cbbecf01d371215721ec1673e524602dfda3289bd1a6658181590a5abd6",
+    "check_qualification_contract.py": "79056227aff0412fb3df5411966ec93ba2e33643f9a8e83903948d867a66f3a9",
+    "source_qualification.json": "e20a28a70533662554968de95591e10d0fc6dd82900f263e71fd2530f1a17c39",
+    "qualification_contract_results.json": "00679b7a52d2ee690eb77ffe5350f660656385145d0bd8dff2449e8f796cfbf1",
+    "QUALIFICATION_PROVENANCE_REPAIR.md": "30c138da862df1110f9843bed9e7f9e1142f438b202c3d20e08ae45e5c7aed69"
+  },
+  "old_source_and_results": "pre_qualification_contract_20261015T1402/manifest.json"
+}

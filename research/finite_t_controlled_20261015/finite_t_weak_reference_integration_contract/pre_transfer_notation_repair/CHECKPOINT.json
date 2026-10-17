@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN; independent design review required; implementation NOT authorized",
+  "utc": "2026-10-16T05:06:46.771017+00:00",
+  "contract_sha256": "bb836077dbca372d0e231958d37788cc66b24266811522ee91751cae552fb370",
+  "manifest_sha256": "eef214edf29d993a1b87323a1cfc402e21396b20b7f0d607639c0a7617415e6e",
+  "audit_pass": 70,
+  "audit_fail": 0,
+  "new_physical_calls": 0,
+  "saved_spectral_rows": 10,
+  "saved_total_channel_groups": 3,
+  "external_source_files_unchanged": 60,
+  "preserved_audit_path_errors": 2,
+  "remaining_gates": [
+    "different design review",
+    "explicit implementation commission",
+    "new candidate forward/convergence/current/packaging gates",
+    "minimum runtime and CI",
+    "later matched EOS and GM1 binders",
+    "external native GM1 forward remains OPEN"
+  ]
+}

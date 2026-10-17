@@ -1,0 +1,387 @@
+{
+  "checks": [
+    {
+      "name": "original_anchor isolated order ('EC', 0)",
+      "error": -2.6645352591003757e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated tail ('EC', 0)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated order ('EC', 1)",
+      "error": -1.5543122344752192e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated tail ('EC', 1)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated order ('PC', 0)",
+      "error": -4.3298697960381105e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated tail ('PC', 0)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated order ('PC', 1)",
+      "error": -3.3306690738754696e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated tail ('PC', 1)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated order ('beta', 0)",
+      "error": 1.0880185641326534e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated tail ('beta', 0)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated order ('beta', 1)",
+      "error": 1.0658141036401503e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor isolated tail ('beta', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original_anchor physical vacuum rest width positive",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "original_anchor proper-time ratio in(0,1)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated order ('EC', 0)",
+      "error": -2.1094237467877974e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated tail ('EC', 0)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated order ('EC', 1)",
+      "error": -2.1094237467877974e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated tail ('EC', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated order ('PC', 0)",
+      "error": -2.3314683517128287e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated tail ('PC', 0)",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated order ('PC', 1)",
+      "error": -1.4432899320127035e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated tail ('PC', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated order ('beta', 0)",
+      "error": -7.771561172376096e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated tail ('beta', 0)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated order ('beta', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 isolated tail ('beta', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 physical vacuum rest width positive",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "new_state_0 proper-time ratio in(0,1)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated order ('EC', 0)",
+      "error": -3.1086244689504383e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated tail ('EC', 0)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated order ('EC', 1)",
+      "error": -2.1094237467877974e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated tail ('EC', 1)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated order ('PC', 0)",
+      "error": -4.884981308350689e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated tail ('PC', 0)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated order ('PC', 1)",
+      "error": -3.885780586188048e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated tail ('PC', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated order ('beta', 0)",
+      "error": 1.0880185641326534e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated tail ('beta', 0)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated order ('beta', 1)",
+      "error": 1.0658141036401503e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 isolated tail ('beta', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 physical vacuum rest width positive",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "new_state_1 proper-time ratio in(0,1)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated order ('EC', 0)",
+      "error": -3.1086244689504383e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated tail ('EC', 0)",
+      "error": -3.3306690738754696e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated order ('EC', 1)",
+      "error": -2.6645352591003757e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated tail ('EC', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated order ('PC', 0)",
+      "error": -2.6645352591003757e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated tail ('PC', 0)",
+      "error": 4.440892098500626e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated order ('PC', 1)",
+      "error": -1.5543122344752192e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated tail ('PC', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated order ('beta', 0)",
+      "error": 1.1102230246251565e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated tail ('beta', 0)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated order ('beta', 1)",
+      "error": 1.0880185641326534e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 isolated tail ('beta', 1)",
+      "error": 0.0,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 physical vacuum rest width positive",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "new_state_2 proper-time ratio in(0,1)",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 56,
+  "failed": [],
+  "vacuum_proper_anchors": [
+    {
+      "label": "original_anchor",
+      "full_tree_rest_width": 0.0010533846209151876,
+      "full_tree_rest_lifetime": 949.3208654700059,
+      "allowed_over_full_rest_width_minus1": 0.0020581294656927263,
+      "parent_proper_to_coordinate_density": 0.996815493836806,
+      "derived_unblocked_full_rate": 4.661663050854374e-11,
+      "interpretation": "Accepted immutable vacuum full-current rest integral and kinematic proper-density anchor. Warm blocked rows above are not unblocked vacuum rates. No new detailed phase integration."
+    },
+    {
+      "label": "new_state_0",
+      "full_tree_rest_width": 0.0010533846209151876,
+      "full_tree_rest_lifetime": 949.3208654700059,
+      "allowed_over_full_rest_width_minus1": 0.0020581294656927263,
+      "parent_proper_to_coordinate_density": 0.9984056026606873,
+      "derived_unblocked_full_rate": 6.467389985736096e-11,
+      "interpretation": "Accepted immutable vacuum full-current rest integral and kinematic proper-density anchor. Warm blocked rows above are not unblocked vacuum rates. No new detailed phase integration."
+    },
+    {
+      "label": "new_state_1",
+      "full_tree_rest_width": 0.0010533846209151876,
+      "full_tree_rest_lifetime": 949.3208654700059,
+      "allowed_over_full_rest_width_minus1": 0.0020581294656927263,
+      "parent_proper_to_coordinate_density": 0.9952295912503933,
+      "derived_unblocked_full_rate": 4.7280325712029055e-11,
+      "interpretation": "Accepted immutable vacuum full-current rest integral and kinematic proper-density anchor. Warm blocked rows above are not unblocked vacuum rates. No new detailed phase integration."
+    },
+    {
+      "label": "new_state_2",
+      "full_tree_rest_width": 0.0010533846209151876,
+      "full_tree_rest_lifetime": 949.3208654700059,
+      "allowed_over_full_rest_width_minus1": 0.0020581294656927263,
+      "parent_proper_to_coordinate_density": 0.9968152128263762,
+      "derived_unblocked_full_rate": 7.574623620115215e-10,
+      "interpretation": "Accepted immutable vacuum full-current rest integral and kinematic proper-density anchor. Warm blocked rows above are not unblocked vacuum rates. No new detailed phase integration."
+    }
+  ],
+  "grid_independent_acceptance": {
+    "accepted": true,
+    "review": "review_transparent_balance_grid/REVIEW.md",
+    "sha256": "0b2fe53e9a343a8a75f3cfbd38ea5afbb6bdc34895553202975c616deb9a988e",
+    "scope": "Three selected free-npe fixed-T empty-radiation beta+PC+EC baths only"
+  },
+  "source_hashes_unchanged": true
+}

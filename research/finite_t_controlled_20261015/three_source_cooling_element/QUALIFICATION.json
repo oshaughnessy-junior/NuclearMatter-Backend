@@ -1,0 +1,26 @@
+{
+  "status": "AUTHOR_FROZEN_DIFFERENT_INDEPENDENT_REVIEW_REQUIRED",
+  "scope": "short fixednB free-npe three CC cooling with trappedLTE photons/EMpairs, no thermostat",
+  "counts": {
+    "preflight.json": 11,
+    "results.json": 50,
+    "endpoint_results.json": 79,
+    "admission_results.json": 27,
+    "final_replay.json": 1
+  },
+  "total_passed": 168,
+  "failed": [],
+  "final": {
+    "duration_s": 0.002,
+    "T": 1.9962252227106079,
+    "Ye": 0.31518279058955595,
+    "escaped_energy_MeV_fm3": 3.000347851598737e-08
+  },
+  "main_execution_pin_snapshot": "pre_admission_guard/PINS.json",
+  "current_execution_pin_file": "PINS.json",
+  "final_guarded_replay": "final_replay.json",
+  "no_fullinventory": true,
+  "no_continuum_time_error_bound": true,
+  "no_AD_claim": true,
+  "source_model_uncertainty": "not estimated"
+}

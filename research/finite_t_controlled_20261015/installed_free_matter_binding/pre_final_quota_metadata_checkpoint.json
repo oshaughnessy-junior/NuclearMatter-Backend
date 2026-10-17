@@ -1,0 +1,38 @@
+{
+  "status": "FROZEN author267PASS; DIFFERENT review pending",
+  "manifest_sha256": "b15ad38830486359a7ffd161968f975868fbc2a8a07aa51aae03f501e57a0454",
+  "report_sha256": "1b28f24c7be42924c6b60aa4020a4192bfdc25762502a50e836533bf8d0f8e33",
+  "sources": {
+    "binding": "b57e8c602d94ade33bee592c2b13ce9980915f3925ab78e2405094e34e06ab27",
+    "weak_point": "1cd2760691e35f893b3da538249075a6aacc978d30895f0a3c0ec7387bc3554d",
+    "cycle": "1e979c79aca77acc0a015c5cd5e3f792a108714f32909dac9ae7ad061306298c"
+  },
+  "current_passed": 267,
+  "current_failed": 0,
+  "initial_failures": {
+    "wrong_sign_check_identity": 8,
+    "JSON_numpy_count_reporter": 1,
+    "LOCK_literal_timestamp_typo": 1
+  },
+  "max_source_refinement": 5.2119091265012685e-09,
+  "package71and2overlays_verified": true,
+  "production_or_frozen_source_edits": false,
+  "environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.15.2",
+      "jax": "0.10.1",
+      "matplotlib": "3.10.9"
+    },
+    "minimum_runtime_executed": false,
+    "full_CI": false
+  },
+  "quota": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "used_percent": 25,
+    "reset": 1792652325,
+    "no_reset_used": true
+  },
+  "different_review_required": true
+}

@@ -1,0 +1,402 @@
+{
+  "stage": "complete",
+  "checks": [
+    {
+      "name": "independent adaptive energy average 4",
+      "error": 9.541152590220037e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent projected average 4",
+      "error": 9.541152590220037e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent adaptive energy average 8",
+      "error": 1.768533236523595e-13,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent projected average 8",
+      "error": 1.768533236523595e-13,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent RK2 energy 4",
+      "error": 2.503119239660734e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent RK2 entropy 4",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent RK2 max principle 4",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "RK2 vs Euler Richardson 4 L1",
+      "error": 1.3839675933047246e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "RK2 vs Euler Richardson 4 L2",
+      "error": 1.4261367020056813e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "RK2 vs Euler Richardson 4 Linf",
+      "error": 1.789030729115737e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "independent RK2 energy 8",
+      "error": 1.1068576610817615e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent RK2 entropy 8",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent RK2 max principle 8",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "RK2 vs Euler Richardson 8 L1",
+      "error": 9.113910797928226e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "RK2 vs Euler Richardson 8 L2",
+      "error": 1.1169860927044542e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "RK2 vs Euler Richardson 8 Linf",
+      "error": 2.025310474884634e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "independent_initial_energy": {
+        "4": [
+          0.03666458469325374,
+          0.015061687029976737,
+          -0.014772146102340789,
+          -0.035360529126868656
+        ],
+        "8": [
+          0.039736780171482466,
+          0.033592389215171804,
+          0.022330094812045127,
+          0.00779327924799626,
+          -0.007713851381164947,
+          -0.02183044082342136,
+          -0.03249844631019421,
+          -0.03822261194321676
+        ]
+      }
+    },
+    {
+      "RK2": {
+        "N": 4,
+        "steps": 16,
+        "theta": [
+          1.035521593255173,
+          1.0147571081393245,
+          0.9853409934924221,
+          0.9645025587224804
+        ],
+        "initial_theta": [
+          1.0360186041021062,
+          1.0149503838700433,
+          0.9851175467293661,
+          0.9639937470581326
+        ],
+        "W": [
+          0.03614987069787819,
+          0.014865552173853866,
+          -0.014551986896240295,
+          -0.0348698394813243
+        ],
+        "history": [
+          {
+            "time": 9.375e-05,
+            "energy_residual": -1.2372915192404577e-13,
+            "entropy_increase": 6.671642569181652e-07,
+            "face_entropy_integral": 6.671641418622689e-07
+          },
+          {
+            "time": 0.0001875,
+            "energy_residual": -6.466008284355951e-14,
+            "entropy_increase": 1.333156119357956e-06,
+            "face_entropy_integral": 1.3331560345418925e-06
+          },
+          {
+            "time": 0.00028125000000000003,
+            "energy_residual": 6.192442392194408e-14,
+            "entropy_increase": 1.9979776330440735e-06,
+            "face_entropy_integral": 1.99797773761158e-06
+          },
+          {
+            "time": 0.000375,
+            "energy_residual": -6.466008284355951e-14,
+            "entropy_increase": 2.661631117676505e-06,
+            "face_entropy_integral": 2.6616313070493158e-06
+          },
+          {
+            "time": 0.00046875,
+            "energy_residual": 1.128958038165706e-14,
+            "entropy_increase": 3.324118816015048e-06,
+            "face_entropy_integral": 3.324118795194589e-06
+          },
+          {
+            "time": 0.0005625000000000001,
+            "energy_residual": 1.128958038165706e-14,
+            "entropy_increase": 3.985442257083138e-06,
+            "face_entropy_integral": 3.9854422508209136e-06
+          },
+          {
+            "time": 0.00065625,
+            "energy_residual": 1.6319064155556617e-13,
+            "entropy_increase": 4.64560372788643e-06,
+            "face_entropy_integral": 4.6456037190687965e-06
+          },
+          {
+            "time": 0.00075,
+            "energy_residual": -2.503119239660734e-13,
+            "entropy_increase": 5.304605162728335e-06,
+            "face_entropy_integral": 5.3046052415005396e-06
+          },
+          {
+            "time": 0.00084375,
+            "energy_residual": 1.1291315105133037e-14,
+            "entropy_increase": 5.9624489844676415e-06,
+            "face_entropy_integral": 5.9624488561164036e-06
+          },
+          {
+            "time": 0.0009375,
+            "energy_residual": 1.8850546124049572e-13,
+            "entropy_increase": 6.619136704516873e-06,
+            "face_entropy_integral": 6.619136597302077e-06
+          },
+          {
+            "time": 0.00103125,
+            "energy_residual": 3.660786951353856e-14,
+            "entropy_increase": 7.274670310211673e-06,
+            "face_entropy_integral": 7.27467049588945e-06
+          },
+          {
+            "time": 0.0011250000000000001,
+            "energy_residual": 1.2099522772590632e-13,
+            "entropy_increase": 7.929052780235313e-06,
+            "face_entropy_integral": 7.929052579154812e-06
+          },
+          {
+            "time": 0.00121875,
+            "energy_residual": -8.997490252848905e-14,
+            "entropy_increase": 8.582284879923505e-06,
+            "face_entropy_integral": 8.582284870797274e-06
+          },
+          {
+            "time": 0.0013125,
+            "energy_residual": -6.466008284355951e-14,
+            "entropy_increase": 9.234369477199161e-06,
+            "face_entropy_integral": 9.234369390972844e-06
+          },
+          {
+            "time": 0.00140625,
+            "energy_residual": -4.778295814578115e-14,
+            "entropy_increase": 9.885308172662144e-06,
+            "face_entropy_integral": 9.885308156292312e-06
+          },
+          {
+            "time": 0.0015,
+            "energy_residual": 3.660786951353856e-14,
+            "entropy_increase": 1.0535103137842769e-05,
+            "face_entropy_integral": 1.0535103179809084e-05
+          }
+        ],
+        "runtime": 10.673863833071664
+      }
+    },
+    {
+      "RK2_vs_Euler_Richardson": {
+        "N": 4,
+        "error": {
+          "L1": 1.3839675933047246e-12,
+          "L2": 1.4261367020056813e-12,
+          "Linf": 1.789030729115737e-12
+        }
+      }
+    },
+    {
+      "RK2": {
+        "N": 8,
+        "steps": 16,
+        "theta": [
+          1.0384165674134662,
+          1.0325763395034637,
+          1.0217817294939322,
+          1.0076713097328682,
+          0.9923895910984352,
+          0.9782627547347873,
+          0.9674449090607657,
+          0.9615882375462378
+        ],
+        "initial_theta": [
+          1.0389802106655712,
+          1.0330485436165235,
+          1.022087170789158,
+          1.0077632665962462,
+          0.9922562850949872,
+          0.9779269017067975,
+          0.9669577720653973,
+          0.9610206144105116
+        ],
+        "W": [
+          0.039151417216335076,
+          0.03310475599760783,
+          0.022017981520159855,
+          0.007700615599049642,
+          -0.007581564729203864,
+          -0.021501916235750998,
+          -0.03202722593043154,
+          -0.037676870449464835
+        ],
+        "history": [
+          {
+            "time": 9.375e-05,
+            "energy_residual": 1.1068576610817615e-13,
+            "entropy_increase": 7.21025777363285e-07,
+            "face_entropy_integral": 7.210256094432603e-07
+          },
+          {
+            "time": 0.0001875,
+            "energy_residual": 4.317553259358675e-14,
+            "entropy_increase": 1.4407345196604943e-06,
+            "face_entropy_integral": 1.4407343627713221e-06
+          },
+          {
+            "time": 0.00028125000000000003,
+            "energy_residual": 8.959152864029818e-14,
+            "entropy_increase": 2.1591288554400484e-06,
+            "face_entropy_integral": 2.15912866393223e-06
+          },
+          {
+            "time": 0.000375,
+            "energy_residual": 7.270919977209189e-14,
+            "entropy_increase": 2.8762110174315736e-06,
+            "face_entropy_integral": 2.8762109124796513e-06
+          },
+          {
+            "time": 0.00046875,
+            "energy_residual": -4.1211825618781006e-14,
+            "entropy_increase": 3.591983612435262e-06,
+            "face_entropy_integral": 3.591983503599702e-06
+          },
+          {
+            "time": 0.0005625000000000001,
+            "energy_residual": 8.115036420619504e-14,
+            "entropy_increase": 4.306448882761618e-06,
+            "face_entropy_integral": 4.306448828111995e-06
+          },
+          {
+            "time": 0.00065625,
+            "energy_residual": 3.895495037653518e-14,
+            "entropy_increase": 5.0196095854656425e-06,
+            "face_entropy_integral": 5.0196092724780425e-06
+          },
+          {
+            "time": 0.00075,
+            "energy_residual": 5.583380979778951e-14,
+            "entropy_increase": 5.731467432686446e-06,
+            "face_entropy_integral": 5.7314672188052145e-06
+          },
+          {
+            "time": 0.00084375,
+            "energy_residual": 1.0646691861460056e-13,
+            "entropy_increase": 6.442025143250929e-06,
+            "face_entropy_integral": 6.442025044855449e-06
+          },
+          {
+            "time": 0.0009375,
+            "energy_residual": -4.9649520605932196e-14,
+            "entropy_increase": 7.151285301820742e-06,
+            "face_entropy_integral": 7.151285124057455e-06
+          },
+          {
+            "time": 0.00103125,
+            "energy_residual": -4.543240783583258e-14,
+            "entropy_increase": 7.859249964469947e-06,
+            "face_entropy_integral": 7.859249825509044e-06
+          },
+          {
+            "time": 0.0011250000000000001,
+            "energy_residual": -1.0872205913337041e-13,
+            "entropy_increase": 8.565921663195725e-06,
+            "face_entropy_integral": 8.565921514001945e-06
+          },
+          {
+            "time": 0.00121875,
+            "energy_residual": -2.8553548414578245e-14,
+            "entropy_increase": 9.27130277875339e-06,
+            "face_entropy_integral": 9.27130254999436e-06
+          },
+          {
+            "time": 0.0013125,
+            "energy_residual": 3.0520724836335944e-14,
+            "entropy_increase": 9.975395486446284e-06,
+            "face_entropy_integral": 9.975395289663558e-06
+          },
+          {
+            "time": 0.00140625,
+            "energy_residual": 2.6298407895808396e-14,
+            "entropy_increase": 1.0678202336938947e-05,
+            "face_entropy_integral": 1.0678202084871188e-05
+          },
+          {
+            "time": 0.0015,
+            "energy_residual": -4.965299005288415e-14,
+            "entropy_increase": 1.1379725628027013e-05,
+            "face_entropy_integral": 1.1379725283204318e-05
+          }
+        ],
+        "runtime": 21.674863416003063
+      }
+    },
+    {
+      "RK2_vs_Euler_Richardson": {
+        "N": 8,
+        "error": {
+          "L1": 9.113910797928226e-13,
+          "L2": 1.1169860927044542e-12,
+          "Linf": 2.025310474884634e-12
+        }
+      }
+    }
+  ],
+  "all_pass": true
+}

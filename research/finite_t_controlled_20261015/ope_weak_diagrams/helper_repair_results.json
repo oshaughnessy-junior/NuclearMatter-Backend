@@ -1,0 +1,468 @@
+{
+  "checks": [
+    {
+      "name": "original gvNaN counterexample reproduced",
+      "passed": true
+    },
+    {
+      "name": "original raisingNaN counterexample reproduced",
+      "passed": true
+    },
+    {
+      "name": "defect rejects nan",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainV rejects nan",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainA rejects nan",
+      "passed": true,
+      "message": "ga must be a finite real coupling"
+    },
+    {
+      "name": "defect rejects posinf",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainV rejects posinf",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainA rejects posinf",
+      "passed": true,
+      "message": "ga must be a finite real coupling"
+    },
+    {
+      "name": "defect rejects neginf",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainV rejects neginf",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainA rejects neginf",
+      "passed": true,
+      "message": "ga must be a finite real coupling"
+    },
+    {
+      "name": "defect rejects complex",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainV rejects complex",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainA rejects complex",
+      "passed": true,
+      "message": "ga must be a finite real coupling"
+    },
+    {
+      "name": "defect rejects bool",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainV rejects bool",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainA rejects bool",
+      "passed": true,
+      "message": "ga must be a finite real coupling"
+    },
+    {
+      "name": "defect rejects string",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainV rejects string",
+      "passed": true,
+      "message": "gv must be a finite real coupling"
+    },
+    {
+      "name": "mainA rejects string",
+      "passed": true,
+      "message": "ga must be a finite real coupling"
+    },
+    {
+      "name": "rho rejects nonBoolean nan",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "defect rejects nonBoolean nan",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "main rejects nonBoolean nan",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "rho rejects nonBoolean inf",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "defect rejects nonBoolean inf",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "main rejects nonBoolean inf",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "rho rejects nonBoolean 0",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "defect rejects nonBoolean 0",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "main rejects nonBoolean 0",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "rho rejects nonBoolean 1",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "defect rejects nonBoolean 1",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "main rejects nonBoolean 1",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "rho rejects nonBoolean 'False'",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "defect rejects nonBoolean 'False'",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "main rejects nonBoolean 'False'",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "rho rejects nonBoolean None",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "defect rejects nonBoolean None",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "main rejects nonBoolean None",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "rho rejects nonBoolean (1+0j)",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "defect rejects nonBoolean (1+0j)",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "main rejects nonBoolean (1+0j)",
+      "passed": true,
+      "message": "raising must be Boolean"
+    },
+    {
+      "name": "finite defect bitwise unchanged (False, -1.3)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, -1.3, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, -1.3, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, -1.3, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (False, 0.0)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.0, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.0, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.0, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (False, 0.81)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.81, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.81, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.81, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (False, 1.0)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 1.0, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 1.0, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 1.0, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (True, -1.3)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, -1.3, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, -1.3, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, -1.3, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (True, 0.0)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.0, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.0, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.0, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (True, 0.81)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.81, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.81, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.81, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (True, 1.0)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 1.0, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 1.0, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 1.0, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (False, -1.3)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, -1.3, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, -1.3, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, -1.3, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (False, 0.0)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.0, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.0, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.0, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (False, 0.81)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.81, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.81, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 0.81, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (False, 1.0)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 1.0, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 1.0, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (False, 1.0, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (True, -1.3)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, -1.3, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, -1.3, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, -1.3, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (True, 0.0)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.0, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.0, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.0, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (True, 0.81)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.81, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.81, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 0.81, 'Ax')",
+      "passed": true
+    },
+    {
+      "name": "finite defect bitwise unchanged (True, 1.0)",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 1.0, 'V0')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 1.0, 'Vx')",
+      "passed": true
+    },
+    {
+      "name": "finite amplitude bitwise unchanged (True, 1.0, 'Ax')",
+      "passed": true
+    }
+  ],
+  "passed": 105,
+  "failed": [],
+  "old_source_sha256": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+  "new_source_sha256": "d8400295e4bc286ed5453c6da70d5f3d1cfc76e94f926b3eb7603e0ea55d7d14",
+  "scope": "helper/current-input repair only; finite-input equations unchanged"
+}

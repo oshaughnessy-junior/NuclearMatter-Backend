@@ -1,0 +1,16 @@
+{
+ "ansatz":"FixednB1e-7, homogeneousfree npe/e± + trappedLTEphotons(muγ0,two polarizations); rapidEMpair/thermal equilibrium; emptyνe/antinue; no thermostat/hydro/photonescape",
+ "initial":{"T_MeV":2.0,"Ye":0.3},
+ "duration_s":0.002,
+ "methods":[["Euler",1],["Euler",2],["Euler",4],["Heun",2],["Heun",4]],
+ "source_rule":"Every source freshly isolated at actual EOS-inverted changing(T,Ye). No saved fixed-bath moments or state cache. All three named current/source conventions unchanged.",
+ "conserved_variables":"u=restinclusive epsilon_total/nB,Ye; u_dot=-Qescape/nB,Ye_dot=(Rbeta+RPC-REC)/nB",
+ "EOS_inversion_absolute_u_MeV_per_baryon":0.0000000002,
+ "quadrature_relative_gate":0.000003,
+ "density_relative_gate":0.00000003,
+ "time_gate":{"Heun2to4_relative_escaping_energy":0.001,"Heun2to4_relative_composition_change":0.001,"Euler_error_ratio_range":[1.7,2.3]},
+ "ledger_relative_gate":0.00000002,
+ "endpoint_controls":"fresh base/fine and fixedfine wider tails at Heun4 endpoint, all separate number/species-energy moments",
+ "photonOFF":"initial instantaneous Cv/Tdot diagnostic using SAMEsource; no duplicate OFF trajectory",
+ "limits":"time/discreteledger and numerical quadrature errors distinguished; no fullinventory/globalLTE/steadystate/AD/coolingprofile claim"
+}

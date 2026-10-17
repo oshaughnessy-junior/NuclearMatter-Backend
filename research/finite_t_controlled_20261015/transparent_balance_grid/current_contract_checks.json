@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "same GF EC/PC event current",
+      "passed": true
+    },
+    {
+      "name": "same Vud EC/PC event current",
+      "passed": true
+    },
+    {
+      "name": "same electron physical mass",
+      "passed": true
+    },
+    {
+      "name": "actual pair density and charge (1.0, 1e-07)",
+      "passed": true
+    },
+    {
+      "name": "actual pair density and charge (3.0, 1e-07)",
+      "passed": true
+    },
+    {
+      "name": "actual pair density and charge (2.0, 1e-06)",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": []
+}

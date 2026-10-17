@@ -1,0 +1,743 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "repository_full_name": "oshaughnessy-junior/NuclearMatter-Backend",
+    "base": "5e0208cccf386c723f10955d0c81390fa1ecb972",
+    "head": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+    "status": "ahead",
+    "ahead_by": 80,
+    "behind_by": 0,
+    "total_commits": 80,
+    "too_large": null,
+    "base_commit": {
+      "sha": "5e0208cccf386c723f10955d0c81390fa1ecb972",
+      "url": "https://api.github.com/repos/oshaughnessy-junior/NuclearMatter-Backend/commits/5e0208cccf386c723f10955d0c81390fa1ecb972",
+      "html_url": "https://github.com/oshaughnessy-junior/NuclearMatter-Backend/commit/5e0208cccf386c723f10955d0c81390fa1ecb972"
+    },
+    "merge_base_commit": {
+      "sha": "5e0208cccf386c723f10955d0c81390fa1ecb972",
+      "url": "https://api.github.com/repos/oshaughnessy-junior/NuclearMatter-Backend/commits/5e0208cccf386c723f10955d0c81390fa1ecb972",
+      "html_url": "https://github.com/oshaughnessy-junior/NuclearMatter-Backend/commit/5e0208cccf386c723f10955d0c81390fa1ecb972"
+    },
+    "files": [
+      {
+        "filename": ".github/workflows/ci.yml",
+        "status": "modified",
+        "additions": 8,
+        "deletions": 33,
+        "changes": 41,
+        "previous_filename": null
+      },
+      {
+        "filename": ".github/workflows/full-validation.yml",
+        "status": "added",
+        "additions": 136,
+        "deletions": 0,
+        "changes": 136,
+        "previous_filename": null
+      },
+      {
+        "filename": ".github/workflows/private-review-dispatch.yml",
+        "status": "added",
+        "additions": 202,
+        "deletions": 0,
+        "changes": 202,
+        "previous_filename": null
+      },
+      {
+        "filename": ".github/workflows/quick-ci.yml",
+        "status": "added",
+        "additions": 26,
+        "deletions": 0,
+        "changes": 26,
+        "previous_filename": null
+      },
+      {
+        "filename": "README.md",
+        "status": "modified",
+        "additions": 37,
+        "deletions": 3,
+        "changes": 40,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/CI_QUOTA.md",
+        "status": "added",
+        "additions": 115,
+        "deletions": 0,
+        "changes": 115,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/CONTACT_GEOMETRY.md",
+        "status": "added",
+        "additions": 32,
+        "deletions": 0,
+        "changes": 32,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/CRUST_CHEMISTRY.md",
+        "status": "added",
+        "additions": 29,
+        "deletions": 0,
+        "changes": 29,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/SMOOTH_STEADY_LAYER.md",
+        "status": "added",
+        "additions": 13,
+        "deletions": 0,
+        "changes": 13,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/architecture.md",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 1,
+        "changes": 7,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/backlog.md",
+        "status": "modified",
+        "additions": 52,
+        "deletions": 0,
+        "changes": 52,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/cooling/core_transport_results.json",
+        "status": "added",
+        "additions": 68,
+        "deletions": 0,
+        "changes": 68,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/cooling/core_transport_validation.md",
+        "status": "added",
+        "additions": 53,
+        "deletions": 0,
+        "changes": 53,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/cooling/native_core.md",
+        "status": "added",
+        "additions": 13,
+        "deletions": 0,
+        "changes": 13,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/cooling/native_core_results.json",
+        "status": "added",
+        "additions": 124,
+        "deletions": 0,
+        "changes": 124,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/devlog/2026-06-02c-phase-transitions.md",
+        "status": "modified",
+        "additions": 17,
+        "deletions": 0,
+        "changes": 17,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/devlog/2026-10-11-cmf-headerless-reader.md",
+        "status": "added",
+        "additions": 60,
+        "deletions": 0,
+        "changes": 60,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/devlog/2026-10-12-tov-jump-ts.md",
+        "status": "added",
+        "additions": 348,
+        "deletions": 0,
+        "changes": 348,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/devlog/2026-10-14-gmsun-iau.md",
+        "status": "added",
+        "additions": 106,
+        "deletions": 0,
+        "changes": 106,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/devlog/2026-10-14-tidal-cs2.md",
+        "status": "added",
+        "additions": 432,
+        "deletions": 0,
+        "changes": 432,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/muses-integration.md",
+        "status": "modified",
+        "additions": 64,
+        "deletions": 3,
+        "changes": 67,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/physics.rst",
+        "status": "modified",
+        "additions": 114,
+        "deletions": 6,
+        "changes": 120,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/roadmap.md",
+        "status": "modified",
+        "additions": 9,
+        "deletions": 1,
+        "changes": 10,
+        "previous_filename": null
+      },
+      {
+        "filename": "examples/core_conduct_validation.py",
+        "status": "added",
+        "additions": 100,
+        "deletions": 0,
+        "changes": 100,
+        "previous_filename": null
+      },
+      {
+        "filename": "examples/native_core_sensitivity.py",
+        "status": "added",
+        "additions": 59,
+        "deletions": 0,
+        "changes": 59,
+        "previous_filename": null
+      },
+      {
+        "filename": "refmatrix.csv",
+        "status": "modified",
+        "additions": 58,
+        "deletions": 48,
+        "changes": 106,
+        "previous_filename": null
+      },
+      {
+        "filename": "scripts/reference_matrix.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 1,
+        "changes": 4,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/constants.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 3,
+        "changes": 14,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/README.md",
+        "status": "modified",
+        "additions": 12,
+        "deletions": 6,
+        "changes": 18,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/__init__.py",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 4,
+        "changes": 9,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/isothermal.py",
+        "status": "modified",
+        "additions": 14,
+        "deletions": 3,
+        "changes": 17,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/nscool_isothermal_tail.f",
+        "status": "modified",
+        "additions": 52,
+        "deletions": 0,
+        "changes": 52,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/README.md",
+        "status": "added",
+        "additions": 121,
+        "deletions": 0,
+        "changes": 121,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/__init__.py",
+        "status": "added",
+        "additions": 18,
+        "deletions": 0,
+        "changes": 18,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/_spline.py",
+        "status": "added",
+        "additions": 71,
+        "deletions": 0,
+        "changes": 71,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/blanket.py",
+        "status": "added",
+        "additions": 66,
+        "deletions": 0,
+        "changes": 66,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/conduct.py",
+        "status": "added",
+        "additions": 196,
+        "deletions": 0,
+        "changes": 196,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/core_conduct.py",
+        "status": "added",
+        "additions": 68,
+        "deletions": 0,
+        "changes": 68,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/core_nu.py",
+        "status": "added",
+        "additions": 268,
+        "deletions": 0,
+        "changes": 268,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/crust.py",
+        "status": "added",
+        "additions": 113,
+        "deletions": 0,
+        "changes": 113,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/crust_nu.py",
+        "status": "added",
+        "additions": 93,
+        "deletions": 0,
+        "changes": 93,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/curve.py",
+        "status": "added",
+        "additions": 42,
+        "deletions": 0,
+        "changes": 42,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/envelope.py",
+        "status": "added",
+        "additions": 37,
+        "deletions": 0,
+        "changes": 37,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/gaps.py",
+        "status": "added",
+        "additions": 164,
+        "deletions": 0,
+        "changes": 164,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/geometry.py",
+        "status": "added",
+        "additions": 131,
+        "deletions": 0,
+        "changes": 131,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/heat.py",
+        "status": "added",
+        "additions": 125,
+        "deletions": 0,
+        "changes": 125,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/native.py",
+        "status": "added",
+        "additions": 138,
+        "deletions": 0,
+        "changes": 138,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/reference.py",
+        "status": "added",
+        "additions": 53,
+        "deletions": 0,
+        "changes": 53,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/star.py",
+        "status": "added",
+        "additions": 225,
+        "deletions": 0,
+        "changes": 225,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/superfluid.py",
+        "status": "added",
+        "additions": 41,
+        "deletions": 0,
+        "changes": 41,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/physics/whole.py",
+        "status": "added",
+        "additions": 136,
+        "deletions": 0,
+        "changes": 136,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/cooling/runner.py",
+        "status": "modified",
+        "additions": 99,
+        "deletions": 0,
+        "changes": 99,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/eos/base.py",
+        "status": "modified",
+        "additions": 237,
+        "deletions": 39,
+        "changes": 276,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/eos/compose.py",
+        "status": "modified",
+        "additions": 58,
+        "deletions": 8,
+        "changes": 66,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/eos/hybrid.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 6,
+        "changes": 17,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/eos/leptons.py",
+        "status": "modified",
+        "additions": 15,
+        "deletions": 7,
+        "changes": 22,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/inference/fisher.py",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 1,
+        "changes": 6,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/postmerger.py",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 2,
+        "changes": 9,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/reference/scipy_tov.py",
+        "status": "modified",
+        "additions": 100,
+        "deletions": 16,
+        "changes": 116,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/tov/__init__.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2,
+        "changes": 4,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/tov/family.py",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 2,
+        "changes": 12,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/tov/phase_transition.py",
+        "status": "modified",
+        "additions": 19,
+        "deletions": 17,
+        "changes": 36,
+        "previous_filename": null
+      },
+      {
+        "filename": "src/nmbackend/tov/solver.py",
+        "status": "modified",
+        "additions": 307,
+        "deletions": 22,
+        "changes": 329,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/conftest.py",
+        "status": "modified",
+        "additions": 39,
+        "deletions": 0,
+        "changes": 39,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/nscool_core_conduct_probe.f",
+        "status": "added",
+        "additions": 10,
+        "deletions": 0,
+        "changes": 10,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/nscool_probe.f",
+        "status": "added",
+        "additions": 25,
+        "deletions": 0,
+        "changes": 25,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_ad_gradients.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 9,
+        "changes": 20,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_compose.py",
+        "status": "modified",
+        "additions": 129,
+        "deletions": 0,
+        "changes": 129,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_core_conduct.py",
+        "status": "added",
+        "additions": 73,
+        "deletions": 0,
+        "changes": 73,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_crust_chemistry.py",
+        "status": "added",
+        "additions": 73,
+        "deletions": 0,
+        "changes": 73,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_dump.py",
+        "status": "added",
+        "additions": 95,
+        "deletions": 0,
+        "changes": 95,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_geometry.py",
+        "status": "added",
+        "additions": 177,
+        "deletions": 0,
+        "changes": 177,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_isothermal.py",
+        "status": "modified",
+        "additions": 20,
+        "deletions": 3,
+        "changes": 23,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_native.py",
+        "status": "added",
+        "additions": 67,
+        "deletions": 0,
+        "changes": 67,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_native_blanket.py",
+        "status": "added",
+        "additions": 92,
+        "deletions": 0,
+        "changes": 92,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_nscool.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 2,
+        "changes": 8,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_physics_core.py",
+        "status": "added",
+        "additions": 134,
+        "deletions": 0,
+        "changes": 134,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_physics_crust.py",
+        "status": "added",
+        "additions": 115,
+        "deletions": 0,
+        "changes": 115,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_physics_gaps.py",
+        "status": "added",
+        "additions": 90,
+        "deletions": 0,
+        "changes": 90,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_physics_star.py",
+        "status": "added",
+        "additions": 179,
+        "deletions": 0,
+        "changes": 179,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_cooling_whole.py",
+        "status": "added",
+        "additions": 57,
+        "deletions": 0,
+        "changes": 57,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_ejecta.py",
+        "status": "modified",
+        "additions": 12,
+        "deletions": 6,
+        "changes": 18,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_lepton_derivatives.py",
+        "status": "added",
+        "additions": 30,
+        "deletions": 0,
+        "changes": 30,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_phase_transition.py",
+        "status": "modified",
+        "additions": 53,
+        "deletions": 0,
+        "changes": 53,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_reference_surface.py",
+        "status": "added",
+        "additions": 23,
+        "deletions": 0,
+        "changes": 23,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_tidal_cs2_consistency.py",
+        "status": "added",
+        "additions": 174,
+        "deletions": 0,
+        "changes": 174,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_tov_jump_ts.py",
+        "status": "added",
+        "additions": 141,
+        "deletions": 0,
+        "changes": 141,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_tov_profile.py",
+        "status": "added",
+        "additions": 44,
+        "deletions": 0,
+        "changes": 44,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/test_units.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 0,
+        "changes": 11,
+        "previous_filename": null
+      }
+    ]
+  },
+  "isError": false
+}

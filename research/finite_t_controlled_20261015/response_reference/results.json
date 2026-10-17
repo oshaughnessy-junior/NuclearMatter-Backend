@@ -1,0 +1,804 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-15T11:35:34.726332+00:00",
+  "model": "common-mass NR spin2 scalar density-transition response; not physical full weak tensor",
+  "environment": {
+    "python": "3.13.4",
+    "numpy": "2.3.5",
+    "scipy": "1.15.3"
+  },
+  "sources_sha256": {
+    "check_response.py": "944c5a6b4e132840701b599a443f54e99ca6ed57543563bbeb359786548c8fb0",
+    "free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2"
+  },
+  "checks": [
+    {
+      "name": "phase_space_state0_q10_w0",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state0_q10_w0",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state0_q40_w-8",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state0_q40_w-8",
+      "error": 8.881784197001252e-16,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state0_q100_w12",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state0_q100_w12",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state0_q75_w-26.293000000000006",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state0_q75_w-26.293000000000006",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state0_q75_w-26.292999970000007",
+      "error": 4.618527782440651e-14,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state0_q75_w-26.292999970000007",
+      "error": 7.105427357601002e-15,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state0_q75_w-26.293000030000005",
+      "error": 4.263256414560601e-14,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state0_q75_w-26.293000030000005",
+      "error": 7.105427357601002e-15,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state1_q10_w0",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state1_q10_w0",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state1_q40_w-8",
+      "error": 3.552713678800501e-15,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state1_q40_w-8",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state1_q100_w12",
+      "error": 1.7763568394002505e-15,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state1_q100_w12",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state1_q75_w-1",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state1_q75_w-1",
+      "error": 1.7763568394002505e-15,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state1_q75_w-0.99999992",
+      "error": 1.7763568394002505e-14,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state1_q75_w-0.99999992",
+      "error": 7.105427357601002e-15,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state1_q75_w-1.00000008",
+      "error": 1.9539925233402755e-14,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state1_q75_w-1.00000008",
+      "error": 5.329070518200751e-15,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state2_q10_w0",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state2_q10_w0",
+      "error": 5.684341886080802e-14,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state2_q40_w-8",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state2_q40_w-8",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state2_q100_w12",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state2_q100_w12",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state2_q75_w-26.293000000000006",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state2_q75_w-26.293000000000006",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state2_q75_w-26.292999999000006",
+      "error": 2.8421709430404007e-13,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state2_q75_w-26.292999999000006",
+      "error": 5.684341886080802e-14,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state2_q75_w-26.293000001000006",
+      "error": 3.979039320256561e-13,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state2_q75_w-26.293000001000006",
+      "error": 5.684341886080802e-14,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state3_q10_w0",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state3_q10_w0",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state3_q40_w-8",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state3_q40_w-8",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state3_q100_w12",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state3_q100_w12",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state3_q75_w20",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state3_q75_w20",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state3_q75_w20.00000001",
+      "error": 1.1368683772161603e-13,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state3_q75_w20.00000001",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "phase_space_state3_q75_w19.99999999",
+      "error": 1.1368683772161603e-13,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "KMS_state3_q75_w19.99999999",
+      "error": 0.0,
+      "gate": 3e-09,
+      "pass": true
+    },
+    {
+      "name": "MB_limit_q40_w0",
+      "error": 3.745981302927248e-11,
+      "gate": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "MB_limit_q80_w7",
+      "error": 9.852136884092033e-10,
+      "gate": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "MB_limit_q120_w-4",
+      "error": 5.7138294096148456e-11,
+      "gate": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "cold_allowed_q100_w5",
+      "error": 1.5543122344752192e-15,
+      "gate": 2e-10,
+      "pass": true
+    },
+    {
+      "name": "cold_allowed_q200_w8",
+      "error": 9.992007221626409e-16,
+      "gate": 2e-10,
+      "pass": true
+    },
+    {
+      "name": "cold_allowed_q150_w1",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-10,
+      "pass": true
+    },
+    {
+      "name": "cold_forbidden_w-100",
+      "error": 0.0,
+      "gate": 1e-100,
+      "pass": true
+    },
+    {
+      "name": "finite_T_tail_w-100",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    },
+    {
+      "name": "cold_forbidden_w100",
+      "error": 0.0,
+      "gate": 1e-100,
+      "pass": true
+    },
+    {
+      "name": "finite_T_tail_w100",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    },
+    {
+      "name": "static_sum_q30",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "neutral_f_sum_q30",
+      "error": 1.1102230246251565e-15,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "static_sum_q100",
+      "error": 4.440892098500626e-16,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "neutral_f_sum_q100",
+      "error": 4.440892098500626e-16,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "CC_static_sum_state0",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "CC_angular_refinement_state0",
+      "error": 4.440892098500626e-16,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "CC_static_sum_state1",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "CC_angular_refinement_state1",
+      "error": 0.0,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "common_energy_zero_invariance",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-12,
+      "pass": true
+    },
+    {
+      "name": "invalid_transfer_q0_w0",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    },
+    {
+      "name": "invalid_transfer_q-1_w0",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    },
+    {
+      "name": "invalid_transfer_qinf_w0",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    },
+    {
+      "name": "invalid_transfer_q1_wnan",
+      "error": 0.0,
+      "gate": 0.5,
+      "pass": true
+    }
+  ],
+  "phase_space_samples": [
+    {
+      "state": {
+        "T": 3,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 10,
+      "omega_MeV": 0,
+      "log_S": -2.522243336160935,
+      "log_S_independent": -2.522243336160936,
+      "independent_relative_error_estimate": 5.516394207340583e-14
+    },
+    {
+      "state": {
+        "T": 3,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 40,
+      "omega_MeV": -8,
+      "log_S": -4.449990830827768,
+      "log_S_independent": -4.449990830827769,
+      "independent_relative_error_estimate": 7.3777991623362e-14
+    },
+    {
+      "state": {
+        "T": 3,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 100,
+      "omega_MeV": 12,
+      "log_S": -4.62086085758372,
+      "log_S_independent": -4.62086085758372,
+      "independent_relative_error_estimate": 4.128226785437878e-13
+    },
+    {
+      "state": {
+        "T": 3,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 75,
+      "omega_MeV": -26.293000000000006,
+      "log_S": -18.333724868105165,
+      "log_S_independent": -18.333724868105165,
+      "independent_relative_error_estimate": 3.532841513928069e-13
+    },
+    {
+      "state": {
+        "T": 3,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 75,
+      "omega_MeV": -26.292999970000007,
+      "log_S": -18.333724821372144,
+      "log_S_independent": -18.333724821372098,
+      "independent_relative_error_estimate": 3.5343174737350873e-13
+    },
+    {
+      "state": {
+        "T": 3,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 75,
+      "omega_MeV": -26.293000030000005,
+      "log_S": -18.333724914838186,
+      "log_S_independent": -18.33372491483823,
+      "independent_relative_error_estimate": 3.5332785764438154e-13
+    },
+    {
+      "state": {
+        "T": 8,
+        "mass": 800,
+        "offset_a": 700,
+        "offset_b": 715,
+        "mu_a": 684,
+        "mu_b": 683
+      },
+      "q_MeV": 10,
+      "omega_MeV": 0,
+      "log_S": -119.29268956216399,
+      "log_S_independent": -119.29268956216399,
+      "independent_relative_error_estimate": 3.5341957402890887e-13
+    },
+    {
+      "state": {
+        "T": 8,
+        "mass": 800,
+        "offset_a": 700,
+        "offset_b": 715,
+        "mu_a": 684,
+        "mu_b": 683
+      },
+      "q_MeV": 40,
+      "omega_MeV": -8,
+      "log_S": -25.23953080178667,
+      "log_S_independent": -25.239530801786675,
+      "independent_relative_error_estimate": 3.5332725401290887e-13
+    },
+    {
+      "state": {
+        "T": 8,
+        "mass": 800,
+        "offset_a": 700,
+        "offset_b": 715,
+        "mu_a": 684,
+        "mu_b": 683
+      },
+      "q_MeV": 100,
+      "omega_MeV": 12,
+      "log_S": -8.634711114043306,
+      "log_S_independent": -8.634711114043304,
+      "independent_relative_error_estimate": 6.59546908591256e-13
+    },
+    {
+      "state": {
+        "T": 8,
+        "mass": 800,
+        "offset_a": 700,
+        "offset_b": 715,
+        "mu_a": 684,
+        "mu_b": 683
+      },
+      "q_MeV": 75,
+      "omega_MeV": -1,
+      "log_S": -11.258130745331838,
+      "log_S_independent": -11.258130745331838,
+      "independent_relative_error_estimate": 3.6972639573292e-13
+    },
+    {
+      "state": {
+        "T": 8,
+        "mass": 800,
+        "offset_a": 700,
+        "offset_b": 715,
+        "mu_a": 684,
+        "mu_b": 683
+      },
+      "q_MeV": 75,
+      "omega_MeV": -0.99999992,
+      "log_S": -11.258130717680093,
+      "log_S_independent": -11.25813071768011,
+      "independent_relative_error_estimate": 3.6966571109942714e-13
+    },
+    {
+      "state": {
+        "T": 8,
+        "mass": 800,
+        "offset_a": 700,
+        "offset_b": 715,
+        "mu_a": 684,
+        "mu_b": 683
+      },
+      "q_MeV": 75,
+      "omega_MeV": -1.00000008,
+      "log_S": -11.258130772983582,
+      "log_S_independent": -11.258130772983563,
+      "independent_relative_error_estimate": 3.6969672712334336e-13
+    },
+    {
+      "state": {
+        "T": 0.1,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 10,
+      "omega_MeV": 0,
+      "log_S": -2.486218220797282,
+      "log_S_independent": -2.4862182207972827,
+      "independent_relative_error_estimate": 1.7140584117261405e-14
+    },
+    {
+      "state": {
+        "T": 0.1,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 40,
+      "omega_MeV": -8,
+      "log_S": -4.415808865172383,
+      "log_S_independent": -4.415808865172383,
+      "independent_relative_error_estimate": 2.266739080761195e-14
+    },
+    {
+      "state": {
+        "T": 0.1,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 100,
+      "omega_MeV": 12,
+      "log_S": -4.618313363356919,
+      "log_S_independent": -4.618313363356919,
+      "independent_relative_error_estimate": 1.1504926957566596e-14
+    },
+    {
+      "state": {
+        "T": 0.1,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 75,
+      "omega_MeV": -26.293000000000006,
+      "log_S": -364.0844444252952,
+      "log_S_independent": -364.0844444252952,
+      "independent_relative_error_estimate": 3.5346030876093564e-13
+    },
+    {
+      "state": {
+        "T": 0.1,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 75,
+      "omega_MeV": -26.292999999000006,
+      "log_S": -364.08444437856195,
+      "log_S_independent": -364.08444437856224,
+      "independent_relative_error_estimate": 3.5346030876093564e-13
+    },
+    {
+      "state": {
+        "T": 0.1,
+        "mass": 939,
+        "offset_a": 939.565,
+        "offset_b": 938.272,
+        "mu_a": 969.565,
+        "mu_b": 943.272
+      },
+      "q_MeV": 75,
+      "omega_MeV": -26.293000001000006,
+      "log_S": -364.08444447202845,
+      "log_S_independent": -364.08444447202805,
+      "independent_relative_error_estimate": 3.535174051830799e-13
+    },
+    {
+      "state": {
+        "T": 1,
+        "mass": 939,
+        "offset_a": 0,
+        "offset_b": 10,
+        "mu_a": -700,
+        "mu_b": -680
+      },
+      "q_MeV": 10,
+      "omega_MeV": 0,
+      "log_S": -1180.125582509842,
+      "log_S_independent": -1180.125582509842,
+      "independent_relative_error_estimate": 3.532337812928242e-13
+    },
+    {
+      "state": {
+        "T": 1,
+        "mass": 939,
+        "offset_a": 0,
+        "offset_b": 10,
+        "mu_a": -700,
+        "mu_b": -680
+      },
+      "q_MeV": 40,
+      "omega_MeV": -8,
+      "log_S": -811.285307382144,
+      "log_S_independent": -811.285307382144,
+      "independent_relative_error_estimate": 3.530395419931159e-13
+    },
+    {
+      "state": {
+        "T": 1,
+        "mass": 939,
+        "offset_a": 0,
+        "offset_b": 10,
+        "mu_a": -700,
+        "mu_b": -680
+      },
+      "q_MeV": 100,
+      "omega_MeV": 12,
+      "log_S": -708.4338589766379,
+      "log_S_independent": -708.4338589766379,
+      "independent_relative_error_estimate": 3.5324245460390495e-13
+    },
+    {
+      "state": {
+        "T": 1,
+        "mass": 939,
+        "offset_a": 0,
+        "offset_b": 10,
+        "mu_a": -700,
+        "mu_b": -680
+      },
+      "q_MeV": 75,
+      "omega_MeV": 20,
+      "log_S": -711.722642079905,
+      "log_S_independent": -711.722642079905,
+      "independent_relative_error_estimate": 3.533963447893277e-13
+    },
+    {
+      "state": {
+        "T": 1,
+        "mass": 939,
+        "offset_a": 0,
+        "offset_b": 10,
+        "mu_a": -700,
+        "mu_b": -680
+      },
+      "q_MeV": 75,
+      "omega_MeV": 20.00000001,
+      "log_S": -711.7226420915983,
+      "log_S_independent": -711.7226420915982,
+      "independent_relative_error_estimate": 3.530644195623016e-13
+    },
+    {
+      "state": {
+        "T": 1,
+        "mass": 939,
+        "offset_a": 0,
+        "offset_b": 10,
+        "mu_a": -700,
+        "mu_b": -680
+      },
+      "q_MeV": 75,
+      "omega_MeV": 19.99999999,
+      "log_S": -711.7226420682117,
+      "log_S_independent": -711.7226420682116,
+      "independent_relative_error_estimate": 3.534725534268986e-13
+    }
+  ]
+}

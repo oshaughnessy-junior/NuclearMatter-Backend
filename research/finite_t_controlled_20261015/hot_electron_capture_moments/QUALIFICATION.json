@@ -1,0 +1,214 @@
+{
+  "status": "Author frozen for different independent review; not yet accepted joined source",
+  "selected_reference": {
+    "file": "results.json",
+    "rule_index": 2,
+    "controls": {
+      "proton_order": 28,
+      "electron_order": 48,
+      "initial_order": 12,
+      "outgoing_order": 12,
+      "phi_order": 12,
+      "tail": 60.0,
+      "proton_kinetic_max": 120.0,
+      "electron_total_max": 121.29333236000002,
+      "amplitude": "scalar"
+    }
+  },
+  "selected_forward_and_refinement_gates_pass": true,
+  "selected_tail_gates_pass": true,
+  "passing_assertions": 213,
+  "retained_coarse_failures": [
+    {
+      "name": "proton phase density (12, 20, 6, 40.0)",
+      "error": 1.1230576498544309e-05,
+      "tolerance": 3e-08,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'empty', 'forward', 'number')",
+      "error": 1.0416041229754924e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'empty', 'forward', 'neutrino_energy')",
+      "error": 9.747920241887087e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'empty', 'forward', 'electron_energy')",
+      "error": 1.0472815263673496e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'empty', 'forward', 'proton_energy')",
+      "error": 1.0257877826713724e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'empty', 'forward', 'neutron_energy')",
+      "error": 1.0265516061869207e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'empty', 'forward', 'material_energy_loss')",
+      "error": 9.747920243663444e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'forward', 'number')",
+      "error": 1.037431812456191e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'forward', 'neutrino_energy')",
+      "error": 9.721902915593716e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'forward', 'electron_energy')",
+      "error": 1.0448096738668866e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'forward', 'proton_energy')",
+      "error": 1.0216150200248464e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'forward', 'neutron_energy')",
+      "error": 1.022385880777854e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'forward', 'material_energy_loss')",
+      "error": 9.72190291381736e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'backward', 'number')",
+      "error": 1.037431812989098e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'backward', 'neutrino_energy')",
+      "error": 9.721902915593716e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'backward', 'electron_energy')",
+      "error": 1.0448096738668866e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'backward', 'proton_energy')",
+      "error": 1.0216150203579133e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'backward', 'neutron_energy')",
+      "error": 1.0223858813107611e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'LTE', 'backward', 'material_energy_loss')",
+      "error": 9.72190291381736e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'forward', 'number')",
+      "error": 1.0395562416665172e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'forward', 'neutrino_energy')",
+      "error": 9.735291504275878e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'forward', 'electron_energy')",
+      "error": 1.0460948061563613e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'forward', 'proton_energy')",
+      "error": 1.0237395517309622e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'forward', 'neutron_energy')",
+      "error": 1.0245072205483652e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'forward', 'material_energy_loss')",
+      "error": 9.735291507828592e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'backward', 'number')",
+      "error": 1.0395562421772198e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'backward', 'neutrino_energy')",
+      "error": 9.735291504275878e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'backward', 'electron_energy')",
+      "error": 1.0460948059787256e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'backward', 'proton_energy')",
+      "error": 1.0237395520640291e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'backward', 'neutron_energy')",
+      "error": 1.0245072209036366e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "completed rule refinement (2, 'noneq', 'backward', 'material_energy_loss')",
+      "error": 9.735291506052235e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    }
+  ],
+  "no_join_performed": true,
+  "state_and_full_treecurrent_compatible": true,
+  "broader_domain_qualified": false,
+  "standalone_opacity_qualified": false,
+  "full_inventory_qualified": false
+}

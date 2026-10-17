@@ -1,0 +1,26 @@
+{
+  "source_paths_unchanged": 45,
+  "changed": [],
+  "saved_rows": [
+    {
+      "source": "external_gm1_forward/results.json",
+      "path": "rows[0].internal",
+      "exact_saved_payload": true,
+      "external_code_executed": false
+    },
+    {
+      "source": "external_gm1_forward/results.json",
+      "path": "rows[1].internal",
+      "exact_saved_payload": true,
+      "external_code_executed": false
+    },
+    {
+      "source": "review_external_gm1_forward/results.json",
+      "path": "internal",
+      "exact_saved_payload": true,
+      "external_code_executed": false
+    }
+  ],
+  "no_new_physics_executed": true,
+  "cold_snapshot_equal": true
+}

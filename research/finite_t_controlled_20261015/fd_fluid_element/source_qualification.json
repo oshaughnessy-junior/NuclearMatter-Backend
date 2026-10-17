@@ -1,0 +1,750 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "uT FD T2.0Y0.3photonsFalseh0.0001",
+      "error": 1.167177465788427e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.0Y0.3photonsFalseh0.0001",
+      "error": 3.947448923291574e-09,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.0Y0.3photonsFalseh5e-05",
+      "error": 2.8063551482659932e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.0Y0.3photonsFalseh5e-05",
+      "error": 9.898836195176841e-10,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "energy inverse photonsFalseT2.0Y0.3",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.2Y0.28photonsFalseh0.0001",
+      "error": 1.967470630859225e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.2Y0.28photonsFalseh0.0001",
+      "error": 4.410106391183888e-09,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.2Y0.28photonsFalseh5e-05",
+      "error": 1.4738432696503878e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.2Y0.28photonsFalseh5e-05",
+      "error": 1.1018681522756424e-09,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "energy inverse photonsFalseT2.2Y0.28",
+      "error": 7.771561172376096e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.0Y0.3photonsTrueh0.0001",
+      "error": 2.394151543683165e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.0Y0.3photonsTrueh0.0001",
+      "error": 3.947448923291574e-09,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.0Y0.3photonsTrueh5e-05",
+      "error": 2.8833380127935015e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.0Y0.3photonsTrueh5e-05",
+      "error": 9.889151719733036e-10,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "energy inverse photonsTrueT2.0Y0.3",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "nue outer6->10 number_fm3_s",
+      "error": 8.112980909302792e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "nue new100MeV panels versus accepted320MeV number_fm3_s",
+      "error": 1.2896350654045818e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "nue outer6->10 energy_MeV_fm3_s",
+      "error": 1.0376419656843439e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "nue new100MeV panels versus accepted320MeV energy_MeV_fm3_s",
+      "error": 1.5345502646368914e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "antinue outer6->10 number_fm3_s",
+      "error": 8.458953497658683e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "antinue new100MeV panels versus accepted320MeV number_fm3_s",
+      "error": 1.8515182720335588e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "antinue outer6->10 energy_MeV_fm3_s",
+      "error": 1.3902007045540898e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "antinue new100MeV panels versus accepted320MeV energy_MeV_fm3_s",
+      "error": 2.7646898104194406e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "initial heating sign",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "coarse_source": {
+    "T": 2.0,
+    "nB": 0.0001,
+    "Ye": 0.3,
+    "outer_order": 6,
+    "internal_order": 48,
+    "tail": 40.0,
+    "edges": [
+      0.0,
+      0.1,
+      0.5,
+      0.78233341,
+      1.80433131,
+      4.0,
+      8.0,
+      16.0,
+      24.0,
+      40.0,
+      64.0,
+      100.0
+    ],
+    "moments": {
+      "nue": {
+        "number_fm3_s": 0.2596362099079473,
+        "energy_MeV_fm3_s": 4.357622709329079
+      },
+      "antinue": {
+        "number_fm3_s": 1.4075342073156516e-07,
+        "energy_MeV_fm3_s": 1.5012974487202963e-06
+      }
+    },
+    "panels": [
+      {
+        "flavor": "nue",
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          3.2106234767149226e-10,
+          2.426896569186104e-11
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.1,
+        "hi": 0.5,
+        "values": [
+          6.115344960090684e-08,
+          2.373629456266246e-08
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.5,
+        "hi": 0.78233341,
+        "values": [
+          2.4203210342906735e-07,
+          1.6173057943831527e-07
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.78233341,
+        "hi": 1.80433131,
+        "values": [
+          7.322859573574702e-06,
+          1.0801970651508304e-05
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 1.80433131,
+        "hi": 4.0,
+        "values": [
+          0.00021823711295347012,
+          0.0007236702584950871
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 4.0,
+        "hi": 8.0,
+        "values": [
+          0.0051082503291998895,
+          0.03433686037603873
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 8.0,
+        "hi": 16.0,
+        "values": [
+          0.1098088925454764,
+          1.4479196506667658
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 16.0,
+        "hi": 24.0,
+        "values": [
+          0.12889272615822014,
+          2.457301720124671
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 24.0,
+        "hi": 40.0,
+        "values": [
+          0.01556772760011518,
+          0.41594077746709424
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 40.0,
+        "hi": 64.0,
+        "values": [
+          3.2748682371865046e-05,
+          0.001388969197459504
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 64.0,
+        "hi": 100.0,
+        "values": [
+          1.1134214230911932e-09,
+          7.377675979705092e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          1.1578334789231596e-13,
+          8.581870002611127e-15
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.1,
+        "hi": 0.5,
+        "values": [
+          6.536721020474856e-12,
+          2.2778959245323322e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.5,
+        "hi": 0.78233341,
+        "values": [
+          5.409602285529048e-12,
+          3.3406679527429977e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.78233341,
+        "hi": 1.80433131,
+        "values": [
+          1.546571752232055e-12,
+          2.58617589118222e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 1.80433131,
+        "hi": 4.0,
+        "values": [
+          3.4252849057513122e-09,
+          1.1606276083487702e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 4.0,
+        "hi": 8.0,
+        "values": [
+          3.941104119831512e-08,
+          2.4982594006639314e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 8.0,
+        "hi": 16.0,
+        "values": [
+          8.121581624379442e-08,
+          9.190523059110933e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 16.0,
+        "hi": 24.0,
+        "values": [
+          1.5388974926397904e-08,
+          2.860438582419882e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 24.0,
+        "hi": 40.0,
+        "values": [
+          1.2958182760683574e-09,
+          3.463880665632399e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 40.0,
+        "hi": 64.0,
+        "values": [
+          2.876400362274071e-12,
+          1.2204164900723738e-10
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 64.0,
+        "hi": 100.0,
+        "values": [
+          1.0246962827683023e-16,
+          6.7903642483546414e-15
+        ]
+      }
+    ],
+    "dYe_dt": -2596.360691545265,
+    "energy_loss_MeV_per_baryon_s": 43576.24210626528,
+    "dT_dt_no_photons": 2263.8601455248954,
+    "runtime_seconds": 13.845127000007778
+  },
+  "fine_source": {
+    "T": 2.0,
+    "nB": 0.0001,
+    "Ye": 0.3,
+    "outer_order": 10,
+    "internal_order": 48,
+    "tail": 40.0,
+    "edges": [
+      0.0,
+      0.1,
+      0.5,
+      0.78233341,
+      1.80433131,
+      4.0,
+      8.0,
+      16.0,
+      24.0,
+      40.0,
+      64.0,
+      100.0
+    ],
+    "moments": {
+      "nue": {
+        "number_fm3_s": 0.25963623097218513,
+        "energy_MeV_fm3_s": 4.357623161494345
+      },
+      "antinue": {
+        "number_fm3_s": 1.4075353979432993e-07,
+        "energy_MeV_fm3_s": 1.5012976574308024e-06
+      }
+    },
+    "panels": [
+      {
+        "flavor": "nue",
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          3.21062347671492e-10,
+          2.4268965691861013e-11
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.1,
+        "hi": 0.5,
+        "values": [
+          6.115344960090653e-08,
+          2.3736294562662685e-08
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.5,
+        "hi": 0.78233341,
+        "values": [
+          2.420321034290673e-07,
+          1.6173057943831524e-07
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.78233341,
+        "hi": 1.80433131,
+        "values": [
+          7.3228595735746776e-06,
+          1.080197065150832e-05
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 1.80433131,
+        "hi": 4.0,
+        "values": [
+          0.0002182371129534693,
+          0.0007236702584950799
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 4.0,
+        "hi": 8.0,
+        "values": [
+          0.005108250329220961,
+          0.034336860376294354
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 8.0,
+        "hi": 16.0,
+        "values": [
+          0.10980890725374572,
+          1.4479199173020825
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 16.0,
+        "hi": 24.0,
+        "values": [
+          0.12889274005835052,
+          2.4573018426110447
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 24.0,
+        "hi": 40.0,
+        "values": [
+          0.0155677197840422,
+          0.4159408367535246
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 40.0,
+        "hi": 64.0,
+        "values": [
+          3.2748953428157414e-05,
+          0.0013889729131914862
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 64.0,
+        "hi": 100.0,
+        "values": [
+          1.1142552100873416e-09,
+          7.38179186592686e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          1.1578334789231578e-13,
+          8.581870002611108e-15
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.1,
+        "hi": 0.5,
+        "values": [
+          6.536721018223661e-12,
+          2.277895922707154e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.5,
+        "hi": 0.78233341,
+        "values": [
+          5.409695749581032e-12,
+          3.3407056931611346e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.78233341,
+        "hi": 1.80433131,
+        "values": [
+          1.530225653874816e-12,
+          2.5527024769617707e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 1.80433131,
+        "hi": 4.0,
+        "values": [
+          3.4254203515529738e-09,
+          1.160651655069428e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 4.0,
+        "hi": 8.0,
+        "values": [
+          3.941104119985236e-08,
+          2.4982594005538907e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 8.0,
+        "hi": 16.0,
+        "values": [
+          8.121581616413086e-08,
+          9.190523069785382e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 16.0,
+        "hi": 24.0,
+        "values": [
+          1.538897492746229e-08,
+          2.8604385822745763e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 24.0,
+        "hi": 40.0,
+        "values": [
+          1.2958182021468272e-09,
+          3.463880703600346e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 40.0,
+        "hi": 64.0,
+        "values": [
+          2.876420870663399e-12,
+          1.2204190271199158e-10
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 64.0,
+        "hi": 100.0,
+        "values": [
+          1.0254436882805069e-16,
+          6.794045140608327e-15
+        ]
+      }
+    ],
+    "dYe_dt": -2596.3609021864536,
+    "energy_loss_MeV_per_baryon_s": 43576.24662792003,
+    "dT_dt_no_photons": 2263.8597776032625,
+    "runtime_seconds": 23.39148070779629
+  },
+  "runtime_seconds": 37.659634166862816,
+  "scope": "Initial physical source plus independent FD derivatives; no trajectory yet",
+  "qualification_schema": 1,
+  "qualification_fingerprint": {
+    "schema": 1,
+    "input_state": {
+      "T": 2.0,
+      "nB": 0.0001,
+      "Ye": 0.3,
+      "photons": false
+    },
+    "full_fd_state": {
+      "neutron": {
+        "T": 2.0,
+        "mass": 939.0,
+        "offset": 1.29333236,
+        "kinetic_mu": -5.874636391540794,
+        "density": 6.999999999999998e-05,
+        "kinetic_energy_density": 0.0002119300865803259,
+        "energy_density": 0.0003024633517803259,
+        "pressure": 0.00014128672438688393,
+        "entropy_density": 0.0003822206791875327,
+        "free_energy_density": -0.00046197800659473955,
+        "dn_dmu": 3.436855106301183e-05,
+        "dn_dT_fixed_mu": 0.00015345137039964865,
+        "dmu_dT_fixed_density": -4.464877501478271,
+        "cv_fixed_density": 0.00010451888112608101,
+        "fluctuation_A0": 6.873710212602366e-05,
+        "fluctuation_A1": 0.0006138054815985946,
+        "fluctuation_A2": 0.005899208094651524,
+        "fermi_momentum": 25.15896765850433,
+        "temperature_over_mass": 0.002129925452609159,
+        "fermi_momentum_over_mass": 0.026793362788609512
+      },
+      "proton": {
+        "T": 2.0,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": -7.590238400857696,
+        "density": 3.000000000000007e-05,
+        "kinetic_energy_density": 9.035470220136575e-05,
+        "energy_density": 9.035470220136575e-05,
+        "pressure": 6.023646813424383e-05,
+        "entropy_density": 0.0001891491611806705,
+        "free_energy_density": -0.00028794362015997527,
+        "dn_dmu": 1.4882714801847818e-05,
+        "dn_dT_fixed_mu": 7.898167669899932e-05,
+        "dmu_dT_fixed_density": -5.306940148392353,
+        "cv_fixed_density": 4.491143509334928e-05,
+        "fluctuation_A0": 2.9765429603695636e-05,
+        "fluctuation_A1": 0.0003159267067959973,
+        "fluctuation_A2": 0.0035328539888635113,
+        "fermi_momentum": 18.968539287580498,
+        "temperature_over_mass": 0.002129925452609159,
+        "fermi_momentum_over_mass": 0.02020078731371725
+      },
+      "electron": {
+        "temperature": 2.0,
+        "chemical_potential": 18.28197936800915,
+        "mass": 0.51099895069,
+        "net_density": 3.000000000000001e-05,
+        "particle_density": 3.000002225828937e-05,
+        "antiparticle_density": 2.2258289357924835e-11,
+        "energy_density": 0.00045737407237424606,
+        "pressure": 0.0001522593714676832,
+        "entropy_density": 3.05870314008278e-05,
+        "free_energy_density": 0.0003962000095725905,
+        "cv_fixed_net_density": 2.9388232710862543e-05,
+        "dn_dmu_fixed_temperature": 4.579258606359096e-06,
+        "dn_dtemperature_fixed_mu": 3.172507017374947e-06,
+        "dmu_dtemperature_fixed_net_density": -0.6927992695082497
+      }
+    },
+    "thermodynamic_closure": {
+      "u_MeV_per_baryon": 8.501921263559376,
+      "u_T": 1.7881854893029283,
+      "u_Y": 18.34276883153691
+    },
+    "source_sha256": {
+      "quantum_slab/fixed_bath.py": "8e73b2c7d41cce51f8a522b8ba4444599010783be2b8af892c50add7e684ecf3",
+      "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+      "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+      "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+      "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+      "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+      "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+      "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+      "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+      "element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+      "qualify_source.py": "115df9db7339a2357a1f2f885447cd7967e31e323b793899cbc93d2c5ada3ea8",
+      "short_evolution.py": "38734cbbecf01d371215721ec1673e524602dfda3289bd1a6658181590a5abd6",
+      "qualification_contract.py": "92cbb4eede20914741d7c7b51f85c95f130e47bd6aa509f8915206ff3f12a1ff"
+    },
+    "environment": {
+      "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+      "executable": "/Users/rossma/miniconda3/bin/python",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+    },
+    "controls": {
+      "coarse_order": 6,
+      "fine_order": 10,
+      "internal_order": 48,
+      "tail": 40.0,
+      "edges": [
+        0.0,
+        0.1,
+        0.5,
+        0.78233341,
+        1.80433131,
+        4.0,
+        8.0,
+        16.0,
+        24.0,
+        40.0,
+        64.0,
+        100.0
+      ],
+      "inventory": [
+        "electron_capture",
+        "positron_capture",
+        "crossed_neutron_decay"
+      ],
+      "radiation": "empty_one_helicity_each_species"
+    }
+  },
+  "qualification_fingerprint_sha256": "8c19eec698df072566138767c6e332c39f6e5a89aa5978751cc2e22d1e45d83a",
+  "qualified_payload_sha256": "61304d64c334b4b26f7e0b644c65cb2d20a5af224067127f202823974fdd64e2"
+}

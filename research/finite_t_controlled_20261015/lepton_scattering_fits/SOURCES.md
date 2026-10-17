@@ -1,0 +1,5 @@
+# Sources and conventions
+
+- [Guo et al., arXiv2006.12051v2](https://arxiv.org/html/2006.12051v2), leptonic scattering Eqs1–4,13 and AppendixA40–41: invariant massive-lepton scattering, target spin2 and FD target/holes. Electron flavor here uses its explicit standard CC+NC Fermi coupling, with the separately reviewed literal-current trace normalization.
+- Frozen campaign function `neutrino_lepton_scattering/scatter.py`, SHA8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064, and independently accepted `review_neutrino_lepton/REVIEW.md` provide the detailed model and prior crossing/normalization evidence. This fit does not expand that source's physical model, uncertainty or supported radiation closure.
+- All coefficient selection, Chebyshev formulas, blocked holdouts, failure gates and independent integrated phase references are local explicitly declared calculations. No external fit is substituted for detailed reference rates. Primitive/current sources are pinned in model.json/MANIFEST.json.

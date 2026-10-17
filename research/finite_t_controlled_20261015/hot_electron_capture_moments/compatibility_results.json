@@ -1,0 +1,39 @@
+{
+  "checks": [
+    {
+      "name": "exact common physical bath and EOS metadata",
+      "passed": true
+    },
+    {
+      "name": "same physical MNMPme bareweakavg and GF Vud",
+      "passed": true
+    },
+    {
+      "name": "full current identity [-2.4, 1.1, -0.7, 3.2]",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-13
+    },
+    {
+      "name": "full current identity [0.3, 2.1, 0.4, -1.7]",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-13
+    },
+    {
+      "name": "full current identity [-6.0, -4.0, 1.0, 3.0]",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-13
+    },
+    {
+      "name": "every previously frozen upstream hash unchanged",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": [],
+  "state_compatible_for_future_reviewed_join": true,
+  "join_performed": false,
+  "notes": "Shared fulltreecurrent and actualmatched bath only; radiation scenarios must also match before source sum."
+}

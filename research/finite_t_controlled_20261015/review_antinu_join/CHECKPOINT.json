@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN accepted selected integration contract; channel physics from distinct independent reviews",
+  "checks": 47,
+  "all_pass": true,
+  "join_source_sha256": "ef1f166ea0738d40c854dd65279c50f815e647d1a4ae46fe56798024d0b2546d",
+  "accepted_manifest_sha256": "9b4ff1874a6f8a1393f82ce7274af153cffc17d7a58c430cf7bd827a4f036c69",
+  "files": {
+    "postrepair.py": "5070b171497d73ef23de719ebe65e9914aa1e297b8ac3586d0f07353e745105e",
+    "first_repair_results.json": "8c5dd005dbf3dba72534dfdc552e92bcc7794dd6974c1d289d0bac0ae9724afb",
+    "final_build.py": "c26609bdee7c8043a085e57c472ea6889bf652b23cbb1b5f4b70d99cd9691f38",
+    "floor_probe.json": "1272c91d13a09e2dc54d2e39479494e6a0e1fc89b716334841474790260212c0",
+    "initial_results.json": "c5041c44ac5a1107e929c2699c4f424fd1e96235bd3502f29386206b6567a247",
+    "probe.py": "078f5663a295eea7c0a4696bb043f9a337c16e6e9a7cdac9810e6b22f9148b85",
+    "zero_reason_regression.json": "2b8dab77e4bbdd3c363f2f1e7a933039e0066fcb31eca72988236385dad57a88",
+    "postrepair_results.json": "299967226b58d472a96649669f1545048f67764146b4f57ee35e274ee2d9f942",
+    "REVIEW.md": "9f1b749459ac7a91f91f006de4e68b84fea405dff70a253415817b6b22eb176f",
+    "final_build_results.json": "5ced2c96e675926a2e2ae12de1938bfd6a95298b90be8131628c533323289b08"
+  },
+  "preserved_failed_adversaries": {
+    "initial_contract": 3,
+    "positive_log_floor": 1
+  },
+  "scope": "two named free electron antineutrino CC channels at matched T2 npe bath; no full inventory or evolution"
+}

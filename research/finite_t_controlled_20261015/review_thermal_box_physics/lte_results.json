@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "reconstructed LTE energy_MeV_per_baryon",
+      "error": -2.1316282072803006e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "reconstructed LTE electron_lepton_per_baryon",
+      "error": 7.771561172376096e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "LTE local constrained entropy maximum 0-1.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "LTE perturbation energy 0-1.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "LTE perturbation Le 0-1.0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "LTE local constrained entropy maximum 01.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "LTE perturbation energy 01.0",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "LTE perturbation Le 01.0",
+      "error": 5.551115123125783e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "LTE local constrained entropy maximum 1-1.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "LTE perturbation energy 1-1.0",
+      "error": -3.552713678800501e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "LTE perturbation Le 1-1.0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "LTE local constrained entropy maximum 11.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "LTE perturbation energy 11.0",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "LTE perturbation Le 11.0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "flavor": 0,
+      "delta_f": -0.004695596163705862,
+      "newT": 2.2045157771654864,
+      "newY": 0.24584557785134867,
+      "entropy_change": -2.3851341044434093e-06
+    },
+    {
+      "flavor": 0,
+      "delta_f": 0.004695596163705862,
+      "newT": 2.205084044485337,
+      "newY": 0.2457531105160086,
+      "entropy_change": -2.5393333782375294e-06
+    },
+    {
+      "flavor": 1,
+      "delta_f": -1.445292854999629e-05,
+      "newT": 2.204801827952018,
+      "newY": 0.24579920187759605,
+      "entropy_change": -7.366966592314839e-09
+    },
+    {
+      "flavor": 1,
+      "delta_f": 1.445292854999629e-05,
+      "newT": 2.2047980144923365,
+      "newY": 0.24579948648976122,
+      "entropy_change": -6.891179182844098e-09
+    }
+  ],
+  "runtime_seconds": 12.631764624966308,
+  "source_sha256": {
+    "review_thermal_box_physics/lte_probe.py": "d9fddb56a6b2e4a6aa597ace0d455f426e8a75b15bf0b95b3c854bcbdcf6888b",
+    "thermal_box/box.py": "ae356024fd688765f15342d5026f5e9534fcaec96ba713a4e55e25f0658c2710",
+    "thermal_box/results.json": "59e222870f467fce6d3fc37c07dcf93d208de0bfd6a82b43d2254e0e8a53fff5"
+  }
+}

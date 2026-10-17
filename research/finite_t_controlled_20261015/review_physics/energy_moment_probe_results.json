@@ -1,0 +1,137 @@
+{
+  "scope": "Independent serialized ledgers plus local EOS directional first law; no ODE or broad rate rerun",
+  "checks": [
+    {
+      "name": "dilute matched FD-EOS short-time empty-radiation energy closure",
+      "error": 8.50064672295394e-12,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "dilute nue independent four-boundary number ledger",
+      "error": 2.089228352951619e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "dilute nue independent four-boundary energy ledger",
+      "error": 2.920588410566164e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "dilute nue MeV-erg energy sign/conversion",
+      "error": 5.519461726365196e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "dilute nue matter electron-lepton sign",
+      "error": 2.089228352951619e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "dilute antinue independent four-boundary number ledger",
+      "error": 1.6689493807703398e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "dilute antinue independent four-boundary energy ledger",
+      "error": 1.7597936540573636e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "dilute antinue MeV-erg energy sign/conversion",
+      "error": 1.7957162100426208e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "dilute antinue matter electron-lepton sign",
+      "error": 1.6689493807703398e-15,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "moderate matched FD-EOS short-time empty-radiation energy closure",
+      "error": 2.4054454387867987e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "moderate nue independent four-boundary number ledger",
+      "error": 1.9920947885070397e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "moderate nue independent four-boundary energy ledger",
+      "error": 1.453282432975967e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "moderate nue MeV-erg energy sign/conversion",
+      "error": 1.7327051883491608e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "moderate nue matter electron-lepton sign",
+      "error": 1.9920947885070397e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "moderate antinue independent four-boundary number ledger",
+      "error": 0.0,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "moderate antinue independent four-boundary energy ledger",
+      "error": 2.098003254158178e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "moderate antinue MeV-erg energy sign/conversion",
+      "error": 2.497617025199245e-16,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "moderate antinue matter electron-lepton sign",
+      "error": 0.0,
+      "tolerance": 1e-11,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "instantaneous_diagnostics": [
+    {
+      "state": "dilute",
+      "ansatz": "Instantaneous fixed-density n,p,e+- matter, no photons; rates frozen only for directional derivative",
+      "dYe_dt_s_minus1": -2596.3609021831317,
+      "energy_loss_MeV_per_baryon_s": 43576.24662785313,
+      "dT_dt_MeV_s": 2263.8597776065985,
+      "uY_MeV": 18.34276883153691,
+      "uT": 1.7881854893029285,
+      "finite_difference_time_s": 1.1554634016701884e-09
+    },
+    {
+      "state": "moderate",
+      "ansatz": "Instantaneous fixed-density n,p,e+- matter, no photons; rates frozen only for directional derivative",
+      "dYe_dt_s_minus1": -650056.1799083382,
+      "energy_loss_MeV_per_baryon_s": 31132703.966725893,
+      "dT_dt_MeV_s": 5054117.466931476,
+      "uY_MeV": 59.22786315994397,
+      "uT": 1.4579666086856673,
+      "finite_difference_time_s": 3.95716960099518e-12
+    }
+  ],
+  "summary_sha256": "5f2567761792217ec0ef9cf7ebead8909fcd5974ed34cbc90efe8b510afdd07d"
+}

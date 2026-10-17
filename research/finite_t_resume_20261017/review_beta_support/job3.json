@@ -1,0 +1,43 @@
+{
+  "kind": "fresh candidate",
+  "job": {
+    "kind": "candidate",
+    "E": 1.27,
+    "parent": 24,
+    "rest_nu": 24,
+    "electron": 24,
+    "phi": 12
+  },
+  "result": {
+    "E_MeV": 1.27,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 24,
+      "cone": 24,
+      "electron": 24,
+      "phi": 12,
+      "family": "laguerre",
+      "tail": 70.0,
+      "budget": 85.0
+    },
+    "parent_min_energy_MeV": 1052.2094587940526,
+    "parent_min_momentum_MeV": 473.6682021613322,
+    "log_j_s-1": -66.4884001654095,
+    "log_true_chi_s-1": -67.25808225021942,
+    "j_s-1": 1.3318481064482898e-29,
+    "true_chi_s-1": 6.168591560172673e-30,
+    "max_shell_relative": 4.440892098500626e-16,
+    "max_lab_energy_scaled": 3.4960038380393203e-16,
+    "max_unsquared_rest_delta_scaled": 1.209993846502954e-16,
+    "literal_current_reciprocity": 8.881784197001252e-16,
+    "KMS_actual_products": 1.176836406102666e-14,
+    "events": 165888,
+    "seconds": 0.2949172919616103,
+    "radial_domain": "semi-infinite"
+  }
+}

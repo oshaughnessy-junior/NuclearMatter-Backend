@@ -1,0 +1,655 @@
+{
+  "checks": [
+    {
+      "name": "FA energyexcess 1e-250",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 1e-250",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "tinyFA analyticseries 1e-250",
+      "error": 9.681144774731365e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "tinyFB analyticseries 1e-250",
+      "error": 4.188316360398403e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 1e-163",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 1e-163",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "tinyFA analyticseries 1e-163",
+      "error": -1.687538997430238e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "tinyFB analyticseries 1e-163",
+      "error": -7.1803674117632e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 0.017",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 0.017",
+      "error": 8.881784197001256e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 0.43",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 0.43",
+      "error": 4.440892098500627e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 2.7",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 2.7",
+      "error": 4.440892098500627e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 9.3",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 9.3",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 37.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 37.0",
+      "error": 7.105427357601027e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 127.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 127.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 300.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 300.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FA energyexcess 499.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FB energyexcess angularrapidity 499.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "largeFA Laplace 350.0",
+      "error": 0.003406436931454492,
+      "tolerance": 0.022857142857142857,
+      "passed": true
+    },
+    {
+      "name": "largeFB twoLaplace 350.0",
+      "error": 0.008635089470638823,
+      "tolerance": 0.02857142857142857,
+      "passed": true
+    },
+    {
+      "name": "largeFA Laplace 500.0",
+      "error": 0.002381647702089399,
+      "tolerance": 0.016,
+      "passed": true
+    },
+    {
+      "name": "largeFB twoLaplace 500.0",
+      "error": 0.00603113548126856,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "RMS/min normalizedsphere 0.37",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "RMS/min normalizedsphere 5.1",
+      "error": -4.440892098500625e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "RMS/min normalizedsphere 23.0",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_ATrue",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_Anan",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_Ainf",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_A-0.01",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_A1001",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_A1j",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "gapzero exact logzero log_F_A",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_BTrue",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_Bnan",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_Binf",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_B-0.01",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_B501",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "phase guard log_F_B1j",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "gapzero exact logzero log_F_B",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "tiny/deep log unrepresented 1e-250",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "tiny/deep log unrepresented 499.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "absoluteCGS SIconstants source rounding",
+      "error": 0.0008377189067916291,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "matchedgap Leinson ratio",
+      "error": 7.656930645083548e-13,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "authorFortranliteralbody",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "freshFortran 1S0(184800000.0, 800000000.0, 0.82, 1.43, 0.7)",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "freshFortran 3P2B(184800000.0, 800000000.0, 0.82, 1.43, 0.7)",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "freshFortran 1S0(1344000000.0, 2000000000.0, 0.71, 0.93, 0.2)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "freshFortran 3P2B(1344000000.0, 2000000000.0, 0.71, 0.93, 0.2)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "freshFortran 1S0(583800000.0, 600000000.0, 0.91, 2.1, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "freshFortran 3P2B(583800000.0, 600000000.0, 0.91, 2.1, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "freshFortran 1S0(3210000000.0, 3000000000.0, 0.65, 0.7, 0.5)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "freshFortran 3P2B(3210000000.0, 3000000000.0, 0.65, 0.7, 0.5)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "gitblob superfluid.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject below",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject u_1s0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject u_3p2b",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject f32",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "gitblob core_nu.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject _ctrl_1s0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject _ctrl_3p2b",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject _pbf",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject pbf_1s0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject pbf_n3p2",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactASTcodeobject pbf_neutron",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "literalboundary 14",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "literalboundary 15",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "literalboundary 16",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 73,
+  "failed": [],
+  "new_integral_points": [
+    {
+      "v": 1e-250,
+      "independent_logFA": -1151.7999005158022,
+      "independent_logFB": -1151.1067533352423,
+      "author_logFA": -1151.7999005158022,
+      "author_logFB": -1151.1067533352423
+    },
+    {
+      "v": 1e-163,
+      "independent_logFA": -751.1500943348383,
+      "independent_logFB": -750.4569471542784,
+      "author_logFA": -751.1500943348383,
+      "author_logFB": -750.4569471542784
+    },
+    {
+      "v": 0.017,
+      "independent_logFA": -8.656399923215233,
+      "independent_logFB": -7.963199551240924,
+      "author_logFA": -8.656399923215233,
+      "author_logFB": -7.9631995512409235
+    },
+    {
+      "v": 0.43,
+      "independent_logFA": -2.1685302577440866,
+      "independent_logFB": -1.4353503552808196,
+      "author_logFA": -2.1685302577440866,
+      "author_logFB": -1.4353503552808191
+    },
+    {
+      "v": 2.7,
+      "independent_logFA": 1.4324247048008796,
+      "independent_logFB": 1.2450580917962437,
+      "author_logFA": 1.4324247048008796,
+      "author_logFB": 1.2450580917962442
+    },
+    {
+      "v": 9.3,
+      "independent_logFA": -4.086630321070736,
+      "independent_logFB": -5.647753980250874,
+      "author_logFA": -4.086630321070736,
+      "author_logFB": -5.647753980250874
+    },
+    {
+      "v": 37.0,
+      "independent_logFA": -50.61701638064764,
+      "independent_logFB": -53.041856981490085,
+      "author_logFA": -50.61701638064764,
+      "author_logFB": -53.04185698149008
+    },
+    {
+      "v": 127.0,
+      "independent_logFA": -222.6241564711506,
+      "independent_logFB": -225.70192327639992,
+      "author_logFA": -222.6241564711506,
+      "author_logFB": -225.70192327639992
+    },
+    {
+      "v": 300.0,
+      "independent_logFA": -563.0422272122315,
+      "independent_logFB": -566.5581395634802,
+      "author_logFA": -563.0422272122315,
+      "author_logFB": -566.5581395634802
+    },
+    {
+      "v": 499.0,
+      "independent_logFA": -957.7364590243396,
+      "independent_logFB": -961.5092089477833,
+      "author_logFA": -957.7364590243396,
+      "author_logFB": -961.5092089477833
+    }
+  ],
+  "cgs_coefficient": 1.1709801311209461e+21,
+  "Leinson_matchedgap_ratio": 0.1901226288561027,
+  "Fortran_parity": [
+    {
+      "state": [
+        184800000.0,
+        800000000.0,
+        0.82,
+        1.43,
+        0.7
+      ],
+      "Fortran": [
+        160484681271985.25,
+        320418533835772.44
+      ],
+      "NMB": [
+        160484681271985.38,
+        320418533835772.6
+      ]
+    },
+    {
+      "state": [
+        1344000000.0,
+        2000000000.0,
+        0.71,
+        0.93,
+        0.2
+      ],
+      "Fortran": [
+        1.2421059195116066e+21,
+        4.3982251013740864e+21
+      ],
+      "NMB": [
+        1.242105919511607e+21,
+        4.3982251013740875e+21
+      ]
+    },
+    {
+      "state": [
+        583800000.0,
+        600000000.0,
+        0.91,
+        2.1,
+        2.0
+      ],
+      "Fortran": [
+        2.1572858697267853e+18,
+        2.438343738399221e+19
+      ],
+      "NMB": [
+        2.1572858697267853e+18,
+        2.438343738399221e+19
+      ]
+    },
+    {
+      "state": [
+        3210000000.0,
+        3000000000.0,
+        0.65,
+        0.7,
+        0.5
+      ],
+      "Fortran": [
+        0.0,
+        0.0
+      ],
+      "NMB": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "state": [
+        1000000000.0,
+        1000000000.0,
+        0.78,
+        1.9,
+        0.5
+      ],
+      "Fortran": [
+        0.0,
+        0.0
+      ],
+      "NMB": [
+        2234398618.5664415,
+        6792433175.692125
+      ]
+    }
+  ],
+  "preserved_endpoint_exclusions": [
+    {
+      "channel": "1S0",
+      "T": 1000000000.0,
+      "Tc": 1000000000.0,
+      "Fortran": 0.0,
+      "NMB": 2234398618.5664415,
+      "literal_zero_pass": false,
+      "classification": "preserved exactTc clamp failure,excluded"
+    },
+    {
+      "channel": "3P2B",
+      "T": 1000000000.0,
+      "Tc": 1000000000.0,
+      "Fortran": 0.0,
+      "NMB": 6792433175.692125,
+      "literal_zero_pass": false,
+      "classification": "preserved exactTc clamp failure,excluded"
+    },
+    {
+      "channel": "pbf_1s0",
+      "T": 0.0,
+      "NMB": null,
+      "finite": false,
+      "literal_zero_pass": false,
+      "classification": "preserved raw zeroT failure,excluded"
+    },
+    {
+      "channel": "pbf_n3p2",
+      "T": 0.0,
+      "NMB": null,
+      "finite": false,
+      "literal_zero_pass": false,
+      "classification": "preserved raw zeroT failure,excluded"
+    }
+  ],
+  "compile_command": [
+    "/opt/homebrew/bin/gfortran",
+    "-std=legacy",
+    "-ffixed-line-length-none",
+    "-O0",
+    "-fcheck=all",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_pairing_pbf_contract/driver.f",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_pairing_pbf_contract/literal_pbf.f",
+    "-o",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_pairing_pbf_contract/review_pbf"
+  ],
+  "seconds": 2.8888045840431005,
+  "author_manifest": "6e54face569daaac2be62681011dd229f910681843dd25899cc48d22c77aea05",
+  "author_files_unchanged": true
+}

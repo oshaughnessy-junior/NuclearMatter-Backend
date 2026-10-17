@@ -1,0 +1,36 @@
+{
+  "status": "ready_for_independent_review",
+  "core_checks": 48,
+  "core_selected_states": 9,
+  "cold_support_checks": 5,
+  "cold_extension_excluded": {
+    "Yp": 0.1,
+    "T_MeV": 0.01,
+    "Enu_MeV": 0.03,
+    "capture48_to72_relative_error": 0.006623389826238837,
+    "capture72_vs_independent_relative_error": 0.00036022585649369605,
+    "evidence": "initial_cold_extension_failure.json"
+  },
+  "claimed_scope": "Physical FD occupation/recoil phase-space threshold inside composition-specific constant-offset NR quasiparticle toy; no GM1, fullUrca emissivity, lifetime width or production claim",
+  "frozen_upstream": {
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "files": {
+    "cold_support_results.json": "3cbb352b2478b67f36fb22d0a6fe0a99ae0cf3c1ee95737828a02f0caf8ea560",
+    "threshold_study.py": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+    "cold_support.py": "dd97a8bfc967b8b1cb3e051bd89677ee24b0d71f09e37e6deec8bcc6d16d6c4e",
+    "results.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96",
+    "RESEARCH_NOTE.md": "ed3e546b0c24a46264b7436023228f1b796786a3310cccb445c215190432f79e",
+    "initial_study_with_cold_extension.py": "8b0752349b4c7443b004080fc587b5267bf75a97c98397471273541de3a0a871",
+    "initial_cold_extension_failure.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96",
+    "qualified_results.json": "a6dce2b1323d4b0f455b1a42486277ef9ecb2f994e6d1ee0a7659958f070965b",
+    "plot_threshold.py": "0abbd6b020381e7ef26d6408e713faee415d961bf548c07d8583ec481e368eb0",
+    "threshold_selected.png": "1958158a56e718f7727a19ce26066163c74b825ea1b9ba286d96fcae0aecfb6d",
+    "threshold_selected.pdf": "0f84ba54195e425b02f02cba1e538b33bf6e099a88b864d753cbbf349dad4713"
+  }
+}

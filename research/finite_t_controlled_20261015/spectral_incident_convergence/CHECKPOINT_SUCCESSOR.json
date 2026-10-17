@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN author study; DIFFERENT study review PENDING",
+  "utc": "2026-10-16T08:03:19.666444+00:00",
+  "report_sha256": "bfb5b999dcd5ca23f5d526c1259f5c8cebfb847af101934c061deafc981e1d02",
+  "analysis_sha256": "3e2ff0b074602ff6383c91cd7c07b924a0bfb67b39d4c4b0ce29637b32c3b7a7",
+  "canonical_data_sha256": "4ecd574c54174b461726891971a1b0b7fa597d134a6d27297f3fcc8fb940a22c",
+  "manifest_sha256": "eab2820f61e8934a232a00f46e7fd46160b1ce8bee5161ee9a39e93255c789c4",
+  "original_lock_sha256": "657ace7fcd48d712a7a961769400bed05a2a45bd9b47509a7131bae615740716",
+  "successor_admission_sha256": "6c674e4a60b066f4ab42ec3acc698e9b8dfce85d33a4a13a61f24714e20fc89a",
+  "original_source_checkpoint_preserved": true,
+  "original_source_nodes": 168,
+  "repaired_source_nodes": 84,
+  "total_rule_nodes": 252,
+  "fresh_public_API_comparisons": 6,
+  "public_comparison_checks_pass": 87,
+  "passed": 880,
+  "retained_coarse_fail": 29,
+  "coarse_fail_breakdown": {
+    "PC": 9,
+    "NEUTRON_DECAY": 20
+  },
+  "all_locked24to32_positive_FBRQ_pass": true,
+  "locked_relative_target": 3e-06,
+  "worst_finest_changes": {
+    "EC": 3.5527136788004946e-15,
+    "PC": 1.1564083024488944e-12,
+    "NEUTRON_DECAY": 5.304201522308475e-11
+  },
+  "original_checkpoint_paths_unchanged": 122,
+  "maximum_single_node_seconds": 2.3807040001265705,
+  "whole_energy_moments_tails": "OPEN",
+  "independent_study_review": "PENDING",
+  "no_new_ranges_or_levels_or_tolerance_changes": true,
+  "no_candidate_edits": true
+}

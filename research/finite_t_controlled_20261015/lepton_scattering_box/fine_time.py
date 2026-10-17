@@ -1,0 +1,11 @@
+"""Separate temporal gates for the finally selected fine physical edge grid."""
+from pathlib import Path
+import json,math
+import numpy as np
+import box as B
+P=Path(__file__).resolve().parent;ref=json.loads((P/'refined_edge_grid_results.json').read_text());g=ref['grid'];W=np.array(g['W']);checks=[];rows=[]
+for Tr in[1.3,3.]:
+ a=B.evolve(g,Tr,-.7,steps=16);b=B.evolve(g,Tr,-.7,steps=32);c=next(r for r in ref['runs']if r['Tr']==Tr);norm=lambda x,y:float(W@abs(np.array(x['final'])-np.array(y['final'])))/c['number_initial'];d1=norm(a,b);d2=norm(b,c);order=math.log2(d1/d2);h=float(abs(b['matter_heat']/c['matter_heat']-1))
+ checks.extend([dict(name=str(Tr)+' final fine-edge RK2order',error=order-2,tolerance=.25,passed=abs(order-2)<=.25),dict(name=str(Tr)+' final fine-edge heat32to64',error=h,tolerance=.001,passed=h<.001)])
+ rows.append(dict(Tr=Tr,runs=[a,b,c],weighted_difference16_32=d1,weighted_difference32_64=d2,order=order,heat_relative32to64=h))
+(P/'fine_time_results.json').write_text(json.dumps(dict(checks=checks,rows=rows,passed=sum(c['passed']for c in checks),failed=[c for c in checks if not c['passed']],pins=B.SOURCE_PINS),indent=2));print(checks)

@@ -1,0 +1,61 @@
+"""Bounded author qualification; independent event amplitudes and rest spectra."""
+from pathlib import Path
+import sys,json,time,math,hashlib
+import numpy as np
+from scipy.special import log_expit,logsumexp
+from scipy.integrate import quad
+sys.dont_write_bytecode=True
+from kernel import *
+sys.path.insert(0,str(ROOT/'relativistic_crossed_contract'));import beta as b
+H=Path(__file__).parent;checks=[];rows=[];start=time.monotonic()
+def gate(n,e,tol):checks.append(dict(name=n,error=float(e),tolerance=tol,passed=bool(math.isfinite(e)and abs(e)<=tol)))
+def save(phase):
+ (H/'results.json').write_text(json.dumps(dict(phase=phase,passed=phase=='complete'and all(x['passed']for x in checks),checks=checks,rows=rows,runtime_seconds=time.monotonic()-start),indent=2)+'\n')
+
+from oracles import event_reference,rest_spectrum
+
+bath,m=matched_npe(.03,1e-12,.3)
+for species,target in [('neutron',7e-13),('proton',3e-13)]:gate(species+' forward density',m[species]['density']/target-1,3e-10)
+gate('lepton charge root',m['electron']['net_density']/3e-13-1,3e-10)
+rows.append(dict(matched_npe=m));save('EOS qualified')
+for Enu,Ee,c in[(.3,.993,0.),(.3,.998,-.54),(.41,.883,.62),(.81,.523,.9)]:
+ d=differential(bath,Enu,Ee,c,energy_order=16,phi_order=4);ref=event_reference(bath,Enu,Ee,c)
+ for i,key in enumerate(['j','chi']):gate(f'Qrest spinor differential {key} {(Enu,Ee,c)}',math.expm1(d[key]['log']-ref[i]),3e-7)
+ gate('independent baryon shells '+str(Enu),ref[2],5e-14)
+ gate('separate differential antiKMS '+str(Enu),d['j']['log']-d['chi']['log']+(Enu-(bath.mu_n-bath.mu_p-bath.mu_e))/bath.T,2e-9)
+ gate('finite logs '+str(Enu),float(not all(math.isfinite(d[k]['log'])for k in ['j','chi'])),0.)
+ rows.append(dict(differential=dict(Enu=Enu,Ee=Ee,c=c,j=d['j'],chi=d['chi'],reference_logj=ref[0],reference_logchi=ref[1])));save('differential complete')
+# Reject invariant-forbidden pair, irrespective of thermal tail.
+z=differential(bath,.9,.8,-.9);gate('exact forbidden invariant pair',float(z['j']['reason']!='empty_support' or z['chi']['reason']!='empty_support'),0.)
+# Selected spectrum: independent outer/internal/thermal-tail ladders.
+settings=[dict(angle_order=6,lepton_order=8,energy_order=8,widths=9.),dict(angle_order=10,lepton_order=12,energy_order=12,widths=9.),dict(angle_order=14,lepton_order=16,energy_order=16,widths=9.),dict(angle_order=14,lepton_order=16,energy_order=16,widths=12.),dict(angle_order=14,lepton_order=16,energy_order=24,widths=12.,tail=70.)]
+spectra=[]
+for setting in settings:
+ r=spectral(bath,.3,**setting);spectra.append(r);rows.append(dict(spectrum=r));save('spectrum checkpoint '+str(len(spectra)))
+for idx in [0,1,2,3]:
+ for key in ['j','chi']:gate(f'spectrum ladder{idx} {key}',math.expm1(spectra[idx][key]['log']-spectra[-1][key]['log']),3e-6 if idx==0 else 2e-7)
+for r in spectra:gate('separate integrated antiKMS '+str(r['controls']),r['j']['log']-r['chi']['log']+(.3-(bath.mu_n-bath.mu_p-bath.mu_e))/bath.T,2e-9)
+# Near-cold dilute comparison is a convergence-to-limit diagnostic, not exact
+# equality: moving neutron Doppler/recoil and electron blocking remain present.
+for T in [.1,.03,.01]:
+ ba,mm=matched_npe(T,1e-12,.3);r=spectra[-1]if T==.03 else spectral(ba,.3,angle_order=12,lepton_order=16,energy_order=16,widths=12.)
+ dos=.3**2/(2*math.pi**2*eos.HBARC**3);per_neutron=dos*r['j']['value']/mm['neutron']['density'];rest=rest_spectrum(.3)
+ rows.append(dict(cold_limit=dict(T=T,thermal_dGamma_dEnu_per_neutron=per_neutron,rest_spectrum=rest,relative_difference=per_neutron/rest-1,controls=r['controls'])))
+ gate('near cold spectrum T'+str(T),per_neutron/rest-1,.003 if T==.1 else .001 if T==.03 else .0004);save('cold-limit checkpoint '+str(T))
+# Time dilation expectation for any total vacuum decay: <mn/En>*Gamma_rest.
+# This is an independent bath diagnostic; spectral integral over all Enu is OPEN.
+n=eos.state_density(.03,7e-13,MN);norm=eos.C*quad(lambda p:p*p/(np.exp((math.hypot(MN,p)-n.chemical_potential)/.03)+1),0,100,epsabs=1e-23,epsrel=1e-10)[0]
+dilate=eos.C*quad(lambda p:p*p*MN/math.hypot(MN,p)/(np.exp((math.hypot(MN,p)-n.chemical_potential)/.03)+1),0,100,epsabs=1e-23,epsrel=1e-10)[0]/norm
+rows.append(dict(time_dilation_target=dict(mean_m_over_E=dilate,unblocked_total_rate_target=dilate*b.pair_integral(24)['rate'],NOT_tested_by_selected_energy=True)))
+gate('independent momentum neutron normalization',norm/n.density-1,3e-10)
+# Actual coefficient underflow: finite logs retained, ordinary None, no floors.
+deep=Bath(.01,bath.mu_n,bath.mu_p,-1000.)
+d=differential(deep,.3,.993,0.,energy_order=16)
+gate('underflow chi retained',float(not(d['chi']['log']is not None and d['chi']['value']is None and d['chi']['reason']=='underflow')),0.)
+rows.append(dict(underflow=dict(j=d['j'],chi=d['chi'])))
+# Input contract regression.
+for name,fn in [('warm outside selected integration',lambda:spectral(Bath(.2,bath.mu_n,bath.mu_p,bath.mu_e),.3)),('degenerate outside selected integration',lambda:spectral(Bath(.03,MN,MP,.5),.3)),('NaN bath',lambda:Bath(float('nan'),1,2,3)),('T zero',lambda:Bath(0,1,2,3)),('bad tail',lambda:differential(bath,.3,.993,0.,tail=-1)),('bad angle',lambda:differential(bath,.3,.993,1.1)),('bool order',lambda:differential(bath,.3,.993,0.,energy_order=True)),('negative neutrino',lambda:differential(bath,-1,.993,0.)),('endpoint electron',lambda:differential(bath,.3,ME,0.)),('NaN spectral width',lambda:spectral(bath,.3,widths=float('nan'))),('overendpoint integrated API',lambda:spectral(bath,.81))]:
+ try:fn();rejected=False
+ except ValueError:rejected=True
+ gate(name,float(not rejected),0.)
+save('complete');print(json.dumps(dict(passed=all(x['passed']for x in checks),checks=len(checks),failed=[x for x in checks if not x['passed']],runtime=time.monotonic()-start)))

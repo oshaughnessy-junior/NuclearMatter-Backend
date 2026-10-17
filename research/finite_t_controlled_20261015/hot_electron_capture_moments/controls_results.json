@@ -1,0 +1,343 @@
+{
+  "checks": [
+    {
+      "name": "independent threshold root (0.0, -0.83)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (0.0, 0.17)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (0.0, 0.72)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (57.0, -0.83)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (57.0, 0.17)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (57.0, 0.72)",
+      "error": 1.3766765505351941e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (184.0, -0.83)",
+      "error": -2.9976021664879227e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (184.0, 0.17)",
+      "error": 2.220446049250313e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (184.0, 0.72)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (400.0, -0.83)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (400.0, 0.17)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent threshold root (400.0, 0.72)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "rest threshold totalEe",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "movingtarget threshold not a fixed globalEe cut",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "vacuum spin/phase reciprocity 1.31",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "vacuum spin/phase reciprocity 3.7",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "vacuum spin/phase reciprocity 11.9",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "pointVA heavyM convergence (5.0, 100000.0)",
+      "error": 0.10009261272533025,
+      "tolerance": 0.2,
+      "passed": true
+    },
+    {
+      "name": "pointVA heavyM convergence (5.0, 1000000.0)",
+      "error": 0.10000924500425802,
+      "tolerance": 0.2,
+      "passed": true
+    },
+    {
+      "name": "absolute allowed EC sigma*v 5.0",
+      "error": -1.140467448790261e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "pointVA heavyM convergence (10.0, 100000.0)",
+      "error": 0.10019254877498088,
+      "tolerance": 0.2,
+      "passed": true
+    },
+    {
+      "name": "pointVA heavyM convergence (10.0, 1000000.0)",
+      "error": 0.10001925799475986,
+      "tolerance": 0.2,
+      "passed": true
+    },
+    {
+      "name": "absolute allowed EC sigma*v 10.0",
+      "error": -2.2371880691651747e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "reject nonfinitebath",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject empty_scenario_mu",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject different_radT",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject nonfinite_mu_nu",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject ignored_extra_key",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject bool_order",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject negative_tail",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject negative_budget",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject degenerate_baryon",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 32,
+  "failed": [],
+  "thresholds": [
+    {
+      "P": 0.0,
+      "cosine": -0.83,
+      "root": 1.2940845877831961,
+      "analytic": 1.294084587783196
+    },
+    {
+      "P": 0.0,
+      "cosine": 0.17,
+      "root": 1.2940845877831961,
+      "analytic": 1.294084587783196
+    },
+    {
+      "P": 0.0,
+      "cosine": 0.72,
+      "root": 1.2940845877831961,
+      "analytic": 1.294084587783196
+    },
+    {
+      "P": 57.0,
+      "cosine": -0.83,
+      "root": 1.2351102457876053,
+      "analytic": 1.235110245787605
+    },
+    {
+      "P": 57.0,
+      "cosine": 0.17,
+      "root": 1.3040711915757428,
+      "analytic": 1.3040711915757426
+    },
+    {
+      "P": 57.0,
+      "cosine": 0.72,
+      "root": 1.346072736649091,
+      "analytic": 1.3460727366491096
+    },
+    {
+      "P": 184.0,
+      "cosine": -0.83,
+      "root": 1.11212419111647,
+      "analytic": 1.1121241911164668
+    },
+    {
+      "P": 184.0,
+      "cosine": 0.17,
+      "root": 1.3093343068879968,
+      "analytic": 1.3093343068879997
+    },
+    {
+      "P": 184.0,
+      "cosine": 0.72,
+      "root": 1.4592890458488663,
+      "analytic": 1.4592890458488663
+    },
+    {
+      "P": 400.0,
+      "cosine": -0.83,
+      "root": 0.935398825009851,
+      "analytic": 0.9353988250098509
+    },
+    {
+      "P": 400.0,
+      "cosine": 0.17,
+      "root": 1.267771673480317,
+      "analytic": 1.2677716734803168
+    },
+    {
+      "P": 400.0,
+      "cosine": 0.72,
+      "root": 1.6263930264917488,
+      "analytic": 1.6263930264917483
+    }
+  ],
+  "rest_electron_total_threshold": 1.294084587783196,
+  "vacuum": [
+    {
+      "Ee": 1.31,
+      "EC_sigma_MeV_minus2": 3.305827612810473e-26,
+      "inverse_capture_sigma_MeV_minus2": 3.797794495633451e-22,
+      "ratio": 11488.180693138831
+    },
+    {
+      "Ee": 3.7,
+      "EC_sigma_MeV_minus2": 7.041502164553076e-22,
+      "inverse_capture_sigma_MeV_minus2": 3.2671900640134337e-21,
+      "ratio": 4.639904934575564
+    },
+    {
+      "Ee": 11.9,
+      "EC_sigma_MeV_minus2": 1.36612385980057e-20,
+      "inverse_capture_sigma_MeV_minus2": 3.4333345658116817e-20,
+      "ratio": 2.5131942035716204
+    }
+  ],
+  "heavy": [
+    {
+      "Ee": 5.0,
+      "M": 10000.0,
+      "actual_sigma_v_MeV_minus2": 1.6508525251739564e-21,
+      "allowed": 1.652735498096307e-21,
+      "relative_error": -0.001139306879122115,
+      "scope": "Mathematical pointVA heavyM normalization limit; not actualfullcurrent thermal source"
+    },
+    {
+      "Ee": 5.0,
+      "M": 100000.0,
+      "actual_sigma_v_MeV_minus2": 1.6525470264168179e-21,
+      "allowed": 1.652735498096307e-21,
+      "relative_error": -0.00011403620222727451,
+      "scope": "Mathematical pointVA heavyM normalization limit; not actualfullcurrent thermal source"
+    },
+    {
+      "Ee": 5.0,
+      "M": 1000000.0,
+      "actual_sigma_v_MeV_minus2": 1.6527166491859367e-21,
+      "allowed": 1.652735498096307e-21,
+      "relative_error": -1.140467448790261e-05,
+      "scope": "Mathematical pointVA heavyM normalization limit; not actualfullcurrent thermal source"
+    },
+    {
+      "Ee": 10.0,
+      "M": 10000.0,
+      "actual_sigma_v_MeV_minus2": 9.09849093057444e-21,
+      "allowed": 9.118848383370321e-21,
+      "relative_error": -0.0022324587425979203,
+      "scope": "Mathematical pointVA heavyM normalization limit; not actualfullcurrent thermal source"
+    },
+    {
+      "Ee": 10.0,
+      "M": 100000.0,
+      "actual_sigma_v_MeV_minus2": 9.116808718288135e-21,
+      "allowed": 9.118848383370321e-21,
+      "relative_error": -0.0002236757314558746,
+      "scope": "Mathematical pointVA heavyM normalization limit; not actualfullcurrent thermal source"
+    },
+    {
+      "Ee": 10.0,
+      "M": 1000000.0,
+      "actual_sigma_v_MeV_minus2": 9.118644377582243e-21,
+      "allowed": 9.118848383370321e-21,
+      "relative_error": -2.2371880691651747e-05,
+      "scope": "Mathematical pointVA heavyM normalization limit; not actualfullcurrent thermal source"
+    }
+  ]
+}

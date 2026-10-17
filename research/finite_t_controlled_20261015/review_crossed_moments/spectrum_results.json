@@ -1,0 +1,239 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "new conditional spectrum refinement j",
+      "error": -9.450218385604867e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new conditional vs tensor j",
+      "error": -1.0658141036401446e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new conditional spectrum refinement chi",
+      "error": -2.0605739337021677e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new conditional vs tensor chi",
+      "error": 3.197442310920502e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "isotropic-cone original delta derivative",
+      "error": -1.1217493600668149e-10,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "one-helicity DOS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "Enu": 0.365,
+      "j": {
+        "value": 3.203512569124064e-06,
+        "log": -12.651262672315156,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 5.5381704867939645e-12,
+        "log": -25.919356906750416,
+        "representable": true,
+        "reason": null
+      },
+      "DOS": 8.784085967487584e-10,
+      "max_conditional_energy_residual": 2.7960966875184567e-13,
+      "seconds": 0.11167254112660885,
+      "controls": {
+        "order": 10,
+        "parent_order": 12,
+        "phi_order": 8
+      },
+      "derivation": "Full rest Dalitz dGamma/(dEanti*dEe) averaged parent spin; conditional isotropic cone Jacobian1/(2gamma v Eanti*); parent spin2 and proper time; divide one-helicity DOS only for spectral coefficient comparison"
+    },
+    {
+      "Enu": 0.365,
+      "j": {
+        "value": 3.203512569127092e-06,
+        "log": -12.65126267231421,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 5.538170486805377e-12,
+        "log": -25.919356906748355,
+        "representable": true,
+        "reason": null
+      },
+      "DOS": 8.784085967487584e-10,
+      "max_conditional_energy_residual": 2.913225216616411e-13,
+      "seconds": 0.3774306250270456,
+      "controls": {
+        "order": 16,
+        "parent_order": 18,
+        "phi_order": 12
+      },
+      "derivation": "Full rest Dalitz dGamma/(dEanti*dEe) averaged parent spin; conditional isotropic cone Jacobian1/(2gamma v Eanti*); parent spin2 and proper time; divide one-helicity DOS only for spectral coefficient comparison"
+    }
+  ],
+  "tensor": {
+    "j": {
+      "value": 3.2035125691271257e-06,
+      "log": -12.6512626723142,
+      "representable": true,
+      "reason": null
+    },
+    "chi": {
+      "value": 5.538170486805199e-12,
+      "log": -25.919356906748387,
+      "representable": true,
+      "reason": null
+    },
+    "Enu": 0.365,
+    "bath": {
+      "T": 0.055,
+      "mu_n": 938.7311517276308,
+      "mu_p": 937.393926436329,
+      "mu_e": 0.24248010840793985
+    },
+    "controls": {
+      "angle_order": 16,
+      "lepton_order": 20,
+      "widths": 12,
+      "energy_order": 24,
+      "phi_order": 4,
+      "tail": 80
+    },
+    "panels": [
+      {
+        "c": -0.9894009349916499,
+        "center": 0.9282396180351434,
+        "width": 0.0031917979078355486,
+        "lower": 0.8899380431411168,
+        "upper": 0.9665411929291701
+      },
+      {
+        "c": -0.9445750230732326,
+        "center": 0.9282261124179608,
+        "width": 0.003416306039437234,
+        "lower": 0.8872304399447141,
+        "upper": 0.9692217848912076
+      },
+      {
+        "c": -0.8656312023878316,
+        "center": 0.9282023287729563,
+        "width": 0.003779384470582934,
+        "lower": 0.8828497151259611,
+        "upper": 0.9735549424199514
+      },
+      {
+        "c": -0.7554044083550031,
+        "center": 0.9281691233367734,
+        "width": 0.004234538658705943,
+        "lower": 0.8773546594323021,
+        "upper": 0.9789835872412447
+      },
+      {
+        "c": -0.6178762444026438,
+        "center": 0.9281276982377255,
+        "width": 0.004741498385725787,
+        "lower": 0.871229717609016,
+        "upper": 0.9850256788664349
+      },
+      {
+        "c": -0.45801677765722737,
+        "center": 0.9280795533556992,
+        "width": 0.005269768049395431,
+        "lower": 0.8648423367629541,
+        "upper": 0.9913167699484444
+      },
+      {
+        "c": -0.2816035507792589,
+        "center": 0.9280264312954244,
+        "width": 0.005797054429255734,
+        "lower": 0.8584617781443555,
+        "upper": 0.9975910844464932
+      },
+      {
+        "c": -0.09501250983763744,
+        "center": 0.9279702539581566,
+        "width": 0.006306888544297254,
+        "lower": 0.8522875914265895,
+        "upper": 1.0036529164897237
+      },
+      {
+        "c": 0.09501250983763744,
+        "center": 0.927913052777411,
+        "width": 0.006786774960835847,
+        "lower": 0.8464717532473808,
+        "upper": 1.009354352307441
+      },
+      {
+        "c": 0.2816035507792589,
+        "center": 0.9278568951376227,
+        "width": 0.007226974085589799,
+        "lower": 0.8411332061105451,
+        "upper": 1.0145805841647002
+      },
+      {
+        "c": 0.45801677765722737,
+        "center": 0.9278038096502537,
+        "width": 0.007619745605485456,
+        "lower": 0.8363668623844283,
+        "upper": 1.019240756916079
+      },
+      {
+        "c": 0.6178762444026438,
+        "center": 0.927755712977115,
+        "width": 0.00795888670522894,
+        "lower": 0.8322490725143677,
+        "upper": 1.0232623534398624
+      },
+      {
+        "c": 0.7554044083550031,
+        "center": 0.927714340816631,
+        "width": 0.008239451053858248,
+        "lower": 0.828840928170332,
+        "upper": 1.02658775346293
+      },
+      {
+        "c": 0.8656312023878316,
+        "center": 0.9276811854644146,
+        "width": 0.00845757793775128,
+        "lower": 0.8261902502113992,
+        "upper": 1.02917212071743
+      },
+      {
+        "c": 0.9445750230732326,
+        "center": 0.9276574418753379,
+        "width": 0.008610390585127628,
+        "lower": 0.8243327548538064,
+        "upper": 1.0309821288968695
+      },
+      {
+        "c": 0.9894009349916499,
+        "center": 0.9276439605577361,
+        "width": 0.008695960598728606,
+        "lower": 0.8232924333729928,
+        "upper": 1.0319954877424795
+      }
+    ],
+    "evaluations": 1280,
+    "runtime_seconds": 5.169425541069359,
+    "units": "j,chi s^-1 per one antinu occupation; DOS E\u00b2/(2pi\u00b2 hbarc\u00b3) fm^-3 MeV^-1"
+  },
+  "runtime_seconds": 5.661140457959846,
+  "scope": "New selected .365MeV spectral check only, no full-Enu tensor integral"
+}

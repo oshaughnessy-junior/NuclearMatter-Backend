@@ -1,0 +1,103 @@
+...................................................................F...F [ 88%]
+.........                                                                [100%]
+=================================== FAILURES ===================================
+____ test_resolved_dilute_all_fields_against_relativistic_bessel[0.4-600.0] ____
+
+z = 600.0, alpha = 0.4
+
+    @pytest.mark.parametrize("z", [40., 100., 300., 600.])
+    @pytest.mark.parametrize("alpha", [0., .4, -.4])
+    def test_resolved_dilute_all_fields_against_relativistic_bessel(z, alpha):
+        # The exact classical relativistic moments use scaled Bessel functions.
+        # At z>=40 and |mu/T|<=.4, FD corrections are <7e-18.
+        from scipy.special import kve
+        T, m = M_E/z, M_E
+        mu = alpha*T
+        base = math.exp(2*math.log(m)+math.log(T)-math.log(math.pi**2*HBARC**3)
+                        +math.log(kve(2, z))-z)
+        na, nb = base*math.exp(alpha), base*math.exp(-alpha)
+        total, net = na+nb, na-nb
+        mean = 3*T+m*kve(1, z)/kve(2, z)
+        square = m*m+3*m*T*kve(1, z)/kve(2, z)+12*T*T
+        first = mean*net-mu*total
+        second = (square+mu*mu)*total-2*mu*mean*net
+        energy, pressure = total*mean, total*T
+        entropy = (energy+pressure-mu*net)/T
+        expected = dict(net_density=net, particle_density=na,
+                        antiparticle_density=nb, energy_density=energy,
+                        pressure=pressure, entropy_density=entropy,
+                        free_energy_density=mu*net-pressure,
+                        cv_fixed_net_density=(second-first*first/total)/(T*T),
+                        dn_dmu_fixed_temperature=total/T,
+                        dn_dtemperature_fixed_mu=first/(T*T),
+                        dmu_dtemperature_fixed_net_density=-first/(T*total))
+        s = state_mu(T, mu, m)
+        fine = state_mu(T, mu, m, tail=90., rtol=5e-13)
+        for field, value in expected.items():
+            actual = getattr(s, field)
+            if value == 0:
+                assert actual == 0.
+            else:
+>               np.testing.assert_allclose(actual, value, rtol=3e-10, atol=0.)
+E               AssertionError: 
+E               Not equal to tolerance rtol=3e-10, atol=0
+E               
+E               Mismatched elements: 1 / 1 (100%)
+E               Max absolute difference among violations: 4.48942084e-269
+E               Max relative difference among violations: 0.14392839
+E                ACTUAL: array(2.670262e-268)
+E                DESIRED: array(3.119204e-268)
+
+outputs/nmb-finite-t-20261015/production_lepton_port/staged/tests/test_finite_t_leptons.py:238: AssertionError
+___ test_resolved_dilute_all_fields_against_relativistic_bessel[-0.4-600.0] ____
+
+z = 600.0, alpha = -0.4
+
+    @pytest.mark.parametrize("z", [40., 100., 300., 600.])
+    @pytest.mark.parametrize("alpha", [0., .4, -.4])
+    def test_resolved_dilute_all_fields_against_relativistic_bessel(z, alpha):
+        # The exact classical relativistic moments use scaled Bessel functions.
+        # At z>=40 and |mu/T|<=.4, FD corrections are <7e-18.
+        from scipy.special import kve
+        T, m = M_E/z, M_E
+        mu = alpha*T
+        base = math.exp(2*math.log(m)+math.log(T)-math.log(math.pi**2*HBARC**3)
+                        +math.log(kve(2, z))-z)
+        na, nb = base*math.exp(alpha), base*math.exp(-alpha)
+        total, net = na+nb, na-nb
+        mean = 3*T+m*kve(1, z)/kve(2, z)
+        square = m*m+3*m*T*kve(1, z)/kve(2, z)+12*T*T
+        first = mean*net-mu*total
+        second = (square+mu*mu)*total-2*mu*mean*net
+        energy, pressure = total*mean, total*T
+        entropy = (energy+pressure-mu*net)/T
+        expected = dict(net_density=net, particle_density=na,
+                        antiparticle_density=nb, energy_density=energy,
+                        pressure=pressure, entropy_density=entropy,
+                        free_energy_density=mu*net-pressure,
+                        cv_fixed_net_density=(second-first*first/total)/(T*T),
+                        dn_dmu_fixed_temperature=total/T,
+                        dn_dtemperature_fixed_mu=first/(T*T),
+                        dmu_dtemperature_fixed_net_density=-first/(T*total))
+        s = state_mu(T, mu, m)
+        fine = state_mu(T, mu, m, tail=90., rtol=5e-13)
+        for field, value in expected.items():
+            actual = getattr(s, field)
+            if value == 0:
+                assert actual == 0.
+            else:
+>               np.testing.assert_allclose(actual, value, rtol=3e-10, atol=0.)
+E               AssertionError: 
+E               Not equal to tolerance rtol=3e-10, atol=0
+E               
+E               Mismatched elements: 1 / 1 (100%)
+E               Max absolute difference among violations: 4.48942084e-269
+E               Max relative difference among violations: 0.14392839
+E                ACTUAL: array(2.670262e-268)
+E                DESIRED: array(3.119204e-268)
+
+outputs/nmb-finite-t-20261015/production_lepton_port/staged/tests/test_finite_t_leptons.py:238: AssertionError
+=========================== short test summary info ============================
+FAILED outputs/nmb-finite-t-20261015/production_lepton_port/test_mirror::test_resolved_dilute_all_fields_against_relativistic_bessel[0.4-600.0]
+FAILED outputs/nmb-finite-t-20261015/production_lepton_port/test_mirror::test_resolved_dilute_all_fields_against_relativistic_bessel[-0.4-600.0]
+2 failed, 79 passed in 6.79s

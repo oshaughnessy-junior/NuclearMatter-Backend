@@ -1,0 +1,31 @@
+{
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "checks": 143,
+  "files_sha256": {
+    "initial_antiparticle_exclusion.txt": "628ca10518955f237270ba21f6a45cd08c47d3343018ac4eb79cde35d9fbb0f8",
+    "initial_cold_roundoff_results.json": "50aad735efc456114015c9a36e9eb88d5120fea2e35cf2b43edd7c1fbf01c6a0",
+    "initial_antiparticle_exclusion_results.json": "1269b1e48f31e61dbf3a1d82f021587cdeec32b2c6e59ebfa0440a485dc6658b",
+    "results.json": "7d926cfd8bd899913ed563694376ac4ffcbb8142e171408348a38ddba6107af3",
+    "RESEARCH_NOTE.md": "658bdcf52c228bf1e55604bf19346ce85212c1ed72fe85bfe7e060aad8bb8457",
+    "initial_cold_roundoff_validate.py": "dc4223beb2ccec88fee4a23e47dd3c273689dcf34055a83b571a3223e591d16a",
+    "initial_cold_roundoff_failure.txt": "0ee3d7c68c58092ab0db9c5e38c65892874d1ed87378192f4bd568733663d9d7",
+    "validate.py": "49d522d078153efb202a777f11bb7acf6087f20c4055d34955a2f2980b3b42ca",
+    "free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "extra_checks.py": "1ab3f4ef83bd0a43ca3c57cd0ad265a85d75e7016c71f6840336b9a6a0ec5f3f",
+    "initial_cold_roundoff_free_baryons.py": "b30b5b2ed3fc1ee53d57bf415df63cef598cabcd51713df3d0ef3033808c0260",
+    "initial_validate_antiparticle_exclusion.py": "a5a2f57a0a3b5b7abc24a9a01b71013399e8bf731076afcf20577f195c164082",
+    "extra_results.json": "556461b63a5fd71de90cabc6405124eb5f817f236f21db5f96a0a4e94d836d0c"
+  },
+  "upstream_sha256": {
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9"
+  },
+  "environment": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+    "executable": "/Users/rossma/miniconda3/bin/python",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+  },
+  "scope": "Free physical-mass particle baryons plus exact pair leptons; independent net Ye,Ymu; default antiparticle diagnostic ratio<=1e-8"
+}

@@ -1,0 +1,74 @@
+{
+  "locked_utc": "2026-10-16T03:13:34.008382+00:00",
+  "candidate_imported": false,
+  "states": [
+    {
+      "kind": "density",
+      "T": 2.0,
+      "n": 7e-08,
+      "mass": 939.565421
+    },
+    {
+      "kind": "density",
+      "T": 2.0,
+      "n": 3e-08,
+      "mass": 938.272088
+    },
+    {
+      "kind": "density",
+      "T": 1.37,
+      "n": 4.6e-05,
+      "mass": 939.565421
+    },
+    {
+      "kind": "density",
+      "T": 0.041,
+      "n": 0.16,
+      "mass": 939.565421
+    },
+    {
+      "kind": "density",
+      "T": 0.073,
+      "n": 0.27,
+      "mass": 938.272088
+    },
+    {
+      "kind": "density",
+      "T": 3.4,
+      "n": 0.12,
+      "mass": 939.565421
+    },
+    {
+      "kind": "mu",
+      "T": 0.23,
+      "mu": 932.274421,
+      "mass": 939.565421
+    },
+    {
+      "kind": "mu",
+      "T": 1.9,
+      "mu": 909.202088,
+      "mass": 938.272088
+    },
+    {
+      "kind": "mu",
+      "T": 2.71,
+      "mu": 928.1834210000001,
+      "mass": 939.565421
+    }
+  ],
+  "forward_gate": 3e-10,
+  "response_gate": 2e-08,
+  "derivative_gate": 2e-06,
+  "source_scope": "ParticleONLYspin2 idealrelativistic FD gas, positiveparticle density, physicalNMBmasses,totalrestinclusive mu. Noantibaryonpopulation/pairneutrality/interactions/JAXclaim.",
+  "tests": [
+    "Forwardoriginalmomentum BEFORE derivatives",
+    "Independent16termfugacityBessel ineta<0 states",
+    "Coldrelativistic SommerfeldCv andNR limits asdeclaredapproximate limits",
+    "Euler/freeenergy identity",
+    "Re-solved fixedparticle-density temperatureladder Cv/\u00b5T",
+    "Fixedmu pressurederivatives and Maxwellresponses",
+    "invalid/nonfinite/bool/signeddensity/unrepresentable guards"
+  ],
+  "density_policy": "Density states executed onlyif within actualfrozenpublicpolicy. Omissiondiagnostics andn=0 boundary must bedistinguished from pairnet-numberutility. No silent expansion."
+}

@@ -1,0 +1,178 @@
+{
+  "model": "exact rounded GM1, common939MeV, nuclear-only no-sea thermal pairs",
+  "units": "T,fields,mD,nu,mu MeV; n,s,Cv fm^-3; e,P,f MeV fm^-3; H MeV fm^3",
+  "states": [
+    {
+      "temperature": 10.0,
+      "baryon_density": 0.16,
+      "proton_fraction": 0.1,
+      "neutron_density": 0.14400000000000027,
+      "proton_density": 0.01600000000000007,
+      "phi": 286.84152054639935,
+      "omega": 225.67892094387201,
+      "rho": -55.693566948096006,
+      "dirac_mass": 652.1584794536006,
+      "kinetic_mu_n": 725.0005595155693,
+      "kinetic_mu_p": 663.990591207601,
+      "mu_n": 978.5262639334892,
+      "mu_p": 861.822728677425,
+      "energy_density": 151.79312707814734,
+      "pressure": 4.230329338027925,
+      "free_energy_density": 150.46661632723354,
+      "entropy_density": 0.13265107509138083,
+      "cv_fixed_density_composition": 0.11664571569960559,
+      "kinetic_energy_density": 111.6686006941794,
+      "scalar_field_energy_density": 20.288018566119117,
+      "vector_field_energy_density": 19.836507817848833,
+      "scalar_density": 0.14969226577729475,
+      "hessian_n_p": [
+        [
+          680.6957224951377,
+          -183.13729383972262
+        ],
+        [
+          -183.13729383972262,
+          1137.847052965913
+        ]
+      ],
+      "scalar_curvature_fm_minus2": 0.1239788465354126,
+      "response_condition": 47.618552250580315,
+      "hessian_min_eigenvalue": 616.3787399348921,
+      "normalized_equation_residual": 4.336808689942018e-15,
+      "euler_residual": 2.1671553440683056e-13,
+      "phi_temperature_derivative": -0.23273888730862982,
+      "antiparticle_density_n": 1.3895188989778325e-62,
+      "antiparticle_density_p": 6.20145670080007e-60,
+      "log_antiparticle_density_n": -142.43131819424343,
+      "log_antiparticle_density_p": -136.3303213634466,
+      "locally_admitted": true,
+      "local_label": "locally convex nuclear branch",
+      "cold_scalar_bracket": [
+        1.4281373915074618,
+        1.464756298982012
+      ],
+      "warm_scalar_bracket": [
+        1.3671058790498778,
+        1.464756298982012
+      ],
+      "branch": "unique scanned canonical upcrossing, connected from cold",
+      "global_phase": "unassessed; restricted uniform branch, no Gibbs/Coulomb construction",
+      "model": "NMB-rounded GM1: common M939; Cs11.785 Co7.148 Cr4.410 b.002947 c-.001070; thermal pairs no vacuum"
+    },
+    {
+      "temperature": 20.0,
+      "baryon_density": 0.24,
+      "proton_fraction": 0.3,
+      "neutron_density": 0.16800000000000004,
+      "proton_density": 0.07200000000000002,
+      "phi": 392.6480281907,
+      "omega": 338.518381415808,
+      "rho": -41.770175211072,
+      "dirac_mass": 546.3519718093,
+      "kinetic_mu_n": 636.8599022169002,
+      "kinetic_mu_p": 594.2677633172353,
+      "mu_n": 996.2633712382441,
+      "mu_p": 911.9010571275073,
+      "energy_density": 227.4602303988528,
+      "pressure": 11.459323022192486,
+      "free_energy_density": 221.56979945901307,
+      "entropy_density": 0.2945215469919856,
+      "cv_fixed_density_composition": 0.2530573708842924,
+      "kinetic_energy_density": 146.24745815264626,
+      "scalar_field_energy_density": 39.58808227124385,
+      "vector_field_energy_density": 41.624689974962685,
+      "scalar_density": 0.21594012337234703,
+      "hessian_n_p": [
+        [
+          988.0321306187166,
+          127.83605853808584
+        ],
+        [
+          127.83605853808584,
+          1068.7110782871973
+        ]
+      ],
+      "scalar_curvature_fm_minus2": 0.1404060183303384,
+      "response_condition": 23.22723803921794,
+      "hessian_min_eigenvalue": 894.3218711008303,
+      "normalized_equation_residual": 3.854941057726238e-16,
+      "euler_residual": 5.684341886080802e-14,
+      "phi_temperature_derivative": -0.4672181671615564,
+      "antiparticle_density_n": 4.093605526659808e-28,
+      "antiparticle_density_p": 3.4433608322709515e-27,
+      "log_antiparticle_density_n": -63.06295647525221,
+      "log_antiparticle_density_p": -60.93334953026898,
+      "locally_admitted": true,
+      "local_label": "locally convex nuclear branch",
+      "cold_scalar_bracket": [
+        2.0140399111002667,
+        2.0506588185748167
+      ],
+      "warm_scalar_bracket": [
+        1.9530083986426827,
+        2.0506588185748167
+      ],
+      "branch": "unique scanned canonical upcrossing, connected from cold",
+      "global_phase": "unassessed; restricted uniform branch, no Gibbs/Coulomb construction",
+      "model": "NMB-rounded GM1: common M939; Cs11.785 Co7.148 Cr4.410 b.002947 c-.001070; thermal pairs no vacuum"
+    }
+  ],
+  "diagnostic_only_unadmitted": {
+    "temperature": 1.0,
+    "baryon_density": 0.06,
+    "proton_fraction": 0.1,
+    "neutron_density": 0.05400000000000002,
+    "proton_density": 0.006000000000000106,
+    "phi": 124.23307722557338,
+    "omega": 84.629595353952,
+    "rho": -20.885087605536,
+    "dirac_mass": 814.7669227744267,
+    "kinetic_mu_n": 846.7814810107773,
+    "kinetic_mu_p": 822.1682943840302,
+    "mu_n": 941.8536201674974,
+    "mu_p": 896.3553459352142,
+    "energy_density": 56.29295343293469,
+    "pressure": -0.04237666311515634,
+    "free_energy_density": 56.28060422777139,
+    "entropy_density": 0.012349205163293148,
+    "cv_fixed_density_composition": 0.012163476456428266,
+    "kinetic_energy_density": 49.96315498095612,
+    "scalar_field_energy_density": 3.5402895400935663,
+    "vector_field_energy_density": 2.7895089118849916,
+    "scalar_density": 0.05871365386653051,
+    "hessian_n_p": [
+      [
+        222.70883109087154,
+        -654.1018618466936
+      ],
+      [
+        -654.1018618466936,
+        570.8455405239375
+      ]
+    ],
+    "scalar_curvature_fm_minus2": 0.10183417915938835,
+    "response_condition": 72.6259794764701,
+    "hessian_min_eigenvalue": -280.0898896106807,
+    "normalized_equation_residual": 1.7636355339097538e-14,
+    "euler_residual": 9.059419880941277e-14,
+    "phi_temperature_derivative": -0.02726494877722263,
+    "antiparticle_density_n": null,
+    "antiparticle_density_p": null,
+    "log_antiparticle_density_n": -1669.4100056675254,
+    "log_antiparticle_density_p": -1644.7968190407782,
+    "locally_admitted": false,
+    "local_label": "nuclear spinodal",
+    "cold_scalar_bracket": [
+      0.6225214270673551,
+      0.6591403345419055
+    ],
+    "warm_scalar_bracket": [
+      0.5859025195928048,
+      0.6835529395249389
+    ],
+    "branch": "unique scanned canonical upcrossing, connected from cold",
+    "global_phase": "unassessed; restricted uniform branch, no Gibbs/Coulomb construction",
+    "model": "NMB-rounded GM1: common M939; Cs11.785 Co7.148 Cr4.410 b.002947 c-.001070; thermal pairs no vacuum"
+  },
+  "scope": "local nuclear stability only; no lepton/beta/phase coexistence or JAX qualification"
+}

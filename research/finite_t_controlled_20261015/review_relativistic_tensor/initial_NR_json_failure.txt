@@ -1,0 +1,1 @@
+Review-only JSON serialization failure on numpy.bool occurred after numerical probes. Original driver retained. Corrected review serialization via numpy scalar item(); identical numerical comparison replayed, no author changes.

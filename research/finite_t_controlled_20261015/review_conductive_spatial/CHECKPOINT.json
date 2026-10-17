@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN: selected mild nonlinear spatial/time gate accepted",
+  "checks": 93,
+  "all_pass": true,
+  "author_source_sha256": "78364b0e3bd51214d962743aa15c127cfe97e1d2624ebc7dede137e43064e3cb",
+  "files": {
+    "audit.json": "31f975c74fd196da0b28f826871bbf4fb5e86507250a0084093c8378377686ef",
+    "audit.py": "9c2f4705493c8a7af6dc32fbcac4dbc0291f23312e83bd1d19d32c9a0fb473d6",
+    "results.json": "060bec8d92d7cae5ddddc8268871b28f877a6707a19ccfc6802bfda7e4fde838",
+    "probe.py": "a26d4d0908d7628b5369b921d018cdc8e6347cb25aa7d65e08840c5844b975b4",
+    "REVIEW.md": "a93633a90a1edd7bc7d07e0921342556bf23b5ebf84c38d8e982938696265fd2"
+  },
+  "limits": [
+    "selected mild case only",
+    "Linf observed1.81 not blanketsecondorder",
+    "time error empirical Richardson estimate",
+    "physical localFD thermalization OPEN",
+    "broad nonlinear/physical model uncertainty notqualified"
+  ]
+}

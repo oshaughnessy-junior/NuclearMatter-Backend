@@ -1,0 +1,89 @@
+"""Boosted exact free three-body decay and reciprocal event/energy moments.
+
+Parent neutron FD measure spin2 times neutron-spin-averaged rest decay measure.
+No extra antinu DOS: the complete rest decay measure already integrates it.
+"""
+from __future__ import annotations
+from pathlib import Path
+import sys,math,time
+import numpy as np
+from scipy.special import roots_genlaguerre,log_expit,logsumexp
+from numpy.polynomial.legendre import leggauss
+ROOT=Path(__file__).resolve().parents[1];sys.dont_write_bytecode=True
+sys.path.insert(0,str(ROOT/'relativistic_crossed_contract'));import beta as B
+sys.path.insert(0,str(ROOT/'relativistic_crossed_thermal'));import kernel as K
+HC=K.eos.HBARC;NAMES=('number','neutrino_energy','electron_energy','proton_energy','neutron_energy')
+
+def represented(log):
+ if log is None:return dict(value=0.,log=None,representable=True,reason='absent_initial_antinu_occupation')
+ try:v=math.exp(log)
+ except OverflowError:return dict(value=None,log=log,representable=False,reason='overflow')
+ return dict(value=v if v else None,log=log,representable=v>0,reason=None if v else'underflow')
+
+def rest_events(order=12,coordinate='pair'):
+ if isinstance(order,bool)or not isinstance(order,int)or order<4 or coordinate not in('pair','electron'):raise ValueError('Explicit rest coordinate and integer order>=4 required')
+ x,w=leggauss(order)
+ if coordinate=='pair':
+  theta=(x+1)*math.pi/4;ss=K.ME**2+((K.MN-K.MP)**2-K.ME**2)*np.sin(theta)**2;ws=((K.MN-K.MP)**2-K.ME**2)*2*np.sin(theta)*np.cos(theta)*w*math.pi/4
+  S,C=np.meshgrid(ss,x,indexing='ij');weight=(ws[:,None]*w[None,:]).ravel();pn,pp,l,k,p,pe=B.pair_events(S.ravel(),C.ravel(),K.MN,K.MP,K.ME)
+  phase=weight*p*pe/(128*math.pi**3*K.MN**2*np.sqrt(S.ravel())*B.HBAR)
+ else:
+  Emax=((K.MN-K.MP)*(K.MN+K.MP)+K.ME**2)/(2*K.MN);end=math.sqrt(Emax-K.ME);z=(x+1)*end/2;ee=K.ME+z*z;we=w*end*z
+  E,C=np.meshgrid(ee,x,indexing='ij');weight=(we[:,None]*w[None,:]).ravel();pn,pp,l,k,pe,nu,den=B.electron_events(E.ravel(),C.ravel(),K.MN,K.MP,K.ME)
+  phase=weight*pe*nu/(64*math.pi**3*K.MN*den*B.HBAR)
+ amp=B.amplitude(pn,pp,l,k);weight=phase*amp
+ if np.any(weight<=0):raise ArithmeticError('Positive full-current rest-event weight required')
+ return dict(pn=pn,pp=pp,e=l,nu=k,weight=weight,rate=float(sum(weight)),neutrino_energy=float(weight@k[:,0]),electron_energy=float(weight@l[:,0]),proton_energy=float(weight@pp[:,0]),max_four_residual=float(np.max(abs(pn-pp-l-k))))
+
+def oriented(rest,orient_order,phi_order):
+ if any(isinstance(n,bool)or not isinstance(n,int)or n<4 for n in(orient_order,phi_order)):raise ValueError('Integer angular orders>=4 required')
+ c,w=leggauss(orient_order);phi=2*math.pi*np.arange(phi_order)/phi_order;C,P=np.meshgrid(c,phi,indexing='ij');co=C.ravel();ph=P.ravel();si=np.sqrt(1-co*co);ow=np.repeat(w/(2*phi_order),phi_order);result={}
+ # Haar orientation average: Ry(theta)Rz(phi), overall bath-z azimuth integrated.
+ for name in('pn','pp','e','nu'):
+  v=rest[name];xx=v[:,1,None]*np.cos(ph)-v[:,2,None]*np.sin(ph);yy=v[:,1,None]*np.sin(ph)+v[:,2,None]*np.cos(ph);zz=np.broadcast_to(v[:,3,None],xx.shape)
+  result[name]=np.stack([np.broadcast_to(v[:,0,None],xx.shape),co*xx+si*zz,yy,-si*xx+co*zz],axis=-1).reshape((-1,4))
+ result['weight']=(rest['weight'][:,None]*ow).ravel();return result
+
+def integrate(bath,*,rest_order=12,parent_order=10,orient_order=6,phi_order=8,coordinate='pair',scenarios=None,budget_seconds=110.):
+ if isinstance(parent_order,bool)or not isinstance(parent_order,int)or parent_order<4 or not math.isfinite(budget_seconds)or not 0<budget_seconds<=120:raise ValueError('Integer parent order>=4 and bounded runtime required')
+ if scenarios is None:scenarios=[dict(name='unblocked',mode='unblocked'),dict(name='empty',mode='empty'),dict(name='LTE',mode='FD',mu_nu=bath.mu_n-bath.mu_p-bath.mu_e)]
+ for scenario in scenarios:
+  if scenario['mode']not in('unblocked','empty','FD'):raise ValueError('Explicit unblocked/empty/FD scenario required')
+  if scenario['mode']=='FD'and not math.isfinite(scenario['mu_nu']):raise ValueError('Finite prescribed common-T antinu chemical potential required')
+ start=time.monotonic();rest=rest_events(rest_order,coordinate);rot=oriented(rest,orient_order,phi_order);xr,wr=roots_genlaguerre(parent_order,.5)
+ accum={s['name']:dict(F={n:[]for n in NAMES},B={n:[]for n in NAMES},net=np.zeros(5),entropy=0.,max_chemical_log_residual=0.)for s in scenarios};density=0.;proper_density=0.;max_shell=0.;max_ledger=0.
+ for x,w in zip(xr,wr):
+  if time.monotonic()-start>budget_seconds:raise TimeoutError('Event batch exceeded explicit work budget; no total qualified')
+  T=bath.T;En=K.MN+T*x;p=math.sqrt(T*x*(2*K.MN+T*x));gamma=En/K.MN;velocity=p/En
+  # Spin2 d^3pn/(2pi hbarc)^3, x=(En-Mn)/T; Laguerre supplies sqrt(x)e^-x.
+  parent=w*T*math.sqrt(T*(2*K.MN+T*x))*En/(math.pi**2*HC**3)
+  fn=float(log_expit((bath.mu_n-En)/T));nfn=float(log_expit((En-bath.mu_n)/T));density+=parent*math.exp(x+fn);proper_density+=parent*math.exp(x+fn)/gamma
+  lab={}
+  for name in('pn','pp','e','nu'):
+   v=rot[name];vnew=v.copy();vnew[:,0]=gamma*(v[:,0]+velocity*v[:,3]);vnew[:,3]=gamma*(v[:,3]+velocity*v[:,0]);lab[name]=vnew
+  max_shell=max(max_shell,float(np.max(abs(lab['pn']-lab['pp']-lab['e']-lab['nu']))));max_ledger=max(max_ledger,float(np.max(abs(lab['pn'][:,0]-lab['pp'][:,0]-lab['e'][:,0]-lab['nu'][:,0]))))
+  E=np.column_stack([np.ones(len(rot['weight'])),lab['nu'][:,0],lab['e'][:,0],lab['pp'][:,0],lab['pn'][:,0]])
+  base=np.log(rot['weight'])+math.log(parent/gamma)+x
+  fp=log_expit((bath.mu_p-lab['pp'][:,0])/T);nfp=log_expit((lab['pp'][:,0]-bath.mu_p)/T);fe=log_expit((bath.mu_e-lab['e'][:,0])/T);nfe=log_expit((lab['e'][:,0]-bath.mu_e)/T)
+  for scenario in scenarios:
+   out=accum[scenario['name']];mode=scenario['mode']
+   if mode=='unblocked':lf=np.full(len(E),fn);lb=None
+   elif mode=='empty':lf=fn+nfp+nfe;lb=None
+   else:
+    fnu=log_expit((scenario['mu_nu']-lab['nu'][:,0])/T);nfnu=log_expit((lab['nu'][:,0]-scenario['mu_nu'])/T)
+    lf=fn+nfp+nfe+nfnu;lb=nfn+fp+fe+fnu
+    expected=(bath.mu_n-bath.mu_p-bath.mu_e-scenario['mu_nu'])/T;delta=lf-lb
+    out['max_chemical_log_residual']=max(out['max_chemical_log_residual'],float(np.max(abs(delta-expected))))
+   for i,name in enumerate(NAMES):
+    out['F'][name].append(float(logsumexp(base+lf+np.log(E[:,i]))))
+    if lb is not None:out['B'][name].append(float(logsumexp(base+lb+np.log(E[:,i]))))
+   if lb is None:net=np.exp(base+lf)
+   else:
+    delta=lf-lb;net=np.sign(delta)*np.exp(base+np.maximum(lf,lb))*(-np.expm1(-abs(delta)));out['entropy']+=float(np.sum(net*delta))
+   out['net']+=net@E
+ result={}
+ for scenario in scenarios:
+  out=accum[scenario['name']];forward={n:represented(float(logsumexp(v)))for n,v in out['F'].items()};backward={n:represented(float(logsumexp(v))if v else None)for n,v in out['B'].items()}
+  net=dict(zip(NAMES,[float(v)for v in out['net']]));material=net['proton_energy']+net['electron_energy']-net['neutron_energy'];scale=forward['neutrino_energy']['value']+(backward['neutrino_energy']['value']or0.)
+  result[scenario['name']]=dict(scenario=scenario,forward=forward,backward=backward,net=net,material_energy_change=material,radiation_energy_change=net['neutrino_energy'],energy_ledger_residual=material+net['neutrino_energy'],energy_ledger_scaled=(material+net['neutrino_energy'])/scale,matter_electron_lepton_change=net['number'],radiation_electron_lepton_change=-net['number'],entropy_production=out['entropy']if scenario['mode']=='FD'else None,max_chemical_log_residual=out['max_chemical_log_residual'],common_T_affinity=(bath.mu_n-bath.mu_p-bath.mu_e-scenario['mu_nu'])if scenario['mode']=='FD'else None)
+ return dict(bath=vars(bath),controls=dict(rest_order=rest_order,parent_order=parent_order,orient_order=orient_order,phi_order=phi_order,coordinate=coordinate),parent_density=density,parent_proper_density=proper_density,rest=dict(rate=rest['rate'],neutrino_energy=rest['neutrino_energy'],electron_energy=rest['electron_energy'],proton_energy=rest['proton_energy']),scenarios=result,max_fourmomentum_residual=max_shell,max_single_event_energy_ledger=max_ledger,seconds=time.monotonic()-start,units='number moments fm^-3 s^-1; energy moments MeV fm^-3 s^-1; entropy kB fm^-3 s^-1',inventory='n -> p+e-+antinu_e and inverse ONLY, no positron capture/muons/mean fields/Coulomb/radiative corrections',normalization='Spin2 parent momentum measure times spin-averaged exact rest decay; no extra neutrino DOS; actual FD forward/backward products separately summed')

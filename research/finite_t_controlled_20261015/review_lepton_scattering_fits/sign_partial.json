@@ -1,0 +1,65 @@
+{
+  "E": 8.14,
+  "fit": {
+    "E": 8.14,
+    "rate": 10.145818061242942,
+    "transport_rate": 7.22995145447298,
+    "outgoing_energy_moment": 82.65582496861823,
+    "neutrino_energy_change": 0.06886595010068675,
+    "method": "optional fixed-state Chebyshev moments",
+    "units": {
+      "rate": "s^-1 per incidentnue",
+      "transport_rate": "s^-1 per incidentnue",
+      "outgoing_energy_moment": "MeV s^-1 per incidentnue",
+      "neutrino_energy_change": "MeV s^-1 per incidentnue"
+    },
+    "state": {
+      "T_MeV": 2.0,
+      "mu_e_MeV": 0.17446333200826397,
+      "flavor": "nu_e",
+      "targets": [
+        "e-",
+        "e+"
+      ],
+      "outgoing_neutrinos": "unblocked"
+    },
+    "domain_MeV": [
+      1.0,
+      30.0
+    ],
+    "model_sha": "9067c895b38e43451cce803a39681db961abb7066eea2cb5d9fa2d7fc5dd2e9f",
+    "qualification": "Optional fixed-state moment fit; heldout report is measured evidence, not a uniform certificate. No spectral/AD-chain substitution.",
+    "measured_positive_gate_pass": true,
+    "signed_energy_RT_gate_pass": false,
+    "signed_energy_advice": "Derived signed value is diagnostic; use detailed quadrature when signed-energy accuracy is required. Coefficients were not retuned."
+  },
+  "actual": {
+    "E": 8.14,
+    "rate": 10.163061273722985,
+    "transport_rate": 7.241751164682684,
+    "outgoing_energy_moment": 82.610847852358,
+    "neutrino_energy_change": -0.11647091574722986,
+    "method": "actual detailed quadrature",
+    "units": {
+      "rate": "s^-1 per incidentnue",
+      "transport_rate": "s^-1 per incidentnue",
+      "outgoing_energy_moment": "MeV s^-1 per incidentnue",
+      "neutrino_energy_change": "MeV s^-1 per incidentnue"
+    },
+    "state": {
+      "T_MeV": 2.0,
+      "mu_e_MeV": 0.17446333200826397,
+      "flavor": "nu_e",
+      "targets": [
+        "e-",
+        "e+"
+      ],
+      "outgoing_neutrinos": "unblocked"
+    },
+    "domain_MeV": [
+      1.0,
+      30.0
+    ],
+    "model_sha": "9067c895b38e43451cce803a39681db961abb7066eea2cb5d9fa2d7fc5dd2e9f"
+  }
+}

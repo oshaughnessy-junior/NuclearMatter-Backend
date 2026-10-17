@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "point rejects T=0",
+      "passed": true
+    },
+    {
+      "name": "point rejects T=nan",
+      "passed": true
+    },
+    {
+      "name": "point rejects mua=inf",
+      "passed": true
+    },
+    {
+      "name": "point rejects Enu=0",
+      "passed": true
+    },
+    {
+      "name": "point rejects El=0.1",
+      "passed": true
+    },
+    {
+      "name": "point rejects cosine=1",
+      "passed": true
+    },
+    {
+      "name": "point rejects ml=-1",
+      "passed": true
+    },
+    {
+      "name": "point rejects anti=1",
+      "passed": true
+    },
+    {
+      "name": "point rejects Mweak=-1",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'order': True}",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'order': 3}",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'order': 4.5}",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'nphi': 0}",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'nphi': nan}",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'tail': nan}",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'tail': 0}",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'tail': 121}",
+      "passed": true
+    },
+    {
+      "name": "integration rejects {'current_model': 'wrong'}",
+      "passed": true
+    },
+    {
+      "name": "timelike unsupported",
+      "passed": true
+    },
+    {
+      "name": "point0 u0.0 independent bracketed pz",
+      "error": 1.0077480864572532e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "point0 u3.0 independent bracketed pz",
+      "error": 3.0508344530520567e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "point0 u17.0 independent bracketed pz",
+      "error": 3.2999343192278842e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "point1 u0.0 independent bracketed pz",
+      "error": 3.0919518898404503e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "point1 u3.0 independent bracketed pz",
+      "error": 5.121229117810654e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "point1 u17.0 independent bracketed pz",
+      "error": 9.95626821201265e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "point2 u0.0 independent bracketed pz",
+      "error": 7.120633231708916e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "point2 u3.0 independent bracketed pz",
+      "error": 6.574278722759727e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "point2 u17.0 independent bracketed pz",
+      "error": 4.650300685848735e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    }
+  ]
+}

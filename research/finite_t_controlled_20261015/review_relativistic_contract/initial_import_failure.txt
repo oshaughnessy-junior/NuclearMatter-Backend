@@ -1,0 +1,1 @@
+Initial review script stopped after kinematic/phase checks because allowed_capture exposes GF,VUD,HBARC through its constants namespace, not directly. AttributeError preserved; reviewed author code unchanged. Corrected review imports only and replayed exact probes.

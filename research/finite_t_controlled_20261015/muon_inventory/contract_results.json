@@ -1,0 +1,281 @@
+{
+  "scope": "EOS/stoichiometry/vacuum support only; no weak rates",
+  "checks": [
+    {
+      "name": "conserved:e-+p<->n+nue",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:e++n<->p+anue",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:n<->p+e-+anue",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:p<->n+e++nue",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:mu-+p<->n+numu",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:mu++n<->p+anumu",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:n<->p+mu-+anumu",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:p<->n+mu++numu",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:mu-<->e-+anue+numu",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:mu+<->e++nue+anumu",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:nue+mu-<->numu+e-",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:anue+mu+<->anumu+e+",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:anumu+mu-<->anue+e-",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:numu+mu+<->nue+e+",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:e-+mu+<->nue+anumu",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "conserved:e++mu-<->anue+numu",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "charge:T5.0",
+      "residual": -1.4566126083082054e-13,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "muonCP:T5.0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "GibbsMuon:T5.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "pairSymmetry:T5.0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "charge:T30.0",
+      "residual": 5.773159728050814e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "muonCP:T30.0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "GibbsMuon:T30.0",
+      "residual": -1.2307058883485773e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "pairSymmetry:T30.0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "vacuumNeutronMuonDecayForbidden",
+      "residual": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "states": [
+    {
+      "T": 5.0,
+      "nB": 0.16,
+      "Ye": 0.06,
+      "Ymu": 0.02,
+      "Yp": 0.08,
+      "electron": {
+        "temperature": 5.0,
+        "chemical_potential": 129.11007479951155,
+        "mass": 0.51099895069,
+        "net_density": 0.009599999999998188,
+        "particle_density": 0.009599999999998205,
+        "antiparticle_density": 2.0072251218043226e-17,
+        "energy_density": 0.9432527171069383,
+        "pressure": 0.3144079597462285,
+        "entropy_density": 0.0036407917556225675,
+        "free_energy_density": 0.9250487583288254,
+        "cv_fixed_net_density": 0.0036197329331924834,
+        "dn_dmu_fixed_temperature": 0.00022089976829071283,
+        "dn_dtemperature_fixed_mu": 5.601179202929287e-05,
+        "dmu_dtemperature_fixed_net_density": -0.2535620225530483
+      },
+      "muon": {
+        "temperature": 5.0,
+        "chemical_potential": 137.7470177222505,
+        "mass": 105.6583755,
+        "net_density": 0.003199999999999947,
+        "particle_density": 0.003199999999999947,
+        "antiparticle_density": 1.5784381265168634e-25,
+        "energy_density": 0.4106396062307125,
+        "pressure": 0.04338938675443098,
+        "entropy_density": 0.002647707254789848,
+        "free_energy_density": 0.3974010699567633,
+        "cv_fixed_net_density": 0.0025176960691374135,
+        "dn_dmu_fixed_temperature": 0.00016087839134446225,
+        "dn_dtemperature_fixed_mu": 6.697277343138516e-05,
+        "dmu_dtemperature_fixed_net_density": -0.41629440020933234
+      },
+      "zero_net_muon_pairs": {
+        "temperature": 5.0,
+        "chemical_potential": 0.0,
+        "mass": 105.6583755,
+        "net_density": 0.0,
+        "particle_density": 1.454727006903778e-13,
+        "antiparticle_density": 1.454727006903778e-13,
+        "energy_density": 3.304604840660263e-11,
+        "pressure": 1.4547270070675494e-12,
+        "entropy_density": 6.900155082734037e-12,
+        "free_energy_density": -1.4547270070675544e-12,
+        "cv_fixed_net_density": 1.506214628583107e-10,
+        "dn_dmu_fixed_temperature": 5.818908026304938e-14,
+        "dn_dtemperature_fixed_mu": 0.0,
+        "dmu_dtemperature_fixed_net_density": -0.0
+      },
+      "prescribed_composition_not_weak_equilibrium": true
+    },
+    {
+      "T": 30.0,
+      "nB": 0.16,
+      "Ye": 0.06,
+      "Ymu": 0.02,
+      "Yp": 0.08,
+      "electron": {
+        "temperature": 30.0,
+        "chemical_potential": 107.1975165757916,
+        "mass": 0.51099895069,
+        "net_density": 0.009600000000000065,
+        "particle_density": 0.009619913463209027,
+        "antiparticle_density": 1.991346320896176e-05,
+        "energy_density": 1.229717307762516,
+        "pressure": 0.4098974762266823,
+        "entropy_density": 0.020350620828719728,
+        "free_energy_density": 0.6191986829009243,
+        "cv_fixed_net_density": 0.018884220735186367,
+        "dn_dmu_fixed_temperature": 0.00019057702786442568,
+        "dn_dtemperature_fixed_mu": 0.00027903283366022865,
+        "dmu_dtemperature_fixed_net_density": -1.464147262589956
+      },
+      "muon": {
+        "temperature": 30.0,
+        "chemical_potential": 99.7311597681919,
+        "mass": 105.6583755,
+        "net_density": 0.003200000000000009,
+        "particle_density": 0.0032049944040135575,
+        "antiparticle_density": 4.994404013548205e-06,
+        "energy_density": 0.5412615809199919,
+        "pressure": 0.10504787452394573,
+        "entropy_density": 0.01090565813952411,
+        "free_energy_density": 0.21409183673426857,
+        "cv_fixed_net_density": 0.007235192301003431,
+        "dn_dmu_fixed_temperature": 9.09731050336834e-05,
+        "dn_dtemperature_fixed_mu": 0.00022360070314896054,
+        "dmu_dtemperature_fixed_net_density": -2.4578770073437735
+      },
+      "zero_net_muon_pairs": {
+        "temperature": 30.0,
+        "chemical_potential": 0.0,
+        "mass": 105.6583755,
+        "net_density": 0.0,
+        "particle_density": 0.00013764460999375497,
+        "antiparticle_density": 0.00013764460999375497,
+        "energy_density": 0.0449106389479051,
+        "pressure": 0.008292996723431407,
+        "entropy_density": 0.001773454522377885,
+        "free_energy_density": -0.00829299672343145,
+        "cv_fixed_net_density": 0.008706973802785251,
+        "dn_dmu_fixed_temperature": 9.100779940747451e-06,
+        "dn_dtemperature_fixed_mu": 0.0,
+        "dmu_dtemperature_fixed_net_density": -0.0
+      },
+      "prescribed_composition_not_weak_equilibrium": true
+    }
+  ],
+  "vacuum_threshold_MeV": {
+    "nu_mu_on_rest_neutron": 110.1613730132226,
+    "antinu_mu_on_rest_proton": 113.04731059534438,
+    "static_nu_mu_threshold": 104.36504313999998,
+    "vacuum_neutron_muon_decay_energy_excess": -104.36504313999998,
+    "inverse_muon_decay_nu_mu_on_rest_electron": 10923.144928475347
+  },
+  "source_sha256": {
+    "muon_inventory/contract_probes.py": "b6c3a41d7eca840abd85e8b3d3257348aaeb7280d335ceff5f325a3105f0e320",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "passed": true
+}

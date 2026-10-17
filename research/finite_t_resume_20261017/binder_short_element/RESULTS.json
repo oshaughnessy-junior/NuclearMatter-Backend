@@ -1,0 +1,147 @@
+{
+  "checks": [
+    {
+      "name": "rest-inclusive energy/gross escape 2",
+      "error": 0.00025081515251898235,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "electron Le/gross emitted 2",
+      "error": -6.607730263285779e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint particle number (2, 'neutron')",
+      "error": 1.4654943925052066e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "endpoint particle number (2, 'proton')",
+      "error": 2.5979218776228663e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "endpoint charge 2",
+      "error": -2.1316282072803006e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "material entropy chain 2",
+      "error": -2.967417334798406e-05,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "rest-inclusive energy/gross escape 4",
+      "error": 0.00012537347512689222,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "electron Le/gross emitted 4",
+      "error": -2.67955819842176e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "endpoint particle number (4, 'neutron')",
+      "error": 1.7763568394002505e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "endpoint particle number (4, 'proton')",
+      "error": 2.5091040356528538e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "endpoint charge 4",
+      "error": -2.8310687127941492e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "material entropy chain 4",
+      "error": -1.466825768826511e-05,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "source energy ledger 0",
+      "error": 3.086138390558375e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "source energy ledger 1",
+      "error": 4.625838075086354e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "source energy ledger 2",
+      "error": -9.255047051228564e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "source energy ledger 3",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "source energy ledger 4",
+      "error": 4.624162450532017e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    }
+  ],
+  "passed": 17,
+  "failed": [],
+  "rows": [
+    {
+      "steps": 2,
+      "endpoint_T": 1.999409520470466,
+      "endpoint_Ye": 0.3015699483091133,
+      "escaped_energy": 3.0289688969002083e-09,
+      "material_energy_change": -3.028209185604357e-09,
+      "energy_defect": 7.597112958512794e-13,
+      "energy_defect_over_thermal_initial": 2.8351473458541035e-07,
+      "energy_defect_over_escape": 0.00025081515251898235,
+      "thermal_initial": 2.6796183872496837e-06,
+      "material_entropy_change_per_baryon": -0.012944134588451561,
+      "material_entropy_integral": -0.012943750493355648,
+      "escaped_nue": 6.624632334048025e-11,
+      "escaped_anti": 2.2324115425181552e-10
+    },
+    {
+      "steps": 4,
+      "endpoint_T": 1.9994096263001466,
+      "endpoint_Ye": 0.3015684519688716,
+      "escaped_energy": 3.027953489378919e-09,
+      "material_energy_change": -3.027573864327433e-09,
+      "energy_defect": 3.7962505148603445e-13,
+      "energy_defect_over_thermal_initial": 1.416713115913775e-07,
+      "energy_defect_over_escape": 0.00012537347512689222,
+      "thermal_initial": 2.6796183872496837e-06,
+      "material_entropy_change_per_baryon": -0.012943047249748929,
+      "material_entropy_integral": -0.012942857400581355,
+      "escaped_nue": 6.628070091472635e-11,
+      "escaped_anti": 2.2312589780188914e-10
+    }
+  ],
+  "step_difference": {
+    "T": -1.0582968057448738e-07,
+    "Ye": 1.496340241713412e-06
+  },
+  "fresh_source_calls": 5,
+  "initial_source_reused": "Same executed group0 source, checked canonical identity, shared ONLY between initial stages",
+  "qualification": "Two Euler rungs measure temporal sensitivity, not a convergence order/domain certificate. Complete3CC free model only, no long trajectory/hydro claim."
+}

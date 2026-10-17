@@ -1,0 +1,21 @@
+{
+  "tag": "dilute",
+  "channel_moments": {
+    "capture": {
+      "number_cm3_s": 1.4074132363348082e+32,
+      "energy_MeV_cm3_s": 1.50129190296664e+33
+    },
+    "crossed_neutron_decay": {
+      "number_cm3_s": 1.2212155615483633e+28,
+      "energy_MeV_cm3_s": 5.748229031057936e+27
+    }
+  },
+  "sum_relative_errors": [
+    2.220446049250313e-16,
+    4.440892098500626e-16
+  ],
+  "passed": true,
+  "guard_count": 15,
+  "runtime_seconds": 13.301650709006935,
+  "qualification": "Inventory sum audit at already refined outer8 nodes; not separate per-channel continuum convergence"
+}

@@ -1,0 +1,259 @@
+{
+  "checks": [
+    {
+      "name": "isolated authorphi12to24 forwardnumber",
+      "error": -8.647220162139035e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute forwardnumber",
+      "error": -9.28812582401406e-13,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 forwardnu_energy",
+      "error": -1.5435273204023048e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute forwardnu_energy",
+      "error": -2.6744162440195396e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 forwardantinu_energy",
+      "error": -6.442427369357517e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute forwardantinu_energy",
+      "error": -7.08988423525625e-13,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 forwardelectron_energy",
+      "error": -1.1052662884925013e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute forwardelectron_energy",
+      "error": -1.6908696665041134e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 forwardpositron_energy",
+      "error": -1.0793563509636783e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute forwardpositron_energy",
+      "error": -1.6846524175662125e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 backwardnumber",
+      "error": -8.64722035087695e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute backwardnumber",
+      "error": -9.278133816792433e-13,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 backwardnu_energy",
+      "error": -1.5435273215125278e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute backwardnu_energy",
+      "error": -2.6754154447417022e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 backwardantinu_energy",
+      "error": -6.442427169517373e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute backwardantinu_energy",
+      "error": -7.097655796428626e-13,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 backwardelectron_energy",
+      "error": -1.1052662884925013e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute backwardelectron_energy",
+      "error": -1.691868867226276e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated authorphi12to24 backwardpositron_energy",
+      "error": -1.0793563687272467e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined phi independent absolute backwardpositron_energy",
+      "error": -1.6835421945415874e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    }
+  ],
+  "result": {
+    "T": 2,
+    "mu_e": 0.17446333200826397,
+    "mass_e": 0.51099895069,
+    "flavor": "e",
+    "sin2w": 0.23129,
+    "cv": 0.96258,
+    "ca": 0.5,
+    "totals": {
+      "number": {
+        "log": -15.62230065185939,
+        "value": 1.6418029522330715e-07,
+        "representable": true,
+        "reason": null
+      },
+      "nu_energy": {
+        "log": -13.48693508076394,
+        "value": 1.3889880733028734e-06,
+        "representable": true,
+        "reason": null
+      },
+      "antinu_energy": {
+        "log": -13.479944572981095,
+        "value": 1.3987318224375445e-06,
+        "representable": true,
+        "reason": null
+      },
+      "electron_energy": {
+        "log": -13.483271890683568,
+        "value": 1.39408553141353e-06,
+        "representable": true,
+        "reason": null
+      },
+      "positron_energy": {
+        "log": -13.483595572479052,
+        "value": 1.3936343643268893e-06,
+        "representable": true,
+        "reason": null
+      }
+    },
+    "forward": {
+      "number": {
+        "log": -15.62230065185939,
+        "value": 1.6418029522330715e-07,
+        "representable": true,
+        "reason": null
+      },
+      "nu_energy": {
+        "log": -13.48693508076394,
+        "value": 1.3889880733028734e-06,
+        "representable": true,
+        "reason": null
+      },
+      "antinu_energy": {
+        "log": -13.479944572981095,
+        "value": 1.3987318224375445e-06,
+        "representable": true,
+        "reason": null
+      },
+      "electron_energy": {
+        "log": -13.483271890683568,
+        "value": 1.39408553141353e-06,
+        "representable": true,
+        "reason": null
+      },
+      "positron_energy": {
+        "log": -13.483595572479052,
+        "value": 1.3936343643268893e-06,
+        "representable": true,
+        "reason": null
+      }
+    },
+    "backward": {
+      "number": {
+        "log": -14.82230065185939,
+        "value": 3.653899666714467e-07,
+        "representable": true,
+        "reason": null
+      },
+      "nu_energy": {
+        "log": -12.686935080763941,
+        "value": 3.091249806323437e-06,
+        "representable": true,
+        "reason": null
+      },
+      "antinu_energy": {
+        "log": -12.679944572981096,
+        "value": 3.1129349188196104e-06,
+        "representable": true,
+        "reason": null
+      },
+      "electron_energy": {
+        "log": -12.683271890683569,
+        "value": 3.1025944079799793e-06,
+        "representable": true,
+        "reason": null
+      },
+      "positron_energy": {
+        "log": -12.683595572479051,
+        "value": 3.101590317163077e-06,
+        "representable": true,
+        "reason": null
+      }
+    },
+    "net": {
+      "number": -2.0120967144813838e-07,
+      "nu_energy": -1.7022617330205566e-06,
+      "antinu_energy": -1.7142030963820653e-06,
+      "electron_energy": -1.7085088765664434e-06,
+      "positron_energy": -1.7079559528361866e-06
+    },
+    "entropy": 1.6096773715851098e-07,
+    "max_affinity_error": 3.869571330028521e-12,
+    "electron_density": 2.034286367843274e-07,
+    "positron_density": 1.7342863678432775e-07,
+    "anchor_number": 1.8942019361365157e-07,
+    "anchor_total_energy": 3.113156581765382e-06,
+    "max_fourmomentum_residual": 6.91379753830843e-14,
+    "runtime": 11.89151916699484,
+    "controls": {
+      "radial": 20,
+      "incident": 10,
+      "outgoing": 10,
+      "azimuth": 24,
+      "tail": 60.0
+    },
+    "radiation": {
+      "temperature": 2,
+      "mu_nu": 0.5,
+      "mu_antinu": 1.1
+    },
+    "units": "event number fm^-3 s^-1; energies MeV fm^-3 s^-1"
+  },
+  "passed": true,
+  "diagnosis": "Authorcontrol ladderskeptphi12fixed; newisolatedphi24 distinguishes that quadrature error from different CM-axis implementation."
+}

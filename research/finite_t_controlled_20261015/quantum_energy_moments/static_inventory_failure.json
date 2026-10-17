@@ -1,0 +1,23 @@
+{
+  "status": "open_gate",
+  "experiment": "Heavy M=1e7 MeV T=2 dilute antineutrino full positron-capture plus neutron-decay inventory",
+  "error": "ArithmeticError: Selected coefficient underflow/nonfinite; log transfer extension needed",
+  "source": "quantum_slab/fixed_bath.py coefficients strict positive j,chi contract",
+  "interpretation": "The existing selected-energy wrapper cannot integrate across numerically vanishing emission bands in this sharper static limit. No kernel modification or zero-floor substitution was made. Selected-energy heavy-M results do not close the integrated gate.",
+  "numeric_result": null,
+  "first_failure_energy_MeV": 0.8313293913178066,
+  "panel": [
+    0.78233341,
+    1.8043313099999998
+  ],
+  "calls_to_failure": 38,
+  "diagnostic_runtime_seconds": 10.347905791830271,
+  "capture_log_j_chi": [
+    -1869628.0646091043,
+    -1869620.0019187753
+  ],
+  "crossed_log_j_chi": [
+    -8402.123422410128,
+    -8394.06073208042
+  ]
+}

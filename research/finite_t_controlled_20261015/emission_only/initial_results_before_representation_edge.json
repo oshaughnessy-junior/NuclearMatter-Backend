@@ -1,0 +1,1609 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "neutron independent FD fugacity-series density",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "proton independent FD fugacity-series density",
+      "error": 1.2212453270876722e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "absolute heavyM positron_capture number",
+      "error": 5.449963403165503e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "outer8->20 positron_capture number",
+      "error": 4.989516368083351e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer12->20 positron_capture number",
+      "error": 1.9522161664818194e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff12.0->30 positron_capture number",
+      "error": 8.972378395770413e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff18.0->30 positron_capture number",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "absolute heavyM positron_capture energy",
+      "error": 6.268254029706038e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "outer8->20 positron_capture energy",
+      "error": 3.14089732494128e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer12->20 positron_capture energy",
+      "error": 1.3177015034584241e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff12.0->30 positron_capture energy",
+      "error": 4.141043063924123e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff18.0->30 positron_capture energy",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "absolute heavyM neutron_decay number",
+      "error": 6.69218445292241e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "outer8->20 neutron_decay number",
+      "error": 5.238633753528122e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer12->20 neutron_decay number",
+      "error": 8.513708885264425e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff12.0->30 neutron_decay number",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff18.0->30 neutron_decay number",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "absolute heavyM neutron_decay energy",
+      "error": 1.8487742824774286e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "outer8->20 neutron_decay energy",
+      "error": 8.689724912159299e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer12->20 neutron_decay energy",
+      "error": 1.40898635974189e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff12.0->30 neutron_decay energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff18.0->30 neutron_decay energy",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "absolute heavyM combined number",
+      "error": 4.1393496945022525e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "outer8->20 combined number",
+      "error": 1.0828088416974435e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer12->20 combined number",
+      "error": 1.8081358648917986e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff12.0->30 combined number",
+      "error": 7.052136652394128e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff18.0->30 combined number",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "absolute heavyM combined energy",
+      "error": 5.893993670332435e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "outer8->20 combined energy",
+      "error": 3.7070582360579564e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer12->20 combined energy",
+      "error": 6.370868279401608e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff12.0->30 combined energy",
+      "error": 3.950262339380254e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer tail cutoff18.0->30 combined energy",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "internal24->36tail60 neutron_decay E0.1",
+      "error": 3.0198066269803804e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "internal24->36tail60 neutron_decay E0.4",
+      "error": 7.993605777301096e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "internal24->36tail60 neutron_decay E0.7",
+      "error": 9.769962616701425e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "internal24->36tail60 positron_capture E2.1",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "internal24->36tail60 positron_capture E4.0",
+      "error": 5.3290705182007656e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "gap witness log coefficients remain finite",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "gap witness ordinary combined flagged unavailable",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "state": {
+    "T_MeV": 0.3,
+    "mass_MeV": 10000000.0,
+    "mu_e_prescribed_MeV": 0.0,
+    "neutron": {
+      "T": 0.3,
+      "mass": 10000000.0,
+      "offset": 1.29333236,
+      "kinetic_mu": -4.205983326986656,
+      "density": 6.999999999999993e-05,
+      "kinetic_energy_density": 3.150000453890328e-05,
+      "energy_density": 0.00012203326973890317,
+      "pressure": 2.100000302593552e-05,
+      "entropy_density": 0.0011563961348463481,
+      "free_energy_density": -0.00022488557071500127,
+      "dn_dmu": 0.00023333326609034064,
+      "dn_dT_fixed_mu": 0.0036213194226910467,
+      "dmu_dT_fixed_density": -15.519944855565365,
+      "cv_fixed_density": 0.00010499999243514363,
+      "fluctuation_A0": 6.999997982710219e-05,
+      "fluctuation_A1": 0.0003259187480421942,
+      "fluctuation_A2": 0.0015269222984220898,
+      "fermi_momentum": 25.158967658504324,
+      "temperature_over_mass": 3e-08,
+      "fermi_momentum_over_mass": 2.5158967658504324e-06,
+      "mu": -2.9126509669866563,
+      "classical_density_over_actual_minus1": 2.8818437991517953e-07,
+      "fugacity": 8.151086470807946e-07
+    },
+    "proton": {
+      "T": 0.3,
+      "mass": 10000000.0,
+      "offset": 0.0,
+      "kinetic_mu": -4.460172734505886,
+      "density": 2.9999999999996003e-05,
+      "kinetic_energy_density": 1.350000083367432e-05,
+      "energy_density": 1.350000083367432e-05,
+      "pressure": 9.000000555782881e-06,
+      "entropy_density": 0.0005210172780820531,
+      "free_energy_density": -0.00014280518259094158,
+      "dn_dmu": 9.999998764923075e-05,
+      "dn_dT_fixed_mu": 0.001636724061213395,
+      "dmu_dT_fixed_density": -16.36724263361432,
+      "cv_fixed_density": 4.4999998610530056e-05,
+      "fluctuation_A0": 2.9999996294769224e-05,
+      "fluctuation_A1": 0.00014730516550920554,
+      "fluctuation_A2": 0.0007273438153971125,
+      "fermi_momentum": 18.96853928757964,
+      "temperature_over_mass": 3e-08,
+      "fermi_momentum_over_mass": 1.8968539287579642e-06,
+      "mu": -4.460172734505886,
+      "classical_density_over_actual_minus1": 1.2350758149537455e-07,
+      "fugacity": 3.493322197933899e-07
+    },
+    "charge_neutrality_imposed": false
+  },
+  "runs": [
+    {
+      "log_moments": {
+        "positron_capture": [
+          -15.192986879507492,
+          -14.209907576586636
+        ],
+        "neutron_decay": [
+          -16.492890646864943,
+          -17.23947045242261
+        ],
+        "combined": [
+          -14.95195781522968,
+          -14.162702703874926
+        ]
+      },
+      "values": {
+        "positron_capture": {
+          "number_fm3_s": {
+            "log_value": -15.192986879507492,
+            "representable": true,
+            "value": 2.522142582546564e-07,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -14.209907576586636,
+            "representable": true,
+            "value": 6.740863782621389e-07,
+            "reason": null
+          }
+        },
+        "neutron_decay": {
+          "number_fm3_s": {
+            "log_value": -16.492890646864943,
+            "representable": true,
+            "value": 6.87430190349688e-08,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -17.23947045242261,
+            "representable": true,
+            "value": 3.2583153288967176e-08,
+            "reason": null
+          }
+        },
+        "combined": {
+          "number_fm3_s": {
+            "log_value": -14.95195781522968,
+            "representable": true,
+            "value": 3.209572772896254e-07,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -14.162702703874926,
+            "representable": true,
+            "value": 7.066695315511066e-07,
+            "reason": null
+          }
+        }
+      },
+      "panels": [
+        {
+          "lo": 0.0,
+          "hi": 0.1,
+          "log_number_energy": {
+            "positron_capture": [
+              -19723439.794197984,
+              -19723442.09717738
+            ],
+            "neutron_decay": [
+              -21.281030505856318,
+              -23.8807678143965
+            ]
+          }
+        },
+        {
+          "lo": 0.1,
+          "hi": 0.4,
+          "log_number_energy": {
+            "positron_capture": [
+              -18002632.50900303,
+              -18002633.425589472
+            ],
+            "neutron_decay": [
+              -17.62464628065175,
+              -18.862172747359498
+            ]
+          }
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.7790813103978795,
+          "log_number_energy": {
+            "positron_capture": [
+              -14109005.89584118,
+              -14109006.145672878
+            ],
+            "neutron_decay": [
+              -16.89548839781051,
+              -17.462236704420874
+            ]
+          }
+        },
+        {
+          "lo": 0.7790813103978795,
+          "hi": 0.7812493763392931,
+          "log_number_energy": {
+            "positron_capture": [
+              -14039683.111777965,
+              -14039683.358639935
+            ],
+            "neutron_decay": [
+              -24.086401871994823,
+              -24.334771222554856
+            ]
+          }
+        },
+        {
+          "lo": 0.7812493763392931,
+          "hi": 0.7820624010673233,
+          "log_number_energy": {
+            "positron_capture": [
+              -14015416.736638661,
+              -14015416.982459817
+            ],
+            "neutron_decay": [
+              -25.661670303936223,
+              -25.908067387085065
+            ]
+          }
+        },
+        {
+          "lo": 0.7820624010673233,
+          "hi": 0.78233340931,
+          "log_number_energy": {
+            "positron_capture": [
+              -14007336.77170494,
+              -14007337.017179351
+            ],
+            "neutron_decay": [
+              -27.653505512379756,
+              -27.899184338913123
+            ]
+          }
+        },
+        {
+          "lo": 0.78233340931,
+          "hi": 0.7826044175526766,
+          "log_number_energy": {
+            "positron_capture": [
+              -13999576.743250413,
+              -13999576.988391953
+            ],
+            "neutron_decay": [
+              -29.49887827909212,
+              -29.744257942990693
+            ]
+          }
+        },
+        {
+          "lo": 0.7826044175526766,
+          "hi": 0.7834174422807068,
+          "log_number_energy": {
+            "positron_capture": [
+              -13975779.906399688,
+              -13975780.150530083
+            ],
+            "neutron_decay": [
+              -33.64892914682192,
+              -33.894000518881676
+            ]
+          }
+        },
+        {
+          "lo": 0.7834174422807068,
+          "hi": 0.7855855082221204,
+          "log_number_energy": {
+            "positron_capture": [
+              -13911571.161031924,
+              -13911571.402466403
+            ],
+            "neutron_decay": [
+              -66.38583569936344,
+              -66.62990292230312
+            ]
+          }
+        },
+        {
+          "lo": 0.7855855082221204,
+          "hi": 1.1,
+          "log_number_energy": {
+            "positron_capture": [
+              -5498809.603827841,
+              -5498809.5198190035
+            ],
+            "neutron_decay": [
+              -339.32042250031884,
+              -339.56159070161857
+            ]
+          }
+        },
+        {
+          "lo": 1.1,
+          "hi": 1.796830846280874,
+          "log_number_energy": {
+            "positron_capture": [
+              -6474.428041850788,
+              -6473.857381959392
+            ],
+            "neutron_decay": [
+              -1230132.3508163302,
+              -1230132.2552564477
+            ]
+          }
+        },
+        {
+          "lo": 1.796830846280874,
+          "hi": 1.801831155886958,
+          "log_number_energy": {
+            "positron_capture": [
+              -68.17379705293611,
+              -67.5851027089236
+            ],
+            "neutron_decay": [
+              -4559520.65558783,
+              -4559520.06956226
+            ]
+          }
+        },
+        {
+          "lo": 1.801831155886958,
+          "hi": 1.8037062719892394,
+          "log_number_energy": {
+            "positron_capture": [
+              -32.43246976328324,
+              -31.84268314735709
+            ],
+            "neutron_decay": [
+              -4579348.929494749,
+              -4579348.340690882
+            ]
+          }
+        },
+        {
+          "lo": 1.8037062719892394,
+          "hi": 1.8043313106899999,
+          "log_number_energy": {
+            "positron_capture": [
+              -28.27766676781449,
+              -27.68757128035917
+            ],
+            "neutron_decay": [
+              -4586771.859629596,
+              -4586771.269785871
+            ]
+          }
+        },
+        {
+          "lo": 1.8043313106899999,
+          "hi": 1.8049563493907603,
+          "log_number_energy": {
+            "positron_capture": [
+              -26.431737972259167,
+              -25.841343401523158
+            ],
+            "neutron_decay": [
+              -4589244.844446858,
+              -4589244.254256664
+            ]
+          }
+        },
+        {
+          "lo": 1.8049563493907603,
+          "hi": 1.8068314654930417,
+          "log_number_energy": {
+            "positron_capture": [
+              -24.43925405733293,
+              -23.848141955404937
+            ],
+            "neutron_decay": [
+              -4591717.874872339,
+              -4591717.284335521
+            ]
+          }
+        },
+        {
+          "lo": 1.8068314654930417,
+          "hi": 1.8118317750991257,
+          "log_number_energy": {
+            "positron_capture": [
+              -22.862053945820737,
+              -22.268976570861238
+            ],
+            "neutron_decay": [
+              -4599133.473420466,
+              -4599132.881844636
+            ]
+          }
+        },
+        {
+          "lo": 1.8118317750991257,
+          "hi": 2.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -17.72548110293422,
+              -17.071616389353185
+            ],
+            "neutron_decay": [
+              -4619143.556166106,
+              -4619142.961786801
+            ]
+          }
+        },
+        {
+          "lo": 2.0,
+          "hi": 3.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -15.584085404131622,
+              -14.682593087944833
+            ],
+            "neutron_decay": [
+              -5314984.710651282,
+              -5314984.017307009
+            ]
+          }
+        },
+        {
+          "lo": 3.0,
+          "hi": 4.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -16.746464160038528,
+              -15.53472111359089
+            ],
+            "neutron_decay": [
+              -7988218.823735996,
+              -7988217.724992308
+            ]
+          }
+        },
+        {
+          "lo": 4.0,
+          "hi": 6.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -18.638225589615665,
+              -17.153252893024405
+            ],
+            "neutron_decay": [
+              -9633139.96158974,
+              -9633138.575098287
+            ]
+          }
+        },
+        {
+          "lo": 6.0,
+          "hi": 9.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -23.53330942954992,
+              -21.680965670723705
+            ],
+            "neutron_decay": [
+              -11541534.301895471,
+              -11541532.509938909
+            ]
+          }
+        },
+        {
+          "lo": 9.0,
+          "hi": 12.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -31.82294829410335,
+              -29.58800710687631
+            ],
+            "neutron_decay": [
+              -13004687.37967321,
+              -13004685.182317235
+            ]
+          }
+        },
+        {
+          "lo": 12.0,
+          "hi": 18.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -40.629643179380444,
+              -38.117335663949724
+            ],
+            "neutron_decay": [
+              -13809106.217810467,
+              -13809103.732706724
+            ]
+          }
+        },
+        {
+          "lo": 18.0,
+          "hi": 30.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -58.96800122002125,
+              -56.05981207612408
+            ],
+            "neutron_decay": [
+              -14673520.290986422,
+              -14673517.400351884
+            ]
+          }
+        }
+      ],
+      "outer_order": 8,
+      "internal_order": 24,
+      "angle_order": 24,
+      "internal_tail": 40.0,
+      "cutoff_MeV": 30.0,
+      "units": "number fm^-3 s^-1; energy MeV fm^-3 s^-1; one neutrino helicity"
+    },
+    {
+      "log_moments": {
+        "positron_capture": [
+          -15.19298688451653,
+          -14.20990757974071
+        ],
+        "neutron_decay": [
+          -16.49289011448772,
+          -17.239469569359876
+        ],
+        "combined": [
+          -14.951957705140654,
+          -14.162702666167256
+        ]
+      },
+      "values": {
+        "positron_capture": {
+          "number_fm3_s": {
+            "log_value": -15.19298688451653,
+            "representable": true,
+            "value": 2.522142569913055e-07,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -14.20990757974071,
+            "representable": true,
+            "value": 6.740863761360203e-07,
+            "reason": null
+          }
+        },
+        "neutron_decay": {
+          "number_fm3_s": {
+            "log_value": -16.49289011448772,
+            "representable": true,
+            "value": 6.874305563219601e-08,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -17.239469569359876,
+            "representable": true,
+            "value": 3.258318206194825e-08,
+            "reason": null
+          }
+        },
+        "combined": {
+          "number_fm3_s": {
+            "log_value": -14.951957705140654,
+            "representable": true,
+            "value": 3.2095731262350135e-07,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -14.162702666167256,
+            "representable": true,
+            "value": 7.066695581979686e-07,
+            "reason": null
+          }
+        }
+      },
+      "panels": [
+        {
+          "lo": 0.0,
+          "hi": 0.1,
+          "log_number_energy": {
+            "positron_capture": [
+              -19723255.55299021,
+              -19723257.85566031
+            ],
+            "neutron_decay": [
+              -21.2810305058563,
+              -23.88076781439648
+            ]
+          }
+        },
+        {
+          "lo": 0.1,
+          "hi": 0.4,
+          "log_number_energy": {
+            "positron_capture": [
+              -18002126.003223464,
+              -18002126.91957795
+            ],
+            "neutron_decay": [
+              -17.62464628065131,
+              -18.862172747357945
+            ]
+          }
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.7790813103978795,
+          "log_number_energy": {
+            "positron_capture": [
+              -14105491.483502867,
+              -14105491.733184088
+            ],
+            "neutron_decay": [
+              -16.895487601532157,
+              -17.46223560101028
+            ]
+          }
+        },
+        {
+          "lo": 0.7790813103978795,
+          "hi": 0.7812493763392931,
+          "log_number_energy": {
+            "positron_capture": [
+              -14039664.628019728,
+              -14039664.87488084
+            ],
+            "neutron_decay": [
+              -24.086401872022197,
+              -24.334771222582326
+            ]
+          }
+        },
+        {
+          "lo": 0.7812493763392931,
+          "hi": 0.7820624010673233,
+          "log_number_energy": {
+            "positron_capture": [
+              -14015410.774551736,
+              -14015411.02037257
+            ],
+            "neutron_decay": [
+              -25.661670337784855,
+              -25.908067420969125
+            ]
+          }
+        },
+        {
+          "lo": 0.7820624010673233,
+          "hi": 0.78233340931,
+          "log_number_energy": {
+            "positron_capture": [
+              -14007335.806168517,
+              -14007336.05164282
+            ],
+            "neutron_decay": [
+              -27.653505513756446,
+              -27.899184340289622
+            ]
+          }
+        },
+        {
+          "lo": 0.78233340931,
+          "hi": 0.7826044175526766,
+          "log_number_energy": {
+            "positron_capture": [
+              -13999408.378033303,
+              -13999408.623167584
+            ],
+            "neutron_decay": [
+              -29.498878282710233,
+              -29.744257946603785
+            ]
+          }
+        },
+        {
+          "lo": 0.7826044175526766,
+          "hi": 0.7834174422807068,
+          "log_number_energy": {
+            "positron_capture": [
+              -13975262.078838028,
+              -13975262.322946668
+            ],
+            "neutron_decay": [
+              -33.64881579761408,
+              -33.893887136546276
+            ]
+          }
+        },
+        {
+          "lo": 0.7834174422807068,
+          "hi": 0.7855855082221204,
+          "log_number_energy": {
+            "positron_capture": [
+              -13910195.281461533,
+              -13910195.522838159
+            ],
+            "neutron_decay": [
+              -66.40869364312454,
+              -66.65276244056085
+            ]
+          }
+        },
+        {
+          "lo": 0.7855855082221204,
+          "hi": 1.1,
+          "log_number_energy": {
+            "positron_capture": [
+              -5362716.276150155,
+              -5362716.186100038
+            ],
+            "neutron_decay": [
+              -323.47408698463363,
+              -323.7153789335598
+            ]
+          }
+        },
+        {
+          "lo": 1.1,
+          "hi": 1.796830846280874,
+          "log_number_energy": {
+            "positron_capture": [
+              -2181.1557169946386,
+              -2180.5768360011934
+            ],
+            "neutron_decay": [
+              -1228995.9058648432,
+              -1228995.8105008171
+            ]
+          }
+        },
+        {
+          "lo": 1.796830846280874,
+          "hi": 1.801831155886958,
+          "log_number_energy": {
+            "positron_capture": [
+              -66.02036557265149,
+              -65.4316130610166
+            ],
+            "neutron_decay": [
+              -4559516.045709673,
+              -4559515.459684965
+            ]
+          }
+        },
+        {
+          "lo": 1.801831155886958,
+          "hi": 1.8037062719892394,
+          "log_number_energy": {
+            "positron_capture": [
+              -32.43367064636416,
+              -31.8438835522691
+            ],
+            "neutron_decay": [
+              -4579348.1634101095,
+              -4579347.574606565
+            ]
+          }
+        },
+        {
+          "lo": 1.8037062719892394,
+          "hi": 1.8043313106899999,
+          "log_number_energy": {
+            "positron_capture": [
+              -28.27766677757587,
+              -27.687571290128112
+            ],
+            "neutron_decay": [
+              -4586772.577200764,
+              -4586771.987357111
+            ]
+          }
+        },
+        {
+          "lo": 1.8043313106899999,
+          "hi": 1.8049563493907603,
+          "log_number_energy": {
+            "positron_capture": [
+              -26.431737973620713,
+              -25.8413434028849
+            ],
+            "neutron_decay": [
+              -4589245.562182917,
+              -4589244.9719927935
+            ]
+          }
+        },
+        {
+          "lo": 1.8049563493907603,
+          "hi": 1.8068314654930417,
+          "log_number_energy": {
+            "positron_capture": [
+              -24.439254090492554,
+              -23.84814198852954
+            ],
+            "neutron_decay": [
+              -4591717.112520733,
+              -4591716.521984236
+            ]
+          }
+        },
+        {
+          "lo": 1.8068314654930417,
+          "hi": 1.8118317750991257,
+          "log_number_energy": {
+            "positron_capture": [
+              -22.86205394584801,
+              -22.268976570888416
+            ],
+            "neutron_decay": [
+              -4599128.895409629,
+              -4599128.303834653
+            ]
+          }
+        },
+        {
+          "lo": 1.8118317750991257,
+          "hi": 2.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -17.725481166983563,
+              -17.071616449174243
+            ],
+            "neutron_decay": [
+              -4618915.814415854,
+              -4618915.220068662
+            ]
+          }
+        },
+        {
+          "lo": 2.0,
+          "hi": 3.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -15.584085403686569,
+              -14.68259308761964
+            ],
+            "neutron_decay": [
+              -5313910.829116143,
+              -5313910.135926463
+            ]
+          }
+        },
+        {
+          "lo": 3.0,
+          "hi": 4.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -16.746464160014476,
+              -15.53472111363283
+            ],
+            "neutron_decay": [
+              -7987590.250532012,
+              -7987589.15189139
+            ]
+          }
+        },
+        {
+          "lo": 4.0,
+          "hi": 6.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -18.638225597107088,
+              -17.153252891928283
+            ],
+            "neutron_decay": [
+              -9632328.797520775,
+              -9632327.411183914
+            ]
+          }
+        },
+        {
+          "lo": 6.0,
+          "hi": 9.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -23.53330919681932,
+              -21.680965591450455
+            ],
+            "neutron_decay": [
+              -11540897.217375293,
+              -11540895.425573323
+            ]
+          }
+        },
+        {
+          "lo": 9.0,
+          "hi": 12.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -31.82294771361553,
+              -29.588006668445285
+            ],
+            "neutron_decay": [
+              -13004368.51373996,
+              -13004366.31648705
+            ]
+          }
+        },
+        {
+          "lo": 12.0,
+          "hi": 18.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -40.62969446604924,
+              -38.11737867959058
+            ],
+            "neutron_decay": [
+              -13808721.494821755,
+              -13808719.009872606
+            ]
+          }
+        },
+        {
+          "lo": 18.0,
+          "hi": 30.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -58.96661290044297,
+              -56.058538626038334
+            ],
+            "neutron_decay": [
+              -14673150.947771497,
+              -14673148.057343073
+            ]
+          }
+        }
+      ],
+      "outer_order": 12,
+      "internal_order": 24,
+      "angle_order": 24,
+      "internal_tail": 40.0,
+      "cutoff_MeV": 30.0,
+      "units": "number fm^-3 s^-1; energy MeV fm^-3 s^-1; one neutrino helicity"
+    },
+    {
+      "log_moments": {
+        "positron_capture": [
+          -15.192986884497008,
+          -14.209907579727533
+        ],
+        "neutron_decay": [
+          -16.49289012300143,
+          -17.23946958344974
+        ],
+        "combined": [
+          -14.95195770694879,
+          -14.162702666804343
+        ]
+      },
+      "values": {
+        "positron_capture": {
+          "number_fm3_s": {
+            "log_value": -15.192986884497008,
+            "representable": true,
+            "value": 2.5221425699622926e-07,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -14.209907579727533,
+            "representable": true,
+            "value": 6.740863761449027e-07,
+            "reason": null
+          }
+        },
+        "neutron_decay": {
+          "number_fm3_s": {
+            "log_value": -16.49289012300143,
+            "representable": true,
+            "value": 6.874305504693765e-08,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -17.23946958344974,
+            "representable": true,
+            "value": 3.2583181602855665e-08,
+            "reason": null
+          }
+        },
+        "combined": {
+          "number_fm3_s": {
+            "log_value": -14.95195770694879,
+            "representable": true,
+            "value": 3.2095731204316694e-07,
+            "reason": null
+          },
+          "energy_MeV_fm3_s": {
+            "log_value": -14.162702666804343,
+            "representable": true,
+            "value": 7.066695577477587e-07,
+            "reason": null
+          }
+        }
+      },
+      "panels": [
+        {
+          "lo": 0.0,
+          "hi": 0.1,
+          "log_number_energy": {
+            "positron_capture": [
+              -19723213.549853,
+              -19723215.852449898
+            ],
+            "neutron_decay": [
+              -21.281030505856304,
+              -23.880767814396485
+            ]
+          }
+        },
+        {
+          "lo": 0.1,
+          "hi": 0.4,
+          "log_number_energy": {
+            "positron_capture": [
+              -18002007.7158431,
+              -18002008.632142685
+            ],
+            "neutron_decay": [
+              -17.62464628065131,
+              -18.862172747357942
+            ]
+          }
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.7790813103978795,
+          "log_number_energy": {
+            "positron_capture": [
+              -14104661.29131078,
+              -14104661.540956384
+            ],
+            "neutron_decay": [
+              -16.895487614266152,
+              -17.462235618615964
+            ]
+          }
+        },
+        {
+          "lo": 0.7790813103978795,
+          "hi": 0.7812493763392931,
+          "log_number_energy": {
+            "positron_capture": [
+              -14039661.86253788,
+              -14039662.10939879
+            ],
+            "neutron_decay": [
+              -24.08640187202221,
+              -24.33477122258234
+            ]
+          }
+        },
+        {
+          "lo": 0.7812493763392931,
+          "hi": 0.7820624010673233,
+          "log_number_energy": {
+            "positron_capture": [
+              -14015410.967012197,
+              -14015411.212832956
+            ],
+            "neutron_decay": [
+              -25.661670337820052,
+              -25.908067421004365
+            ]
+          }
+        },
+        {
+          "lo": 0.7820624010673233,
+          "hi": 0.78233340931,
+          "log_number_energy": {
+            "positron_capture": [
+              -14007336.510403948,
+              -14007336.755878279
+            ],
+            "neutron_decay": [
+              -27.65350551375637,
+              -27.899184340289544
+            ]
+          }
+        },
+        {
+          "lo": 0.78233340931,
+          "hi": 0.7826044175526766,
+          "log_number_energy": {
+            "positron_capture": [
+              -13999316.618408306,
+              -13999316.863538604
+            ],
+            "neutron_decay": [
+              -29.498878282710482,
+              -29.744257946604034
+            ]
+          }
+        },
+        {
+          "lo": 0.7826044175526766,
+          "hi": 0.7834174422807068,
+          "log_number_energy": {
+            "positron_capture": [
+              -13974978.690386517,
+              -13974978.934483228
+            ],
+            "neutron_decay": [
+              -33.64881567743627,
+              -33.89388701631432
+            ]
+          }
+        },
+        {
+          "lo": 0.7834174422807068,
+          "hi": 0.7855855082221204,
+          "log_number_energy": {
+            "positron_capture": [
+              -13909441.408347733,
+              -13909441.649692634
+            ],
+            "neutron_decay": [
+              -66.40909617100147,
+              -66.65316508644526
+            ]
+          }
+        },
+        {
+          "lo": 0.7855855082221204,
+          "hi": 1.1,
+          "log_number_energy": {
+            "positron_capture": [
+              -5289327.481696045,
+              -5289327.388348478
+            ],
+            "neutron_decay": [
+              -321.40597697033627,
+              -321.6472982148599
+            ]
+          }
+        },
+        {
+          "lo": 1.1,
+          "hi": 1.796830846280874,
+          "log_number_energy": {
+            "positron_capture": [
+              -811.8283248400777,
+              -811.2449641399606
+            ],
+            "neutron_decay": [
+              -1228728.517505694,
+              -1228728.4221880364
+            ]
+          }
+        },
+        {
+          "lo": 1.796830846280874,
+          "hi": 1.801831155886958,
+          "log_number_energy": {
+            "positron_capture": [
+              -65.41019893872921,
+              -64.82141790129552
+            ],
+            "neutron_decay": [
+              -4559516.5404295605,
+              -4559515.954405035
+            ]
+          }
+        },
+        {
+          "lo": 1.801831155886958,
+          "hi": 1.8037062719892394,
+          "log_number_energy": {
+            "positron_capture": [
+              -32.43366744968405,
+              -31.843880354580577
+            ],
+            "neutron_decay": [
+              -4579348.810545938,
+              -4579348.221742293
+            ]
+          }
+        },
+        {
+          "lo": 1.8037062719892394,
+          "hi": 1.8043313106899999,
+          "log_number_energy": {
+            "positron_capture": [
+              -28.277666777575803,
+              -27.687571290128044
+            ],
+            "neutron_decay": [
+              -4586772.474152787,
+              -4586771.88430907
+            ]
+          }
+        },
+        {
+          "lo": 1.8043313106899999,
+          "hi": 1.8049563493907603,
+          "log_number_energy": {
+            "positron_capture": [
+              -26.431737973620656,
+              -25.841343402884846
+            ],
+            "neutron_decay": [
+              -4589245.458988357,
+              -4589244.86879817
+            ]
+          }
+        },
+        {
+          "lo": 1.8049563493907603,
+          "hi": 1.8068314654930417,
+          "log_number_energy": {
+            "positron_capture": [
+              -24.439254090526557,
+              -23.848141988563505
+            ],
+            "neutron_decay": [
+              -4591717.758491105,
+              -4591717.167954508
+            ]
+          }
+        },
+        {
+          "lo": 1.8068314654930417,
+          "hi": 1.8118317750991257,
+          "log_number_energy": {
+            "positron_capture": [
+              -22.86205394584801,
+              -22.26897657088842
+            ],
+            "neutron_decay": [
+              -4599129.396896677,
+              -4599128.805321883
+            ]
+          }
+        },
+        {
+          "lo": 1.8118317750991257,
+          "hi": 2.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -17.72548116674274,
+              -17.071616448948255
+            ],
+            "neutron_decay": [
+              -4618863.512600401,
+              -4618862.918260812
+            ]
+          }
+        },
+        {
+          "lo": 2.0,
+          "hi": 3.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -15.584085403686146,
+              -14.682593087619338
+            ],
+            "neutron_decay": [
+              -5313658.205694863,
+              -5313657.51254178
+            ]
+          }
+        },
+        {
+          "lo": 3.0,
+          "hi": 4.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -16.74646416001448,
+              -15.534721113632834
+            ],
+            "neutron_decay": [
+              -7987443.052645081,
+              -7987441.954028858
+            ]
+          }
+        },
+        {
+          "lo": 4.0,
+          "hi": 6.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -18.638225597107095,
+              -17.153252891928265
+            ],
+            "neutron_decay": [
+              -9632138.362860236,
+              -9632136.976559972
+            ]
+          }
+        },
+        {
+          "lo": 6.0,
+          "hi": 9.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -23.533309196817303,
+              -21.680965591449592
+            ],
+            "neutron_decay": [
+              -11540747.994372088,
+              -11540746.202606717
+            ]
+          }
+        },
+        {
+          "lo": 9.0,
+          "hi": 12.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -31.822947713615797,
+              -29.588006668444574
+            ],
+            "neutron_decay": [
+              -13004294.633961212,
+              -13004292.436732698
+            ]
+          }
+        },
+        {
+          "lo": 12.0,
+          "hi": 18.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -40.629694460598415,
+              -38.11737867610741
+            ],
+            "neutron_decay": [
+              -13808632.01820262,
+              -13808629.533290068
+            ]
+          }
+        },
+        {
+          "lo": 18.0,
+          "hi": 30.0,
+          "log_number_energy": {
+            "positron_capture": [
+              -58.96661461220851,
+              -56.05854028590064
+            ],
+            "neutron_decay": [
+              -14673065.107058719,
+              -14673062.21667909
+            ]
+          }
+        }
+      ],
+      "outer_order": 20,
+      "internal_order": 24,
+      "angle_order": 24,
+      "internal_tail": 40.0,
+      "cutoff_MeV": 30.0,
+      "units": "number fm^-3 s^-1; energy MeV fm^-3 s^-1; one neutrino helicity"
+    }
+  ],
+  "static_expected": {
+    "positron_capture": [
+      2.522143944521513e-07,
+      6.740867986796317e-07
+    ],
+    "neutron_decay": [
+      6.874305044652589e-08,
+      3.2583175578962e-08
+    ],
+    "combined": [
+      3.2095744489867716e-07,
+      7.066699742585937e-07
+    ]
+  },
+  "gap_witness": {
+    "positron_capture": {
+      "log_value": -12489427.363418696,
+      "representable": false,
+      "value": null,
+      "reason": "underflow"
+    },
+    "neutron_decay": {
+      "log_value": -55933.95101013701,
+      "representable": false,
+      "value": null,
+      "reason": "underflow"
+    },
+    "combined": {
+      "log_value": -55933.95101013701,
+      "representable": false,
+      "value": null,
+      "reason": "underflow"
+    }
+  },
+  "source_sha256": {
+    "emission_only/log_emission.py": "2730e0792aaff6a8f8e39018a9bcca512742ba7fbe07368c752e41d6633376ff",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "end_source_sha256": {
+    "emission_only/log_emission.py": "2730e0792aaff6a8f8e39018a9bcca512742ba7fbe07368c752e41d6633376ff",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "original_failure_file": "quantum_energy_moments/static_inventory_failure.json",
+  "original_failure_sha256": "260331e302d85c04d44a1ad524a2bc0e6426a16b77145a680b0808bb8fd1da98",
+  "original_failure_unchanged": true,
+  "runtime_seconds": 33.836670000106096,
+  "scope": "One prescribed-electron heavy-commonM FD-density-matched antineutrino complete NAMED inventory, mathematical static normalization limit; no opacity or general domain certificate"
+}

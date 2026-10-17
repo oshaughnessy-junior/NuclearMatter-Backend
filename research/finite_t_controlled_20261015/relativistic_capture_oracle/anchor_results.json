@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "dilute independent collision-flux c\u03c3 anchor",
+      "error": 4.884981308350689e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "anchor independent target density",
+      "error": 2.9976021664879227e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    }
+  ],
+  "collision_flux_chi": 2.366359676911405e-05,
+  "event_chi": 2.3663596769113936e-05,
+  "stationary_target_chi": 2.3621034328469026e-05,
+  "thermal_correction": 0.0018018872524023788,
+  "runtime_seconds": 0.3205669589806348
+}

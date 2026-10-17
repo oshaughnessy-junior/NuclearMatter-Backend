@@ -1,0 +1,349 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-15T11:04:25.861783+00:00",
+  "ansatz": "static classical free nucleons, pair-equilibrated ideal electrons, fixed bath, plane slab, two vacuum boundaries, no scattering",
+  "state": {
+    "T_MeV": 3.0,
+    "nB_fm-3": 1e-05,
+    "Ye": 0.15,
+    "mu_e_total_MeV": 3.4102563001534048
+  },
+  "conventions": "j/chi in s^-1; spatial attenuation(j+chi)/c; summed flux of both faces; one helicity",
+  "checks": [
+    {
+      "name": "angular_E3_tau_1e-06",
+      "error": 1.2665575809252888e-06,
+      "bound": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "angular_E3_tau_0.001",
+      "error": 1.6841646457970615e-09,
+      "bound": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "angular_E3_tau_0.1",
+      "error": 6.63147987578533e-16,
+      "bound": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "angular_E3_tau_1",
+      "error": 2.8444790558222545e-16,
+      "bound": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "angular_E3_tau_10",
+      "error": 0.0,
+      "bound": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "angular_E3_tau_100",
+      "error": 0.0,
+      "bound": 3e-05,
+      "pass": true
+    },
+    {
+      "name": "independent_source_boundary_tau_0.01",
+      "error": 1.6598399074113205e-11,
+      "bound": 2e-07,
+      "pass": true
+    },
+    {
+      "name": "independent_source_boundary_tau_0.3",
+      "error": 7.35676607937845e-15,
+      "bound": 2e-07,
+      "pass": true
+    },
+    {
+      "name": "independent_source_boundary_tau_3",
+      "error": 1.017372307144628e-15,
+      "bound": 2e-07,
+      "pass": true
+    },
+    {
+      "name": "independent_source_boundary_tau_30",
+      "error": 1.1102230246251617e-15,
+      "bound": 2e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_1e-05_nu_e_number_flux_both_faces_cm-2_s-1",
+      "error": 7.593747530742385e-06,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "refinement_1e-05_nu_e_energy_flux_both_faces_MeV_cm-2_s-1",
+      "error": 8.545410305332537e-06,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "escape_bounds_1e-05_nu_e",
+      "error": 0.0,
+      "bound": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "refinement_1e-05_anti_nu_e_number_flux_both_faces_cm-2_s-1",
+      "error": 2.2283094222482925e-06,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "refinement_1e-05_anti_nu_e_energy_flux_both_faces_MeV_cm-2_s-1",
+      "error": 2.9453077326903552e-06,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "escape_bounds_1e-05_anti_nu_e",
+      "error": 0.0,
+      "bound": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "refinement_0.1_nu_e_number_flux_both_faces_cm-2_s-1",
+      "error": 1.1226669375545331e-13,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "refinement_0.1_nu_e_energy_flux_both_faces_MeV_cm-2_s-1",
+      "error": 7.636634052489376e-14,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "escape_bounds_0.1_nu_e",
+      "error": 0.0,
+      "bound": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "refinement_0.1_anti_nu_e_number_flux_both_faces_cm-2_s-1",
+      "error": 1.7775231599026e-11,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "refinement_0.1_anti_nu_e_energy_flux_both_faces_MeV_cm-2_s-1",
+      "error": 1.473082763698106e-12,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "escape_bounds_0.1_anti_nu_e",
+      "error": 0.0,
+      "bound": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "refinement_1_nu_e_number_flux_both_faces_cm-2_s-1",
+      "error": 1.7720855445542147e-15,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "refinement_1_nu_e_energy_flux_both_faces_MeV_cm-2_s-1",
+      "error": 1.7403140247234018e-15,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "escape_bounds_1_nu_e",
+      "error": 0.0,
+      "bound": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "refinement_1_anti_nu_e_number_flux_both_faces_cm-2_s-1",
+      "error": 1.7664962451701957e-12,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "refinement_1_anti_nu_e_energy_flux_both_faces_MeV_cm-2_s-1",
+      "error": 1.8926927877211732e-13,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "escape_bounds_1_anti_nu_e",
+      "error": 0.0,
+      "bound": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "refinement_100_nu_e_number_flux_both_faces_cm-2_s-1",
+      "error": 3.046149685404822e-15,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "refinement_100_nu_e_energy_flux_both_faces_MeV_cm-2_s-1",
+      "error": 2.946469246889343e-15,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "escape_bounds_100_nu_e",
+      "error": 0.0,
+      "bound": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "refinement_100_anti_nu_e_number_flux_both_faces_cm-2_s-1",
+      "error": 2.621516571466159e-15,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "refinement_100_anti_nu_e_energy_flux_both_faces_MeV_cm-2_s-1",
+      "error": 3.048620905755751e-15,
+      "bound": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "escape_bounds_100_anti_nu_e",
+      "error": 0.0,
+      "bound": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "spectral_target_number_nu_e",
+      "error": 6.434745505735908e-15,
+      "bound": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "spectral_target_number_anti_nu_e",
+      "error": 6.210942795937396e-15,
+      "bound": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "spectral_target_energy",
+      "error": 6.152160453179161e-15,
+      "bound": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "thin_escape_nu_e",
+      "error": 0.00018660266385328583,
+      "bound": 0.001,
+      "pass": true
+    },
+    {
+      "name": "thin_escape_anti_nu_e",
+      "error": 3.104334477477266e-05,
+      "bound": 0.001,
+      "pass": true
+    },
+    {
+      "name": "antineutrino_disconnected_band",
+      "error": 0.0,
+      "bound": 0.0,
+      "pass": true
+    }
+  ],
+  "samples": [
+    {
+      "nu_e_tau_at_10MeV": 1e-05,
+      "length_cm": 104.36023609140665,
+      "results": {
+        "nu_e": {
+          "number_flux_both_faces_cm-2_s-1": 3.9558207341839385e+37,
+          "energy_flux_both_faces_MeV_cm-2_s-1": 5.873351027077649e+38,
+          "thin_number_flux_cm-2_s-1": 3.9563660727331344e+37,
+          "thin_energy_flux_MeV_cm-2_s-1": 5.874447214576554e+38,
+          "energy_escape_fraction": 0.9998133973361467,
+          "occupied_bands": 1120
+        },
+        "anti_nu_e": {
+          "number_flux_both_faces_cm-2_s-1": 3.734494563984125e+37,
+          "energy_flux_both_faces_MeV_cm-2_s-1": 5.89594386833337e+38,
+          "thin_number_flux_cm-2_s-1": 3.73457906051069e+37,
+          "thin_energy_flux_MeV_cm-2_s-1": 5.8961269038336816e+38,
+          "energy_escape_fraction": 0.9999689566552252,
+          "occupied_bands": 960
+        }
+      }
+    },
+    {
+      "nu_e_tau_at_10MeV": 0.1,
+      "length_cm": 1043602.3609140664,
+      "results": {
+        "nu_e": {
+          "number_flux_both_faces_cm-2_s-1": 2.904867135479926e+41,
+          "energy_flux_both_faces_MeV_cm-2_s-1": 3.96347837967448e+42,
+          "thin_number_flux_cm-2_s-1": 3.9563660727331344e+41,
+          "thin_energy_flux_MeV_cm-2_s-1": 5.874447214576553e+42,
+          "energy_escape_fraction": 0.6746981009276426,
+          "occupied_bands": 1120
+        },
+        "anti_nu_e": {
+          "number_flux_both_faces_cm-2_s-1": 3.4608983483386827e+41,
+          "energy_flux_both_faces_MeV_cm-2_s-1": 5.3418355394797e+42,
+          "thin_number_flux_cm-2_s-1": 3.7345790605106895e+41,
+          "thin_energy_flux_MeV_cm-2_s-1": 5.896126903833681e+42,
+          "energy_escape_fraction": 0.9059905979985642,
+          "occupied_bands": 960
+        }
+      }
+    },
+    {
+      "nu_e_tau_at_10MeV": 1.0,
+      "length_cm": 10436023.609140664,
+      "results": {
+        "nu_e": {
+          "number_flux_both_faces_cm-2_s-1": 1.135189308451128e+42,
+          "energy_flux_both_faces_MeV_cm-2_s-1": 1.2803965485871643e+43,
+          "thin_number_flux_cm-2_s-1": 3.956366072733134e+42,
+          "thin_energy_flux_MeV_cm-2_s-1": 5.874447214576554e+43,
+          "energy_escape_fraction": 0.21796034619394544,
+          "occupied_bands": 1120
+        },
+        "anti_nu_e": {
+          "number_flux_both_faces_cm-2_s-1": 2.4923538681477737e+42,
+          "energy_flux_both_faces_MeV_cm-2_s-1": 3.539788145269493e+43,
+          "thin_number_flux_cm-2_s-1": 3.7345790605106896e+42,
+          "thin_energy_flux_MeV_cm-2_s-1": 5.896126903833681e+43,
+          "energy_escape_fraction": 0.6003582017490009,
+          "occupied_bands": 960
+        }
+      }
+    },
+    {
+      "nu_e_tau_at_10MeV": 100.0,
+      "length_cm": 1043602360.9140664,
+      "results": {
+        "nu_e": {
+          "number_flux_both_faces_cm-2_s-1": 1.828777555966973e+42,
+          "energy_flux_both_faces_MeV_cm-2_s-1": 1.680574186331385e+43,
+          "thin_number_flux_cm-2_s-1": 3.956366072733135e+44,
+          "thin_energy_flux_MeV_cm-2_s-1": 5.874447214576554e+45,
+          "energy_escape_fraction": 0.002860820984417553,
+          "occupied_bands": 1120
+        },
+        "anti_nu_e": {
+          "number_flux_both_faces_cm-2_s-1": 1.1333348515219402e+43,
+          "energy_flux_both_faces_MeV_cm-2_s-1": 1.169468892117978e+44,
+          "thin_number_flux_cm-2_s-1": 3.73457906051069e+44,
+          "thin_energy_flux_MeV_cm-2_s-1": 5.896126903833682e+45,
+          "energy_escape_fraction": 0.019834527159813767,
+          "occupied_bands": 960
+        }
+      }
+    }
+  ],
+  "files_sha256": {
+    "spectral_slab/run_slab.py": "97a1b2aaf2a1f19fcc9a582add9b3c7985f7f254a6d3b97c66e9049d4884e700",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  }
+}

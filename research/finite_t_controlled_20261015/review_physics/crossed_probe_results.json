@@ -1,0 +1,48 @@
+{
+  "scope": "Independent selected shared-physics checks; no trajectory or full suite replay",
+  "checks": [
+    {
+      "name": "shared EOS capture and decay antineutrino chemical parameter",
+      "error": 3.552713678800501e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "finite-M FD-EOS crossed KMS E=0.4",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "finite-M FD-EOS combined KMS E=0.4",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "finite-M FD-EOS crossed KMS E=1.0",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "finite-M FD-EOS combined KMS E=1.0",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "finite-M FD-EOS crossed KMS E=2.0",
+      "error": 1.7763568394002505e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "finite-M FD-EOS combined KMS E=2.0",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

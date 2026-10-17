@@ -1,0 +1,36 @@
+{
+  "fresh_points": [
+    [
+      0.2549,
+      0.127,
+      0.3251
+    ],
+    [
+      0.1847,
+      0.143,
+      0.1879
+    ],
+    [
+      0.2327,
+      2.47,
+      0.3113
+    ],
+    [
+      0.2589,
+      0.121,
+      0.3287
+    ]
+  ],
+  "balance_gate": 0.01,
+  "bulk_gates": {
+    "free": 0.005,
+    "energy": 0.005,
+    "pressure": 0.01,
+    "entropy": 0.01,
+    "Cv": 0.01,
+    "Hessian": 0.02
+  },
+  "source_coefficients": "1e03c7e192ab869018c2da575d613026f8be81d75ca7709f8b5de1d8ce59ea8b",
+  "declared_before_EOS": true,
+  "coefficients_edits_forbidden": true
+}

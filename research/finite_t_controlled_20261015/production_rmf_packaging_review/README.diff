@@ -1,0 +1,14 @@
+--- ffb baseline
++++ candidate
+@@ -171,3 +171,11 @@
+ CompOSE/tabular ingestion · proper SLy/BPS crust · self-consistent RMFT Lagrangian
+ solver · NN surrogates (Zhu 2604.05428) · rotating NS (RNS) · gwkokab population
+ adapter · GP/nonparametric EOS · optional RePrimAnd and Zhu C++ δ-TOV backends.
++
++### Finite-temperature uniform GM1 CPU reference
++
++`nmbackend.reference.finite_t_rmf` supplies explicitly imported nuclear-only
++finite-T states with exact rounded GM1 parameters, pair-aware stationary
++thermodynamics and local two-charge stability diagnostics. It does not replace
++the cold JAX EOS/cooling APIs. See [the model/branch contract](docs/finite_temperature_rmf.md)
++and [example](examples/finite_t_rmf.py); native external and supported-runtime/CI gates remain open.

@@ -1,0 +1,4 @@
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_pc_opacity_spectrum/total.py", line 12
+    n=4 if rule=='coarse'else8;x,w=leggauss(n);E=[];W=[]
+      ^^^^^^^^^^^^^^^^^^^
+SyntaxError: expected 'else' after 'if' expression

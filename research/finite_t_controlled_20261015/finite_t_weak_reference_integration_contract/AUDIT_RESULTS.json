@@ -1,0 +1,298 @@
+{
+  "utc": "2026-10-16T05:05:44.818545+00:00",
+  "new_physical_evaluations": 0,
+  "checks": [
+    {
+      "name": "saved_EC_0_KMS_arithmetic",
+      "passed": true,
+      "residual": 2.6645352591003757e-15
+    },
+    {
+      "name": "saved_EC_1_KMS_arithmetic",
+      "passed": true,
+      "residual": 2.6645352591003757e-15
+    },
+    {
+      "name": "saved_EC_2_KMS_arithmetic",
+      "passed": true,
+      "residual": 2.6645352591003757e-15
+    },
+    {
+      "name": "saved_PC_3_KMS_arithmetic",
+      "passed": true,
+      "residual": -2.6645352591003757e-15
+    },
+    {
+      "name": "saved_PC_4_KMS_arithmetic",
+      "passed": true,
+      "residual": -2.6645352591003757e-15
+    },
+    {
+      "name": "saved_PC_5_KMS_arithmetic",
+      "passed": true,
+      "residual": -2.6645352591003757e-15
+    },
+    {
+      "name": "saved_NEUTRON_DECAY_6_KMS_arithmetic",
+      "passed": true,
+      "residual": -4.884981308350689e-15
+    },
+    {
+      "name": "saved_NEUTRON_DECAY_7_KMS_arithmetic",
+      "passed": true,
+      "residual": -8.881784197001252e-16
+    },
+    {
+      "name": "saved_NEUTRON_DECAY_8_KMS_arithmetic",
+      "passed": true,
+      "residual": 0.0
+    },
+    {
+      "name": "saved_NEUTRON_DECAY_9_KMS_arithmetic",
+      "passed": true,
+      "residual": 4.884981308350689e-15
+    },
+    {
+      "name": "source_unchanged:hot_electron_capture_moments/electron_capture.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_electron_capture_moments/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_hot_electron_capture/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_hot_electron_capture/CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_pc_moments/reference.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_pc_moments/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_pc_moments/MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:positron_capture/pc_kernel.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:positron_capture_moments/moments.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_beta_moments/hot_moments.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_beta_moments/results.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_beta_moments/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_hot_beta/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_ec_opacity_spectrum/spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_ec_opacity_spectrum/total.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_ec_opacity_spectrum/results.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_ec_opacity_spectrum/total_results.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_ec_opacity_spectrum/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_hot_ec_opacity_spectrum/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_pc_opacity_spectrum/spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_pc_opacity_spectrum/total.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_pc_opacity_spectrum/results.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_pc_opacity_spectrum/total_results.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_pc_opacity_spectrum/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_hot_pc_opacity_spectrum/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_hot_pc_assembly_repair/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_beta_opacity_spectrum/spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_beta_opacity_spectrum/total.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_beta_opacity_spectrum/pilot_results.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_beta_opacity_spectrum/total_results.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:hot_beta_opacity_spectrum/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_hot_beta_opacity_spectrum/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:muon_full_current/current.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:muon_full_current/SOURCES.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:muon_vacuum/vacuum_cc.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:relativistic_capture_oracle/events.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:relativistic_tensor/tensor.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:relativistic_crossed_contract/beta.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:relativistic_crossed_thermal/kernel.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:relativistic_free_eos/free_baryons.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:thermodynamics/lepton_reference.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:transparent_capture_balance/balance.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:transparent_balance_grid/grid.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:three_source_cooling_element/worker.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:isolated_microphysics/client.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:isolated_microphysics/protocol.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:isolated_microphysics/worker_entry.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:installed_free_matter_binding/matter.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:installed_weak_density_element/element.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:free_capture_moment_fit/approximation.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:free_capture_moment_fit/collect.py",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:free_capture_moment_fit/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:free_capture_moment_fit/COEFFICIENT_FREEZE.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:free_capture_moment_fit/REVISED_LOCK2.json",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_free_capture_moment_fit/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:review_free_capture_moment_fit_repair/REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:allowed_rate_assessment/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:cold_capture/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:emission_only/RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "source_unchanged:finite_t_rmf_integration_contract/CONTRACT.md",
+      "passed": true
+    }
+  ],
+  "passed": 70,
+  "failed": 0
+}

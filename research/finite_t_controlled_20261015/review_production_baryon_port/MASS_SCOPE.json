@@ -1,0 +1,12 @@
+{
+  "default_NMB_masses": {
+    "neutron": 939.565421,
+    "proton": 938.272088
+  },
+  "campaign_capture_masses": {
+    "neutron": 939.56542052,
+    "proton": 938.27208816
+  },
+  "comparison_rule": "Each forwardcomparisonmustmatch explicitmassfirst. Originalcapturebath\u00b5values may becompared ONLYusingexplicitcampaignmass, never silentlyagainstNMBdefaults.",
+  "particle_only": "Positive PARTICLEdensity; noanti population/veto/diagnosticAPI required or claimed; notsignedpairnetdensity. Pairomission is declaredmodelchoice, notphysicalvalidation atarbitraryT."
+}

@@ -1,0 +1,21 @@
+{
+  "base_commit": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "status": "FROZEN candidate; DIFFERENT physics/numerics and packaging pending",
+  "files": {
+    "README.md": "4e5f6c3b05d1aae2b90ef6a580d0da4d29bc245ad820666e88e63205fbe115ff",
+    "tests/test_weak_reference_current.py": "ed4a9b21077e10b8b5166914e62d8b136839f5d2eda5219ded402c16929a0f88",
+    "tests/test_weak_reference_moments.py": "60dee100a61af9965f2615b8ff59f4a95f47efe0ec5f70f0fb02993ccf7478ed",
+    "docs/weak_reference.md": "4978f48b412cb95e1c4c40c5d5b15dd1badfece7edf9676246c1e629c443ae9f",
+    "examples/free_weak_reference.py": "b5ed83b1b64c3de18d0a560b4feead901bf951dc47f689847b6c75272635b337",
+    "tests/data/free_weak_reference.json": "78cb181ca46dc587ed4633cc6368abc6f075142bd77193a658a2855674b3310e",
+    "src/nmbackend/reference/_weak_decay.py": "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc",
+    "src/nmbackend/reference/weak_reference.py": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+    "src/nmbackend/reference/_weak_two_body.py": "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366",
+    "src/nmbackend/reference/_weak_current.py": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc",
+    "src/nmbackend/reference/_weak_quadrature.py": "7e1dc4783cae891f2cfda3e241b53eab0369de087dacf2fae888f1af10d66ba7"
+  },
+  "model": "fixed physical free electron EC/PC/neutron decay full Guo current; total moments only",
+  "lock_sha256": "f65f8e9bb59ae17cfb535a9d72ada558bbc0ec2485f929c2f847ab91ea9968d5",
+  "source_pin_sha256": "0355096d7b1cf43bd3a1c646ee8666cce3f1719c2f25054f5d2c10c5407bc5ae",
+  "scope_holds": "no EOS/spectral opacity/transport/AD/full inventory; no dependency or prior-source changes"
+}

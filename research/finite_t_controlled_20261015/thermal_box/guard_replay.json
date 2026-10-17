@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "2 step0 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "2 step1 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "4 step0 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "4 step1 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "4 step2 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "4 step3 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "8 step0 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "8 step1 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "8 step2 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "8 step3 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "8 step4 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "8 step5 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "8 step6 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "8 step7 guarded exact state replay",
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    }
+  ],
+  "runtime_seconds": 37.118036708794534,
+  "scope": "Each preserved physical coefficient is replayed only at its exact original state/grid; guards change no valid output. Not a fresh trajectory/source calculation."
+}
