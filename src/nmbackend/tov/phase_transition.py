@@ -8,11 +8,20 @@ continuous there, but the tidal variable y is **discontinuous** -- the
 Integrating across it gives the junction condition (Damour & Nagar 2009;
 Postnikov, Prakash & Lattimer 2010; Takatsy & Kovacs 2020):
 
-    y_out = y_in - 4 pi r_d^3 (eps_out - eps_in) / (m_d + 4 pi r_d^3 p_t)
+    y_out = y_in - 4 pi r_d^3 (eps_in - eps_out) / (m_d + 4 pi r_d^3 p_t)
 
 with r_d, m_d the radius/mass at the transition, ``in`` the inner (higher-density)
 side and ``out`` the outer (lower-density) side.  Since eps_out < eps_in this
-raises y across the transition going outward.
+LOWERS y across the transition going outward: it is the zero-width limit of the
+tidal term, and the Newtonian self-bound-star case (Delta y = -3 at a surface
+with finite density) is its limit.  Until 2026-10-14 the sign was reversed here
+and in ``reference.scipy_tov.solve_reference_hybrid`` (so the two agreed), and
+hybrid Lambda was too low -- at fixed mass on HybridEOS(80, 250, 1) by
+0 / 0 / 0.5 / 9.9 / 18.6% at 1.2 / 1.4 / 1.6 / 1.8 / 2.0 Msun (more with a larger
+quark core);
+``tests/test_phase_transition.py::
+test_junction_matches_smeared_transition`` now checks the sign against the
+``HybridEOS.eos_table_smeared`` limit.
 
 We integrate each smooth phase as a separate adaptive (diffrax) segment and apply
 the junction between them, so the genuine matter sound speed is used inside each
@@ -25,29 +34,22 @@ import math
 import jax
 import jax.numpy as jnp
 
-from .solver import (_field_tidal, _k2_from_y_C, _central_start, TOVPoint,
+from .solver import (_adaptive_tov, _k2_from_y_C, _central_start, TOVPoint,
                      _HAVE_DIFFRAX, solve_structure)
 from ..constants import GMSUN_KM
-
-if _HAVE_DIFFRAX:
-    import diffrax
 
 _FOURPI = 4.0 * math.pi
 
 
 def _diffrax_segment(table, t0, t1, state0, rtol, atol, adjoint=None,
                      max_steps=100000):
-    """Integrate (r, m, y) in enthalpy from t0 down to t1 with a given start."""
+    """Integrate (r, m, y) in enthalpy from t0 down to t1 with a given start.
+
+    Steps are cut at the segment table's nodes and the start is frozen against
+    differentiation, as in :func:`nmbackend.tov.solver._adaptive_tov`."""
     t0, t1 = jnp.asarray(t0), jnp.asarray(t1)   # a Python float here is a jit key
-    term = diffrax.ODETerm(_field_tidal)
-    ctrl = diffrax.PIDController(rtol=rtol, atol=atol)
-    if adjoint is None:
-        adjoint = diffrax.ForwardMode()
-    sol = diffrax.diffeqsolve(
-        term, diffrax.Dopri5(), t0=t0, t1=t1, dt0=-(t0 - t1) * 1e-3,
-        y0=state0, args=table, stepsize_controller=ctrl, max_steps=max_steps,
-        adjoint=adjoint,
-    )
+    sol = _adaptive_tov(table, t0, t1, state0, rtol, atol, True,
+                        -(t0 - t1) * 1e-3, adjoint, max_steps)
     return sol.ys[0]
 
 
@@ -72,7 +74,7 @@ def solve_hybrid(hybrid, h_c, rtol: float = 1e-7, atol: float = 1e-9) -> TOVPoin
     r_d, m_d, y_in = state_t[0], state_t[1], state_t[2]
 
     # 2) tidal junction at the discontinuity
-    y_out = y_in - _FOURPI * r_d**3 * (tr.eps_out - tr.eps_in) / (
+    y_out = y_in - _FOURPI * r_d**3 * (tr.eps_in - tr.eps_out) / (
         m_d + _FOURPI * r_d**3 * tr.p_t)
 
     # 3) outer (hadronic) envelope: h_t -> surface, starting from junction state

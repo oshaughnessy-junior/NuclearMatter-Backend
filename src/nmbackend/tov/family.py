@@ -67,11 +67,19 @@ def default_hc_grid(table: EOSTable, n_models: int = 120, frac_lo: float = 0.02,
 
 def build_family(table: EOSTable, h_c_grid=None, *, backend: str = "diffrax",
                  rtol: float = 1e-7, atol: float = 1e-9,
-                 n_steps: int = 2000) -> Family:
+                 n_steps: int = 2000, jump_nodes: bool = True) -> Family:
+    """TOV sequence over ``h_c_grid`` (default :func:`default_hc_grid`).
+
+    ``jump_nodes=False`` is the value-only opt-out of
+    :func:`nmbackend.tov.solver.solve_structure` for bulk scans of very dense
+    tables (biased parameter tangents; with the tidal sector no longer cheaper
+    and ~1e4x less accurate Lambda since 2026-10-14 -- see solve_structure);
+    the ``default_hc_grid`` probe always uses the default."""
     if h_c_grid is None:
         h_c_grid = default_hc_grid(table)
 
-    kw = dict(backend=backend, rtol=rtol, atol=atol, n_steps=n_steps)
+    kw = dict(backend=backend, rtol=rtol, atol=atol, n_steps=n_steps,
+              jump_nodes=jump_nodes)
 
     def M_of_hc(hc):
         return solve_structure(table, hc, **kw).M_msun

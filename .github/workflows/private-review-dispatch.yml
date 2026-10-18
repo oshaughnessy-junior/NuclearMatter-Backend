@@ -1,0 +1,202 @@
+name: Private review dispatch
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - ready_for_review
+      - synchronize
+      - converted_to_draft
+      - closed
+
+permissions:
+  id-token: write
+
+concurrency:
+  group: private-review-dispatch-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  dispatch:
+    name: Dispatch exact PR generation
+    if: ${{ vars.SCIENTIFIC_REVIEW_ENABLED == 'true' || vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY == 'true' }}
+    runs-on: ubuntu-24.04
+    environment: private-review-dispatch-nmb
+    timeout-minutes: 5
+    steps:
+      - name: Observe identity only; do not join tailnet or dispatch
+        if: ${{ vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY == 'true' }}
+        shell: bash
+        env:
+          EXPECTED_REPOSITORY: oshaughnessy-junior/NuclearMatter-Backend
+          EXPECTED_REPOSITORY_ID: "1257038859"
+          EXPECTED_OWNER_ID: "274802661"
+          EXPECTED_ENVIRONMENT: private-review-dispatch-nmb
+          EXPECTED_WORKFLOW_REF: oshaughnessy-junior/NuclearMatter-Backend/.github/workflows/private-review-dispatch.yml@refs/heads/main
+          EXPECTED_AUDIENCE: scientific-review-nmb
+        run: |
+          set -euo pipefail
+          umask 077
+          export IDENTITY_RESPONSE_PATH="$RUNNER_TEMP/scientific-review-oidc-response.json"
+          trap 'rm -f "$IDENTITY_RESPONSE_PATH"' EXIT
+          curl --fail --silent --show-error --proto '=https' \
+            --header "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=${EXPECTED_AUDIENCE}" \
+            --output "$IDENTITY_RESPONSE_PATH"
+          python3 - <<'PY'
+          import base64
+          import json
+          import os
+          from pathlib import Path
+
+          token = json.loads(Path(os.environ["IDENTITY_RESPONSE_PATH"]).read_text())["value"]
+          print("::add-mask::" + token)
+          segment = token.split(".")[1]
+          claims = json.loads(base64.urlsafe_b64decode(segment + "=" * (-len(segment) % 4)))
+          expected = {
+              "iss": "https://token.actions.githubusercontent.com",
+              "aud": os.environ["EXPECTED_AUDIENCE"],
+              "repository": os.environ["EXPECTED_REPOSITORY"],
+              "repository_id": os.environ["EXPECTED_REPOSITORY_ID"],
+              "repository_owner_id": os.environ["EXPECTED_OWNER_ID"],
+              "environment": os.environ["EXPECTED_ENVIRONMENT"],
+              "workflow_ref": os.environ["EXPECTED_WORKFLOW_REF"],
+              "ref": "refs/heads/main",
+              "event_name": "pull_request_target",
+              "repository_visibility": "private",
+              "runner_environment": "github-hosted",
+          }
+          if any(claims.get(key) != value for key, value in expected.items()):
+              raise SystemExit("Identity claims differ from this repository's reviewed profile")
+          subject = claims.get("sub")
+          if not isinstance(subject, str) or not 1 <= len(subject) <= 512:
+              raise SystemExit("Identity subject is absent or oversized")
+          observed = {key: claims[key] for key in [*expected, "sub"]}
+          evidence = {"schema": "genesis.scientific-review.observed-actions-identity.v1", "claims": observed}
+          text = json.dumps(evidence, indent=2, sort_keys=True)
+          print(text)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+              stream.write("### Scientific review identity only\n\nNo tailnet join, admission or model call.\n\n```json\n" + text + "\n```\n")
+          PY
+
+      # SECURITY: This privileged workflow must never check out, fetch, cache,
+      # download, interpret, or execute pull-request-controlled content.
+      - name: Join review-dispatch tailnet segment
+        if: ${{ vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY != 'true' }}
+        uses: tailscale/github-action@306e68a486fd2350f2bfc3b19fcd143891a4a2d8 # v4
+        with:
+          oauth-client-id: ${{ vars.TS_WIF_CLIENT_ID }}
+          audience: ${{ vars.TS_WIF_AUDIENCE }}
+          tags: tag:review-dispatcher
+          version: 1.98.10
+          ping: ${{ vars.REVIEW_COORDINATOR_HOST }}
+          use-cache: "false"
+
+      - name: Verify dispatcher cannot reach blocked coordinator ports
+        if: ${{ vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY != 'true' }}
+        shell: bash
+        env:
+          REVIEW_COORDINATOR_HOST: ${{ vars.REVIEW_COORDINATOR_HOST }}
+        run: |
+          set -euo pipefail
+          if [[ ! "$REVIEW_COORDINATOR_HOST" =~ ^([a-z0-9-]+\.)*[a-z0-9-]+$ ]]; then
+            echo "Coordinator host variable is invalid" >&2
+            exit 1
+          fi
+          for port in 22 443 18789 3000; do
+            if timeout 3 bash -c 'exec 3<>"/dev/tcp/$1/$2"' \
+              _ "$REVIEW_COORDINATOR_HOST" "$port" 2>/dev/null; then
+              echo "Dispatcher unexpectedly reached blocked coordinator port $port" >&2
+              exit 1
+            fi
+          done
+
+      - name: Admit PR event through private coordinator
+        if: ${{ vars.SCIENTIFIC_REVIEW_IDENTITY_CANARY != 'true' }}
+        shell: bash
+        env:
+          DISPATCH_ACTION: ${{ github.event.action }}
+          DISPATCH_REPOSITORY: ${{ github.repository }}
+          DISPATCH_REPOSITORY_ID: ${{ github.repository_id }}
+          DISPATCH_PR: ${{ github.event.pull_request.number }}
+          DISPATCH_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          DISPATCH_DRAFT: ${{ github.event.pull_request.draft }}
+          REVIEW_COORDINATOR_HOST: ${{ vars.REVIEW_COORDINATOR_HOST }}
+          REVIEW_COORDINATOR_PORT: ${{ vars.REVIEW_COORDINATOR_PORT }}
+          OIDC_AUDIENCE: scientific-review-nmb
+        run: |
+          set -euo pipefail
+          if [[ ! "$REVIEW_COORDINATOR_HOST" =~ ^([a-z0-9-]+\.)*[a-z0-9-]+$ ]] ||
+             [[ ! "$REVIEW_COORDINATOR_PORT" =~ ^[0-9]{2,5}$ ]]; then
+            echo "Coordinator address variables are invalid" >&2
+            exit 1
+          fi
+
+          oidc_response="$(curl --fail --silent --show-error \
+            --header "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=${OIDC_AUDIENCE}")"
+          oidc_token="$(jq -er '.value | select(type == "string" and length > 0)' <<<"$oidc_response")"
+          echo "::add-mask::$oidc_token"
+
+          payload="$(jq -cn \
+            --arg schema "interhost-cross-review.github-actions-dispatch.v1" \
+            --arg action "$DISPATCH_ACTION" \
+            --arg repository "$DISPATCH_REPOSITORY" \
+            --arg repository_id "$DISPATCH_REPOSITORY_ID" \
+            --arg pr "$DISPATCH_PR" \
+            --arg head_sha "$DISPATCH_HEAD_SHA" \
+            --arg draft "$DISPATCH_DRAFT" \
+            '{schema:$schema, action:$action, repository:$repository,
+              repository_id:($repository_id | tonumber), pr:($pr | tonumber),
+              head_sha:$head_sha, draft:($draft == "true")}')"
+
+          response_path="$RUNNER_TEMP/private-review-dispatch-response.json"
+          http_status="$(curl --silent --show-error \
+            --output "$response_path" --write-out '%{http_code}' \
+            --proto '=https' \
+            --retry 3 --retry-all-errors --retry-delay 2 \
+            --connect-timeout 10 --max-time 30 \
+            --header "Authorization: Bearer $oidc_token" \
+            --header "Content-Type: application/json" \
+            --data-binary "$payload" \
+            "https://${REVIEW_COORDINATOR_HOST}:${REVIEW_COORDINATOR_PORT}/github/actions/nmb-dispatch")"
+
+          if [[ "$http_status" =~ ^2[0-9][0-9]$ ]]; then
+            jq -e --arg head "$DISPATCH_HEAD_SHA" \
+              '(.ok == true) and
+               (((.action | IN("queued", "duplicate")) and
+                 (.generation_id | type == "string") and
+                 (.generation_id | test("^[0-9a-f]{64}$")) and
+                 (.head_sha == $head)) or
+                ((.action == "suppressed") and (.generation_id == null)) or
+                ((.action | IN("ignored_stale_suppression", "ignored_stale_eligible")) and
+                 (.generation_id == null) and (.head_sha | type == "string") and
+                 (.head_sha | test("^[0-9a-f]{40}$"))))' \
+              "$response_path" >/dev/null
+            exit 0
+          fi
+
+          if [[ "$http_status" == "409" ]] &&
+             jq -e --arg head "$DISPATCH_HEAD_SHA" \
+               '(.ok == true) and (.action == "elevated") and
+                (.reason == "REVIEW_GENERATION_LIMIT") and
+                (.generation_id == null) and (.head_sha == $head)' \
+               "$response_path" >/dev/null; then
+            echo "::notice title=Review loop complete::Review-generation ceiling reached for this exact head; no review was launched. Human closeout remains required."
+            {
+              echo "### Private review dispatch"
+              echo ""
+              echo "Review-generation ceiling reached for the exact current head."
+              echo "No reviewer was launched; human closeout remains required."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          coordinator_error="$(jq -r 'if (.error | type) == "string" then .error else "UNKNOWN" end' "$response_path" 2>/dev/null || printf 'MALFORMED_RESPONSE')"
+          if [[ "$coordinator_error" == "GITHUB_APP_PERMISSION_MISSING" ]]; then
+            echo "::error title=GitHub App permission missing::The review snapshot broker requires Contents: read to resolve the live base branch (HTTP ${http_status})."
+          else
+            echo "::error title=Private review dispatch failed::Coordinator returned ${coordinator_error} (HTTP ${http_status})."
+          fi
+          exit 1

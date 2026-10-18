@@ -16,7 +16,15 @@ from __future__ import annotations
 # --- fundamental constants (CODATA-ish, SI) ---
 G_SI = 6.67430e-11          # m^3 kg^-1 s^-2
 C_SI = 2.99792458e8         # m / s
-MSUN_SI = 1.98892e30        # kg
+# Solar mass parameter: the IAU 2015 Resolution B3 nominal (GM)_sun (exact by
+# definition), as current LALSuite (LAL_GMSUN_SI in lal 7.7.0 LALConstants.h)
+# and the Q2C oracle use.  Until 2026-10-14 this module had MSUN_SI = 1.98892e30
+# kg (old LAL's solar mass, meant for CODATA-1986 G); paired with CODATA-2018 G,
+# GMSUN_KM came out 1.4770039 km, 2.566e-4 above the 1.476625 km its comment
+# claimed (docs/devlog/2026-10-14-gmsun-iau.md).  MSUN_SI is derived, so
+# G_SI * MSUN_SI == GM_SUN_SI.
+GM_SUN_SI = 1.3271244e20    # m^3 s^-2
+MSUN_SI = GM_SUN_SI / G_SI  # kg, 1.98840987069805e30 (= lal 7.7 LAL_MSUN_SI)
 
 # --- nuclear constants ---
 HBARC = 197.3269804         # MeV fm
@@ -28,8 +36,8 @@ M_BARYON = 939.0            # representative baryon (rest-mass density) mass, Me
 MEV_TO_FM_INV = 1.0 / HBARC  # 1 MeV = (1/hbarc) fm^-1
 
 # --- geometric length scale: GMsun/c^2 in km ---
-# 1.476625 km (standard).  Geometric mass [km] / GMSUN_KM -> mass [Msun].
-GMSUN_KM = G_SI * MSUN_SI / C_SI**2 / 1.0e3   # ~1.4766 km
+# 1.476625 km (IAU nominal).  Geometric mass [km] / GMSUN_KM -> mass [Msun].
+GMSUN_KM = GM_SUN_SI / C_SI**2 / 1.0e3   # 1.4766250 km
 
 # --- energy-density / pressure conversion: MeV/fm^3 -> geometric km^-2 ---
 # eps_geom[m^-2] = (G/c^4) * eps_SI[Pa];  1 MeV/fm^3 = 1.602176634e32 Pa.

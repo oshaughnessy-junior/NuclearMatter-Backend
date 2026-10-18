@@ -29,6 +29,60 @@ quarks + Polyakov loop) and is **not** the right use of effort here.
 CMF emits **CompOSE-compatible CSV** tables (`CMF_output_stable.csv`,
 `CMF_output_for_Lepton_*.csv`). The relevant 1-based columns are
 **5 = baryon density [1/fm³], 8 = energy density [MeV/fm³], 9 = pressure [MeV/fm³]**.
+
+### CSV layout (CMF++ v1.1.0, verified 2026-10-11 against a real run)
+
+The output CSVs are **intentionally headerless** (`clean_output.py` writes them with
+`pandas.to_csv(header=False)`; `api/OpenAPI_Specifications_CMF.yaml` is the only
+column record).  `CMF_output_{stable,metastable,unstable}.csv` have 21 columns
+(schema `CMF_output_all_EoS_variables`):
+
+| col | name | unit | | col | name | unit |
+|---|---|---|---|---|---|---|
+| 1 | T | MeV | | 12 | zeta (mean field) | MeV |
+| 2 | mu_B | MeV | | 13 | delta | MeV |
+| 3 | mu_S | MeV | | 14 | omega | MeV |
+| 4 | mu_Q | MeV | | 15 | phi | MeV |
+| 5 | **n_B** | 1/fm³ | | 16 | rho | MeV |
+| 6 | n_S | 1/fm³ | | 17 | Phi_order | – |
+| 7 | n_Q | 1/fm³ | | 18 | n_B_without_Phi_order | 1/fm³ |
+| 8 | **eps** | MeV/fm³ | | 19 | n_quark | 1/fm³ |
+| 9 | **p** | MeV/fm³ | | 20 | n_octet | 1/fm³ |
+| 10 | s | 1/fm³ | | 21 | n_decuplet | 1/fm³ |
+| 11 | sigma (mean field) | MeV | | | | |
+
+`CMF_output_for_Lepton_{baryons,quarks}.csv` (schema `CMF_output_for_Lepton`) carry
+11 columns: 1–10 as above plus `n_B_without_Phi_order` as column 11.  Columns 5/8/9
+therefore mean the same thing in both families, which is why one `read_cmf_csv`
+mapping serves both.
+
+**n_B (col 5) vs n_B_without_Phi_order (col 18):** column 5 is the full baryon
+density, `n_B = ∂p/∂mu_B`, which at T = 0 includes the Polyakov-loop term
+`−4 a₁ mu_B³ Φ²/(ħc)³` from the Φ-dependent part of the potential
+(`observables.cpp`); column 18 is the sum of the baryon/quark vector densities with
+that term left out.  They agree where Φ vanishes (at the file's printed precision,
+the whole hadronic branch of the default run) and differ once the Polyakov loop is
+nonzero — 161 of the 399 rows of the
+default C4 stable table at the file's printed precision (the identity
+`col5 = col18 − 4 a₁ mu_B³ Φ²/(ħc)³` holds to 1e-12 across the whole table).  For
+the thermodynamically consistent `(n, eps, p)` triple that the `h(mu)` interpolation
+and TOV need, **column 5 is the right density**; use column 18 only if you
+specifically want the particle-number density without the order-parameter
+contribution.
+
+**Reader bug fixed 2026-10-11:** `read_cmf_csv` previously defaulted to
+`skip_header=1`, which on a headerless CMF file silently dropped the first data row —
+on the default C4 run that row is the **mu_B = 922 MeV nuclear-matter onset**
+(`n_B = 0.1535 fm⁻³`).  The reader had only been validated on a synthetic CSV that
+carried a header line, so the test passed.  It now auto-detects leading non-numeric
+lines (`skip_header=None`), reads real CMF output without loss, and still handles a
+headed file; `tests/test_compose.py` has a regression test on a verbatim 3-row
+headerless sample plus end-to-end checks on the real stable and Lepton tables when
+they are on disk (`NMB_CMF_OUTPUT_DIR`; `NMB_CMF_REQUIRED=1` makes absence a failure).
+The reader also now drops p ≤ 0 rows: `CMF_output_for_Lepton_baryons.csv` carries
+three metastable points (mu_B = 916–920 MeV, p < 0) that used to be clamped to
+p = 1e-12 and produced tied enthalpies in the table.
+
 So the path is: run CMF (Docker / MUSES Calculation Engine API) for the cold
 β-equilibrium NS line (via its Lepton/Synthesis output) → **ingest the CSV** →
 diagnose and solve:
@@ -43,8 +97,9 @@ model_diagnostic(rmft_table, cmf, label_a="RMFT", label_b="CMF")   # EOS-level c
 fam = build_family(cmf); m_max(fam); radius_of_mass(fam, 1.4)      # TOV
 ```
 
-`eos/compose.py::read_cmf_csv` (column-mapped, validated by a synthetic round-trip)
-does the ingestion; `validation/model_diagnostic` gives the **EOS-level** cross-code
+`eos/compose.py::read_cmf_csv` (column-mapped; validated by a synthetic round-trip
+and, since 2026-10-11, against the real headerless CMF++ v1.1.0 output) does the
+ingestion; `validation/model_diagnostic` gives the **EOS-level** cross-code
 comparison (ε, p, μ, c_s² vs density — not just M-R-Λ), which is the diagnostic
 asked for. Cross-checking a CMF table this way needs no reimplementation.
 
@@ -77,6 +132,12 @@ to target; until then, ingest its tables.
 ## Status / next
 
 - `load_cmf` + `model_diagnostic` + TOV give a complete CMF cross-check once a real
-  CMF CSV is in hand. Synthetic-CSV column mapping is validated (`test_compose.py`).
+  CMF CSV is in hand. Column mapping is validated on a synthetic CSV and on the real
+  headerless CMF++ v1.1.0 layout (`test_compose.py`); the real default-run tables live
+  under `~/q2c_deps/cmf-v1.1.0-runs/C4_muS-50_muQ0/` on sporcsubmit (the archived
+  default run; `cmf-v1.1.0-build/output/` is a scratch dir other runs overwrite; override
+  with `NMB_CMF_OUTPUT_DIR`).
+- Q2C pins NMB via its `NMB_PIN` file; bumping that pin to pick up the reader fix is a
+  separate Q2C change, not part of this repository.
 - A `qlimr` cross-check (MUSES' own TOV/observables module) would similarly come via
   its output table once available.

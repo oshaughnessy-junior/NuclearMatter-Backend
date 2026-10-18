@@ -41,18 +41,20 @@ def test_fwd_grad_radius_matches_fd():
     assert abs(g - fd) <= 5e-3 * abs(fd) + 1e-5
 
 
-def test_fwd_grad_lambda_converges_with_tolerance():
-    # dLambda/dL_sym converges to FD as rtol tightens (jax 0.7.1: 1e-8 +5.7%,
-    # 1e-10 +0.01%, 1e-12 +0.02%), so gradient work wants rtol <~ 1e-10.
+def test_fwd_grad_lambda_matches_fd():
+    # dLambda/dL_sym at fixed h_c.  Before jump_ts at the table nodes
+    # (2026-10-12) the tangent converged only slowly with rtol (1e-7 -8.6%,
+    # 1e-8 -1.9%, 1e-12 -0.01%), so gradient work wanted rtol <~ 1e-10.  Now
+    # AD matches FD to 3e-5 at rtol 1e-7 and 7e-7 at 1e-8.  The FD step is
+    # small: +-0.2 has a 2.4e-5 truncation error, more than the AD error.
     def f(Lsym, rt):
         return solve_structure(mm.eos_table({"L_sym": Lsym}), _HC,
                                rtol=rt, atol=rt * 1e-2).Lambda
-    fd = (float(f(60.2, 1e-12)) - float(f(59.8, 1e-12))) / 0.4
-    g_loose = float(jax.jacfwd(lambda L: f(L, 1e-8))(60.0))
-    g_tight = float(jax.jacfwd(lambda L: f(L, 1e-12))(60.0))
-    assert np.isfinite(g_tight) and g_tight * fd > 0.0
-    assert abs(g_tight - fd) < abs(g_loose - fd)
-    assert abs(g_tight - fd) <= 0.01 * abs(fd)
+    fd = (float(f(60.01, 1e-12)) - float(f(59.99, 1e-12))) / 0.02
+    g_default = float(jax.jacfwd(lambda L: f(L, 1e-7))(60.0))
+    g_tight = float(jax.jacfwd(lambda L: f(L, 1e-10))(60.0))
+    assert abs(g_default - fd) <= 1e-4 * abs(fd)
+    assert abs(g_tight - fd) <= 1e-5 * abs(fd)
 
 
 def test_reverse_grad_structure_only():

@@ -22,6 +22,26 @@ Tracked items intentionally deferred, with the context for when they matter.
 > keep it only as an optional future smoothing of the last ~2.5%.
 
 
+> **Update 2026-10-12: the remaining tangent bias was the adaptive mesh
+> straddling the EOS table nodes.** The TOV right-hand side is only C^0 at
+> every node: eps' jumps (Hermite of p(h)), and so does cs2' (linear interpolation).
+> Dopri5 + PID rejected about half its steps there. ForwardMode then
+> differentiated the mesh position relative to the kinks: the mesh moves with
+> h_c and dt0, the kinks with the table parameters. That gave 0.01–4% AD-vs-FD
+> errors at rtol 1e-11, erratic in rtol. Examples: dR/dh_c -0.36% on GM1;
+> dLambda/dC_omega -0.2%; dM/dL_sym +3.6% on the MetaModel. Fix in
+> `tov.solver._adaptive_tov`. `jump_ts` at the (gradient-stopped) node
+> positions fixes the EOS-parameter tangents (~3e-5 at the default rtol 1e-7).
+> A start time frozen against differentiation, with a flow correction of the
+> start state, fixes the h_c tangent (~1.2e-4 at the default rtol, ~5e-7 at
+> 1e-9); it is required once `jump_ts` is on. This meets the acceptance
+> criterion below ("within ~0.1% of FD at default tolerance"). Option 3's
+> "standardize rtol ≲ 1e-10" is withdrawn as a workaround for the bias.
+> `fisher.GRADIENT_RTOL = 1e-10` stays, for the h_c column (comment at the
+> constant). Second h_c derivatives are unsupported (open; see the devlog).
+> `tests/test_tov_jump_ts.py` pins it. Details and before/after tables:
+> docs/devlog/2026-10-12-tov-jump-ts.md.
+
 > **Update 2026-09-27: the residuals below were a JAX defect, not physics.**
 > Under jaxlib <= 0.9, `jax.jacfwd` (vmap of jvp) of the TOV solve returned
 > wrong tangents when the tidal sector was on. The trigger was the
@@ -55,6 +75,8 @@ dΛ/dθ, dR/dθ, dM_max/dθ and are sensitive to gradient accuracy/smoothness.
    gradients) so dp/dh = ε+p is exact *and* the tangent stays smooth.
 3. Forward-over-reverse or a tangent-aware step controller for the tidal sector; or
    simply document/standardize rtol ≲ 1e-10 for gradient/Fisher runs.
+   (2026-10-12: superseded -- steps now stop at the table nodes; see the update
+   at the top of this section.)
 
 **Acceptance:** dΛ/dθ and dR/dθ within ~0.1% of FD at default tolerance, smooth
 enough for HMC step-size adaptation.
@@ -137,3 +159,33 @@ charge neutrality n_p = n_e + n_mu (an inner solve for mu_e given the charge
 density). Small but real effect on the symmetry-energy-driven part of the EOS and on
 Lambda/R at the ~0.1-1% level.
 
+
+## Small-compactness series for k2 (Love number at M ≲ 0.1 Msun)
+
+**Open (2026-10-12, PR #43 re-review).** `tov.solver._k2_from_y_C` is the closed
+Hinderer formula; its denominator cancels through O(C^4), so in float64 it is off
+by 3.6e-8 at C = 3.5e-3 and 1.3e-4 at C = 5.9e-4 (vs 60-digit arithmetic).
+Combined with dln k2/dln y ≈ -620 near y = 2, Λ for M ≲ 0.1 Msun is not reliable
+to better than ~1e-3 at any rtol.  Fix: switch to a Taylor series in C below a
+threshold.  Irrelevant for M ≳ 0.5 Msun (family Λ error 1.7e-9 at rtol 1e-9).
+
+## Tidal c_s² consistent with the structure's ε(h); node h quadrature
+
+**RESOLVED 2026-10-14** (docs/devlog/2026-10-14-tidal-cs2.md; found by Q2C's
+crust–core seam study, Q2C PR #47, and its adversarial review).  The tidal term
+took node c_s² (finite differences, linear in h), which is not the derivative of
+the Hermite ε(h): at steep joints Λ1.4 was 2–10% low.  It is now the Hermite
+cell's analytic dε/dh, carried with the node boundary terms in the tangents.
+The node h is now ∫dp/(ε+p) along the log-linear ε(p) of each cell: the
+trapezoid h made the Hermite overshoot between coarse crust nodes (R1.4 +4 to
++41 m).  Λ1.4 now agrees with an independent reference to ≤ 6e-6 on 18 tables.
+
+Open follow-ups:
+- `build_family` + `lambda_of_mass` sits +0.2% above the direct M = 1.4 root in
+  Λ1.4 on every table (interpolation; unchanged by this fix; Q2C review F1).
+- `jump_nodes=False` is no longer cheaper for tidal solves and is ~1e4x less
+  accurate in Λ: deprecate it for `tidal=True`.
+- Pressure plateaus (`allow_unstable_core=True`) have zero width in h; their
+  Δε needs the junction condition, not the tidal term.
+- Second derivatives in EOS parameters (d²/dθ²) are not supported (they were
+  wrong by O(1)–O(1e3) before as well).

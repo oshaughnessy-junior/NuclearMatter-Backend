@@ -14,12 +14,42 @@ Two backends sit behind one seam, ``solve_structure``:
   and is validated against an independent radius-domain solver to <0.1% in M, R,
   and Lambda (see ``tests/test_validation_reference.py``).  Forward-mode AD flows
   through it via ``diffrax.ForwardMode`` -- this is the supported sensitivity path
-  and reproduces the perturbation ("delta-TOV") equations.
+  and reproduces the perturbation ("delta-TOV") equations.  Two mechanisms make
+  the tangents accurate (docs/devlog/2026-10-12-tov-jump-ts.md):
+
+  - steps stop at the EOS table nodes (diffrax ``jump_ts``), where the
+    right-hand side has slope kinks.  This fixes the EOS-*parameter* tangents,
+    which now converge with rtol at the level of the values (~3e-5 at the
+    default rtol, ~1e-7 at 1e-9; up to 10% before).
+  - the start of the integration is frozen against differentiation.  This fixes
+    the *h_c* tangent (3.6e-2 -> 1.2e-4 at the default rtol).  It converges like
+    rtol but sits ~1e3x above the values (~1e-4 at the default rtol, ~5e-7 at
+    1e-9), from the near-centre resolution; ``centre_refine=True`` buys ~10x.
+    The residual is a near-common factor on M, R, Lambda, so it largely cancels
+    in fixed-mass derivatives.
+
+  FIRST derivatives only w.r.t. h_c: d^2/dh_c^2 is wrong by orders of
+  magnitude (mixed d^2/dh_c dtheta is fine).
+
+  The tidal term (eps + p)/cs2 is the analytic deps/dh of the same Hermite cell
+  that gives eps(h) (``EOSTable.at_h_tidal``), so per cell it integrates to
+  exactly the Delta eps the structure sees (docs/devlog/2026-10-14-tidal-cs2.md).
+  Before 2026-10-14 it took the node cs2 interpolated linearly in h, which left
+  a "phantom" Delta eps at steep joints (Lambda up to ~10% low).  The new term
+  jumps at the nodes, so y is carried in a node-anchored picture
+  (:func:`_derivs_x`; equal to h in value) in which the nodes do not move with
+  the EOS parameters, and the frozen mesh keeps the jumps' boundary terms in
+  the parameter tangents.  First parameter derivatives of Lambda only.
 
 * ``backend="scan"``: a lightweight fixed-step RK4 ``jax.lax.scan``.  Fully
   jit/vmap/grad-able (incl. reverse-mode for structure-only, ``tidal=False``), but
   a *fixed* grid is only accurate with enough, well-placed steps -- prefer the
-  diffrax backend unless you specifically need the dependency-free scan.
+  diffrax backend unless you specifically need the dependency-free scan.  Its
+  uniform grid ignores the table nodes and moves with h_c; its tangent is the
+  exact derivative of that discrete map, so it agrees with FD of the same scan
+  but carries the grid's (low-order, node-straddling) discretization error.
+  Since the tidal term jumps at the nodes, its Lambda error is first order in
+  the step where a step straddles a node.
 
 WARNING (see docs/validation-plan.md): neither backend yet handles strong
 first-order phase transitions (cs^2 -> 0 plateaus / density discontinuities) with
@@ -38,6 +68,7 @@ import jax.numpy as jnp
 
 try:
     import diffrax
+    import equinox as eqx
     _HAVE_DIFFRAX = True
 except Exception:  # pragma: no cover
     _HAVE_DIFFRAX = False
@@ -76,9 +107,12 @@ class TOVProfile(NamedTuple):
 
 
 
-def _derivs(h, state, table: EOSTable, tidal: bool = True):
+def _rhs(eps, p, deps_dh, state, tidal):
+    """d(r, m, y)/dh from the EOS at one point.  ``deps_dh`` is the tidal term
+    (eps + p)/cs^2, taken as the analytic deps/dh of the Hermite cell that also
+    gives eps, so the tidal source integrates to exactly the structure's
+    Delta eps per cell (docs/devlog/2026-10-14-tidal-cs2.md)."""
     r, m, y = state
-    eps, p, cs2 = table.at_h(h)
     denom = m + _FOURPI * r**3 * p
     drdh = -r * (r - 2.0 * m) / denom
     dmdh = _FOURPI * r**2 * eps * drdh
@@ -87,7 +121,7 @@ def _derivs(h, state, table: EOSTable, tidal: bool = True):
         one_minus_2mr = 1.0 - 2.0 * m / r
         F = (1.0 - _FOURPI * r**2 * (eps - p)) / one_minus_2mr
         Q = (_FOURPI / one_minus_2mr) * (
-            5.0 * eps + 9.0 * p + (eps + p) / cs2 - 6.0 / (_FOURPI * r**2)
+            5.0 * eps + 9.0 * p + deps_dh - 6.0 / (_FOURPI * r**2)
         ) - (2.0 * (m + _FOURPI * r**3 * p) / (r**2 * one_minus_2mr)) ** 2
         dydr = -(y**2 + y * F + r**2 * Q) / r
         dydh = dydr * drdh
@@ -96,6 +130,79 @@ def _derivs(h, state, table: EOSTable, tidal: bool = True):
         # never formed -> reverse-mode AD of (R, M) is clean.
         dydh = 0.0 * r
     return jnp.stack([drdh, dmdh, dydh])
+
+
+def _derivs(h, state, table: EOSTable, tidal: bool = True):
+    """d(r, m, y)/dh at pseudo-enthalpy ``h`` (scan backend)."""
+    eps, p, deps_dh = table.at_h_tidal(h)
+    return _rhs(eps, p, deps_dh, state, tidal)
+
+
+# ----- the tidal variable in a node-anchored picture (adaptive backend) -----
+# The tidal term deps/dh jumps at every table node (the Hermite of p(h) is C^1).
+# The adaptive solve stops at the nodes with a mesh frozen against
+# differentiation, so a node whose h moves with the EOS parameters carries a
+# boundary term (f_above - f_below) dh_node/dtheta that the frozen mesh never
+# sees (measured: dLambda/dL_sym off by a factor 2.6, dLambda/dscale on the
+# steep-joint table by 2.5).  So y is carried in a node-anchored picture: at
+# solve coordinate x, y holds y(h(x)), where h(x) is piecewise linear with knots
+# at the nodes' gradient-stopped positions U = stop_gradient(table.h) <-> h =
+# table.h.  The nodes then sit at fixed x for y, and their motion enters through
+# h(x) and dh/dx.  r and m stay in h (x == h): their right-hand side is
+# continuous at the nodes, so they need no boundary term, and moving them too
+# costs accuracy (dM/dL_sym 1e-6 -> 6e-4 at the default rtol, from the large
+# intermediate shift tangent).  The y equation needs r, m at h(x); they are
+# taken to first order, r + (dr/dh) (h(x) - x), exact for first tangents since
+# h(x) - x is zero in value.  The cell holding the (frozen) start ``ua`` is
+# mapped onto [h_{i-1}, ua], so h(x) = x at the start; at the end of a solve
+# y is moved back to h = x by y - (dy/dx)(h(x) - x).  At the primal U == table.h,
+# so every value is bit-identical to integrating y in h; only first tangents
+# change, by exactly the boundary terms.  Second derivatives in EOS parameters
+# (d^2/dtheta^2) were never supported and also miss the O((h(x) - x)^2) terms.
+def _u_cell(table: EOSTable, x, ua):
+    """Cell index and the y-picture map of cell i: (lo_u, lo_h, dh/dx) at ``x``,
+    with the cell holding the start ``ua`` anchored there."""
+    H = table.h
+    U = jax.lax.stop_gradient(H)
+    i = jnp.clip(jnp.searchsorted(U, x), 1, H.shape[0] - 1)
+    top = U[i] >= ua                              # the cell holding the start
+    hi_u = jnp.where(top, ua, U[i])
+    hi_h = jnp.where(top, ua, H[i])
+    return i, U[i - 1], H[i - 1], (hi_h - H[i - 1]) / (hi_u - U[i - 1])
+
+
+def _shift(x, lo_u, lo_h, dhdx):
+    """h(x) - x of the y picture; written so that it is exactly 0 in value."""
+    return (lo_h - lo_u) + (x - lo_u) * (dhdx - 1.0)
+
+
+def _derivs_x(x, state, table: EOSTable, ua, aux, tidal: bool = True):
+    """d(r, m, y)/dx (adaptive backend): r, m in h (x == h), y in the
+    node-anchored picture (see the note above).  ``aux`` is
+    ``eos.base._degenerate_cells(table.h, table.eps, table.p)``."""
+    from ..eos.base import _floor_eps_p, _hermite_cell_t, _tidal_term
+    i, lo_u, lo_h, dhdx = _u_cell(table, x, ua)
+    dh = table.h[i] - lo_h
+    eps, p = _hermite_cell_t(i, (x - lo_h) / dh, dh, table.p, table.eps)
+    eps, p = _floor_eps_p(eps, p, jnp)
+    f = _rhs(eps, p, 0.0, state, False)           # (dr/dh, dm/dh, 0)
+    if not tidal:
+        return f
+    t_y = (x - lo_u) * dhdx / dh                  # == (h(x) - h_{i-1}) / dh
+    eps_y, p_y, deps_y = _hermite_cell_t(i, t_y, dh, table.p, table.eps, deps=True)
+    eps_y, p_y = _floor_eps_p(eps_y, p_y, jnp)
+    deps_y = _tidal_term(i, t_y, dh, deps_y, eps_y, p_y, *aux, jnp)
+    s_y = state + f * _shift(x, lo_u, lo_h, dhdx)  # r, m at h(x); f[2] == 0
+    fy = _rhs(eps_y, p_y, deps_y, s_y, True)[2] * dhdx
+    return jnp.stack([f[0], f[1], fy])
+
+
+def _y_to_h(table, x, state, ua, aux):
+    """Tidal state at solve coordinate ``x`` with y moved from h(x) back to h = x
+    (a zero-valued correction; first tangents exact)."""
+    _, lo_u, lo_h, dhdx = _u_cell(table, x, ua)
+    fy = _derivs_x(x, state, table, ua, aux, True)[2]
+    return state.at[2].add(-fy * _shift(x, lo_u, lo_h, dhdx))
 
 
 def _k2_from_y_C(y, C):
@@ -154,36 +261,137 @@ def _solve_scan(table, h_c, n_steps, tidal):
 # ----- adaptive diffrax backend -----
 # Module-level vector fields: diffeqsolve is jitted with the term as a static key, so a
 # fresh closure per call would recompile every solve and leak the executables.
-def _field_tidal(h, s, args):
-    return _derivs(h, s, args, True)
+def _field_tidal(x, s, args):
+    return _derivs_x(x, s, *args, True)          # args = (table, ua, aux)
 
 
-def _field_structure(h, s, args):
-    return _derivs(h, s, args, False)
+def _field_structure(x, s, args):
+    return _derivs_x(x, s, *args, False)
+
+
+def _node_jumps(table):
+    """Interior EOS-table nodes as diffrax ``jump_ts`` (gradient-stopped).
+
+    The TOV right-hand side is not smooth at any table node: eps comes from a
+    C^1 Hermite of p(h) (so eps' jumps), and the tidal term deps/dh of the same
+    Hermite jumps.  An adaptive step that straddles a node rejects repeatedly
+    there, and ForwardMode then differentiates the mesh's position relative to
+    the non-smooth point -- a tangent bias that shrinks only slowly and
+    erratically with rtol (docs/devlog/2026-10-12-tov-jump-ts.md).  Stepping to
+    just before and restarting just after each node removes both.
+    ``table.h[0]`` is the surface (the integration end point) and is left out;
+    nodes outside the integration interval are inert, so the array keeps the
+    table's static length under jit/vmap.  The positions are gradient-stopped:
+    the mesh is fixed.  For r and m (continuous right-hand side) the node motion
+    enters through the vector field on each side of the node; for y (which
+    jumps) through its node-anchored picture (:func:`_derivs_x`), which carries
+    the boundary term (devlog 2026-10-14-tidal-cs2)."""
+    return jax.lax.stop_gradient(table.h[1:])
+
+
+def _adaptive_tov(table, t0, t1, state0, rtol, atol, tidal, dt0,
+                  adjoint=None, max_steps=100000, saveat=None, jump_nodes=True):
+    """Adaptive Dopri5 integration of the TOV(+tidal) system from ``t0`` down to
+    ``t1`` in pseudo-enthalpy, with steps cut at the EOS table nodes.
+
+    Three mechanisms, each fixing part of the tangent (docs/devlog/
+    2026-10-12-tov-jump-ts.md, 2026-10-14-tidal-cs2.md):
+
+    * ``jump_ts`` at the table nodes fixes the *parameter* tangents: the mesh
+      no longer straddles kinks whose position moves with the EOS parameters.
+    * The tidal y is carried in a node-anchored picture (:func:`_derivs_x`), so
+      the jump of the tidal term deps/dh at a node that moves with the
+      parameters contributes its boundary term, which the frozen mesh would
+      drop.  The returned y is moved back to h = t1 (:func:`_y_to_h`).
+    * The frozen start fixes the *h_c* tangent and is REQUIRED whenever
+      ``jump_ts`` is on.  With a live t0/dt0 the mesh moves with h_c while the
+      (gradient-stopped) node clips do not, and the h_c tangent error grows as
+      rtol tightens (0.49 / 4.8e3 / 1.7e7 at rtol 1e-7 / 1e-8 / 1e-9).
+
+    The start time and the initial step are frozen against differentiation, so
+    no mesh point before the last carries a tangent.  The start's dependence on
+    the inputs moves into the starting state through the flow expansion
+    ``y(t0s) = y(t0) + f d + f' d^2 / 2`` with ``d = t0s - t0 == 0`` and
+    ``f' = df/dt`` along the flow: values are unchanged, first tangents are
+    exact (``dy0 - f dt0``), and the ``f' dt0^2`` term of the second tangent is
+    kept.  ``t1`` stays live: the last step ends there and spans no node.
+
+    Derivatives w.r.t. the start (h_c) are reliable to FIRST order only.  Second
+    derivatives in h_c are wrong by orders of magnitude (the frozen mesh
+    under-resolves the (h_c - h)^-3/2 second tangent near the centre);
+    mixed d^2/dh_c dtheta and first parameter derivatives are fine; second
+    parameter derivatives are not (see solve_structure).
+    ``tests/test_tov_jump_ts.py::test_second_hc_derivative_is_not_supported``
+    pins this.  With ``tidal=True`` only the default ``saveat`` (the end
+    point) is supported: saved y would be in the node-anchored picture."""
+    sg = jax.lax.stop_gradient
+    t0, t1 = jnp.asarray(t0), jnp.asarray(t1)   # a Python float here is a jit key
+    if tidal and saveat is not None:
+        raise ValueError("tidal solves save the end point only")
+    ua = sg(t0)                  # y picture anchored at the frozen start
+    from ..eos.base import _degenerate_cells
+    aux = _degenerate_cells(table.h, table.eps, table.p, jnp)   # jumps at fixed p
+    t0s = sg(t0)                                # REQUIRED with jump_ts; see above
+    f0 = _derivs_x(t0, state0, table, ua, aux, tidal)
+    _, fdot = jax.jvp(lambda t, y: _derivs_x(t, y, table, ua, aux, tidal),
+                      (t0, state0), (jnp.ones_like(t0), f0))
+    d = t0s - t0
+    state0 = state0 + f0 * d + 0.5 * fdot * d * d
+    term = diffrax.ODETerm(_field_tidal if tidal else _field_structure)
+    ctrl = diffrax.PIDController(
+        rtol=rtol, atol=atol,
+        jump_ts=_node_jumps(table) if jump_nodes else None)
+    if adjoint is None:
+        adjoint = diffrax.ForwardMode()   # supports values, vmap, forward-mode AD
+    sol = diffrax.diffeqsolve(
+        term, diffrax.Dopri5(), t0=t0s, t1=t1, dt0=sg(dt0),
+        y0=state0, args=(table, ua, aux), stepsize_controller=ctrl, max_steps=max_steps,
+        adjoint=adjoint,
+        saveat=diffrax.SaveAt(t1=True) if saveat is None else saveat,
+    )
+    if not tidal:
+        return sol
+    ys = _y_to_h(table, t1, sol.ys[0], ua, aux)[None]
+    return eqx.tree_at(lambda s: s.ys, sol, ys)
+
+
+#: ``centre_refine``: the inner fraction of (h_c - h_min) integrated at a
+#: tolerance tighter by ``_CENTRE_TOL`` (floored at min(rtol, ``_CENTRE_RTOL_MIN``))
+_CENTRE_FRAC = 0.05
+_CENTRE_TOL = 1e-3
+_CENTRE_RTOL_MIN = 1e-13
 
 
 def _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint=None,
-                       max_steps=100000, saveat=None):
+                       max_steps=100000, saveat=None, *, jump_nodes=True,
+                       centre_refine=False):
     if not _HAVE_DIFFRAX:  # pragma: no cover
         raise ImportError("backend='diffrax' requires the 'diffrax' package; "
                           "pip install diffrax  (or use backend='scan').")
     h_min, h_c, dh0, state0 = _central_start(table, h_c)
+    t0, dt0 = h_c - dh0, -(h_c - h_min) * 1e-4
+    if not centre_refine:
+        return _adaptive_tov(table, t0, h_min, state0, rtol, atol, tidal, dt0,
+                             adjoint, max_steps, saveat, jump_nodes)
+    if saveat is not None:
+        raise ValueError("centre_refine supports SaveAt(t1=True) only")
+    # Inner shell to a frozen split point at a tighter tolerance, then the rest.
+    # The split is an arbitrary interior point, so freezing it needs no
+    # correction; the state carries the tangents across.
+    h_split = jax.lax.stop_gradient(t0 - _CENTRE_FRAC * (h_c - h_min))
+    # inner rtol = max(rtol * 1e-3, min(rtol, 1e-13)): never looser than rtol
+    scale = jnp.maximum(_CENTRE_TOL, jnp.minimum(1.0, _CENTRE_RTOL_MIN / rtol))
+    inner = _adaptive_tov(table, t0, h_split, state0, rtol * scale,
+                          atol * scale, tidal, dt0, adjoint, max_steps, None,
+                          jump_nodes)
+    return _adaptive_tov(table, h_split, h_min, inner.ys[0], rtol, atol, tidal,
+                         10.0 * dt0, adjoint, max_steps, None, jump_nodes)
 
-    term = diffrax.ODETerm(_field_tidal if tidal else _field_structure)
-    ctrl = diffrax.PIDController(rtol=rtol, atol=atol)
-    if adjoint is None:
-        adjoint = diffrax.ForwardMode()   # supports values, vmap, forward-mode AD
-    sol = diffrax.diffeqsolve(
-        term, diffrax.Dopri5(), t0=h_c - dh0, t1=h_min,
-        dt0=-(h_c - h_min) * 1e-4, y0=state0, args=table,
-        stepsize_controller=ctrl, max_steps=max_steps, adjoint=adjoint,
-        saveat=diffrax.SaveAt(t1=True) if saveat is None else saveat,
-    )
-    return sol
 
-
-def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000):
-    sol = _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint, max_steps)
+def _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=None, max_steps=100000,
+                   *, jump_nodes=True, centre_refine=False):
+    sol = _integrate_diffrax(table, h_c, rtol, atol, tidal, adjoint, max_steps,
+                             jump_nodes=jump_nodes, centre_refine=centre_refine)
     ys = sol.ys[0]
     return _finish(ys[0], ys[1], ys[2], h_c, tidal)
 
@@ -216,7 +424,8 @@ def solve_profile(table: EOSTable, h_c, *, n_points: int = 256,
 
 def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
                     tidal: bool = True, rtol: float = 1e-7, atol: float = 1e-9,
-                    n_steps: int = 2000, adjoint=None):
+                    n_steps: int = 2000, adjoint=None, jump_nodes: bool = True,
+                    centre_refine: bool = False):
     """Integrate one star at central pseudo-enthalpy ``h_c``.  Returns TOVPoint.
 
     Backend seam: callers depend only on this signature and ``TOVPoint``.
@@ -229,9 +438,38 @@ def solve_structure(table: EOSTable, h_c, *, backend: str = "diffrax",
               reverse-mode AD of (R, M) is clean (scan backend).
     rtol, atol : diffrax tolerances.   n_steps : scan-backend step count.
     adjoint : optional diffrax adjoint override (default ForwardMode()).
+    jump_nodes : (diffrax) stop steps at every EOS table node (default).  False
+              was an opt-out for bulk value-only scans of tables with thousands
+              of rows (also exposed by ``build_family``).  Since 2026-10-14 the
+              tidal term jumps at the nodes, so with tidal=True it no longer
+              saves time (MetaModel family 81 vs 88 ms, GM1 78 vs 38 ms) and
+              Lambda is ~1e4x less accurate (7e-4 MetaModel, 6e-3 GM1 at the
+              default rtol, vs 2e-7); NOT recommended with tidal=True.  With
+              tidal=False it is unaffected.  The parameter tangents are biased
+              by up to ~10%, and batched vs unbatched solves agree only to ~1e-4
+              (measured 3e-5 in Lambda; 1e-12 with the default).  It is
+              NOT the pre-2026-10-12 solver: the start stays frozen (so the h_c
+              tangent stays accurate, 1-19% off the old one); parameter
+              tangents equal the old solver's, and values equal it only up to
+              step-decision roundoff (up to ~1e-4 in Lambda).
+    centre_refine : (diffrax) integrate the inner 5% of (h_c - h_min) at
+              rtol * 1e-3, floored at min(rtol, 1e-13) (never looser than the
+              rest of the star).  Off by default.  Cuts the h_c-tangent error at the
+              default rtol from ~1.2e-4 to ~8e-6 for +40-90% cost; parameter
+              tangents and values are unchanged.
+
+    Derivatives: forward-mode first derivatives in h_c and in any EOS
+    parameter, and mixed d^2/dh_c dtheta, are supported.  Second derivatives
+    in h_c (d^2 X/dh_c^2) are NOT: they are wrong by orders of magnitude.
+    Nor are second derivatives in EOS parameters (d^2/dtheta^2): on the
+    MetaModel star of tests/test_tov_jump_ts.py, d^2(M, R, Lambda)/dL_sym^2 are
+    off by O(1) (and were off by 5, 10 and 900x before 2026-10-14); the tidal
+    y is moreover carried only to first order in the node motion (devlog
+    2026-10-14-tidal-cs2).
     """
     if backend == "diffrax":
-        return _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=adjoint)
+        return _solve_diffrax(table, h_c, rtol, atol, tidal, adjoint=adjoint,
+                              jump_nodes=jump_nodes, centre_refine=centre_refine)
     elif backend == "scan":
         return _solve_scan(table, h_c, n_steps, tidal)
     raise ValueError(f"unknown backend {backend!r} (use 'diffrax' or 'scan')")

@@ -103,9 +103,15 @@ def test_asymmetric_pinned_anchors():
     # closes the equal-mass blind spot -- at q=1 the mass-ratio exponents
     # (Radice n=-0.773, KF20 n=1.5465) and all Nedora q-coefficients are
     # invisible to the other anchors, so a wrong sign/row there would pass.
+    # The anchor is given by compactness C = GMSUN_KM m / R (what the fits use),
+    # so the pins do not depend on the unit constant.  C1, C2 are the
+    # compactnesses the pins were computed at: R = 11.5, 12.0 km with the
+    # pre-2026-10-14 GMSUN_KM = 1.4770039 km.
     from nmbackend.ejecta import (nedora2021_vej, nedora2021_mdisk)
+    C1, C2 = 0.19265267846681078, 0.1415462040401985
     x = _inputs(m1=1.50, m2=1.15, lambda1=250.0, lambda2=900.0,
-                r1_km=11.5, r2_km=12.0)     # q=1.3043, Lt=466.26
+                r1_km=GMSUN_KM * 1.50 / C1,
+                r2_km=GMSUN_KM * 1.15 / C2)     # q=1.3043, Lt=466.26
     assert float(radice2018_mej(x)) == pytest.approx(8.97442575e-04, rel=1e-6)
     assert float(radice2018_vej(x)) == pytest.approx(2.09410824e-01, rel=1e-6)
     assert float(kf2020_mdyn(x)) == pytest.approx(1.05719335e-02, rel=1e-6)
@@ -250,11 +256,11 @@ def test_dmej_dLsym_through_metamodel_matches_fd():
 
     This is the bridge contract: gradients with respect to nuclear empirical
     parameters must survive the full composition.  Forward-mode (jacfwd) is
-    the supported TOV sensitivity path.  The Lambda tangent is under-resolved
-    at the family-build tolerance (cf. test_fwd_grad_lambda_converges: tight
-    dLambda/dparam needs rtol <~ 1e-11, unaffordable across a 140-model
-    family), so we require sign agreement and <25% relative error; measured
-    on ldas-pcdev13 (jax 0.10.1): AD -5.17e-6 vs FD -6.32e-6 Msun/MeV (18%).
+    the supported TOV sensitivity path.  We require sign agreement and <25%
+    relative error; measured on ldas-pcdev13 (jax 0.10.1): AD -5.17e-6 vs FD
+    -6.32e-6 Msun/MeV (18%).  On sporcsubmit (jax 0.10.1, 2026-10-12): AD
+    -2.0319e-5 vs FD -2.0366e-5 (-0.23%) before steps stopped at the table
+    nodes, -2.0346e-5 vs -2.0366e-5 (-0.10%) after (test_tov_jump_ts.py).
     """
     from nmbackend.eos import MetaModelEOS
     from nmbackend.tov import build_family
