@@ -324,17 +324,24 @@ def test_read_compose_rejects_bad_files(tmp_path):
         read_compose(str(tmp_path))
 
 
-def test_load_compose_real_eos188_cross_code():
-    # A real table with a crust from n_B = 1e-7: the diffrax solve agrees with the
-    # independent SciPy solver (tolerances of test_ingested_table_cross_code).
+def test_load_compose_real_eos188_tov():
+    # A real table with a crust from n_B = 1e-7.  (a) The diffrax solve agrees with
+    # the independent SciPy solver taking its tidal term from its own eps(p)
+    # (consistent_cs2; the node-cs2 default is 8% off on this table, the phantom of
+    # docs/devlog/2026-10-14-tidal-cs2.md).  (b) M_max and R_1.4 match the values the
+    # CompOSE eos/188 sheet quotes (2.07 Msun, 13.57 km; read off in Q2C notes/41).
+    # With the old reader they were 2.119 Msun and 14.46 km.
     t = load_compose(str(_DATA / "compose_eos188"))
     assert float(t.n[0]) == 1e-7 and np.all(np.diff(np.asarray(t.h)) > 0)
     hc = 0.25 * float(t.h[-1])
     a = solve_structure(t, hc, backend="diffrax", rtol=1e-9, atol=1e-11)
-    b = solve_reference(t, hc, rtol=1e-10, atol=1e-12)
+    b = solve_reference(t, hc, rtol=1e-10, atol=1e-12, consistent_cs2=True)
     assert np.isfinite(float(a.Lambda))
     assert abs(float(a.R_km) - b.R_km) * 1000.0 < 30.0       # metres
     assert abs(float(a.Lambda) / b.Lambda - 1.0) < 0.01
+    f = build_family(t, default_hc_grid(t, n_models=60))
+    assert abs(float(m_max(f)) / 2.07 - 1.0) < 3e-3
+    assert abs(float(radius_of_mass(f, 1.4)) / 13.57 - 1.0) < 4e-3
 
 
 # ---------------- tables reaching near-zero surface pressure ----------------
