@@ -1,7 +1,11 @@
 """CompOSE / tabular EOS ingestion: round-trip exactness + cross-code on a table."""
-import numpy as np
+import hashlib
 import tempfile
 import warnings
+from pathlib import Path
+
+import numpy as np
+import pytest
 
 from nmbackend.eos import RMFTEOS
 from nmbackend.eos.compose import (write_compose, load_compose, read_compose,
@@ -223,3 +227,155 @@ def test_cmf_csv_rejects_empty_or_nonnumeric():
         with pytest.raises(ValueError), warnings.catch_warnings():
             warnings.simplefilter("ignore")        # genfromtxt's empty-file warning
             read_cmf_csv(f)
+
+
+# ---------------- real CompOSE files: eos/116 and eos/188 (CC-BY-4.0) ----------------
+# tests/data/compose_eos{116,188}: unmodified eos.nb / eos.thermo downloads (see each
+# directory's README for source, DOI and license).  eos.nb starts with the two-line
+# header "first index, last index"; until 2026-10-25 read_compose kept both header
+# numbers as densities, so row i_nb got n_B[i_nb - 2].
+_DATA = Path(__file__).resolve().parent / "data"
+_REAL = {
+    "116": dict(last=301, n_first=0.03, n_last=3.03,
+                sha={"eos.nb": "3f93e8fe1b971ba7049ed66e8638bba291f36b259796e7f5395dc6d6b59cff45",
+                     "eos.thermo": "97e78856cd7f26fbc9466a678d14f807cc6f1dba52588e2a4d0bcc3629012aca"}),
+    "188": dict(last=1191, n_first=1e-7, n_last=3.03,
+                sha={"eos.nb": "d9c8e78c2fcf37fe770fecfc2d3a211d840a28299821a56c77e66f9ff74edef8",
+                     "eos.thermo": "416444999ccac569e2c9b34808888949c36d759f30cce25dab0d42c13e900ce3"}),
+}
+
+
+def _thermo_rows(d):
+    """eos.thermo rows (i_T i_nb i_Yq Q1..Q7 N_add q_1..q_N) of a real file, parsed
+    here without read_compose.  In both fixtures q_3 (the last column) is n_B as
+    printed for that row; it gives n independently of eos.nb."""
+    lines = (d / "eos.thermo").read_text().splitlines()
+    return float(lines[0].split()[0]), np.array([[float(x) for x in ln.split()]
+                                                  for ln in lines[1:] if ln.strip()])
+
+
+@pytest.mark.parametrize("eos", sorted(_REAL))
+def test_read_compose_real_file(eos):
+    d, ref = _DATA / f"compose_eos{eos}", _REAL[eos]
+    for f, h in ref["sha"].items():
+        assert hashlib.sha256((d / f).read_bytes()).hexdigest() == h
+    assert (d / "eos.nb").read_text().split()[:2] == ["1", str(ref["last"])]
+    n, e, p, m_n = read_compose(str(d))
+    m_ref, rows = _thermo_rows(d)
+    assert m_n == m_ref == 938.9187125
+    assert n.size == rows.shape[0] == ref["last"]
+    assert np.all(rows[:, 10] == 3)
+    o = np.argsort(rows[:, -1])
+    n_ref = rows[o, -1]
+    np.testing.assert_allclose(n, n_ref, rtol=1e-12, atol=0.0)
+    np.testing.assert_allclose(p, rows[o, 3] * n_ref, rtol=1e-12, atol=0.0)
+    np.testing.assert_allclose(e, (rows[o, 9] + 1.0) * n_ref * m_ref, rtol=1e-12, atol=0.0)
+    np.testing.assert_allclose(n[[0, -1]], [ref["n_first"], ref["n_last"]], rtol=1e-12, atol=0.0)
+    assert np.all(np.diff(n) > 0)
+
+
+def test_write_compose_standard_header_and_legacy_read(tmp_path):
+    n, eps, p = _rmft_arrays()
+    write_compose(str(tmp_path / "std"), n, eps, p)
+    assert (tmp_path / "std" / "eos.nb").read_text().split()[:2] == ["1", str(n.size)]
+    n2, e2, p2, _ = read_compose(str(tmp_path / "std"))
+    np.testing.assert_allclose(n2, n, rtol=1e-10, atol=0.0)
+    np.testing.assert_allclose(p2, p, rtol=1e-9, atol=0.0)
+    # the one-line "count" header written before 2026-10-25 still reads
+    leg = tmp_path / "legacy"
+    leg.mkdir()
+    (leg / "eos.thermo").write_text((tmp_path / "std" / "eos.thermo").read_text())
+    (leg / "eos.nb").write_text(f"{n.size}\n" + "".join(f"{v:.10e}\n" for v in n))
+    for a, b in zip(read_compose(str(leg)), read_compose(str(tmp_path / "std"))):
+        np.testing.assert_array_equal(a, b)
+
+
+def test_read_compose_first_index_offset(tmp_path):
+    # eos.nb may start at an index other than 1; thermo i_nb counts in that range
+    n, eps, p = _rmft_arrays()
+    write_compose(str(tmp_path), n, eps, p)
+    vals = (tmp_path / "eos.nb").read_text().split()[2:]
+    (tmp_path / "eos.nb").write_text(f"5\n{4 + n.size}\n" + "\n".join(vals) + "\n")
+    th = (tmp_path / "eos.thermo").read_text().splitlines()
+    body = [ln.split() for ln in th[1:]]
+    for r in body:
+        r[1] = str(int(r[1]) + 4)
+    (tmp_path / "eos.thermo").write_text(th[0] + "\n" + "\n".join(" ".join(r) for r in body) + "\n")
+    n2, _, p2, _ = read_compose(str(tmp_path))
+    np.testing.assert_allclose(n2, n, rtol=1e-10, atol=0.0)
+    np.testing.assert_allclose(p2, p, rtol=1e-9, atol=0.0)
+
+
+def test_read_compose_rejects_bad_files(tmp_path):
+    n, eps, p = _rmft_arrays()
+    write_compose(str(tmp_path), n, eps, p)
+    nb = tmp_path / "eos.nb"
+    vals = nb.read_text().split()[2:]
+    for text in (f"1\n{n.size + 1}\n" + "\n".join(vals),       # count mismatch
+                 "\n".join(vals)):                               # no header
+        nb.write_text(text + "\n")
+        with pytest.raises(ValueError):
+            read_compose(str(tmp_path))
+    nb.write_text(f"1\n{n.size}\n" + "\n".join(vals) + "\n")
+    th = tmp_path / "eos.thermo"
+    lines = th.read_text().splitlines()
+    th.write_text("\n".join(lines + [lines[-1]]) + "\n")        # repeated i_nb
+    with pytest.raises(ValueError):
+        read_compose(str(tmp_path))
+
+
+def test_load_compose_real_eos188_cross_code():
+    # A real table with a crust from n_B = 1e-7: the diffrax solve agrees with the
+    # independent SciPy solver (tolerances of test_ingested_table_cross_code).
+    t = load_compose(str(_DATA / "compose_eos188"))
+    assert float(t.n[0]) == 1e-7 and np.all(np.diff(np.asarray(t.h)) > 0)
+    hc = 0.25 * float(t.h[-1])
+    a = solve_structure(t, hc, backend="diffrax", rtol=1e-9, atol=1e-11)
+    b = solve_reference(t, hc, rtol=1e-10, atol=1e-12)
+    assert np.isfinite(float(a.Lambda))
+    assert abs(float(a.R_km) - b.R_km) * 1000.0 < 30.0       # metres
+    assert abs(float(a.Lambda) / b.Lambda - 1.0) < 0.01
+
+
+# ---------------- tables reaching near-zero surface pressure ----------------
+def _sly_surface_arrays():
+    """The default RMFT table (SLy crust from n = 3e-10) with the packaged raw SLy
+    rows below it prepended: 5 rows, 4 of them with p < 1e-12 MeV/fm^3."""
+    from nmbackend.eos.crust import sly_crust
+    t = RMFTEOS().eos_table()
+    n0, e0, p0 = (np.asarray(a) for a in (t.n, t.eps_mevfm3, t.p_mevfm3))
+    ns, es, ps = sly_crust()
+    k = ns < n0[0]
+    return np.r_[ns[k], n0], np.r_[es[k], e0], np.r_[ps[k], p0]
+
+
+def test_near_zero_surface_pressure_keeps_lambda_finite():
+    # Regression: until 2026-10-25 p was floored at 1e-12 MeV/fm^3, so these rows
+    # became cells of zero h-width at the surface; the solve ends at h[0] inside
+    # one, where the tidal map dh/dx is 0/0, and Lambda was NaN (M, R finite).
+    n, e, p = _sly_surface_arrays()
+    assert np.sum(p < 1e-12) >= 2
+    t = eos_table_from_arrays(n, e, p, n_surface=None)
+    np.testing.assert_array_equal(np.asarray(t.p_mevfm3), p)            # no floor
+    assert np.all(np.diff(np.asarray(t.h)) > 0)
+    hc = 0.25 * float(t.h[-1])
+    a = solve_structure(t, hc, rtol=1e-10, atol=1e-12)
+    b = solve_reference(t, hc, rtol=1e-10, atol=1e-12)
+    assert np.isfinite(float(a.Lambda)) and np.isfinite(float(a.y))
+    assert abs(float(a.R_km) - b.R_km) * 1000.0 < 30.0       # metres
+    assert abs(float(a.Lambda) / b.Lambda - 1.0) < 0.01
+
+
+def test_table_start_drops_nonpositive_rows_and_bottom_plateau():
+    n = np.geomspace(1e-9, 0.5, 40)
+    e = 939.0 * n * (1 + n)
+    p = 1e-6 * n / n[0] + 50.0 * n ** 2
+    pz = p.copy()
+    pz[:2] = [-1e-3, 0.0]                  # dropped: the table starts at p > 0
+    pz[3] = 0.5 * pz[2]                    # running max -> p[3] = p[2]: zero-width cell
+    t = eos_table_from_arrays(n, e, pz, n_surface=None, xp=np)
+    assert t.n[0] == n[3] and t.p_mevfm3[0] == pz[2]
+    assert np.all(np.diff(t.h) > 0)
+    np.testing.assert_array_equal(t.p_mevfm3[1:], p[4:])
+    with pytest.raises(ValueError):
+        eos_table_from_arrays(n, e, -p, n_surface=None, xp=np)
