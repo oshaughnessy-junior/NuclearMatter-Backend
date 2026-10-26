@@ -1,0 +1,10 @@
+eos.nb and eos.thermo of CompOSE eos/188, "DS(CMF)-1 with crust", V. Dexheimer,
+https://compose.obspm.fr/eos/188, Zenodo 10.5281/zenodo.14808749, license CC-BY-4.0.
+Unmodified copies from DS_CMF_-1_with_crust_nparam_1.zip
+(sha256 533e9cf606620e6dcdb015325686e3452290eed7d25d827723e533de8c27c238).
+References: Dexheimer & Schramm, ApJ 683 (2008) 943; Dexheimer & Schramm, PRC 81
+(2010) 045201; Dexheimer, PASA 34 (2017); Dexheimer, Gomes, Klahn, Han & Salinas,
+PRC 103 (2021) (as cited in the table README).
+Fixture for tests/test_compose.py. sha256:
+d9c8e78c2fcf37fe770fecfc2d3a211d840a28299821a56c77e66f9ff74edef8  eos.nb
+416444999ccac569e2c9b34808888949c36d759f30cce25dab0d42c13e900ce3  eos.thermo

@@ -57,8 +57,9 @@ import jax
 import jax.numpy as jnp
 
 N_T_DEFAULT = 0.055       # fm^-3, 0.34 n_sat (paper 1, GKKS arXiv:2512.18044)
-N_FLOOR = 3e-10           # fm^-3, lowest crust node: p = 4e-12 MeV fm^-3, above
-                          # the 1e-12 floor of compose.eos_table_from_arrays
+N_FLOOR = 3e-10           # fm^-3, lowest crust node: p = 4e-12 MeV fm^-3, chosen
+                          # above the 1e-12 floor compose.eos_table_from_arrays
+                          # had until 2026-10-25
 BRIDGE = 1.25             # the core table starts at n_j = BRIDGE * n_t
 GAMMA_MIN = 0.5           # the segment p ~ eps^Gamma has Gamma >= GAMMA_MIN
 REMAP = 2.0               # core nodes in [n_j, REMAP n_j) may move (see join)

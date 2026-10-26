@@ -1,0 +1,9 @@
+eos.nb and eos.thermo of CompOSE eos/116, "DNS(CMF) Hadronic (cold neutron stars)",
+V. Dexheimer, https://compose.obspm.fr/eos/116, Zenodo 10.5281/zenodo.14808482,
+license CC-BY-4.0. Unmodified copies from DNS_CMF_Hadronic_cold_neutron_stars_nparam_1.zip
+(sha256 c8e3dcf5c9e6d6a0f9e004706050037e39c6c3fc3847a4bdeb866d7a4cf5e07c).
+References: Dexheimer & Schramm, ApJ 683 (2008) 943; Schurhoff, Schramm & Dexheimer,
+ApJ 724 (2010) L74; Dexheimer, Negreiros & Schramm, PRC 92 (2015) 012801.
+Fixture for tests/test_compose.py. sha256:
+3f93e8fe1b971ba7049ed66e8638bba291f36b259796e7f5395dc6d6b59cff45  eos.nb
+97e78856cd7f26fbc9466a678d14f807cc6f1dba52588e2a4d0bcc3629012aca  eos.thermo

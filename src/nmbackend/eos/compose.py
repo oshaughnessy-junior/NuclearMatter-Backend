@@ -12,9 +12,9 @@ Two entry points:
   ``i_t i_nb i_yq Q1 Q2 Q3 Q4 Q5 Q6 Q7 N_add [extra...]`` with
   ``Q1 = p/n_B`` [MeV] and ``Q7 = e/(n_B m_n) - 1`` (internal energy per baryon,
   rest mass included).  Hence p = Q1 n_B and eps = (Q7+1) n_B m_n.
-  NOTE: verify against a real CompOSE download -- the eos.nb header and the exact
-  thermo columns vary slightly between releases; this targets the documented v2/v3
-  format and is self-consistent with :func:`write_compose` (round-trip tested).
+  ``eos.nb`` starts with two lines, the indices of its first and last point, then
+  one n_B per line; row ``i_nb`` of ``eos.thermo`` is point ``i_nb`` of that range.
+  Tested on the real CompOSE eos/116 and eos/188 files (tests/data/compose_*).
 
 * :func:`load_simple` -- an unambiguous 3-column ``n_B[fm^-3]  eps[MeV/fm^3]
   p[MeV/fm^3]`` text table, for derived tables where the CompOSE columns are not at
@@ -33,26 +33,55 @@ from .base import build_h_and_cs2, extend_to_surface, EOSModel, EOSTable
 
 
 # ---------------- low-level readers (return n[fm^-3], eps, p [MeV/fm^3]) -----------
+def _numbers(line_or_text):
+    """Floats of a whitespace-separated text; Fortran ``D`` exponents allowed."""
+    return [float(t.replace("D", "E").replace("d", "e")) for t in line_or_text.split()]
+
+
+def read_compose_nb(path):
+    """(index of the first point, n_B array) from a CompOSE ``eos.nb``.
+
+    The standard file (CompOSE manual v3) has two header lines, the first and the
+    last point index, then ``last - first + 1`` values.  The one-line form (point
+    count, then the values) is what :func:`write_compose` wrote before 2026-10-25
+    and is still read.  Anything else raises ``ValueError``."""
+    with open(path) as fh:
+        v = _numbers(fh.read())
+    if len(v) >= 3 and v[0].is_integer() and v[1].is_integer() \
+            and len(v) - 2 == int(v[1]) - int(v[0]) + 1:
+        return int(v[0]), np.asarray(v[2:], float)
+    if len(v) >= 2 and v[0].is_integer() and int(v[0]) == len(v) - 1:
+        return 1, np.asarray(v[1:], float)
+    head = v[:2]
+    raise ValueError(f"{path}: header {head} matches neither 'first, last' nor 'count' "
+                     f"for {len(v)} numbers")
+
+
 def read_compose(path_dir, thermo="eos.thermo", nb="eos.nb"):
-    """Read CompOSE eos.nb + eos.thermo (cold, 1D beta-eq) -> (n, eps, p, m_n)."""
+    """Read CompOSE eos.nb + eos.thermo (cold, 1D beta-eq) -> (n, eps, p, m_n).
+
+    Raises ``ValueError`` if the table has more than one temperature or Y_q index,
+    or if an n_B index is out of the ``eos.nb`` range or repeated."""
     nb_path = os.path.join(path_dir, nb) if os.path.isdir(path_dir) else nb
     th_path = os.path.join(path_dir, thermo) if os.path.isdir(path_dir) else thermo
 
-    # eos.nb : a header line (point count) then the n_B values, one per line.
-    nb_tokens = np.loadtxt(nb_path, ndmin=1)
-    n_arr = nb_tokens[1:] if nb_tokens.size > 1 and float(
-        nb_tokens[0]).is_integer() and int(nb_tokens[0]) == nb_tokens.size - 1 \
-        else nb_tokens
-
+    i_first, n_arr = read_compose_nb(nb_path)
     with open(th_path) as fh:
         header = fh.readline().split()
-        m_n = float(header[0]) if header else M_N
-        rows = [list(map(float, ln.split())) for ln in fh if ln.strip()]
-    rows = np.array([r for r in rows if len(r) >= 11])
-    i_nb = rows[:, 1].astype(int) - 1            # 1-based index into eos.nb
+        m_n = _numbers(header[0])[0] if header else M_N
+        rows = [_numbers(ln) for ln in fh if ln.strip()]
+    rows = np.array([r[:11] for r in rows if len(r) >= 11])
+    if rows.size == 0:
+        raise ValueError(f"{th_path}: no data rows with >= 11 columns")
+    if np.unique(rows[:, 0]).size != 1 or np.unique(rows[:, 2]).size != 1:
+        raise ValueError(f"{th_path}: not a 1D table (several T or Y_q indices)")
+    k = rows[:, 1].astype(int) - i_first         # i_nb counts from eos.nb's first index
+    if np.any(k < 0) or np.any(k >= n_arr.size) or np.unique(k).size != k.size:
+        raise ValueError(f"{th_path}: n_B indices out of the eos.nb range "
+                         f"[{i_first}, {i_first + n_arr.size - 1}] or repeated")
     Q1 = rows[:, 3]                              # p / n_B [MeV] (col index 3)
     Q7 = rows[:, 9]                              # e/(n_B m_n) - 1 (col index 9)
-    n = n_arr[i_nb]
+    n = n_arr[k]
     p = Q1 * n                                   # MeV/fm^3
     eps = (Q7 + 1.0) * n * m_n                   # MeV/fm^3 (incl. rest mass)
     order = np.argsort(n)
@@ -144,7 +173,7 @@ def write_compose(path_dir, n, eps, p, m_n=M_N, m_p=M_N):
     os.makedirs(path_dir, exist_ok=True)
     n, eps, p = map(np.asarray, (n, eps, p))
     with open(os.path.join(path_dir, "eos.nb"), "w") as fh:
-        fh.write(f"{n.size}\n")
+        fh.write(f"1\n{n.size}\n")              # first and last point index
         for v in n:
             fh.write(f"{v:.10e}\n")
     Q1 = p / n
@@ -161,10 +190,32 @@ def write_compose(path_dir, n, eps, p, m_n=M_N, m_p=M_N):
 def eos_table_from_arrays(n, eps, p, n_surface=1e-7, gamma_crust=1.3,
                           xp=None) -> EOSTable:
     """Build an EOSTable from (n[fm^-3], eps, p [MeV/fm^3]); optional surface tail.
-    ``xp`` is passed to :func:`build_h_and_cs2`."""
+    ``xp`` is passed to :func:`build_h_and_cs2`.
+
+    eps and p are made non-decreasing by a running maximum.  The table starts at
+    the first row with p > 0; rows below it are dropped.  A run of equal pressures
+    at the bottom (from the running maximum) is a layer of zero thickness: only its
+    first row is kept, so the first cell has a positive h-width.  The first row is
+    the only one of the run whose p is its own; the others carry p[0] from the
+    running maximum with their own, larger eps.
+    Positive pressures are not floored.  Until 2026-10-25 p was floored at 1e-12
+    MeV/fm^3: a table with two or more rows below that started with cells of zero
+    h-width, and the TOV solve ended (at h[0]) inside one of them, where the
+    tidal variable's dh/dx is 0/0, so Lambda was NaN while M and R stayed finite
+    (docs/devlog/2026-10-25-compose-header-floor.md)."""
     n = np.asarray(n, float)
-    eps = np.maximum.accumulate(np.asarray(eps, float))
-    p = np.maximum.accumulate(np.maximum(np.asarray(p, float), 1e-12))
+    eps = np.asarray(eps, float)
+    p = np.asarray(p, float)
+    pos = np.flatnonzero(p > 0)
+    if pos.size == 0:
+        raise ValueError("eos_table_from_arrays: no row with p > 0")
+    n, eps, p = n[pos[0]:], eps[pos[0]:], p[pos[0]:]
+    eps = np.maximum.accumulate(eps)
+    p = np.maximum.accumulate(p)
+    j = int(np.searchsorted(p, p[0], side="right"))      # first row above the bottom run
+    n, eps, p = (np.concatenate([a[:1], a[j:]]) for a in (n, eps, p))
+    if p.size < 2:
+        raise ValueError("eos_table_from_arrays: fewer than two rows with distinct p > 0")
     if n_surface is not None and n[0] > n_surface:
         n, eps, p = extend_to_surface(n, eps, p, n_surface=n_surface,
                                       gamma_crust=gamma_crust)

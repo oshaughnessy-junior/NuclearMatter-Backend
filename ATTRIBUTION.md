@@ -18,6 +18,7 @@ group convention, any module that reuses or re-implements an idea carries a
 | **diffrax** (Kidger) | Adaptive ODE backend for the default TOV solver | **Apache-2.0** | Core dependency; used as a library (not vendored). |
 | **JAX** | Autodiff + array backend | **Apache-2.0** | Core dependency. |
 | **MUSES** | Modern physical-EOS modules (RMFT, CompOSE) explored for the EOS layer | see project | Reference; integration planned. |
+| **CompOSE** eos/116 and eos/188 (V. Dexheimer; Zenodo 10.5281/zenodo.14808482 and 10.5281/zenodo.14808749) | Real-file fixtures for the CompOSE reader and TOV tests (`tests/data/compose_eos116/`, `tests/data/compose_eos188/`) | **CC-BY-4.0** | Unmodified `eos.nb` and `eos.thermo` copies, redistributed with attribution and sha256 in each directory's README. |
 | **Huth et al.** (Nature 606 (2022) 276, arXiv:2107.06229) & **Tsang et al.** (arXiv:2310.11588) | Density-tagged pressure-likelihood encoding of laboratory constraints (`lab_likelihood.py`) | published methods (papers; Huth samples on Zenodo not used) | **Motivated by only.** Encodings re-implemented from the papers; no code or data copied. |
 
 ## Key scientific references
