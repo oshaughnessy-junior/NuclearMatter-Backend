@@ -194,8 +194,10 @@ def eos_table_from_arrays(n, eps, p, n_surface=1e-7, gamma_crust=1.3,
 
     eps and p are made non-decreasing by a running maximum.  The table starts at
     the first row with p > 0; rows below it are dropped.  A run of equal pressures
-    at the bottom (from the running maximum) is a layer of zero thickness and is
-    collapsed onto its last row, so the first cell has a positive h-width.
+    at the bottom (from the running maximum) is a layer of zero thickness: only its
+    first row is kept, so the first cell has a positive h-width.  The first row is
+    the only one of the run whose p is its own; the others carry p[0] from the
+    running maximum with their own, larger eps.
     Positive pressures are not floored.  Until 2026-10-25 p was floored at 1e-12
     MeV/fm^3: a table with two or more rows below that started with cells of zero
     h-width, and the TOV solve ended (at h[0]) inside one of them, where the
@@ -210,8 +212,8 @@ def eos_table_from_arrays(n, eps, p, n_surface=1e-7, gamma_crust=1.3,
     n, eps, p = n[pos[0]:], eps[pos[0]:], p[pos[0]:]
     eps = np.maximum.accumulate(eps)
     p = np.maximum.accumulate(p)
-    j = int(np.searchsorted(p, p[0], side="right")) - 1   # last row of the bottom run
-    n, eps, p = n[j:], eps[j:], p[j:]
+    j = int(np.searchsorted(p, p[0], side="right"))      # first row above the bottom run
+    n, eps, p = (np.concatenate([a[:1], a[j:]]) for a in (n, eps, p))
     if p.size < 2:
         raise ValueError("eos_table_from_arrays: fewer than two rows with distinct p > 0")
     if n_surface is not None and n[0] > n_surface:

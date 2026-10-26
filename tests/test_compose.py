@@ -381,8 +381,24 @@ def test_table_start_drops_nonpositive_rows_and_bottom_plateau():
     pz[:2] = [-1e-3, 0.0]                  # dropped: the table starts at p > 0
     pz[3] = 0.5 * pz[2]                    # running max -> p[3] = p[2]: zero-width cell
     t = eos_table_from_arrays(n, e, pz, n_surface=None, xp=np)
-    assert t.n[0] == n[3] and t.p_mevfm3[0] == pz[2]
+    assert t.n[0] == n[2] and t.p_mevfm3[0] == pz[2] and t.eps_mevfm3[0] == e[2]
     assert np.all(np.diff(t.h) > 0)
     np.testing.assert_array_equal(t.p_mevfm3[1:], p[4:])
     with pytest.raises(ValueError):
         eos_table_from_arrays(n, e, -p, n_surface=None, xp=np)
+
+
+def test_non_monotone_bottom_run_keeps_its_first_row():
+    # p falls over the first rows: the running max gives rows 1-3 the p of row 0
+    # with their own larger eps.  Only row 0 has its own (n, eps, p); it is kept,
+    # rows 1-3 are dropped, and the rest of the table is untouched.
+    n = np.geomspace(1e-9, 0.5, 40)
+    e = 939.0 * n * (1 + n)
+    p = 1e-6 * n / n[0] + 50.0 * n ** 2
+    pz = p.copy()
+    pz[1:4] = pz[0] * np.array([0.5, 0.8, 0.9])
+    t = eos_table_from_arrays(n, e, pz, n_surface=None, xp=np)
+    np.testing.assert_array_equal(t.n, np.r_[n[0], n[4:]])
+    np.testing.assert_array_equal(t.eps_mevfm3, np.r_[e[0], e[4:]])
+    np.testing.assert_array_equal(t.p_mevfm3, np.r_[pz[0], p[4:]])
+    assert np.all(np.diff(t.h) > 0)
