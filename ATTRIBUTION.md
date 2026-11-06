@@ -23,6 +23,21 @@ group convention, any module that reuses or re-implements an idea carries a
 
 ## Key scientific references
 
+### Rotating equilibrium and transport (6 November 2026)
+
+`nmbackend.rotating.rns` targets the public cgca/rns v2 C interface at
+`87ea68246ee990256f94aa91a0506f54d78dd8d0`, by Stergioulas and collaborators.
+RNS source is not vendored or relicensed. A separate driver is generated from
+the user's pinned external main.c; it is compiled with that external tree.
+The runner, schema checks and provenance handling are our implementation.
+
+The independently implemented frozen-background thermal operator follows
+Beznogov et al., ApJ 942 (2023) 72, Eq. 10 (arXiv:2206.04539).
+It is carried over from our October feasibility prototype, not a copied
+implementation of the paper's unavailable cooling code. The new PINO research
+direction follows Ray, arXiv:2611.05790v1; unavailable upstream PINO code and
+weights are not dependencies of an independent equation-based implementation.
+
 The physics implemented or planned here draws on (non-exhaustive):
 
 - **TOV / tidal deformability:** Tolman (1939); Oppenheimer & Volkoff (1939);
