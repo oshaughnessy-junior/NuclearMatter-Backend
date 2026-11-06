@@ -33,3 +33,6 @@ The independent JAX PINO development follows Ray, arXiv:2611.05790v1.
 RNS is an independent reference path. Neither a trained approximation nor a
 JAX gradient is admitted to inference without matched forward and constrained
 derivative checks; model artifacts must carry their training/domain manifest.
+
+See [the independent implementation and qualification procedure](rotating-pino-development.md)
+and `scripts/rotation/README.md` for the bounded development workflow.
