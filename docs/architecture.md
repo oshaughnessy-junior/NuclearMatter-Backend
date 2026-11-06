@@ -80,13 +80,19 @@ slope kinks; that fixes the EOS-parameter tangents. The start is frozen under
 differentiation; that fixes the h_c tangent (to ~1e-4 at the default rtol), and is
 required once `jump_ts` is on. First h_c derivatives only
 (`docs/devlog/2026-10-12-tov-jump-ts.md`). The
-fixed-step `scan` backend is retained (lightweight, reverse-mode-capable for
-structure-only) behind the same `solve_structure` seam.
+fixed-step `scan` backend is the reverse-mode path behind the same
+`solve_structure` seam.  It runs RK4 in σ = √((h_c − h)/(h_c − h_min)) on a frozen
+mesh made of sin-mapped base steps, the table nodes and EOS-placed points, with y
+in a node-anchored picture.  At n_steps = 2000 it matches diffrax to ~1e-5 (M, R),
+~5e-5 (Λ) and ~6e-5 (first derivatives).  Second derivatives through it are O(1)
+wrong and not supported.  Before 2026-10-14 it stepped uniformly in h and
+was wrong at every h_c (`docs/devlog/2026-10-14-tov-scan-accuracy.md`).
 
-**Tidal integration is optional.** Reverse-mode `grad` seeds a zero cotangent on
-`y`, whose near-center `1/r²` terms then give `0*inf → nan`. `solve_structure(...,
-tidal=False)` drops `y` so reverse-mode `R, M` gradients are clean; forward-mode
-handles `Λ`. Documented in README and tests.
+**Tidal integration is optional.** `solve_structure(..., tidal=False)` drops `y`;
+it is cheaper, and Λ and k2 become NaN placeholders.  Reverse-mode through the scan
+works with or without it.  The old uniform-h scan gave NaN reverse-mode gradients;
+these were blamed on `y`'s near-centre `1/r²` terms, but the cause was the centre
+under-resolution.
 
 **Physical EOS = nuclear empirical parameters + causal tail.** `eos/metamodel.py`
 Taylor-expands the isoscalar/isovector energy around saturation (NEPs: `E_sat,
