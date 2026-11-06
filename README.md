@@ -160,6 +160,13 @@ don't yet split twin branches); and the external
 
 ## Roadmap (see `docs/roadmap.md` and `docs/architecture.md`)
 
+**Rotating reference path (6 November 2026):** `nmbackend.rotating` builds
+and runs a pinned external RNS polytrope solver, with validated geometry
+exports and provenance receipts. `nmbackend.thermal` supplies conditional
+closed-domain transport on those frozen backgrounds. These are distinct from
+whole-star rotating cooling and EOS-to-equilibrium gradients, which remain
+development work. See [usage and limitations](docs/rotating.md).
+
 Forward plan: **harden the solver first** (close the ~200 m RePrimAnd-vs-ours R
 discrepancy to the ≲10 m level demanded by 3G/stacked measurements, using the
 independent (H,β), RePrimAnd, and MUSES `qlimr` references), **then add RMFT
