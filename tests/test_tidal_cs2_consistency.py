@@ -25,8 +25,8 @@ import jax.numpy as jnp
 import numpy as np
 
 from nmbackend.constants import M_BARYON, MEVFM3_TO_GEOM
-from nmbackend.eos.base import (EOSTable, build_h_and_cs2, hermite_eos_at_h,
-                                hermite_eos_tidal_at_h)
+from nmbackend.eos.base import (EOSTable, _degenerate_cells, build_h_and_cs2,
+                                hermite_eos_at_h, hermite_eos_tidal_at_h)
 from nmbackend.eos.crust import sly_crust
 from nmbackend.reference.scipy_tov import solve_reference
 from nmbackend.tov.solver import solve_structure
@@ -143,21 +143,28 @@ def test_lambda_tangent_keeps_the_node_boundary_terms():
     np.testing.assert_allclose(ad[2], fd[2], rtol=5e-6, atol=0.0)
 
 
-def test_bridge_density_jump_gets_the_junction():
-    """Every draw_bridge_eos table has a density jump at fixed p at the
-    low-table/bridge join (n_L = 0.32 fm^-3: p 17.7128 at both nodes, eps
-    310.75 -> 312.73 MeV/fm^3, cell width 1.7e-16 in h).  There the cubic's
-    deps/dh is +-1e18 noise; it used to make tidal solves at rtol 1e-10 hit
-    max_steps.  The cell now carries no tidal term and its Delta eps goes into
-    the cell below (the junction bubble, within the top ~3% of that cell).
-    Measured on draw 1: Lambda 224.0959 vs the reference with the exact junction
-    224.0955 (1.8e-6; 1.8e-6..2.3e-6 on 4 stars of 2 draws, 1.2e-5..3.2e-5 with
-    the first, centred bubble) and 223.5689 without it (main dropped the jump
-    too: 224.028 at rtol 1e-10, with its phantom term)."""
+def test_density_jump_gets_the_junction():
+    """A density jump at nearly fixed p, here at the low-table/bridge join of a
+    low table whose n_L node repeats the pressure of the node below to 1e-10,
+    which only the chord test of _degenerate_cells catches.  (Until the
+    bridge anchor moved to the table's value at n_L, every draw_bridge_eos table
+    had this cell.)  There the cubic's deps/dh is +-1e18 noise; it used to make
+    tidal solves at rtol 1e-10 hit max_steps.  The cell now carries no tidal
+    term and its Delta eps goes into the cell below (the junction bubble, within
+    the top ~3% of that cell)."""
+    from nmbackend.eos.metamodel import MetaModelEOS
     from nmbackend.priors.bridge import draw_bridge_eos
     from nmbackend.tov import build_family
     from nmbackend.tov.family import default_hc_grid
-    t = draw_bridge_eos(np.random.default_rng(1), corr_frac=0.3)["table"]
+    m = MetaModelEOS().eos_table()
+    low = dict(n=np.array(m.n), eps=np.array(m.eps_mevfm3),
+               p=np.array(m.p_mevfm3))
+    i = int(np.argmin(np.abs(low["n"] - 0.32)))
+    low["p"][i] = low["p"][i - 1] * (1.0 + 1e-10)
+    t = draw_bridge_eos(np.random.default_rng(1), low_table=low,
+                        corr_frac=0.3)["table"]
+    deg = _degenerate_cells(*(np.asarray(a) for a in (t.h, t.eps, t.p)), np)[0]
+    assert deg.sum() == 1
     hc = 0.29
     v = np.asarray(_val_table(t, hc))
     p_c = float(t.at_h(hc)[1])

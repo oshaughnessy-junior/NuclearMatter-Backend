@@ -36,6 +36,8 @@ resulting tables feed the standard differentiable EOSTable/TOV machinery.
 from __future__ import annotations
 
 import math
+import warnings
+
 import numpy as np
 
 N_SAT = 0.16                      # fm^-3
@@ -294,14 +296,18 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
         n_lo = np.asarray(low_table["n"]); eps_lo = np.asarray(low_table["eps"])
         p_lo = np.asarray(low_table["p"])
     n_lo_all = n_lo.size
-    keep = n_lo < n_L
+    # bridge grid node 0 is n_L: a table node within roundoff of it is the same
+    # density, and a zero-width cell there is a hazard for the TOV solve
+    n_below = n_L * (1.0 - 1e-12)
+    if not n_lo[0] < n_below <= n_lo[-1]:
+        raise ValueError(f"low-density table spans n={n_lo[0]:.4g} to "
+                         f"{n_lo[-1]:.4g} fm^-3, which must contain "
+                         f"n_L={n_L:.4g} fm^-3")
+    # anchor at exactly n_L, from the full table: the filter drops any node there
+    eps_L = float(np.interp(n_L, n_lo, eps_lo))
+    p_L = float(np.interp(n_L, n_lo, p_lo))
+    keep = n_lo < n_below
     n_lo, eps_lo, p_lo = n_lo[keep], eps_lo[keep], p_lo[keep]
-    # anchor point at exactly n_L (interpolate the model)
-    eps_L = float(np.interp(n_L, np.concatenate([n_lo, [n_L * 1.0001]]),
-                            np.concatenate([eps_lo, [eps_lo[-1]
-                                            * (n_L / n_lo[-1])]])))
-    p_L = float(np.interp(n_L, n_lo, p_lo)) if n_lo[-1] >= n_L else float(p_lo[-1])
-    eps_L = float(np.interp(n_L, n_lo, eps_lo)) if n_lo[-1] >= n_L else eps_L
     mu_L = (eps_L + p_L) / n_L
     bL = (mu_L, n_L, p_L)
 
@@ -416,4 +422,7 @@ def draw_prior_ensemble(n_draws, seed=0, corr_range=(0.2, 0.4),
             bar.update(1)
     if bar:
         bar.close()
+    if len(tables) < n_draws:
+        warnings.warn(f"draw_prior_ensemble: {len(tables)} of {n_draws} draws "
+                      f"after {attempts} attempts", RuntimeWarning, stacklevel=2)
     return tables, records

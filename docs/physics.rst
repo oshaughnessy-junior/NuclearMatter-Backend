@@ -76,8 +76,9 @@ Two guards act on the tidal term.
   :math:`10^3` ulp in :math:`h`, or chord :math:`\Delta p/\Delta\varepsilon \le 10^{-8}`
   at any width.
 
-  - Examples: the low-table/bridge join of every ``draw_bridge_eos`` table,
-    exact plateaus, and plateaus nudged to strict increase.
+  - Examples: exact plateaus, and plateaus nudged to strict increase.
+    ``draw_bridge_eos`` tables had one at the low-table/bridge join until
+    2026-11-07, when the anchor moved to the low table's values at :math:`n_L`.
   - The chord criterion leaves no window between this test and the clip below.
     A width-only test let cells 1e3 ulp to ~3e-11 wide lose most of their
     :math:`\Delta\varepsilon` to the clip, a 1.2% drop in :math:`\Lambda`.
@@ -86,17 +87,17 @@ Two guards act on the tidal term.
     :math:`q = 32`, in the regular cell just below. That is the junction,
     smeared over the top :math:`\sim 1/(q+2)` of that cell.
   - The smearing error scales with the width of that cell: +1.4e-5 to
-    +2.8e-5 in :math:`\Lambda` on hybrid tables, 1.8e-6 on bridge draws.
+    +2.8e-5 in :math:`\Lambda` on hybrid tables, 1.8e-6 on the former bridge join.
   - The classification is a hard mask. Where a parameter change moves a cell's
     chord through 1e-8, :math:`\Lambda` steps by that smearing error, and its
     parameter derivative carries a delta function there. No shipped generator
     moves a cell through that threshold.
   - Gradients through a jump cell: the concentrated bubble needs a tighter
-    tolerance. On a bridge draw, AD vs FD of :math:`d\Lambda/d\theta` (for a
+    tolerance. On the former bridge join, AD vs FD of :math:`d\Lambda/d\theta` (for a
     parameter that moves the jump) is 3.2e-6 at the default rtol 1e-7 and
     1.3e-7 at rtol 1e-9; use rtol :math:`\le 10^{-9}` there. The smearing also
-    biases that derivative against the exact junction, by 1.2e-4 on the bridge
-    draw (the value bias is only 1.8e-6). A Fisher row through such a join
+    biases that derivative against the exact junction, by 1.2e-4 on that
+    join (the value bias is only 1.8e-6). A Fisher row through such a join
     carries this bias.
 
 * Elsewhere the term is capped at :math:`10^{10}(\varepsilon+p)`; the chord test
@@ -134,8 +135,8 @@ in :math:`h`. First derivatives only: second derivatives in EOS parameters were
 never accurate and are not supported. ``jump_nodes=False`` is no longer cheaper
 for tidal solves and is not recommended there.
 
-A density jump at *fixed* pressure inside one table (the bridge join, or the
-pressure plateaus of ``allow_unstable_core=True`` tables) has zero width in
+A density jump at *fixed* pressure inside one table (the pressure plateaus of
+``allow_unstable_core=True`` tables) has zero width in
 :math:`h` (or nearly), and gets the smeared junction above. A genuine first-order transition
 between two phases should be built as a ``HybridEOS``, whose ``tov.solve_hybrid``
 applies the junction condition exactly at the transition.
