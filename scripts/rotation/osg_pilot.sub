@@ -1,0 +1,30 @@
+universe = vanilla
+executable = osg_worker.sh
+arguments = $(energy) $(axis_ratio)
++ProjectName = "CompBinFormMod"
+request_cpus = 1
+request_memory = 512MB
+request_disk = 64MB
+requirements = (Arch == "X86_64") && (OpSys == "LINUX")
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = rns_export
+transfer_output_files = result.tar.gz
+transfer_output_remaps = "result.tar.gz=results/case-$(Process).tar.gz"
+output = logs/case-$(Process).out
+error = logs/case-$(Process).err
+log = logs/pilot.log
++MaxRuntime = 300
+periodic_remove = (JobStatus == 2) && ((time() - JobCurrentStartDate) > 300)
+queue energy,axis_ratio from (
+0.12 0.8
+0.20 0.8
+0.28 0.8
+0.36 0.8
+0.12 0.95
+0.20 0.95
+0.28 0.95
+0.36 0.95
+0.16 0.85
+0.24 0.90
+)
