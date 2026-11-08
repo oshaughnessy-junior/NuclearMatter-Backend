@@ -160,6 +160,12 @@ don't yet split twin branches); and the external
 
 ## Roadmap (see `docs/roadmap.md` and `docs/architecture.md`)
 
+**Rotating-mode development (8 November 2026):** `nmbackend.modes` supplies
+the quadratic-eigenproblem kernel, local sensitivities, branch continuation,
+RNS/perturbation-closure exchange and Newtonian r/bar-mode benchmarks.
+The coupled full-GR fluid–spacetime assembler and outgoing physical spectrum
+remain development work. See [mode scope and reproduction](docs/rotating-modes.md).
+
 **Rotating reference path (6 November 2026):** `nmbackend.rotating` builds
 and runs a pinned external RNS polytrope solver, with validated geometry
 exports and provenance receipts. `nmbackend.thermal` supplies conditional
