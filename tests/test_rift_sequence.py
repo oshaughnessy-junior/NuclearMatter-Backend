@@ -95,3 +95,31 @@ def test_nss_primary_branch_does_not_mix_disconnected_stable_branches(tmp_path):
         rows[0, :, col["Lambda"]], rows[0, :, col["stable"]]
     )
     assert [branch[0].tolist() for branch in branches] == [[1.0, 2.0], [1.6, 2.1]]
+
+
+def test_sequence_stable_from_mass_curve_not_ad():
+    """Stability comes from M(h_c) on the grid: a row with a wrong AD
+    derivative cannot split the branch, and the extended configurations below
+    the minimum-mass star and the rows past M_max are not stable."""
+    from nmbackend.rift.sequence import _sequence_stable
+    hc = np.linspace(0.02, 0.6, 30)
+    M = np.r_[0.65, 0.4, 0.2, np.linspace(0.25, 2.1, 22), [2.08, 2.0, 1.9, 1.8, 1.7]]
+    R = np.r_[1800.0, 300.0, 40.0, np.full(27, 12.0)]
+    Lam = np.full(30, 500.0)
+    st = _sequence_stable(hc, M, R, Lam)
+    assert not st[:3].any()
+    assert st[3:25].all()
+    assert not st[25:].any()
+
+
+def test_one_eos_starts_at_minimum_mass_star():
+    """Every stored row lies on compact configurations (no R ~ 10^3 km row),
+    and the stable rows form one branch up to M_max."""
+    from nmbackend.rift.sequence import _one_eos
+    t = MetaModelEOS().eos_table()
+    rows = _one_eos(t, n_points=24)
+    col = {k: i for i, k in enumerate(NSS_FIELDS)}
+    R, M, st = rows[:, col["R"]], rows[:, col["M"]], rows[:, col["stable"]]
+    assert np.nanmax(R) < 30.0
+    assert len(_stable_branches(M, R, rows[:, col["Lambda"]], st)) == 1
+    assert M[st > 0.5].max() == pytest.approx(np.nanmax(M), rel=1e-12)

@@ -31,7 +31,7 @@ except Exception:  # pragma: no cover
 
 import jax.numpy as jnp
 
-from ..tov.family import build_family
+from ..tov.family import build_family, default_hc_grid
 from .. import __version__ as _NMB_VERSION
 
 NSS_FIELDS = ["hc", "M", "R", "Lambda", "M_b", "I", "rho_c", "cs2_c", "stable"]
@@ -45,15 +45,43 @@ _NB_TO_GCM3 = 1e39 * 1.66e-24                                # n[fm^-3] -> g/cm^
 
 
 # ---------------- build per-EOS sequence arrays ----------------
+def _sequence_stable(hc, M, R, Lam):
+    """Stable rows from the sequence itself: finite, heavier than the previous
+    row (the first row: lighter than the second), at or above the
+    minimum-mass star.  The backward difference keeps the M_max row.
+
+    The AD derivative ``Family.dM_dhc`` is not used here: it is wrong at
+    isolated h_c values (e.g. -158 against +8.65 by finite differences), and
+    one such row ends the stable branch in :func:`_stable_branches`."""
+    valid = np.isfinite(M) & np.isfinite(R) & np.isfinite(Lam) & (M > 0)
+    Mv = np.where(valid, M, np.nan)
+    rising = np.zeros(M.size, bool)
+    if M.size >= 2:
+        up = np.diff(Mv) > 0                      # NaN neighbours compare False
+        rising[1:] = up
+        rising[0] = up[0]
+        rising &= valid
+    if not rising.any():
+        return np.zeros(M.size, bool)
+    order = np.arange(M.size)
+    i_max = int(np.nanargmax(np.where(rising, Mv, -np.inf)))
+    i_min = int(np.nanargmin(np.where(valid & (order <= i_max), Mv, np.inf)))
+    return rising & (order >= i_min)
+
+
 def _one_eos(table, n_points=80, frac_lo=0.04, frac_hi=0.95):
-    hc_grid = np.linspace(frac_lo * float(table.h[-1]),
-                          frac_hi * float(table.h[-1]), n_points)
-    fam = build_family(table, jnp.asarray(hc_grid))
+    """One EOS's sequence rows on :func:`default_hc_grid` (from the
+    minimum-mass star to ``frac_hi`` h_max; ``frac_lo`` h_max bounds the start
+    from below).  A grid from ``frac_lo`` h_max alone starts below the
+    minimum-mass star, on extended R ~ 10^3 km configurations."""
+    hc_grid = default_hc_grid(table, n_models=n_points, frac_lo=frac_lo,
+                              frac_hi=frac_hi)
+    fam = build_family(table, hc_grid)
     hc = np.asarray(fam.h_c)
     M = np.asarray(fam.M_msun)
     R = np.asarray(fam.R_km)
     Lam = np.asarray(fam.Lambda)
-    stable = np.asarray(fam.stable).astype(float)
+    stable = _sequence_stable(hc, M, R, Lam).astype(float)
     hh, n, cs2 = np.asarray(table.h), np.asarray(table.n), np.asarray(table.cs2)
     rho_c = np.interp(hc, hh, n)
     cs2_c = np.interp(hc, hh, cs2)
