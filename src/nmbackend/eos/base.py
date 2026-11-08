@@ -215,9 +215,8 @@ def hermite_eos_tidal_at_h(h_nodes, p_nodes, eps_nodes, h_query, xp=jnp):
     Two guards (:func:`_tidal_term`):
 
     * Jump cells -- a density jump at (nearly) fixed pressure: width <= 1e3 ulp
-      in h, or chord dp/deps <= 1e-8 at any width (the low-table/bridge join
-      of every ``draw_bridge_eos`` table, exact or nudged plateaus) -- carry
-      no tidal term inside; their cubic's deps/dh is noise there or beyond the
+      in h, or chord dp/deps <= 1e-8 at any width (exact or nudged plateaus)
+      -- carry no tidal term inside; their cubic's deps/dh is noise there or beyond the
       clip.  Their Delta eps = eps_in - eps_out > 0 is moved instead, as a
       bubble (q+1) t^q Delta eps / dh (q = 32), into the regular cell just
       below (outward).  That is the junction condition
