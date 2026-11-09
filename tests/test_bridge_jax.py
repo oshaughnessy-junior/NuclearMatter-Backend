@@ -1,4 +1,5 @@
 """Differentiable bridge (priors.bridge_jax): law, values, and derivatives."""
+import inspect
 import math
 from typing import NamedTuple
 
@@ -92,6 +93,126 @@ def test_gradient_endpoints_of_ln_X():
             assert g == pytest.approx(np.polyval(np.polyder(c), x), rel=1e-12)
     for x in (-0.1, math.log(4.0) + 0.1):
         assert float(jax.grad(lambda t: BJ.pqcd_anchor(t)[2])(x)) == 0.0
+
+
+# ------------------------------------------------ same variates as NumPy -------
+class _SeqRng:
+    """Plays fixed values in [0, 1) for successive rng.uniform calls."""
+
+    def __init__(self, vals):
+        self.vals = list(vals)
+
+    def uniform(self, low=0.0, high=1.0, size=None):
+        return low + self.vals.pop(0) * (high - low)
+
+
+def _sample_np(u, a, b):
+    """bridge.sample_point_in_volume fed the uniforms that BJ._sample uses for
+    u = (u_mu, u_n, u_p): side of the tent by u_n < w, then u_n rescaled to
+    that side."""
+    u0, u1, u2 = u
+    n_min, n_max, p_min, p_max, mu_c = B.kk_volume(a, b)
+    muL, muH = a[0], b[0]
+    m2 = np.linspace(muL ** 2, muH ** 2, 256)
+    mc2, mL2, mH2 = mu_c ** 2, muL ** 2, muH ** 2
+    with np.errstate(all="ignore"):
+        dens = np.where(m2 <= mc2,
+                        np.divide((m2 - mL2) * (mH2 - mc2), (mc2 - mL2) * (mH2 - m2),
+                                  out=np.zeros_like(m2), where=(mH2 - m2) > 0),
+                        np.divide((mH2 - m2) * (mc2 - mL2), (mH2 - mc2) * (m2 - mL2),
+                                  out=np.zeros_like(m2), where=(m2 - mL2) > 0))
+    dens = np.clip(dens, 0.0, None)
+    dens[~np.isfinite(dens)] = 0.0
+    cdf = np.cumsum(0.5 * (dens[1:] + dens[:-1]) * np.diff(m2))
+    vals = []
+    if np.isfinite(cdf[-1]) and cdf[-1] > 0.0:
+        vals.append(u0)
+        mu = math.sqrt(float(np.interp(u0 * cdf[-1], np.r_[0.0, cdf], m2)))
+    else:
+        mu = math.sqrt(0.5 * (mL2 + mH2))
+    n_lo, n_hi = n_min(mu), n_max(mu)
+    n_apex = min(max((n_max(muL) / muL) * mu, n_lo), n_hi)
+    pmin = p_min(mu)
+    h = [max(p_max(mu, v) - pmin, 0.0) for v in (n_lo, n_apex, n_hi)]
+    A1 = 0.5 * (h[0] + h[1]) * max(n_apex - n_lo, 0.0)
+    A2 = 0.5 * (h[1] + h[2]) * max(n_hi - n_apex, 0.0)
+    if A1 + A2 > 0.0:
+        w = A1 / (A1 + A2)
+        vals.append(u1)
+        vals.append(min(max(u1 / w, 0.0), 1.0) if u1 < w
+                    else 1.0 - min(max((u1 - w) / (1.0 - w), 0.0), 1.0))
+    vals.append(u2)
+    rng = _SeqRng(vals)
+    m = B.sample_point_in_volume(rng, a, b)
+    assert not rng.vals
+    return m
+
+
+def _heap_refine(U, min_dlnmu):
+    """bridge.fractal_refine with node k (heap order) drawn from U[k]."""
+    def refine(rng, bL, bH, levels=9, min_dlnmu=min_dlnmu):
+        pts = []
+
+        def rec(a, b, depth, k):
+            if depth <= 0 or math.log(b[0] / a[0]) < min_dlnmu:
+                return
+            if not B._interval_consistent(a, b):
+                return
+            m = _sample_np(U[k], a, b)
+            if not (a[0] < m[0] < b[0] and a[1] <= m[1] <= b[1] and a[2] <= m[2] <= b[2]):
+                return
+            pts.append(m)
+            rec(a, m, depth - 1, 2 * k)
+            rec(m, b, depth - 1, 2 * k + 1)
+
+        rec(tuple(bL), tuple(bH), levels, 1)
+        return [tuple(bL)] + sorted(pts) + [tuple(bH)]
+    return refine
+
+
+@pytest.mark.parametrize("cfg", [BJ.Config(), BJ.Config(n_L_fac=1.5, n_term_fac=math.inf)],
+                         ids=["defaults", "nL1.5_noterm"])
+def test_same_variates_as_numpy(cfg, monkeypatch):
+    """bridge.draw_bridge_eos driven by the variates of theta gives the same
+    table, row for row; the JAX table is the shorter one (static length)."""
+    from scipy.special import ndtr as np_ndtr
+    from nmbackend.eos.metamodel import MetaModelEOS
+    model = MetaModelEOS(crust="polytrope")
+    # numpy settings: its own defaults for the default Config
+    kw = {} if cfg == BJ.Config() else dict(n_L_fac=cfg.n_L_fac, n_term_fac=cfg.n_term_fac)
+    min_dlnmu = inspect.signature(B.fractal_refine).parameters["min_dlnmu"].default
+    n_L, n_term = cfg.n_L_fac * B.N_SAT, cfg.n_term_fac * B.N_SAT
+    rows = lambda X: int(np.sum(np.exp(np.linspace(  # noqa: E731
+        math.log(n_L), math.log(B.pqcd_anchor(X)[1]), cfg.n_grid_pts)) <= n_term))
+    fns = {}
+    for seed, lnX in ((0, None), (1, None), (2, math.log(4.0)), (5, 0.0)):
+        th = BJ.draw_theta(np.random.default_rng(seed), NEP0, nep_names=NEPS)
+        if lnX is not None:
+            th[len(NEPS) + 1] = lnX
+        plan = BJ.make_plan(model, th, NEPS, cfg)
+        if plan not in fns:
+            fns[plan] = jax.jit(lambda t, plan=plan: BJ.bridge_arrays(model, t, NEPS, plan, cfg))
+        n, eps, p, info = fns[plan](jnp.asarray(th))
+        assert bool(info["valid"])
+        nep, corr, ln_X, z = BJ.unpack(th, NEPS, cfg.levels)
+        U = np.concatenate([np.full((1, 3), 0.5), np.clip(np_ndtr(z), BJ._U_EPS, 1 - BJ._U_EPS)])
+        monkeypatch.setattr(B, "fractal_refine", _heap_refine(U, min_dlnmu))
+        d = B.draw_bridge_eos(None, model=model, nep_params={k: float(v) for k, v in nep.items()},
+                              corr_frac=float(corr), X=float(np.exp(ln_X)), n_table_pts=None, **kw)
+        monkeypatch.undo()
+        np.testing.assert_allclose(np.asarray(info["mu"]), d["bridge"]["mu"], rtol=1e-9)
+        assert float(info["p_end_mismatch"]) == pytest.approx(d["meta"]["p_end_mismatch"],
+                                                              rel=1e-7, abs=1e-10)
+        L = n.size
+        assert L == plan.n_keep + plan.n_sel
+        for a, ref in ((n, d["n"]), (eps, d["eps"]), (p, d["p"])):
+            np.testing.assert_allclose(np.asarray(a), ref[:L], rtol=1e-9)
+        # length: the bridge rows below n_term for the largest n_H (X = 4)
+        assert plan.n_sel == rows(4.0)
+        assert float(n[-1]) <= n_term
+        assert d["n"].size - L == rows(float(np.exp(ln_X))) - rows(4.0)
+        if lnX == math.log(4.0) or math.isinf(n_term):
+            assert d["n"].size == L
 
 
 # ------------------------------------------------ failures are visible --------
