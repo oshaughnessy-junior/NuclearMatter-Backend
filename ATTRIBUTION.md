@@ -23,6 +23,24 @@ group convention, any module that reuses or re-implements an idea carries a
 
 ## Key scientific references
 
+### Rotating modes (8 November 2026)
+
+The mode architecture is motivated by Gao and Shibata,
+[arXiv:2611.03986v1](https://arxiv.org/html/2611.03986v1): a coupled
+Einstein–fluid action and quadratic eigenproblem with outgoing radiation.
+The new numerical kernels are independently implemented; no upstream code,
+weights, figures or full-GR matrix assembler is copied or included.
+
+The numerical toroidal r-mode benchmark projects the classical linear Euler
+equation in the Newtonian slow-rotation limit. See Owen et al.,
+[gr-qc/9804044](https://arxiv.org/abs/gr-qc/9804044), and the references above.
+The Maclaurin bar-mode benchmark independently integrates ellipsoidal-potential
+coefficients for the classical virial problem; equations and conventions are
+recorded in Baiotti et al., [astro-ph/0609473](https://arxiv.org/abs/astro-ph/0609473),
+and Braviner and Ogilvie, [1404.2461](https://arxiv.org/abs/1404.2461).
+These Newtonian benchmarks are separate from the unimplemented full-GR
+coupled action, radiative spectrum and neutron-star mode sensitivities.
+
 ### Rotating equilibrium and transport (6 November 2026)
 
 `nmbackend.rotating.rns` targets the public cgca/rns v2 C interface at
