@@ -66,7 +66,7 @@ stable, monotone M segment).
 **HDF5 layout (self-describing):**
 - root attrs: `schema_version`, `generator`, `created`, `units` (explicit strings).
 - `sequence` — a single regular dataset, shape `(n_eos, n_points, n_fields)`, fields
-  `[hc, M, R, Lambda, M_b, I, rho_c, cs2_c, stable]` on a common h_c grid
+  `[hc, M, R, Lambda, M_b, I, rho_c, cs2_c, stable]` on a per-EOS h_c grid with a common number of points
   (contiguous, lazy-sliceable, vectorizable).  Missing quantities (M_b, I) stored as
   NaN until the solver provides them — the schema is future-proof.
 - `eos_params` — per-EOS parameter dict / GP-draw label (provenance + parametric map).

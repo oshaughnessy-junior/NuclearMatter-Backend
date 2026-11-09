@@ -31,7 +31,7 @@ except Exception:  # pragma: no cover
 
 import jax.numpy as jnp
 
-from ..tov.family import build_family
+from ..tov.family import build_family, default_hc_grid, _probe_masses
 from .. import __version__ as _NMB_VERSION
 
 NSS_FIELDS = ["hc", "M", "R", "Lambda", "M_b", "I", "rho_c", "cs2_c", "stable"]
@@ -45,15 +45,83 @@ _NB_TO_GCM3 = 1e39 * 1.66e-24                                # n[fm^-3] -> g/cm^
 
 
 # ---------------- build per-EOS sequence arrays ----------------
+def _sequence_stable(hc, M, R, Lam):
+    """Stable rows from the sequence itself.
+
+    A row is stable if it is finite with M > 0 and heavier than the previous
+    finite row (the first finite row: lighter than the next one), and it is not
+    before ``i_min``.  The backward difference keeps the M_max row.  A failed
+    solve (NaN row) is skipped: the row after it is compared with the last
+    finite row.
+
+    ``i_min`` is the lightest finite row at or before the heaviest stable row.
+    On a grid that starts below the minimum-mass star it is that star, so
+    rising rows on extended low-density configurations before it are excluded.
+    Limitation: if a twin-star dip falls below every earlier row and the later
+    branch is the heavier one, ``i_min`` is the dip and the first branch is
+    excluded too.  The grid of :func:`_one_eos` starts at the minimum-mass star,
+    so this needs a first branch lighter than about the minimum-mass star.
+
+    The AD derivative ``Family.dM_dhc`` is not used here: it is wrong at
+    isolated h_c values (e.g. -158 against +8.65 by finite differences), and
+    one such row ends the stable branch in :func:`_stable_branches`."""
+    M = np.asarray(M, float)
+    valid = np.isfinite(M) & np.isfinite(R) & np.isfinite(Lam) & (M > 0)
+    rising = np.zeros(M.size, bool)
+    iv = np.flatnonzero(valid)
+    if iv.size >= 2:
+        up = np.diff(M[iv]) > 0           # each finite row against the last one
+        rising[iv[1:]] = up
+        rising[iv[0]] = up[0]
+    if not rising.any():
+        return np.zeros(M.size, bool)
+    order = np.arange(M.size)
+    i_max = int(np.argmax(np.where(rising, M, -np.inf)))
+    i_min = int(np.argmin(np.where(valid & (order <= i_max), M, np.inf)))
+    return rising & (order >= i_min)
+
+
+def _hc_grid_past_last_max(table, n_points, frac_lo, frac_hi, n_scan=40):
+    """Central-enthalpy grid from the start of :func:`default_hc_grid` (the
+    minimum-mass star, or ``frac_lo`` h_max if that is denser) to two scan steps
+    past the last maximum of M(h_c).
+
+    ``n_scan`` structure-only solves on [h_start, ``frac_hi`` h_max] locate the
+    maxima.  The last one is the heaviest star of the densest stable branch, so
+    every stable branch is inside the grid and few rows fall on the collapsed
+    branch beyond it.  If M still rises at ``frac_hi`` h_max the grid ends there,
+    and the table ends before the TOV maximum."""
+    h0 = float(default_hc_grid(table, n_models=2, frac_lo=frac_lo,
+                               frac_hi=frac_hi)[0])
+    h_top = frac_hi * float(table.h[-1])
+    scan = np.linspace(h0, h_top, n_scan)
+    Ms = np.asarray(_probe_masses(table, jnp.asarray(scan))[0])
+    # peaks among the finite scan masses: a failed solve next to the last
+    # maximum must not hide it
+    idx = np.flatnonzero(np.isfinite(Ms))
+    Mf = Ms[idx]
+    h_end = h_top
+    if Mf.size >= 3 and Mf[-1] <= Mf[-2]:
+        peaks = [idx[j] for j in range(1, Mf.size - 1)
+                 if Mf[j] >= Mf[j - 1] and Mf[j] > Mf[j + 1]]
+        if peaks:
+            h_end = scan[min(peaks[-1] + 2, n_scan - 1)]
+    return jnp.linspace(h0, h_end, n_points)
+
+
 def _one_eos(table, n_points=80, frac_lo=0.04, frac_hi=0.95):
-    hc_grid = np.linspace(frac_lo * float(table.h[-1]),
-                          frac_hi * float(table.h[-1]), n_points)
-    fam = build_family(table, jnp.asarray(hc_grid))
+    """One EOS's sequence rows from the minimum-mass star (or ``frac_lo``
+    h_max, if denser) to just past the last maximum of M(h_c)
+    (:func:`_hc_grid_past_last_max`; ``frac_hi`` h_max bounds the end).  A grid
+    from ``frac_lo`` h_max alone can start below the minimum-mass star, on
+    extended R ~ 10^3 km configurations."""
+    hc_grid = _hc_grid_past_last_max(table, n_points, frac_lo, frac_hi)
+    fam = build_family(table, hc_grid)
     hc = np.asarray(fam.h_c)
     M = np.asarray(fam.M_msun)
     R = np.asarray(fam.R_km)
     Lam = np.asarray(fam.Lambda)
-    stable = np.asarray(fam.stable).astype(float)
+    stable = _sequence_stable(hc, M, R, Lam).astype(float)
     hh, n, cs2 = np.asarray(table.h), np.asarray(table.n), np.asarray(table.cs2)
     rho_c = np.interp(hc, hh, n)
     cs2_c = np.interp(hc, hh, cs2)
@@ -121,12 +189,6 @@ class SequenceRepresentation(abc.ABC):
     n_eos: int = 0
     params = None
 
-    @abc.abstractmethod
-    def lambda_of_m(self, m, e): ...
-    @abc.abstractmethod
-    def radius_of_m(self, m, e): ...
-    @abc.abstractmethod
-    def m_max(self, e): ...
 
     def ordering_values(self, m_ref, kind="Lambda"):
         """Ordering statistic (Lambda or R at m_ref) for every EOS."""
@@ -141,6 +203,60 @@ class SequenceRepresentation(abc.ABC):
         additional stable branches.
         """
         return int(self.stable_branch_counts[e])
+
+    # ---- opt-in multi-branch contract ------------------------------------
+    # ``branch="primary"`` (the default) is the v1 contract: the first stable
+    # run.  An integer selects that run (0 = primary); ``"all"`` uses every run.
+    _lam_floor = None              # PCASequence floors Lambda at 1e-30
+
+    @abc.abstractmethod
+    def branches(self, e):
+        """Every stable, mass-rising run of EOS ``e`` as (M, R, Lambda) arrays,
+        in central-coordinate order (see :func:`_stable_branches`)."""
+
+    def _runs(self, e, branch):
+        """Runs selected by ``branch``: "primary" (run 0), "all", or an int
+        index into :meth:`branches` (negative counts from the densest run).  An
+        index past the last run selects nothing."""
+        runs = self.branches(e)
+        if isinstance(branch, str) and branch in ("primary", "all"):
+            return runs if branch == "all" else runs[:1]
+        if isinstance(branch, (int, np.integer)) and not isinstance(branch, (bool, np.bool_)):
+            k = int(branch)
+            return [runs[k]] if -len(runs) <= k < len(runs) else []
+        raise ValueError(f"branch must be 'primary', 'all' or an int, not {branch!r}")
+
+    def _interp(self, m, run, which):
+        M, R, Lam = run
+        if M.size < 2:
+            return np.nan
+        if which == "R":
+            return float(np.interp(m, M, R, left=np.nan, right=np.nan))
+        if self._lam_floor is not None:
+            Lam = np.maximum(Lam, self._lam_floor)
+        return float(np.exp(np.interp(m, M, np.log(Lam),
+                                      left=np.nan, right=np.nan)))
+
+    def _of_m(self, m, e, branch, which):
+        runs = self._runs(e, branch)
+        if isinstance(branch, str) and branch == "all":
+            return np.array([self._interp(m, r, which) for r in runs])
+        return self._interp(m, runs[0], which) if runs else np.nan
+
+    def lambda_of_m(self, m, e, branch="primary"):
+        """Lambda at mass ``m`` on one branch (NaN off it).  ``branch="all"``
+        returns one value per stable branch, NaN where ``m`` is outside it."""
+        return self._of_m(m, e, branch, "Lambda")
+
+    def radius_of_m(self, m, e, branch="primary"):
+        """R [km] at mass ``m``; ``branch`` as in :meth:`lambda_of_m`."""
+        return self._of_m(m, e, branch, "R")
+
+    def m_max(self, e, branch="primary"):
+        """Heaviest star on the selected branch; ``branch="all"`` gives the
+        maximum stable mass over every branch.  -inf if there is none."""
+        tops = [float(np.max(r[0])) for r in self._runs(e, branch) if r[0].size]
+        return max(tops) if tops else -np.inf
 
 
 def open_sequence(fname):
@@ -258,27 +374,15 @@ class NSSequence(SequenceRepresentation):
             for s in self.seq
         ], dtype=int)
 
+    def branches(self, e):
+        s = self.seq[e]
+        return _stable_branches(s[:, self._i["M"]], s[:, self._i["R"]],
+                                s[:, self._i["Lambda"]], s[:, self._i["stable"]])
+
     def _branch(self, e):
         s = self.seq[e]
         return _stable_rising(s[:, self._i["M"]], s[:, self._i["R"]],
                               s[:, self._i["Lambda"]], s[:, self._i["stable"]])
-
-    def lambda_of_m(self, m, e):
-        M, R, Lam = self._branch(e)
-        if M.size < 2:
-            return np.nan
-        return float(np.exp(np.interp(m, M, np.log(Lam),
-                                      left=np.nan, right=np.nan)))
-
-    def radius_of_m(self, m, e):
-        M, R, Lam = self._branch(e)
-        if M.size < 2:
-            return np.nan
-        return float(np.interp(m, M, R, left=np.nan, right=np.nan))
-
-    def m_max(self, e):
-        M, _, _ = self._branch(e)
-        return float(np.max(M)) if M.size else -np.inf
 
     def ordering_values(self, m_ref, kind="Lambda"):
         """Ordering statistic (Lambda or R at m_ref) for every EOS -- vectorized."""
@@ -292,7 +396,7 @@ def write_landry_legacy(fname, tables, eos_tables=None, n_points=120,
     """Write the exact ``EOSSequenceLandry`` HDF5 (id, ns/<name>{M,R,Lambda},
     eos/<name>{pressurec2,energy_densityc2,baryon_density} in g/cm^3).
 
-    Only the **stable branch** (M rising to M_max) is stored, so RIFT's single-valued
+    Only the **primary stable branch** (the first stable run) is stored, so RIFT's single-valued
     M->Lambda interpolation is correct for phase-transition EOS without code changes.
     ``eos_tables`` (list of the same EOSTables) populates the optional ``eos`` group.
     """

@@ -181,25 +181,14 @@ class PCASequence(SequenceRepresentation):
         empty = np.array([], dtype=float)
         return empty, empty.copy(), empty.copy()
 
+    _lam_floor = 1e-30
+
+    def branches(self, e):
+        return self._branches(e)
+
     def _branches(self, e):
         M, R, Lam = self.reconstruct(e)
         # rising branch: stable where dM/du > 0 (u monotone in central enthalpy)
         stable = np.concatenate([[True], np.diff(M) > 0]).astype(float)
         return _stable_branches(M, R, Lam, stable)
 
-    def lambda_of_m(self, m, e):
-        M, R, Lam = self._branch(e)
-        if M.size < 2:
-            return np.nan
-        return float(np.exp(np.interp(m, M, np.log(np.maximum(Lam, 1e-30)),
-                                      left=np.nan, right=np.nan)))
-
-    def radius_of_m(self, m, e):
-        M, R, Lam = self._branch(e)
-        if M.size < 2:
-            return np.nan
-        return float(np.interp(m, M, R, left=np.nan, right=np.nan))
-
-    def m_max(self, e):
-        M, _, _ = self._branch(e)
-        return float(np.max(M)) if M.size else -np.inf
