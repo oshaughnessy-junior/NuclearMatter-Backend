@@ -1,5 +1,6 @@
 """Differentiable bridge (priors.bridge_jax): law, values, and derivatives."""
 import math
+from typing import NamedTuple
 
 import jax
 import jax.numpy as jnp
@@ -80,3 +81,99 @@ def test_gradient_matches_central_differences(draw):
         e = np.zeros(th.size); e[i] = h
         fd = (float(fv(jnp.asarray(th + e))) - float(fv(jnp.asarray(th - e)))) / (2 * h)
         assert fd == pytest.approx(g[i], rel=1e-5, abs=1e-10), i
+
+
+def test_gradient_endpoints_of_ln_X():
+    """At ln X = 0 and ln 4 the derivative is the one-sided one from inside;
+    outside it is zero (ln X clamped)."""
+    for x in (0.0, math.log(4.0)):
+        for j, c in ((1, BJ._C_N), (2, BJ._C_P)):
+            g = float(jax.grad(lambda t: BJ.pqcd_anchor(t)[j])(x))
+            assert g == pytest.approx(np.polyval(np.polyder(c), x), rel=1e-12)
+    for x in (-0.1, math.log(4.0) + 0.1):
+        assert float(jax.grad(lambda t: BJ.pqcd_anchor(t)[2])(x)) == 0.0
+
+
+# ------------------------------------------------ failures are visible --------
+class _Tab(NamedTuple):
+    n: jnp.ndarray
+    eps_mevfm3: jnp.ndarray
+    p_mevfm3: jnp.ndarray
+
+
+class _StubModel:
+    """Low-density table p = A n^2, eps = 939 n + p on n = s * [0.05, 2]."""
+
+    def eos_table(self, nep):
+        n = nep["s"] * jnp.geomspace(0.05, 2.0, 40)
+        p = nep["A"] * n ** 2
+        return _Tab(n, 939.0 * n + p, p)
+
+
+def test_invalid_draws_are_flagged():
+    names = ["A", "s"]
+    cfg = BJ.Config(levels=4)
+    z = np.zeros((2 ** cfg.levels - 1) * 3)
+    th = lambda A, s=1.0: np.r_[A, s, 0.3, 0.5, z]  # noqa: E731
+    model = _StubModel()
+    with pytest.raises(ValueError, match="anchors"):
+        BJ.make_plan(model, th(1e5), names, cfg)
+    with pytest.raises(ValueError, match="must contain"):
+        BJ.make_plan(model, th(100.0), names, cfg._replace(n_L_fac=100.0))
+    plan = BJ.make_plan(model, th(100.0), names, cfg)
+    with pytest.raises(ValueError, match="other settings"):
+        BJ.bridge_arrays(model, jnp.asarray(th(100.0)), names, plan,
+                         cfg._replace(n_term_fac=math.inf))
+    with pytest.raises(ValueError, match="anchors consistent False"):
+        BJ.bridge_arrays(model, jnp.asarray(th(1e5)), names, plan, cfg)
+    f = jax.jit(lambda t: BJ.bridge_arrays(model, t, names, plan, cfg))
+    _, _, p, info = f(jnp.asarray(th(100.0)))
+    assert bool(info["valid"]) and np.all(np.isfinite(np.asarray(p)))
+    # numpy raises here (anchors inconsistent); under jit: flag and NaN
+    _, _, p, info = f(jnp.asarray(th(1e5)))
+    assert not bool(info["valid"]) and not bool(info["anchors_ok"])
+    assert np.all(np.isnan(np.asarray(p)))
+    # a low-density grid that moved: plan.n_keep no longer fits
+    _, _, p, info = f(jnp.asarray(th(100.0, 1.3)))
+    assert not bool(info["plan_ok"]) and np.all(np.isnan(np.asarray(p)))
+    # n_L outside the low-density table
+    _, _, p, info = f(jnp.asarray(th(100.0, 10.0)))
+    assert not bool(info["in_table"]) and np.all(np.isnan(np.asarray(p)))
+    # the flag does not reach the derivatives of a valid draw
+    g = jax.jit(jax.grad(lambda t: f(t)[2][plan.n_keep + 50]))(jnp.asarray(th(100.0)))
+    assert np.all(np.isfinite(np.asarray(g)))
+
+
+def test_fixed_mass_ln_lambda_gradient(draw):
+    """d ln Lambda / d theta at fixed mass through the TOV solve (implicit
+    function rule on h_c) against central differences that re-solve h_c."""
+    from nmbackend.tov.solver import solve_structure
+    model, th, plan = draw
+    idx = np.array([1, 4, 5, 30])           # L_sym, corr_frac, ln X, a variate
+    th0 = jnp.asarray(th)
+
+    def ml(q):                              # q = (theta[idx], h_c)
+        s = solve_structure(BJ.bridge_table(model, th0.at[idx].set(q[:-1]), NEPS, plan), q[-1])
+        return jnp.stack([s.M_msun, jnp.log(s.Lambda)])
+
+    f, J = jax.jit(ml), jax.jit(jax.jacfwd(ml))
+    h_top = float(np.asarray(jax.jit(lambda t: BJ.bridge_table(model, t, NEPS, plan).h)(th0))[-1])
+    q0 = np.r_[th[idx], 0.3 * h_top]
+    M0 = float(f(q0)[0])
+    Jq = np.asarray(J(q0))
+    ad = Jq[1, :-1] - Jq[1, -1] * Jq[0, :-1] / Jq[0, -1]
+
+    def lnlam_at_M0(q):
+        q = q.copy()
+        for _ in range(5):
+            q[-1] -= (float(f(q)[0]) - M0) / Jq[0, -1]
+        v = f(q)
+        assert abs(float(v[0]) - M0) < 1e-11
+        return float(v[1])
+
+    for j in range(idx.size):
+        h = 1e-5 * max(abs(q0[j]), 1.0)
+        e = np.zeros(q0.size)
+        e[j] = h
+        fd = (lnlam_at_M0(q0 + e) - lnlam_at_M0(q0 - e)) / (2 * h)
+        assert ad[j] == pytest.approx(fd, rel=1e-4), idx[j]

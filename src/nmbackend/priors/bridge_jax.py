@@ -2,13 +2,14 @@
 
 :func:`bridge.draw_bridge_eos` draws its random numbers from a NumPy stream
 while it builds the EOS.  Here the random numbers are explicit arguments, so
-one draw is a deterministic function
+one draw is a deterministic function of
 
-    table = bridge_table(nep, corr_frac, ln_X, z)
+    theta = [nep..., corr_frac, ln_X, z (2^levels - 1, 3) flattened]
 
-of the nuclear empirical parameters ``nep`` (through the metamodel anchor at
-n_L), the sound-speed correlation length, the pQCD scale, and the standard-
-normal variates ``z``.  Every step is written in JAX, so the map can be
+namely ``bridge_table(model, theta, nep_names, plan, cfg)``: the nuclear
+empirical parameters ``nep`` (through the metamodel anchor at n_L), the
+sound-speed correlation length, the pQCD scale, and the standard-normal
+variates ``z``.  Every step is written in JAX, so the map can be
 differentiated with respect to all of these and composed with the TOV solver
 (for example, a Fisher matrix with the variates as nuisance parameters whose
 prior is a unit normal).
@@ -28,16 +29,31 @@ Differences from the NumPy sampler (same prior law, different realization):
   descendants are skipped, which gives the same piecewise mu(n).
 * the table is built with :func:`eos.base.build_h_and_cs2` from the raw nodes
   (no :func:`eos.base.refine_table`), so its length is set by the bridge grid.
+* the table length is static, so the number of bridge-grid rows is the count
+  at or below n_term for the LARGEST n_H over X in [1, 4].  A draw with a
+  smaller n_H has more grid rows below n_term in NumPy than here: at the
+  defaults up to 14 fewer rows, and the last row up to 6.8% below n_term
+  (at X = 1).  With n_term_fac = inf the lengths agree.
+* where :func:`bridge.draw_bridge_eos` raises ValueError (anchors
+  inconsistent, n_L outside the low-density table), :func:`make_plan`
+  raises, and :func:`bridge_arrays` raises when called outside a trace.
+  Under a trace it returns NaN arrays and ``info["valid"] = False``.
+* ``Config.min_dlnmu`` exists only here; its default is the value
+  :func:`bridge.fractal_refine` uses (draw_bridge_eos does not expose it).
 
 The checks above, the running maximum on mu, and the truncation at n_term
-make the map piecewise smooth.  Derivatives are exact inside a piece; the
-indices that select a piece are fixed by the concrete values at the point of
-evaluation (:func:`plan`), so tracing never branches on a traced value.
+make the map piecewise smooth.  Derivatives are exact inside a piece.  Only
+the row counts are fixed by :func:`make_plan`; which piece applies (skipped
+nodes, interpolation cells) is chosen from the traced values with
+``jnp.where`` and ``searchsorted``, so tracing never branches on a traced
+value.  A plan stays valid while the low-density table keeps the same number
+of rows below n_L; :func:`bridge_arrays` checks this (``info["plan_ok"]``).
 
 Units as bridge.py: mu in MeV, n in fm^-3, p and eps in MeV/fm^3.
 """
 from __future__ import annotations
 
+import functools
 import math
 from typing import NamedTuple
 
@@ -46,7 +62,7 @@ import jax.numpy as jnp
 import numpy as np
 from jax.scipy.special import ndtr
 
-from .bridge import MU_H, N_SAT, PQCD_TABLE
+from .bridge import MU_H, N_SAT, PQCD_TABLE, _interval_consistent
 
 _XS = np.array(sorted(PQCD_TABLE))
 _C_N = np.polyfit(np.log(_XS), [PQCD_TABLE[x][0] for x in _XS], 2)
@@ -55,8 +71,14 @@ _U_EPS = 1e-12
 
 
 def pqcd_anchor(ln_X):
-    """(mu_H, n_H, p_H) at mu = 2.6 GeV as bridge.pqcd_anchor, for ln X in [0, ln 4]."""
-    x = jnp.clip(ln_X, 0.0, math.log(4.0))
+    """(mu_H, n_H, p_H) at mu = 2.6 GeV as bridge.pqcd_anchor, for ln X in [0, ln 4].
+
+    Outside [0, ln 4] ln X is clamped (zero derivative).  At ln X = 0 and ln 4
+    exactly the derivative is the one-sided one from inside the interval
+    (jnp.clip would give half of it there)."""
+    ln_X = jnp.asarray(ln_X)
+    hi = math.log(4.0)
+    x = jnp.where(ln_X < 0.0, 0.0, jnp.where(ln_X > hi, hi, ln_X))
     return (jnp.asarray(MU_H, x.dtype), jnp.polyval(jnp.asarray(_C_N), x),
             jnp.polyval(jnp.asarray(_C_P), x))
 
@@ -246,12 +268,14 @@ def diffuse_mu_of_n(x, mu, corr_frac, n_steps=40):
 
 # ------------------------------------------------------------- one draw ----------
 class Plan(NamedTuple):
-    """Static choices fixed by the concrete values at the evaluation point."""
+    """Static row counts, fixed by the concrete values at the evaluation point."""
     n_keep: int          # low-table rows strictly below n_L
-    n_sel: int           # bridge-grid rows at or below n_term
+    n_sel: int           # bridge-grid rows at or below n_term for the largest n_H
 
 
 class Config(NamedTuple):
+    """Settings as in :func:`bridge.draw_bridge_eos`.  ``min_dlnmu`` is not an
+    argument there; its default is the one :func:`bridge.fractal_refine` uses."""
     levels: int = 9
     n_L_fac: float = 2.0
     n_term_fac: float = 12.0
@@ -268,10 +292,24 @@ def unpack(theta, nep_names, levels):
     return nep, theta[k], theta[k + 1], z
 
 
+def _is_concrete(x):
+    return not isinstance(x, jax.core.Tracer)
+
+
 def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
-    """(n, eps, p) of one draw, MeV/fm^3, as JAX arrays of static length."""
+    """(n, eps, p, info) of one draw, MeV/fm^3, as JAX arrays of static length.
+
+    ``info["valid"]`` is False where :func:`bridge.draw_bridge_eos` would raise
+    (``anchors_ok``: anchors inconsistent; ``in_table``: n_L outside the
+    low-density table) or where ``plan`` no longer fits the low-density table
+    (``plan_ok``); n, eps and p are then NaN.  Outside a trace this raises
+    ValueError instead.  ``info["node_ok"]`` is the per-node mask of the
+    refinement tree (heap order; skipped nodes are normal)."""
+    if plan.n_sel != _n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts):
+        raise ValueError(f"plan {plan} was made for other settings than {cfg}")
     nep, corr_frac, ln_X, z = unpack(theta, nep_names, cfg.levels)
     n_L = cfg.n_L_fac * N_SAT
+    n_cut = n_L * (1.0 - 1e-12)
     t = model.eos_table(nep)
     n_lo, eps_lo, p_lo = t.n, t.eps_mevfm3, t.p_mevfm3
     eps_L = jnp.interp(n_L, n_lo, eps_lo)
@@ -280,9 +318,21 @@ def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
     bL = (mu_L, jnp.asarray(n_L), p_L)
     bH = pqcd_anchor(ln_X)
 
+    k, s = plan.n_keep, plan.n_sel
+    in_table = (n_lo[0] < n_cut) & (n_cut <= n_lo[-1])
+    plan_ok = jnp.asarray(0 < k < n_lo.shape[0])
+    if 0 < k < n_lo.shape[0]:
+        plan_ok = (n_lo[k - 1] < n_cut) & (n_lo[k] >= n_cut)
+    anchors_ok = _consistent(bL, bH)
+    valid = in_table & plan_ok & anchors_ok
+    if _is_concrete(valid) and not bool(valid):
+        raise ValueError(f"no bridge: n_L in table {bool(in_table)}, plan fits "
+                         f"{bool(plan_ok)}, anchors consistent {bool(anchors_ok)} "
+                         f"(mu_L={float(mu_L):.1f} MeV)")
+
     U = jnp.concatenate([jnp.full((1, 3), 0.5),
                          jnp.clip(ndtr(z), _U_EPS, 1.0 - _U_EPS)])
-    pts, _ = refine_tree(bL, bH, U, cfg.levels, cfg.min_dlnmu)
+    pts, node_ok = refine_tree(bL, bH, U, cfg.levels, cfg.min_dlnmu)
     x = jnp.linspace(math.log(n_L), jnp.log(bH[1]), cfg.n_grid_pts)
     mu_grid = jnp.exp(_interp(x, jnp.log(pts[:, 1]), jnp.log(pts[:, 0])))
     mu_s = jax.lax.cummax(diffuse_mu_of_n(x, mu_grid, corr_frac, cfg.n_steps))
@@ -290,31 +340,56 @@ def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
     eps_b = eps_L + jnp.concatenate(
         [jnp.zeros(1), jnp.cumsum(0.5 * (mu_s[1:] + mu_s[:-1]) * jnp.diff(grid))])
     p_b = mu_s * grid - eps_b
-    k, s = plan.n_keep, plan.n_sel
     n = jnp.concatenate([n_lo[:k], grid[:s]])
     eps = jnp.concatenate([eps_lo[:k], eps_b[:s]])
     p = jnp.concatenate([p_lo[:k], p_b[:s]])
+    n, eps, p = (jnp.where(valid, a, jnp.nan) for a in (n, eps, p))
     return n, eps, p, dict(mu_L=mu_L, p_L=p_L, p_end_mismatch=(p_b[-1] - bH[2]) / bH[2],
-                           grid=grid, mu=mu_s, pts=pts)
+                           grid=grid, mu=mu_s, pts=pts, node_ok=node_ok,
+                           valid=valid, in_table=in_table, plan_ok=plan_ok,
+                           anchors_ok=anchors_ok)
+
+
+@functools.lru_cache(maxsize=None)
+def _n_sel(n_L_fac, n_term_fac, n_grid_pts):
+    """Bridge-grid rows at or below n_term for the largest n_H over X in
+    [1, 4] (the fewest rows), so one length serves every X."""
+    xs = np.linspace(0.0, math.log(4.0), 65)
+    n_H = max(float(np.polyval(_C_N, x)) for x in xs)
+    n_L = n_L_fac * N_SAT
+    grid = np.exp(np.linspace(math.log(n_L), math.log(n_H), n_grid_pts))
+    return int(np.sum(grid <= n_term_fac * N_SAT))
 
 
 def make_plan(model, theta, nep_names, cfg: Config = Config()):
-    """Concrete pass: the static row counts at this evaluation point."""
+    """Concrete pass: the static row counts at this evaluation point.
+
+    Raises ValueError where :func:`bridge.draw_bridge_eos` would (n_L outside
+    the low-density table, inconsistent anchors).  The plan holds at other
+    points while the low-density table keeps the same number of rows below
+    n_L, which :func:`bridge_arrays` checks."""
     nep, _, ln_X, _ = unpack(np.asarray(theta), nep_names, cfg.levels)
     n_L = cfg.n_L_fac * N_SAT
+    n_cut = n_L * (1.0 - 1e-12)
     t = model.eos_table({k: float(v) for k, v in nep.items()})
-    n_lo = np.asarray(t.n)
-    n_keep = int(np.sum(n_lo < n_L * (1.0 - 1e-12)))
-    # one length for every X: the grid rows up to n_term for the largest n_H
-    # (fewest rows); a draw with smaller n_H stops a little below n_term
-    n_H = max(float(pqcd_anchor(jnp.asarray(x))[1]) for x in np.linspace(0.0, math.log(4.0), 65))
-    grid = np.exp(np.linspace(math.log(n_L), math.log(n_H), cfg.n_grid_pts))
-    n_sel = int(np.sum(grid <= cfg.n_term_fac * N_SAT))
-    return Plan(n_keep=n_keep, n_sel=n_sel)
+    n_lo, eps_lo, p_lo = (np.asarray(a) for a in (t.n, t.eps_mevfm3, t.p_mevfm3))
+    if not n_lo[0] < n_cut <= n_lo[-1]:
+        raise ValueError(f"low-density table spans n={n_lo[0]:.4g} to "
+                         f"{n_lo[-1]:.4g} fm^-3, which must contain "
+                         f"n_L={n_L:.4g} fm^-3")
+    eps_L, p_L = np.interp(n_L, n_lo, eps_lo), np.interp(n_L, n_lo, p_lo)
+    bL = ((eps_L + p_L) / n_L, n_L, p_L)
+    bH = tuple(float(v) for v in pqcd_anchor(float(ln_X)))
+    if not _interval_consistent(bL, bH):
+        raise ValueError(f"anchors inconsistent (mu_L={bL[0]:.1f} MeV)")
+    n_keep = int(np.sum(n_lo < n_cut))
+    return Plan(n_keep=n_keep,
+                n_sel=_n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts))
 
 
 def bridge_table(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
-    """EOSTable of one draw (geometric units), differentiable in ``theta``."""
+    """EOSTable of one draw (geometric units), differentiable in ``theta``.
+    NaN where ``bridge_arrays`` flags the draw invalid."""
     from ..eos.base import build_h_and_cs2
     n, eps, p, _ = bridge_arrays(model, theta, nep_names, plan, cfg)
     return build_h_and_cs2(n, eps, p)
