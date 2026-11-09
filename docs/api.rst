@@ -1,6 +1,8 @@
 API reference
 =============
 
+.. |P_sym| replace:: symmetry-pressure magnitude
+
 EOS models
 ----------
 
@@ -12,6 +14,12 @@ EOS models
 
 .. automodule:: nmbackend.eos.rmft
    :members: RMFTEOS, saturation_properties
+
+.. automodule:: nmbackend.eos.ddrmf
+   :members: DDRMFEOS, saturation_properties, couplings_from_saturation_dd
+
+.. automodule:: nmbackend.eos.skyrme
+   :members: SkyrmeEOS, saturation_properties, diagnostics, skyrme_from_saturation
 
 .. automodule:: nmbackend.eos.hybrid
    :members: HybridEOS, TransitionInfo

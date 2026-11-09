@@ -1,30 +1,26 @@
 NuclearMatter-Backend
 =====================
 
-A differentiable (JAX) neutron-star equation-of-state and TOV toolkit for EOS
-inference, interfacing the RIFT parameter-estimation pipeline (per-EOS evidence and
-the tabular EOS hyperpipeline) and population-level inference.
+Research software for neutron-star equations of state, stellar structure, tidal
+deformability and EOS inference. The JAX core supports selected differentiable
+paths; RIFT adapters and sequence I/O are implemented, while gwkokab is planned.
 
 Highlights
 ----------
 
-* **Differentiable physics core** — pseudo-enthalpy TOV solver (adaptive
-  diffrax/Dopri5) with in-loop tidal Love number; forward-mode AD reproduces the
-  perturbative :math:`\delta`-TOV sensitivities. Validated against RePrimAnd to
-  :math:`\sim` few-metre radius agreement.
-* **Physical EOS models** — nuclear-empirical-parameter metamodel with causal
-  high-density extension; self-consistent RMFT (:math:`\sigma\!-\!\omega\!-\!\rho`,
-  GM1, muons in :math:`\beta`-equilibrium); Maxwell hybrid (phase-transition) EOS
-  with tidal junction condition; CompOSE / MUSES-CMF tabular ingestion.
-* **Modern nonparametric prior** — the constrained Brownian-bridge prior
-  (Gorda, Komoltsev, Kurkela & Sunde, arXiv:2512.18044): stable, causal,
-  thermodynamically consistent draws by construction, bridging the nuclear band to
-  perturbative QCD.
-* **Pluggable sequence representations** — tabular draws, compressed PCA
-  (functional-space) storage, and the legacy ``EOSSequenceLandry`` format behind a
-  single accessor protocol; RIFT auto-detects all three.
-* **Inference utilities** — Fisher forecasting from implicit-function-theorem
-  sensitivities (validated against re-rooted finite differences).
+* **EOS models:** empirical-parameter metamodel, nonlinear and density-dependent
+  RMF, standard/extended Skyrme, hybrid transitions and tabular readers.
+* **Structure and tides:** adaptive enthalpy-domain TOV, tidal junctions,
+  M–R–Lambda sequences and independent SciPy reference checks.
+* **Priors and inference:** Brownian-bridge EOS draws, PCA compression/coefficient
+  priors, fixed-mass sensitivities, Fisher forecasts and laboratory likelihoods.
+* **Interfaces:** RIFT tabular workflows and separate external RNS/NSCool bridges,
+  with conditional JAX thermal transport on frozen backgrounds.
+
+Start with :doc:`capabilities` and :doc:`validation`. Numerical checks have scoped
+coverage: the historical RePrimAnd radius mismatch was reduced to a reported
+3–10 m in selected comparisons, while branch coverage, broader external checks
+and fully coupled rotating cooling remain open. See each guide for its limits.
 
 .. toctree::
    :maxdepth: 2
@@ -32,11 +28,17 @@ Highlights
 
    installation
    quickstart
+   capabilities
+   validation
    physics
    priors
    representations
    rift
    inference
+   rotating
+   rotating-tabulated
+   cooling/native_core
+   cooling/core_transport_validation
 
 .. toctree::
    :maxdepth: 1

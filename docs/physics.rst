@@ -51,7 +51,8 @@ valid with the new tidal term: on the packaged SLy crust its Hermite
 Tables that stop near neutron drip are continued to the surface with a consistent
 polytropic tail (:func:`nmbackend.eos.base.extend_to_surface`); this surface
 *convention* is worth :math:`\sim 100` m in radius and was the key to closing the
-gap to the RePrimAnd reference solver (final agreement: few metres in :math:`R`).
+gap to the RePrimAnd reference solver (the dated report gives roughly 3–10 m
+in :math:`R`; see :doc:`validation` for scope).
 
 Tidal term
 ----------
@@ -157,6 +158,11 @@ EOS models
   properties and :math:`M_{\max}`. Adding further parameter sets requires
   verifying the coupling normalization against the published saturation point
   (see the backlog note).
+* **Density-dependent RMF** (:class:`nmbackend.eos.ddrmf.DDRMFEOS`) — DD2/DDME2
+  coupling sets, rearrangement terms and beta-equilibrated leptons.
+* **Skyrme** (:class:`nmbackend.eos.skyrme.SkyrmeEOS`) — standard/extended
+  uniform-matter functionals (SLy4/BSkG3); high-density acausality and negative
+  effective masses require caller diagnostics and are not automatically repaired.
 * **Hybrid / phase transitions** (:class:`nmbackend.eos.hybrid.HybridEOS`) —
   Maxwell construction with the tidal junction condition at the density
   discontinuity.

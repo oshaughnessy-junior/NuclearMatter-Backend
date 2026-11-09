@@ -1,5 +1,15 @@
 # TOV validation plan — accuracy, phase transitions, and adaptive stepping
 
+> **Current reading guide (2026-11-09):** sections 1–6 retain the original
+> fixed-step risk analysis and proposed acceptance ladder, not a description of
+> today's default solver. Adaptive diffrax, thermodynamically consistent
+> interpolation, crust matching and explicit hybrid tidal junctions are implemented.
+> See [physics](physics.rst) for current numerical/AD limits and
+> [validation evidence](validation.rst) for dated internal/external checks.
+> The later [RePrimAnd report](devlog/2026-06-02f-consistent-interpolation.md)
+> records ~3–10 m radius differences after surface/interpolation fixes. That
+> scoped result does not close the full external-validation ladder.
+
 *v0.0.1 (2026-06-02).  Owner: R. O'Shaughnessy + collaborators.*
 
 > The v0.0.1 solver passes *sanity* tests (causal, branch turnover, sensible
@@ -119,7 +129,8 @@ Tests: `tests/test_validation_reference.py`.
 - [x] RePrimAnd reference adapter updated to the **modern (1.7) API**
       (`reference/reprimand.py`; same fix applied to RIFT `EOSManager`), with legacy
       fallbacks.  Cross-check ready to run in the validation env (`pip install
-      reprimand` on Linux); execution on the user's workstation still pending.
+      reprimand` on Linux); execution results are recorded in the later
+      [surface/interpolation report](devlog/2026-06-02f-consistent-interpolation.md).
 - [ ] Analytic Tolman-VII / constant-density unit test.
 - [ ] Smooth-EOS validation against lalsim named EOS (SLy/APR/MPA1).
 - [x] Hybrid phase-transition EOS generator (Maxwell), `eos/hybrid.py` — hadronic
@@ -136,7 +147,9 @@ Tests: `tests/test_validation_reference.py`.
       R_1.4 pinned in `tests/test_crust.py`).
 - [ ] Zhu δ-TOV cross-check of M/R/Λ and `dΛ/dparam`.
 
-> Note: the sharp-jump+junction result is the width→0 limit of a finite-width
+> Historical June note (superseded for the junction-sign check by
+> [October smeared-transition evidence](devlog/2026-10-14-tidal-cs2.md)):
+> the sharp-jump+junction result is the width→0 limit of a finite-width
 > crossover, but a clean monotone smeared-convergence test is hampered by
 > under-resolution at tiny width and by twin-star non-monotonicity at fixed mass;
 > the independent (H,β) junction reference is the decisive in-sandbox check.
