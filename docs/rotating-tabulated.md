@@ -159,3 +159,71 @@ integration restores the omitted final vacuum node and matches native surface
 support. Threshold-mask convergence and frequency-root refinement remain
 explicit scientific requirements. The example labels every result engineering
 only and makes no EOS-posterior, cooling-evolution, or precision claim.
+
+
+## Tabulated RNS native build and convergence contract
+
+The tabulated adapter checks SHA256 of all eight compiled upstream C/header
+inputs from commit 87ea68246ee990256f94aa91a0506f54d78dd8d0 before building.
+This includes consts.h: recording arbitrary native bytes after compilation
+does not establish that Python's physical conversion constants match them.
+Unrelated files in the external checkout are not compiled or included.
+
+The build writes a private tabulated_equil.c alongside the derived driver.
+The upstream spin routine's divergence flag is passed by value and used to
+allow a failed iteration to return normally. The derived copy instead exits
+nonzero with NMB_RNS_SPIN_DIVERGED, caps each spin call at 1000 iterations,
+rejects nonfinite residuals, and requires a finite residual at or below the
+unchanged native accuracy, at least two completed iterations, positive finite
+radius, and finite spin. Failure diagnostics remain in run.log and failed
+solves do not receive a success run.json. A process timeout remains a failure.
+
+build.json records separate hashes for the upstream inputs, generated
+equilibrium source, generated driver and binary, and the iteration cap.
+These convergence checks establish the native stopping condition; they do
+not certify continuum accuracy, stability or EOS thermodynamic validity.
+
+Set RNS_SOURCE to the pinned source/rns.v2.0 directory and RNS_REQUIRED=1
+to run tests/test_rotating_tabulated.py with native checks. These include a
+500-row analytic thermodynamic barotrope (above the legacy 200-row capacity),
+changed-header rejection, and a private cap-one build proving failure
+propagation. The external checkout itself is not changed by those tests.
+
+
+The builder accepts accuracy=1e-5 by default, preserving the native stopping
+tolerance. Only tightening is admitted: finite 0 < accuracy <= 1e-5.
+The generated driver sets this value explicitly and build.json records it.
+For a tightly conditioned mass/baryon sequence, native primal noise must be
+smaller than the requested sequence residual; build with a tighter native
+accuracy if necessary. Default-accuracy solves may fail the sequence's
+stricter residual gate, and that gate remains unchanged. A tighter stopping
+condition still requires mesh/table refinement and is not an accuracy proof.
+
+
+The retained pinned main preamble already calls spin at axis ratio 1 before
+the export loop. Thus the spherical control and the q=1 rotating endpoint
+are covered by the same convergence guard; q=1 reuses the converged fields.
+The cap-one regression asserts failure before either spherical or rotating
+CSV exists, not merely absence of the final success manifest.
+
+
+## Adversarial science-example admission
+
+The example verifies cached spherical/rotating CSV hashes, EOS bytes, binary
+hash, and requested/native parameters before reusing any solve. A partial or
+modified cache fails with a quarantine/remove diagnostic; it is not silently
+recomputed or accepted. Composition densities must be positive and increasing,
+fractions finite and physical, and charge-neutral to the declared tolerance.
+A lepton channel requires that lepton to be present. A triangle crossing may
+be bracketed across channel appearance; the final onset must have that channel.
+
+Central density means the native r=0 density, checked for angular consistency,
+not the grid maximum. Results record this convention and the exact driver hash.
+The volume integral and final conditioning/onset residuals are acceptance gates,
+not just reported diagnostics. Defaults are baryon-integral and conditioning
+relative tolerances 1e-6, density-root absolute tolerance 2e-8 fm^-3, axis-ratio
+root absolute tolerance 2e-7, final margin tolerance 1e-5 fm^-1, and absolute
+charge-neutrality tolerance 1e-6. Each has an explicitly named CLI option, and
+all declared tolerances are saved. The native convergence tolerance may need
+tightening before these gates can pass; a rejected solve is not a no-onset star.
+A root tolerance alone is not a scientific uncertainty estimate.
