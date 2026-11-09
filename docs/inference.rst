@@ -1,8 +1,8 @@
 Inference utilities
 ===================
 
-Fisher forecasting from exact sensitivities
--------------------------------------------
+Fisher forecasting from AD sensitivities
+----------------------------------------
 
 :mod:`nmbackend.inference.fisher` turns measurement uncertainties on NS observables
 into forecast constraints on EOS parameters, using forward-mode sensitivities:
@@ -54,3 +54,23 @@ Worked example
 GW-tidal + NICER-radius + massive-pulsar measurement set, exposing the
 near-perfect :math:`L_{\rm sym}`–:math:`K_{\rm sym}` degeneracy of single-mass
 observables (and how multi-mass observables break it).
+
+Laboratory likelihoods and ejecta fits
+--------------------------------------
+
+:mod:`nmbackend.lab_likelihood` implements density-tagged symmetry-pressure
+likelihoods with an optional marginalized transport-model systematic and correlated
+symmetry-energy parameter likelihoods (Huth et al., arXiv:2107.06229; Tsang et al.,
+arXiv:2310.11588). The high-density beta-equilibrated bridge has no symmetric-matter
+decomposition: above the matching density, symmetry-pressure constraints act on
+the metamodel extrapolation, not directly on the bridge draw.
+
+``nmbackend.ejecta`` composes published binary-neutron-star ejecta fitting families
+with EOS quantities and exposes fit scatter and between-family spread. These are
+empirical surrogates with calibration limits, no spin dependence and potentially
+factor-of-two residuals; consult the module's references and domains before use.
+
+The Fisher derivatives above are numerical first-derivative estimates checked on
+selected configurations. They do not imply supported EOS-parameter Hessians,
+reverse-mode tidal differentiation or a validated HMC/NUTS inference run; see
+:doc:`physics` and :doc:`validation`.

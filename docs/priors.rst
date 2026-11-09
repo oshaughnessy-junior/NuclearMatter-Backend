@@ -1,7 +1,7 @@
 EOS priors
 ==========
 
-Constrained Brownian-bridge prior (recommended)
+Constrained Brownian-bridge prior
 -----------------------------------------------
 
 :mod:`nmbackend.priors.bridge` implements the prior of Gorda, Komoltsev, Kurkela &
@@ -52,3 +52,12 @@ Parametric priors
 ``scripts/build_eos_sequence.py`` draws metamodel / RMFT parameter grids or explicit
 parameter files — useful for controlled studies and for the Fisher forecasting in
 :doc:`inference`.
+
+PCA coefficient priors
+----------------------
+
+``nmbackend.priors.gp_pca`` provides Gaussian coefficient priors, saved prior state,
+PCA sequence draws and evidence-weighted basis adaptation. These operate on the
+compressed sequence representation (:doc:`representations`); they are distinct
+from the Brownian-bridge EOS construction. Availability does not establish the
+scientific adequacy of a chosen prior or posterior approximation.

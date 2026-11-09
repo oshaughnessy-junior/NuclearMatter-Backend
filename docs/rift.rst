@@ -31,7 +31,7 @@ central-enthalpy inference described below.
 Live smoke test
 ---------------
 
-The integration was validated end-to-end against a real GW170817 ``all.net``
+A recorded integration smoke test exercised a real GW170817 ``all.net``
 (see ``examples/gw170817_tabular/SMOKE_TEST_RESULT.md``):
 
 * legacy path reproduces the stored reference evidence
@@ -39,6 +39,10 @@ The integration was validated end-to-end against a real GW170817 ``all.net``
 * the native ``NSSequence`` path runs the same marginalization through
   ``EOSSequenceNMB`` and converges (:math:`\ln L = 457.77 \pm 0.39` on a remapped
   12-EOS smoke configuration).
+
+The native smoke configuration remapped 12 EOS against an interpolant indexed for
+10,000 EOS. This establishes interface plumbing, not science-grade per-EOS
+posterior/evidence results or a reproduced external inference validation.
 
 A *science-grade* run requires a sequence with the same cardinality as the
 ``all.net`` EOS indexing (e.g. :math:`10^4` draws from the bridge prior).

@@ -1,5 +1,15 @@
 # NuclearMatter-Backend — forward roadmap
 
+> **Current reading guide (2026-11-09):** the sequencing below originated on
+> 2026-06-02 and retains historical diagnostics. See [capabilities](capabilities.rst)
+> and [validation evidence](validation.rst) for the current inventory and scope.
+> RMFT, DD-RMF/Skyrme, tabular ingestion, nonparametric/PCA tooling and RIFT
+> sequence integration are implemented. gwkokab remains planned; rotation and
+> cooling have separate external-reference/conditional paths. The later
+> [surface/interpolation report](devlog/2026-06-02f-consistent-interpolation.md)
+> reports ~3–10 m in R and <0.1% in Λ against RePrimAnd 1.7 for compared cases;
+> the initial ~200 m discrepancy below is historical, not a current open headline.
+
 *v0.0.1 (2026-06-02).  Sequencing per RO: harden the solver first, then add physics
 (RMFT), then wire to RIFT.  Proof-of-concept is the milestone; surrogates only if we
 need the acceleration.*
@@ -9,7 +19,7 @@ nuclear metamodel EOS + a Maxwell phase-transition path with the tidal junction,
 all cross-validated **internally** to <0.1% (diffrax vs an independent radius-domain
 (H,β) reference) and now driving **RePrimAnd 1.7** as an external reference.
 
-The external check surfaced the headline science issue:
+The initial external check surfaced this historical science issue:
 
 > **RePrimAnd vs ours disagree by ~200 m in R in some cases** (~1–2% at R≈11–12 km),
 > far above our internal diffrax-vs-SciPy agreement (~2 m, 2e-4).  This is the
@@ -21,8 +31,9 @@ The external check surfaced the headline science issue:
 3G detectors (ET/CE) and **stacked / population** measurements drive the radius and
 Λ *statistical* precision toward the sub-percent / tens-of-meters level.  Solver and
 EOS-representation **systematics must sit an order of magnitude below** that — call
-it a budget of **≲10 m in R** and **≲0.5% in Λ** for the numerics alone.  The current
-~200 m RePrimAnd-vs-ours discrepancy is ~20× over budget, so this is the gate.
+it a budget of **≲10 m in R** and **≲0.5% in Λ** for the numerics alone.  The initial
+~200 m RePrimAnd-vs-ours discrepancy was ~20× over budget; the later report
+reduced it to ~3–10 m on the compared cases. Broad coverage remains the gate.
 We already have the adversarial machinery (independent (H,β) reference, the
 phase-transition junction tests, RePrimAnd, and — newly — MUSES `qlimr`) to drive
 it down quantitatively, which is exactly why hardening is cheap to do now and

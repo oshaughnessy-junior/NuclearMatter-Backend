@@ -35,10 +35,10 @@ Legacy ``EOSSequenceLandry``
 ----------------------------
 
 The format consumed by released RIFT (and the published LCEHL files).
-:func:`nmbackend.rift.write_landry_legacy` emits it exactly (stable branch only, so
-RIFT's single-valued :math:`M \to \Lambda` interpolation is correct for
-phase-transition EOS), and ``scripts/convert_landry_to_nss.py`` converts existing
-files to the native format.
+:func:`nmbackend.rift.write_landry_legacy` emits the primary stable rising branch
+only. This maintains a single-valued :math:`M \to \Lambda` map but discards later
+disconnected branches; it does not represent all phase-transition EOS topology.
+``scripts/convert_landry_to_nss.py`` converts existing files to the native format.
 
 RIFT-side auto-detection
 ------------------------

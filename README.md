@@ -1,180 +1,115 @@
 # NuclearMatter-Backend (`nmbackend`)
 
-A differentiable (JAX) neutron-star **equation-of-state + TOV** toolkit for EOS
-inference, designed to interface with **RIFT** (per-EOS evidence and the tabular
-hyperpipeline) and **gwkokab** (population inference).  It updates and extends the
-preliminary EOS tooling in RIFT's `EOSManager.py`.
+An open-source research toolkit for neutron-star **equations of state (EOS),
+stellar structure, tidal deformability, and EOS inference**. The JAX core combines
+nuclear models and imported tables with an adaptive TOV solver and selected
+automatic-differentiation paths. It extends the preliminary EOS tooling in RIFT's
+`EOSManager.py` and provides implemented RIFT adapters and sequence I/O.
 
-> Status: **v0.0.1 — research scaffold + one validated vertical slice.**
-> See `docs/architecture.md` for the full design and roadmap, and `ATTRIBUTION.md`
-> for provenance/licensing of the works this is based on or motivated by.
+**Status: v0.0.1, research software.** Capabilities have different validation and
+differentiation coverage; inclusion does not establish precision-inference
+readiness. Start with the [documentation index](docs/index.rst),
+[capability guide](docs/capabilities.rst), and [validation guide](docs/validation.rst).
 
-## What works today
+## Capabilities
 
-A single end-to-end, **fully differentiable** path:
+- **EOS families:** nuclear empirical-parameter metamodel with causal tail;
+  nonlinear RMFT (GM1), density-dependent RMF (DD2/DDME2), standard/extended
+  Skyrme (SLy4/BSkG3), polytropes, Maxwell hybrid transitions, CompOSE/simple
+  tables and MUSES-CMF CSV readers, with crust and lepton/composition utilities.
+- **Structure and tides:** adaptive diffrax TOV-in-enthalpy, Love numbers and
+  M–R–Λ families; explicit hybrid tidal junctions and an independent radius-domain
+  SciPy reference. Twin-star handling remains limited (see below).
+- **Priors and inference:** constrained Brownian-bridge EOS draws, PCA sequence
+  compression and Gaussian coefficient-prior tools; fixed-mass and maximum-mass
+  sensitivities, Fisher forecasts, density-tagged laboratory likelihoods and
+  published merger-ejecta fitting families with uncertainty estimates.
+- **RIFT workflows:** `EOSConcreteNMB`, native tabular and PCA sequences, and legacy
+  Landry-format export. A recorded RIFT CIP smoke test establishes plumbing,
+  **not** science-grade per-EOS evidence: its 12-EOS input was remapped against an
+  interpolant indexed for 10,000 EOS. See [RIFT integration](docs/rift.rst).
+- **Rotation and cooling interfaces:** pinned external RNS equilibrium runner and
+  tabulated-EOS adapter, external NSCool driver, and separate JAX thermal transport
+  on frozen backgrounds. RNS/NSCool are not bundled; these paths do not establish
+  a fully coupled rotating-star cooling model. See [rotation](docs/rotating.md)
+  and [thermal limits](docs/cooling/core_transport_validation.md).
 
-```
-nuclear params  ─►  physical EOS (metamodel + causal tail)  ─►  AD TOV solver
-                                                                   │
-                          M(h_c), R(h_c), Λ(h_c), branches, dM/dh_c
-                                                                   │
-                                            ┌──────────────────────┴───────────┐
-                                       RIFT EOSConcrete adapter        forward-mode
-                                       (lambda_from_m, P(ρ), mMax)     sensitivities
-```
+**Integration boundaries:** gwkokab is a planned adapter, despite an optional
+package dependency. MUSES supplies out-of-band EOS tables/reference targets;
+it is not an integrated inference dependency.
 
-Validated numbers for the default parameters (`pytest`):
-`M_max ≈ 2.08 M⊙`, `R(1.4) ≈ 11.7 km`, `Λ(1.4) ≈ 443`, `dR/dL_sym ≈ +0.027 km/MeV`
-(reproducing the known L_sym–R(1.4) correlation).  The adaptive solver is
-cross-validated against an independent radius-domain reference to **<0.1%** in
-M, R, and Λ (see Validation status below).
+## Install and quickstart
 
-## Install / run
+Use a project-local environment (Python ≥3.9; core dependencies include NumPy,
+SciPy, JAX, diffrax and PyYAML):
 
 ```bash
-pip install -e .            # core deps: numpy, scipy, jax, diffrax, pyyaml
-PYTHONPATH=src python examples/quickstart.py
-PYTHONPATH=src pytest        # full test suite
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+python examples/quickstart.py
+# Optional test dependencies and suite:
+python -m pip install -e '.[test]'
+python -m pytest
 ```
 
-## Quickstart
+For the heavier validation environment and optional references, see
+[installation](docs/installation.rst) and [environment notes](docs/environment.md).
 
 ```python
-import jax
 from nmbackend.eos import MetaModelEOS
 from nmbackend.tov import build_family, m_max, radius_of_mass, lambda_of_mass
-from nmbackend.tov.solver import solve_structure
 from nmbackend.adapters import EOSConcreteNMB
 
-mm = MetaModelEOS()
+model = MetaModelEOS()
 params = dict(K_sat=230., E_sym=32., L_sym=60., cs2_tail=0.4)
-
-fam = build_family(mm.eos_table(params))         # M-R-Λ sequence (+ branches)
-m_max(fam); radius_of_mass(fam, 1.4); lambda_of_mass(fam, 1.4)
-
-# forward-mode AD sensitivity (the delta-TOV / Fisher building block)
-hc = 0.20 * float(mm.eos_table(params).h[-1])
-jax.jacfwd(lambda L: solve_structure(
-    mm.eos_table({**params, "L_sym": L}), hc).R_km)(60.)
-
-# drop into RIFT
-eos = EOSConcreteNMB(mm, params)                 # .lambda_from_m, .pressure_density_on_grid, .mMaxMsun
+family = build_family(model.eos_table(params))
+print(m_max(family), radius_of_mass(family, 1.4), lambda_of_mass(family, 1.4))
+eos = EOSConcreteNMB(model, params)  # RIFT-compatible single-EOS interface
 ```
 
-## Layout
+## Differentiation and branch limits
 
-```
-src/nmbackend/
-  constants.py            units (geometric km; MeV/fm^3 <-> km^-2; SI for RIFT)
-  eos/
-    base.py               EOSModel ABC, EOSTable, thermo-consistent at_h, surface
-    metamodel.py          nuclear empirical-parameter EOS + causal (CSS) tail
-    rmft.py               self-consistent sigma-omega-rho RMFT (GM1-validated)
-    hybrid.py             Maxwell hadron-quark EOS (first-order phase transition)
-    polytrope.py          analytic polytrope (solver validation)
-  tov/
-    solver.py             TOV-in-enthalpy + tidal y -> k2, Λ; backends: diffrax
-                          (adaptive, default) and scan (fixed-step) behind one seam
-    family.py             M-R-Λ sequences, stable/unstable branches, dM/dh_c, dh_c/dM
-  lab_likelihood.py       density-tagged P_sym(n) lab likelihoods (MB-N2):
-                          marginalizable transport-model systematic floor,
-                          correlated (E_sym, L_sym) Gaussian, FRIB scenario ladder
-  data/                   packaged copy (with provenance) of the FRIB scenario ladder
-  adapters/
-    rift.py               RIFT EOSConcrete-compatible adapter
-  reference/
-    scipy_tov.py          independent radius-domain SciPy reference (cross-check)
-    reprimand.py          RePrimAnd reference adapter (optional; pyreprimand)
-tests/                    units, EOS, TOV, RIFT adapter, AD-vs-FD, reference-validation
-examples/quickstart.py    scripts/validate_against_reprimand.py
-env/                      pixi.toml + environment.yml for the validation env
-docs/                     architecture.md, validation-plan.md, environment.md
-```
+Use forward mode (`jax.jacfwd`, `jax.jvp`) for supported EOS/TOV sensitivities.
+Reverse mode is supported for structure-only solves (`tidal=False`); reverse mode
+through the tidal variable is not recommended. First derivatives in central
+enthalpy are supported, but second derivatives in central enthalpy or EOS
+parameters are not. Accuracy depends on tolerance, EOS representation and
+transitions; the [physics guide](docs/physics.rst) records the current node/jump
+handling and derivative caveats. Fixed-mass sensitivities use the implicit-function
+theorem rather than coarse family interpolation; see [inference](docs/inference.rst).
 
-## Gradients: use forward-mode
+`build_family`/single-EOS adapters do not yet provide complete disconnected
+(twin-star) branch handling. RIFT sequence scalar accessors and legacy export
+retain the primary stable rising branch; sequence branch counts let callers detect
+and reject or route multi-branch EOS. They do not marginalize over all branches.
 
-The solver is differentiable.  Use **forward-mode** AD (`jax.jacfwd`, `jax.jvp`)
-for sensitivities of any TOV output — it is efficient for our small parameter
-count and reproduces the perturbation ("delta-TOV") equations.  Reverse-mode
-(`jax.grad`) is supported for **structure-only** solves (`tidal=False`, giving
-`R`, `M`); reverse-mode through the tidal variable is not recommended (near-center
-`1/r²` terms give `0*inf` in the backward pass).
+## Validation evidence and remaining work
 
-Accuracy of the adaptive (diffrax) tangents, AD vs finite differences
-([devlog](docs/devlog/2026-10-12-tov-jump-ts.md)):
+The repository records internal comparisons against an independently implemented
+radius-domain SciPy solver, including <0.1% M/R/Λ agreement for the documented
+smooth/hybrid cases. Hybrid references sharing the same junction formula check
+integration consistency; the smeared-transition limit separately checks the sign.
+October 2026 interpolation/tidal fixes and their table-specific results are
+recorded in the [physics guide](docs/physics.rst).
 
-- **EOS-parameter derivatives** converge with `rtol` at the level of the values:
-  ~3e-5 at the default `rtol=1e-7`, ~1e-7 at `1e-9`. Steps stop at every EOS
-  table node (`jump_ts`), where the right-hand side has slope kinks. Before
-  2026-10-12 they did not, and these tangents were off by up to 10%.
-- **Central-enthalpy derivatives** (`d/dh_c`) converge like `rtol` but sit
-  ~1e3x higher: ~1e-4 at the default, ~5e-7 at `1e-9`. Freezing the start of the
-  integration is what makes them converge at all. The residual is a near-common
-  factor on M, R and Λ, so it largely cancels in fixed-mass derivatives.
-  `solve_structure(..., centre_refine=True)` cuts it ~10x for +40–90% cost.
-- **First derivatives only in `h_c`.** `d²/dh_c²` (e.g. `jacfwd` of `dM/dh_c`)
-  is wrong by orders of magnitude. Mixed `d²/dh_c dθ` is fine.
-  Second derivatives in EOS parameters (`d²/dθ²`) are not supported either.
+The initial **~200 m RePrimAnd radius mismatch is historical**: the later
+[surface/interpolation report](docs/devlog/2026-06-02f-consistent-interpolation.md)
+records **~3–10 m in R and <0.1% in Λ against RePrimAnd 1.7** for the compared cases.
+That dated result is separate from the internal SciPy comparison and is not a
+comprehensive accuracy certification of today's entire model/parameter space.
+External-reference coverage, convergence, crust systematics and disconnected
+branches remain work items. See the [evidence and limits](docs/validation.rst),
+[validation plan](docs/validation-plan.md), and [roadmap](docs/roadmap.md).
 
-## Tidal term and node enthalpies (2026-10-14)
+## Scientific credit and license
 
-The tidal term `(ε+p)/c_s²` is the analytic `dε/dh` of the same Hermite cell
-that gives `ε(h)`, and the table's node `h` comes from the log-linear `ε(p)` of
-each cell (Gauss–Legendre) instead of the trapezoid
-([devlog](docs/devlog/2026-10-14-tidal-cs2.md)). Before, the node `c_s²` left a
-"phantom" energy jump at steep crust–core joins (Λ1.4 2–10% low; 6.2% on Q2C's
-FSUGold2 join), and the trapezoid `h` put R1.4 4–10 m high on smooth tables.
-Now Λ1.4 agrees with an independent radius-domain reference on the same nodes
-to ≤ 6e-6 and R1.4 to < 0.1 mm on 18 test tables. Every Λ moves. `EOSTable.cs2` is now a
-diagnostic only. `jump_nodes=False` is not recommended for tidal solves.
-
-## Validation status (important)
-
-Cross-validation already changed the design. An independent radius-domain reference
-(`nmbackend.reference.scipy_tov`, SciPy RK45 + (H,β) tidal) showed the original
-fixed-step RK4-in-`h` default was under-resolved (**M off ~5%, Λ off ~25%**), so the
-default is now an **adaptive diffrax (Dopri5+PID) backend**, which agrees with the
-reference to **<0.1%** in M, R, Λ and carries clean forward-mode AD
-(`tests/test_validation_reference.py`).
-
-**First-order phase transitions** are now handled: `eos/hybrid.py` builds a
-Maxwell hadron–quark EOS (density jump at constant pressure), and
-`tov.solve_hybrid` integrates each phase adaptively and applies the **tidal junction
-condition** at the discontinuity (Damour–Nagar 2009 / Takátsy–Kovács 2020).  It
-agrees with a radius-domain (H,β) solver that applies the same junction formula
-to **<0.1%** in M, R, Λ; that checks the integration, not the formula.  Until
-2026-10-14 both applied the junction with the wrong sign, and hybrid Λ was too
-low: at fixed mass on `Hybrid(80, 250, 1)` by 0 / 0 / 0.5% / 9.9% / 18.6% at
-1.2 / 1.4 / 1.6 / 1.8 / 2.0 M☉ (no quark core below ~1.57 M☉; M_max 2.06).  The sign is now
-checked against the limit of the smeared transition, which needs no junction
-(`tests/test_phase_transition.py`;
-[devlog](docs/devlog/2026-10-14-tidal-cs2.md)). The hybrid sequence shows
-the expected softening (quark cores → smaller R, Λ).
-
-Still **open**: twin-star/disconnected-branch bookkeeping in `build_family` (the
-hybrid M(h_c) is non-monotonic; `solve_hybrid` is per-`h_c` but the family/adapter
-don't yet split twin branches); and the external
-**RePrimAnd**/**Zhu δ-TOV** cross-checks (the sandbox can't build them — see
-[`docs/environment.md`](docs/environment.md)). Plan + metrics:
-[`docs/validation-plan.md`](docs/validation-plan.md).
-
-## Roadmap (see `docs/roadmap.md` and `docs/architecture.md`)
-
-**Rotating reference path (6 November 2026):** `nmbackend.rotating` builds
-and runs a pinned external RNS polytrope solver, with validated geometry
-exports and provenance receipts. `nmbackend.thermal` supplies conditional
-closed-domain transport on those frozen backgrounds. These are distinct from
-whole-star rotating cooling and EOS-to-equilibrium gradients, which remain
-development work. See [usage and limitations](docs/rotating.md).
-
-Forward plan: **harden the solver first** (close the ~200 m RePrimAnd-vs-ours R
-discrepancy to the ≲10 m level demanded by 3G/stacked measurements, using the
-independent (H,β), RePrimAnd, and MUSES `qlimr` references), **then add RMFT
-physics** (informed by MUSES `cmf_solver`/`crust_dft`), **then wire to RIFT**; that
-is the proof-of-concept. Crust is treated as a documented systematic. Surrogates
-only if acceleration is needed. Full detail in [`docs/roadmap.md`](docs/roadmap.md).
-
-
-CompOSE/tabular ingestion · proper SLy/BPS crust · self-consistent RMFT Lagrangian
-solver · NN surrogates (Zhu 2604.05428) · rotating NS (RNS) · gwkokab population
-adapter · GP/nonparametric EOS · optional RePrimAnd and Zhu C++ δ-TOV backends.
+MIT-licensed, by R. O'Shaughnessy and the RIT CCRG nuclear-matter group.
+[ATTRIBUTION.md](ATTRIBUTION.md) distinguishes independently implemented methods,
+reused data and optional external software; external licenses remain separate.
+Foundations include Margueron, Hoffmann Casali & Gulminelli's metamodel
+([I](https://arxiv.org/abs/1708.06894), [II](https://arxiv.org/abs/1708.06895)),
+[Hinderer's tidal calculation](https://arxiv.org/abs/0711.2420),
+[Damour & Nagar](https://arxiv.org/abs/0906.0096), and laboratory constraints from
+[Huth et al.](https://arxiv.org/abs/2107.06229) and
+[Tsang et al.](https://arxiv.org/abs/2310.11588).
