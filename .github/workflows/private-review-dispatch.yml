@@ -67,7 +67,18 @@ jobs:
               "repository_visibility": "private",
               "runner_environment": "github-hosted",
           }
-          if any(claims.get(key) != value for key, value in expected.items()):
+          mismatched = sorted(key for key, value in expected.items() if claims.get(key) != value)
+          if mismatched:
+              # Report only reviewed field names, never token material or
+              # unexpected claim values. Keep the trust comparison unchanged.
+              diagnostic = {
+                  "schema": "genesis.scientific-review.identity-mismatch.v1",
+                  "mismatched_claims": mismatched,
+              }
+              text = json.dumps(diagnostic, sort_keys=True)
+              print(text)
+              with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+                  stream.write("### Scientific review identity rejected\n\n```json\n" + text + "\n```\n")
               raise SystemExit("Identity claims differ from this repository's reviewed profile")
           subject = claims.get("sub")
           if not isinstance(subject, str) or not 1 <= len(subject) <= 512:
