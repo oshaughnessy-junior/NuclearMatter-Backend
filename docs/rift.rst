@@ -28,6 +28,13 @@ twin-star branch.  ``n_stable_branches(e)`` (and the cached
 route multi-branch EOS explicitly.  Marginalizing over all branches requires the
 central-enthalpy inference described below.
 
+A secondary, opt-in multi-branch contract uses the same accessors with a
+``branch`` argument.  ``branch="primary"`` (the default) is the v1 contract.  An
+integer selects one stable run (0 is the primary one).  ``branch="all"`` makes
+``m_max`` the maximum stable mass over every run, and makes ``lambda_of_m`` and
+``radius_of_m`` return one value per run (NaN where the mass is outside it).
+``branches(e)`` returns the runs themselves.
+
 Live smoke test
 ---------------
 

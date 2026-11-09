@@ -123,3 +123,50 @@ def test_one_eos_starts_at_minimum_mass_star():
     assert np.nanmax(R) < 30.0
     assert len(_stable_branches(M, R, rows[:, col["Lambda"]], st)) == 1
     assert M[st > 0.5].max() == pytest.approx(np.nanmax(M), rel=1e-12)
+
+
+def test_opt_in_branch_contract(tmp_path):
+    """branch="primary" is the v1 contract; an int selects a stable run and
+    "all" uses every run (m_max = maximum stable mass)."""
+    rows = np.full((1, 6, len(NSS_FIELDS)), np.nan)
+    col = {name: i for i, name in enumerate(NSS_FIELDS)}
+    rows[0, :, col["hc"]] = np.arange(1, 7) / 10
+    rows[0, :, col["M"]] = [1.0, 1.5, 1.3, 1.2, 1.6, 2.1]
+    rows[0, :, col["R"]] = [13.0, 12.0, 11.5, 10.0, 9.5, 9.0]
+    rows[0, :, col["Lambda"]] = [600.0, 300.0, 250.0, 200.0, 90.0, 20.0]
+    rows[0, :, col["stable"]] = [1.0, 1.0, 0.0, 1.0, 1.0, 1.0]
+    fn = tmp_path / "twins.nss.h5"
+    with h5py.File(fn, "w") as f:
+        f.attrs["representation"] = "tabular_hc/1"
+        f.attrs["fields"] = json.dumps(NSS_FIELDS)
+        f.attrs["units"] = json.dumps(NSS_UNITS)
+        f.create_dataset("sequence", data=rows)
+    seq = NSSequence(fn)
+    assert seq.m_max(0) == seq.m_max(0, branch="primary") == seq.m_max(0, 0) == 1.5
+    assert seq.m_max(0, branch=1) == seq.m_max(0, branch="all") == 2.1
+    assert seq.m_max(0, branch=5) == -np.inf
+    assert seq.m_max(0, branch=np.int64(1)) == 2.1
+    assert np.isnan(seq.lambda_of_m(1.8, 0))
+    assert seq.lambda_of_m(1.8, 0, branch=1) == pytest.approx(
+        np.exp(np.interp(1.8, [1.2, 1.6, 2.1], np.log([200.0, 90.0, 20.0]))))
+    both = seq.lambda_of_m(1.4, 0, branch="all")
+    assert both.shape == (2,) and both[0] == pytest.approx(seq.lambda_of_m(1.4, 0))
+    assert both[1] == pytest.approx(np.exp(np.interp(1.4, [1.2, 1.6],
+                                                     np.log([200.0, 90.0]))))
+    assert seq.radius_of_m(2.0, 0, branch="all")[0] != seq.radius_of_m(2.0, 0, branch="all")[0]
+    with pytest.raises(ValueError):
+        seq.m_max(0, branch="global")
+
+
+def test_one_eos_grid_ends_just_past_m_max():
+    """The grid ends a little past the TOV maximum, so most rows are stable and
+    the heaviest row matches a dense family's M_max."""
+    from nmbackend.rift.sequence import _one_eos
+    t = MetaModelEOS().eos_table()
+    rows = _one_eos(t, n_points=40)
+    col = {k: i for i, k in enumerate(NSS_FIELDS)}
+    M, st = rows[:, col["M"]], rows[:, col["stable"]] > 0.5
+    i = int(np.nanargmax(M))
+    assert 0 < 40 - 1 - i <= 6 and not st[i + 1:].any()
+    fam = build_family(t, default_hc_grid(t, n_models=300))
+    assert M.max() == pytest.approx(float(m_max(fam)), abs=2e-3)
