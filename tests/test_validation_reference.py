@@ -40,4 +40,7 @@ def test_scan_converges_to_reference():
     for ns in (2000, 8000):
         m = float(solve_structure(t, hc, backend="scan", n_steps=ns).M_msun)
         errs.append(abs(m - ref.M_msun) / ref.M_msun)
-    assert errs[1] < errs[0]            # error decreases with resolution
+    # measured 5.7e-5 and 5.6e-5 (the diffrax backend is also 5.6e-5 off this
+    # reference here).  This test used to check only errs[1] < errs[0]; the
+    # pre-2026-10-14 scan passed that while +130% / +9% off.
+    assert errs[0] < 3e-4 and errs[1] < 3e-4, errs
