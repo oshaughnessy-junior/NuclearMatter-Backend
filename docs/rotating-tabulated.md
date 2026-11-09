@@ -122,3 +122,40 @@ future deliverable must state the composition model, conserved-number tolerance,
 and threshold-mask refinement, and must distinguish a cooling-accessibility
 proxy from an actual cooling curve. Rotating modes additionally need a real-EOS
 perturbation closure and independent mode benchmarks.
+
+## Reproducible engineering accessibility example
+
+`examples/rotating_urca_accessibility.py` accepts a caller-provided NPZ, executable,
+and output directory. The NPZ contains `table_` followed by every `EOSTable`
+field name, plus `comp_n`, `comp_x_p`, `comp_x_e`, and `comp_x_mu`. Composition
+must belong to the same EOS; the script cannot establish that assumption.
+
+```sh
+python examples/rotating_urca_accessibility.py --help
+python examples/rotating_urca_accessibility.py \
+    --eos-npz /path/to/table-and-composition.npz \
+    --executable /path/to/rns_tabulated --output /path/to/new-result \
+    --initial-nc 0.26 0.27 --q-grid 0.8 0.9 1.0
+```
+
+Both `Nb` and `Mg` tracks start from exactly the same initial model at the first
+axis ratio, then use central-density root finding to keep their respective
+quantity fixed. Output includes requested and actual axis ratio separately,
+conditioning residuals, density/geometry baryon-integral residuals, and the
+fraction of baryons covered by the supplied composition density domain.
+`F_e` and `F_mu` count kinematically accessible baryons divided by the total
+baryon number; uncovered low-density composition is excluded explicitly rather
+than inferred from a clamped composition. Their complements should not be
+interpreted as physical inaccessible fractions when coverage is incomplete.
+
+Use `--onsets` only when additional nested equilibrium solves are wanted: it
+finds central triangle-margin sign crossings inside the sampled axis-ratio
+brackets. The default density root bracket is [0.8,1.7] times each initial
+central density, configurable with `--nc-bracket`; connectedness and stability
+of that branch require scientific review. Cache names preserve ten decimal
+places in density and axis ratio, and are partitioned by EOS and executable
+hash. Existing cached products are checksum checked. Compact-grid Simpson
+integration restores the omitted final vacuum node and matches native surface
+support. Threshold-mask convergence and frequency-root refinement remain
+explicit scientific requirements. The example labels every result engineering
+only and makes no EOS-posterior, cooling-evolution, or precision claim.
