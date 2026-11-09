@@ -4,7 +4,11 @@ Sequence representations
 An EOS *sequence* (an indexed family of EOS with their stellar structure) is stored
 behind the :class:`nmbackend.rift.SequenceRepresentation` accessor protocol::
 
-    lambda_of_m(m, e)   radius_of_m(m, e)   m_max(e)   ordering_values(m_ref, kind)
+    lambda_of_m(m, e, branch)   radius_of_m(m, e, branch)   m_max(e, branch)
+    branches(e)   ordering_values(m_ref, kind)
+
+``branch`` defaults to ``"primary"`` (the v1 contract); see :doc:`rift` for the
+opt-in multi-branch values.
 
 Consumers — the RIFT tabular pipeline, the generator CLIs, plotting — depend only on
 this protocol. The on-disk representation is a pluggable detail, dispatched by the

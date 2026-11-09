@@ -220,3 +220,115 @@ def test_lambda_of_m_primary_keeps_v1_log_of_negative(tmp_path):
         f.create_dataset("sequence", data=rows)
     with np.errstate(invalid="ignore"):
         assert np.isnan(NSSequence(fn).lambda_of_m(1.2, 0))
+
+
+# ---- review 2026-11-09: rules of _sequence_stable, branch validation, PCA ----
+def _stab(M):
+    from nmbackend.rift.sequence import _sequence_stable
+    M = np.asarray(M, float)
+    return _sequence_stable(np.arange(M.size, dtype=float), M,
+                            np.full(M.size, 12.0), np.full(M.size, 100.0))
+
+
+def test_sequence_stable_cuts_rising_rows_before_minimum_mass_star():
+    """Rising rows on low-density configurations before the minimum-mass star
+    are not stable (the i_min cut), and the first finite row counts as rising
+    only if the next one is heavier."""
+    st = _stab([0.30, 0.33, 0.25, 0.20, 0.40, 1.0, 1.6, 2.0, 1.9])
+    assert st.tolist() == [False, False, False, False, True, True, True, True, False]
+    assert _stab([0.5, 0.8, 1.2])[0] and not _stab([0.9, 0.5, 0.8, 1.2])[0]
+
+
+def test_sequence_stable_cut_at_lightest_row_before_heaviest_stable_row():
+    """Documented limitation: a twin dip lighter than every earlier row, with a
+    heavier later branch, moves i_min to the dip and drops the first branch."""
+    st = _stab([0.5, 1.0, 1.5, 1.8, 1.2, 0.4, 0.9, 1.6, 2.0, 1.9])
+    assert st.tolist() == [False] * 6 + [True, True, True, False]
+
+
+def test_sequence_stable_skips_failed_rows_and_nonpositive_mass():
+    """A NaN row splits the branch, but the next row is compared with the last
+    finite one and stays stable; rows with M <= 0 are never stable."""
+    st = _stab([0.5, 1.0, np.nan, 1.5, 1.8, 2.0, 1.9])
+    assert st.tolist() == [True, True, False, True, True, True, False]
+    assert _stab([-1.0, 0.5, 1.0]).tolist() == [False, True, True]
+
+
+def test_branch_argument_validation(tmp_path):
+    rows = np.full((1, 6, len(NSS_FIELDS)), np.nan)
+    col = {name: i for i, name in enumerate(NSS_FIELDS)}
+    rows[0, :, col["hc"]] = np.arange(1, 7) / 10
+    rows[0, :, col["M"]] = [1.0, 1.5, 1.3, 1.2, 1.6, 2.1]
+    rows[0, :, col["R"]] = [13.0, 12.0, 11.5, 10.0, 9.5, 9.0]
+    rows[0, :, col["Lambda"]] = [600.0, 300.0, 250.0, 200.0, 90.0, 20.0]
+    rows[0, :, col["stable"]] = [1.0, 1.0, 0.0, 1.0, 1.0, 1.0]
+    fn = tmp_path / "twins.nss.h5"
+    with h5py.File(fn, "w") as f:
+        f.attrs["representation"] = "tabular_hc/1"
+        f.attrs["fields"] = json.dumps(NSS_FIELDS)
+        f.attrs["units"] = json.dumps(NSS_UNITS)
+        f.create_dataset("sequence", data=rows)
+    seq = NSSequence(fn)
+    assert seq.m_max(0, branch=-1) == 2.1 and seq.m_max(0, branch=-2) == 1.5
+    for bad in (True, 0.9, None, "global"):
+        with pytest.raises(ValueError):
+            seq.m_max(0, branch=bad)
+
+
+def test_pca_sequence_reports_every_branch(tmp_path):
+    """PCASequence.branches() returns every stable run of a twin family, and
+    branch="all" / int selection work on the PCA reader as on NSS."""
+    from nmbackend.rift.compressed import PCASequence, write_pca_from_nss
+    base = np.array([1.0, 1.5, 1.8, 1.3, 1.2, 1.6, 2.1, 2.0])
+    n = 5
+    rows = np.full((n, base.size, len(NSS_FIELDS)), np.nan)
+    col = {name: i for i, name in enumerate(NSS_FIELDS)}
+    for e in range(n):
+        s = 1 + 0.01 * e
+        rows[e, :, col["hc"]] = np.arange(1, base.size + 1) / 10
+        rows[e, :, col["M"]] = base * s
+        rows[e, :, col["R"]] = np.linspace(13, 10, base.size) * s
+        rows[e, :, col["Lambda"]] = np.geomspace(800, 20, base.size) * s
+        rows[e, :, col["stable"]] = [1, 1, 1, 0, 1, 1, 1, 0]
+    fn = tmp_path / "twins.nss.h5"
+    with h5py.File(fn, "w") as f:
+        f.attrs["representation"] = "tabular_hc/1"
+        f.attrs["fields"] = json.dumps(NSS_FIELDS)
+        f.attrs["units"] = json.dumps(NSS_UNITS)
+        f.create_dataset("sequence", data=rows)
+    pn = tmp_path / "twins.pca.h5"
+    write_pca_from_nss(str(fn), str(pn), n_components=n - 1)
+    pca, nss = PCASequence(str(pn)), NSSequence(str(fn))
+    for e in range(n):
+        assert len(pca.branches(e)) == len(nss.branches(e)) == 2
+        assert pca.m_max(e, branch="all") == pytest.approx(nss.m_max(e, branch="all"), rel=1e-6)
+        assert pca.m_max(e, branch=1) == pytest.approx(2.1 * (1 + 0.01 * e), rel=1e-6)
+
+
+def test_grid_end_flat_topped_peak_and_peak_near_frac_hi(monkeypatch):
+    """A two-sample flat top is one peak (grid ends two steps past its second
+    sample); a peak in the last two scan samples ends the grid at frac_hi."""
+    flat = lambda x: np.where(np.isclose(x, 0.5) | np.isclose(x, 0.525), 2.0,
+                              2.0 - 3 * np.minimum(abs(x - 0.5), abs(x - 0.525)))
+    g, _, _, scan = _scan_grid(monkeypatch, flat)
+    assert g[-1] == pytest.approx(scan[21 + 2])
+    late = lambda x: 2.0 - 4 * (x - 0.975) ** 2
+    g, _, h_top, _ = _scan_grid(monkeypatch, late)
+    assert g[-1] == pytest.approx(h_top)
+
+
+def test_one_eos_stability_ignores_ad_flag(monkeypatch):
+    """_one_eos takes stability from M(h_c), not from Family.stable."""
+    from nmbackend.rift import sequence as S
+    real = S.build_family
+
+    def fake(table, grid):
+        fam = real(table, grid)
+        try:
+            object.__setattr__(fam, "stable", np.zeros_like(np.asarray(fam.M_msun)))
+        except Exception:
+            fam = fam._replace(stable=np.zeros_like(np.asarray(fam.M_msun)))
+        return fam
+    monkeypatch.setattr(S, "build_family", fake)
+    rows = S._one_eos(MetaModelEOS().eos_table(), n_points=16)
+    assert rows[:, NSS_FIELDS.index("stable")].sum() > 5

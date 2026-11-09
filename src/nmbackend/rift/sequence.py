@@ -46,26 +46,38 @@ _NB_TO_GCM3 = 1e39 * 1.66e-24                                # n[fm^-3] -> g/cm^
 
 # ---------------- build per-EOS sequence arrays ----------------
 def _sequence_stable(hc, M, R, Lam):
-    """Stable rows from the sequence itself: finite, heavier than the previous
-    row (the first row: lighter than the second), at or above the
-    minimum-mass star.  The backward difference keeps the M_max row.
+    """Stable rows from the sequence itself.
+
+    A row is stable if it is finite with M > 0 and heavier than the previous
+    finite row (the first finite row: lighter than the next one), and it is not
+    before ``i_min``.  The backward difference keeps the M_max row.  A failed
+    solve (NaN row) is skipped: the row after it is compared with the last
+    finite row.
+
+    ``i_min`` is the lightest finite row at or before the heaviest stable row.
+    On a grid that starts below the minimum-mass star it is that star, so
+    rising rows on extended low-density configurations before it are excluded.
+    Limitation: if a twin-star dip falls below every earlier row and the later
+    branch is the heavier one, ``i_min`` is the dip and the first branch is
+    excluded too.  The grid of :func:`_one_eos` starts at the minimum-mass star,
+    so this needs a first branch lighter than about the minimum-mass star.
 
     The AD derivative ``Family.dM_dhc`` is not used here: it is wrong at
     isolated h_c values (e.g. -158 against +8.65 by finite differences), and
     one such row ends the stable branch in :func:`_stable_branches`."""
+    M = np.asarray(M, float)
     valid = np.isfinite(M) & np.isfinite(R) & np.isfinite(Lam) & (M > 0)
-    Mv = np.where(valid, M, np.nan)
     rising = np.zeros(M.size, bool)
-    if M.size >= 2:
-        up = np.diff(Mv) > 0                      # NaN neighbours compare False
-        rising[1:] = up
-        rising[0] = up[0]
-        rising &= valid
+    iv = np.flatnonzero(valid)
+    if iv.size >= 2:
+        up = np.diff(M[iv]) > 0           # each finite row against the last one
+        rising[iv[1:]] = up
+        rising[iv[0]] = up[0]
     if not rising.any():
         return np.zeros(M.size, bool)
     order = np.arange(M.size)
-    i_max = int(np.nanargmax(np.where(rising, Mv, -np.inf)))
-    i_min = int(np.nanargmin(np.where(valid & (order <= i_max), Mv, np.inf)))
+    i_max = int(np.argmax(np.where(rising, M, -np.inf)))
+    i_min = int(np.argmin(np.where(valid & (order <= i_max), M, np.inf)))
     return rising & (order >= i_min)
 
 
@@ -203,16 +215,16 @@ class SequenceRepresentation(abc.ABC):
         in central-coordinate order (see :func:`_stable_branches`)."""
 
     def _runs(self, e, branch):
+        """Runs selected by ``branch``: "primary" (run 0), "all", or an int
+        index into :meth:`branches` (negative counts from the densest run).  An
+        index past the last run selects nothing."""
         runs = self.branches(e)
-        if isinstance(branch, str):
-            if branch == "all":
-                return runs
-            if branch != "primary":
-                raise ValueError(f"branch must be 'primary', 'all' or an int, "
-                                 f"not {branch!r}")
-            branch = 0
-        k = int(branch)
-        return [runs[k]] if -len(runs) <= k < len(runs) else []
+        if isinstance(branch, str) and branch in ("primary", "all"):
+            return runs if branch == "all" else runs[:1]
+        if isinstance(branch, (int, np.integer)) and not isinstance(branch, (bool, np.bool_)):
+            k = int(branch)
+            return [runs[k]] if -len(runs) <= k < len(runs) else []
+        raise ValueError(f"branch must be 'primary', 'all' or an int, not {branch!r}")
 
     def _interp(self, m, run, which):
         M, R, Lam = run
@@ -384,7 +396,7 @@ def write_landry_legacy(fname, tables, eos_tables=None, n_points=120,
     """Write the exact ``EOSSequenceLandry`` HDF5 (id, ns/<name>{M,R,Lambda},
     eos/<name>{pressurec2,energy_densityc2,baryon_density} in g/cm^3).
 
-    Only the **stable branch** (M rising to M_max) is stored, so RIFT's single-valued
+    Only the **primary stable branch** (the first stable run) is stored, so RIFT's single-valued
     M->Lambda interpolation is correct for phase-transition EOS without code changes.
     ``eos_tables`` (list of the same EOSTables) populates the optional ``eos`` group.
     """

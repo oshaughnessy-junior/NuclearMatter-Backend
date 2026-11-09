@@ -1,7 +1,8 @@
 """RIFT integration: EOS-sequence I/O (robust NSSequence + legacy EOSSequenceLandry).
 
-NOTE (logged for later improvement): the accessors here currently lock to a SINGLE
-stable branch (the rising branch up to M_max).  Because the low-level sequence
+NOTE (logged for later improvement): by default the accessors use a SINGLE
+stable branch, the primary one (the first stable run); ``branch="all"`` or an
+int opts in to the other branches.  Because the low-level sequence
 parameter is the central pseudo-enthalpy h_c (monotone), the better long-term framing
 is to parameterize the inference *directly* along h_c (a path integral in enthalpy),
 which handles multiple / disconnected stable branches (twin stars) natively instead
