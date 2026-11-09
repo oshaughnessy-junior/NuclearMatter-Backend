@@ -170,3 +170,53 @@ def test_one_eos_grid_ends_just_past_m_max():
     assert 0 < 40 - 1 - i <= 6 and not st[i + 1:].any()
     fam = build_family(t, default_hc_grid(t, n_models=300))
     assert M.max() == pytest.approx(float(m_max(fam)), abs=2e-3)
+
+
+def _scan_grid(monkeypatch, shape):
+    """_hc_grid_past_last_max on a MetaModel table with the scan masses
+    replaced by shape(x), x = (h - h0) / (h_top - h0) in [0, 1]."""
+    import jax.numpy as jnp
+    from nmbackend.rift import sequence as S
+    t = MetaModelEOS().eos_table()
+    h0 = float(default_hc_grid(t, n_models=2, frac_lo=0.01, frac_hi=0.95)[0])
+    h_top = 0.95 * float(t.h[-1])
+    monkeypatch.setattr(S, "_probe_masses", lambda table, h: (
+        jnp.asarray(shape((np.asarray(h) - h0) / (h_top - h0))), None))
+    g = np.asarray(S._hc_grid_past_last_max(t, 10, 0.01, 0.95, n_scan=41))
+    return g, h0, h_top, np.linspace(h0, h_top, 41)
+
+
+def test_grid_starts_at_default_and_ends_two_steps_past_last_peak(monkeypatch):
+    twin = lambda x: np.where(x < 0.5, 2.0 - (x - 0.3) ** 2, 1.9 - 4 * (x - 0.7) ** 2)
+    g, h0, _, scan = _scan_grid(monkeypatch, twin)
+    assert g[0] == pytest.approx(h0) and g[-1] == pytest.approx(scan[28 + 2])
+
+
+def test_grid_end_ignores_failed_solve_next_to_last_peak(monkeypatch):
+    def shape(x):
+        m = np.where(x < 0.5, 2.0 - (x - 0.3) ** 2, 2.1 - 4 * (x - 0.7) ** 2)
+        return np.where(np.isclose(x, 0.725), np.nan, m)
+    g, _, _, scan = _scan_grid(monkeypatch, shape)
+    assert g[-1] == pytest.approx(scan[28 + 2])
+
+
+def test_grid_runs_to_frac_hi_while_mass_still_rises(monkeypatch):
+    g, _, h_top, _ = _scan_grid(monkeypatch, lambda x: 2.0 - (x - 0.3) ** 2 + 2 * np.maximum(x - 0.6, 0) ** 2)
+    assert g[-1] == pytest.approx(h_top)
+
+
+def test_lambda_of_m_primary_keeps_v1_log_of_negative(tmp_path):
+    rows = np.full((1, 4, len(NSS_FIELDS)), np.nan)
+    col = {name: i for i, name in enumerate(NSS_FIELDS)}
+    rows[0, :, col["hc"]] = np.arange(1, 5) / 10
+    rows[0, :, col["M"]] = [1.0, 1.5, 1.7, 1.8]
+    rows[0, :, col["R"]] = [13.0, 12.0, 11.0, 10.0]
+    rows[0, :, col["Lambda"]] = [600.0, -5.0, 100.0, 20.0]
+    rows[0, :, col["stable"]] = 1.0
+    fn = tmp_path / "neg.nss.h5"
+    with h5py.File(fn, "w") as f:
+        f.attrs["fields"] = json.dumps(NSS_FIELDS)
+        f.attrs["units"] = json.dumps(NSS_UNITS)
+        f.create_dataset("sequence", data=rows)
+    with np.errstate(invalid="ignore"):
+        assert np.isnan(NSSequence(fn).lambda_of_m(1.2, 0))

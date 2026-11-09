@@ -84,11 +84,14 @@ def _hc_grid_past_last_max(table, n_points, frac_lo, frac_hi, n_scan=40):
     h_top = frac_hi * float(table.h[-1])
     scan = np.linspace(h0, h_top, n_scan)
     Ms = np.asarray(_probe_masses(table, jnp.asarray(scan))[0])
+    # peaks among the finite scan masses: a failed solve next to the last
+    # maximum must not hide it
+    idx = np.flatnonzero(np.isfinite(Ms))
+    Mf = Ms[idx]
     h_end = h_top
-    if np.isfinite(Ms[-2:]).all() and Ms[-1] <= Ms[-2]:
-        peaks = [j for j in range(1, n_scan - 1)
-                 if np.isfinite(Ms[j - 1:j + 2]).all()
-                 and Ms[j] >= Ms[j - 1] and Ms[j] > Ms[j + 1]]
+    if Mf.size >= 3 and Mf[-1] <= Mf[-2]:
+        peaks = [idx[j] for j in range(1, Mf.size - 1)
+                 if Mf[j] >= Mf[j - 1] and Mf[j] > Mf[j + 1]]
         if peaks:
             h_end = scan[min(peaks[-1] + 2, n_scan - 1)]
     return jnp.linspace(h0, h_end, n_points)
@@ -192,7 +195,7 @@ class SequenceRepresentation(abc.ABC):
     # ---- opt-in multi-branch contract ------------------------------------
     # ``branch="primary"`` (the default) is the v1 contract: the first stable
     # run.  An integer selects that run (0 = primary); ``"all"`` uses every run.
-    _lam_floor = 0.0
+    _lam_floor = None              # PCASequence floors Lambda at 1e-30
 
     @abc.abstractmethod
     def branches(self, e):
@@ -217,7 +220,9 @@ class SequenceRepresentation(abc.ABC):
             return np.nan
         if which == "R":
             return float(np.interp(m, M, R, left=np.nan, right=np.nan))
-        return float(np.exp(np.interp(m, M, np.log(np.maximum(Lam, self._lam_floor)),
+        if self._lam_floor is not None:
+            Lam = np.maximum(Lam, self._lam_floor)
+        return float(np.exp(np.interp(m, M, np.log(Lam),
                                       left=np.nan, right=np.nan)))
 
     def _of_m(self, m, e, branch, which):
