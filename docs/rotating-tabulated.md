@@ -1,0 +1,229 @@
+# Tabulated nuclear-EOS rotating equilibria
+
+`nmbackend.rotating.tabulated` couples an existing positive, monotone `EOSTable`
+to the pinned external RNS solver without imposing a polytropic closure. This
+provides realistic nuclear-EOS stationary rotating backgrounds and baryon-density
+maps for a rotating science case, such as conserved-baryon spin-down and access
+to direct-Urca thresholds. It does not add a differentiable equilibrium primitive,
+a full-GR mode solver, a thermal evolution solver, or a rotating-stability test.
+
+## Build and solve
+
+RNS remains external: use cgca/rns commit
+`87ea68246ee990256f94aa91a0506f54d78dd8d0`. Its `main.c` is checked against the
+qualified SHA256 before generating a separate export driver. The source tree is
+not modified. Source, driver, and executable hashes are saved in `build.json`.
+No dependency has been added.
+
+```python
+from nmbackend.rotating.tabulated import (
+    C_CGS, MEVFM3_TO_ERGCM3, build_tabulated_rns, solve_tabulated,
+)
+
+# table is an actual nmbackend.eos.base.EOSTable, built by the chosen EOS model.
+# Fresh build/run paths are required; existing results are never overwritten.
+executable = build_tabulated_rns(rns_source, build_path,
+                                radial_points=129, angular_points=65)
+i = 300  # select an interior EOS row appropriate to the science question
+central_energy = float(table.eps_mevfm3[i]) * MEVFM3_TO_ERGCM3 / C_CGS**2
+spherical, rotating = solve_tabulated(
+    executable, run_path, table,
+    energy_center_g_cm3=central_energy, axis_ratio=0.9,
+)
+print(rotating.metadata['Mass_msun'], rotating.metadata['frequency_hz'])
+print(rotating.metadata['baryon_number'])
+```
+
+The control is a spherical solve at the same central total energy density; the
+second model continues in polar/equatorial coordinate axis ratio, supported here
+for 0.6 through 1.0. A fixed central density pair does **not** conserve baryon
+number. A conserved-number science sequence must separately solve for central
+density at each axis ratio and verify the resulting `baryon_number` residual.
+
+The native table has four columns: total energy/c² in g/cm³, pressure in
+dyne/cm², c² times dimensionless pseudo-enthalpy in erg/g, and baryon number
+density in cm⁻³. All input rows are retained, up to 8192 rows; the generated
+driver expands the original 200-row allocation. Nonfinite, nonpositive, and
+nonmonotone tables are rejected. Density jumps/pressure plateaus therefore need
+a separate treatment rather than being silently interpolated by this adapter.
+
+## Geometry and units
+
+Geometry arrays retain native scaled RNS coordinates. Let L0 be metadata
+`length_scale_cm`. The spatial metric is
+
+    dl² = exp(2α)(dr²+r²dθ²) + exp(γ−ρ) r²sin²θ dφ².
+
+Here r has the native length unit L0. Physical radii in cm are r×L0. `rho` is
+a metric potential, not a mass density. `gama` is γ and `alpha` is α. Array
+`omega` has units c/L0. Metadata `Omega` is normalized to that same unit so the
+independent velocity check is
+
+    v²/c² = [(Omega−omega) r sqrt(1−mu²) exp(−rho)]².
+
+This normalization is essential: native RNS exports its global Ω in rad/s while
+its frame-dragging array remains scaled. The separate keys `Omega_rad_s` and
+`frequency_hz` preserve physical spin. `Mass_msun`, `Mass_b_msun`, `R_e_km`,
+and `J_g_cm2_s` expose physical global quantities. The original native header is
+retained under `native_header`; raw global `Mass` and `Mass_b` remain in grams.
+The meaningless native default `Gamma` is removed for tabulated backgrounds.
+Do not pass these backgrounds to the existing polytropic mode closure.
+
+`energy` and `pressure` are scaled by 10¹⁵ g/cm³ times c²; `enthalpy` is
+dimensionless; `velocity_sq` is the ZAMO fluid speed squared divided by c².
+`fields['n_fm3']` uses native four-point polynomial interpolation of log n versus
+log total energy density and vanishes outside matter. It supplies a density
+bridge to independently computed EOS composition; RNS itself does not solve
+weak equilibrium or composition.
+
+The external source uses legacy c=2.9979×10¹⁰ cm/s, G=6.6732×10⁻⁸ CGS, and
+m_b=1.66×10⁻²⁴ g. These are explicit provenance, not backend CODATA values.
+Solar-mass conversion uses the backend IAU nominal mass. Native baryonic mass
+uses a different per-baryon normalization from backend 939 MeV; use
+`baryon_number=Mass_b_native_grams/1.66e-24` when that distinction matters.
+Conserving native baryonic mass within one build is equivalent to conserving
+number.
+
+## Surface and executed forward gates
+
+The driver uses the EOSTable's lowest enthalpy, pressure, and energy as the finite
+surface boundary, matching the backend TOV table truncation. It does not continue
+below the supplied table or add a physical crust or atmosphere. This common
+boundary is required for a controlled comparison. Publication-quality results
+still need crust, grid, EOS interpolation, and model-systematic checks.
+
+A real 500-row GM1 RMFT table was exercised on cardassia on 2026-11-09 with the
+129×65 RNS grid. At central baryon density nearest 0.5 fm⁻³, the spherical RNS
+control and NMB `solve_structure` at the same exported central enthalpy agreed
+with relative mass error +2.4075884×10⁻⁵ and radius error −1.3114131×10⁻⁴.
+Native four-point log interpolation differs from the backend thermodynamic
+Hermite EOS representation, and constants differ as described above.
+The actual q=0.9 model returned M=2.1376320 solar masses, R_eq=14.0772119 km,
+and Ω=3969.3916 rad/s. This is a forward gate and rotating smoke configuration,
+not a conserved-number science sequence or a precision convergence claim.
+
+An independent Python integration of the density/geometry product checked
+
+    N_b = 4π L0³ ∫ ds dmu n_cm⁻³ (1−v²)^−1/2
+          × exp[2α+(γ−ρ)/2] r_e³ s²/(1−s)^4.
+
+Simpson quadrature on the original uniform compact s grid reproduced native
+`Mass_b/m_b` with residual +2.858×10⁻¹¹ for both spherical and q=0.9 models
+(the native rounded π explains this floor). The exporter omits the final
+vacuum node; restoring its zero integrand at s=0.9999 preserves Simpson parity.
+Trapezoid residuals were −4.00×10⁻⁵ and −6.91×10⁻⁴. Agreement of this integral
+validates the density/volume convention; it is not an independent equilibrium
+solver comparison. Threshold-masked accessible fractions require their own
+resolution checks, especially near onset.
+
+The rotating science deliverable can therefore build conserved-number sequences
+and compare density maps against composition-derived Urca thresholds. That
+future deliverable must state the composition model, conserved-number tolerance,
+and threshold-mask refinement, and must distinguish a cooling-accessibility
+proxy from an actual cooling curve. Rotating modes additionally need a real-EOS
+perturbation closure and independent mode benchmarks.
+
+## Reproducible engineering accessibility example
+
+`examples/rotating_urca_accessibility.py` accepts a caller-provided NPZ, executable,
+and output directory. The NPZ contains `table_` followed by every `EOSTable`
+field name, plus `comp_n`, `comp_x_p`, `comp_x_e`, and `comp_x_mu`. Composition
+must belong to the same EOS; the script cannot establish that assumption.
+
+```sh
+python examples/rotating_urca_accessibility.py --help
+python examples/rotating_urca_accessibility.py \
+    --eos-npz /path/to/table-and-composition.npz \
+    --executable /path/to/rns_tabulated --output /path/to/new-result \
+    --initial-nc 0.26 0.27 --q-grid 0.8 0.9 1.0
+```
+
+Both `Nb` and `Mg` tracks start from exactly the same initial model at the first
+axis ratio, then use central-density root finding to keep their respective
+quantity fixed. Output includes requested and actual axis ratio separately,
+conditioning residuals, density/geometry baryon-integral residuals, and the
+fraction of baryons covered by the supplied composition density domain.
+`F_e` and `F_mu` count kinematically accessible baryons divided by the total
+baryon number; uncovered low-density composition is excluded explicitly rather
+than inferred from a clamped composition. Their complements should not be
+interpreted as physical inaccessible fractions when coverage is incomplete.
+
+Use `--onsets` only when additional nested equilibrium solves are wanted: it
+finds central triangle-margin sign crossings inside the sampled axis-ratio
+brackets. The default density root bracket is [0.8,1.7] times each initial
+central density, configurable with `--nc-bracket`; connectedness and stability
+of that branch require scientific review. Cache names preserve ten decimal
+places in density and axis ratio, and are partitioned by EOS and executable
+hash. Existing cached products are checksum checked. Compact-grid Simpson
+integration restores the omitted final vacuum node and matches native surface
+support. Threshold-mask convergence and frequency-root refinement remain
+explicit scientific requirements. The example labels every result engineering
+only and makes no EOS-posterior, cooling-evolution, or precision claim.
+
+
+## Tabulated RNS native build and convergence contract
+
+The tabulated adapter checks SHA256 of all eight compiled upstream C/header
+inputs from commit 87ea68246ee990256f94aa91a0506f54d78dd8d0 before building.
+This includes consts.h: recording arbitrary native bytes after compilation
+does not establish that Python's physical conversion constants match them.
+Unrelated files in the external checkout are not compiled or included.
+
+The build writes a private tabulated_equil.c alongside the derived driver.
+The upstream spin routine's divergence flag is passed by value and used to
+allow a failed iteration to return normally. The derived copy instead exits
+nonzero with NMB_RNS_SPIN_DIVERGED, caps each spin call at 1000 iterations,
+rejects nonfinite residuals, and requires a finite residual at or below the
+unchanged native accuracy, at least two completed iterations, positive finite
+radius, and finite spin. Failure diagnostics remain in run.log and failed
+solves do not receive a success run.json. A process timeout remains a failure.
+
+build.json records separate hashes for the upstream inputs, generated
+equilibrium source, generated driver and binary, and the iteration cap.
+These convergence checks establish the native stopping condition; they do
+not certify continuum accuracy, stability or EOS thermodynamic validity.
+
+Set RNS_SOURCE to the pinned source/rns.v2.0 directory and RNS_REQUIRED=1
+to run tests/test_rotating_tabulated.py with native checks. These include a
+500-row analytic thermodynamic barotrope (above the legacy 200-row capacity),
+changed-header rejection, and a private cap-one build proving failure
+propagation. The external checkout itself is not changed by those tests.
+
+
+The builder accepts accuracy=1e-5 by default, preserving the native stopping
+tolerance. Only tightening is admitted: finite 0 < accuracy <= 1e-5.
+The generated driver sets this value explicitly and build.json records it.
+For a tightly conditioned mass/baryon sequence, native primal noise must be
+smaller than the requested sequence residual; build with a tighter native
+accuracy if necessary. Default-accuracy solves may fail the sequence's
+stricter residual gate, and that gate remains unchanged. A tighter stopping
+condition still requires mesh/table refinement and is not an accuracy proof.
+
+
+The retained pinned main preamble already calls spin at axis ratio 1 before
+the export loop. Thus the spherical control and the q=1 rotating endpoint
+are covered by the same convergence guard; q=1 reuses the converged fields.
+The cap-one regression asserts failure before either spherical or rotating
+CSV exists, not merely absence of the final success manifest.
+
+
+## Adversarial science-example admission
+
+The example verifies cached spherical/rotating CSV hashes, EOS bytes, binary
+hash, and requested/native parameters before reusing any solve. A partial or
+modified cache fails with a quarantine/remove diagnostic; it is not silently
+recomputed or accepted. Composition densities must be positive and increasing,
+fractions finite and physical, and charge-neutral to the declared tolerance.
+A lepton channel requires that lepton to be present. A triangle crossing may
+be bracketed across channel appearance; the final onset must have that channel.
+
+Central density means the native r=0 density, checked for angular consistency,
+not the grid maximum. Results record this convention and the exact driver hash.
+The volume integral and final conditioning/onset residuals are acceptance gates,
+not just reported diagnostics. Defaults are baryon-integral and conditioning
+relative tolerances 1e-6, density-root absolute tolerance 2e-8 fm^-3, axis-ratio
+root absolute tolerance 2e-7, final margin tolerance 1e-5 fm^-1, and absolute
+charge-neutrality tolerance 1e-6. Each has an explicitly named CLI option, and
+all declared tolerances are saved. The native convergence tolerance may need
+tightening before these gates can pass; a rejected solve is not a no-onset star.
+A root tolerance alone is not a scientific uncertainty estimate.
