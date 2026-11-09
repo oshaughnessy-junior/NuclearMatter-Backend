@@ -30,8 +30,10 @@ Table I), with renormalization-scale parameter X in [1,4] sampled log-uniformly.
 
 Units: mu in MeV, n in fm^-3, p and eps in MeV/fm^3.
 
-This module is plain numpy (prior *generation* need not be differentiable); the
-resulting tables feed the standard differentiable EOSTable/TOV machinery.
+This module is plain numpy; the resulting tables feed the standard
+differentiable EOSTable/TOV machinery.  :mod:`nmbackend.priors.bridge_jax` is
+the same prior with its random numbers as explicit arguments, written in JAX,
+so a draw can be differentiated with respect to its arguments.
 """
 from __future__ import annotations
 
