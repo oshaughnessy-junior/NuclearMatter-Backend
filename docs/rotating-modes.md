@@ -142,3 +142,13 @@ full-GR spectra, damping rates and EOS sensitivities remain proposed validated
 work. The planned contribution is connecting those modes to shared matter
 inputs and multimessenger inference, with physical and numerical discrepancy;
 this paper is prior art for the full-GR mode formulation.
+
+## Sharp-interface response follow-on (planning, 2026-11-17)
+
+[Contract, dependencies and tests](sharp-interface-plan.md) connect Dong,
+Kuan & Yunes (`2026arXiv260933002Z`,
+[primary source](https://arxiv.org/html/2609.33002v1)) to this existing ladder
+and Paper9. The first comparison holds cold spherical backgrounds fixed
+between slow/rapid conversion. Full-GR assembly remains missing; finite-rate
+kinetics, observability and hot-remnant transfer are separately conditional.
+This note authorizes no implementation or solver campaign.
