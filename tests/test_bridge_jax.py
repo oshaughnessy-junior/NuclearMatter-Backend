@@ -350,3 +350,32 @@ def test_gradient_in_n_sat_matches_central_differences():
 
 def test_default_plan_unchanged_without_n_sat():
     assert BJ._n_sel(2.0, 12.0, 600) == BJ._n_sel(2.0, 12.0, 600, B.N_SAT)
+
+
+def test_sampled_n_sat_plan_checks():
+    """The plan records the n_sat its rows were counted at.  A config mismatch
+    raises under jit too; a smaller n_sat than the plan's is flagged
+    (rows past n_term); a larger one is valid and ends below n_term."""
+    from nmbackend.eos.metamodel import MetaModelEOS
+    model = MetaModelEOS(crust="polytrope")
+    cfg = BJ.Config()
+    i = NEPS_NSAT.index("n_sat")
+    th = BJ.draw_theta(np.random.default_rng(7), NEP0_NSAT, nep_names=NEPS_NSAT)
+    plan = BJ.make_plan(model, th, NEPS_NSAT, cfg, n_sat_min=0.15)
+    assert plan.n_sat_sel == 0.15
+    assert plan.n_sel == BJ._n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts, 0.15)
+    with pytest.raises(ValueError, match="other settings"):
+        jax.jit(lambda t: BJ.bridge_arrays(model, t, NEPS_NSAT, plan,
+                                           cfg._replace(n_term_fac=math.inf)))(jnp.asarray(th))
+    f = jax.jit(lambda t: BJ.bridge_arrays(model, t, NEPS_NSAT, plan, cfg))
+    for ns in (0.15, 0.155, 0.165):
+        t = th.copy(); t[i] = ns
+        n, _, p, info = f(jnp.asarray(t))
+        assert bool(info["valid"]) and bool(info["rows_ok"]), ns
+        assert float(n[-1]) <= 12.0 * ns * (1 + 1e-12)
+        BJ.bridge_arrays(model, jnp.asarray(t), NEPS_NSAT, plan, cfg)   # eager: no raise
+    t = th.copy(); t[i] = 0.145
+    _, _, p, info = f(jnp.asarray(t))
+    assert not bool(info["rows_ok"]) and np.all(np.isnan(np.asarray(p)))
+    with pytest.raises(ValueError, match="n_term False"):
+        BJ.bridge_arrays(model, jnp.asarray(t), NEPS_NSAT, plan, cfg)

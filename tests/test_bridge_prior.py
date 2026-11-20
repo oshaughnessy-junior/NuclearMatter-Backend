@@ -178,6 +178,37 @@ def test_anchor_follows_sampled_n_sat():
     assert d["n"].max() <= 12.0 * 0.155 * (1 + 1e-12)
 
 
+# First three draws of the paper1 archive recipe (nmb-papers
+# prior_archive/build_archive.py, seed 1, n_term_fac = inf), computed with
+# 8c20741, before n_sat could be sampled: (rows, sum n, sum eps, sum p, p[-1]).
+_ARCHIVE_GOLDEN = [
+    (1005, 1261.4766696365275, 2109295.693274297, 503273.339286826, 3530.7947473104996),
+    (1005, 1288.779408894586, 2055755.1993345777, 541337.7811617361, 3992.638396299699),
+    (1005, 1317.8986271533968, 2197273.0351542593, 468122.99113873945, 4073.634517534001),
+]
+
+
+def test_archive_recipe_draws_match_8c20741():
+    rng = np.random.default_rng(1)
+    got = []
+    while len(got) < len(_ARCHIVE_GOLDEN):
+        c = float(rng.uniform(0.2, 0.4))
+        nep = {"L_sym": float(rng.uniform(20.0, 120.0)),
+               "K_sym": float(rng.uniform(-300.0, 100.0)),
+               "E_sym": float(rng.uniform(28.0, 38.0)),
+               "K_sat": float(rng.uniform(200.0, 280.0))}
+        try:
+            d = draw_bridge_eos(rng, nep_params=nep, corr_frac=c,
+                                n_term_fac=float("inf"))
+        except (ValueError, FloatingPointError, OverflowError):
+            continue
+        got.append((d["n"].size, d["n"].sum(), d["eps"].sum(), d["p"].sum(),
+                    d["p"][-1]))
+    for g, ref in zip(got, _ARCHIVE_GOLDEN):
+        assert g[0] == ref[0]
+        np.testing.assert_allclose(g[1:], ref[1:], rtol=1e-12)
+
+
 def test_default_n_sat_draws_unchanged():
     """Omitting n_sat and passing the default give the same draw, value for
     value, from the same seed."""

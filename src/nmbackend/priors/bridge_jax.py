@@ -42,8 +42,12 @@ Differences from the NumPy sampler (same prior law, different realization):
   :func:`bridge.fractal_refine` uses (draw_bridge_eos does not expose it).
 * n_L and n_term are in units of ``n_sat``, taken from ``nep_names`` when
   ``"n_sat"`` is one of them, else ``bridge.N_SAT``, as in
-  :func:`bridge.draw_bridge_eos`.  :func:`make_plan` counts bridge rows at the
-  concrete n_sat; under a trace that count stays fixed while n_sat moves.
+  :func:`bridge.draw_bridge_eos`.  The row count is fixed by the plan's
+  ``n_sat_sel``: the evaluation point's n_sat, or ``n_sat_min`` passed to
+  :func:`make_plan`.  A smaller n_sat puts the last row above n_term; that
+  draw is flagged (``info["rows_ok"]``) and returns NaN under a trace.  When
+  sampling n_sat, make the plan with ``n_sat_min`` at the prior's lower edge;
+  larger n_sat then ends below n_term, as a smaller n_H does.
 
 The checks above, the running maximum on mu, and the truncation at n_term
 make the map piecewise smooth.  Derivatives are exact inside a piece.  Only
@@ -275,6 +279,7 @@ class Plan(NamedTuple):
     """Static row counts, fixed by the concrete values at the evaluation point."""
     n_keep: int          # low-table rows strictly below n_L
     n_sel: int           # bridge-grid rows at or below n_term for the largest n_H
+    n_sat_sel: float = N_SAT   # n_sat at which n_sel was counted
 
 
 class Config(NamedTuple):
@@ -309,11 +314,11 @@ def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
     (``plan_ok``); n, eps and p are then NaN.  Outside a trace this raises
     ValueError instead.  ``info["node_ok"]`` is the per-node mask of the
     refinement tree (heap order; skipped nodes are normal)."""
+    if plan.n_sel != _n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts,
+                            plan.n_sat_sel):
+        raise ValueError(f"plan {plan} was made for other settings than {cfg}")
     nep, corr_frac, ln_X, z = unpack(theta, nep_names, cfg.levels)
     n_sat = nep.get("n_sat", N_SAT)
-    if _is_concrete(n_sat) and plan.n_sel != _n_sel(
-            cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts, float(n_sat)):
-        raise ValueError(f"plan {plan} was made for other settings than {cfg}")
     n_L = cfg.n_L_fac * n_sat
     n_cut = n_L * (1.0 - 1e-12)
     t = model.eos_table(nep)
@@ -330,10 +335,19 @@ def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
     if 0 < k < n_lo.shape[0]:
         plan_ok = (n_lo[k - 1] < n_cut) & (n_lo[k] >= n_cut)
     anchors_ok = _consistent(bL, bH)
-    valid = in_table & plan_ok & anchors_ok
+    # last kept bridge row at or below n_term (the grid ends at this draw's n_H)
+    n_term = cfg.n_term_fac * n_sat
+    if math.isinf(cfg.n_term_fac):
+        rows_ok = jnp.asarray(True)
+    else:
+        ln_last = (jnp.log(n_L) + (jnp.log(bH[1]) - jnp.log(n_L))
+                   * (s - 1) / (cfg.n_grid_pts - 1))
+        rows_ok = ln_last <= jnp.log(n_term) + 1e-12
+    valid = in_table & plan_ok & anchors_ok & rows_ok
     if _is_concrete(valid) and not bool(valid):
         raise ValueError(f"no bridge: n_L in table {bool(in_table)}, plan fits "
-                         f"{bool(plan_ok)}, anchors consistent {bool(anchors_ok)} "
+                         f"{bool(plan_ok)}, anchors consistent {bool(anchors_ok)}, "
+                         f"rows at or below n_term {bool(rows_ok)} "
                          f"(mu_L={float(mu_L):.1f} MeV)")
 
     U = jnp.concatenate([jnp.full((1, 3), 0.5),
@@ -354,10 +368,10 @@ def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
     return n, eps, p, dict(mu_L=mu_L, p_L=p_L, p_end_mismatch=(p_b[-1] - bH[2]) / bH[2],
                            grid=grid, mu=mu_s, pts=pts, node_ok=node_ok,
                            valid=valid, in_table=in_table, plan_ok=plan_ok,
-                           anchors_ok=anchors_ok)
+                           anchors_ok=anchors_ok, rows_ok=rows_ok)
 
 
-@functools.lru_cache(maxsize=None)
+@functools.lru_cache(maxsize=1024)
 def _n_sel(n_L_fac, n_term_fac, n_grid_pts, n_sat=N_SAT):
     """Bridge-grid rows at or below n_term for the largest n_H over X in
     [1, 4] (the fewest rows), so one length serves every X."""
@@ -368,8 +382,11 @@ def _n_sel(n_L_fac, n_term_fac, n_grid_pts, n_sat=N_SAT):
     return int(np.sum(grid <= n_term_fac * n_sat))
 
 
-def make_plan(model, theta, nep_names, cfg: Config = Config()):
+def make_plan(model, theta, nep_names, cfg: Config = Config(), n_sat_min=None):
     """Concrete pass: the static row counts at this evaluation point.
+
+    ``n_sat_min``: count bridge rows at min(n_sat, n_sat_min), so the plan
+    holds for every n_sat above it (see the module notes).
 
     Raises ValueError where :func:`bridge.draw_bridge_eos` would (n_L outside
     the low-density table, inconsistent anchors).  The plan holds at other
@@ -393,9 +410,11 @@ def make_plan(model, theta, nep_names, cfg: Config = Config()):
     if not _interval_consistent(bL, bH):
         raise ValueError(f"anchors inconsistent (mu_L={bL[0]:.1f} MeV)")
     n_keep = int(np.sum(n_lo < n_cut))
+    n_sat_sel = n_sat if n_sat_min is None else min(n_sat, float(n_sat_min))
     return Plan(n_keep=n_keep,
                 n_sel=_n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts,
-                             n_sat))
+                             n_sat_sel),
+                n_sat_sel=n_sat_sel)
 
 
 def bridge_table(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
