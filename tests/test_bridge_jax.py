@@ -298,3 +298,84 @@ def test_fixed_mass_ln_lambda_gradient(draw):
         e[j] = h
         fd = (lnlam_at_M0(q0 + e) - lnlam_at_M0(q0 - e)) / (2 * h)
         assert ad[j] == pytest.approx(fd, rel=1e-4), idx[j]
+
+
+# ------------------------------------------------ sampled n_sat (issue #71) ---
+NEPS_NSAT = NEPS + ["n_sat"]
+NEP0_NSAT = dict(NEP0, n_sat=0.155)
+
+
+def test_sampled_n_sat_same_variates_as_numpy(monkeypatch):
+    """With n_sat among the parameters, the JAX draw matches
+    bridge.draw_bridge_eos at that n_sat, row for row."""
+    from scipy.special import ndtr as np_ndtr
+    from nmbackend.eos.metamodel import MetaModelEOS
+    model = MetaModelEOS(crust="polytrope")
+    cfg = BJ.Config()
+    min_dlnmu = inspect.signature(B.fractal_refine).parameters["min_dlnmu"].default
+    th = BJ.draw_theta(np.random.default_rng(7), NEP0_NSAT, nep_names=NEPS_NSAT)
+    plan = BJ.make_plan(model, th, NEPS_NSAT, cfg)
+    assert plan.n_sel == BJ._n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts, 0.155)
+    n, eps, p, info = jax.jit(lambda t: BJ.bridge_arrays(model, t, NEPS_NSAT, plan, cfg))(
+        jnp.asarray(th))
+    assert bool(info["valid"])
+    assert float(info["grid"][0]) == pytest.approx(0.31, rel=1e-14)
+    nep, corr, ln_X, z = BJ.unpack(th, NEPS_NSAT, cfg.levels)
+    U = np.concatenate([np.full((1, 3), 0.5), np.clip(np_ndtr(z), BJ._U_EPS, 1 - BJ._U_EPS)])
+    monkeypatch.setattr(B, "fractal_refine", _heap_refine(U, min_dlnmu))
+    d = B.draw_bridge_eos(None, model=model, nep_params={k: float(v) for k, v in nep.items()},
+                          corr_frac=float(corr), X=float(np.exp(ln_X)), n_table_pts=None)
+    monkeypatch.undo()
+    assert d["meta"]["n_L"] == pytest.approx(0.31, rel=1e-15)
+    np.testing.assert_allclose(np.asarray(info["mu"]), d["bridge"]["mu"], rtol=1e-9)
+    L = n.size
+    for a, ref in ((n, d["n"]), (eps, d["eps"]), (p, d["p"])):
+        np.testing.assert_allclose(np.asarray(a), ref[:L], rtol=1e-9)
+
+
+def test_gradient_in_n_sat_matches_central_differences():
+    from nmbackend.eos.metamodel import MetaModelEOS
+    model = MetaModelEOS(crust="polytrope")
+    th = BJ.draw_theta(np.random.default_rng(3), NEP0_NSAT, nep_names=NEPS_NSAT)
+    plan = BJ.make_plan(model, th, NEPS_NSAT)
+    j, i = plan.n_keep + 100, NEPS_NSAT.index("n_sat")
+    f = jax.jit(lambda t: jnp.log(BJ.bridge_arrays(model, t, NEPS_NSAT, plan)[2][j]))
+    g = float(jax.jit(jax.grad(f))(jnp.asarray(th))[i])
+    assert math.isfinite(g) and g != 0.0
+    h = 1e-6
+    e = np.zeros(th.size); e[i] = h
+    fd = (float(f(jnp.asarray(th + e))) - float(f(jnp.asarray(th - e)))) / (2 * h)
+    assert fd == pytest.approx(g, rel=1e-5)
+
+
+def test_default_plan_unchanged_without_n_sat():
+    assert BJ._n_sel(2.0, 12.0, 600) == BJ._n_sel(2.0, 12.0, 600, B.N_SAT)
+
+
+def test_sampled_n_sat_plan_checks():
+    """The plan records the n_sat its rows were counted at.  A config mismatch
+    raises under jit too; a smaller n_sat than the plan's is flagged
+    (rows past n_term); a larger one is valid and ends below n_term."""
+    from nmbackend.eos.metamodel import MetaModelEOS
+    model = MetaModelEOS(crust="polytrope")
+    cfg = BJ.Config()
+    i = NEPS_NSAT.index("n_sat")
+    th = BJ.draw_theta(np.random.default_rng(7), NEP0_NSAT, nep_names=NEPS_NSAT)
+    plan = BJ.make_plan(model, th, NEPS_NSAT, cfg, n_sat_min=0.15)
+    assert plan.n_sat_sel == 0.15
+    assert plan.n_sel == BJ._n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts, 0.15)
+    with pytest.raises(ValueError, match="other settings"):
+        jax.jit(lambda t: BJ.bridge_arrays(model, t, NEPS_NSAT, plan,
+                                           cfg._replace(n_term_fac=math.inf)))(jnp.asarray(th))
+    f = jax.jit(lambda t: BJ.bridge_arrays(model, t, NEPS_NSAT, plan, cfg))
+    for ns in (0.15, 0.155, 0.165):
+        t = th.copy(); t[i] = ns
+        n, _, p, info = f(jnp.asarray(t))
+        assert bool(info["valid"]) and bool(info["rows_ok"]), ns
+        assert float(n[-1]) <= 12.0 * ns * (1 + 1e-12)
+        BJ.bridge_arrays(model, jnp.asarray(t), NEPS_NSAT, plan, cfg)   # eager: no raise
+    t = th.copy(); t[i] = 0.145
+    _, _, p, info = f(jnp.asarray(t))
+    assert not bool(info["rows_ok"]) and np.all(np.isnan(np.asarray(p)))
+    with pytest.raises(ValueError, match="n_term False"):
+        BJ.bridge_arrays(model, jnp.asarray(t), NEPS_NSAT, plan, cfg)

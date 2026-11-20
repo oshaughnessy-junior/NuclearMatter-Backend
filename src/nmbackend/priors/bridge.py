@@ -275,7 +275,10 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     levels     : fractal refinement depth (2^levels - 1 interior points max).
     X          : pQCD renormalization-scale parameter (log-uniform [1,4] if None).
     n_L_fac    : bridge start in units of n_sat (paper: 2).
-    n_term_fac : truncation density for the returned stellar-structure table.
+    n_term_fac : truncation density for the returned stellar-structure table,
+        in units of n_sat.
+        Both use ``nep_params["n_sat"]`` when the caller samples it, else
+        ``N_SAT``; the metamodel then saturates where the bridge anchor sits.
     n_table_pts : node count of the returned table, which adds nodes to the
         raw (n, eps, p) (their count varies per draw) with
         :func:`nmbackend.eos.base.refine_table`.  "auto" is a bound on the raw
@@ -285,7 +288,10 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     Returns dict with the combined (n, eps, p) arrays, the EOSTable, the anchor
     metadata, and the endpoint pressure mismatch diagnostic.
     """
-    n_L = n_L_fac * N_SAT
+    n_sat = float((nep_params or {}).get("n_sat", N_SAT))
+    if not (math.isfinite(n_sat) and n_sat > 0.0):
+        raise ValueError(f"n_sat must be finite and positive, got {n_sat!r}")
+    n_L = n_L_fac * n_sat
     # ---- low-density anchor from our nuclear model
     if low_table is None:
         if model is None:
@@ -341,7 +347,7 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
     p_end_mismatch = (p_b[-1] - bH[2]) / bH[2]
 
     # ---- combine with the low-density table and truncate for stellar structure
-    n_term = n_term_fac * N_SAT
+    n_term = n_term_fac * n_sat
     sel = grid <= n_term
     n_all = np.concatenate([n_lo, grid[sel]])
     eps_all = np.concatenate([eps_lo, eps_b[sel]])
@@ -362,7 +368,8 @@ def draw_bridge_eos(rng, low_table=None, model=None, nep_params=None,
                 bridge=dict(n=grid, mu=mu_s, mu0=mu_grid, p=p_b, eps=eps_b,
                             cs2=cs2),
                 meta=dict(X=X, corr_frac=corr_frac, mu_L=mu_L, p_L=p_L,
-                          n_L=n_L, p_end_mismatch=float(p_end_mismatch)))
+                          n_L=n_L, n_sat=n_sat,
+                          p_end_mismatch=float(p_end_mismatch)))
 
 
 def _table_pts_bound(n_low_table, n_L, n_term, n_grid_pts):

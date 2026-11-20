@@ -159,3 +159,69 @@ def test_default_grid_starts_on_the_stable_branch():
     top = int(np.argmax(np.where(np.asarray(fam.stable), M, -np.inf)))
     assert np.all(np.diff(M[:top + 1]) > 0)
     assert 0.08 < M[0] < 0.15 and float(fam.R_km[0]) < 100.0
+
+
+# ------------------------------------------------ sampled n_sat (issue #71) ---
+def test_anchor_follows_sampled_n_sat():
+    """n_L and n_term follow nep_params["n_sat"], so the bridge starts at
+    n_L_fac * n_sat of the metamodel that saturates there."""
+    model = MetaModelEOS()
+    nep = dict(n_sat=0.155, L_sym=60.0)
+    d = draw_bridge_eos(np.random.default_rng(5), model=model, nep_params=nep,
+                        n_table_pts=None)
+    m = d["meta"]
+    assert m["n_sat"] == 0.155 and m["n_L"] == pytest.approx(0.31, rel=1e-15)
+    assert d["bridge"]["n"][0] == pytest.approx(0.31, rel=1e-15)
+    t = model.eos_table(nep)
+    n, eps, p = (np.asarray(a) for a in (t.n, t.eps_mevfm3, t.p_mevfm3))
+    assert m["p_L"] == pytest.approx(float(np.interp(0.31, n, p)), rel=1e-12)
+    assert d["n"].max() <= 12.0 * 0.155 * (1 + 1e-12)
+
+
+# First three draws of the paper1 archive recipe (nmb-papers
+# prior_archive/build_archive.py, seed 1, n_term_fac = inf), computed with
+# 8c20741, before n_sat could be sampled: (rows, sum n, sum eps, sum p, p[-1]).
+_ARCHIVE_GOLDEN = [
+    (1005, 1261.4766696365275, 2109295.693274297, 503273.339286826, 3530.7947473104996),
+    (1005, 1288.779408894586, 2055755.1993345777, 541337.7811617361, 3992.638396299699),
+    (1005, 1317.8986271533968, 2197273.0351542593, 468122.99113873945, 4073.634517534001),
+]
+
+
+def test_archive_recipe_draws_match_8c20741():
+    rng = np.random.default_rng(1)
+    got = []
+    while len(got) < len(_ARCHIVE_GOLDEN):
+        c = float(rng.uniform(0.2, 0.4))
+        nep = {"L_sym": float(rng.uniform(20.0, 120.0)),
+               "K_sym": float(rng.uniform(-300.0, 100.0)),
+               "E_sym": float(rng.uniform(28.0, 38.0)),
+               "K_sat": float(rng.uniform(200.0, 280.0))}
+        try:
+            d = draw_bridge_eos(rng, nep_params=nep, corr_frac=c,
+                                n_term_fac=float("inf"))
+        except (ValueError, FloatingPointError, OverflowError):
+            continue
+        got.append((d["n"].size, d["n"].sum(), d["eps"].sum(), d["p"].sum(),
+                    d["p"][-1]))
+    for g, ref in zip(got, _ARCHIVE_GOLDEN):
+        assert g[0] == ref[0]
+        np.testing.assert_allclose(g[1:], ref[1:], rtol=1e-12)
+
+
+def test_default_n_sat_draws_unchanged():
+    """Omitting n_sat and passing the default give the same draw, value for
+    value, from the same seed."""
+    nep = dict(L_sym=55.0, K_sym=-120.0)
+    a = draw_bridge_eos(np.random.default_rng(11), nep_params=nep, corr_frac=0.3)
+    b = draw_bridge_eos(np.random.default_rng(11), corr_frac=0.3,
+                        nep_params=dict(nep, n_sat=DEFAULT_PARAMS["n_sat"]))
+    for k in ("n", "eps", "p"):
+        np.testing.assert_array_equal(a[k], b[k])
+    assert a["meta"] == b["meta"]
+
+
+@pytest.mark.parametrize("bad", [0.0, -0.16, float("nan"), float("inf")])
+def test_bad_n_sat_raises(bad):
+    with pytest.raises(ValueError, match="n_sat"):
+        draw_bridge_eos(np.random.default_rng(0), nep_params=dict(n_sat=bad))
