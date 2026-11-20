@@ -1,0 +1,9 @@
+# Scoped helper-input repair
+
+Independent reviewer `review_ope_weak_diagrams/` found two invalid-input failures in frozen source372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484: `vector_defect_direct(gv=NaN)` returned NaNs, and `raising=NaN` selected the raising branch by truthiness. The reviewer's exact source and failure evidence were pinned before author edits; the author also preserved its entire original frozen leaf in `pre_helper_repair/`, including the199-check report and checkpoint. Neither failure is erased or reclassified as a pass in the original review.
+
+`rho` now requires an actual Boolean raising flag, so the helper cannot bypass that contract. Both `vector_defect_direct` and the main amplitude validate current couplings as finite real scalar numbers, rejecting NaN, infinities, complex values, Boolean couplings and strings. Signed and zero real couplings remain valid. No equation, denominator, pole exclusion, spin/isospin factor, numerical tolerance or physical claim changed.
+
+`check_helper_repair.py` independently replays both exact old failure classes from preserved source bytes, checks repaired rejection across the helper and main APIs, and compares finite-input results bitwise against the old source at a held-out conserved NR point. **105/105 repair checks PASS.** The original algebra suite also reruns **199/199 PASS** at unchanged gates. The old invalid-input source remains executable for evidence replay; the repair script assigns its original module location solely to resolve the unchanged strong dependency correctly.
+
+Repaired `external_legs.py` SHA256:d8400295e4bc286ed5453c6da70d5f3d1cfc76e94f926b3eb7603e0ea55d7d14. A different independent recheck remains required before accepting the repaired helper contract. Finite-Q interaction-current, full MU amplitude/rate and physical-width gates remain OPEN exactly as before.

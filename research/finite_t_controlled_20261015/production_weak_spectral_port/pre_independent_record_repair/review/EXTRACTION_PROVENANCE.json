@@ -1,0 +1,34 @@
+{
+  "sourcepins": {
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "hot_electron_capture_moments/electron_capture.py": "b9954da0a2324376c19e4277013436b135d1432f9cb9904b03761be30bd1b3d1",
+    "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+    "review_hot_beta_opacity_spectrum/reference.py": "dccb6f4c417b1d7e51ecd7a74be12c6d2bdcecb1db7eba1349c0c50d738fc9a3",
+    "review_hot_ec_opacity_spectrum/results.json": "b297461d953f230c083348fc314f088944fb55daaea8ea477ebadaefc0893d32",
+    "hot_ec_opacity_spectrum/results.json": "5c64c246e174f39331ec3c0749e9657dbf5fb4829f8eb7e17901565a0c978b1e",
+    "hot_pc_opacity_spectrum/results.json": "bb0a3d0eba12795cb393e13a79936d6946ab98dc6d06c25fafa1f9a82557a2aa",
+    "hot_beta_opacity_spectrum/pilot_results.json": "ef68460791194dd8dbf678e2900da0846142c5ecd2d5d87d86b5bb5711d14983",
+    "hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88",
+    "finite_t_weak_spectral_integration_contract/CONTRACT.md": "5fa8a528cba8022a05aac8e821afdb07ecda1baaa260a1c59eb5997718af0340",
+    "review_finite_t_weak_spectral_integration_contract/CHECKPOINT.json": "2b990178cf17ae1db0dc11dfd07bdbb64c3df9e100414b5f3b10abc97447738f"
+  },
+  "unchanged_selected_function_AST": {
+    "EC": {
+      "dot": true,
+      "scalar_amplitude": true
+    },
+    "PC": {
+      "dot": true,
+      "amplitude": true
+    },
+    "BETA": {
+      "slash": true,
+      "trace_amp": true,
+      "integral": true
+    }
+  },
+  "original_top_level_executed": false,
+  "beta_adaptation": "OnlyinjectedS.matched returns lockedexplicitbath+None; no EOS/factory imports/calls or functionbodychanges",
+  "candidate_imported": false
+}

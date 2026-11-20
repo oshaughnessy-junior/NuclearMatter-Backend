@@ -1,0 +1,44 @@
+{
+  "kind": "fresh candidate heldout",
+  "job": {
+    "kind": "candidate",
+    "E": 0.13,
+    "radial": 24,
+    "incoming": 18,
+    "outgoing": 18,
+    "phi": 10
+  },
+  "result": {
+    "E_MeV": 0.13,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 24,
+      "incoming": 18,
+      "outgoing": 18,
+      "phi": 10,
+      "tail": 70.0,
+      "literal": false,
+      "budget": 85.0,
+      "radial_family": "laguerre"
+    },
+    "log_j_s-1": -2813.0367774950028,
+    "log_true_chi_s-1": -2814.3764595798116,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 6551.389446098361,
+    "threshold_initial_momentum_MeV": 6483.8529566168345,
+    "events": 77760,
+    "radial_domain": "semi-infinite Eamin..infinity",
+    "max_shell_relative": 3.519406988061746e-13,
+    "max_four_conservation_scaled": 1.0936633556546161e-14,
+    "max_unsquared_delta_scaled": 4.163238944945453e-16,
+    "KMS_log_residual": -1.0751399770470016e-12,
+    "seconds": 0.03934370796196163
+  },
+  "seconds": 0.048824541037902236
+}

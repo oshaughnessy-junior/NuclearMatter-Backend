@@ -1,0 +1,29 @@
+"""Separate inventory count-unit repair recheck; no physical replay."""
+from pathlib import Path
+from fractions import Fraction
+import json,hashlib,importlib.util,sys
+P=Path(__file__).parent;A=P.parent/'cold_murca_normal_reference';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();checks=[]
+def ck(n,yes):checks.append(dict(name=n,passed=bool(yes)))
+oldreview=json.loads((P/'CHECKPOINT.json').read_text());oldpins=json.loads((A/'PRE_INVENTORY_REPAIR_PIN.json').read_text());author=json.loads((A/'MANIFEST.json').read_text());before={str(p.relative_to(A)):sha(p)for p in A.rglob('*')if p.is_file()and'__pycache__'not in str(p)}
+ck('commissioned repaired manifest',sha(A/'MANIFEST.json')=='9cbcb2e7a998f5cfce312ba92eff56ad8c95738aa774c01e7816dc99e022c5ae')
+ck('commissioned inventory',sha(A/'reaction_inventory.json')=='ced2f43384dd397e37c51feabd2a6a1d1980474494e13c9862bec3ab5d792897')
+for p,h in oldreview['files'].items():ck('original review immutable '+p,sha(P/p)==h)
+for p,h in oldpins.items():ck('original author snapshot '+p,sha(A/'pre_inventory_repair'/p)==h)
+for p in['normal_reference.py','angular_oracle.py','validate_reference.py','results.json']:ck('scientific/raw unchanged '+p,sha(A/p)==oldpins[p])
+x=json.loads((A/'reaction_inventory.json').read_text());old=json.loads((A/'pre_inventory_repair/reaction_inventory.json').read_text());sp=importlib.util.spec_from_file_location('independent_repaired_inventory_only',A/'inventory.py');M=importlib.util.module_from_spec(sp);sys.modules[sp.name]=M;sp.loader.exec_module(M);ck('literal generated inventory matches saved',M.inventory()==x)
+for r in x['events']:
+ o=next(v for v in old if all(v[k]==r[k]for k in['spectator','lepton','direction']))
+ for new,prev in[('delta_Ne_per_event','delta_material_Ye_per_event'),('delta_Nmu_per_event','delta_material_Ymu_per_event'),('delta_Np_per_event','delta_proton'),('delta_Nn_per_event','delta_neutron')]:ck('unchanged integer '+r['id']+new,type(r[new])is int and r[new]==o[prev])
+ ck('separate radiation flavor '+r['id'],r['delta_radiation_Le_per_event']==-r['delta_Ne_per_event']and r['delta_radiation_Lmu_per_event']==-r['delta_Nmu_per_event'])
+ ck('baryon and charge '+r['id'],r['delta_Np_per_event']+r['delta_Nn_per_event']==0 and r['delta_Np_per_event']-r['delta_Ne_per_event']-r['delta_Nmu_per_event']==0)
+# Exact rational finite-volume event counts; deliberately asymmetric rates,
+# not calculated or inferred from Q. NB is conserved throughout.
+nB=Fraction(17,100);V=Fraction(10**9);dt=Fraction(7,13);NB=nB*V;rates=[Fraction(i*i+3,10**6)for i in range(8)];example={}
+for species,key in [('electron','delta_Ne_per_event'),('muon','delta_Nmu_per_event'),('proton','delta_Np_per_event'),('neutron','delta_Nn_per_event')]:
+ source=sum(Fraction(r[key])*rate for r,rate in zip(x['events'],rates))/nB
+ dN=sum(Fraction(r[key])*rate*V*dt for r,rate in zip(x['events'],rates));dY=dN/NB
+ ck('finite volume count to dY '+species,dY/dt==source);ck('one event dY '+species,Fraction(x['events'][0][key],1)/NB==Fraction(x['events'][0][key],1)/(nB*V));example[species]={'dY_dt_sminus1':float(source),'deltaY':float(dY)}
+ck('composition source charge',Fraction(str(example['proton']['dY_dt_sminus1']))==Fraction(str(example['electron']['dY_dt_sminus1']))+Fraction(str(example['muon']['dY_dt_sminus1'])))
+ck('explicit no number-rates supplied','does NOT compute R_a'in x['scope']and'Q cannot be substituted'in x['scope']);ck('finite volume and rates units explicit','nB*V'in x['composition']and'fm^-3 s^-1'in x['source_relation'])
+after={str(p.relative_to(A)):sha(p)for p in A.rglob('*')if p.is_file()and'__pycache__'not in str(p)};ck('author unchanged after read/probe',before==after)
+out=dict(checks=checks,passed=sum(v['passed']for v in checks),failed=[v for v in checks if not v['passed']],example=example,synthetic_number_rates_not_MU_prediction=True,author_manifest=sha(A/'MANIFEST.json'),author_before=before,author_after=after);(P/'repair_results.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(dict(passed=out['passed'],failed=out['failed']),indent=2))

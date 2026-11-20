@@ -1,0 +1,42 @@
+{
+  "status": "AUTHOR_FROZEN_DIFFERENT_INDEPENDENT_REVIEW_REQUIRED",
+  "spectrum_sha": "5b837c486d96b28c35585a3be579131db951155b37280f1df07e01370a38e48a",
+  "manifest_sha": "8d5bc98c2c5f51130ed109babf4d9768e0e6dbb0ab1c87bd9764eadf2c1f785e",
+  "note_sha": "3605ac358f40faf9daf28f3bf04aef712531f60338cc85d0397b912e71a91054",
+  "counts": {
+    "point_results.json": 14,
+    "results.json": 27,
+    "isolated_results.json": 6,
+    "control_results.json": 48,
+    "total_results.json": 92,
+    "assembly_guard_results.json": 17
+  },
+  "total_passed": 204,
+  "failed": [],
+  "environment": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+  },
+  "source_pins": {
+    "hot_electron_capture_moments/electron_capture.py": "b9954da0a2324376c19e4277013436b135d1432f9cb9904b03761be30bd1b3d1",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9"
+  },
+  "comparison_pins": {
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e",
+    "hot_electron_capture_moments/results.json": "5d5118706cfb5f269186d27f29788b1b87a8782718a67ef41fdf5ae02fe44b14",
+    "hot_electron_capture_moments/MATCHED_STATE.json": "cff38c6ae765081a3614d65c584acd9e46a6a58ce1dc008945596733bb80d5f8",
+    "review_hot_electron_capture/REVIEW.md": "2113dca85edaba56f67af36fc745a41d5d1e4e93db3eca6117ccac2eeca97aaf",
+    "review_hot_electron_capture/CHECKPOINT.json": "425e0415a5d0de3e033deb8ecfc4813d9d1e5f12876e726b25a21e86b0146bc8"
+  },
+  "bounded_fine_chunks_seconds": [
+    59.20395200001076,
+    63.11047966708429
+  ]
+}

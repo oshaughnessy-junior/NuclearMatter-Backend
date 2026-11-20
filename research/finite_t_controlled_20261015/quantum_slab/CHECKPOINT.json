@@ -1,0 +1,27 @@
+{
+  "checkpoint": "selected_energy_FD_nucleon_irradiated_slab",
+  "status": "ready_for_independent_review",
+  "passed": true,
+  "checks": 514,
+  "integrated_neutrino_spectra": false,
+  "source_drift": false,
+  "production_changes": false,
+  "frozen_changes": false,
+  "dependencies_added": false,
+  "guard_extension_requires_independent_review": true,
+  "local_numerical_extension": "Unrepresentable transformed panels discarded only after recorded frozen evaluator failure; prior source preserved",
+  "scope": "TwoFDmatterstates,12selectedspectralpoints,steadyfixedbath,twoirradiatedfaces,namedLO-NRcapture+crossedchannels; nointegratedluminosityorfluidclaim",
+  "next_priority": "Independent guard/flavor/face-normalization review before converged full neutrino spectra and matched material evolution",
+  "files": {
+    "initial_transfer_failures.json": "c4a63015768ddff355e719b34e04b34ce7188eafca5903131dc120b52d27bd08",
+    "RESEARCH_NOTE.md": "320a07845dec5693681ead417b62cc948061742efbfa88d2c4b0b42b00b39708",
+    "validation_results.json": "c4a0c1462099a69641f2c3ca335e3f1190669159d8c39b530409e89f1e43b655",
+    "fixed_bath.py": "501e7e6a13a890f76da27e0a39c4839beda49fca1cb8f132f9fd38976cbb3125",
+    "check_guard.py": "4c8b32fb05fa2894bec173c7ffee0858ab3ae7c815ffe1d3df2573146906ce0d",
+    "guarded_capture.py": "b191c25a97d49276426f652d990305ba7b6ff8c4b22d613f1fe164305eefcd1a",
+    "validate_slab.py": "1f5f10d466c2dbbe2a962ae48f90228343a81a6a3f6ba9e9aee8be37cb4928f6",
+    "endpoint_diagnostic.json": "57366aaa9d0f2b24eb528593b0e955b98e53664cac9304f7d7e9a1ca36680298",
+    "guard_validation.json": "72ad89dfdb51268bebbe5072669bf3da822418cbf33292a1fabab43fd61d03ff",
+    "initial_frozen_endpoint_failure.json": "7d8c8b1367751603194cb3cd44d559e6dc7599c88ce2b4428dd611eff6d14389"
+  }
+}

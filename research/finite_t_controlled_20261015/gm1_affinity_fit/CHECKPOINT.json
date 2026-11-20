@@ -1,0 +1,33 @@
+{
+  "status": "FROZEN pending independent review",
+  "counts": {
+    "development": 198,
+    "heldout": 489,
+    "structural": 24
+  },
+  "files": {
+    "HOLDOUT_PROTOCOL.json": "0bdab6db864f8d61a5508c2cacfd174df381b8ee0896d6ea50df927dce14152b",
+    "PRE_HOLDOUT_FREEZE.json": "848adf6d6e0f76a34c76ffd97f2fbb7139be0ca49b914c5c6cc6099e5188d837",
+    "PROTOCOL.json": "bde9c80680b41567774ed4dd8ff361926d54a3c4b6fb84d3528badb7662d446e",
+    "RESEARCH_NOTE.md": "9962cf7de6349f40cac6b6b0d71974b4c3ad88468d0217f9ba38628940ca6937",
+    "check_structure.py": "1642b7e223dff4548d3303508945ff54f34ab6732e88736f1528fd377a1368e7",
+    "coefficients.json": "1e03c7e192ab869018c2da575d613026f8be81d75ca7709f8b5de1d8ce59ea8b",
+    "development.py": "7f97ef4c4177aa820b08110fa2c0db2fbfdb532f3b4acb92c2ac285c4e688ce3",
+    "development_partial.json": "dd796741da82852ce42cb9eb0c9912882cd00e06f5a07e95462462930174adbc",
+    "development_results.json": "4bd0fc79da57f5c2ef141c8996d8f61d1aa5c4883d6d36e388383ec67dce355b",
+    "holdout_results.json": "9f910bc26d3062f1868be46aafcd374efef4d93c3bdcc4d9e7df74d1adb7ef46",
+    "holdouts.py": "7579e33e9283a599e63b3bf73c0581bb86612fcde7878117cbceb44d20379ffe",
+    "old_failure_reproduced.json": "6dfe7d682ccc8be387e9503f011322f7cc8ec96fe476e403735bde5435f218a2",
+    "potential.py": "5996a98f69d76f56ab03e5c59361fc7e8b4a75c71d0a877936850c1785806be2",
+    "structure_results.json": "92aca2051a7c50ffb6a8d7e3ac956dc67e4ae5acba57d60a42bb20aa8bec5d18"
+  },
+  "source_sha256": {
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "gm1_potential_fit/potential.py": "9306f288b22a9bbd10af107f552cd276ba066f6620cfbb94c52433954a919df4",
+    "gm1_potential_fit/coefficients.json": "ecd8e2f44e54613f9a08678c47b0f982fcd779968d188ebd525032f1ad902234",
+    "review_gm1_fit/results.json": "ecd3338571f24f0850e622046b5da9724f41e294847cd73d3cb0fb71e2572648"
+  },
+  "external_physical_validation": "OPEN",
+  "qualification": "selected internal-GM1 states, T>=.12MeV; no uniform-domain certificate"
+}

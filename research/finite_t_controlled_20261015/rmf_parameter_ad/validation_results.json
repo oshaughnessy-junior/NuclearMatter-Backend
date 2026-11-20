@@ -1,0 +1,6086 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 baseline frozen primal",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian phi_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian kinetic_mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian energy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian pressure",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian free_energy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 unchanged state Jacobian entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 baseline roots",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 local stable Hessian",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 implicit linear residual",
+      "actual": 3.552713678800501e-15,
+      "expected": 0.0,
+      "scaled_error": 3.552713678800501e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 JAX jacfwd",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 JAX jacrev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined coupling C_sigma",
+      "actual": 4.9543331353444657e-14,
+      "expected": 0.0,
+      "scaled_error": 1.2696426354494781e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined coupling C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined coupling C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined coupling b",
+      "actual": 5.962677705601199e-11,
+      "expected": 0.0,
+      "scaled_error": 1.5912533719630945e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined coupling c",
+      "actual": 2.0846681562636586e-11,
+      "expected": 0.0,
+      "scaled_error": 1.8212766650378477e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 source partial Hellmann-Feynman C_sigma",
+      "actual": -1.5010957402662541,
+      "expected": -1.50109574026207,
+      "scaled_error": 2.7874361527911516e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 source partial Hellmann-Feynman C_omega",
+      "actual": 2.52578534912,
+      "expected": 2.5257853491168585,
+      "scaled_error": 1.2437664473656737e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 source partial Hellmann-Feynman C_rho",
+      "actual": 0.40412565585919996,
+      "expected": 0.40412565585429294,
+      "scaled_error": 1.2142310601430162e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 source partial Hellmann-Feynman b",
+      "actual": 961.4151804567394,
+      "expected": 961.4151804591578,
+      "scaled_error": 2.515402774126418e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 source partial Hellmann-Feynman c",
+      "actual": 220.2666072193308,
+      "expected": 220.2666072277419,
+      "scaled_error": 3.818596188040336e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell entropy C_sigma",
+      "actual": -0.0024359329267798656,
+      "expected": -0.0024359329267798664,
+      "scaled_error": 3.560696308395467e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell density C_sigma",
+      "actual": -15.046733557053404,
+      "expected": -15.0467335570534,
+      "scaled_error": 2.3611195515156236e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell composition C_sigma",
+      "actual": -0.181245471502914,
+      "expected": -0.1812454715029142,
+      "scaled_error": 1.0719662549266975e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell entropy C_omega",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell density C_omega",
+      "actual": 31.572316864,
+      "expected": 31.572316864,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell composition C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell entropy C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell density C_rho",
+      "actual": 5.05157069824,
+      "expected": 5.05157069824,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell composition C_rho",
+      "actual": -2.020628279296,
+      "expected": -2.020628279296,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell entropy b",
+      "actual": 2.3402333690906154,
+      "expected": 2.340233369090612,
+      "scaled_error": 1.5181023079681345e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell density b",
+      "actual": 14455.598337258356,
+      "expected": 14455.598337258356,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell composition b",
+      "actual": 174.12495054549277,
+      "expected": 174.12495054549277,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell entropy c",
+      "actual": 0.7148840234540738,
+      "expected": 0.7148840234540739,
+      "scaled_error": 1.5530113811481484e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell density c",
+      "actual": 4415.831530848978,
+      "expected": 4415.831530848977,
+      "scaled_error": 2.0596227356483207e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed HF Maxwell composition c",
+      "actual": 53.19091116031496,
+      "expected": 53.19091116031501,
+      "scaled_error": 9.350844048017705e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_sigma step0.002",
+      "actual": 5.204170427930421e-15,
+      "expected": 0.0,
+      "scaled_error": 5.204170427930421e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_sigma step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_sigma step0.001",
+      "actual": 1.5178830414797062e-15,
+      "expected": 0.0,
+      "scaled_error": 1.5178830414797062e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_sigma step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_sigma step0.0005",
+      "actual": 5.204170427930421e-15,
+      "expected": 0.0,
+      "scaled_error": 5.204170427930421e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_sigma step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma phi_mev",
+      "actual": 16.65847536152505,
+      "expected": 16.65847536152508,
+      "scaled_error": 1.9194087343103202e-15,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma dirac_mass_mev",
+      "actual": -16.65847536152505,
+      "expected": -16.658475361531508,
+      "scaled_error": 3.877205643305351e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma kinetic_mu_n_mev",
+      "actual": -14.93345513736408,
+      "expected": -14.933455137375532,
+      "scaled_error": 7.668802991848053e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma kinetic_mu_p_mev",
+      "actual": -16.066239334257293,
+      "expected": -16.0662393342561,
+      "scaled_error": 7.429939086813931e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma mu_n_mev",
+      "actual": -14.93345513736408,
+      "expected": -14.933455137364277,
+      "scaled_error": 1.3203616133019627e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma mu_p_mev",
+      "actual": -16.066239334257293,
+      "expected": -16.06623933424324,
+      "scaled_error": 8.747868758172453e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma energy_density",
+      "actual": -1.5254550695340527,
+      "expected": -1.5254550695210725,
+      "scaled_error": 8.509122145946084e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma pressure",
+      "actual": -0.9063816288622906,
+      "expected": -0.9063816288618604,
+      "scaled_error": 4.746471114848862e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma free_energy_density",
+      "actual": -1.5010957402662541,
+      "expected": -1.501095740254031,
+      "scaled_error": 8.142792684125931e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_sigma entropy_density",
+      "actual": -0.0024359329267798664,
+      "expected": -0.0024359329267674527,
+      "scaled_error": 5.096068556601562e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 Hellmann-Feynman C_sigma",
+      "actual": -1.5010957402662541,
+      "expected": -1.5010957402662541,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling first-law C_sigma",
+      "actual": -1.5010957402662541,
+      "expected": -1.5010957402662541,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 parameter pressure work C_sigma",
+      "actual": -1.5010957402662541,
+      "expected": -1.5010957402662541,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_omega step0.002",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_omega step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_omega step0.001",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_omega step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_omega step0.0005",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_omega step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega phi_mev",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega omega_mev",
+      "actual": 31.572316864,
+      "expected": 31.572316864008773,
+      "scaled_error": 2.7782725324658643e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega kinetic_mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega mu_n_mev",
+      "actual": 31.572316864,
+      "expected": 31.57231686400016,
+      "scaled_error": 5.063680192831025e-15,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega mu_p_mev",
+      "actual": 31.572316864,
+      "expected": 31.572316864021364,
+      "scaled_error": 6.766201999882778e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega energy_density",
+      "actual": 2.52578534912,
+      "expected": 2.525785349121497,
+      "scaled_error": 5.926967336813665e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega pressure",
+      "actual": 2.525785349120001,
+      "expected": 2.5257853491204614,
+      "scaled_error": 1.8232765138766805e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega free_energy_density",
+      "actual": 2.52578534912,
+      "expected": 2.525785349121497,
+      "scaled_error": 5.926967336813665e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_omega entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 Hellmann-Feynman C_omega",
+      "actual": 2.52578534912,
+      "expected": 2.52578534912,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling first-law C_omega",
+      "actual": 2.52578534912,
+      "expected": 2.52578534912,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 parameter pressure work C_omega",
+      "actual": 2.52578534912,
+      "expected": 2.52578534912,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_rho step0.002",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_rho step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_rho step0.001",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_rho step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots C_rho step0.0005",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability C_rho step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho phi_mev",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho rho_mev",
+      "actual": -12.6289267456,
+      "expected": -12.628926745599182,
+      "scaled_error": 6.470258024173428e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho kinetic_mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho mu_n_mev",
+      "actual": 6.3144633728,
+      "expected": 6.314463372795429,
+      "scaled_error": 7.238249520090958e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho mu_p_mev",
+      "actual": -6.3144633728,
+      "expected": -6.314463372795429,
+      "scaled_error": 7.238249520090958e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho energy_density",
+      "actual": 0.40412565585919996,
+      "expected": 0.40412565586181187,
+      "scaled_error": 6.4631152460814545e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho pressure",
+      "actual": 0.4041256558592001,
+      "expected": 0.4041256558587909,
+      "scaled_error": 1.0124887885578194e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho free_energy_density",
+      "actual": 0.40412565585919996,
+      "expected": 0.40412565586181187,
+      "scaled_error": 6.4631152460814545e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD C_rho entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 Hellmann-Feynman C_rho",
+      "actual": 0.40412565585919996,
+      "expected": 0.40412565585919996,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling first-law C_rho",
+      "actual": 0.40412565585919996,
+      "expected": 0.40412565585919996,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 parameter pressure work C_rho",
+      "actual": 0.40412565585919996,
+      "expected": 0.40412565585919996,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots b step0.002",
+      "actual": 6.938893903907228e-15,
+      "expected": 0.0,
+      "scaled_error": 6.938893903907228e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability b step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots b step0.001",
+      "actual": 2.8189256484623115e-15,
+      "expected": 0.0,
+      "scaled_error": 2.8189256484623115e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability b step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots b step0.0005",
+      "actual": 5.204170427930421e-15,
+      "expected": 0.0,
+      "scaled_error": 5.204170427930421e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability b step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b phi_mev",
+      "actual": -16004.020262885428,
+      "expected": -16004.020262922379,
+      "scaled_error": 2.3088542838974873e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b dirac_mass_mev",
+      "actual": 16004.020262885428,
+      "expected": 16004.020262899874,
+      "scaled_error": 9.026740534970774e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b kinetic_mu_n_mev",
+      "actual": 14346.770243167422,
+      "expected": 14346.77024316613,
+      "scaled_error": 9.014582683075648e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b kinetic_mu_p_mev",
+      "actual": 15435.051184076752,
+      "expected": 15435.051184066257,
+      "scaled_error": 6.799827699498828e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b mu_n_mev",
+      "actual": 14346.770243167422,
+      "expected": 14346.770243108263,
+      "scaled_error": 4.12350594378132e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b mu_p_mev",
+      "actual": 15435.051184076752,
+      "expected": 15435.051184059825,
+      "scaled_error": 1.096693181482885e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b energy_density",
+      "actual": 984.8175141476456,
+      "expected": 984.8175139997592,
+      "scaled_error": 1.5016635184006476e-10,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b pressure",
+      "actual": 1351.4805535045975,
+      "expected": 1351.4805534981863,
+      "scaled_error": 4.743875529601854e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b free_energy_density",
+      "actual": 961.4151804567394,
+      "expected": 961.4151803048493,
+      "scaled_error": 1.579860249569036e-10,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD b entropy_density",
+      "actual": 2.340233369090612,
+      "expected": 2.340233368964524,
+      "scaled_error": 5.3878399726634456e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 Hellmann-Feynman b",
+      "actual": 961.4151804567394,
+      "expected": 961.4151804567394,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling first-law b",
+      "actual": 961.4151804567396,
+      "expected": 961.4151804567394,
+      "scaled_error": 1.1824947227024938e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 parameter pressure work b",
+      "actual": 961.4151804567396,
+      "expected": 961.4151804567394,
+      "scaled_error": 1.1824947227024938e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots c step0.002",
+      "actual": 3.0357660829594124e-15,
+      "expected": 0.0,
+      "scaled_error": 3.0357660829594124e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability c step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots c step0.001",
+      "actual": 4.336808689942018e-15,
+      "expected": 0.0,
+      "scaled_error": 4.336808689942018e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability c step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed roots c step0.0005",
+      "actual": 4.336808689942018e-15,
+      "expected": 0.0,
+      "scaled_error": 4.336808689942018e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 perturbed local stability c step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c phi_mev",
+      "actual": -4888.836535741686,
+      "expected": -4888.836535683354,
+      "scaled_error": 1.1931726753767746e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c dirac_mass_mev",
+      "actual": 4888.836535741686,
+      "expected": 4888.836535745332,
+      "scaled_error": 7.458143124132478e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c kinetic_mu_n_mev",
+      "actual": 4382.5872113737805,
+      "expected": 4382.587211434796,
+      "scaled_error": 1.392220350998216e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c kinetic_mu_p_mev",
+      "actual": 4715.030406125749,
+      "expected": 4715.0304062328405,
+      "scaled_error": 2.271272354952239e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c mu_n_mev",
+      "actual": 4382.5872113737805,
+      "expected": 4382.587211275422,
+      "scaled_error": 2.2442956472122514e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c mu_p_mev",
+      "actual": 4715.030406125749,
+      "expected": 4715.030406055759,
+      "scaled_error": 1.4844053748846173e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c energy_density",
+      "actual": 227.41544745387154,
+      "expected": 227.41544727228768,
+      "scaled_error": 7.984675599737396e-10,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c pressure",
+      "actual": 486.2664377165056,
+      "expected": 486.2664376969924,
+      "scaled_error": 4.012863589548711e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c free_energy_density",
+      "actual": 220.2666072193308,
+      "expected": 220.26660703295136,
+      "scaled_error": 8.461539169582357e-10,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling FD c entropy_density",
+      "actual": 0.7148840234540739,
+      "expected": 0.7148840232747607,
+      "scaled_error": 2.508282659423953e-10,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 Hellmann-Feynman c",
+      "actual": 220.2666072193308,
+      "expected": 220.2666072193308,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 coupling first-law c",
+      "actual": 220.2666072193308,
+      "expected": 220.2666072193308,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 parameter pressure work c",
+      "actual": 220.2666072193308,
+      "expected": 220.2666072193308,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 C_omega exact pressure derivative",
+      "actual": 2.525785349120001,
+      "expected": 2.52578534912,
+      "scaled_error": 3.516444578354896e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 C_rho exact pressure derivative",
+      "actual": 0.4041256558592001,
+      "expected": 0.40412565585919996,
+      "scaled_error": 2.7472223268397626e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 naive pressure factor two C_omega",
+      "actual": 5.051570698240001,
+      "expected": 5.051570698240002,
+      "scaled_error": 1.7582222891774475e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 vector coupling no entropy shift C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 naive pressure factor two C_rho",
+      "actual": 0.8082513117184,
+      "expected": 0.8082513117184001,
+      "scaled_error": 1.373611163419881e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 vector coupling no entropy shift C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed state/coupling JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD phi_mev",
+      "actual": 5.8680989818356615,
+      "expected": 5.868098983057735,
+      "scaled_error": 2.0825707148144216e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD omega_mev",
+      "actual": 6.2734193608768,
+      "expected": 6.273419360871912,
+      "scaled_error": 7.791039563040591e-13,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD rho_mev",
+      "actual": -1.10092668904768,
+      "expected": -1.1009266884549618,
+      "scaled_error": 5.383812792313454e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD dirac_mass_mev",
+      "actual": -5.8680989818356615,
+      "expected": -5.868098983057735,
+      "scaled_error": 2.0825707148144216e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD kinetic_mu_n_mev",
+      "actual": -4.4300385459971094,
+      "expected": -4.430038546286141,
+      "scaled_error": 6.524365566966459e-11,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD kinetic_mu_p_mev",
+      "actual": -5.664107826631142,
+      "expected": -5.6641078202233075,
+      "scaled_error": 1.1313051351744042e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD mu_n_mev",
+      "actual": 2.39384415940353,
+      "expected": 2.3938441587802117,
+      "scaled_error": 2.6038381971892557e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD mu_p_mev",
+      "actual": 0.05884818972181738,
+      "expected": 0.05884819642005823,
+      "scaled_error": 1.1382236429226198e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD energy_density",
+      "actual": 3.930917239982875,
+      "expected": 3.9309172414988325,
+      "scaled_error": 3.856498340092437e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD pressure",
+      "actual": 0.4119611536836781,
+      "expected": 0.41196115619177576,
+      "scaled_error": 6.088189714723043e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD free_energy_density",
+      "actual": 3.7450999210145994,
+      "expected": 3.7450999224120096,
+      "scaled_error": 3.7313028130493246e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 mixed FD entropy_density",
+      "actual": 0.009296156640430852,
+      "expected": 0.009296156641680486,
+      "scaled_error": 1.3442480854605454e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 baseline frozen primal",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian phi_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian rho_mev",
+      "actual": 2.842170943040401e-14,
+      "expected": 0.0,
+      "scaled_error": 1.0454426813695624e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian kinetic_mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian energy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian pressure",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian free_energy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 unchanged state Jacobian entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 baseline roots",
+      "actual": 3.854941057726238e-15,
+      "expected": 0.0,
+      "scaled_error": 3.854941057726238e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 local stable Hessian",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 implicit linear residual",
+      "actual": 1.7763568394002505e-14,
+      "expected": 0.0,
+      "scaled_error": 1.7763568394002505e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 JAX jacfwd",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 JAX jacrev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined coupling C_sigma",
+      "actual": 4.673923558715095e-14,
+      "expected": 0.0,
+      "scaled_error": 1.0297211701371021e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined coupling C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined coupling C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined coupling b",
+      "actual": 5.418373278062968e-11,
+      "expected": 0.0,
+      "scaled_error": 9.089632637087292e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined coupling c",
+      "actual": 2.957781854253754e-11,
+      "expected": 0.0,
+      "scaled_error": 1.1868461401270252e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 source partial Hellmann-Feynman C_sigma",
+      "actual": -2.812750445638144,
+      "expected": -2.8127504456403103,
+      "scaled_error": 7.701597448882331e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 source partial Hellmann-Feynman C_omega",
+      "actual": 5.68301703552,
+      "expected": 5.68301703552602,
+      "scaled_error": 1.0593093934250773e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 source partial Hellmann-Feynman C_rho",
+      "actual": 0.2273206814208,
+      "expected": 0.22732068140978234,
+      "scaled_error": 4.846747308261684e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 source partial Hellmann-Feynman b",
+      "actual": 2466.012023032166,
+      "expected": 2466.0120230300954,
+      "scaled_error": 8.396004031002257e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 source partial Hellmann-Feynman c",
+      "actual": 773.3823948387691,
+      "expected": 773.3823948986304,
+      "scaled_error": 7.740200714397209e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell entropy C_sigma",
+      "actual": -0.006693873461937459,
+      "expected": -0.00669387346193745,
+      "scaled_error": 1.425330068177138e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell density C_sigma",
+      "actual": -17.338467160221917,
+      "expected": -17.33846716022192,
+      "scaled_error": 2.0490356188759127e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell composition C_sigma",
+      "actual": -0.23682786192704114,
+      "expected": -0.23682786192704042,
+      "scaled_error": 3.0471286618660983e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell entropy C_omega",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell density C_omega",
+      "actual": 47.358475295999995,
+      "expected": 47.35847529599999,
+      "scaled_error": 1.500349686764756e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell composition C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell entropy C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell density C_rho",
+      "actual": 1.89433901184,
+      "expected": 1.8943390118399999,
+      "scaled_error": 1.1721481927849656e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell composition C_rho",
+      "actual": -2.2732068142079997,
+      "expected": -2.2732068142079997,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell entropy b",
+      "actual": 8.803041412752483,
+      "expected": 8.803041412752464,
+      "scaled_error": 2.219678894739309e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell density b",
+      "actual": 22801.632763596524,
+      "expected": 22801.632763596524,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell composition b",
+      "actual": 311.44978883929315,
+      "expected": 311.4497888392917,
+      "scaled_error": 4.5628076256410025e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell entropy c",
+      "actual": 3.681040311819313,
+      "expected": 3.681040311819313,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell density c",
+      "actual": 9534.628481527832,
+      "expected": 9534.62848152783,
+      "scaled_error": 1.9077716631224012e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed HF Maxwell composition c",
+      "actual": 130.23444671795346,
+      "expected": 130.23444671795266,
+      "scaled_error": 6.1105789144617375e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_sigma step0.002",
+      "actual": 5.204170427930421e-15,
+      "expected": 0.0,
+      "scaled_error": 5.204170427930421e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_sigma step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_sigma step0.001",
+      "actual": 5.204170427930421e-15,
+      "expected": 0.0,
+      "scaled_error": 5.204170427930421e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_sigma step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_sigma step0.0005",
+      "actual": 4.8186763221577976e-15,
+      "expected": 0.0,
+      "scaled_error": 4.8186763221577976e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_sigma step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma phi_mev",
+      "actual": 20.13531941689057,
+      "expected": 20.135319416893715,
+      "scaled_error": 1.5615106672211377e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma dirac_mass_mev",
+      "actual": -20.13531941689057,
+      "expected": -20.135319416893715,
+      "scaled_error": 1.5615106672211377e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma kinetic_mu_n_mev",
+      "actual": -17.04243233281312,
+      "expected": -17.042432332823115,
+      "scaled_error": 5.864059415520248e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma kinetic_mu_p_mev",
+      "actual": -18.029215090842456,
+      "expected": -18.029215090843532,
+      "scaled_error": 5.970710534277545e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma mu_n_mev",
+      "actual": -17.04243233281312,
+      "expected": -17.042432332810254,
+      "scaled_error": 1.682295040287384e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma mu_p_mev",
+      "actual": -18.029215090842456,
+      "expected": -18.029215090843532,
+      "scaled_error": 5.970710534277545e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma energy_density",
+      "actual": -2.946627914876893,
+      "expected": -2.9466279148843504,
+      "scaled_error": 2.5308896529967196e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma pressure",
+      "actual": -1.3484816728151165,
+      "expected": -1.3484816728166757,
+      "scaled_error": 1.1562613324412163e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma free_energy_density",
+      "actual": -2.812750445638144,
+      "expected": -2.8127504456463392,
+      "scaled_error": 2.913597362061704e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_sigma entropy_density",
+      "actual": -0.00669387346193745,
+      "expected": -0.006693873461948428,
+      "scaled_error": 1.6400366066262224e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 Hellmann-Feynman C_sigma",
+      "actual": -2.812750445638144,
+      "expected": -2.812750445638144,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling first-law C_sigma",
+      "actual": -2.8127504456381436,
+      "expected": -2.812750445638144,
+      "scaled_error": 1.5788432654547485e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 parameter pressure work C_sigma",
+      "actual": -2.812750445638144,
+      "expected": -2.812750445638144,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_omega step0.002",
+      "actual": 3.854941057726238e-15,
+      "expected": 0.0,
+      "scaled_error": 3.854941057726238e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_omega step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_omega step0.001",
+      "actual": 3.854941057726238e-15,
+      "expected": 0.0,
+      "scaled_error": 3.854941057726238e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_omega step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_omega step0.0005",
+      "actual": 3.854941057726238e-15,
+      "expected": 0.0,
+      "scaled_error": 3.854941057726238e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_omega step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega phi_mev",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega omega_mev",
+      "actual": 47.358475295999995,
+      "expected": 47.358475295994936,
+      "scaled_error": 1.0682489769766202e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega kinetic_mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega mu_n_mev",
+      "actual": 47.358475295999995,
+      "expected": 47.35847529602807,
+      "scaled_error": 5.927881612404036e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega mu_p_mev",
+      "actual": 47.358475295999995,
+      "expected": 47.358475296006866,
+      "scaled_error": 1.4508381471013083e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega energy_density",
+      "actual": 5.68301703552,
+      "expected": 5.683017035514091,
+      "scaled_error": 1.0397735902141977e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega pressure",
+      "actual": 5.683017035519998,
+      "expected": 5.683017035520387,
+      "scaled_error": 6.845345445863732e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega free_energy_density",
+      "actual": 5.68301703552,
+      "expected": 5.683017035514091,
+      "scaled_error": 1.0397735902141977e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_omega entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 Hellmann-Feynman C_omega",
+      "actual": 5.68301703552,
+      "expected": 5.68301703552,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling first-law C_omega",
+      "actual": 5.68301703552,
+      "expected": 5.68301703552,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 parameter pressure work C_omega",
+      "actual": 5.68301703552,
+      "expected": 5.68301703552,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_rho step0.002",
+      "actual": 3.854941057726238e-15,
+      "expected": 0.0,
+      "scaled_error": 3.854941057726238e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_rho step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_rho step0.001",
+      "actual": 3.854941057726238e-15,
+      "expected": 0.0,
+      "scaled_error": 3.854941057726238e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_rho step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots C_rho step0.0005",
+      "actual": 3.854941057726238e-15,
+      "expected": 0.0,
+      "scaled_error": 3.854941057726238e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability C_rho step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho phi_mev",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho rho_mev",
+      "actual": -9.4716950592,
+      "expected": -9.471695059199588,
+      "scaled_error": 4.351014091617981e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho kinetic_mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho mu_n_mev",
+      "actual": 4.7358475296,
+      "expected": 4.735847529589052,
+      "scaled_error": 2.311663779888141e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho mu_p_mev",
+      "actual": -4.7358475296,
+      "expected": -4.735847529589052,
+      "scaled_error": 2.311663779888141e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho energy_density",
+      "actual": 0.2273206814208,
+      "expected": 0.22732068141944958,
+      "scaled_error": 5.940593559593593e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho pressure",
+      "actual": 0.22732068142079995,
+      "expected": 0.2273206814217993,
+      "scaled_error": 4.3961662167747035e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho free_energy_density",
+      "actual": 0.2273206814208,
+      "expected": 0.22732068141944958,
+      "scaled_error": 5.940593559593593e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD C_rho entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 Hellmann-Feynman C_rho",
+      "actual": 0.2273206814208,
+      "expected": 0.2273206814208,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling first-law C_rho",
+      "actual": 0.2273206814208,
+      "expected": 0.2273206814208,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 parameter pressure work C_rho",
+      "actual": 0.2273206814208,
+      "expected": 0.2273206814208,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots b step0.002",
+      "actual": 4.8186763221577976e-15,
+      "expected": 0.0,
+      "scaled_error": 4.8186763221577976e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability b step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots b step0.001",
+      "actual": 3.6621940048399264e-15,
+      "expected": 0.0,
+      "scaled_error": 3.6621940048399264e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability b step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots b step0.0005",
+      "actual": 5.3969174808167335e-15,
+      "expected": 0.0,
+      "scaled_error": 5.3969174808167335e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability b step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b phi_mev",
+      "actual": -26479.74325982903,
+      "expected": -26479.743259808223,
+      "scaled_error": 7.857176179399327e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b dirac_mass_mev",
+      "actual": 26479.74325982903,
+      "expected": 26479.74325983073,
+      "scaled_error": 6.429722769637628e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b kinetic_mu_n_mev",
+      "actual": 22412.32052754741,
+      "expected": 22412.320527480184,
+      "scaled_error": 2.9995202992845117e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b kinetic_mu_p_mev",
+      "actual": 23710.02798104446,
+      "expected": 23710.027981081657,
+      "scaled_error": 1.5688860988352055e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b mu_n_mev",
+      "actual": 22412.32052754741,
+      "expected": 22412.320527480184,
+      "scaled_error": 2.9995202992845117e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b mu_p_mev",
+      "actual": 23710.02798104446,
+      "expected": 23710.02798103022,
+      "scaled_error": 6.005496519172925e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b energy_density",
+      "actual": 2642.072851287215,
+      "expected": 2642.072851190698,
+      "scaled_error": 3.653076483137045e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b pressure",
+      "actual": 3006.379840231,
+      "expected": 3006.3798402125412,
+      "scaled_error": 6.139826203241004e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b free_energy_density",
+      "actual": 2466.012023032166,
+      "expected": 2466.012022930438,
+      "scaled_error": 4.125198536831033e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD b entropy_density",
+      "actual": 8.803041412752464,
+      "expected": 8.803041412636288,
+      "scaled_error": 1.3197201763341944e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 Hellmann-Feynman b",
+      "actual": 2466.012023032166,
+      "expected": 2466.012023032166,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling first-law b",
+      "actual": 2466.012023032166,
+      "expected": 2466.012023032166,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 parameter pressure work b",
+      "actual": 2466.012023032166,
+      "expected": 2466.012023032166,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots c step0.002",
+      "actual": 5.589664533703046e-15,
+      "expected": 0.0,
+      "scaled_error": 5.589664533703046e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability c step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots c step0.001",
+      "actual": 4.433182216385174e-15,
+      "expected": 0.0,
+      "scaled_error": 4.433182216385174e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability c step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed roots c step0.0005",
+      "actual": 5.204170427930421e-15,
+      "expected": 0.0,
+      "scaled_error": 5.204170427930421e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 perturbed local stability c step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c phi_mev",
+      "actual": -11072.650668762344,
+      "expected": -11072.65066872305,
+      "scaled_error": 3.5487265218608342e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c dirac_mass_mev",
+      "actual": 11072.650668762344,
+      "expected": 11072.65066887357,
+      "scaled_error": 1.0045087521029286e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c kinetic_mu_n_mev",
+      "actual": 9371.835423130391,
+      "expected": 9371.835423116949,
+      "scaled_error": 1.434332879880336e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c kinetic_mu_p_mev",
+      "actual": 9914.47895112186,
+      "expected": 9914.47895104255,
+      "scaled_error": 7.999387297671666e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c mu_n_mev",
+      "actual": 9371.835423130391,
+      "expected": 9371.835423116949,
+      "scaled_error": 1.434332879880336e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c mu_p_mev",
+      "actual": 9914.47895112186,
+      "expected": 9914.478950883175,
+      "scaled_error": 2.4074484572144032e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c energy_density",
+      "actual": 847.0032010751553,
+      "expected": 847.0032007788722,
+      "scaled_error": 3.498016688323436e-10,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c pressure",
+      "actual": 1514.9284407279106,
+      "expected": 1514.928440692761,
+      "scaled_error": 2.320221572359923e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c free_energy_density",
+      "actual": 773.3823948387691,
+      "expected": 773.3823945311847,
+      "scaled_error": 3.9771321766722245e-10,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling FD c entropy_density",
+      "actual": 3.681040311819313,
+      "expected": 3.681040311376179,
+      "scaled_error": 1.203828093352248e-10,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 Hellmann-Feynman c",
+      "actual": 773.3823948387691,
+      "expected": 773.3823948387691,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 coupling first-law c",
+      "actual": 773.3823948387691,
+      "expected": 773.3823948387691,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 parameter pressure work c",
+      "actual": 773.382394838769,
+      "expected": 773.3823948387691,
+      "scaled_error": 1.4699951599663307e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 C_omega exact pressure derivative",
+      "actual": 5.683017035519998,
+      "expected": 5.683017035519999,
+      "scaled_error": 1.5628642570466208e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 C_rho exact pressure derivative",
+      "actual": 0.22732068142079995,
+      "expected": 0.2273206814208,
+      "scaled_error": 2.4419754016353447e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 naive pressure factor two C_omega",
+      "actual": 11.366034071039998,
+      "expected": 11.366034071039996,
+      "scaled_error": 1.562864257046621e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 vector coupling no entropy shift C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 naive pressure factor two C_rho",
+      "actual": 0.45464136284159995,
+      "expected": 0.4546413628415999,
+      "scaled_error": 1.2209877008176726e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 vector coupling no entropy shift C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed state/coupling JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD phi_mev",
+      "actual": 4.748481656858156,
+      "expected": 4.748481658037917,
+      "scaled_error": 2.4845019157686254e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD omega_mev",
+      "actual": 6.5891425295168,
+      "expected": 6.589142529509218,
+      "scaled_error": 1.150738375292776e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD rho_mev",
+      "actual": -0.16433390927712,
+      "expected": -0.16433390868471065,
+      "scaled_error": 3.6049123917520176e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD dirac_mass_mev",
+      "actual": -4.748481656858156,
+      "expected": -4.748481658020864,
+      "scaled_error": 2.4485893296365916e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD kinetic_mu_n_mev",
+      "actual": -3.62134807352734,
+      "expected": -3.621348075455444,
+      "scaled_error": 5.324271123869708e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD kinetic_mu_p_mev",
+      "actual": -3.7749652044818482,
+      "expected": -3.7749652054117178,
+      "scaled_error": 2.4632532066462655e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD mu_n_mev",
+      "actual": 3.0499614106280193,
+      "expected": 3.0499614083851156,
+      "scaled_error": 7.353875476673642e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD mu_p_mev",
+      "actual": 2.7320103703963916,
+      "expected": 2.7320103697434206,
+      "scaled_error": 2.390075154277187e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD energy_density",
+      "actual": 4.094919607974875,
+      "expected": 4.094919610031411,
+      "scaled_error": 5.022165196040463e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD pressure",
+      "actual": 0.8421258958807176,
+      "expected": 0.8421258982242108,
+      "scaled_error": 2.7828299571765495e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD free_energy_density",
+      "actual": 3.6900502096336916,
+      "expected": 3.6900502115372547,
+      "scaled_error": 5.158637351290454e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 mixed FD entropy_density",
+      "actual": 0.009935215772339696,
+      "expected": 0.009935215781653461,
+      "scaled_error": 9.37449698293212e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 baseline frozen primal",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian phi_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian kinetic_mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian mu_n_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian energy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian pressure",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian free_energy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 unchanged state Jacobian entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 baseline roots",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 local stable Hessian",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 implicit linear residual",
+      "actual": 3.552713678800501e-15,
+      "expected": 0.0,
+      "scaled_error": 3.552713678800501e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 JAX jacfwd",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 JAX jacrev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined coupling C_sigma",
+      "actual": 8.355491503215605e-15,
+      "expected": 0.0,
+      "scaled_error": 1.84874902202893e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined coupling C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined coupling C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined coupling b",
+      "actual": 3.7388982909517395e-11,
+      "expected": 0.0,
+      "scaled_error": 5.307603001766415e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined coupling c",
+      "actual": 4.725052616168421e-11,
+      "expected": 0.0,
+      "scaled_error": 1.3498405603414012e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 source partial Hellmann-Feynman C_sigma",
+      "actual": -3.977600827600691,
+      "expected": -3.977600827603419,
+      "scaled_error": 6.858506256276679e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 source partial Hellmann-Feynman C_omega",
+      "actual": 10.10314139648,
+      "expected": 10.103141396476712,
+      "scaled_error": 3.2544694572685155e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 source partial Hellmann-Feynman C_rho",
+      "actual": 1.6165026234367998,
+      "expected": 1.6165026234515443,
+      "scaled_error": 9.121190208373842e-12,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 source partial Hellmann-Feynman b",
+      "actual": 4146.96320892977,
+      "expected": 4146.963208927685,
+      "scaled_error": 5.028912112544598e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 source partial Hellmann-Feynman c",
+      "actual": 1546.586703005668,
+      "expected": 1546.5867030050115,
+      "scaled_error": 4.244364701501536e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell entropy C_sigma",
+      "actual": -0.00847322426562692,
+      "expected": -0.008473224265626925,
+      "scaled_error": 6.141900963299206e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell density C_sigma",
+      "actual": -15.859253110814784,
+      "expected": -15.85925311081478,
+      "scaled_error": 2.240151950395335e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell composition C_sigma",
+      "actual": -0.8604783244164367,
+      "expected": -0.8604783244164361,
+      "scaled_error": 6.451196928046349e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell entropy C_omega",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell density C_omega",
+      "actual": 63.144633728,
+      "expected": 63.144633728,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell composition C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell entropy C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell density C_rho",
+      "actual": 10.10314139648,
+      "expected": 10.10314139648,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell composition C_rho",
+      "actual": -8.082513117184,
+      "expected": -8.082513117184,
+      "scaled_error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell entropy b",
+      "actual": 13.251008892122032,
+      "expected": 13.251008892122044,
+      "scaled_error": 9.38381218896795e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell density b",
+      "actual": 24801.78706544267,
+      "expected": 24801.787065442666,
+      "scaled_error": 1.4668212405390158e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell composition b",
+      "actual": 1345.6749840288617,
+      "expected": 1345.6749840288599,
+      "scaled_error": 1.3517301169558234e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell entropy c",
+      "actual": 6.589186069084918,
+      "expected": 6.589186069084917,
+      "scaled_error": 1.347933432730444e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell density c",
+      "actual": 12332.916772637867,
+      "expected": 12332.91677263787,
+      "scaled_error": 1.4749060883809042e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed HF Maxwell composition c",
+      "actual": 669.1492648194193,
+      "expected": 669.1492648194189,
+      "scaled_error": 5.096927264156659e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_sigma step0.002",
+      "actual": 1.3010426069826053e-15,
+      "expected": 0.0,
+      "scaled_error": 1.3010426069826053e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_sigma step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_sigma step0.001",
+      "actual": 8.673617379884035e-16,
+      "expected": 0.0,
+      "scaled_error": 8.673617379884035e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_sigma step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_sigma step0.0005",
+      "actual": 1.0842021724855044e-15,
+      "expected": 0.0,
+      "scaled_error": 1.0842021724855044e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_sigma step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma phi_mev",
+      "actual": 20.655523438475505,
+      "expected": 20.65552343847003,
+      "scaled_error": 2.650492879224313e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma dirac_mass_mev",
+      "actual": -20.655523438475505,
+      "expected": -20.65552343847003,
+      "scaled_error": 2.650492879224313e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma kinetic_mu_n_mev",
+      "actual": -15.590353634434644,
+      "expected": -15.590353634429981,
+      "scaled_error": 2.990911439704584e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma kinetic_mu_p_mev",
+      "actual": -18.279348398236007,
+      "expected": -18.279348398235015,
+      "scaled_error": 5.422551694900935e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma mu_n_mev",
+      "actual": -15.590353634434644,
+      "expected": -15.590353634429981,
+      "scaled_error": 2.990911439704584e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma mu_p_mev",
+      "actual": -18.279348398236007,
+      "expected": -18.27934839823823,
+      "scaled_error": 1.21667288924996e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma energy_density",
+      "actual": -4.231797555569498,
+      "expected": -4.231797555552809,
+      "scaled_error": 3.9436840461015975e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma pressure",
+      "actual": -1.0973601678600389,
+      "expected": -1.0973601678595635,
+      "scaled_error": 4.3321920465891364e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma free_energy_density",
+      "actual": -3.977600827600691,
+      "expected": -3.9776008275833217,
+      "scaled_error": 4.366757230943331e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_sigma entropy_density",
+      "actual": -0.008473224265626925,
+      "expected": -0.00847322426563493,
+      "scaled_error": 9.448290981866351e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 Hellmann-Feynman C_sigma",
+      "actual": -3.977600827600691,
+      "expected": -3.977600827600691,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling first-law C_sigma",
+      "actual": -3.9776008276006904,
+      "expected": -3.977600827600691,
+      "scaled_error": 1.1164750539282734e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 parameter pressure work C_sigma",
+      "actual": -3.977600827600691,
+      "expected": -3.977600827600691,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_omega step0.002",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_omega step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_omega step0.001",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_omega step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_omega step0.0005",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_omega step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega phi_mev",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega omega_mev",
+      "actual": 63.144633728,
+      "expected": 63.144633728017546,
+      "scaled_error": 2.7782725324658643e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega kinetic_mu_n_mev",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega mu_n_mev",
+      "actual": 63.144633728,
+      "expected": 63.14463372801092,
+      "scaled_error": 1.7295281014177728e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega mu_p_mev",
+      "actual": 63.144633728,
+      "expected": 63.144633728029476,
+      "scaled_error": 4.667587875522976e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega energy_density",
+      "actual": 10.10314139648,
+      "expected": 10.103141396488638,
+      "scaled_error": 8.550234992262619e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega pressure",
+      "actual": 10.103141396480003,
+      "expected": 10.103141396481348,
+      "scaled_error": 1.3309742729071506e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega free_energy_density",
+      "actual": 10.10314139648,
+      "expected": 10.103141396488638,
+      "scaled_error": 8.550234992262619e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_omega entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 Hellmann-Feynman C_omega",
+      "actual": 10.10314139648,
+      "expected": 10.10314139648,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling first-law C_omega",
+      "actual": 10.10314139648,
+      "expected": 10.10314139648,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 parameter pressure work C_omega",
+      "actual": 10.10314139648,
+      "expected": 10.10314139648,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_rho step0.002",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_rho step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_rho step0.001",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_rho step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots C_rho step0.0005",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability C_rho step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho phi_mev",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho rho_mev",
+      "actual": -25.2578534912,
+      "expected": -25.257853491198365,
+      "scaled_error": 6.470258024173428e-14,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho dirac_mass_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho kinetic_mu_n_mev",
+      "actual": -0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho kinetic_mu_p_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho mu_n_mev",
+      "actual": 12.6289267456,
+      "expected": 12.628926745590858,
+      "scaled_error": 7.238249520090958e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho mu_p_mev",
+      "actual": -12.6289267456,
+      "expected": -12.628926745560783,
+      "scaled_error": 3.105301878263285e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho energy_density",
+      "actual": 1.6165026234367998,
+      "expected": 1.616502623434358,
+      "scaled_error": 1.5105601964151253e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho pressure",
+      "actual": 1.6165026234368003,
+      "expected": 1.6165026234351636,
+      "scaled_error": 1.0124887885578194e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho free_energy_density",
+      "actual": 1.6165026234367998,
+      "expected": 1.616502623434358,
+      "scaled_error": 1.5105601964151253e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD C_rho entropy_density",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 Hellmann-Feynman C_rho",
+      "actual": 1.6165026234367998,
+      "expected": 1.6165026234367998,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling first-law C_rho",
+      "actual": 1.6165026234367998,
+      "expected": 1.6165026234367998,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 parameter pressure work C_rho",
+      "actual": 1.6165026234367998,
+      "expected": 1.6165026234367998,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots b step0.002",
+      "actual": 2.6020852139652106e-15,
+      "expected": 0.0,
+      "scaled_error": 2.6020852139652106e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability b step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots b step0.001",
+      "actual": 1.5178830414797062e-15,
+      "expected": 0.0,
+      "scaled_error": 1.5178830414797062e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability b step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots b step0.0005",
+      "actual": 1.5178830414797062e-15,
+      "expected": 0.0,
+      "scaled_error": 1.5178830414797062e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability b step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b phi_mev",
+      "actual": -32302.52335760912,
+      "expected": -32302.52335759495,
+      "scaled_error": 4.386631749092319e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b dirac_mass_mev",
+      "actual": 32302.52335760912,
+      "expected": 32302.52335759495,
+      "scaled_error": 4.386631749092319e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b kinetic_mu_n_mev",
+      "actual": 24381.263632933646,
+      "expected": 24381.263632888844,
+      "scaled_error": 1.8375466376115002e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b kinetic_mu_p_mev",
+      "actual": 28586.497958023832,
+      "expected": 28586.497958010612,
+      "scaled_error": 4.624706042828381e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b mu_n_mev",
+      "actual": 24381.263632933646,
+      "expected": 24381.263632882416,
+      "scaled_error": 2.1012043646652023e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b mu_p_mev",
+      "actual": 28586.497958023832,
+      "expected": 28586.49795802026,
+      "scaled_error": 1.2497141810830866e-13,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b energy_density",
+      "actual": 4544.493475693432,
+      "expected": 4544.493475682639,
+      "scaled_error": 2.37495634743278e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b pressure",
+      "actual": 3789.6086520118834,
+      "expected": 3789.6086519989567,
+      "scaled_error": 3.4110773389437017e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b free_energy_density",
+      "actual": 4146.96320892977,
+      "expected": 4146.963208924471,
+      "scaled_error": 1.2779533746105574e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD b entropy_density",
+      "actual": 13.251008892122044,
+      "expected": 13.251008892043194,
+      "scaled_error": 5.950543417979671e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 Hellmann-Feynman b",
+      "actual": 4146.96320892977,
+      "expected": 4146.96320892977,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling first-law b",
+      "actual": 4146.96320892977,
+      "expected": 4146.96320892977,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 parameter pressure work b",
+      "actual": 4146.96320892977,
+      "expected": 4146.96320892977,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots c step0.002",
+      "actual": 1.3010426069826053e-15,
+      "expected": 0.0,
+      "scaled_error": 1.3010426069826053e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability c step0.002",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots c step0.001",
+      "actual": 3.0357660829594124e-15,
+      "expected": 0.0,
+      "scaled_error": 3.0357660829594124e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability c step0.001",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed roots c step0.0005",
+      "actual": 1.3010426069826053e-15,
+      "expected": 0.0,
+      "scaled_error": 1.3010426069826053e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 perturbed local stability c step0.0005",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c phi_mev",
+      "actual": -16062.726894009553,
+      "expected": -16062.726894262887,
+      "scaled_error": 1.5771561944511536e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c dirac_mass_mev",
+      "actual": 16062.726894009553,
+      "expected": 16062.726894262887,
+      "scaled_error": 1.5771561944511536e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c kinetic_mu_n_mev",
+      "actual": 12123.8076273818,
+      "expected": 12123.807627508782,
+      "scaled_error": 1.047375834172858e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c kinetic_mu_p_mev",
+      "actual": 14214.899079942485,
+      "expected": 14214.899080183377,
+      "scaled_error": 1.6946473086552315e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c mu_n_mev",
+      "actual": 12123.8076273818,
+      "expected": 12123.807627491073,
+      "scaled_error": 9.013022459333038e-12,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c mu_p_mev",
+      "actual": 14214.899079942485,
+      "expected": 14214.89908036046,
+      "scaled_error": 2.9403983717468793e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c energy_density",
+      "actual": 1744.2622850782154,
+      "expected": 1744.2622850299288,
+      "scaled_error": 2.7683144758257695e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c pressure",
+      "actual": 2399.9466642384505,
+      "expected": 2399.9466642795082,
+      "scaled_error": 1.7107786052325543e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c free_energy_density",
+      "actual": 1546.586703005668,
+      "expected": 1546.5867029076162,
+      "scaled_error": 6.339878269941045e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling FD c entropy_density",
+      "actual": 6.589186069084917,
+      "expected": 6.589186069210999,
+      "scaled_error": 1.9134723837302152e-11,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 Hellmann-Feynman c",
+      "actual": 1546.586703005668,
+      "expected": 1546.586703005668,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 coupling first-law c",
+      "actual": 1546.586703005668,
+      "expected": 1546.586703005668,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 parameter pressure work c",
+      "actual": 1546.586703005668,
+      "expected": 1546.586703005668,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 C_omega exact pressure derivative",
+      "actual": 10.103141396480003,
+      "expected": 10.10314139648,
+      "scaled_error": 3.516444578354896e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 C_rho exact pressure derivative",
+      "actual": 1.6165026234368003,
+      "expected": 1.6165026234367998,
+      "scaled_error": 2.7472223268397626e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 naive pressure factor two C_omega",
+      "actual": 20.206282792960003,
+      "expected": 20.206282792960007,
+      "scaled_error": 1.7582222891774475e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 vector coupling no entropy shift C_omega",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 naive pressure factor two C_rho",
+      "actual": 3.2330052468736,
+      "expected": 3.2330052468736006,
+      "scaled_error": 1.373611163419881e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 vector coupling no entropy shift C_rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed state/coupling JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD phi_mev",
+      "actual": 3.6610286263570373,
+      "expected": 3.6610286284997073,
+      "scaled_error": 5.852644867931778e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD omega_mev",
+      "actual": 6.9048656981568,
+      "expected": 6.9048656981578915,
+      "scaled_error": 1.5808725694732453e-13,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD rho_mev",
+      "actual": -0.8095142043929603,
+      "expected": -0.809514203803019,
+      "scaled_error": 7.287596872881653e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD dirac_mass_mev",
+      "actual": -3.6610286263570373,
+      "expected": -3.6610286284997073,
+      "scaled_error": 5.852644867931778e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD kinetic_mu_n_mev",
+      "actual": -2.3287638558296666,
+      "expected": -2.3287638590431925,
+      "scaled_error": 1.3799277575330957e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD kinetic_mu_p_mev",
+      "actual": -2.8143689992286487,
+      "expected": -2.814369002373951,
+      "scaled_error": 1.1175870108816819e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD mu_n_mev",
+      "actual": 4.9808589445236136,
+      "expected": 4.980858941030419,
+      "scaled_error": 7.013236511448925e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD mu_p_mev",
+      "actual": 3.685739596731671,
+      "expected": 3.6857395938682203,
+      "scaled_error": 7.768999238475163e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD energy_density",
+      "actual": 4.624689096120985,
+      "expected": 4.624689097812507,
+      "scaled_error": 3.6575898480705843e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD pressure",
+      "actual": 1.6650990467068825,
+      "expected": 1.6650990478431993,
+      "scaled_error": 6.824319669688096e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD free_energy_density",
+      "actual": 4.0374569024033935,
+      "expected": 4.037456903660086,
+      "scaled_error": 3.112584376265841e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 mixed FD entropy_density",
+      "actual": 0.010273032121481207,
+      "expected": 0.010273032124558101,
+      "scaled_error": 2.995118290826624e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "JIT reverse weighted functional",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "higher derivatives explicitly unsupported",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "invalid staged coupling returns NaN",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "states": [
+    {
+      "x": [
+        0.16,
+        10.0,
+        0.1,
+        11.785,
+        7.148,
+        4.41,
+        0.002947,
+        -0.00107
+      ],
+      "outputs": [
+        286.84152054639947,
+        225.67892094387201,
+        -55.693566948096006,
+        652.1584794536006,
+        725.0005595155691,
+        663.9905912076009,
+        978.5262639334891,
+        861.822728677425,
+        151.7931270781473,
+        4.230329338027903,
+        150.4666163272335,
+        0.13265107509138074
+      ],
+      "jacobian": [
+        [
+          1437.6258012684068,
+          -0.23273888730862774,
+          17.316925644204265,
+          16.65847536152505,
+          -0.0,
+          -0.0,
+          -16004.020262885428,
+          -4888.836535741686
+        ],
+        [
+          1410.4932558992,
+          0.0,
+          0.0,
+          0.0,
+          31.572316864,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -348.0847934256,
+          0.0,
+          139.23391737024,
+          0.0,
+          0.0,
+          -12.6289267456,
+          0.0,
+          0.0
+        ],
+        [
+          -1437.6258012684068,
+          0.23273888730862774,
+          -17.316925644204265,
+          -16.65847536152505,
+          0.0,
+          0.0,
+          16004.020262885428,
+          4888.836535741686
+        ],
+        [
+          -990.2232317503504,
+          -0.08351789405574775,
+          -68.59632392845764,
+          -14.93345513736408,
+          0.0,
+          0.0,
+          14346.770243167422,
+          4382.5872113737805
+        ],
+        [
+          -1287.4897183455605,
+          -1.02704871893258,
+          141.74053680378233,
+          -16.066239334257293,
+          0.0,
+          0.0,
+          15435.051184076752,
+          4715.030406125749
+        ],
+        [
+          594.3124208616496,
+          -0.08351789405574775,
+          -138.21328261357763,
+          -14.93345513736408,
+          31.572316864,
+          6.3144633728,
+          14346.770243167422,
+          4382.5872113737805
+        ],
+        [
+          -51.03885915916062,
+          -1.02704871893258,
+          211.35749548890234,
+          -16.066239334257293,
+          31.572316864,
+          -6.3144633728,
+          15435.051184076752,
+          4715.030406125749
+        ],
+        [
+          968.634620173317,
+          0.11664571569960533,
+          -17.1629163211673,
+          -1.5254550695340527,
+          2.52578534912,
+          0.40412565585919996,
+          984.8175141476456,
+          227.41544745387154
+        ],
+        [
+          84.76436685753097,
+          0.10419171884443178,
+          -16.520992768532743,
+          -0.9063816288622906,
+          2.525785349120001,
+          0.4041256558592001,
+          1351.4805535045975,
+          486.2664377165056
+        ],
+        [
+          966.8559104078827,
+          -0.13265107509138074,
+          -18.672565640970248,
+          -1.5010957402662541,
+          2.52578534912,
+          0.40412565585919996,
+          961.4151804567394,
+          220.2666072193308
+        ],
+        [
+          0.17787097654343098,
+          0.011664571569960532,
+          0.1509649319802932,
+          -0.0024359329267798664,
+          0.0,
+          0.0,
+          2.340233369090612,
+          0.7148840234540739
+        ]
+      ],
+      "diagnostics": {
+        "params": {
+          "M_mev": 939.0,
+          "C_sigma": 11.785,
+          "C_omega": 7.148,
+          "C_rho": 4.41,
+          "b": 0.002947,
+          "c": -0.00107
+        },
+        "max_equation_residual": 4.119968255444917e-15,
+        "canonical_scalar_curvature_fm_minus2": 0.12397884653541252,
+        "implicit_jacobian_condition": 22.463421107515227,
+        "implicit_linear_residual": 3.552713678800501e-15,
+        "chemical_hessian_eigenvalues_mev_fm3": [
+          616.3787399348898,
+          1202.1640355261616
+        ],
+        "hellmann_feynman_free_energy_derivatives": [
+          -1.5010957402662541,
+          2.52578534912,
+          0.40412565585919996,
+          961.4151804567394,
+          220.2666072193308
+        ],
+        "naive_fixed_parameter_pressure_derivatives": [
+          -2.4074773691285447,
+          5.051570698240001,
+          0.8082513117184,
+          2312.895733961337,
+          706.5330449358364
+        ]
+      },
+      "parameter_ladders": [
+        {
+          "parameter": "C_sigma",
+          "absolute_input": 11.785,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.02357,
+              "max_root_residual": 5.204170427930421e-15,
+              "min_hessian_eigenvalue": 614.7828073730742
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.011785,
+              "max_root_residual": 1.5178830414797062e-15,
+              "min_hessian_eigenvalue": 615.5803705656581
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.0058925,
+              "max_root_residual": 5.204170427930421e-15,
+              "min_hessian_eigenvalue": 615.9794547437817
+            }
+          ],
+          "finite_differences": [
+            [
+              16.658482994930203,
+              0.0,
+              0.0,
+              -16.65848299493141,
+              -14.933462969999114,
+              -16.066246981499077,
+              -14.933462969996704,
+              -16.066246981499077,
+              -1.5254554273930405,
+              -0.9063825306418765,
+              -1.5010960887365055,
+              -0.002435933865686252
+            ],
+            [
+              16.658477269875455,
+              0.0,
+              0.0,
+              -16.658477269875455,
+              -14.933457095522384,
+              -16.066241246072874,
+              -14.93345709551756,
+              -16.066241246072874,
+              -1.5254551590026302,
+              -0.9063818543074437,
+              -1.5010958273882156,
+              -0.002435933161509517
+            ],
+            [
+              16.658475838612674,
+              0.0,
+              0.0,
+              -16.658475838617495,
+              -14.933455626912245,
+              -16.066239812210295,
+              -14.933455626902598,
+              -16.06623981220065,
+              -1.5254550918914618,
+              -0.9063816852232561,
+              -1.5010957620375773,
+              -0.002435932985452969
+            ]
+          ],
+          "richardson": [
+            16.65847536152508,
+            0.0,
+            0.0,
+            -16.658475361531508,
+            -14.933455137375532,
+            -16.0662393342561,
+            -14.933455137364277,
+            -16.06623933424324,
+            -1.5254550695210725,
+            -0.9063816288618604,
+            -1.501095740254031,
+            -0.0024359329267674527
+          ],
+          "analytic": [
+            16.65847536152505,
+            0.0,
+            0.0,
+            -16.65847536152505,
+            -14.93345513736408,
+            -16.066239334257293,
+            -14.93345513736408,
+            -16.066239334257293,
+            -1.5254550695340527,
+            -0.9063816288622906,
+            -1.5010957402662541,
+            -0.0024359329267798664
+          ],
+          "source_fixed_scalar_partial": -1.50109574026207
+        },
+        {
+          "parameter": "C_omega",
+          "absolute_input": 7.148,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.014296,
+              "max_root_residual": 4.119968255444917e-15,
+              "min_hessian_eigenvalue": 611.7856480345432
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.007148,
+              "max_root_residual": 4.119968255444917e-15,
+              "min_hessian_eigenvalue": 614.0842438372888
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.003574,
+              "max_root_residual": 4.119968255444917e-15,
+              "min_hessian_eigenvalue": 615.2320066698285
+            }
+          ],
+          "finite_differences": [
+            [
+              0.0,
+              31.572316863999827,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              31.572316863998832,
+              31.572316863998832,
+              2.5257853491195092,
+              2.525785349119975,
+              2.5257853491195092,
+              0.0
+            ],
+            [
+              0.0,
+              31.572316864000822,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              31.572316864010762,
+              31.572316864010762,
+              2.525785349121497,
+              2.5257853491201305,
+              2.525785349121497,
+              0.0
+            ],
+            [
+              0.0,
+              31.572316864006787,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              31.57231686400281,
+              31.572316864018713,
+              2.525785349121497,
+              2.5257853491203788,
+              2.525785349121497,
+              0.0
+            ]
+          ],
+          "richardson": [
+            0.0,
+            31.572316864008773,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            31.57231686400016,
+            31.572316864021364,
+            2.525785349121497,
+            2.5257853491204614,
+            2.525785349121497,
+            0.0
+          ],
+          "analytic": [
+            -0.0,
+            31.572316864,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            31.572316864,
+            31.572316864,
+            2.52578534912,
+            2.525785349120001,
+            2.52578534912,
+            0.0
+          ],
+          "source_fixed_scalar_partial": 2.5257853491168585
+        },
+        {
+          "parameter": "C_rho",
+          "absolute_input": 4.41,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.00882,
+              "max_root_residual": 4.119968255444917e-15,
+              "min_hessian_eigenvalue": 616.2154961095857
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.00441,
+              "max_root_residual": 4.119968255444917e-15,
+              "min_hessian_eigenvalue": 616.2971672987319
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.002205,
+              "max_root_residual": 4.119968255444917e-15,
+              "min_hessian_eigenvalue": 616.3379659273556
+            }
+          ],
+          "finite_differences": [
+            [
+              0.0,
+              0.0,
+              -12.628926745599854,
+              0.0,
+              0.0,
+              0.0,
+              6.314463372793281,
+              -6.314463372793281,
+              0.4041256558585895,
+              0.4041256558591937,
+              0.4041256558585895,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -12.628926745600257,
+              0.0,
+              0.0,
+              0.0,
+              6.314463372812615,
+              -6.314463372812615,
+              0.4041256558618119,
+              0.4041256558595965,
+              0.4041256558618119,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -12.62892674559945,
+              0.0,
+              0.0,
+              0.0,
+              6.314463372799725,
+              -6.314463372799725,
+              0.4041256558618119,
+              0.4041256558589923,
+              0.4041256558618119,
+              0.0
+            ]
+          ],
+          "richardson": [
+            0.0,
+            0.0,
+            -12.628926745599182,
+            0.0,
+            0.0,
+            0.0,
+            6.314463372795429,
+            -6.314463372795429,
+            0.40412565586181187,
+            0.4041256558587909,
+            0.40412565586181187,
+            0.0
+          ],
+          "analytic": [
+            -0.0,
+            0.0,
+            -12.6289267456,
+            0.0,
+            0.0,
+            0.0,
+            6.3144633728,
+            -6.3144633728,
+            0.40412565585919996,
+            0.4041256558592001,
+            0.40412565585919996,
+            0.0
+          ],
+          "source_fixed_scalar_partial": 0.40412565585429294
+        },
+        {
+          "parameter": "b",
+          "absolute_input": 0.002947,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 5.894e-06,
+              "max_root_residual": 6.938893903907228e-15,
+              "min_hessian_eigenvalue": 615.2825664735792
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 2.947e-06,
+              "max_root_residual": 2.8189256484623115e-15,
+              "min_hessian_eigenvalue": 615.8310391173509
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 1.4735e-06,
+              "max_root_residual": 5.204170427930421e-15,
+              "min_hessian_eigenvalue": 616.1049859569619
+            }
+          ],
+          "finite_differences": [
+            [
+              -16004.027607897715,
+              0.0,
+              0.0,
+              16004.027607897715,
+              14346.776558064259,
+              15435.05818606508,
+              14346.77655804497,
+              15435.05818606508,
+              984.8178231706386,
+              1351.4812768074949,
+              961.4154785543789,
+              2.3402344615581585
+            ],
+            [
+              -16004.022099130047,
+              0.0,
+              0.0,
+              16004.022099120402,
+              14346.771821871373,
+              15435.052934568372,
+              14346.771821890661,
+              15435.05293458766,
+              984.8175914112244,
+              1351.4807343289417,
+              961.4152549901962,
+              2.340233642213001
+            ],
+            [
+              -16004.020721974295,
+              0.0,
+              0.0,
+              16004.020721955007,
+              14346.77063784244,
+              15435.051621691784,
+              14346.770637803862,
+              15435.051621691784,
+              984.8175333526254,
+              1351.480598705875,
+              961.4151989761859,
+              2.340233437276643
+            ]
+          ],
+          "richardson": [
+            -16004.020262922379,
+            0.0,
+            0.0,
+            16004.020262899874,
+            14346.77024316613,
+            15435.051184066257,
+            14346.770243108263,
+            15435.051184059825,
+            984.8175139997592,
+            1351.4805534981863,
+            961.4151803048493,
+            2.340233368964524
+          ],
+          "analytic": [
+            -16004.020262885428,
+            0.0,
+            0.0,
+            16004.020262885428,
+            14346.770243167422,
+            15435.051184076752,
+            14346.770243167422,
+            15435.051184076752,
+            984.8175141476456,
+            1351.4805535045975,
+            961.4151804567394,
+            2.340233369090612
+          ],
+          "source_fixed_scalar_partial": 961.4151804591578
+        },
+        {
+          "parameter": "c",
+          "absolute_input": -0.00107,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 2.14e-06,
+              "max_root_residual": 3.0357660829594124e-15,
+              "min_hessian_eigenvalue": 616.1784369771711
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 1.07e-06,
+              "max_root_residual": 4.336808689942018e-15,
+              "min_hessian_eigenvalue": 616.2786020051624
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 5.35e-07,
+              "max_root_residual": 4.336808689942018e-15,
+              "min_hessian_eigenvalue": 616.3286743569333
+            }
+          ],
+          "finite_differences": [
+            [
+              -4888.836606268359,
+              0.0,
+              0.0,
+              4888.836606241796,
+              4382.587273086,
+              4715.03047368349,
+              4382.587273086,
+              4715.03047368349,
+              227.41544929323948,
+              486.2664459802937,
+              220.2666089565079,
+              0.7148840339079131
+            ],
+            [
+              -4888.836553356167,
+              0.0,
+              0.0,
+              4888.83655338273,
+              4382.587226734708,
+              4715.03042294941,
+              4382.587226787832,
+              4715.030423055659,
+              227.41544783895105,
+              486.2664397788162,
+              220.26660758190653,
+              0.7148840260416718
+            ],
+            [
+              -4888.836540101557,
+              0.0,
+              0.0,
+              4888.836540154682,
+              4382.587215259774,
+              4715.030410411983,
+              4382.587215153525,
+              4715.030410305734,
+              227.41544741395353,
+              486.26643821744835,
+              220.26660717019016,
+              0.7148840239664885
+            ]
+          ],
+          "richardson": [
+            -4888.836535683354,
+            0.0,
+            0.0,
+            4888.836535745332,
+            4382.587211434796,
+            4715.0304062328405,
+            4382.587211275422,
+            4715.030406055759,
+            227.41544727228768,
+            486.2664376969924,
+            220.26660703295136,
+            0.7148840232747607
+          ],
+          "analytic": [
+            -4888.836535741686,
+            0.0,
+            0.0,
+            4888.836535741686,
+            4382.5872113737805,
+            4715.030406125749,
+            4382.5872113737805,
+            4715.030406125749,
+            227.41544745387154,
+            486.2664377165056,
+            220.2666072193308,
+            0.7148840234540739
+          ],
+          "source_fixed_scalar_partial": 220.2666072277419
+        }
+      ]
+    },
+    {
+      "x": [
+        0.24,
+        20.0,
+        0.3,
+        11.785,
+        7.148,
+        4.41,
+        0.002947,
+        -0.00107
+      ],
+      "outputs": [
+        392.64802819069996,
+        338.518381415808,
+        -41.770175211072,
+        546.3519718093002,
+        636.8599022169,
+        594.2677633172353,
+        996.263371238244,
+        911.9010571275073,
+        227.46023039885236,
+        11.459323022192446,
+        221.56979945901267,
+        0.2945215469919851
+      ],
+      "jacobian": [
+        [
+          1210.1882257040743,
+          -0.4672181671615543,
+          16.530082352395624,
+          20.13531941689057,
+          -0.0,
+          -0.0,
+          -26479.74325982903,
+          -11072.650668762344
+        ],
+        [
+          1410.4932558992,
+          0.0,
+          0.0,
+          0.0,
+          47.358475295999995,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -174.04239671279998,
+          0.0,
+          208.85087605536,
+          0.0,
+          0.0,
+          -9.4716950592,
+          0.0,
+          0.0
+        ],
+        [
+          -1210.1882257040743,
+          0.4672181671615543,
+          -16.530082352395624,
+          -20.13531941689057,
+          0.0,
+          0.0,
+          26479.74325982903,
+          11072.650668762344
+        ],
+        [
+          -767.5411452610716,
+          -0.12624817286184165,
+          -102.02161927167161,
+          -17.04243233281312,
+          0.0,
+          0.0,
+          22412.32052754741,
+          9371.835423130391
+        ],
+        [
+          -913.3734930799797,
+          -0.4568632138323537,
+          121.38456671210703,
+          -18.029215090842456,
+          0.0,
+          0.0,
+          23710.02798104446,
+          9914.47895112186
+        ],
+        [
+          729.9733089945282,
+          -0.12624817286184165,
+          -206.4470572993516,
+          -17.04243233281312,
+          47.358475295999995,
+          4.7358475296,
+          22412.32052754741,
+          9371.835423130391
+        ],
+        [
+          410.09856446282026,
+          -0.4568632138323537,
+          225.81000473978705,
+          -18.029215090842456,
+          47.358475295999995,
+          -4.7358475296,
+          23710.02798104446,
+          9914.47895112186
+        ],
+        [
+          975.4633307080828,
+          0.25305737088429187,
+          -18.660003189918342,
+          -2.946627914876893,
+          5.68301703552,
+          0.2273206814208,
+          2642.072851287215,
+          847.0032010751553
+        ],
+        [
+          152.1626125524038,
+          0.2404177025552662,
+          -18.4247852850264,
+          -1.3484816728151165,
+          5.683017035519998,
+          0.22732068142079995,
+          3006.379840231,
+          1514.9284407279106
+        ],
+        [
+          970.9546770050229,
+          -0.2945215469919851,
+          -20.246955386576786,
+          -2.812750445638144,
+          5.68301703552,
+          0.2273206814208,
+          2466.012023032166,
+          773.3823948387691
+        ],
+        [
+          0.2254326851529953,
+          0.012652868544214593,
+          0.07934760983292292,
+          -0.00669387346193745,
+          0.0,
+          0.0,
+          8.803041412752464,
+          3.681040311819313
+        ]
+      ],
+      "diagnostics": {
+        "params": {
+          "M_mev": 939.0,
+          "C_sigma": 11.785,
+          "C_omega": 7.148,
+          "C_rho": 4.41,
+          "b": 0.002947,
+          "c": -0.00107
+        },
+        "max_equation_residual": 3.854941057726238e-15,
+        "canonical_scalar_curvature_fm_minus2": 0.1404060183303385,
+        "implicit_jacobian_condition": 17.545967115889127,
+        "implicit_linear_residual": 1.7763568394002505e-14,
+        "chemical_hessian_eigenvalues_mev_fm3": [
+          894.321871100831,
+          1162.4213378050838
+        ],
+        "hellmann_feynman_free_energy_derivatives": [
+          -2.812750445638144,
+          5.68301703552,
+          0.2273206814208,
+          2466.012023032166,
+          773.3823948387691
+        ],
+        "naive_fixed_parameter_pressure_derivatives": [
+          -4.161232118453261,
+          11.366034071039998,
+          0.45464136284159995,
+          5472.391863263166,
+          2288.3108355666795
+        ]
+      },
+      "parameter_ladders": [
+        {
+          "parameter": "C_sigma",
+          "absolute_input": 11.785,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.02357,
+              "max_root_residual": 5.204170427930421e-15,
+              "min_hessian_eigenvalue": 894.0778192290617
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.011785,
+              "max_root_residual": 5.204170427930421e-15,
+              "min_hessian_eigenvalue": 894.1998539840835
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.0058925,
+              "max_root_residual": 4.8186763221577976e-15,
+              "min_hessian_eigenvalue": 894.260864748528
+            }
+          ],
+          "finite_differences": [
+            [
+              20.13533493155968,
+              0.0,
+              0.0,
+              -20.135334931560887,
+              -17.042448255897913,
+              -18.029230776536963,
+              -17.042448255897913,
+              -18.02923077653455,
+              -2.94662924664422,
+              -1.348484218694752,
+              -2.812751704209153,
+              -0.006693877121751683
+            ],
+            [
+              20.1353232955587,
+              0.0,
+              0.0,
+              -20.1353232955587,
+              -17.042436313582773,
+              -18.029219012269298,
+              -17.042436313582773,
+              -18.029219012269298,
+              -2.9466282478207004,
+              -1.3484823092846028,
+              -2.812750760282823,
+              -0.006693874376897182
+            ],
+            [
+              20.13532038655996,
+              0.0,
+              0.0,
+              -20.13532038655996,
+              -17.04243332801303,
+              -18.029216071199972,
+              -17.042433328003384,
+              -18.029216071199972,
+              -2.946627998118438,
+              -1.3484818319336576,
+              -2.8127505243054602,
+              -0.006693873690685617
+            ]
+          ],
+          "richardson": [
+            20.135319416893715,
+            0.0,
+            0.0,
+            -20.135319416893715,
+            -17.042432332823115,
+            -18.029215090843532,
+            -17.042432332810254,
+            -18.029215090843532,
+            -2.9466279148843504,
+            -1.3484816728166757,
+            -2.8127504456463392,
+            -0.006693873461948428
+          ],
+          "analytic": [
+            20.13531941689057,
+            0.0,
+            0.0,
+            -20.13531941689057,
+            -17.04243233281312,
+            -18.029215090842456,
+            -17.04243233281312,
+            -18.029215090842456,
+            -2.946627914876893,
+            -1.3484816728151165,
+            -2.812750445638144,
+            -0.00669387346193745
+          ],
+          "source_fixed_scalar_partial": -2.8127504456403103
+        },
+        {
+          "parameter": "C_omega",
+          "absolute_input": 7.148,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.014296,
+              "max_root_residual": 3.854941057726238e-15,
+              "min_hessian_eigenvalue": 894.1883654370205
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.007148,
+              "max_root_residual": 3.854941057726238e-15,
+              "min_hessian_eigenvalue": 894.2558109783266
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.003574,
+              "max_root_residual": 3.854941057726238e-15,
+              "min_hessian_eigenvalue": 894.2890115995197
+            }
+          ],
+          "finite_differences": [
+            [
+              0.0,
+              47.358475296000236,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              47.358475295996264,
+              47.358475295996264,
+              5.683017035519392,
+              5.6830170355198275,
+              5.683017035519392,
+              0.0
+            ],
+            [
+              0.0,
+              47.358475296000236,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              47.358475295996264,
+              47.358475295996264,
+              5.683017035519392,
+              5.683017035519392,
+              5.683017035519392,
+              0.0
+            ],
+            [
+              0.0,
+              47.358475295996264,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              47.35847529602012,
+              47.358475296004215,
+              5.683017035515416,
+              5.683017035520138,
+              5.683017035515416,
+              0.0
+            ]
+          ],
+          "richardson": [
+            0.0,
+            47.358475295994936,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            47.35847529602807,
+            47.358475296006866,
+            5.683017035514091,
+            5.683017035520387,
+            5.683017035514091,
+            0.0
+          ],
+          "analytic": [
+            -0.0,
+            47.358475295999995,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            47.358475295999995,
+            47.358475295999995,
+            5.68301703552,
+            5.683017035519998,
+            5.68301703552,
+            0.0
+          ],
+          "source_fixed_scalar_partial": 5.68301703552602
+        },
+        {
+          "parameter": "C_rho",
+          "absolute_input": 4.41,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.00882,
+              "max_root_residual": 3.854941057726238e-15,
+              "min_hessian_eigenvalue": 893.471764054448
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.00441,
+              "max_root_residual": 3.854941057726238e-15,
+              "min_hessian_eigenvalue": 893.8968334905159
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.002205,
+              "max_root_residual": 3.854941057726238e-15,
+              "min_hessian_eigenvalue": 894.109356283122
+            }
+          ],
+          "finite_differences": [
+            [
+              0.0,
+              0.0,
+              -9.471695059200394,
+              0.0,
+              0.0,
+              0.0,
+              4.735847529599794,
+              -4.735847529599794,
+              0.227320681422672,
+              0.2273206814209601,
+              0.227320681422672,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -9.471695059199588,
+              0.0,
+              0.0,
+              0.0,
+              4.735847529606239,
+              -4.735847529606239,
+              0.22732068141944958,
+              0.22732068142045658,
+              0.22732068141944958,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -9.471695059199588,
+              0.0,
+              0.0,
+              0.0,
+              4.735847529593349,
+              -4.735847529593349,
+              0.22732068141944958,
+              0.2273206814214636,
+              0.22732068141944958,
+              0.0
+            ]
+          ],
+          "richardson": [
+            0.0,
+            0.0,
+            -9.471695059199588,
+            0.0,
+            0.0,
+            0.0,
+            4.735847529589052,
+            -4.735847529589052,
+            0.22732068141944958,
+            0.2273206814217993,
+            0.22732068141944958,
+            0.0
+          ],
+          "analytic": [
+            -0.0,
+            0.0,
+            -9.4716950592,
+            0.0,
+            0.0,
+            0.0,
+            4.7358475296,
+            -4.7358475296,
+            0.2273206814208,
+            0.22732068142079995,
+            0.2273206814208,
+            0.0
+          ],
+          "source_fixed_scalar_partial": 0.22732068140978234
+        },
+        {
+          "parameter": "b",
+          "absolute_input": 0.002947,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 5.894e-06,
+              "max_root_residual": 4.8186763221577976e-15,
+              "min_hessian_eigenvalue": 894.2547591009122
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 2.947e-06,
+              "max_root_residual": 3.6621940048399264e-15,
+              "min_hessian_eigenvalue": 894.2883115621904
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 1.4735e-06,
+              "max_root_residual": 5.3969174808167335e-15,
+              "min_hessian_eigenvalue": 894.3050904570367
+            }
+          ],
+          "finite_differences": [
+            [
+              -26479.759747731794,
+              0.0,
+              0.0,
+              26479.759747736618,
+              22412.33304781702,
+              23710.041758371088,
+              22412.333047807377,
+              23710.041758371088,
+              2642.074063054647,
+              3006.3818382500644,
+              2466.013120393068,
+              8.803047133078945
+            ],
+            [
+              -26479.74738181443,
+              0.0,
+              0.0,
+              26479.747381824076,
+              22412.32365762949,
+              23710.031425377492,
+              22412.32365762949,
+              23710.031425377492,
+              2642.0731542012904,
+              3006.3803397346933,
+              2466.0122973425086,
+              8.803042842803462
+            ],
+            [
+              -26479.744290309776,
+              0.0,
+              0.0,
+              26479.744290329065,
+              22412.32131001751,
+              23710.028842155614,
+              22412.32131001751,
+              23710.028842117037,
+              2642.0729269433464,
+              3006.379965093079,
+              2466.0120915334555,
+              8.803041770178082
+            ]
+          ],
+          "richardson": [
+            -26479.743259808223,
+            0.0,
+            0.0,
+            26479.74325983073,
+            22412.320527480184,
+            23710.027981081657,
+            22412.320527480184,
+            23710.02798103022,
+            2642.072851190698,
+            3006.3798402125412,
+            2466.012022930438,
+            8.803041412636288
+          ],
+          "analytic": [
+            -26479.74325982903,
+            0.0,
+            0.0,
+            26479.74325982903,
+            22412.32052754741,
+            23710.02798104446,
+            22412.32052754741,
+            23710.02798104446,
+            2642.072851287215,
+            3006.379840231,
+            2466.012023032166,
+            8.803041412752464
+          ],
+          "source_fixed_scalar_partial": 2466.0120230300954
+        },
+        {
+          "parameter": "c",
+          "absolute_input": -0.00107,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 2.14e-06,
+              "max_root_residual": 5.589664533703046e-15,
+              "min_hessian_eigenvalue": 894.3136688600767
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 1.07e-06,
+              "max_root_residual": 4.433182216385174e-15,
+              "min_hessian_eigenvalue": 894.3177706919107
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 5.35e-07,
+              "max_root_residual": 5.204170427930421e-15,
+              "min_hessian_eigenvalue": 894.3198210745423
+            }
+          ],
+          "finite_differences": [
+            [
+              -11072.651087779463,
+              0.0,
+              0.0,
+              11072.651087779463,
+              9371.835757271252,
+              9914.479312317007,
+              9371.835757271252,
+              9914.479312290445,
+              847.003220109619,
+              1514.9285066556417,
+              773.3824110086929,
+              3.6810404550047977
+            ],
+            [
+              -11072.650773520356,
+              0.0,
+              0.0,
+              11072.650773493793,
+              9371.835506628962,
+              9914.479041354523,
+              9371.835506628962,
+              9914.479041407649,
+              847.0032057725931,
+              1514.9284572056856,
+              773.3823988165764,
+              3.681040347588126
+            ],
+            [
+              -11072.650694922377,
+              0.0,
+              0.0,
+              11072.650695028626,
+              9371.835443994953,
+              9914.478973620544,
+              9371.835443994953,
+              9914.478973514293,
+              847.0032020273023,
+              1514.9284448209921,
+              773.3823956025326,
+              3.6810403204291657
+            ]
+          ],
+          "richardson": [
+            -11072.65066872305,
+            0.0,
+            0.0,
+            11072.65066887357,
+            9371.835423116949,
+            9914.47895104255,
+            9371.835423116949,
+            9914.478950883175,
+            847.0032007788722,
+            1514.928440692761,
+            773.3823945311847,
+            3.681040311376179
+          ],
+          "analytic": [
+            -11072.650668762344,
+            0.0,
+            0.0,
+            11072.650668762344,
+            9371.835423130391,
+            9914.47895112186,
+            9371.835423130391,
+            9914.47895112186,
+            847.0032010751553,
+            1514.9284407279106,
+            773.3823948387691,
+            3.681040311819313
+          ],
+          "source_fixed_scalar_partial": 773.3823948986304
+        }
+      ]
+    },
+    {
+      "x": [
+        0.32,
+        30.0,
+        0.1,
+        11.785,
+        7.148,
+        4.41,
+        0.002947,
+        -0.00107
+      ],
+      "outputs": [
+        466.9263879634984,
+        451.35784188774403,
+        -111.38713389619201,
+        472.07361203650163,
+        612.4732600306453,
+        482.70321049016167,
+        1119.5246688664852,
+        878.3674854298096,
+        320.9267542224673,
+        41.56301980511239,
+        308.9678443621893,
+        0.39863032867593384
+      ],
+      "jacobian": [
+        [
+          930.8505417948661,
+          -0.49733145333494255,
+          50.5053238566181,
+          20.655523438475505,
+          -0.0,
+          -0.0,
+          -32302.52335760912,
+          -16062.726894009553
+        ],
+        [
+          1410.4932558992,
+          0.0,
+          0.0,
+          0.0,
+          63.144633728,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -348.0847934256,
+          0.0,
+          278.46783474048,
+          0.0,
+          0.0,
+          -25.2578534912,
+          0.0,
+          0.0
+        ],
+        [
+          -930.8505417948661,
+          0.49733145333494255,
+          -50.5053238566181,
+          -20.655523438475505,
+          0.0,
+          0.0,
+          32302.52335760912,
+          16062.726894009553
+        ],
+        [
+          -417.8631905697855,
+          -0.1970312864762688,
+          -139.35526012298396,
+          -15.590353634434644,
+          -0.0,
+          -0.0,
+          24381.263632933646,
+          12123.8076273818
+        ],
+        [
+          -699.9404660059615,
+          -1.3577969010743585,
+          351.5500597110921,
+          -18.279348398236007,
+          0.0,
+          0.0,
+          28586.497958023832,
+          14214.899079942485
+        ],
+        [
+          1166.6724620422144,
+          -0.1970312864762688,
+          -278.589177493224,
+          -15.590353634434644,
+          63.144633728,
+          12.6289267456,
+          24381.263632933646,
+          12123.8076273818
+        ],
+        [
+          536.5103931804384,
+          -1.3577969010743585,
+          490.78397708133207,
+          -18.279348398236007,
+          63.144633728,
+          -12.6289267456,
+          28586.497958023832,
+          14214.899079942485
+        ],
+        [
+          1104.8021859609,
+          0.3412000350231405,
+          -66.02694879959449,
+          -4.231797555569498,
+          10.10314139648,
+          1.6165026234367998,
+          4544.493475693432,
+          1744.2622850782154
+        ],
+        [
+          353.17000164993186,
+          0.2984358173363889,
+          -64.52859585144589,
+          -1.0973601678600389,
+          10.103141396480003,
+          1.6165026234368003,
+          3789.6086520118834,
+          2399.9466642384505
+        ],
+        [
+          1095.4089505228176,
+          -0.39863032867593384,
+          -77.17029869973618,
+          -3.977600827600691,
+          10.10314139648,
+          1.6165026234367998,
+          4146.96320892977,
+          1546.586703005668
+        ],
+        [
+          0.3131078479360778,
+          0.01137333450077135,
+          0.3714449966713887,
+          -0.008473224265626925,
+          0.0,
+          0.0,
+          13.251008892122044,
+          6.589186069084917
+        ]
+      ],
+      "diagnostics": {
+        "params": {
+          "M_mev": 939.0,
+          "C_sigma": 11.785,
+          "C_omega": 7.148,
+          "C_rho": 4.41,
+          "b": 0.002947,
+          "c": -0.00107
+        },
+        "max_equation_residual": 9.75781955236954e-17,
+        "canonical_scalar_curvature_fm_minus2": 0.1627620081986435,
+        "implicit_jacobian_condition": 12.1222661972357,
+        "implicit_linear_residual": 3.552713678800501e-15,
+        "chemical_hessian_eigenvalues_mev_fm3": [
+          1078.6057104939416,
+          2091.9661982365897
+        ],
+        "hellmann_feynman_free_energy_derivatives": [
+          -3.977600827600691,
+          10.10314139648,
+          1.6165026234367998,
+          4146.96320892977,
+          1546.586703005668
+        ],
+        "naive_fixed_parameter_pressure_derivatives": [
+          -5.07496099546073,
+          20.206282792960003,
+          3.2330052468736,
+          7936.5718609416535,
+          3946.5333672441184
+        ]
+      },
+      "parameter_ladders": [
+        {
+          "parameter": "C_sigma",
+          "absolute_input": 11.785,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.02357,
+              "max_root_residual": 1.3010426069826053e-15,
+              "min_hessian_eigenvalue": 1078.2778259977767
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.011785,
+              "max_root_residual": 8.673617379884035e-16,
+              "min_hessian_eigenvalue": 1078.4417710562486
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.0058925,
+              "max_root_residual": 1.0842021724855044e-15,
+              "min_hessian_eigenvalue": 1078.523741517307
+            }
+          ],
+          "finite_differences": [
+            [
+              20.655548375614778,
+              0.0,
+              0.0,
+              -20.655548375614778,
+              -15.59037872104173,
+              -18.279372973186057,
+              -15.590378721044143,
+              -18.27937297318847,
+              -4.2318006880862225,
+              -1.0973653236012153,
+              -3.977603683200213,
+              -0.008473233496181615
+            ],
+            [
+              20.65552967275652,
+              0.0,
+              0.0,
+              -20.65552967275652,
+              -15.590359906084728,
+              -18.279354541973984,
+              -15.590359906084728,
+              -18.279354541964334,
+              -4.231798338700934,
+              -1.097361456794336,
+              -3.9776015415032204,
+              -0.00847322657327219
+            ],
+            [
+              20.655524997041653,
+              0.0,
+              0.0,
+              -20.655524997041653,
+              -15.590355202343668,
+              -18.27934993416976,
+              -15.590355202343668,
+              -18.27934993416976,
+              -4.23179775133984,
+              -1.0973604900932565,
+              -3.9776010060632965,
+              -0.008473224842544246
+            ]
+          ],
+          "richardson": [
+            20.65552343847003,
+            0.0,
+            0.0,
+            -20.65552343847003,
+            -15.590353634429981,
+            -18.279348398235015,
+            -15.590353634429981,
+            -18.27934839823823,
+            -4.231797555552809,
+            -1.0973601678595635,
+            -3.9776008275833217,
+            -0.00847322426563493
+          ],
+          "analytic": [
+            20.655523438475505,
+            0.0,
+            0.0,
+            -20.655523438475505,
+            -15.590353634434644,
+            -18.279348398236007,
+            -15.590353634434644,
+            -18.279348398236007,
+            -4.231797555569498,
+            -1.0973601678600389,
+            -3.977600827600691,
+            -0.008473224265626925
+          ],
+          "source_fixed_scalar_partial": -3.977600827603419
+        },
+        {
+          "parameter": "C_omega",
+          "absolute_input": 7.148,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.014296,
+              "max_root_residual": 9.75781955236954e-17,
+              "min_hessian_eigenvalue": 1077.9145147851727
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.007148,
+              "max_root_residual": 9.75781955236954e-17,
+              "min_hessian_eigenvalue": 1078.260958628239
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.003574,
+              "max_root_residual": 9.75781955236954e-17,
+              "min_hessian_eigenvalue": 1078.433545390667
+            }
+          ],
+          "finite_differences": [
+            [
+              0.0,
+              63.144633727999654,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              63.144633727997665,
+              63.144633727997665,
+              10.103141396480025,
+              10.103141396479776,
+              10.103141396480025,
+              0.0
+            ],
+            [
+              0.0,
+              63.144633728001644,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              63.144633727989714,
+              63.144633727997665,
+              10.103141396478037,
+              10.103141396480025,
+              10.103141396478037,
+              0.0
+            ],
+            [
+              0.0,
+              63.144633728013574,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              63.14463372800562,
+              63.144633728021525,
+              10.103141396485988,
+              10.103141396481018,
+              10.103141396485988,
+              0.0
+            ]
+          ],
+          "richardson": [
+            0.0,
+            63.144633728017546,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            63.14463372801092,
+            63.144633728029476,
+            10.103141396488638,
+            10.103141396481348,
+            10.103141396488638,
+            0.0
+          ],
+          "analytic": [
+            -0.0,
+            63.144633728,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            63.144633728,
+            63.144633728,
+            10.10314139648,
+            10.103141396480003,
+            10.10314139648,
+            0.0
+          ],
+          "source_fixed_scalar_partial": 10.103141396476712
+        },
+        {
+          "parameter": "C_rho",
+          "absolute_input": 4.41,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 0.00882,
+              "max_root_residual": 9.75781955236954e-17,
+              "min_hessian_eigenvalue": 1077.8415070251276
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 0.00441,
+              "max_root_residual": 9.75781955236954e-17,
+              "min_hessian_eigenvalue": 1078.2236287390429
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 0.002205,
+              "max_root_residual": 9.75781955236954e-17,
+              "min_hessian_eigenvalue": 1078.4146746138017
+            }
+          ],
+          "finite_differences": [
+            [
+              0.0,
+              0.0,
+              -25.257853491199707,
+              0.0,
+              0.0,
+              0.0,
+              12.62892674559945,
+              -12.62892674559945,
+              1.616502623434358,
+              1.6165026234367748,
+              1.616502623434358,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -25.257853491200514,
+              0.0,
+              0.0,
+              0.0,
+              12.62892674562523,
+              -12.62892674561234,
+              1.616502623434358,
+              1.616502623438386,
+              1.616502623434358,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -25.2578534911989,
+              0.0,
+              0.0,
+              0.0,
+              12.62892674559945,
+              -12.628926745573672,
+              1.616502623434358,
+              1.6165026234359692,
+              1.616502623434358,
+              0.0
+            ]
+          ],
+          "richardson": [
+            0.0,
+            0.0,
+            -25.257853491198365,
+            0.0,
+            0.0,
+            0.0,
+            12.628926745590858,
+            -12.628926745560783,
+            1.616502623434358,
+            1.6165026234351636,
+            1.616502623434358,
+            0.0
+          ],
+          "analytic": [
+            -0.0,
+            0.0,
+            -25.2578534912,
+            0.0,
+            -0.0,
+            0.0,
+            12.6289267456,
+            -12.6289267456,
+            1.6165026234367998,
+            1.6165026234368003,
+            1.6165026234367998,
+            0.0
+          ],
+          "source_fixed_scalar_partial": 1.6165026234515443
+        },
+        {
+          "parameter": "b",
+          "absolute_input": 0.002947,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 5.894e-06,
+              "max_root_residual": 2.6020852139652106e-15,
+              "min_hessian_eigenvalue": 1078.5277707385324
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 2.947e-06,
+              "max_root_residual": 1.5178830414797062e-15,
+              "min_hessian_eigenvalue": 1078.5667136464808
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 1.4735e-06,
+              "max_root_residual": 1.5178830414797062e-15,
+              "min_hessian_eigenvalue": 1078.586205320495
+            }
+          ],
+          "finite_differences": [
+            [
+              -32302.541589266424,
+              0.0,
+              0.0,
+              32302.541589266424,
+              24381.274042316614,
+              28586.512566049154,
+              24381.27404228768,
+              28586.51256603951,
+              4544.495570468068,
+              3789.610237795765,
+              4146.965088492846,
+              13.251016065754417
+            ],
+            [
+              -32302.527915535724,
+              0.0,
+              0.0,
+              32302.527915535724,
+              24381.26623527713,
+              28586.501610044357,
+              24381.266235296418,
+              28586.501610015424,
+              4544.493999380202,
+              3789.6090484594606,
+              4146.96367880692,
+              13.251010685528687
+            ],
+            [
+              -32302.524497080143,
+              0.0,
+              0.0,
+              32302.524497080143,
+              24381.264283485914,
+              28586.49887101905,
+              24381.264283485914,
+              28586.49887101905,
+              4544.4936066070295,
+              3789.6087511140827,
+              4146.963326395083,
+              13.251009340414567
+            ]
+          ],
+          "richardson": [
+            -32302.52335759495,
+            0.0,
+            0.0,
+            32302.52335759495,
+            24381.263632888844,
+            28586.497958010612,
+            24381.263632882416,
+            28586.49795802026,
+            4544.493475682639,
+            3789.6086519989567,
+            4146.963208924471,
+            13.251008892043194
+          ],
+          "analytic": [
+            -32302.52335760912,
+            0.0,
+            0.0,
+            32302.52335760912,
+            24381.263632933646,
+            28586.497958023832,
+            24381.263632933646,
+            28586.497958023832,
+            4544.493475693432,
+            3789.6086520118834,
+            4146.96320892977,
+            13.251008892122044
+          ],
+          "source_fixed_scalar_partial": 4146.963208927685
+        },
+        {
+          "parameter": "c",
+          "absolute_input": -0.00107,
+          "gates": [
+            {
+              "relative_step": 0.002,
+              "absolute_step": 2.14e-06,
+              "max_root_residual": 1.3010426069826053e-15,
+              "min_hessian_eigenvalue": 1078.6006769165642
+            },
+            {
+              "relative_step": 0.001,
+              "absolute_step": 1.07e-06,
+              "max_root_residual": 3.0357660829594124e-15,
+              "min_hessian_eigenvalue": 1078.6031939104694
+            },
+            {
+              "relative_step": 0.0005,
+              "absolute_step": 5.35e-07,
+              "max_root_residual": 1.3010426069826053e-15,
+              "min_hessian_eigenvalue": 1078.604452253563
+            }
+          ],
+          "finite_differences": [
+            [
+              -16062.72772737314,
+              0.0,
+              0.0,
+              16062.72772737314,
+              12123.808175153508,
+              14214.899780902471,
+              12123.808175100385,
+              14214.899780836065,
+              1744.2623424045944,
+              2399.9467971947165,
+              1546.5867502328613,
+              6.589186405641433
+            ],
+            [
+              -16062.727102334593,
+              0.0,
+              0.0,
+              16062.727102334593,
+              12123.807764287152,
+              14214.89925514069,
+              12123.807764340278,
+              14214.899255034441,
+              1744.2622993735952,
+              2399.946697464731,
+              1546.5867147721303,
+              6.589186153221334
+            ],
+            [
+              -16062.726946280814,
+              0.0,
+              0.0,
+              16062.726946280814,
+              12123.807661703375,
+              14214.899123922705,
+              12123.807661703375,
+              14214.899124028954,
+              1744.2622886158454,
+              2399.946672575814,
+              1546.5867058737447,
+              6.589186090213583
+            ]
+          ],
+          "richardson": [
+            -16062.726894262887,
+            0.0,
+            0.0,
+            16062.726894262887,
+            12123.807627508782,
+            14214.899080183377,
+            12123.807627491073,
+            14214.89908036046,
+            1744.2622850299288,
+            2399.9466642795082,
+            1546.5867029076162,
+            6.589186069210999
+          ],
+          "analytic": [
+            -16062.726894009553,
+            0.0,
+            0.0,
+            16062.726894009553,
+            12123.8076273818,
+            14214.899079942485,
+            12123.8076273818,
+            14214.899079942485,
+            1744.2622850782154,
+            2399.9466642384505,
+            1546.586703005668,
+            6.589186069084917
+          ],
+          "source_fixed_scalar_partial": 1546.5867030050115
+        }
+      ]
+    }
+  ],
+  "input_order": [
+    "nB",
+    "T_MeV",
+    "Yp",
+    "C_sigma",
+    "C_omega",
+    "C_rho",
+    "b",
+    "c"
+  ],
+  "output_order": [
+    "phi_mev",
+    "omega_mev",
+    "rho_mev",
+    "dirac_mass_mev",
+    "kinetic_mu_n_mev",
+    "kinetic_mu_p_mev",
+    "mu_n_mev",
+    "mu_p_mev",
+    "energy_density",
+    "pressure",
+    "free_energy_density",
+    "entropy_density"
+  ],
+  "second_derivative_probe": {
+    "supported": false,
+    "error_type": "ValueError",
+    "message": "Pure callbacks do not support JVP. Please use `jax.custom_jvp` to use callbacks while taking gradients."
+  },
+  "runtime_seconds": 50.590682707959786,
+  "frozen_sha256": {
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "rmf_ad/gm1_implicit_ad.py": "6f22c97fef1a1c3c38d71c6f7ef6568d9272bb116bb445fdbbea84e8306060ab"
+  },
+  "environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+    "executable": "/Users/rossma/miniconda3/envs/junior_tools/bin/python",
+    "jax": "0.10.1",
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "platform": "macOS-26.7.1-arm64-arm-64bit",
+    "devices": [
+      "cpu:0"
+    ]
+  }
+}

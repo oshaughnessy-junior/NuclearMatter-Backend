@@ -1,0 +1,264 @@
+{
+  "checks": [
+    {
+      "name": "accepted alternate EC reference source SHA",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "accepted initial source record SHA",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source EC number",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source EC neutrino_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source EC electron_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source EC proton_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source EC neutron_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source EC material_energy_loss",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source beta number",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source beta neutrino_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source beta electron_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source beta proton_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source beta neutron_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source beta material_energy_loss",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source PC number",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source PC neutrino_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source PC positron_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source PC proton_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source PC neutron_energy",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh initial versus accepted source PC material_energy_loss",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "RK4 selected time escape refinement",
+      "error": -4.6377360840565984e-09,
+      "gate": 0.001,
+      "passed": true
+    },
+    {
+      "name": "RK4 selected time COMPOSITION CHANGE refinement",
+      "error": -1.1471559136143287e-07,
+      "gate": 0.001,
+      "passed": true
+    },
+    {
+      "name": "RK4 versus Heun4 escape",
+      "error": -6.3426453148496265e-06,
+      "gate": 0.001,
+      "passed": true
+    },
+    {
+      "name": "RK4 versus Heun4 COMPOSITION CHANGE",
+      "error": -4.049647151585151e-05,
+      "gate": 0.001,
+      "passed": true
+    },
+    {
+      "name": "RK4 versus Heun4 temperature CHANGE",
+      "error": -5.034530481179136e-06,
+      "gate": 0.001,
+      "passed": true
+    },
+    {
+      "name": "Heun literal-stage number beta",
+      "error": 0.0,
+      "gate": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Heun literal-stage energy beta",
+      "error": 0.0,
+      "gate": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Heun literal-stage number PC",
+      "error": 0.0,
+      "gate": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Heun literal-stage energy PC",
+      "error": 0.0,
+      "gate": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Heun literal-stage number EC",
+      "error": 0.0,
+      "gate": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Heun literal-stage energy EC",
+      "error": 0.0,
+      "gate": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "Heun restinclusive exchanged-energy ledger",
+      "error": 3.301916258079009e-10,
+      "gate": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "Heun independent integrated Le",
+      "error": -4.320014214517808e-16,
+      "gate": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "Heun independently inferred EMpair equality",
+      "error": -2.088006870350274e-15,
+      "gate": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "Heun EMpair count from electrons",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "Heun photon plus material loss once",
+      "error": -3.3002400330634187e-10,
+      "gate": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "Heun no external heat or photon escape",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "independent initial photonON Tdot",
+      "error": -2.4570041556870592e-09,
+      "gate": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent initial photonOFF Tdot",
+      "error": -3.820660898767869e-09,
+      "gate": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "all frozen bytes still unchanged",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 40,
+  "failed": [],
+  "diagnostics": {
+    "RK4_1": {
+      "T": 1.9962252037076595,
+      "Ye": 0.3151834037221295,
+      "E": 3.0003668679467737e-08
+    },
+    "RK4_2": {
+      "T": 1.9962252037062809,
+      "Ye": 0.31518340546390283,
+      "E": 3.0003668818616833e-08
+    },
+    "photonON_Tdot": -1.8978806547368994,
+    "photonOFF_Tdot": -2.953458169455838,
+    "Heun_EMpair_change": 4.263712128456544e-10,
+    "Heun_photon_loss": 1.0314796661063923e-08,
+    "RK4_EMpair_change": 4.263756869930935e-10,
+    "RK4_photon_loss": 1.0314848444417225e-08
+  }
+}

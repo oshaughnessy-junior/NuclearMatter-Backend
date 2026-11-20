@@ -1,0 +1,299 @@
+{
+  "checks": [
+    {
+      "name": "baseline Git blob src/nmbackend/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/adapters/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/adapters/rift.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/constants.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/README.md",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/build_nscool.sh",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/isothermal.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/nscool_isothermal_tail.f",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/nscool_nmbackend.patch",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/runner.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/validate.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/data/crust_sly_dh2001.dat",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/data/frib_scenario_ladder.yaml",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/durca.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/ejecta.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/base.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/compose.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/coolcomp.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/crust.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/ddrmf.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/hybrid.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/leptons.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/metamodel.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/polytrope.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/rmft.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/eos/skyrme.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/inference/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/inference/fisher.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/inference/synthetic.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/ipad.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/lab_likelihood.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/nscool_io.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/postmerger.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/priors/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/priors/bridge.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/priors/gp_pca.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/reference/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/reference/reprimand.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/reference/scipy_tov.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/rift/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/rift/compressed.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/rift/evidence.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/rift/sequence.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/tov/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/tov/central.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/tov/family.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/tov/phase_transition.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/tov/solver.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/validation/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/validation/model_diagnostic.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/validation/reference_matrix.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/_spline.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/blanket.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/conduct.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/core_conduct.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/core_nu.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/crust.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/crust_nu.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/curve.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/envelope.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/gaps.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/geometry.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/heat.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/native.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/reference.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/star.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/superfluid.py",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob src/nmbackend/cooling/physics/whole.py",
+      "passed": true
+    }
+  ],
+  "passed": 71,
+  "compatibility_failures": [
+    {
+      "name": "declared SciPy>=1.7 API compatibility",
+      "passed": false,
+      "actual_import_error_when_export_missing": "cannot import name 'log_expit' from 'scipy.special' (/Users/rossma/miniconda3/envs/junior_tools/lib/python3.12/site-packages/scipy/special/__init__.py)",
+      "primary_evidence": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.log_expit.html states Added in version1.8.0",
+      "scope": "Static required-API incompatibility plus a controlled missing-export simulation; not execution underSciPy1.7"
+    }
+  ],
+  "export_restored": true
+}

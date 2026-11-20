@@ -1,0 +1,64 @@
+"""Independent longitudinal B-spline five-vector closure and recipe audit."""
+from pathlib import Path
+from decimal import Decimal,localcontext
+import math,json,hashlib,itertools,importlib.util,sys,time
+from scipy.optimize import brentq
+P=Path(__file__).parent;A=P.parent/'cold_murca_normal_reference'
+def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def load(name,path):
+ sp=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(sp);sys.modules[name]=m;sp.loader.exec_module(m);return m
+N=load('independent_review_normal_murca',A/'normal_reference.py');O=load('independent_review_overlap_oracle',A/'angular_oracle.py')
+def closed(lengths):
+ # zi uniformly distributed [-li,li]; fZ''(0)=-2pi*rho3D(0).
+ # Five uniforms give a degree4 box spline. Its second derivative is a
+ # 32-term signed quadratic sum, evaluated at precision70 without overlap panels.
+ with localcontext()as ctx:
+  ctx.prec=70;ls=list(map(lambda v:Decimal(str(v)),lengths));total=sum(ls);terms=[]
+  for mask in range(32):
+   z=total-2*sum((ls[i]for i in range(5)if mask>>i&1),Decimal(0));terms.append((-1 if mask.bit_count()%2 else 1)*max(z,Decimal(0))**2)
+  sm=sum(terms);prod=math.prod(ls);return -32*math.pi**5*float(sm/prod)
+def state(nb,yp,T,an=.82,ap=.77):
+ kp=(3*math.pi**2*nb*yp)**(1/3);kn=(3*math.pi**2*nb*(1-yp))**(1/3)
+ # root total lepton chemical potential, not author's k_e equation
+ def kl(mu,m):return math.sqrt(max(mu*mu-m*m,0.))/N.HC
+ mu=brentq(lambda mu:kl(mu,N.ME)**3+kl(mu,N.MM)**3-kp**3,N.ME,math.hypot(N.HC*kp,N.MM),xtol=5e-13)
+ return N.State(T,kn,kp,kl(mu,N.ME),kl(mu,N.MM),an,ap,mu)
+def main():
+ start=time.monotonic();manifest=json.loads((A/'MANIFEST.json').read_text());before={n:digest(A/n)for n in manifest};checks=[];rows=[]
+ def ck(name,er,gate=3e-12):checks.append(dict(name=name,error=float(er),gate=gate,passed=math.isfinite(er)and abs(er)<=gate))
+ ck('commissioned manifest',0 if digest(A/'MANIFEST.json')=='ca384a4f6d2952ad9536520995abcca1a3bf2ae591b9bcb8cfee249cdae76a27'else 1,0)
+ for n,sha in manifest.items():ck('frozen author '+n,0 if before[n]==sha else 1,0)
+ points=[(2.56,.93,.27),(2.81,.91,.26),(2.975,.91,.26),(2.989,.91,.26),(3.02,.91,.26),(2.18,.89,.67),(1.91,.87,.83),(3.34,.91,.26)]
+ for kn,kp,kl in points:
+  lengths=[kn,kp,kp,kp,kl];exact=closed(lengths);auth,region=N.angular_proton(kn,kp,kl);ck('proton absolute B-spline '+str((kn,kp,kl)),(auth-exact)/max(abs(exact),1.))
+  for perm in[lengths,[kl,kp,kn,kp,kp],[kp,kp,kl,kp,kn]]:ck('B-spline vs overlap '+str(perm),(O.angular(perm)['angular']-exact)/max(abs(exact),1.))
+  an=closed([kn,kn,kn,kp,kl]);ck('neutron absolute B-spline '+str((kn,kp,kl)),N.angular_neutron(kn,kp,kl)/an-1)
+  for scale in[.371,2.13]:ck('length scale dimension fm^3 '+str((kn,scale)),closed([scale*v for v in lengths])*scale**3/max(abs(exact),1.)-exact/max(abs(exact),1.))
+  rows.append(dict(kn=kn,kp=kp,kl=kl,independent=exact,author=auth,region=region,neutron_independent=an))
+ # Independent threshold quadratic normalization at fixed kp,kl, including tiny gaps.
+ kp=.913;kl=.247;edge=3*kp+kl
+ for gap in[.031,.0031,.000031]:
+  kn=edge-gap;val=closed([kn,kp,kp,kp,kl]);expect=2*(2*math.pi)**5*gap*gap/(kn*kp**3*kl);ck('outer support quadratic gap '+str(gap),val/expect-1,3e-10)
+ ck('outer exact support decimal-exact fixture',closed([3*Decimal(str(kp))+Decimal(str(kl)),kp,kp,kp,kl]),0)
+ ck('author computed floating outer edge',N.angular_proton(edge,kp,kl)[0],0)
+ # Fresh independently neutral states; nuclear affinity supplied, not EOS-derived.
+ states=[]
+ for nb,yp,T in[(.271,.0591,4.31e8),(.182,.0417,2.37e8)]:
+  s=state(nb,yp,T);out=N.evaluate(s);np=s.kfp**3/(3*math.pi**2);base=8.1e21*.82**3*.77*(np/.16)**(1/3)*1.13*.68*(T/1e9)**8
+  for name,k,m in[('electron',s.kfe,N.ME),('muon',s.kfmu,N.MM)]:
+   if k==0:continue
+   qn=base*N.HC*k/s.delta_mu_np_MeV;an=closed([s.kfn,s.kfn,s.kfn,s.kfp,k]);ap=closed([s.kfn,s.kfp,s.kfp,s.kfp,k]);qp=qn*(.77*N.MP/(.82*N.MN))**2*(s.kfp/s.kfn)**2*ap/an
+   ck('fresh Qn '+str((nb,name)),out['channels'][name]['neutron_Q']/qn-1);ck('fresh Qp '+str((nb,name)),out['channels'][name]['proton_Q']/qp-1 if qp else out['channels'][name]['proton_Q'],3e-12)
+  ck('fresh net charge '+str(nb),(s.kfe**3+s.kfmu**3)/s.kfp**3-1)
+  ck('assumed zero drift labelled '+str(nb),0 if 'ASSUMPTION'in out['ledger_status']else 1,0)
+  states.append(dict(state=vars(s),result=out))
+ inventory=json.loads((A/'reaction_inventory.json').read_text())
+ ck('four channels times two directions',len({(r['spectator'],r['lepton'],r['direction'])for r in inventory})-8,0)
+ for i,r in enumerate(inventory):
+  dl=r['delta_material_Ye_per_event']+r['delta_material_Ymu_per_event']
+  ck('reaction charge '+str(i),r['delta_proton']-dl,0)
+  ck('reaction baryons '+str(i),r['delta_proton']+r['delta_neutron'],0)
+  ck('reaction flavor lepton '+str(i),dl+r['delta_radiation_flavor_lepton'],0)
+ after={n:digest(A/n)for n in manifest};ck('all author bytes unchanged',0 if after==before else 1,0)
+ result=dict(checks=checks,passed=sum(z['passed']for z in checks),failed=[z for z in checks if not z['passed']],angular=rows,states=states,before=before,after=after,seconds=time.monotonic()-start,scope='independent absolute geometry and declared recipe only; no strong matrix uncertainty, warm MU, EOS solve or integrated number validation');(P/'results.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(dict(passed=result['passed'],failed=result['failed'],seconds=result['seconds']),indent=2))
+if __name__=='__main__':main()

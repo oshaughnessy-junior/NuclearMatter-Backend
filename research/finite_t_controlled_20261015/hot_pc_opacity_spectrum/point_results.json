@@ -1,0 +1,583 @@
+{
+  "checks": [
+    {
+      "name": "antidelta refinement (2.0, 'j')",
+      "error": -1.3988810110276972e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "absolute antidelta (2.0, 'j')",
+      "error": 6.439293542825908e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literal vtrace tensor (2.0, 'j')",
+      "error": -1.887379141862766e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "antidelta refinement (2.0, 'chi')",
+      "error": -1.3988810110276972e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "absolute antidelta (2.0, 'chi')",
+      "error": 2.55351295663786e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literal vtrace tensor (2.0, 'chi')",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "anti KMS AFTER positivebranches 2.0",
+      "error": -8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "antidelta refinement (5.0, 'j')",
+      "error": 9.103828801926284e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "absolute antidelta (5.0, 'j')",
+      "error": -1.4876988529977098e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literal vtrace tensor (5.0, 'j')",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "antidelta refinement (5.0, 'chi')",
+      "error": 5.10702591327572e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "absolute antidelta (5.0, 'chi')",
+      "error": -1.326716514427062e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literal vtrace tensor (5.0, 'chi')",
+      "error": -5.551115123125783e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "anti KMS AFTER positivebranches 5.0",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "antidelta refinement (10.0, 'j')",
+      "error": -1.3433698597964394e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "absolute antidelta (10.0, 'j')",
+      "error": 2.708944180085382e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literal vtrace tensor (10.0, 'j')",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "antidelta refinement (10.0, 'chi')",
+      "error": -1.5432100042289676e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "absolute antidelta (10.0, 'chi')",
+      "error": 5.639932965095795e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "literal vtrace tensor (10.0, 'chi')",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "anti KMS AFTER positivebranches 10.0",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "timelikepast kinematic witness 2.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactempty timelikep-to-n 2.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "timelikepast kinematic witness 5.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "exactempty timelikep-to-n 5.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 25,
+  "failed": [],
+  "points": [
+    {
+      "input": [
+        2.0,
+        0.71,
+        -0.4
+      ],
+      "actual": {
+        "j": {
+          "value": 0.05297803294394835,
+          "log": -2.9378779241032804,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.03534635481558035,
+          "log": -3.342560008913183,
+          "representable": true,
+          "reason": null
+        },
+        "support": [
+          {
+            "lower": 938.2754599749868,
+            "upper": null
+          }
+        ],
+        "panels": [
+          [
+            938.2754599749868,
+            940.8449303084382
+          ],
+          [
+            940.8449303084382,
+            942.27208816
+          ],
+          [
+            942.27208816,
+            942.5387578100663
+          ],
+          [
+            942.5387578100663,
+            950.27208816
+          ],
+          [
+            950.27208816,
+            962.27208816
+          ],
+          [
+            962.27208816,
+            964.8449303084382
+          ],
+          [
+            964.8449303084382,
+            966.5387578100663
+          ],
+          [
+            966.5387578100663,
+            986.27208816
+          ],
+          [
+            986.27208816,
+            1098.275459974987
+          ]
+        ],
+        "points": 1728
+      },
+      "literal": {
+        "j": {
+          "value": 0.05297803294394845,
+          "log": -2.9378779241032786,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.035346354815580364,
+          "log": -3.3425600089131824,
+          "representable": true,
+          "reason": null
+        },
+        "reciprocal_vertex_error": 0.0,
+        "units": "s^-1 MeV^-1 per dcos",
+        "support": [
+          {
+            "lower": 938.2754599749868,
+            "upper": null
+          }
+        ]
+      },
+      "original_delta": [
+        {
+          "j": 0.05297803294394727,
+          "chi": 0.035346354815578955,
+          "order": 24,
+          "nphi": 6,
+          "tail": 65.0
+        },
+        {
+          "j": 0.05297803294394801,
+          "chi": 0.03534635481557945,
+          "order": 36,
+          "nphi": 10,
+          "tail": 85.0
+        }
+      ]
+    },
+    {
+      "input": [
+        5.0,
+        3.7,
+        0.29
+      ],
+      "actual": {
+        "j": {
+          "value": 0.2620151984429226,
+          "log": -1.339352767579384,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.7834603283226729,
+          "log": -0.24403485238928724,
+          "representable": true,
+          "reason": null
+        },
+        "support": [
+          {
+            "lower": 938.2732054160399,
+            "upper": null
+          }
+        ],
+        "panels": [
+          [
+            938.2732054160399,
+            940.8449303084382
+          ],
+          [
+            940.8449303084382,
+            942.27208816
+          ],
+          [
+            942.27208816,
+            942.5287578100663
+          ],
+          [
+            942.5287578100663,
+            950.27208816
+          ],
+          [
+            950.27208816,
+            962.27208816
+          ],
+          [
+            962.27208816,
+            964.8449303084382
+          ],
+          [
+            964.8449303084382,
+            966.5287578100663
+          ],
+          [
+            966.5287578100663,
+            986.27208816
+          ],
+          [
+            986.27208816,
+            1098.27320541604
+          ]
+        ],
+        "points": 1728
+      },
+      "literal": {
+        "j": {
+          "value": 0.2620151984429226,
+          "log": -1.339352767579384,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.7834603283226733,
+          "log": -0.24403485238928663,
+          "representable": true,
+          "reason": null
+        },
+        "reciprocal_vertex_error": 0.0,
+        "units": "s^-1 MeV^-1 per dcos",
+        "support": [
+          {
+            "lower": 938.2732054160399,
+            "upper": null
+          }
+        ]
+      },
+      "original_delta": [
+        {
+          "j": 0.26201519844296395,
+          "chi": 0.7834603283227808,
+          "order": 24,
+          "nphi": 6,
+          "tail": 65.0
+        },
+        {
+          "j": 0.26201519844296156,
+          "chi": 0.7834603283227768,
+          "order": 36,
+          "nphi": 10,
+          "tail": 85.0
+        }
+      ]
+    },
+    {
+      "input": [
+        10.0,
+        8.69,
+        -0.36
+      ],
+      "actual": {
+        "j": {
+          "value": 0.046962607354351454,
+          "log": -3.0584035821256217,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 1.7107199974957015,
+          "log": 0.5369143330644768,
+          "representable": true,
+          "reason": null
+        },
+        "support": [
+          {
+            "lower": 938.2959470174809,
+            "upper": null
+          }
+        ],
+        "panels": [
+          [
+            938.2959470174809,
+            940.8449303084382
+          ],
+          [
+            940.8449303084382,
+            942.27208816
+          ],
+          [
+            942.27208816,
+            942.5187578100663
+          ],
+          [
+            942.5187578100663,
+            950.27208816
+          ],
+          [
+            950.27208816,
+            962.27208816
+          ],
+          [
+            962.27208816,
+            964.8449303084382
+          ],
+          [
+            964.8449303084382,
+            966.5187578100663
+          ],
+          [
+            966.5187578100663,
+            986.27208816
+          ],
+          [
+            986.27208816,
+            1098.295947017481
+          ]
+        ],
+        "points": 1728
+      },
+      "literal": {
+        "j": {
+          "value": 0.04696260735435137,
+          "log": -3.0584035821256235,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 1.7107199974956973,
+          "log": 0.5369143330644743,
+          "representable": true,
+          "reason": null
+        },
+        "reciprocal_vertex_error": 0.0,
+        "units": "s^-1 MeV^-1 per dcos",
+        "support": [
+          {
+            "lower": 938.2959470174809,
+            "upper": null
+          }
+        ]
+      },
+      "original_delta": [
+        {
+          "j": 0.04696260735434955,
+          "chi": 1.7107199974955787,
+          "order": 24,
+          "nphi": 6,
+          "tail": 65.0
+        },
+        {
+          "j": 0.046962607354350185,
+          "chi": 1.710719997495605,
+          "order": 36,
+          "nphi": 10,
+          "tail": 85.0
+        }
+      ]
+    },
+    {
+      "input": [
+        2.0,
+        3.29,
+        0.999
+      ],
+      "actual": {
+        "j": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "empty_support"
+        },
+        "chi": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "empty_support"
+        },
+        "support": [],
+        "panels": [],
+        "points": 0
+      },
+      "timelike_past": true
+    },
+    {
+      "input": [
+        5.0,
+        6.293,
+        0.9999
+      ],
+      "actual": {
+        "j": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "empty_support"
+        },
+        "chi": {
+          "value": 0.0,
+          "log": null,
+          "representable": true,
+          "reason": "empty_support"
+        },
+        "support": [],
+        "panels": [],
+        "points": 0
+      },
+      "timelike_past": true
+    }
+  ],
+  "matched_state": {
+    "T": 2.0,
+    "nB": 1e-07,
+    "Ye": 0.3,
+    "neutron": {
+      "temperature": 2.0,
+      "mass": 939.56542052,
+      "chemical_potential": 919.8287578100662,
+      "kinetic_chemical_potential": -19.73666270993374,
+      "density": 6.999999999999867e-08,
+      "kinetic_energy_density": 2.1055950732222884e-07,
+      "energy_density": 6.598013894372098e-05,
+      "pressure": 1.4000127913834654e-07,
+      "entropy_density": 8.660635880779551e-07,
+      "free_energy_density": 6.424801176756507e-05,
+      "cv_fixed_density": 1.0555650416858674e-07,
+      "dn_dmu_fixed_temperature": 3.4999360442836035e-08,
+      "dn_dtemperature_fixed_mu": 3.9802468257800983e-07,
+      "dmu_dtemperature_fixed_density": -11.372341595444237,
+      "log_antiparticle_density": -936.3035101315536,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -919.8287395366565
+    },
+    "proton": {
+      "temperature": 2.0,
+      "mass": 938.27208816,
+      "chemical_potential": 916.8449303084382,
+      "kinetic_chemical_potential": -21.427157851561788,
+      "density": 3.000000000000039e-08,
+      "kinetic_energy_density": 9.023964651475486e-08,
+      "energy_density": 2.8238402291315118e-05,
+      "pressure": 6.000023542792139e-08,
+      "entropy_density": 3.9652730874476906e-07,
+      "free_energy_density": 2.744534767382558e-05,
+      "cv_fixed_density": 4.523894800630727e-08,
+      "dn_dmu_fixed_temperature": 1.4999882286989292e-08,
+      "dn_dtemperature_fixed_mu": 1.8326224598480855e-07,
+      "dmu_dtemperature_fixed_density": -12.217578943520637,
+      "log_antiparticle_density": -934.1669909161242,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -916.8449224608399
+    },
+    "electron": {
+      "temperature": 2.0,
+      "chemical_potential": 0.17446333200826397,
+      "mass": 0.51099895069,
+      "net_density": 2.999999999999999e-08,
+      "particle_density": 2.034286367843283e-07,
+      "antiparticle_density": 1.7342863678432833e-07,
+      "energy_density": 2.3941492019342855e-06,
+      "pressure": 7.908453734948221e-07,
+      "entropy_density": 1.5898803377344317e-06,
+      "free_energy_density": -7.856114735345779e-07,
+      "cv_fixed_net_density": 4.776150759539621e-06,
+      "dn_dmu_fixed_temperature": 1.722234521707307e-07,
+      "dn_dtemperature_fixed_mu": 3.027289631070514e-08,
+      "dmu_dtemperature_fixed_net_density": -0.17577685227616174
+    },
+    "muons": "absent"
+  },
+  "seconds": 0.2571600410155952
+}

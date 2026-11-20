@@ -1,0 +1,145 @@
+{
+  "checks": [
+    {
+      "name": "hyperbolic coordinate vs scaled x 0.03",
+      "error": 1.776356839400252e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "hyperbolic tail50/70 0.03",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed64/96 angle 0.03",
+      "error": 8.881784197001256e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed angle vs adaptive angular 0.03",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "hyperbolic coordinate vs scaled x 1.5",
+      "error": -2.2204460492503128e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "hyperbolic tail50/70 1.5",
+      "error": 2.2204460492503136e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed64/96 angle 1.5",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed angle vs adaptive angular 1.5",
+      "error": 4.440892098500627e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "hyperbolic coordinate vs scaled x 12.0",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "hyperbolic tail50/70 12.0",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed64/96 angle 12.0",
+      "error": 3.552713678800507e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed angle vs adaptive angular 12.0",
+      "error": -3.5527136788004946e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "hyperbolic coordinate vs scaled x 100.0",
+      "error": 2.842170943040441e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "hyperbolic tail50/70 100.0",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed64/96 angle 100.0",
+      "error": 2.842170943040441e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "fixed angle vs adaptive angular 100.0",
+      "error": -2.8421709430403604e-14,
+      "tolerance": 2e-10,
+      "passed": true
+    }
+  ],
+  "passed": 16,
+  "failed": [],
+  "rows": [
+    {
+      "v": 0.03,
+      "hyperbolic_A_log": -7.52035152097217,
+      "reference_A_log": -7.520351520972172,
+      "fixed_angular_B_logs": [
+        -6.827038348537998,
+        -6.827038348537999
+      ],
+      "reference_B_log": -6.827038348537999
+    },
+    {
+      "v": 1.5,
+      "hyperbolic_A_log": 0.5333311432081029,
+      "reference_A_log": 0.5333311432081032,
+      "fixed_angular_B_logs": [
+        1.0875180016075081,
+        1.0875180016075081
+      ],
+      "reference_B_log": 1.0875180016075077
+    },
+    {
+      "v": 12.0,
+      "hyperbolic_A_log": -7.863084776835555,
+      "reference_A_log": -7.863084776835555,
+      "fixed_angular_B_logs": [
+        -9.60744079042339,
+        -9.607440790423393
+      ],
+      "reference_B_log": -9.60744079042339
+    },
+    {
+      "v": 100.0,
+      "hyperbolic_A_log": -170.1752052727336,
+      "reference_A_log": -170.17520527273362,
+      "fixed_angular_B_logs": [
+        -173.12952189105988,
+        -173.1295218910599
+      ],
+      "reference_B_log": -173.12952189105988
+    }
+  ],
+  "source": "Same reduced BCS scalar phase integral with different quasiparticle and angular quadratures; not a new weak-current theory"
+}

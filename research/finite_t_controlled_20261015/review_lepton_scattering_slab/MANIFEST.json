@@ -1,0 +1,21 @@
+{
+  "time": "2026-10-15T22:14:23.866084+00:00",
+  "status": "initial independent review frozen; finite inputs accepted, three control failures require repair/recheck",
+  "passed": 46,
+  "failed_control_probes": 3,
+  "author_initial_sha": "be7f2c05f595647ef9fa7a868bd9b8b4d78f39dee4b2b2055c32180334906022",
+  "files": {
+    "INITIAL_PIN.json": "ea631149a5fcf8fa61dab431fd30607c35163c0089725ae27af5d45d70a17f2f",
+    "REVIEW.md": "50caee07a7fd52b8a78eb00db429744b1eb26e05c9849ad8cba2cf1432059fab",
+    "edge_results.json": "dc18b1c061874a7734cdf22094c0185bd14ae3ce96f2612d6db4078c89432285",
+    "extra_probes.py": "d0372cb31e03f2bd77be0ec86e12c1ee66d748c9a36b4954b589108108cd0aa8",
+    "extra_results.json": "0433ff5ea365b4e391c07303b529b50f9e247a80ee5b86164d3f06c4db2162e1",
+    "initial_input_probes.json": "6c548c2458596d6cc9ee10dc0a973d77a6a000f9ca782497356d19e23b57bfb8",
+    "probe.py": "e29099c6088beb7441bd703d6eaae4ea906ab51a7207f4845ddd73ac127599d3",
+    "results.json": "6393e18d20c3bc52aa9aa5fc68326e5369db16880481d95ae78f0d1976e0cc53",
+    "reviewed_initial_MANIFEST.json": "0091277ba134951a390dc8150069a4a1e93236721ec041ad9002a4cac4922b0f",
+    "reviewed_initial_RESEARCH_NOTE.md": "7f0be2285e13432c75a4ff102dc2574b73addb364addb80117335e82312082ff",
+    "reviewed_initial_accepted_results.json": "954a1f02620283114760283fe82f8eb1f308607d23a2355e6b66c3f79d8e4b88",
+    "reviewed_initial_slab.py": "be7f2c05f595647ef9fa7a868bd9b8b4d78f39dee4b2b2055c32180334906022"
+  }
+}

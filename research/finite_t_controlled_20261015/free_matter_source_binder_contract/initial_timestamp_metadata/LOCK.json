@@ -1,0 +1,10 @@
+{
+  "kind": "Saved-arithmetic/API contract audit, locked before audit outputs; no physical function calls",
+  "created_utc": "2026-10-16T09:03:00Z",
+  "proposed_domain": {"T_MeV": [1,3], "nB_fm3": [4e-8,2e-6], "Ye_open": [0.05,0.9], "additional_rate_checks": "both baryon (mu-m)/T in [-100,-5], abs(mu_e/T)<=3; not all rectangle states admitted"},
+  "saved_gates": {"density_relative": 1e-9, "forward_component_relative": 3e-9, "chemical_potential_absolute_MeV": 1e-11, "thermodynamic_identity_relative": 3e-9, "moment_agreement_relative": 3e-6, "energy_ledger_gross_Q": 3e-9},
+  "proposed_anti_diagnostic": {"model": "particle-only nucleons; no antiparticle completion", "maximum_equilibrium_MB_upper_bound_ratio": 1e-8, "unresolved_bound": "reject source admission"},
+  "scope": "T/nB/Ye free npe pair binder design, optional absent or trapped_LTE photons, no muons, no RMF/spectra/AD/hydro",
+  "no_new_scientific_calls": true,
+  "failures": "Preserve failed arithmetic/identity before repair, no altered sources/gates; design acceptance is not implementation acceptance"
+}

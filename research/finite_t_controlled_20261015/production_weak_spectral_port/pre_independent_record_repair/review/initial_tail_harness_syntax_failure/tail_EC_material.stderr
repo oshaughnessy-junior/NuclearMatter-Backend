@@ -1,0 +1,4 @@
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_spectral_port/tail_worker.py", line 7
+    assert dict(channel=ch,E=E)in H['jobs'];z=json.loads((P/f'high_{ch}_{E}.json').read_text());assert not z['failed'];base=z['row'];ctrl=dict(H['profiles']['capture_high']);ctrl['tail'if kind=='material'else'outer_tail']=95. if kind=='material'else60.;st=time.monotonic();row=D.integrated(ch,E,**ctrl)
+                                                                                                                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: expected 'else' after 'if' expression

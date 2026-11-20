@@ -1,0 +1,14 @@
+{
+  "status": "cache_repair_frozen_independent_recheck_pending",
+  "utc": "2026-10-15T13:35:00Z",
+  "checks": "31/31 PASS",
+  "files_sha256": {
+    "run_study.py": "faf527020caf55a7efae542ecf8eedeb070d02ffdd96bc21d48e6b198b7f9fd5",
+    "cache_contract.py": "1f40edb4887bfed2052e241f05fc840ea9eb9f78831d5e9e3766c94360357460",
+    "check_cache_contract.py": "6a70aa0a087ebf7a92a3f0a06729347efde6c7bfa16b7bbc89109e11aa603a7c",
+    "cache_contract_results.json": "752f5183ea6ef3d041287c210472985f1219c1bb89051da55a314e87c1e121fa",
+    "CACHE_CONTRACT_REPAIR.md": "579b75e97b3a73eac9d48b28e150fd92f5f2d23368fff6de2e0f1e76404a9c54"
+  },
+  "preserved_original": "pre_cache_contract_20261015T1332/manifest.json",
+  "unchanged_physics": "integrated.py and all upstream physical kernels unchanged"
+}

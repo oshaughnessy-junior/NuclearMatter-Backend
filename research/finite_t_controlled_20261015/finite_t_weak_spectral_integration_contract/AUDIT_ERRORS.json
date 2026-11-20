@@ -1,0 +1,17 @@
+{
+  "kind": "retained audit-only failures; no scientific calls or source changes",
+  "failures": [
+    {
+      "kind": "exploratory missing path",
+      "path": "hot_ec_opacity_spectrum/total_fine_0.json",
+      "actual": "total_fine_part0.json and total_fine_part1.json",
+      "writes_before_error": false
+    },
+    {
+      "kind": "audit inline SyntaxError",
+      "line": "indices=[x['index']for x in nodes];nodes.sort(key=lambda x:x['index']);expected_n=32 if ch=='EC'else64 if ch=='PC'else80",
+      "error": "SyntaxError: expected 'else' after 'if' expression",
+      "executed": false
+    }
+  ]
+}

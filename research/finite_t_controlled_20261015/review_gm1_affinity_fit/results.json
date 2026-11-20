@@ -1,0 +1,2711 @@
+{
+  "phase": "complete",
+  "passed": true,
+  "checks": [
+    {
+      "name": "preholdout hash potential.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "preholdout hash coefficients.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "preholdout hash PROTOCOL.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "196 scalar coefficients",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh excludes author holdouts 0.2549",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh excludes training 0.2549",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2549, 0.127, 0.3251)",
+      "error": 9.21077402058135e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent momentum density (0.2549, 0.127, 32)",
+      "error": -7.882583474838611e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum density (0.2549, 0.127, 48)",
+      "error": -7.216449660063518e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "momentum quadrature refinement 0.2549",
+      "error": 1.1912805015612502e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent scalar field 0.2549",
+      "error": 6.533285747107629e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum pressure 0.2549",
+      "error": 4.218847493575595e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum energy 0.2549",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum entropy 0.2549",
+      "error": -1.3655743202889425e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative mu_n 0.2549",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative mu_p 0.2549",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative free_per_baryon 0.2549",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative pressure 0.2549",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative entropy_density 0.2549",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25484902), 0.127, np.float64(0.3251650330066014))",
+      "error": 7.201150597909056e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25495098000000005), 0.127, np.float64(0.32503499300139965))",
+      "error": 8.373430927801228e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25484902), 0.127, np.float64(0.3249649929985997))",
+      "error": 7.708298562812942e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25495098000000005), 0.127, np.float64(0.3252349530093981))",
+      "error": 9.205111079283728e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25487451000000005), 0.127, np.float64(0.3251325132513251))",
+      "error": 8.540899546357251e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25492549), 0.127, np.float64(0.32506749325067497))",
+      "error": 7.871025072133153e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25487451), 0.127, np.float64(0.325032503250325))",
+      "error": 9.548648399618844e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25492549000000003), 0.127, np.float64(0.3251674832516748))",
+      "error": 8.538273193483218e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "exact H ladder 0.2549",
+      "error": 4.088972391181431e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "exact H reciprocity 0.2549",
+      "error": 2.7780976092439532e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fit H independent value derivative 0.2549",
+      "error": 1.3643144442815825e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2549, 0.126619, 0.3251)",
+      "error": 7.871025072133153e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2549, 0.127381, 0.3251)",
+      "error": 6.698744742240982e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2549, 0.1268095, 0.3251)",
+      "error": 7.536087835021104e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2549, 0.1271905, 0.3251)",
+      "error": 9.043305402025326e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "reference energy Cv ladder 0.2549",
+      "error": 4.786043954485564e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "fresh physical balance 0.2549",
+      "error": 5.643865082420804e-06,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical free 0.2549",
+      "error": -3.984530394518515e-08,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "fresh physical energy 0.2549",
+      "error": -3.930688308173558e-08,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "fresh physical pressure 0.2549",
+      "error": -1.8769281606711985e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical entropy 0.2549",
+      "error": 5.333333874535384e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical Cv 0.2549",
+      "error": 4.078620534642141e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical Hessian 0.2549",
+      "error": 3.6630640525793864e-06,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "fresh positive heat capacity 0.2549",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh full two-charge stability 0.2549",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh excludes author holdouts 0.1847",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh excludes training 0.1847",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.1847, 0.143, 0.1879)",
+      "error": 5.998156961729198e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent momentum density (0.1847, 0.143, 32)",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum density (0.1847, 0.143, 48)",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "momentum quadrature refinement 0.1847",
+      "error": 9.014597749577643e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent scalar field 0.1847",
+      "error": -1.0519167802349886e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum pressure 0.1847",
+      "error": 7.105427357601002e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum energy 0.1847",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum entropy 0.1847",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative mu_n 0.1847",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative mu_p 0.1847",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative free_per_baryon 0.1847",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative pressure 0.1847",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative entropy_density 0.1847",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.18466306), 0.143, np.float64(0.1879375875175035))",
+      "error": 1.1105344925324956e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.18473694000000002), 0.143, np.float64(0.18786242751449708))",
+      "error": 5.998156961729198e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.18466306), 0.143, np.float64(0.18773754750950192))",
+      "error": 1.6012128476063453e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.18473694000000002), 0.143, np.float64(0.1880623875224955))",
+      "error": 1.3980818450757424e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.18468153), 0.143, np.float64(0.18791879187918792))",
+      "error": 1.3995699577368129e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.18471847), 0.143, np.float64(0.18788121187881213))",
+      "error": 1.2951450138327859e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.18468153), 0.143, np.float64(0.18781878187818782))",
+      "error": 2.6005853763606517e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.18471847), 0.143, np.float64(0.18798120187981202))",
+      "error": 2.1981543659925673e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "exact H ladder 0.1847",
+      "error": 2.7095977684917557e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "exact H reciprocity 0.1847",
+      "error": 4.953390582985053e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fit H independent value derivative 0.1847",
+      "error": 9.020283091221041e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.1847, 0.14257099999999998, 0.1879)",
+      "error": 2.3992627846916794e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.1847, 0.143429, 0.1879)",
+      "error": 2.3992627846916794e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.1847, 0.14278549999999998, 0.1879)",
+      "error": 1.3995699577368129e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.1847, 0.1432145, 0.1879)",
+      "error": 1.5995085231277863e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "reference energy Cv ladder 0.1847",
+      "error": -2.4134668796804704e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "fresh physical balance 0.1847",
+      "error": 4.935234919973708e-06,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical free 0.1847",
+      "error": -2.8273916541365907e-09,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "fresh physical energy 0.1847",
+      "error": -2.758270056801848e-09,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "fresh physical pressure 0.1847",
+      "error": 5.381763390488459e-08,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical entropy 0.1847",
+      "error": 4.066665226787336e-08,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical Cv 0.1847",
+      "error": -4.840723666355018e-08,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical Hessian 0.1847",
+      "error": 5.512554900729052e-08,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "fresh positive heat capacity 0.1847",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh full two-charge stability 0.1847",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh excludes author holdouts 0.2327",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh excludes training 0.2327",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2327, 2.47, 0.3113)",
+      "error": 2.2989312557991278e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent momentum density (0.2327, 2.47, 32)",
+      "error": -2.3314683517128287e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum density (0.2327, 2.47, 48)",
+      "error": -2.1094237467877974e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "momentum quadrature refinement 0.2327",
+      "error": 3.1405437633639757e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent scalar field 0.2327",
+      "error": 1.7891432498256715e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum pressure 0.2327",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum energy 0.2327",
+      "error": -9.992007221626409e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum entropy 0.2327",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative mu_n 0.2327",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative mu_p 0.2327",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative free_per_baryon 0.2327",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative pressure 0.2327",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative entropy_density 0.2327",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.23265345999999998), 2.47, np.float64(0.31136227245449094))",
+      "error": 1.3410432325494914e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.23274654), 2.47, np.float64(0.3112377524495101))",
+      "error": 1.5582609230590835e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.23265345999999998), 2.47, np.float64(0.31116223244648933))",
+      "error": 2.300409192961326e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.23274653999999997), 2.47, np.float64(0.3114377124575085))",
+      "error": 2.8718190205869523e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.23267673), 2.47, np.float64(0.31133113311331134))",
+      "error": 1.1494656278995639e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.23272326999999998), 2.47, np.float64(0.31126887311268875))",
+      "error": 1.3410432325494914e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.23267672999999997), 2.47, np.float64(0.3112311231123112))",
+      "error": 3.5786443640877517e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.23272326999999998), 2.47, np.float64(0.31136886311368867))",
+      "error": 1.2123326798102413e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "exact H ladder 0.2327",
+      "error": 5.559346937374304e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "exact H reciprocity 0.2327",
+      "error": 7.418069087502226e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fit H independent value derivative 0.2327",
+      "error": 1.8522229646774286e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2327, 2.46259, 0.3113)",
+      "error": 9.578880232496366e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2327, 2.4774100000000003, 0.3113)",
+      "error": 5.195711484901035e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2327, 2.466295, 0.3113)",
+      "error": 1.7319038283003452e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2327, 2.4737050000000003, 0.3113)",
+      "error": 3.8315520929985464e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "reference energy Cv ladder 0.2327",
+      "error": -2.2548880651562797e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "fresh physical balance 0.2327",
+      "error": 1.3649132203407648e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical free 0.2327",
+      "error": -1.0051621757156681e-08,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "fresh physical energy 0.2327",
+      "error": -1.776948010956403e-08,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "fresh physical pressure 0.2327",
+      "error": -2.576362845285729e-08,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical entropy 0.2327",
+      "error": -1.8507397836486916e-08,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical Cv 0.2327",
+      "error": 1.6014586545765042e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical Hessian 0.2327",
+      "error": 1.4319979413140923e-07,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "fresh positive heat capacity 0.2327",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh full two-charge stability 0.2327",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh excludes author holdouts 0.2589",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh excludes training 0.2589",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2589, 0.121, 0.3287)",
+      "error": 6.033790297994203e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent momentum density (0.2589, 0.121, 32)",
+      "error": -6.439293542825908e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum density (0.2589, 0.121, 48)",
+      "error": -5.551115123125783e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "momentum quadrature refinement 0.2589",
+      "error": 1.1807812510739306e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent scalar field 0.2589",
+      "error": 5.360288840407283e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum pressure 0.2589",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum energy 0.2589",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum entropy 0.2589",
+      "error": -1.0436096431476471e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative mu_n 0.2589",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative mu_p 0.2589",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative free_per_baryon 0.2589",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative pressure 0.2589",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent value derivative entropy_density 0.2589",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25884822), 0.121, np.float64(0.3287657531506301))",
+      "error": 6.196865711453506e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25895178), 0.121, np.float64(0.3286342731453709))",
+      "error": 6.196865711453506e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25884822), 0.121, np.float64(0.3285657131426285))",
+      "error": 6.363813235186729e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25895178), 0.121, np.float64(0.32883423315336935))",
+      "error": 6.030121225146533e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25887411000000005), 0.121, np.float64(0.3287328732873287))",
+      "error": 6.196865711453506e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25892589), 0.121, np.float64(0.32866713328667135))",
+      "error": 5.055337817238387e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25887411000000005), 0.121, np.float64(0.32863286328632857))",
+      "error": 7.177501794824116e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (np.float64(0.25892589), 0.121, np.float64(0.32876712328767127))",
+      "error": 7.662213366762235e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "exact H ladder 0.2589",
+      "error": 3.862310850955822e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "exact H reciprocity 0.2589",
+      "error": 3.314534737948959e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fit H independent value derivative 0.2589",
+      "error": 1.2876702962610616e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2589, 0.120637, 0.3287)",
+      "error": 4.403036163401176e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2589, 0.121363, 0.3287)",
+      "error": 5.21841323069769e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2589, 0.1208185, 0.3287)",
+      "error": 4.892262403779084e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "EOS forward root (0.2589, 0.1211815, 0.3287)",
+      "error": 6.033790297994203e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "reference energy Cv ladder 0.2589",
+      "error": 1.6216307385796824e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "fresh physical balance 0.2589",
+      "error": 1.1257172545008277e-05,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical free 0.2589",
+      "error": -2.675265022844542e-07,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "fresh physical energy 0.2589",
+      "error": -2.6597956548357615e-07,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "fresh physical pressure 0.2589",
+      "error": -5.563434545274859e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical entropy 0.2589",
+      "error": 1.713620986221187e-06,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical Cv 0.2589",
+      "error": 1.8921268514215939e-06,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh physical Hessian 0.2589",
+      "error": 7.674141007489547e-06,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "fresh positive heat capacity 0.2589",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh full two-charge stability 0.2589",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.18, 0.18)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.18, 0.2)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.18, 0.22)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.18, 0.24)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.18, 0.26)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.18, 0.28)",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.18, 0.3)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.18, 0.32)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.19, 0.18)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.19, 0.2)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.19, 0.22)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.19, 0.24)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.19, 0.26)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.19, 0.28)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.19, 0.3)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.19, 0.32)",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.2, 0.18)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.2, 0.2)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.2, 0.22)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.2, 0.24)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.2, 0.26)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.2, 0.28)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.2, 0.3)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.2, 0.32)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.21, 0.18)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.21, 0.2)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.21, 0.22)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.21, 0.24)",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.21, 0.26)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.21, 0.28)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.21, 0.3)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.21, 0.32)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.22, 0.18)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.22, 0.2)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.22, 0.22)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.22, 0.24)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.22, 0.26)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.22, 0.28)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.22, 0.3)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.22, 0.32)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.23, 0.18)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.23, 0.2)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.23, 0.22)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.23, 0.24)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.23, 0.26)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.23, 0.28)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.23, 0.3)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.23, 0.32)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.24, 0.18)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.24, 0.2)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.24, 0.22)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.24, 0.24)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.24, 0.26)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.24, 0.28)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.24, 0.3)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.24, 0.32)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.25, 0.18)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.25, 0.2)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.25, 0.22)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.25, 0.24)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.25, 0.26)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.25, 0.28)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.25, 0.3)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.25, 0.32)",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Sommerfeld target (0.1811, 0.1817)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "cold derivative least-squares normal equation",
+      "error": 4.3775368469895906e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "cold design rank49",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "thermal design rank49",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "independent cold condition number",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent thermal condition number",
+      "error": -1.1879386363489175e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.18, 2.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.18, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.2, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.2, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.22, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.22, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.24, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.24, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.26, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.26, 3.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.28, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.28, 3.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.3, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.3, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.32, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.18, 0.32, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.18, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.18, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.2, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.2, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.22, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.22, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.24, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.24, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.26, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.26, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.28, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.28, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.3, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.3, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.32, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.19, 0.32, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.18, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.18, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.2, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.2, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.22, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.22, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.24, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.24, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.26, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.26, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.28, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.28, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.3, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.3, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.32, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.2, 0.32, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.18, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.18, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.2, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.2, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.22, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.22, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.24, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.24, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.26, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.26, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.28, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.28, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.3, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.3, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.32, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.21, 0.32, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.18, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.18, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.2, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.2, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.22, 2.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.22, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.24, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.24, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.26, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.26, 3.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.28, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.28, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.3, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.3, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.32, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.22, 0.32, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.18, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.18, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.2, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.2, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.22, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.22, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.24, 2.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.24, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.26, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.26, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.28, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.28, 3.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.3, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.3, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.32, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.23, 0.32, 3.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.18, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.18, 3.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.2, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.2, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.22, 2.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.22, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.24, 2.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.24, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.26, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.26, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.28, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.28, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.3, 2.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.3, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.32, 2.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.24, 0.32, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.18, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.18, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.2, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.2, 3.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.22, 2.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.22, 3.0)",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.24, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.24, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.26, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.26, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.28, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.28, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.3, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.3, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.32, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.25, 0.32, 3.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.1811, 0.1817, 2.0)",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "warm target anchor (0.1811, 0.1817, 3.0)",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "thermal normal equation T2",
+      "error": 1.744104741646265e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "thermal normal equation T4",
+      "error": 1.6767752242646348e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "thermal normal equation T6",
+      "error": 1.4938085924207072e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh cold forward gate 0.2549",
+      "error": 1.0888809578512716e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "fresh Sommerfeld C2 0.2549",
+      "error": 5.33232610955281e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh cold forward gate 0.1847",
+      "error": 3.756845643696388e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "fresh Sommerfeld C2 0.1847",
+      "error": 2.096193152389958e-08,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh cold forward gate 0.2327",
+      "error": 1.0138478415678805e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "fresh Sommerfeld C2 0.2327",
+      "error": 2.2465491467116294e-08,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "fresh cold forward gate 0.2589",
+      "error": 5.896317724448011e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "fresh Sommerfeld C2 0.2589",
+      "error": 1.7136672081363713e-06,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "delta\u00b2 structural reflection 0.193",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "delta\u00b2 structural reflection 0.277",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "delta\u00b2 structural reflection 0.325",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2, 0.119, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2, 3.001, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.179, 0.5, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.261, 0.5, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2, 0.5, 0.331)",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "all frozen sources coefficients reports unchanged",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "n": 0.2549,
+      "T": 0.127,
+      "Y": 0.3251,
+      "exact": {
+        "nB": 0.2549,
+        "temperature": 0.127,
+        "Yp": 0.3251,
+        "phi_mev": 416.2283035726067,
+        "omega_mev": 359.5347309287061,
+        "rho_mev": -38.795799353370086,
+        "dirac_mass_mev": 522.7716964273934,
+        "density_defined_landau_n_mev": 623.3481709936897,
+        "density_defined_landau_p_mev": 586.6214647767753,
+        "kinetic_mu_n_mev": 623.3479849614251,
+        "kinetic_mu_p_mev": 586.6211998289489,
+        "mu_n_mev": 1002.2806155668163,
+        "mu_p_mev": 926.7580310809699,
+        "energy_density": 238.66894603764206,
+        "pressure": 10.554235428464649,
+        "free_energy_density": 238.6686887035684,
+        "entropy_density": 0.0020262525486347115,
+        "kinetic_energy_density": 147.12031749548305,
+        "scalar_field_energy_density": 44.86112972793046,
+        "vector_field_energy_density": 46.68749881422857,
+        "scalar_density": 0.23133754045114047,
+        "antiparticle_density": 0.0,
+        "max_normalized_equation_residual": 9.21077402058135e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "prediction": {
+        "free_per_baryon": 936.3228273574414,
+        "free_energy_density": 238.6686886934118,
+        "entropy_density": 0.0020262536293028472,
+        "energy_density": 238.66894602762275,
+        "pressure": 10.55423344751048,
+        "mu_n": 1002.2806075224482,
+        "mu_p": 926.7580237533747,
+        "cv_fixed_nY": 0.002026245512609784,
+        "chemical_hessian": [
+          [
+            1027.1973185579402,
+            173.7252151071596
+          ],
+          [
+            173.7252151071596,
+            1030.735326684242
+          ]
+        ],
+        "min_chemical_eigenvalue": 855.2321010658538
+      },
+      "independent_H": [
+        [
+          1027.2000090562187,
+          173.72804002298852
+        ],
+        [
+          173.7280400519789,
+          1030.7377811112124
+        ]
+      ],
+      "reference_Cv": [
+        0.0020262456559510785,
+        0.0020262446861814653
+      ],
+      "errors": {
+        "balance": 5.643865082420804e-06,
+        "mu_difference": -7.167728881540825e-07,
+        "free": -3.984530394518515e-08,
+        "energy": -3.930688308173558e-08,
+        "pressure": -1.8769281606711985e-07,
+        "entropy": 5.333333874535384e-07,
+        "Cv": 4.078620534642141e-07,
+        "Hessian": 3.6630640525793864e-06
+      }
+    },
+    {
+      "n": 0.1847,
+      "T": 0.143,
+      "Y": 0.1879,
+      "exact": {
+        "nB": 0.1847,
+        "temperature": 0.143,
+        "Yp": 0.1879,
+        "phi_mev": 324.51610197261954,
+        "omega_mev": 260.5181043645822,
+        "rho_mev": -50.163256664988914,
+        "dirac_mass_mev": 614.4838980273805,
+        "density_defined_landau_n_mev": 694.8351053003204,
+        "density_defined_landau_p_mev": 645.941968675946,
+        "kinetic_mu_n_mev": 694.8348347297808,
+        "kinetic_mu_p_mev": 645.9413686057873,
+        "mu_n_mev": 980.4345674268574,
+        "mu_p_mev": 881.377844637875,
+        "energy_density": 173.3762429096638,
+        "pressure": 4.2725592922958775,
+        "free_energy_density": 173.37592886967917,
+        "entropy_density": 0.0021960838086970006,
+        "kinetic_energy_density": 121.5123309468251,
+        "scalar_field_energy_density": 26.359237820154572,
+        "vector_field_energy_density": 25.50467414268413,
+        "scalar_density": 0.17271561122793996,
+        "antiparticle_density": 0.0,
+        "max_normalized_equation_residual": 5.998156961729198e-16,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "prediction": {
+        "free_per_baryon": 938.6893820744826,
+        "free_energy_density": 173.37592886915695,
+        "entropy_density": 0.002196083898004377,
+        "energy_density": 173.37624290915434,
+        "pressure": 4.272559522234909,
+        "mu_n": 980.4345688015709,
+        "mu_p": 881.3778453068517,
+        "cv_fixed_nY": 0.002196046468533868,
+        "chemical_hessian": [
+          [
+            769.0266088193875,
+            -93.04974215469872
+          ],
+          [
+            -93.04974215469872,
+            834.3045127121659
+          ]
+        ],
+        "min_chemical_eigenvalue": 703.0574693167754
+      },
+      "independent_H": [
+        [
+          769.026617766946,
+          -93.04969976652356
+        ],
+        [
+          -93.04969936643454,
+          834.3045287544654
+        ]
+      ],
+      "reference_Cv": [
+        0.002196046044829847,
+        0.0021960465748384144
+      ],
+      "errors": {
+        "balance": 4.935234919973708e-06,
+        "mu_difference": 7.057368520690943e-07,
+        "free": -2.8273916541365907e-09,
+        "energy": -2.758270056801848e-09,
+        "pressure": 5.381763390488459e-08,
+        "entropy": 4.066665226787336e-08,
+        "Cv": -4.840723666355018e-08,
+        "Hessian": 5.512554900729052e-08
+      }
+    },
+    {
+      "n": 0.2327,
+      "T": 2.47,
+      "Y": 0.3113,
+      "exact": {
+        "nB": 0.2327,
+        "temperature": 2.47,
+        "Yp": 0.3113,
+        "phi_mev": 389.22825108768086,
+        "omega_mev": 328.2217806477438,
+        "rho_mev": -38.21143460216718,
+        "dirac_mass_mev": 549.7717489123193,
+        "density_defined_landau_n_mev": 642.029082884951,
+        "density_defined_landau_p_mev": 605.8123008844066,
+        "kinetic_mu_n_mev": 641.9548041899826,
+        "kinetic_mu_p_mev": 605.7016209633152,
+        "mu_n_mev": 989.28230213881,
+        "mu_p_mev": 914.8176843099754,
+        "energy_density": 217.3962525935086,
+        "pressure": 7.512599343901382,
+        "free_energy_density": 217.29921193594154,
+        "entropy_density": 0.0392877156141938,
+        "kinetic_energy_density": 139.51530278003466,
+        "scalar_field_energy_density": 38.85340422661688,
+        "vector_field_energy_density": 39.02754558685705,
+        "scalar_density": 0.21372493050345986,
+        "antiparticle_density": 5.7136789325838246e-207,
+        "max_normalized_equation_residual": 2.2989312557991278e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "prediction": {
+        "free_per_baryon": 933.8169829548884,
+        "free_energy_density": 217.29921193360252,
+        "entropy_density": 0.03928771488708042,
+        "energy_density": 217.39625258937363,
+        "pressure": 7.512599150349564,
+        "mu_n": 989.282301401942,
+        "mu_p": 914.817683235974,
+        "cv_fixed_nY": 0.03920829853950455,
+        "chemical_hessian": [
+          [
+            946.178029539988,
+            92.64112937969156
+          ],
+          [
+            92.64112937969156,
+            954.7398787023866
+          ]
+        ],
+        "min_chemical_eigenvalue": 857.7189672330348
+      },
+      "independent_H": [
+        [
+          946.1779331607497,
+          92.641067682462
+        ],
+        [
+          92.64106775330252,
+          954.7397354933205
+        ]
+      ],
+      "reference_Cv": [
+        0.03920829137635554,
+        0.039208292260458646
+      ],
+      "errors": {
+        "balance": 1.3649132203407648e-07,
+        "mu_difference": 3.3713354241626803e-07,
+        "free": -1.0051621757156681e-08,
+        "energy": -1.776948010956403e-08,
+        "pressure": -2.576362845285729e-08,
+        "entropy": -1.8507397836486916e-08,
+        "Cv": 1.6014586545765042e-07,
+        "Hessian": 1.4319979413140923e-07
+      }
+    },
+    {
+      "n": 0.2589,
+      "T": 0.121,
+      "Y": 0.3287,
+      "exact": {
+        "nB": 0.2589,
+        "temperature": 0.121,
+        "Yp": 0.3287,
+        "phi_mev": 420.9379552693256,
+        "omega_mev": 365.1767039523029,
+        "rho_mev": -38.59352727991047,
+        "dirac_mass_mev": 518.0620447306745,
+        "density_defined_landau_n_mev": 620.0396915475629,
+        "density_defined_landau_p_mev": 583.514616743096,
+        "kinetic_mu_n_mev": 620.0395240428298,
+        "kinetic_mu_p_mev": 583.5143805612064,
+        "mu_n_mev": 1004.5129916350882,
+        "mu_p_mev": 929.394320873554,
+        "energy_density": 242.51435371552634,
+        "pressure": 11.161662325109921,
+        "free_energy_density": 242.5141200263786,
+        "entropy_density": 0.001931315270616622,
+        "kinetic_energy_density": 148.42847941264964,
+        "scalar_field_energy_density": 45.95794680642746,
+        "vector_field_energy_density": 48.12792749644927,
+        "scalar_density": 0.23443800939041096,
+        "antiparticle_density": 0.0,
+        "max_normalized_equation_residual": 6.033790297994203e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "prediction": {
+        "free_per_baryon": 936.7096174473387,
+        "free_energy_density": 242.514119957116,
+        "entropy_density": 0.0019313185801590007,
+        "energy_density": 242.51435364666423,
+        "pressure": 11.161656115392145,
+        "mu_n": 1004.5129669348229,
+        "mu_p": 929.3942975354142,
+        "cv_fixed_nY": 0.0019313118952524252,
+        "chemical_hessian": [
+          [
+            1041.5356663096309,
+            188.2434300703324
+          ],
+          [
+            188.2434300703324,
+            1044.4531082132744
+          ]
+        ],
+        "min_chemical_eigenvalue": 854.7453053740251
+      },
+      "independent_H": [
+        [
+          1041.541411235181,
+          188.24931604593394
+        ],
+        [
+          188.24931608106314,
+          1044.458586575404
+        ]
+      ],
+      "reference_Cv": [
+        0.0019313085541591247,
+        0.001931308240972244
+      ],
+      "errors": {
+        "balance": 1.1257172545008277e-05,
+        "mu_difference": -1.362125544801529e-06,
+        "free": -2.675265022844542e-07,
+        "energy": -2.6597956548357615e-07,
+        "pressure": -5.563434545274859e-07,
+        "entropy": 1.713620986221187e-06,
+        "Cv": 1.8921268514215939e-06,
+        "Hessian": 7.674141007489547e-06
+      }
+    },
+    {
+      "fresh_cold_C2": {
+        "n": 0.2549,
+        "Y": 0.3251,
+        "exact": -0.03129614835995283,
+        "fit": -0.03129616504807973,
+        "relative": 5.33232610955281e-07
+      }
+    },
+    {
+      "fresh_cold_C2": {
+        "n": 0.1847,
+        "Y": 0.1879,
+        "exact": -0.041573796946133404,
+        "fit": -0.04157379781760049,
+        "relative": 2.096193152389958e-08
+      }
+    },
+    {
+      "fresh_cold_C2": {
+        "n": 0.2327,
+        "Y": 0.3113,
+        "exact": -0.034211193947151504,
+        "fit": -0.03421119471572279,
+        "relative": 2.2465491467116294e-08
+      }
+    },
+    {
+      "fresh_cold_C2": {
+        "n": 0.2589,
+        "Y": 0.3287,
+        "exact": -0.030825243048616686,
+        "fit": -0.030825295872824884,
+        "relative": 1.7136672081363713e-06
+      }
+    },
+    {
+      "design_audit": {
+        "condition_C0": 288.198453579864,
+        "condition_thermal": 193.2195464794784,
+        "normalized_normal_equation_residual": 4.3775368469895906e-17,
+        "cold_free_max": 3.592872488411558e-08,
+        "cold_aY_max": 3.287880900870732e-07,
+        "cold_an_max": 3.486877176328562e-06
+      }
+    }
+  ],
+  "initial_hashes": {
+    "gm1_affinity_fit/development_results.json": "4bd0fc79da57f5c2ef141c8996d8f61d1aa5c4883d6d36e388383ec67dce355b",
+    "gm1_affinity_fit/holdouts.py": "7579e33e9283a599e63b3bf73c0581bb86612fcde7878117cbceb44d20379ffe",
+    "gm1_affinity_fit/CHECKPOINT.json": "5f121cc01f3617145a61feb68f4e244b87a1423d4fc2f9b5c8015f9296d6811e",
+    "gm1_affinity_fit/holdout_results.json": "9f910bc26d3062f1868be46aafcd374efef4d93c3bdcc4d9e7df74d1adb7ef46",
+    "gm1_affinity_fit/HOLDOUT_PROTOCOL.json": "0bdab6db864f8d61a5508c2cacfd174df381b8ee0896d6ea50df927dce14152b",
+    "gm1_affinity_fit/RESEARCH_NOTE.md": "9962cf7de6349f40cac6b6b0d71974b4c3ad88468d0217f9ba38628940ca6937",
+    "gm1_affinity_fit/development.py": "7f97ef4c4177aa820b08110fa2c0db2fbfdb532f3b4acb92c2ac285c4e688ce3",
+    "gm1_affinity_fit/old_failure_reproduced.json": "6dfe7d682ccc8be387e9503f011322f7cc8ec96fe476e403735bde5435f218a2",
+    "gm1_affinity_fit/development_partial.json": "dd796741da82852ce42cb9eb0c9912882cd00e06f5a07e95462462930174adbc",
+    "gm1_affinity_fit/check_structure.py": "1642b7e223dff4548d3303508945ff54f34ab6732e88736f1528fd377a1368e7",
+    "gm1_affinity_fit/PRE_HOLDOUT_FREEZE.json": "848adf6d6e0f76a34c76ffd97f2fbb7139be0ca49b914c5c6cc6099e5188d837",
+    "gm1_affinity_fit/potential.py": "5996a98f69d76f56ab03e5c59361fc7e8b4a75c71d0a877936850c1785806be2",
+    "gm1_affinity_fit/structure_results.json": "92aca2051a7c50ffb6a8d7e3ac956dc67e4ae5acba57d60a42bb20aa8bec5d18",
+    "gm1_affinity_fit/PROTOCOL.json": "bde9c80680b41567774ed4dd8ff361926d54a3c4b6fb84d3528badb7662d446e",
+    "gm1_affinity_fit/coefficients.json": "1e03c7e192ab869018c2da575d613026f8be81d75ca7709f8b5de1d8ce59ea8b",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "gm1_potential_fit/potential.py": "9306f288b22a9bbd10af107f552cd276ba066f6620cfbb94c52433954a919df4",
+    "gm1_potential_fit/coefficients.json": "ecd8e2f44e54613f9a08678c47b0f982fcd779968d188ebd525032f1ad902234",
+    "review_gm1_fit/results.json": "ecd3338571f24f0850e622046b5da9724f41e294847cd73d3cb0fb71e2572648"
+  },
+  "final_hashes": {
+    "gm1_affinity_fit/development_results.json": "4bd0fc79da57f5c2ef141c8996d8f61d1aa5c4883d6d36e388383ec67dce355b",
+    "gm1_affinity_fit/holdouts.py": "7579e33e9283a599e63b3bf73c0581bb86612fcde7878117cbceb44d20379ffe",
+    "gm1_affinity_fit/CHECKPOINT.json": "5f121cc01f3617145a61feb68f4e244b87a1423d4fc2f9b5c8015f9296d6811e",
+    "gm1_affinity_fit/holdout_results.json": "9f910bc26d3062f1868be46aafcd374efef4d93c3bdcc4d9e7df74d1adb7ef46",
+    "gm1_affinity_fit/HOLDOUT_PROTOCOL.json": "0bdab6db864f8d61a5508c2cacfd174df381b8ee0896d6ea50df927dce14152b",
+    "gm1_affinity_fit/RESEARCH_NOTE.md": "9962cf7de6349f40cac6b6b0d71974b4c3ad88468d0217f9ba38628940ca6937",
+    "gm1_affinity_fit/development.py": "7f97ef4c4177aa820b08110fa2c0db2fbfdb532f3b4acb92c2ac285c4e688ce3",
+    "gm1_affinity_fit/old_failure_reproduced.json": "6dfe7d682ccc8be387e9503f011322f7cc8ec96fe476e403735bde5435f218a2",
+    "gm1_affinity_fit/development_partial.json": "dd796741da82852ce42cb9eb0c9912882cd00e06f5a07e95462462930174adbc",
+    "gm1_affinity_fit/check_structure.py": "1642b7e223dff4548d3303508945ff54f34ab6732e88736f1528fd377a1368e7",
+    "gm1_affinity_fit/PRE_HOLDOUT_FREEZE.json": "848adf6d6e0f76a34c76ffd97f2fbb7139be0ca49b914c5c6cc6099e5188d837",
+    "gm1_affinity_fit/potential.py": "5996a98f69d76f56ab03e5c59361fc7e8b4a75c71d0a877936850c1785806be2",
+    "gm1_affinity_fit/structure_results.json": "92aca2051a7c50ffb6a8d7e3ac956dc67e4ae5acba57d60a42bb20aa8bec5d18",
+    "gm1_affinity_fit/PROTOCOL.json": "bde9c80680b41567774ed4dd8ff361926d54a3c4b6fb84d3528badb7662d446e",
+    "gm1_affinity_fit/coefficients.json": "1e03c7e192ab869018c2da575d613026f8be81d75ca7709f8b5de1d8ce59ea8b",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "gm1_potential_fit/potential.py": "9306f288b22a9bbd10af107f552cd276ba066f6620cfbb94c52433954a919df4",
+    "gm1_potential_fit/coefficients.json": "ecd8e2f44e54613f9a08678c47b0f982fcd779968d188ebd525032f1ad902234",
+    "review_gm1_fit/results.json": "ecd3338571f24f0850e622046b5da9724f41e294847cd73d3cb0fb71e2572648"
+  },
+  "runtime_seconds": 11.030061916913837
+}

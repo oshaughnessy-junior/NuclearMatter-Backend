@@ -1,0 +1,70 @@
+{
+  "status": "FROZEN104authorPASS3coarseFAIL; finer candidate pending independent review",
+  "manifest_sha256": "5e78fc0eb5ff0df6b8274b01edb7e874c5a3ae1a98469cc8b9cffa7141f3d0d4",
+  "report_sha256": "328ccaafbd63d382a8bacd22bb309973472faef3d977f2314b7280b0f83aec87",
+  "sources": {
+    "element": "6da23ca9ce8c56e12b9e03c68e403f43c7fa049bfecb4fff05e380cffae962be",
+    "endpoint": "e7d74183803aae690d2e663834e2749e44166cebe70b97c3986395c82b659d7d",
+    "summary": "4d186990f37f96fcfbb84036ea2cf7e4e55ec67d4d7a49e6e43e3b92f9125e4f"
+  },
+  "author_passed": 104,
+  "preserved_failed": 3,
+  "failed_gates": [
+    {
+      "steps": 2,
+      "failed": [
+        {
+          "name": "fresh endpoint Simpson escape",
+          "error": 3.9600653560277126e-05,
+          "gate": 3e-05,
+          "passed": false
+        },
+        {
+          "name": "fresh endpoint Simpson netlepton",
+          "error": 0.00010770668961973641,
+          "gate": 3e-05,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "name": "Ye absolute 2to4",
+      "error": -2.2572186826885776e-06,
+      "gate": 2e-06,
+      "passed": false
+    }
+  ],
+  "finer_time_comparison": {
+    "steps": [
+      4,
+      8
+    ],
+    "dT": 2.2697510315694558e-08,
+    "dYe": -5.561072802251488e-07,
+    "escape_relative": -7.151903732238729e-06
+  },
+  "source_change": {
+    "R": -0.06738953144876758,
+    "Q": -0.018563171255952193
+  },
+  "upstreams_unchanged": true,
+  "accepted_binding_paths_unchanged": 119,
+  "environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.15.2",
+      "jax": "0.10.1",
+      "matplotlib": "3.10.9"
+    },
+    "minimum_runtime_executed": false,
+    "full_CI": false
+  },
+  "quota": {
+    "last_experiment_used": 26,
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "reset": 1792652325,
+    "no_reset_used": true
+  },
+  "different_review_pending": true
+}

@@ -1,0 +1,354 @@
+{
+  "checks": [
+    {
+      "name": "lepton independent momentum T1.0 mu2.0 m0.51099895069",
+      "actual": [
+        1.1853767678848334e-07,
+        4.5644987772406353e-07,
+        1.4831940364501178e-07
+      ],
+      "expected": [
+        1.1853767678848336e-07,
+        4.5644987772406374e-07,
+        1.4831940364501186e-07
+      ],
+      "relative_error": 5.353941349113648e-16,
+      "passed": true
+    },
+    {
+      "name": "lepton independent momentum T10.0 mu0.0 m0.51099895069",
+      "actual": [
+        0.0,
+        0.0014983212443661796,
+        0.0004992522177876442
+      ],
+      "expected": [
+        0.0,
+        0.0014983212443661733,
+        0.0004992522177876516
+      ],
+      "relative_error": 1.4767234896965904e-14,
+      "passed": true
+    },
+    {
+      "name": "lepton independent momentum T0.01 mu110.0 m105.6583755",
+      "actual": [
+        0.0001259362216944761,
+        0.013636168936293372,
+        0.00021683005236497252
+      ],
+      "expected": [
+        0.00012593622169447614,
+        0.013636168936293366,
+        0.00021683005236497262
+      ],
+      "relative_error": 5.000239407130493e-16,
+      "passed": true
+    },
+    {
+      "name": "lepton independent momentum T20.0 mu-100.0 m105.6583755",
+      "actual": [
+        -0.001392503466489128,
+        0.20206635984734214,
+        0.030374683657590894
+      ],
+      "expected": [
+        -0.0013925034664891247,
+        0.2020663598473419,
+        0.03037468365759091
+      ],
+      "relative_error": 2.3357977884659837e-15,
+      "passed": true
+    },
+    {
+      "name": "massless inversion T0.01 n1e-06",
+      "actual": 9.999999999999955e-07,
+      "expected": 1e-06,
+      "relative_error": 4.446922973085077e-15,
+      "passed": true
+    },
+    {
+      "name": "massless inversion T0.01 n1e-12",
+      "actual": 9.999999999999965e-13,
+      "expected": 1e-12,
+      "relative_error": 3.4331226595218434e-15,
+      "passed": true
+    },
+    {
+      "name": "massless inversion T0.01 n1e-18",
+      "actual": 1.0000000397718603e-18,
+      "expected": 1e-18,
+      "relative_error": 3.9771860243420794e-08,
+      "passed": false
+    },
+    {
+      "name": "massless inversion T0.01 n1e-24",
+      "actual": 9.080003316496246e-25,
+      "expected": 1e-24,
+      "relative_error": 0.09199966835037532,
+      "passed": false
+    },
+    {
+      "name": "massless inversion T0.01 n1e-30",
+      "actual": 0.0,
+      "expected": 1e-30,
+      "relative_error": 1.0,
+      "passed": false
+    },
+    {
+      "name": "massless inversion T1.0 n1e-06",
+      "actual": 9.99999999999996e-07,
+      "expected": 1e-06,
+      "relative_error": 4.023406499457927e-15,
+      "passed": true
+    },
+    {
+      "name": "massless inversion T1.0 n1e-12",
+      "actual": 9.99999999999968e-13,
+      "expected": 1e-12,
+      "relative_error": 3.1907845894379486e-14,
+      "passed": true
+    },
+    {
+      "name": "massless inversion T1.0 n1e-18",
+      "actual": 9.999999999998227e-19,
+      "expected": 1e-18,
+      "relative_error": 1.773781478780644e-13,
+      "passed": true
+    },
+    {
+      "name": "massless inversion T1.0 n1e-24",
+      "actual": 0.0,
+      "expected": 1e-24,
+      "relative_error": 1.0,
+      "passed": false
+    },
+    {
+      "name": "massless inversion T1.0 n1e-30",
+      "actual": 0.0,
+      "expected": 1e-30,
+      "relative_error": 1.0,
+      "passed": false
+    },
+    {
+      "name": "massless inversion T10.0 n1e-06",
+      "actual": 9.999999999999906e-07,
+      "expected": 1e-06,
+      "relative_error": 9.317362419797304e-15,
+      "passed": true
+    },
+    {
+      "name": "massless inversion T10.0 n1e-12",
+      "actual": 9.999999998228509e-13,
+      "expected": 1e-12,
+      "relative_error": 1.7714912923132712e-10,
+      "passed": true
+    },
+    {
+      "name": "massless inversion T10.0 n1e-18",
+      "actual": 9.080003316496247e-19,
+      "expected": 1e-18,
+      "relative_error": 0.09199966835037536,
+      "passed": false
+    },
+    {
+      "name": "massless inversion T10.0 n1e-24",
+      "actual": 0.0,
+      "expected": 1e-24,
+      "relative_error": 1.0,
+      "passed": false
+    },
+    {
+      "name": "massless inversion T10.0 n1e-30",
+      "actual": 0.0,
+      "expected": 1e-30,
+      "relative_error": 1.0,
+      "passed": false
+    },
+    {
+      "name": "MB cv/n T0.0001",
+      "actual": 1.5000035086112282,
+      "expected": 1.5,
+      "relative_error": 2.339074152146736e-06,
+      "passed": true
+    },
+    {
+      "name": "MB cv/n T1e-06",
+      "actual": 1.499999995682541,
+      "expected": 1.5,
+      "relative_error": 2.8783060379566905e-09,
+      "passed": true
+    },
+    {
+      "name": "MB cv/n T1e-08",
+      "actual": 1.499999975954229,
+      "expected": 1.5,
+      "relative_error": 1.6030513953306052e-08,
+      "passed": true
+    },
+    {
+      "name": "weak charge-odd FD moment T1.0 mu0.0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "weak charge-odd FD moment T0.01 mu100.0",
+      "actual": 37034005.5960854,
+      "expected": 37034005.595448576,
+      "relative_error": 1.71956412794606e-11,
+      "passed": true
+    },
+    {
+      "name": "weak charge-odd FD moment T10.0 mu-100.0",
+      "actual": -50059426.67227673,
+      "expected": -50059426.672276594,
+      "relative_error": 2.6790249041925324e-15,
+      "passed": true
+    }
+  ],
+  "counterexamples": [
+    {
+      "kind": "density inversion residual unchecked",
+      "T": 0.01,
+      "n": 1e-18,
+      "returned_n": 1.0000000397718603e-18,
+      "returned_mu": 2.3050517623882553e-07
+    },
+    {
+      "kind": "density inversion residual unchecked",
+      "T": 0.01,
+      "n": 1e-24,
+      "returned_n": 9.080003316496246e-25,
+      "returned_mu": 2.0929876815887497e-13
+    },
+    {
+      "kind": "density inversion residual unchecked",
+      "T": 0.01,
+      "n": 1e-30,
+      "returned_n": 0.0,
+      "returned_mu": 0.0
+    },
+    {
+      "kind": "density inversion residual unchecked",
+      "T": 1.0,
+      "n": 1e-24,
+      "returned_n": 0.0,
+      "returned_mu": 0.0
+    },
+    {
+      "kind": "density inversion residual unchecked",
+      "T": 1.0,
+      "n": 1e-30,
+      "returned_n": 0.0,
+      "returned_mu": 0.0
+    },
+    {
+      "kind": "density inversion residual unchecked",
+      "T": 10.0,
+      "n": 1e-18,
+      "returned_n": 9.080003316496247e-19,
+      "returned_mu": 2.0929876815887497e-13
+    },
+    {
+      "kind": "density inversion residual unchecked",
+      "T": 10.0,
+      "n": 1e-24,
+      "returned_n": 0.0,
+      "returned_mu": 0.0
+    },
+    {
+      "kind": "density inversion residual unchecked",
+      "T": 10.0,
+      "n": 1e-30,
+      "returned_n": 0.0,
+      "returned_mu": 0.0
+    },
+    {
+      "kind": "silent physical positive-rate underflow",
+      "T": 0.001,
+      "mu": 0.0,
+      "channel": "electron_capture",
+      "common_log_scale": -1293.3323599999999,
+      "returned": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "silent physical positive-rate underflow",
+      "T": 0.01,
+      "mu": 8.0,
+      "channel": "positron_capture",
+      "common_log_scale": -851.099895069,
+      "returned": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "silent physical positive-rate underflow",
+      "T": 0.001,
+      "mu": 8.0,
+      "channel": "neutron_decay",
+      "common_log_scale": -6706.66764,
+      "returned": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "nonfinite input not rejected",
+      "call": "spectral_nan",
+      "returned": [
+        NaN,
+        NaN
+      ]
+    },
+    {
+      "kind": "nonfinite input not rejected",
+      "call": "spectral_inf",
+      "returned": [
+        NaN,
+        Infinity
+      ]
+    },
+    {
+      "kind": "nonfinite input not rejected",
+      "call": "moments_nan_T",
+      "returned": [
+        NaN,
+        NaN
+      ]
+    },
+    {
+      "kind": "nonfinite input not rejected",
+      "call": "moments_nan_mu",
+      "returned": [
+        NaN,
+        NaN
+      ]
+    },
+    {
+      "kind": "nonfinite input not rejected",
+      "call": "moments_infinite_tail",
+      "returned": [
+        NaN,
+        NaN
+      ]
+    }
+  ],
+  "slab": {
+    "status": "PASS",
+    "characteristic_checks": 160,
+    "max_moderate_depth_conservation_relative_error": 3.670474771145459e-05,
+    "max_opacity_derivative_relative_error": 1.0299299715682738e-06,
+    "scope": "Exact static homogeneous emission/absorption occupation slab; no scattering or physical rates validated",
+    "conventions": "c=L=1; attenuation=j+chi; angular weights integrate each hemisphere"
+  },
+  "environment": {
+    "python": "3.13.4 (v3.13.4:8a526ec7cbe, Jun  3 2025, 21:14:54) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "numpy": "2.3.5"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "primary": [
+    {
+      "url": "https://arxiv.org/html/2006.12051v2",
+      "used": "Eqs1-13 and AppendixA40-41:massiveleptonamplitude,targetspin2,FDkernel; kernelreversals independentlyderived"
+    },
+    {
+      "url": "https://arxiv.org/html/astro-ph/0511555",
+      "used": "Eq6-9 FermiEWflavorvertex ONLY; printedpairEq17 EXCLUDED"
+    }
+  ],
+  "attempted_not_used": [
+    {
+      "url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-neutrino-cross-section.pdf",
+      "status": "unavailable"
+    },
+    {
+      "url": "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-nu-cross-sections.pdf",
+      "status": "available but covers nuclear crosssection measurements, not a lowenergyrecoilanchor"
+    }
+  ],
+  "convention": "sin2w.23129 fixedillustrativeinput, noVud; recoilcrosssectionderivedfromsameexplicitFermicurrent",
+  "scope": "freepairFD actualphysicsmodel; no physicaluncertaintyfromquadratureagreement"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN helper repair for DIFFERENT recheck; selected physics passed initial review, module acceptance pending",
+  "utc": "2026-10-16T06:02:02.957685+00:00",
+  "public_module_sha256": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+  "repaired_quadrature_sha256": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69",
+  "candidate_manifest_sha256": "80f0b4207003353b8bf59f1357c28baedbf85ccb06d0a85b9289bceb798a174e",
+  "manifest_sha256": "347ee290afa7eb4d177b92c2ee65056c90cea2a388d13d74ac4e5f5e8f8c6cd7",
+  "author_report_sha256": "f8c9cca81315df39b55321b79f3d804ccc1faa8063414cd150a35db504a448f7",
+  "repair_note_sha256": "291f3d4f280eb2a5a2592cbfcc08d0472a37d3110ffea58cca0ef4ba738e5aa1",
+  "initial_review": "1378PASS2FAIL; one unique guard issue, retained",
+  "repair_checks": 503,
+  "repair_fail": 0,
+  "targeted_pytest": 3,
+  "saved_valid_signed_records_unchanged": 458,
+  "fresh_final_public_output_identity_calls": 2,
+  "original_author_files_preserved": 203,
+  "original_review_files_pinned": 167,
+  "source_physics_gates_defaults_changed": false,
+  "stageB": "design paused, no implementation/calls"
+}

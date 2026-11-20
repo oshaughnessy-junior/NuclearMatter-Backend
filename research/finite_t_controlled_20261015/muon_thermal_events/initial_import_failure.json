@@ -1,0 +1,1 @@
+{"qualified":false,"error":"ImportError: cannot import name spinors from events","cause":"Local generic events.py name collided with frozen decay.py's events primitive import","repair":"Rename local module muon_events.py; frozen sources unchanged"}

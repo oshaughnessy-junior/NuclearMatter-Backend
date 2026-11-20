@@ -1,0 +1,804 @@
+{
+  "passed": false,
+  "phase": "complete",
+  "checks": [
+    {
+      "name": "newcoordinates (0.2537, 2.73, 0.3237)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "exact forward constraints (0.2537, 2.73, 0.3237)",
+      "error": 1.182919296173825e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "manual complex potential value 2.73",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex chemical 2.73",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "manual complex pressure 2.73",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex entropy 2.73",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex/densityFD Hessian (2.73, 0.0002)",
+      "error": 8.000549424475292e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "manual complex/densityFD Hessian (2.73, 0.0001)",
+      "error": 1.9817217088071155e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal plus (2.73, 0)",
+      "error": 1.01393082529185e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal minus (2.73, 0)",
+      "error": 1.6898847088197503e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal plus (2.73, 1)",
+      "error": 6.470686739552895e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal minus (2.73, 1)",
+      "error": 1.132370179421757e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "exact FD vs exact implicit H 2.73",
+      "error": 2.719216267003843e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.73 free",
+      "error": 5.7388552704651374e-05,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.73 energy",
+      "error": 0.0001180465757215643,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.73 pressure",
+      "error": 0.00010801455174913599,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.73 entropy",
+      "error": 0.00012956247986073421,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.73 mu_n",
+      "error": 0.005553834918146094,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.73 mu_p",
+      "error": 0.002307773499069299,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.73 hessian",
+      "error": 0.0007515806584818072,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.73 balance_factor",
+      "error": 0.001189740667417086,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "newheldout affinity 2.73",
+      "error": 0.0032460614190767956,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "exact local scalar branch 2.73",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "exact/fitted full H local positive 2.73",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "newcoordinates (0.1811, 0.12, 0.1817)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "exact forward constraints (0.1811, 0.12, 0.1817)",
+      "error": 2.108710058086058e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "manual complex potential value 0.12",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex chemical 0.12",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "manual complex pressure 0.12",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex entropy 0.12",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex/densityFD Hessian (0.12, 0.0002)",
+      "error": 1.4698711654601107e-09,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "manual complex/densityFD Hessian (0.12, 0.0001)",
+      "error": 3.598444198584821e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal plus (0.12, 0)",
+      "error": 1.1236396611226918e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal minus (0.12, 0)",
+      "error": 3.373936092937693e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal plus (0.12, 1)",
+      "error": 4.2169984163304833e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal minus (0.12, 1)",
+      "error": 3.58516561530783e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "exact FD vs exact implicit H 0.12",
+      "error": 4.183555297465429e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 0.12 free",
+      "error": 5.305662625687546e-06,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 0.12 energy",
+      "error": 5.30650720520498e-06,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 0.12 pressure",
+      "error": 1.1377452698857482e-05,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 0.12 entropy",
+      "error": 6.939175183351409e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 0.12 mu_n",
+      "error": 7.81537313514491e-05,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 0.12 mu_p",
+      "error": 0.0017816040440266079,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 0.12 hessian",
+      "error": 0.0008035041823081809,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 0.12 balance_factor",
+      "error": 0.015378505753862931,
+      "tolerance": 0.01,
+      "passed": false
+    },
+    {
+      "name": "newheldout affinity 0.12",
+      "error": 0.001859757775378057,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "exact local scalar branch 0.12",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "exact/fitted full H local positive 0.12",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "newcoordinates (0.2593, 2.99, 0.3291)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "exact forward constraints (0.2593, 2.99, 0.3291)",
+      "error": 6.505037957914863e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "manual complex potential value 2.99",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex chemical 2.99",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "manual complex pressure 2.99",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex entropy 2.99",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "manual complex/densityFD Hessian (2.99, 0.0002)",
+      "error": 7.736783602998349e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "manual complex/densityFD Hessian (2.99, 0.0001)",
+      "error": 1.9582669514308852e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal plus (2.99, 0)",
+      "error": 4.785945593731984e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal minus (2.99, 0)",
+      "error": 1.1169440050018168e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal plus (2.99, 1)",
+      "error": 1.1168323106013167e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "perturbed primal minus (2.99, 1)",
+      "error": 6.505688526767539e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "exact FD vs exact implicit H 2.99",
+      "error": 2.782555408811551e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.99 free",
+      "error": 0.00016111328454826435,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.99 energy",
+      "error": 0.0003126557943460284,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.99 pressure",
+      "error": 0.0001804705139230034,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.99 entropy",
+      "error": 0.0002756565620170015,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.99 mu_n",
+      "error": 0.009277169411461728,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.99 mu_p",
+      "error": 0.005462625473455773,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.99 hessian",
+      "error": 0.0010983622095819864,
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "newheldout accuracy 2.99 balance_factor",
+      "error": 0.0012765813405047244,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "newheldout affinity 2.99",
+      "error": 0.0038145439380059543,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "exact local scalar branch 2.99",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "exact/fitted full H local positive 2.99",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain endpoint finite (0.18, 0.0, 0.18)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "cold entropy/Cv vanish (0.18, 0.18)",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "domain endpoint finite (0.26, 0.0, 0.33)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "cold entropy/Cv vanish (0.26, 0.33)",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "domain endpoint finite (0.18, 3.0, 0.33)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain endpoint finite (0.26, 3.0, 0.18)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.1799, 1.0, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2601, 1.0, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2, -1e-08, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2, 3.0001, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2, 1.0, 0.1799)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2, 1.0, 0.3301)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "name": "domain rejects (0.2, nan, 0.2)",
+      "error": 0.0,
+      "tolerance": 0.5,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "n": 0.2537,
+      "T": 2.73,
+      "Y": 0.3237,
+      "exact": {
+        "nB": 0.2537,
+        "temperature": 2.73,
+        "Yp": 0.3237,
+        "phi_mev": 414.6854730573641,
+        "omega_mev": 357.84213902162696,
+        "rho_mev": -38.92224115458193,
+        "dirac_mass_mev": 524.314526942636,
+        "density_defined_landau_n_mev": 624.4799517363997,
+        "density_defined_landau_p_mev": 587.6349760339964,
+        "kinetic_mu_n_mev": 624.3937328875704,
+        "kinetic_mu_p_mev": 587.5115587477774,
+        "mu_n_mev": 1001.6969924864884,
+        "mu_p_mev": 925.8925771921133,
+        "energy_density": 237.58217774388365,
+        "pressure": 10.441862963119092,
+        "free_energy_density": 237.46340153285163,
+        "entropy_density": 0.04350776960879893,
+        "kinetic_energy_density": 146.81446148246113,
+        "scalar_field_energy_density": 44.504997353521254,
+        "vector_field_energy_density": 46.262718907901245,
+        "scalar_density": 0.23032365317136466,
+        "antiparticle_density": 1.2142033529747367e-180,
+        "max_normalized_equation_residual": 1.182919296173825e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "prediction": {
+        "free_per_baryon": 936.0008517632143,
+        "free_energy_density": 237.46341609232746,
+        "entropy_density": 0.04351340658332265,
+        "energy_density": 237.58220769229993,
+        "pressure": 10.44299083626648,
+        "mu_n": 1001.7025463214065,
+        "mu_p": 925.8948849656124,
+        "cv_fixed_nY": 0.0434308834106568,
+        "chemical_hessian": [
+          [
+            1023.4461375484769,
+            169.92266809434318
+          ],
+          [
+            169.92266809434318,
+            1027.749516709177
+          ]
+        ],
+        "min_chemical_eigenvalue": 855.6615364186008
+      },
+      "independent_complex_chemical": [
+        1001.7025463214065,
+        925.8948849656124
+      ],
+      "independent_exact_FD_H": [
+        [
+          1022.9358455618938,
+          169.28143637779485
+        ],
+        [
+          169.28143620229125,
+          1027.3794747506133
+        ]
+      ],
+      "exact_implicit_H": [
+        [
+          1022.9358458244292,
+          169.28143642561855
+        ],
+        [
+          169.28143642561855,
+          1027.3794745542245
+        ]
+      ],
+      "errors": {
+        "free": 5.7388552704651374e-05,
+        "energy": 0.0001180465757215643,
+        "pressure": 0.00010801455174913599,
+        "entropy": 0.00012956247986073421,
+        "mu_n": 0.005553834918146094,
+        "mu_p": 0.002307773499069299,
+        "hessian": 0.0007515806584818072,
+        "affinity_MeV": 0.0032460614190767956,
+        "balance_factor": 0.001189740667417086
+      },
+      "scalar_curvature": 0.1443760819465755
+    },
+    {
+      "n": 0.1811,
+      "T": 0.12,
+      "Y": 0.1817,
+      "exact": {
+        "nB": 0.1811,
+        "temperature": 0.12,
+        "Yp": 0.1817,
+        "phi_mev": 319.44432973712566,
+        "omega_mev": 255.44032864334514,
+        "rho_mev": -50.16261270812109,
+        "dirac_mass_mev": 619.5556702628745,
+        "density_defined_landau_n_mev": 698.7208882183082,
+        "density_defined_landau_p_mev": 649.7055000467542,
+        "kinetic_mu_n_mev": 698.7206957280154,
+        "kinetic_mu_p_mev": 649.7050614265568,
+        "mu_n_mev": 979.2423307254211,
+        "mu_p_mev": 880.0640837158414,
+        "energy_density": 170.02712881428042,
+        "pressure": 4.050331186890841,
+        "free_energy_density": 170.02690840455764,
+        "entropy_density": 0.0018367476897500794,
+        "kinetic_energy_density": 119.95999205801493,
+        "scalar_field_energy_density": 25.491224913567294,
+        "vector_field_energy_density": 24.575911842698197,
+        "scalar_density": 0.1695780772051645,
+        "antiparticle_density": 0.0,
+        "max_normalized_equation_residual": 2.108710058086058e-15,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "prediction": {
+        "free_per_baryon": 938.8564846240372,
+        "free_energy_density": 170.02690936541313,
+        "entropy_density": 0.001836748964301478,
+        "energy_density": 170.02712977528887,
+        "pressure": 4.050377269342335,
+        "mu_n": 979.2422525716897,
+        "mu_p": 880.0658653198855,
+        "cv_fixed_nY": 0.0018367248809027853,
+        "chemical_hessian": [
+          [
+            755.0040693867071,
+            -107.02347799734383
+          ],
+          [
+            -107.02347799734383,
+            825.6698085426187
+          ]
+        ],
+        "min_chemical_eigenvalue": 677.6318524988748
+      },
+      "independent_complex_chemical": [
+        979.2422525716897,
+        880.0658653198855
+      ],
+      "independent_exact_FD_H": [
+        [
+          755.1292033751446,
+          -107.13548777544179
+        ],
+        [
+          -107.13548798293064,
+          826.5548492962786
+        ]
+      ],
+      "exact_implicit_H": [
+        [
+          755.1292035313791,
+          -107.1354877776321
+        ],
+        [
+          -107.1354877776321,
+          826.5548489002605
+        ]
+      ],
+      "errors": {
+        "free": 5.305662625687546e-06,
+        "energy": 5.30650720520498e-06,
+        "pressure": 1.1377452698857482e-05,
+        "entropy": 6.939175183351409e-07,
+        "mu_n": 7.81537313514491e-05,
+        "mu_p": 0.0017816040440266079,
+        "hessian": 0.0008035041823081809,
+        "affinity_MeV": -0.001859757775378057,
+        "balance_factor": 0.015378505753862931
+      },
+      "scalar_curvature": 0.1283387761532258
+    },
+    {
+      "n": 0.2593,
+      "T": 2.99,
+      "Y": 0.3291,
+      "exact": {
+        "nB": 0.2593,
+        "temperature": 2.99,
+        "Yp": 0.3291,
+        "phi_mev": 421.27021473434985,
+        "omega_mev": 365.7409012546625,
+        "rho_mev": -38.56289581808901,
+        "dirac_mass_mev": 517.7297852656502,
+        "density_defined_landau_n_mev": 619.8212833535272,
+        "density_defined_landau_p_mev": 583.3334753095112,
+        "kinetic_mu_n_mev": 619.7189961388999,
+        "kinetic_mu_p_mev": 583.1892011966135,
+        "mu_n_mev": 1004.7413453026069,
+        "mu_p_mev": 929.6486545422315,
+        "energy_density": 242.9696617473618,
+        "pressure": 11.294237486239245,
+        "free_energy_density": 242.82711127629494,
+        "entropy_density": 0.047675742831729775,
+        "kinetic_energy_density": 148.66103124038307,
+        "scalar_field_energy_density": 46.03587744253462,
+        "vector_field_energy_density": 48.27275306444412,
+        "scalar_density": 0.2346570529741826,
+        "antiparticle_density": 1.2594535005625746e-163,
+        "max_normalized_equation_residual": 6.505037957914863e-16,
+        "branch": "local GM1 branch continued from cold first scalar upcrossing",
+        "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+      },
+      "prediction": {
+        "free_per_baryon": 936.4718590550315,
+        "free_energy_density": 242.82715305296963,
+        "entropy_density": 0.04768888496309037,
+        "energy_density": 242.9697428190093,
+        "pressure": 11.296275763082756,
+        "mu_n": 1004.7506224720183,
+        "mu_p": 929.654117167705,
+        "cv_fixed_nY": 0.047586983953046724,
+        "chemical_hessian": [
+          [
+            1043.7727299690491,
+            190.53170615707756
+          ],
+          [
+            190.53170615707756,
+            1047.2434788451126
+          ]
+        ],
+        "min_chemical_eigenvalue": 854.968495465614
+      },
+      "independent_complex_chemical": [
+        1004.7506224720182,
+        929.6541171677048
+      ],
+      "independent_exact_FD_H": [
+        [
+          1042.9973547033885,
+          189.6117789458498
+        ],
+        [
+          189.6117787702857,
+          1046.5901703429352
+        ]
+      ],
+      "exact_implicit_H": [
+        [
+          1042.9973549942338,
+          189.6117790004393
+        ],
+        [
+          189.6117790004393,
+          1046.5901701583762
+        ]
+      ],
+      "errors": {
+        "free": 0.00016111328454826435,
+        "energy": 0.0003126557943460284,
+        "pressure": 0.0001804705139230034,
+        "entropy": 0.0002756565620170015,
+        "mu_n": 0.009277169411461728,
+        "mu_p": 0.005462625473455773,
+        "hessian": 0.0010983622095819864,
+        "affinity_MeV": 0.0038145439380059543,
+        "balance_factor": 0.0012765813405047244
+      },
+      "scalar_curvature": 0.14576630870072044
+    }
+  ],
+  "runtime_seconds": 4.495543250115588,
+  "source_sha256": {
+    "gm1_potential_fit/potential.py": "9306f288b22a9bbd10af107f552cd276ba066f6620cfbb94c52433954a919df4",
+    "gm1_potential_fit/coefficients.json": "ecd8e2f44e54613f9a08678c47b0f982fcd779968d188ebd525032f1ad902234",
+    "gm1_potential_fit/fit_study.py": "d6d240b34315c94454a179a05c206608989d9461dd6183b1c126eaaa0f2ea6e0",
+    "gm1_potential_fit/results.json": "29f04314447f060d21084572447e2c8954f3ea82669e2cda22fff03b9eaf5d8b",
+    "gm1_potential_fit/baseline_results.json": "96f71b04722b70a904e6b7705827974d2d151c78fc224eada17c97351f605235",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d"
+  },
+  "end_source_sha256": {
+    "gm1_potential_fit/potential.py": "9306f288b22a9bbd10af107f552cd276ba066f6620cfbb94c52433954a919df4",
+    "gm1_potential_fit/coefficients.json": "ecd8e2f44e54613f9a08678c47b0f982fcd779968d188ebd525032f1ad902234",
+    "gm1_potential_fit/fit_study.py": "d6d240b34315c94454a179a05c206608989d9461dd6183b1c126eaaa0f2ea6e0",
+    "gm1_potential_fit/results.json": "29f04314447f060d21084572447e2c8954f3ea82669e2cda22fff03b9eaf5d8b",
+    "gm1_potential_fit/baseline_results.json": "96f71b04722b70a904e6b7705827974d2d151c78fc224eada17c97351f605235",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d"
+  }
+}

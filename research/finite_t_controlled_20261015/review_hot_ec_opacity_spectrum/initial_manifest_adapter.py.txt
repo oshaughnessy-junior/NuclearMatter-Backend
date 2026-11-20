@@ -1,0 +1,57 @@
+"""Fresh independent original-delta/spinor points and independent evidence assembly."""
+from pathlib import Path
+import importlib.util,sys,json,hashlib,math,time
+import numpy as np
+from scipy.special import expit
+P=Path(__file__).resolve().parent;R=P.parent;A=R/'hot_ec_opacity_spectrum';sys.dont_write_bytecode=True
+def load(n,p):
+ s=importlib.util.spec_from_file_location(n,p);m=importlib.util.module_from_spec(s);sys.modules[n]=m;s.loader.exec_module(m);return m
+S=load('review_hotEC_spectral_function',A/'spectrum.py');O=load('review_hotEC_original_delta','%s/relativistic_delta_oracle/oracle.py'%R)
+assert hashlib.sha256((A/'MANIFEST.json').read_bytes()).hexdigest()=='8d5bc98c2c5f51130ed109babf4d9768e0e6dbb0ab1c87bd9764eadf2c1f785e'
+pins=json.loads((A/'MANIFEST.json').read_text());assert all(hashlib.sha256((A/k).read_bytes()).hexdigest()==v for k,v in pins.items())
+def run():
+ start=time.monotonic();checks=[];points=[]
+ def gate(n,e,t):checks.append(dict(name=n,error=float(e),tolerance=t,passed=bool(math.isfinite(e)and abs(e)<=t)))
+ b,meta=S.matched();eq=b.equilibrium_mu_nue
+ for nu,el,c in[(3.7,4.99,.31),(7.3,8.58,-.47),(.8,2.08,-.2)]:
+  d=S.differential(b,nu,el,c,energy_order=24,phi_order=8,tail=80.);pt=O.Point(b.T,S.C.MN,S.C.MP,b.mu_n,b.mu_p,nu,el,c,S.C.ME,b.mu_e)
+  refs=[O.integrate(pt,order=n,nphi=ph,tail=t)for n,ph,t in[(24,6,65.),(36,10,85.)]]
+  for key in ['j','chi']:
+   gate('newspacelike delta convergence '+str((nu,key)),refs[0][key]/refs[1][key]-1,3e-8);gate('newspacelike absolute scalar/delta '+str((nu,key)),d[key]['value']/refs[1][key]-1,3e-10)
+  gate('newpoint KMS '+str(nu),d['j']['log']-d['chi']['log']+(nu-eq)/b.T,3e-12)
+  points.append(dict(inputs=[nu,el,c],author=d,independent_delta=[{k:v[k]for k in ['j','chi','max_shell_residual','order','nphi','tail','min_jacobian']}for v in refs]))
+ # Separate positive occupation branches in complex16-component timelike response.
+ state=S.K.State(b.T,S.C.MN,S.C.MP,b.mu_n,b.mu_p,S.C.MW)
+ for nu,el,c in[(3.7,4.99,.9999)]:
+  d=S.differential(b,nu,el,c,energy_order=24,phi_order=8,tail=80.);t=S.K.differential(state,nu,el,c,S.C.ME,b.mu_e,energy_order=32,phi_order=10,tail=90.)
+  for key in ['j','chi']:gate('heldout timelike tensor '+key,d[key]['value']/t[key]['value']-1,3e-10)
+  points.append(dict(inputs=[nu,el,c],author=d,independent_tensor={k:t[k]for k in ['j','chi']}))
+ # Entire32-node fine energy evidence independently assembled, no author driver import.
+ chunks=[json.loads((A/f'total_fine_part{i}.json').read_text())for i in[0,1]];rows=[r for q in chunks for r in q['rows']];contract=chunks[0]['contract']
+ gate('32uniquephysicalnodes',0 if sorted(r['index']for r in rows)==list(range(32))and len({r['E']for r in rows})==32 else 1,0)
+ for chunk in chunks:gate('chunk qualified exactcontract',0 if chunk['qualified']and chunk['contract']==contract else 1,0)
+ x,w=np.polynomial.legendre.leggauss(32);energies=(x+1)*30;weights=w*30
+ for row,E,weight in zip(rows,energies,weights):
+  v=row['spectrum'];gate('physicalnode metadata '+str(row['index']),0 if row['E']==E and row['weight']==weight and v['bath']==vars(b)and v['matched_state']==meta and v['implementation_sha256']==hashlib.sha256((A/'spectrum.py').read_bytes()).hexdigest()and v['source_pins']==S.PINS else 1,0)
+  for key in ['j','chi']:gate('positive loggednode '+str((row['index'],key)),math.log(v[key]['value'])-v[key]['log'],1e-12)
+  gate('node truechi andrelax '+str(row['index']),v['relaxation']-v['j']['value']-v['chi']['value'],2e-12)
+ totals={};reference=json.loads((R/'hot_electron_capture_moments/results.json').read_text())['rules'][-1]
+ for name,mu in [('empty',None),('LTE',eq),('noneq',eq-1.2)]:
+  terms=[]
+  for row in rows:
+   E=row['E'];v=row['spectrum'];f=0. if mu is None else float(expit((mu-E)/b.T));dos=E**2/(2*math.pi**2*S.HC**3);F=v['j']['value']*(1-f);B=v['chi']['value']*f
+   terms.append(dict(E=E,w=row['weight']*dos,F=F,B=B))
+  vals={direction:[math.fsum(t['w']*t[direction]*t['E']**moment for t in terms)for moment in [0,1]]for direction in ['F','B']};vals['net']=[math.fsum(t['w']*(t['F']-t['B'])*t['E']**moment for t in terms)for moment in [0,1]]
+  for direction,key in [('F','forward'),('B','backward')]:
+   for i,observable in enumerate(['number','neutrino_energy']):
+    expected=reference['scenarios'][name][key][observable]['value'];gate('independentDOS total '+name+direction+observable,vals[direction][i]/expected-1 if expected else vals[direction][i],3e-6 if expected else 0)
+  if name=='LTE':
+   for i in [0,1]:gate('actualLTE residual '+str(i),vals['net'][i]/(vals['F'][i]+vals['B'][i]),3e-12)
+  if mu is not None:
+   # Direct independent (F-B)log(F/B), no forcedLTEzero.
+   entropy=math.fsum(t['w']*(t['F']-t['B'])*math.log(t['F']/t['B'])for t in terms)
+   gate('nonnegativeentropy '+name,0 if entropy>=-1e-28 else 1,0);gate('matter+radiation entropy '+name,(entropy-(eq-mu)*vals['net'][0]/b.T)/max(vals['F'][0]+vals['B'][0],1e-300),3e-12);vals['entropy']=entropy
+  vals['Eabove50_forward']=[math.fsum(t['w']*t['F']*t['E']**i for t in terms if t['E']>50)for i in [0,1]];totals[name]=vals
+ out=dict(checks=checks,passed=sum(c['passed']for c in checks),failed=[c for c in checks if not c['passed']],points=points,totals=totals,seconds=time.monotonic()-start,author_manifest=hashlib.sha256((A/'MANIFEST.json').read_bytes()).hexdigest(),author_unchanged=all(hashlib.sha256((A/k).read_bytes()).hexdigest()==v for k,v in pins.items()))
+ (P/'results.json').write_text(json.dumps(out,indent=2)+'\n');print({k:out[k]for k in ['passed','failed','seconds']})
+if __name__=='__main__':run()

@@ -1,0 +1,423 @@
+{
+  "rows": [
+    {
+      "scenarios": {
+        "unblocked": {
+          "F": [
+            4.661663051024749e-11,
+            2.2414416966976953e-11,
+            3.8052294490409174e-11,
+            4.387883230565512e-08,
+            4.39392990171125e-08,
+            2.2414416966977758e-11
+          ],
+          "B": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "net": [
+            4.661663051024749e-11,
+            2.2414416966976953e-11,
+            3.8052294490409174e-11,
+            4.387883230565512e-08,
+            4.39392990171125e-08,
+            2.2414416966977758e-11
+          ],
+          "entropy": 0.0,
+          "max_log_ratio_residual": 0.0
+        },
+        "empty": {
+          "F": [
+            2.616419636658863e-11,
+            1.2426947344219054e-11,
+            2.1515878410579035e-11,
+            2.4627595985878532e-08,
+            2.4661538811633334e-08,
+            1.2426947344219498e-11
+          ],
+          "B": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "net": [
+            2.616419636658863e-11,
+            1.2426947344219054e-11,
+            2.1515878410579035e-11,
+            2.4627595985878532e-08,
+            2.4661538811633334e-08,
+            1.2426947344219498e-11
+          ],
+          "entropy": 0.0,
+          "max_log_ratio_residual": 0.0
+        },
+        "FD": {
+          "F": [
+            1.2947531792389195e-11,
+            6.239626509553421e-12,
+            1.0558902853883471e-11,
+            1.218714264987903e-08,
+            1.2203941179242469e-08,
+            6.239626509553638e-12
+          ],
+          "B": [
+            1.2947531792389192e-11,
+            6.2396265095534184e-12,
+            1.0558902853883473e-11,
+            1.2187142649879028e-08,
+            1.2203941179242469e-08,
+            6.2396265095536406e-12
+          ],
+          "net": [
+            -2.4375943322165084e-27,
+            2.2908225096730992e-27,
+            -5.5114784264656644e-27,
+            -2.2950118931818392e-24,
+            -2.2982325490987068e-24,
+            2.2908225096521887e-27
+          ],
+          "entropy": 2.2015104931191892e-38,
+          "max_log_ratio_residual": 1.9895196601282805e-13
+        },
+        "LTE": {
+          "F": [
+            1.2947531792389195e-11,
+            6.239626509553421e-12,
+            1.0558902853883471e-11,
+            1.218714264987903e-08,
+            1.2203941179242469e-08,
+            6.239626509553638e-12
+          ],
+          "B": [
+            1.2947531792389192e-11,
+            6.2396265095534184e-12,
+            1.0558902853883473e-11,
+            1.2187142649879028e-08,
+            1.2203941179242469e-08,
+            6.2396265095536406e-12
+          ],
+          "net": [
+            -2.4375943322165084e-27,
+            2.2908225096730992e-27,
+            -5.5114784264656644e-27,
+            -2.2950118931818392e-24,
+            -2.2982325490987068e-24,
+            2.2908225096521887e-27
+          ],
+          "entropy": 2.2015104931191892e-38,
+          "max_log_ratio_residual": 1.9895196601282805e-13
+        }
+      },
+      "names": [
+        "number",
+        "neutrino_energy",
+        "electron_energy",
+        "proton_energy",
+        "neutron_energy",
+        "material_energy_loss"
+      ],
+      "density": 4.4395517821403554e-08,
+      "proper_density": 4.425414002128314e-08,
+      "rest_rate": 0.001053384620915198,
+      "rest_moments": {
+        "neutrino_energy": 0.0005048801786060196,
+        "electron_energy": 0.0008571201859495769,
+        "proton_energy": 0.9883617639549335
+      },
+      "max_fourmomentum_residual": 3.698916173355826e-13,
+      "controls": {
+        "rest": 20,
+        "parent_per_panel": 10,
+        "orient": 8,
+        "phi": 12,
+        "parent_p_over_sqrt2MT_max": 8.94427190999916
+      },
+      "seconds": 0.3714557499624789
+    },
+    {
+      "scenarios": {
+        "unblocked": {
+          "F": [
+            4.66166305102484e-11,
+            2.2414416966977344e-11,
+            3.8052294490410033e-11,
+            4.387883230565602e-08,
+            4.3939299017113414e-08,
+            2.2414416966977962e-11
+          ],
+          "B": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "net": [
+            4.66166305102484e-11,
+            2.2414416966977344e-11,
+            3.8052294490410033e-11,
+            4.387883230565602e-08,
+            4.3939299017113414e-08,
+            2.2414416966977962e-11
+          ],
+          "entropy": 0.0,
+          "max_log_ratio_residual": 0.0
+        },
+        "empty": {
+          "F": [
+            2.6164196366589163e-11,
+            1.242694734421928e-11,
+            2.1515878410579513e-11,
+            2.4627595985879045e-08,
+            2.4661538811633833e-08,
+            1.2426947344219624e-11
+          ],
+          "B": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "net": [
+            2.6164196366589163e-11,
+            1.242694734421928e-11,
+            2.1515878410579513e-11,
+            2.4627595985879045e-08,
+            2.4661538811633833e-08,
+            1.2426947344219624e-11
+          ],
+          "entropy": 0.0,
+          "max_log_ratio_residual": 0.0
+        },
+        "FD": {
+          "F": [
+            1.294753179238946e-11,
+            6.2396265095535356e-12,
+            1.0558902853883705e-11,
+            1.2187142649879278e-08,
+            1.220394117924272e-08,
+            6.239626509553702e-12
+          ],
+          "B": [
+            1.2947531792389421e-11,
+            6.239626509553515e-12,
+            1.0558902853883681e-11,
+            1.2187142649879247e-08,
+            1.2203941179242684e-08,
+            6.239626509553683e-12
+          ],
+          "net": [
+            3.4815959485536414e-26,
+            1.7315775525475646e-26,
+            2.761094264833946e-26,
+            3.262032606825432e-23,
+            3.266525278642804e-23,
+            1.731577552545075e-26
+          ],
+          "entropy": 2.190126768334165e-38,
+          "max_log_ratio_residual": 1.9895196601282805e-13
+        },
+        "LTE": {
+          "F": [
+            1.294753179238946e-11,
+            6.2396265095535356e-12,
+            1.0558902853883705e-11,
+            1.2187142649879278e-08,
+            1.220394117924272e-08,
+            6.239626509553702e-12
+          ],
+          "B": [
+            1.2947531792389421e-11,
+            6.239626509553515e-12,
+            1.0558902853883681e-11,
+            1.2187142649879247e-08,
+            1.2203941179242684e-08,
+            6.239626509553683e-12
+          ],
+          "net": [
+            3.4815959485536414e-26,
+            1.7315775525475646e-26,
+            2.761094264833946e-26,
+            3.262032606825432e-23,
+            3.266525278642804e-23,
+            1.731577552545075e-26
+          ],
+          "entropy": 2.190126768334165e-38,
+          "max_log_ratio_residual": 1.9895196601282805e-13
+        }
+      },
+      "names": [
+        "number",
+        "neutrino_energy",
+        "electron_energy",
+        "proton_energy",
+        "neutron_energy",
+        "material_energy_loss"
+      ],
+      "density": 4.43955178214038e-08,
+      "proper_density": 4.425414002128336e-08,
+      "rest_rate": 0.001053384620915213,
+      "rest_moments": {
+        "neutrino_energy": 0.0005048801786060259,
+        "electron_energy": 0.0008571201859495914,
+        "proton_energy": 0.9883617639549485
+      },
+      "max_fourmomentum_residual": 3.835820550079916e-13,
+      "controls": {
+        "rest": 28,
+        "parent_per_panel": 16,
+        "orient": 12,
+        "phi": 16,
+        "parent_p_over_sqrt2MT_max": 8.94427190999916
+      },
+      "seconds": 2.464347666827962
+    }
+  ],
+  "checks": [
+    {
+      "name": "Dalitz incoming parent 20",
+      "error": -1.2212453270876722e-15,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 20 number",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 20 neutrino_energy",
+      "error": 4.440892098500626e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 20 electron_energy",
+      "error": -2.4424906541753444e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 20 proton_energy",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 20 neutron_energy",
+      "error": 4.440892098500626e-16,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 20 material_energy_loss",
+      "error": 3.086420008457935e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "Dalitz incoming parent 28",
+      "error": 4.218847493575595e-15,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 28 number",
+      "error": 2.042810365310288e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 28 neutrino_energy",
+      "error": 2.2648549702353193e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 28 electron_energy",
+      "error": 1.9761969838327786e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 28 proton_energy",
+      "error": 2.0872192862952943e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 28 neutron_energy",
+      "error": 2.0650148258027912e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new root Dalitz-vs-spinor 28 material_energy_loss",
+      "error": 4.085620730620576e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "Dalitz rule refinement number",
+      "error": -2.042810365310288e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "Dalitz rule refinement neutrino_energy",
+      "error": -1.8207657603852567e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "Dalitz rule refinement electron_energy",
+      "error": -2.220446049250313e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "Dalitz rule refinement proton_energy",
+      "error": -2.0872192862952943e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "Dalitz rule refinement neutron_energy",
+      "error": -2.020605904817785e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "Dalitz rule refinement material_energy_loss",
+      "error": -1.0103029524088925e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "additional dependencies unchanged",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 21,
+  "failed": [],
+  "additional_frozen_hashes": {
+    "review_crossed_moments/reference.py": "7629a91bab827bd0bd586881c6d2e6f2ae3bbc3c0215387dece8078e9e27acbc",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "review_hot_beta/REVIEW.md": "d85adc2c096c37662528c8a40e6e44aabb9060629b10c5b753c4e0893fec060a",
+    "review_pc_moments/REVIEW.md": "87a52b64c780a8714d1b6c8f99cfd6fb8c02807b063390480c6b2b40786102c1"
+  },
+  "seconds": 2.8403446250595152
+}

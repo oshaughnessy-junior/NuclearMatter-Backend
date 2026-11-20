@@ -1,0 +1,23 @@
+{
+  "status": "ACCEPT selected numerical emission-only claims",
+  "checks": "40/40 PASS",
+  "numerical_runtime_seconds": 21.647958416026086,
+  "pinned_author_sha256": "f73fd3504498b696614fb5153362f5d27816e659a8cb5bb43d4467ccbde28207",
+  "source_and_preserved_failures_sha256": {
+    "emission_only/log_emission.py": "f73fd3504498b696614fb5153362f5d27816e659a8cb5bb43d4467ccbde28207",
+    "emission_only/initial_import_failure.txt": "f59a49e83e2e9055cf2aa6e092a319a5f47175c57050cc118ec0a83c6af43edb",
+    "emission_only/initial_representation_serialization_failure.txt": "522258ec277a01e0329c16131d35d969bba654ba84e4d7a0c7ddd74856931812",
+    "emission_only/initial_partial_before_flag_cast.json": "cb8e7ea2c82c29eeac15423cf98e9952e98b87c12f4f456ca184b586fbb725d0",
+    "quantum_energy_moments/static_inventory_failure.json": "260331e302d85c04d44a1ad524a2bc0e6426a16b77145a680b0808bb8fd1da98"
+  },
+  "review_files_sha256": {
+    "probe_emission.py": "d55bc737f501199ac9f0ef1baf5523e4616e571c80d71cc4d4ba72b12255cbff",
+    "results.json": "8ac17c46b28655f51b1030fd13d311b9a79619b8b6c78389eefc0d1be78ff777",
+    "REVIEW.md": "b456dd6da820960ab0c435033876f5ac5b388e9e0f0c0df4be5ecebdfa3213d3"
+  },
+  "unresolved": [
+    "Extreme-log-tail relative accuracy not independently qualified",
+    "Original neutral T2 strict transfer-wrapper integrated gate remains excluded",
+    "No generic bath/opacity/transport or interacting-EOS qualification"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "accepted_selected_source_defined_treelevel_vacuum_current",
+  "checks": 224,
+  "passed": true,
+  "source_sha256": {
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_full_current/source_polynomial.py": "a31fb9baa0ae836d64ab6d40da6d0965dfc75c5b9d26655201504bf1266766db",
+    "muon_full_current/results.json": "37b2ec9faf357b76a5ea92da32183aa7f9502a8e2bc79e9914e5807e21b89b17",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9"
+  },
+  "sources_unchanged": true,
+  "files_sha256": {
+    "normalization_probe.py": "0f23d1857c0dc4ad4ce311c8cff1e1bcae135d4d527290e0c1e859eec3115f1b",
+    "results.json": "5de80d9bb6d82cb0d55d26bf3705e82f94569901849d50e5073f6574acebfdee",
+    "REVIEW.md": "407127143fc964c72ffb8a1d66788a8229efd5da14556194c203050f6ee46687",
+    "spinor_probe.py": "b4e6c5d6969b9b80181ae3d1db125163ea3c2763e588e443ad72055af2db2624",
+    "normalization_results.json": "aa5f04f06cffa7966003a90a7493b14e8fb00ccf86388148ae40e5fcba59aa60"
+  },
+  "primary_sources_accessed": [
+    "https://arxiv.org/html/2006.12051v2",
+    "https://arxiv.org/html/astro-ph/0302055"
+  ]
+}

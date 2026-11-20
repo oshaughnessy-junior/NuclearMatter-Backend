@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______________ test_unrepresentable_scalar_and_invalid_seed_field ______________
+
+    def test_unrepresentable_scalar_and_invalid_seed_field():
+        from nmbackend.reference.finite_t_rmf import state_density,SolveControls
+        for args in [(10**1000,.16,.1),(10.,10**1000,.1),(10.,.16,10**1000)]:
+>           with pytest.raises(ValueError):state_density(*args)
+                                           ^^^^^^^^^^^^^^^^^^^^
+
+outputs/nmb-finite-t-20261015/production_rmf_port/staged/tests/test_finite_t_rmf_response.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/finite_t_rmf.py:238: in state_density
+    s = diagnose_density(temperature_mev, baryon_density_fm3, proton_fraction,
+outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/finite_t_rmf.py:154: in diagnose_density
+    T, nB, Y = [_real(n, v) for n, v in [("T", temperature_mev),
+                ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'T', x = 100000000000000000...0000000000000000000
+
+    def _real(name, x):
+        if isinstance(x, (bool, np.bool_)) or not isinstance(x, numbers.Real):
+            raise ValueError(name+" must be a finite non-Boolean scalar")
+>       x = float(x)
+            ^^^^^^^^
+E       OverflowError: int too large to convert to float
+
+outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/finite_t_rmf.py:24: OverflowError
+=========================== short test summary info ============================
+FAILED outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror::test_unrepresentable_scalar_and_invalid_seed_field
+1 failed, 25 deselected in 1.37s

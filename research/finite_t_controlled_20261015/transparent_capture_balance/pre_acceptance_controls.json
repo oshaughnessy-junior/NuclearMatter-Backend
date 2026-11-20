@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "rejectYe nan",
+      "passed": true
+    },
+    {
+      "name": "rejectYe inf",
+      "passed": true
+    },
+    {
+      "name": "rejectYe True",
+      "passed": true
+    },
+    {
+      "name": "rejectYe 0.0",
+      "passed": true
+    },
+    {
+      "name": "rejectYe 1.0",
+      "passed": true
+    },
+    {
+      "name": "rejectYe -0.1",
+      "passed": true
+    },
+    {
+      "name": "rejectYe '0.3'",
+      "passed": true
+    },
+    {
+      "name": "no source evaluation before EC acceptance",
+      "passed": true
+    }
+  ],
+  "passed": 8,
+  "scientific_source_join_performed": false
+}

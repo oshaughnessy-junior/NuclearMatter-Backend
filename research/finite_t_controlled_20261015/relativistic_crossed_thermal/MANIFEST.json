@@ -1,0 +1,40 @@
+{
+  "status": "frozen author selected reference; independent review pending",
+  "checks": 57,
+  "main_checks": 53,
+  "independent_event_spectrum_checks": 4,
+  "preserved_failures": [
+    "initial_pilot_failure.json",
+    "initial_Qrest_coarse_failure.json"
+  ],
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "upstream": {
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+    "relativistic_crossed_contract/results.json": "7e96bbeb56b3b8a35539d70e7c72d4ddf506cb174aa70cea03caa38c82a48e5d",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  },
+  "files": {
+    "oracles.py": "b1a83cf437903b3755dbb167ea9f1e322d0065982c63987c2ba06175f319c1d3",
+    "pilot.py": "56e282efd6852a064f6cad438727cd3bdb21af5a23c6c10503396ff0052bc251",
+    "initial_pilot.py.txt": "fe27e05caa1a89ca85042436ef455308bb93ae7c090c6d1c1210b25b1629af63",
+    "kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "initial_Qrest_coarse_validate.py.txt": "37386414dd56a9630f6f8f60b733adc132c241395cc324b26bd4b324b834e959",
+    "initial_pilot_failure.json": "89e41e27eadd154df326dcf3b8d5d136fd4380e8aa7cea9097a5e7e6f300a627",
+    "initial_Qrest_coarse_failure.json": "78c75380bc8a28e0a06a443cc20d1f5687c8c92aec5e004dad7659d87cbd31bd",
+    "results.json": "68ae3e28d58cd93b4697af05ba9c279b18817ff7400239c607c4c7077a96ca79",
+    "RESEARCH_NOTE.md": "d9acb2fb1bff949446dc292695a8b86864e4b23ff160d4d9369776d0d17292ca",
+    "validate.py": "3a0902775594ba624943f0578cfa2f9f848f17e3424e7233134e80d142acdee5",
+    "event_spectrum_results.json": "43c09a30040f79ac86106cdfc3e3f1a6927b15fb17c2002658bfff688b191bc3",
+    "pilot.json": "5698ca39c7ec39c5d6d6d3fbae7a472bd3def3cb08d0ef77375f6226db86f0b9",
+    "event_spectrum.py": "78998da20c1eec0a67b0a8b0ebade47f54374435145ae799e5fa6a3040a74c7f"
+  }
+}

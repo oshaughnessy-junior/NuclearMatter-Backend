@@ -1,0 +1,31 @@
+{
+  "kind": "Resource observation ledger; no scientific qualification",
+  "author_reported": {
+    "agent": "/root/finite_t_weak_rates",
+    "utc": "2026-10-17T19:02:29Z",
+    "used_percent": 92,
+    "reported_reset_unix": 1792652328,
+    "expected_reset_unix": 1792652325,
+    "action": "Froze completed author slice and stopped new calls; raw underlying account response not available in root; this entry preserves the agent report, not a replayed API response"
+  },
+  "root_observations": [
+    {
+      "utc": "2026-10-17T19:11:24Z",
+      "used_percent": 92,
+      "account_id": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+      "limit": "codex",
+      "window_duration_mins": 10080,
+      "reset_unix": 1792652325
+    },
+    {
+      "utc": "2026-10-17T19:12:00Z",
+      "timestamp_precision": "minute, root second not retained",
+      "used_percent": 92,
+      "account_id": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+      "limit": "codex",
+      "window_duration_mins": 10080,
+      "reset_unix": 1792652325
+    }
+  ],
+  "resolution": "Root found original exact identity/window/reset restored on two fresh checks before commissioning different review. Future mismatch still requires a stop. No mismatch tolerance, reset credit or policy ceiling changed."
+}

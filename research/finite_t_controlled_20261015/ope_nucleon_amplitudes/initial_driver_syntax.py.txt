@@ -1,0 +1,72 @@
+"""Independent index sums and analytic traces for static strong OPE."""
+import importlib.util,sys,json,hashlib,time,math
+from pathlib import Path
+import numpy as np
+HERE=Path(__file__).parent;sys.dont_write_bytecode=True
+sp=importlib.util.spec_from_file_location('strong_ope_owned',HERE/'ope.py');O=importlib.util.module_from_spec(sp);sys.modules[sp.name]=O;sp.loader.exec_module(O)
+checks=[]
+def ck(name,a,b=0.,tol=3e-13):
+ err=float(np.max(abs(np.asarray(a)-np.asarray(b))));scale=max(float(np.max(abs(np.asarray(b)))),1e-30)
+ checks.append(dict(name=name,error=err/scale if np.any(np.asarray(b))else err,limit=tol,passed=bool(err<=tol*scale if np.any(np.asarray(b))else err<=tol)))
+m=O.Model();C=m.coefficient;rng=np.random.default_rng(6519);points=[]
+# Independent explicit contractions, no Kronecker product or exchange matrices.
+def literal(initial,final,q,k):
+ ans=np.zeros((4,4),complex);I={'n':np.array([1.,0.]),'p':np.array([0.,1.])};a,b=map(I.get,initial);c,d=map(I.get,final)
+ for s3 in range(2):
+  for s4 in range(2):
+   for s1 in range(2):
+    for s2 in range(2):
+     v=0j
+     for t in O.PAULI:
+      td=(c@t@a)*(d@t@b);te=(d@t@a)*(c@t@b)
+      for i in range(3):
+       for j in range(3):
+        v+=-C*(td*q[i]*q[j]*O.PAULI[i,s3,s1]*O.PAULI[j,s4,s2]/(q@q+m.m_pi**2)-te*k[i]*k[j]*O.PAULI[i,s4,s1]*O.PAULI[j,s3,s2]/(k@k+m.m_pi**2))
+     ans[2*s3+s4,2*s1+s2]=v
+ return ans
+coeff={('nn','nn'):(1,1),('pp','pp'):(1,1),('np','np'):(-1,2),('np','pn'):(2,-1),('pn','np'):(2,-1),('pn','pn'):(-1,2),('nn','pp'):(0,0)}
+for n in range(7):
+ q=rng.normal(size=3)*(20+40*n);k=rng.normal(size=3)*(50+20*n);A=O.antisymmetrized(q,k,m);dq=q@q+m.m_pi**2;dk=k@k+m.m_pi**2
+ ck(f'{n} Hermiticity',A,A.conj().T)
+ ck(f'{n} outgoing exchange',O.EXCHANGE@O.antisymmetrized(k,q,m),-A)
+ ck(f'{n} incoming exchange',O.antisymmetrized(-k,-q,m)@O.EXCHANGE,-A)
+ ck(f'{n} parity',O.antisymmetrized(-q,-k,m),A)
+ ck(f'{n} full spin-isospin trace',np.sum(abs(A)**2)/16,C*C*(3*((q@q)**2/dq**2+(k@k)**2/dk**2)+1.5*(2*(q@k)**2-(q@q)*(k@k))/(dq*dk)))
+ for (ini,fin),(d,e)in coeff.items():
+  a=O.channel(ini,fin,q,k,m);ref=literal(ini,fin,q,k)
+  ck(f'{n} {ini}>{fin} literal components',a,ref)
+  analytic=C*C*(d*d*(q@q)**2/dq**2+e*e*(k@k)**2/dk**2-d*e*(2*(q@k)**2-(q@q)*(k@k))/(dq*dk))
+  ck(f'{n} {ini}>{fin} analytic spin average',O.spin_average(a),analytic)
+  ck(f'{n} {ini}>{fin} positive',float(O.spin_average(a)<0),0)
+  if n==0:points.append(dict(initial=ini,final=fin,q=q.tolist(),k=k.tolist(),spin_averaged_T2=O.spin_average(a),analytic=analytic))
+ # Simultaneous rotation with SU2 and its SO3 adjoint.
+ axis=rng.normal(size=3);axis/=np.linalg.norm(axis);angle=.73;a=np.einsum('i,ijk->jk',axis,O.PAULI);u=np.eye(2)*math.cos(angle/2)-1j*a*math.sin(angle/2)
+ rot=np.array([[np.trace(O.PAULI[i]@u@O.PAULI[j]@u.conj().T).real/2 for j in range(3)]for i in range(3)])
+ U=np.kron(np.kron(u,u),np.eye(4));ck(f'{n} rotational covariance',O.antisymmetrized(rot@q,rot@k,m),U@A@U.conj().T)
+ ck(f'{n} coupling amplitude scaling',O.antisymmetrized(q,k,O.Model(f_piNN=2*m.f_piNN)),4*A)
+ ck(f'{n} no weak coupling in operator',float('GF'in O.__dict__),0)
+# Matrix normalizations and zero/spin-isospin projectors.
+ck('tau dot explicit charge matrix',O.TAUDOT,np.array([[1,0,0,0],[0,-1,2,0],[0,2,-1,0],[0,0,0,1]]))
+ck('isospin eigenvalues',np.linalg.eigvalsh(O.TAUDOT),[-3,1,1,1]);ck('zero transfer direct',O.direct([0,0,0]),0)
+ck('coupling zero',O.antisymmetrized([1,2,3],[4,5,6],O.Model(f_piNN=0)),0)
+sg=np.array([0,1,-1,0])/math.sqrt(2);tr=np.array([0,1,1,0])/math.sqrt(2);q=np.array([3.,4.,5.]);ck('spin singlet sigmaq product',O.spin(q)@sg,-(q@q)*sg);ck('isosinglet tau eigenstate',O.TAUDOT@sg,-3*sg);ck('isotriplet tau eigenstate',O.TAUDOT@tr,tr)
+# Pauli cancellation for duplicate final spin+isospin and identical momentum q=k.
+a=O.antisymmetrized(q,q)
+for s in [0,3]:
+ for iso in [0,3]:ck(f'duplicate final state zero s{s} iso{iso}',a[s*4+iso],0)
+# Absolute LO Born normalization and integrated identical count convention.
+from numpy.polynomial.legendre import leggauss
+rows=[]
+for p in [15.,70.,180.]:
+ for ch in ['nn','pp','np']:
+  x,w=leggauss(60);ds=np.array([O.born_dsigma(ch,ch,p,float(c))for c in x]);factor=.5 if ch in ['nn','pp']else1.
+  total=factor*2*math.pi*float(w@ds);x2,w2=leggauss(90);tot2=factor*2*math.pi*sum(wi*O.born_dsigma(ch,ch,p,float(c))for c,wi in zip(x2,w2));ck(f'{ch} p{p} angular convergence',total,tot2,2e-12)
+  if ch in ['nn','pp']:ck(f'{ch} p{p} hemisphere count',factor*2*math.pi*float(w@ds),2*math.pi*sum(wi*O.born_dsigma(ch,ch,p,float((c+1)/2))*.5 for c,wi in zip(x,w)),2e-12)
+  c=.37;pin=np.array([0,0,p]);pout=p*np.array([math.sqrt(1-c*c),0,c]);q=pout-pin;k=-pout-pin;t2=O.spin_average(O.channel(ch,ch,q,k));M2=(4*m.common_mass**2)**2*t2;ds_cov=M2/(64*math.pi**2*(4*m.common_mass**2))*197.3269804**2;ck(f'{ch} p{p} commonmass NR-cov external normalization',O.born_dsigma(ch,ch,p,c),ds_cov)
+  rows.append(dict(channel=ch,p_cm=p,dsigma_cos037_fm2_sr=O.born_dsigma(ch,ch,p,.37),total_born_fm2=total,identical_final_count=factor,kinetic_scale_over_mass=(p/m.common_mass)**2))
+for label,fn in [('negativef',lambda:O.Model(f_piNN=-1)),('zeropion',lambda:O.Model(m_pi=0)),('nanmomentum',lambda:O.direct([0,float('nan'),1])),('badchannel',lambda:O.channel('xx','nn',q,k)),('badangle',lambda:O.born_dsigma('nn','nn',30,2))]:
+ try:fn();rejected=False
+ except ValueError:rejected=True
+ ck('reject '+label,float(not rejected),0)
+out=dict(checks=checks,passed=sum(x['passed']for x in checks),failed=[x for x in checks if not x['passed']],matrix_points=points,cross_sections=rows,model=vars(m),g_piNN=m.pseudoscalar_g,units='T MeV^-2; spin averaged T2 MeV^-4; Born cross section fm2',scope='Elementary strong static OPE Born model only; no MU weak diagrams/rate, no fit to NN scattering')
+(HERE/'results.json').write_text(json.dumps(out,indent=2));print(json.dumps(dict(passed=out['passed'],failed=out['failed'],cross_sections=rows),indent=2))

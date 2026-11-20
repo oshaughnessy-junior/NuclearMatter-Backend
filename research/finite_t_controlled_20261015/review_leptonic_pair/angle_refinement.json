@@ -1,0 +1,514 @@
+{
+  "checks": [
+    {
+      "name": "isolated angle12to16 emptyFnumber",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 emptyFnu_energy",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 emptyFantinu_energy",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 emptyFelectron_energy",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 emptyFpositron_energy",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEFnumber",
+      "error": 2.844391389089651e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEFnu_energy",
+      "error": -4.605094083842687e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEFantinu_energy",
+      "error": 8.01048116727543e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEFelectron_energy",
+      "error": -5.452305273934144e-13,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEFpositron_energy",
+      "error": 3.892663968940724e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEBnumber",
+      "error": 2.844169344484726e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEBnu_energy",
+      "error": -4.605094083842687e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEBantinu_energy",
+      "error": 8.01048116727543e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEBelectron_energy",
+      "error": -5.451195050909519e-13,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 LTEBpositron_energy",
+      "error": 3.892663968940724e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEFnumber",
+      "error": -3.4770626267111027e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEFnu_energy",
+      "error": 4.594959968073908e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEFantinu_energy",
+      "error": -6.81346143949213e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEFelectron_energy",
+      "error": -2.906706397798331e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEFpositron_energy",
+      "error": -3.4057165643197607e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEBnumber",
+      "error": -3.477062604506642e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEBnu_energy",
+      "error": 4.594959968073908e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEBantinu_energy",
+      "error": -6.813461406185439e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEBelectron_energy",
+      "error": -2.90670635338941e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute LTEBpositron_energy",
+      "error": -3.4057165532175304e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveFnumber",
+      "error": 3.4510172497448366e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveFnu_energy",
+      "error": 2.0310420012492614e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveFantinu_energy",
+      "error": 6.3653526893858725e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveFelectron_energy",
+      "error": 3.643974011424689e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveFpositron_energy",
+      "error": 4.710676293484539e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveBnumber",
+      "error": 3.4514613389546867e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveBnu_energy",
+      "error": 2.0314860904591114e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveBantinu_energy",
+      "error": 6.3653526893858725e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveBelectron_energy",
+      "error": 3.643307877609914e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 positiveBpositron_energy",
+      "error": 4.710454248879614e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveFnumber",
+      "error": -2.4133375742252383e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveFnu_energy",
+      "error": 9.115293853056983e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveFantinu_energy",
+      "error": -5.645933809361736e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveFelectron_energy",
+      "error": -1.9588096256129006e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveFpositron_energy",
+      "error": -2.7071046848625713e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveBnumber",
+      "error": -2.413337607531929e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveBnu_energy",
+      "error": 9.115294963280007e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveBantinu_energy",
+      "error": -5.645933853770657e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveBelectron_energy",
+      "error": -1.9588095367950586e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute positiveBpositron_energy",
+      "error": -2.7071046071469596e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeFnumber",
+      "error": 1.2492007428477336e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeFnu_energy",
+      "error": 3.5218050697949366e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeFantinu_energy",
+      "error": 6.965317211893307e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeFelectron_energy",
+      "error": 2.6617374970783203e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeFpositron_energy",
+      "error": 1.5463852420793955e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeBnumber",
+      "error": 1.2491785383872411e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeBnu_energy",
+      "error": 3.5217162519529666e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeBantinu_energy",
+      "error": 6.965539256498232e-12,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeBelectron_energy",
+      "error": 2.6618263149202903e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "isolated angle12to16 negativeBpositron_energy",
+      "error": 1.5463852420793955e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeFnumber",
+      "error": -8.647313043397276e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeFnu_energy",
+      "error": -1.543554063454522e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeFantinu_energy",
+      "error": -6.44249826819987e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeFelectron_energy",
+      "error": -1.1052831982993894e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeFpositron_energy",
+      "error": -1.079373197487854e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeBnumber",
+      "error": -8.647313143317348e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeBnu_energy",
+      "error": -1.5435540756669752e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeBantinu_energy",
+      "error": -6.442498146075337e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeBelectron_energy",
+      "error": -1.1052832071811736e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "refined independent absolute negativeBpositron_energy",
+      "error": -1.0793732041491921e-07,
+      "tolerance": 2e-06,
+      "passed": true
+    }
+  ],
+  "result": {
+    "T": 2.0,
+    "mu": 0.17446333200826397,
+    "density": [
+      2.0342863678432738e-07,
+      1.7342863678432748e-07
+    ],
+    "scenarios": {
+      "empty": {
+        "F": [
+          1.894201936136514e-07,
+          1.557789272873226e-06,
+          1.5553673088921558e-06,
+          1.5595457181130038e-06,
+          1.5536108636523782e-06
+        ],
+        "B": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "net": [
+          1.894201936136514e-07,
+          1.557789272873226e-06,
+          1.5553673088921558e-06,
+          1.5595457181130038e-06,
+          1.5536108636523782e-06
+        ],
+        "entropy": 0.0,
+        "log_ratio_error": 0.0
+      },
+      "LTE": {
+        "F": [
+          1.7099460150488011e-07,
+          1.4473468601782098e-06,
+          1.4301543533739835e-06,
+          1.444263537424608e-06,
+          1.4332376761275854e-06
+        ],
+        "B": [
+          1.709946015048801e-07,
+          1.4473468601782096e-06,
+          1.430154353373983e-06,
+          1.4442635374246073e-06,
+          1.4332376761275852e-06
+        ],
+        "net": [
+          2.1873623989329666e-23,
+          2.7606178886027024e-22,
+          2.4189011318728427e-22,
+          3.202768422395661e-22,
+          1.9767505980798728e-22
+        ],
+        "entropy": 4.7222511046686284e-37,
+        "log_ratio_error": 5.5138116294983774e-12
+      },
+      "positive": {
+        "F": [
+          1.746439941400942e-07,
+          1.4786416175319655e-06,
+          1.4461522534106462e-06,
+          1.470901905573572e-06,
+          1.4538919653690395e-06
+        ],
+        "B": [
+          7.847260497626263e-08,
+          6.64396506306251e-07,
+          6.497980939807911e-07,
+          6.609188295494204e-07,
+          6.532757707376222e-07
+        ],
+        "net": [
+          9.617138916383153e-08,
+          8.142451112257147e-07,
+          7.963541594298552e-07,
+          8.099830760241515e-07,
+          8.006161946314184e-07
+        ],
+        "entropy": 7.693711133106526e-08,
+        "log_ratio_error": 5.509592782004802e-12
+      },
+      "negative": {
+        "F": [
+          1.6418029522345964e-07,
+          1.388988073306588e-06,
+          1.3987318224385361e-06,
+          1.3940855314158873e-06,
+          1.393634364329237e-06
+        ],
+        "B": [
+          3.6538996667178575e-07,
+          3.0912498063317076e-06,
+          3.11293491882182e-06,
+          3.1025944079852284e-06,
+          3.1015903171682987e-06
+        ],
+        "net": [
+          -2.012096714483261e-07,
+          -1.70226173302512e-06,
+          -1.714203096383284e-06,
+          -1.7085088765693415e-06,
+          -1.7079559528390622e-06
+        ],
+        "entropy": 1.6096773715866088e-07,
+        "log_ratio_error": 5.510925049634352e-12
+      }
+    },
+    "controls": {
+      "order": 40,
+      "angle": 16,
+      "phi": 16,
+      "tail": 60.0,
+      "radial_coordinate": "p/T=sinh(t)",
+      "outgoing_axis": "CMboostdirection"
+    },
+    "seconds": 3.2862652910407633
+  },
+  "passed": true
+}

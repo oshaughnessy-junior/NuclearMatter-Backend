@@ -1,0 +1,94 @@
+{
+  "kind": "SAVED incident-rule differences only",
+  "source_sha256": "4ecd574c54174b461726891971a1b0b7fa597d134a6d27297f3fcc8fb940a22c",
+  "review_sha256": "0b443d1739681ba370c2b9e6986cbb2d3563d198db9ff52dfcb5f233c507e0ec",
+  "fixed_inner_controls": {
+    "lepton_order": 12,
+    "angle_order": 16,
+    "energy_order": 16,
+    "phi_order": 6,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 110.0
+  },
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "curves": {
+    "EC": [
+      {
+        "order": 4,
+        "number": 1.464352629242714e-06,
+        "energy": 2.1529839853433992e-06
+      },
+      {
+        "order": 8,
+        "number": 1.634248292248097e-13,
+        "energy": 6.21724893790107e-14
+      },
+      {
+        "order": 16,
+        "number": 7.105427357600977e-15,
+        "energy": 5.329070518200737e-15
+      },
+      {
+        "order": 24,
+        "number": 3.5527136788004946e-15,
+        "energy": 1.7763568394002489e-15
+      }
+    ],
+    "PC": [
+      {
+        "order": 4,
+        "number": 1.4485770008299877e-05,
+        "energy": 2.5066115586067105e-05
+      },
+      {
+        "order": 8,
+        "number": 2.176951229760703e-07,
+        "energy": 8.046189105624096e-08
+      },
+      {
+        "order": 16,
+        "number": 2.8616931042959453e-10,
+        "energy": 8.283507213148166e-11
+      },
+      {
+        "order": 24,
+        "number": 1.1564083024488944e-12,
+        "energy": 4.494182803681624e-13
+      }
+    ],
+    "NEUTRON_DECAY": [
+      {
+        "order": 4,
+        "number": 0.005457073608978908,
+        "energy": 0.00827275613646559
+      },
+      {
+        "order": 8,
+        "number": 6.542864858073236e-05,
+        "energy": 7.058720351680313e-05
+      },
+      {
+        "order": 16,
+        "number": 7.56563600903163e-08,
+        "energy": 9.309388382058094e-08
+      },
+      {
+        "order": 24,
+        "number": 2.9473312678894615e-11,
+        "energy": 5.304201522308475e-11
+      }
+    ]
+  },
+  "whole_energy_moments_tails": "OPEN",
+  "new_physical_calls": 0
+}

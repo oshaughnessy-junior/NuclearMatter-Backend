@@ -1,0 +1,270 @@
+{
+  "checks": [
+    {
+      "name": "minimum parent original Doppler invariant",
+      "error": 4.440892098500626e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "allowed parent density independent momentum",
+      "error": -7.66053886991358e-15,
+      "gate": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "independent isolated FD tail85to100 j",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent isolated FD tail85to100 chi",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "incident guard True",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard False",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard np.True_",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard None",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard '0.8'",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard nan",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard inf",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard 0.0",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard -1.0",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "incident guard 1.400001",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "control guard {'parent_order': True}",
+      "passed": true,
+      "result": "ValueError:Literalintegerorders>=4 required"
+    },
+    {
+      "name": "control guard {'phi_order': 0}",
+      "passed": true,
+      "result": "ValueError:Literalintegerorders>=4 required"
+    },
+    {
+      "name": "control guard {'tail': nan}",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "control guard {'tail': True}",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "control guard {'budget_seconds': 121.0}",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "control guard {'budget_seconds': True}",
+      "passed": true,
+      "result": "ValueError:Finiteincident0<E<=1.4,tail30..100,budget0..120 required; notuniformdomaincertificate"
+    },
+    {
+      "name": "ordinary soft-output representation underflow",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "ordinary soft-output representation overflow",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "nonphysical log guard False",
+      "passed": true,
+      "result": "ArithmeticError:Finitephysical log required"
+    },
+    {
+      "name": "nonphysical log guard nan",
+      "passed": true,
+      "result": "ArithmeticError:Finitephysical log required"
+    },
+    {
+      "name": "nonphysical log guard inf",
+      "passed": true,
+      "result": "ArithmeticError:Finitephysical log required"
+    },
+    {
+      "name": "genuine saved-node admission ONLY",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "saved-node admission both false empty",
+      "passed": true,
+      "result": "RuntimeError:selectedpositive log/ordinary physicalcoefficient mismatch"
+    },
+    {
+      "name": "saved-node admission false j empty",
+      "passed": true,
+      "result": "RuntimeError:selectedpositive log/ordinary physicalcoefficient mismatch"
+    },
+    {
+      "name": "saved-node admission Boolean index",
+      "passed": true,
+      "result": "RuntimeError:literalnodeindex"
+    },
+    {
+      "name": "saved-node admission wrong energy",
+      "passed": true,
+      "result": "RuntimeError:physicalnodeprovenance"
+    },
+    {
+      "name": "saved-node admission wrong bath",
+      "passed": true,
+      "result": "RuntimeError:physicalnodeprovenance"
+    },
+    {
+      "name": "saved-node admission wrong source identity",
+      "passed": true,
+      "result": "RuntimeError:physicalnodeprovenance"
+    },
+    {
+      "name": "saved-node admission wrong controls",
+      "passed": true,
+      "result": "RuntimeError:physicalnodeprovenance"
+    },
+    {
+      "name": "soft extension never false exact-zero 1e-08",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "soft extension never false exact-zero 1e-100",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "soft extension never false exact-zero 1e-160",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "original hot results remain exact",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 37,
+  "failed": [],
+  "density_oracle": 3.9851564580373084e-08,
+  "pmin_root": 61.64876200514086,
+  "tail": {
+    "Enu": 0.835,
+    "j_log": -7.763366623941046,
+    "chi_log": -8.750548708750944,
+    "density_allowed": 3.985156458037278e-08,
+    "max_energy_residual": 4.001243780749064e-13,
+    "points": 221184,
+    "controls": {
+      "parent": 12,
+      "nu": 16,
+      "electron": 16,
+      "phi": 12,
+      "tail": 100.0
+    },
+    "rapidity_edges": [
+      0.06556713450873392,
+      0.09,
+      0.15,
+      0.23,
+      0.35,
+      0.5,
+      0.6445508007816791
+    ],
+    "seconds": 0.38247733283787966
+  },
+  "soft_diagnostics": [
+    {
+      "Enu": 1e-08,
+      "status": "finite logs, accuracy unqualified",
+      "j": {
+        "value": 0.1923864433550655,
+        "log": -1.6482492039655128,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 0.047220305209786595,
+        "log": -3.052931283775422,
+        "representable": true,
+        "reason": null
+      }
+    },
+    {
+      "Enu": 1e-100,
+      "status": "finite logs, accuracy unqualified",
+      "j": {
+        "value": 0.19238644697921153,
+        "log": -1.6482491851276677,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 0.04722030586321402,
+        "log": -3.0529312699375737,
+        "representable": true,
+        "reason": null
+      }
+    },
+    {
+      "Enu": 1e-160,
+      "status": "explicit rejection; excluded soft extension",
+      "error": "ArithmeticError:Positiveeventphase unresolved"
+    }
+  ],
+  "consumer_literal_AST_sha": "dc5aebaa8f5a9075790f0e24acdc7ded475683fc8d351088fb32c30b93b9db89",
+  "seconds": 0.8493694590870291
+}

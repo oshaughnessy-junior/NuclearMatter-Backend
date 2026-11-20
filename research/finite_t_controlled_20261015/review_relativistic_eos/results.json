@@ -1,0 +1,525 @@
+{
+  "passed": true,
+  "phase": "complete",
+  "runtime_seconds": 4.492852000053972,
+  "checks": [
+    {
+      "name": "baryon 3.7 forward density before derivatives",
+      "error": -1.3766765505351941e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 independent momentum density root",
+      "error": 1.693933882052079e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 energy",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 pressure",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 entropy",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 susceptibility",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 Cv",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 n_T",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 independent FD n_T h0.0074",
+      "error": -1.3124800568586892e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "baryon 3.7 independent FD n_T h0.0037",
+      "error": -3.2811614647521026e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 forward density before derivatives",
+      "error": 5.773159728050814e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 independent momentum density root",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 energy",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 pressure",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 entropy",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 susceptibility",
+      "error": -1.787459069646502e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 Cv",
+      "error": 1.6653345369377348e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 n_T",
+      "error": -2.1538326677728037e-13,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 independent FD n_T h0.00038",
+      "error": 5.485836229723873e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "baryon 0.19 independent FD n_T h0.00019",
+      "error": -4.8461346047190546e-11,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "matter species0 root",
+      "error": 0.0,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "matter species0 forward density",
+      "error": -1.6209256159527285e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "matter species1 root",
+      "error": 0.0,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "matter species1 forward density",
+      "error": -1.0880185641326534e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "matter species2 root",
+      "error": -7.887024366937112e-13,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "matter species2 forward density",
+      "error": -1.1224354778960333e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "matter species3 root",
+      "error": -1.2192913345643319e-11,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "matter species3 forward density",
+      "error": -2.8468338797438264e-12,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "matter independent sum energy",
+      "error": 2.020605904817785e-14,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "matter independent sum pressure",
+      "error": 1.3278267374516872e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "matter independent sum entropy",
+      "error": 7.194245199571014e-14,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "matter independent sum Cv",
+      "error": 1.2034817586936697e-13,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "matter charge closure",
+      "error": -3.4861002973229915e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "physical rest mass difference",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "matter FD temperature0.002",
+      "error": -1.183471738386288e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "matter FD temperature0.001",
+      "error": -2.985134972544046e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "matter FD nB0.002",
+      "error": 4.657842851418792e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "matter FD nB0.001",
+      "error": 1.0725259325106151e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "matter FD Ye0.002",
+      "error": -1.0501803593632175e-05,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "matter FD Ye0.001",
+      "error": -2.6255050832313387e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "matter FD Ymu0.002",
+      "error": -3.060350408645718e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "matter FD Ymu0.001",
+      "error": -7.656949507772737e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "temperature inversion of independent total U",
+      "error": -2.5474067300024217e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "new cold antiparticle finite log",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "underflow representation flag",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original T37 anti exclusion",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero neutron",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero proton",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero species",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NaN density",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "kind": "species",
+      "T": 3.7,
+      "n": 0.0034,
+      "m": 939.56542052,
+      "author": {
+        "temperature": 3.7,
+        "mass": 939.56542052,
+        "chemical_potential": 940.8309934223895,
+        "kinetic_chemical_potential": 1.265572902389522,
+        "density": 0.0033999999999999525,
+        "kinetic_energy_density": 0.022234521714884048,
+        "energy_density": 3.2167569514828394,
+        "pressure": 0.014744176252403434,
+        "entropy_density": 0.008831283810584638,
+        "free_energy_density": 3.1840812013836763,
+        "cv_fixed_density": 0.004728475415830258,
+        "dn_dmu_fixed_temperature": 0.0006853800436914402,
+        "dn_dtemperature_fixed_mu": 0.001151864602311508,
+        "dmu_dtemperature_fixed_density": -1.6806217410527355,
+        "log_antiparticle_density": -513.8955072659196,
+        "antiparticle_density": 6.576834593341067e-224,
+        "antiparticle_density_representable": true,
+        "log_antiparticle_to_particle_ratio": -508.21152741855957
+      },
+      "momentum": [
+        0.003399999999999953,
+        3.2167569514828402,
+        0.014744176252403436,
+        0.00883128381058464,
+        0.0006853800436914404,
+        0.0011518646023115082,
+        0.011891115581387253,
+        0.004728475415830255
+      ],
+      "independent_mu": 940.8309934224064
+    },
+    {
+      "kind": "species",
+      "T": 0.19,
+      "n": 0.021,
+      "m": 938.27208816,
+      "author": {
+        "temperature": 0.19,
+        "mass": 938.27208816,
+        "chemical_potential": 953.2663313433724,
+        "kinetic_chemical_potential": 14.994243183372419,
+        "density": 0.021000000000000123,
+        "kinetic_energy_density": 0.18950672578503946,
+        "energy_density": 19.893220577145154,
+        "pressure": 0.1256237859112057,
+        "entropy_density": 0.0013231833969608875,
+        "free_energy_density": 19.892969172299733,
+        "cv_fixed_density": 0.0013227687665756233,
+        "dn_dmu_fixed_temperature": 0.0021168911704804506,
+        "dn_dtemperature_fixed_mu": 4.5876558247124084e-05,
+        "dmu_dtemperature_fixed_density": -0.021671665925420212,
+        "log_antiparticle_density": -9965.608277873567,
+        "antiparticle_density": 0.0,
+        "antiparticle_density_representable": false,
+        "log_antiparticle_to_particle_ratio": -9961.745045032309
+      },
+      "momentum": [
+        0.021000000000000123,
+        19.893220577145144,
+        0.12562378591120565,
+        0.0013231833969609063,
+        0.0021168911704804883,
+        4.5876558247133964e-05,
+        0.0013229576686499878,
+        0.0013227687665756012
+      ],
+      "independent_mu": 953.2663313433723
+    },
+    {
+      "kind": "matter derivative",
+      "coordinate": "temperature",
+      "errors": [
+        -1.183471738386288e-07,
+        -2.985134972544046e-08
+      ]
+    },
+    {
+      "kind": "matter derivative",
+      "coordinate": "nB",
+      "errors": [
+        4.657842851418792e-07,
+        1.0725259325106151e-07
+      ]
+    },
+    {
+      "kind": "matter derivative",
+      "coordinate": "Ye",
+      "errors": [
+        -1.0501803593632175e-05,
+        -2.6255050832313387e-06
+      ]
+    },
+    {
+      "kind": "matter derivative",
+      "coordinate": "Ymu",
+      "errors": [
+        -3.060350408645718e-07,
+        -7.656949507772737e-08
+      ]
+    },
+    {
+      "kind": "assembled state",
+      "author": {
+        "temperature": 3.3,
+        "nB": 0.0023,
+        "Ye": 0.118,
+        "Ymu": 0.047,
+        "neutron": {
+          "temperature": 3.3,
+          "mass": 939.56542052,
+          "chemical_potential": 939.0070337430184,
+          "kinetic_chemical_potential": -0.5583867769815924,
+          "density": 0.001920499999999978,
+          "kinetic_energy_density": 0.01066091984075742,
+          "energy_density": 1.8150963099493966,
+          "pressure": 0.007074464079062917,
+          "entropy_density": 0.00569932294697379,
+          "free_energy_density": 1.7962885442243832,
+          "cv_fixed_density": 0.0027424098774609545,
+          "dn_dmu_fixed_temperature": 0.0004727611047370357,
+          "dn_dtemperature_fixed_mu": 0.0009572117885383474,
+          "dmu_dtemperature_fixed_density": -2.0247261861163013,
+          "log_antiparticle_density": -575.1170511350323,
+          "antiparticle_density": 1.6976112459608503e-250,
+          "antiparticle_density_representable": true,
+          "log_antiparticle_to_particle_ratio": -568.861881424854
+        },
+        "proton": {
+          "temperature": 3.3,
+          "mass": 938.27208816,
+          "chemical_potential": 931.7533864983917,
+          "kinetic_chemical_potential": -6.518701661608247,
+          "density": 0.00037949999999999654,
+          "kinetic_energy_density": 0.0019307511502750436,
+          "energy_density": 0.35800500860699175,
+          "pressure": 0.0012814875598020047,
+          "entropy_density": 0.0017230563608052597,
+          "free_energy_density": 0.3523189226163344,
+          "cv_fixed_density": 0.000567568310177013,
+          "dn_dmu_fixed_temperature": 0.00010989317379717168,
+          "dn_dtemperature_fixed_mu": 0.0003903522989228787,
+          "dmu_dtemperature_fixed_density": -3.5521068819374224,
+          "log_antiparticle_density": -572.5291144749577,
+          "antiparticle_density": 2.258212747112845e-249,
+          "antiparticle_density_representable": true,
+          "log_antiparticle_to_particle_ratio": -564.6524585138292
+        },
+        "electron": {
+          "temperature": 3.3,
+          "chemical_potential": 38.62124580582754,
+          "mass": 0.51099895069,
+          "net_density": 0.0002713999999999866,
+          "particle_density": 0.0002714000077878542,
+          "antiparticle_density": 7.78786761124632e-12,
+          "energy_density": 0.0084082569277636,
+          "pressure": 0.0028018765571144358,
+          "entropy_density": 0.00022070526459909372,
+          "free_energy_density": 0.0076799295545865905,
+          "cv_fixed_net_density": 0.0002150298748742766,
+          "dn_dmu_fixed_temperature": 2.0140222531111106e-05,
+          "dn_dtemperature_fixed_mu": 1.1058330137826353e-05,
+          "dmu_dtemperature_fixed_net_density": -0.5490669291634823
+        },
+        "muon": {
+          "temperature": 3.3,
+          "chemical_potential": 106.53528966786713,
+          "mass": 105.6583755,
+          "net_density": 0.00010809999999999672,
+          "particle_density": 0.00010809999999999672,
+          "antiparticle_density": 1.3528527883331926e-32,
+          "energy_density": 0.012066817433626935,
+          "pressure": 0.00041318063082261433,
+          "entropy_density": 0.00029197977313741253,
+          "free_energy_density": 0.011103284182273474,
+          "cv_fixed_net_density": 0.00016054822683249885,
+          "dn_dmu_fixed_temperature": 2.496712467143832e-05,
+          "dn_dtemperature_fixed_mu": 4.4649948248611175e-05,
+          "dmu_dtemperature_fixed_net_density": -1.7883496332154516
+        },
+        "energy_density": 2.193576392917779,
+        "pressure": 0.011571008826801971,
+        "entropy_density": 0.007935064345515556,
+        "free_energy_density": 2.1673906805775776,
+        "cv_fixed_composition": 0.003685556289344743,
+        "zeta_e": 31.367598561200907,
+        "zeta_mu": 99.28164242324056
+      },
+      "T": 3.3,
+      "nB": 0.0023,
+      "Ye": 0.118,
+      "Ymu": 0.047,
+      "independent_total_energy": 2.1935763929177345,
+      "recovered_temperature": 3.299999999991593
+    }
+  ],
+  "source_sha256": {
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "relativistic_free_eos/results.json": "7d926cfd8bd899913ed563694376ac4ffcbb8142e171408348a38ddba6107af3",
+    "relativistic_free_eos/extra_results.json": "556461b63a5fd71de90cabc6405124eb5f817f236f21db5f96a0a4e94d836d0c",
+    "relativistic_free_eos/initial_antiparticle_exclusion_results.json": "1269b1e48f31e61dbf3a1d82f021587cdeec32b2c6e59ebfa0440a485dc6658b",
+    "relativistic_free_eos/initial_cold_roundoff_results.json": "50aad735efc456114015c9a36e9eb88d5120fea2e35cf2b43edd7c1fbf01c6a0",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "end_source_sha256": {
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "relativistic_free_eos/results.json": "7d926cfd8bd899913ed563694376ac4ffcbb8142e171408348a38ddba6107af3",
+    "relativistic_free_eos/extra_results.json": "556461b63a5fd71de90cabc6405124eb5f817f236f21db5f96a0a4e94d836d0c",
+    "relativistic_free_eos/initial_antiparticle_exclusion_results.json": "1269b1e48f31e61dbf3a1d82f021587cdeec32b2c6e59ebfa0440a485dc6658b",
+    "relativistic_free_eos/initial_cold_roundoff_results.json": "50aad735efc456114015c9a36e9eb88d5120fea2e35cf2b43edd7c1fbf01c6a0",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  }
+}

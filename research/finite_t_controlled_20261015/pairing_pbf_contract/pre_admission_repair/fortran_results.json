@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "name": "actual local Fortran/NMB (190000000.0, '1S0')",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actual local Fortran/NMB (190000000.0, '3P2B')",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actual local Fortran/NMB (530000000.0, '1S0')",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actual local Fortran/NMB (530000000.0, '3P2B')",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actual local Fortran/NMB (880000000.0, '1S0')",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actual local Fortran/NMB (880000000.0, '3P2B')",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actual local Fortran/NMB (1010000000.0, '1S0')",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "actual local Fortran/NMB (1010000000.0, '3P2B')",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "passed": 8,
+  "failed": [],
+  "rows": [
+    {
+      "state": [
+        190000000.0,
+        1000000000.0,
+        0.77,
+        1.87
+      ],
+      "Fortran_1S0": 53455282311604.11,
+      "Fortran_3P2B": 36702678464421.83,
+      "NMB_1S0": 53455282311604.11,
+      "NMB_3P2B": 36702678464421.836
+    },
+    {
+      "state": [
+        530000000.0,
+        1000000000.0,
+        0.77,
+        1.87
+      ],
+      "Fortran_1S0": 1.8930048532428734e+19,
+      "Fortran_3P2B": 3.252348689600035e+19,
+      "NMB_1S0": 1.8930048532428734e+19,
+      "NMB_3P2B": 3.252348689600034e+19
+    },
+    {
+      "state": [
+        880000000.0,
+        1000000000.0,
+        0.77,
+        1.87
+      ],
+      "Fortran_1S0": 1.4411943177845144e+20,
+      "Fortran_3P2B": 4.7890891793412234e+20,
+      "NMB_1S0": 1.4411943177845144e+20,
+      "NMB_3P2B": 4.7890891793412234e+20
+    },
+    {
+      "state": [
+        1000000000.0,
+        1000000000.0,
+        0.77,
+        1.87
+      ],
+      "Fortran_1S0": 0.0,
+      "Fortran_3P2B": 0.0,
+      "NMB_1S0": 2119454616.4029932,
+      "NMB_3P2B": 6599476740.674151
+    },
+    {
+      "state": [
+        1010000000.0,
+        1000000000.0,
+        0.77,
+        1.87
+      ],
+      "Fortran_1S0": 0.0,
+      "Fortran_3P2B": 0.0,
+      "NMB_1S0": 0.0,
+      "NMB_3P2B": 0.0
+    }
+  ],
+  "compile_command": [
+    "/opt/homebrew/bin/gfortran",
+    "-std=legacy",
+    "-ffixed-line-length-none",
+    "-O1",
+    "-fcheck=all",
+    "-ffpe-trap=invalid,zero,overflow",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/pairing_pbf_contract/local_pbf_driver.f",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/pairing_pbf_contract/local_pbf_extraction.f",
+    "-o",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/pairing_pbf_contract/local_pbf"
+  ],
+  "compile_stderr": "",
+  "source_sha256": "45fb3891d0d2c69a527b0fa64be82eb69fd261f6ccccbc01b4d706ef4e7d9def",
+  "extraction_is_literal_substring": true,
+  "scope": "Exact local installation with nmbackend ca patch; NOT fresh official release, full thermal response or cooling-profile qualification. ExactTc disparity is retained separately."
+}

@@ -1,0 +1,813 @@
+{
+  "status": "FAIL",
+  "created_utc": "2026-10-15T10:31:23.169801+00:00",
+  "scope": "static classical free-nucleon ansatz; no dense-matter qualification",
+  "environment": {
+    "python": "3.13.4",
+    "numpy": "2.3.5",
+    "scipy": "1.15.3"
+  },
+  "constants": {
+    "HBAR": 6.582119569e-22,
+    "HBARC": 197.3269804,
+    "GF": 1.1663785e-11,
+    "VUD": 0.974,
+    "GA": 1.2723,
+    "ME": 0.51099895069,
+    "Q": 1.29333236,
+    "RATE_PREFACTOR": 0.018516996705876126
+  },
+  "files_sha256": {
+    "check_reference.py": "da80d1b6d9213d3a7ac8f89a903cd10ca9c2cff1b5f58197ff822582812e08bc",
+    "static_capture.py": "90cd47f0642fdbb3fd16cef53524cb69c9c9f90c8252f562d9ae0355d6c93e3f"
+  },
+  "checks": [
+    {
+      "name": "adaptive_T0.1_mu0.0_electron_capture",
+      "scaled_error": 2.1003345425572702e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T0.1_mu0.0_electron_capture",
+      "scaled_error": 3.049638290605783e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T0.1_mu0.0_positron_capture",
+      "scaled_error": 1.5741211281670877e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T0.1_mu0.0_positron_capture",
+      "scaled_error": 2.5329720390300464e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T0.1_mu0.0_neutron_decay",
+      "scaled_error": 1.706450331946329e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T0.1_mu0.0_neutron_decay",
+      "scaled_error": 2.680264029909752e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T1.0_mu-2.0_electron_capture",
+      "scaled_error": 1.520455752154141e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T1.0_mu-2.0_electron_capture",
+      "scaled_error": 2.491858038252644e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T1.0_mu-2.0_positron_capture",
+      "scaled_error": 1.7114736408712472e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T1.0_mu-2.0_positron_capture",
+      "scaled_error": 2.5672104613068928e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T1.0_mu-2.0_neutron_decay",
+      "scaled_error": 1.7431515271547207e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T1.0_mu-2.0_neutron_decay",
+      "scaled_error": 2.6365166848215388e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T3.0_mu5.0_electron_capture",
+      "scaled_error": 1.6274067399139336e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T3.0_mu5.0_electron_capture",
+      "scaled_error": 2.5428230311155445e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T3.0_mu5.0_positron_capture",
+      "scaled_error": 1.724528249995559e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T3.0_mu5.0_positron_capture",
+      "scaled_error": 2.5795464579765728e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T3.0_mu5.0_neutron_decay",
+      "scaled_error": 1.6824870681084158e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T3.0_mu5.0_neutron_decay",
+      "scaled_error": 2.640000033698596e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T10.0_mu0.0_electron_capture",
+      "scaled_error": 1.6422427748569932e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T10.0_mu0.0_electron_capture",
+      "scaled_error": 2.606916852395392e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T10.0_mu0.0_positron_capture",
+      "scaled_error": 3.8628501217079754e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T10.0_mu0.0_positron_capture",
+      "scaled_error": 2.5818028874682518e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T10.0_mu0.0_neutron_decay",
+      "scaled_error": 1.6715399355679344e-14,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T10.0_mu0.0_neutron_decay",
+      "scaled_error": 2.684658885673172e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T0.03_mu8.0_electron_capture",
+      "scaled_error": 1.6873697003733548e-08,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T0.03_mu8.0_electron_capture",
+      "scaled_error": 7.11086111293223e-05,
+      "gate": 1e-07,
+      "pass": false
+    },
+    {
+      "name": "adaptive_T0.03_mu8.0_positron_capture",
+      "scaled_error": 0.0008943548425980599,
+      "gate": 3e-07,
+      "pass": false
+    },
+    {
+      "name": "refinement_T0.03_mu8.0_positron_capture",
+      "scaled_error": 2.234230823206499e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "adaptive_T0.03_mu8.0_neutron_decay",
+      "scaled_error": 2.5421059947551923e-12,
+      "gate": 3e-07,
+      "pass": true
+    },
+    {
+      "name": "refinement_T0.03_mu8.0_neutron_decay",
+      "scaled_error": 3.8095544916641103e-14,
+      "gate": 1e-07,
+      "pass": true
+    },
+    {
+      "name": "massless_Q0_FD_T0.5",
+      "scaled_error": 9.765449977617131e-15,
+      "gate": 2e-12,
+      "pass": true
+    },
+    {
+      "name": "massless_Q0_FD_T2.0",
+      "scaled_error": 9.765449977617131e-15,
+      "gate": 2e-12,
+      "pass": true
+    },
+    {
+      "name": "massless_Q0_FD_T8.0",
+      "scaled_error": 9.765449977617131e-15,
+      "gate": 2e-12,
+      "pass": true
+    },
+    {
+      "name": "degenerate_massless_Qfinite_limit",
+      "scaled_error": 7.714956965663606e-06,
+      "gate": 2e-05,
+      "pass": true
+    },
+    {
+      "name": "detailed_balance_electron_capture",
+      "scaled_error": 1.8978975914142028e-15,
+      "gate": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "stationary_collision_electron_capture",
+      "scaled_error": 9.910260520755104e-16,
+      "gate": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "detailed_balance_positron_capture",
+      "scaled_error": 1.981360322702565e-15,
+      "gate": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "stationary_collision_positron_capture",
+      "scaled_error": 1.0039497709186927e-15,
+      "gate": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "detailed_balance_neutron_decay",
+      "scaled_error": 1.0582565032690069e-15,
+      "gate": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "stationary_collision_neutron_decay",
+      "scaled_error": 6.413081367128623e-16,
+      "gate": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "positron_below_threshold",
+      "scaled_error": 0.0,
+      "gate": 1e-100,
+      "pass": true
+    },
+    {
+      "name": "spectral_to_target_normalization_electron_capture",
+      "scaled_error": 9.31036390048848e-15,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "spectral_to_target_normalization_positron_capture",
+      "scaled_error": 1.803047587282829e-13,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "spectral_to_target_normalization_neutron_decay",
+      "scaled_error": 2.8309847391887756e-14,
+      "gate": 2e-09,
+      "pass": true
+    }
+  ],
+  "convergence_samples": [
+    {
+      "T_MeV": 0.1,
+      "mu_e_total_MeV": 0.0,
+      "channel": "electron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          2.1783876189615015e-10,
+          7.44541538952219e-11
+        ],
+        [
+          2.1783876189615108e-10,
+          7.445415389522238e-11
+        ],
+        [
+          2.1783876189614847e-10,
+          7.445415389522139e-11
+        ],
+        [
+          2.1783876189615512e-10,
+          7.445415389522333e-11
+        ]
+      ],
+      "adaptive_moments": [
+        2.1783876189615054e-10,
+        7.445415389522207e-11
+      ]
+    },
+    {
+      "T_MeV": 0.1,
+      "mu_e_total_MeV": 0.0,
+      "channel": "positron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          8.932442791612689e-06,
+          1.7923990187517508e-05
+        ],
+        [
+          8.93244279161275e-06,
+          1.792399018751763e-05
+        ],
+        [
+          8.932442791612636e-06,
+          1.7923990187517403e-05
+        ],
+        [
+          8.932442791612862e-06,
+          1.7923990187517857e-05
+        ]
+      ],
+      "adaptive_moments": [
+        8.932442791612721e-06,
+        1.7923990187517586e-05
+      ]
+    },
+    {
+      "T_MeV": 0.1,
+      "mu_e_total_MeV": 0.0,
+      "channel": "neutron_decay",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          0.0010546897103492939,
+          0.0005056414966896082
+        ],
+        [
+          0.0010546897103492997,
+          0.000505641496689611
+        ],
+        [
+          0.0010546897103492884,
+          0.0005056414966896055
+        ],
+        [
+          0.0010546897103493162,
+          0.000505641496689619
+        ]
+      ],
+      "adaptive_moments": [
+        0.0010546897103492982,
+        0.0005056414966896106
+      ]
+    },
+    {
+      "T_MeV": 1.0,
+      "mu_e_total_MeV": -2.0,
+      "channel": "electron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          0.029237545911225123,
+          0.13143437035204683
+        ],
+        [
+          0.029237545911225314,
+          0.1314343703520476
+        ],
+        [
+          0.02923754591122496,
+          0.13143437035204614
+        ],
+        [
+          0.029237545911225682,
+          0.1314343703520494
+        ]
+      ],
+      "adaptive_moments": [
+        0.02923754591122524,
+        0.1314343703520474
+      ]
+    },
+    {
+      "T_MeV": 1.0,
+      "mu_e_total_MeV": -2.0,
+      "channel": "positron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          4.719658972057584,
+          29.476664457166383
+        ],
+        [
+          4.719658972036592,
+          29.47666445700311
+        ],
+        [
+          4.719658972036544,
+          29.47666445700281
+        ],
+        [
+          4.719658972036663,
+          29.476664457003565
+        ]
+      ],
+      "adaptive_moments": [
+        4.719658972036588,
+        29.47666445700306
+      ]
+    },
+    {
+      "T_MeV": 1.0,
+      "mu_e_total_MeV": -2.0,
+      "channel": "neutron_decay",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          0.0009951650495974513,
+          0.00047576543671513
+        ],
+        [
+          0.000995165049597457,
+          0.00047576543671513265
+        ],
+        [
+          0.000995165049597446,
+          0.00047576543671512767
+        ],
+        [
+          0.0009951650495974723,
+          0.0004757654367151402
+        ]
+      ],
+      "adaptive_moments": [
+        0.000995165049597455,
+        0.00047576543671513217
+      ]
+    },
+    {
+      "T_MeV": 3.0,
+      "mu_e_total_MeV": 5.0,
+      "channel": "electron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          415.2531784850583,
+          6259.246941790961
+        ],
+        [
+          415.25317848504795,
+          6259.246941791282
+        ],
+        [
+          415.25317848504346,
+          6259.246941791217
+        ],
+        [
+          415.253178485054,
+          6259.246941791376
+        ]
+      ],
+      "adaptive_moments": [
+        415.2531784850474,
+        6259.246941791274
+      ]
+    },
+    {
+      "T_MeV": 3.0,
+      "mu_e_total_MeV": 5.0,
+      "channel": "positron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          24.89825921462838,
+          392.24447871199277
+        ],
+        [
+          24.898259214628503,
+          392.2444787119947
+        ],
+        [
+          24.898259214628247,
+          392.24447871199067
+        ],
+        [
+          24.898259214628876,
+          392.2444787120008
+        ]
+      ],
+      "adaptive_moments": [
+        24.8982592146285,
+        392.244478711994
+      ]
+    },
+    {
+      "T_MeV": 3.0,
+      "mu_e_total_MeV": 5.0,
+      "channel": "neutron_decay",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          0.00020972499903891372,
+          9.907718589900275e-05
+        ],
+        [
+          0.00020972499903891488,
+          9.907718589900329e-05
+        ],
+        [
+          0.00020972499903891263,
+          9.907718589900222e-05
+        ],
+        [
+          0.00020972499903891816,
+          9.907718589900484e-05
+        ]
+      ],
+      "adaptive_moments": [
+        0.00020972499903891475,
+        9.907718589900317e-05
+      ]
+    },
+    {
+      "T_MeV": 10.0,
+      "mu_e_total_MeV": 0.0,
+      "channel": "electron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          40532.130068256454,
+          2027397.078693345
+        ],
+        [
+          40532.13006825667,
+          2027397.0786933554
+        ],
+        [
+          40532.13006825624,
+          2027397.0786933345
+        ],
+        [
+          40532.130068257284,
+          2027397.0786933873
+        ]
+      ],
+      "adaptive_moments": [
+        40532.130068256636,
+        2027397.078693354
+      ]
+    },
+    {
+      "T_MeV": 10.0,
+      "mu_e_total_MeV": 0.0,
+      "channel": "positron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          45974.33413520291,
+          2362753.133998274
+        ],
+        [
+          45974.334135203164,
+          2362753.1339982906
+        ],
+        [
+          45974.334135202684,
+          2362753.133998266
+        ],
+        [
+          45974.33413520386,
+          2362753.133998327
+        ]
+      ],
+      "adaptive_moments": [
+        45974.33413520326,
+        2362753.133998418
+      ]
+    },
+    {
+      "T_MeV": 10.0,
+      "mu_e_total_MeV": 0.0,
+      "channel": "neutron_decay",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          0.0005492373584030073,
+          0.00026269302366828276
+        ],
+        [
+          0.0005492373584030103,
+          0.0002626930236682842
+        ],
+        [
+          0.0005492373584030043,
+          0.00026269302366828146
+        ],
+        [
+          0.000549237358403019,
+          0.0002626930236682884
+        ]
+      ],
+      "adaptive_moments": [
+        0.0005492373584030099,
+        0.000262693023668284
+      ]
+    },
+    {
+      "T_MeV": 0.03,
+      "mu_e_total_MeV": 8.0,
+      "channel": "electron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          76.04984506029271,
+          416.90184448530147
+        ],
+        [
+          77.73309786859413,
+          427.9333147526139
+        ],
+        [
+          77.38517726390283,
+          425.59967705231907
+        ],
+        [
+          77.38974414346289,
+          425.62994085425134
+        ]
+      ],
+      "adaptive_moments": [
+        77.38974309355325,
+        425.6299336723008
+      ]
+    },
+    {
+      "T_MeV": 0.03,
+      "mu_e_total_MeV": 8.0,
+      "channel": "positron_capture",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          1.039282717714922e-127,
+          1.9269627126990394e-127
+        ],
+        [
+          1.0392827177149182e-127,
+          1.926962712699032e-127
+        ],
+        [
+          1.0392827177149072e-127,
+          1.926962712699011e-127
+        ],
+        [
+          1.03928271771493e-127,
+          1.926962712699054e-127
+        ]
+      ],
+      "adaptive_moments": [
+        1.0402130372821568e-127,
+        1.928640796137097e-127
+      ]
+    },
+    {
+      "T_MeV": 0.03,
+      "mu_e_total_MeV": 8.0,
+      "channel": "neutron_decay",
+      "orders": [
+        48,
+        96,
+        192,
+        384
+      ],
+      "moments": [
+        [
+          1.0702208819626064e-103,
+          9.112855593937461e-105
+        ],
+        [
+          1.0702208819626088e-103,
+          9.112855593937525e-105
+        ],
+        [
+          1.0702208819626037e-103,
+          9.112855593937438e-105
+        ],
+        [
+          1.0702208819626444e-103,
+          9.112855593937738e-105
+        ]
+      ],
+      "adaptive_moments": [
+        1.0702208819632201e-103,
+        9.112855593914573e-105
+      ]
+    }
+  ],
+  "vacuum_neutron_beta_lifetime_seconds_uncorrected": 947.3710531906056,
+  "example_state": {
+    "T_MeV": 3.0,
+    "mu_e_total_MeV": 5.0,
+    "n_n_fm-3": 8e-08,
+    "n_p_fm-3": 2e-08
+  },
+  "example_sources": {
+    "electron_capture": [
+      8.305063569700869e-06,
+      0.00012518493883582435
+    ],
+    "positron_capture": [
+      1.9918607371702597e-06,
+      3.1379558296959254e-05
+    ],
+    "neutron_decay": [
+      1.677799992311301e-11,
+      7.926174871920177e-12
+    ],
+    "dYe_dt_s-1": -63.131860545306864,
+    "nu_e_number_fm-3_s-1": 8.305063569700869e-06,
+    "antinu_e_number_fm-3_s-1": 1.9918775151701827e-06,
+    "neutrino_loss_MeV_fm-3_s-1": 0.00015656450505895848,
+    "neutrino_loss_erg_cm-3_s-1": 2.5084399171923806e+29
+  }
+}

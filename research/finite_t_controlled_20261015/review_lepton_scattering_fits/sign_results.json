@@ -1,0 +1,188 @@
+{
+  "checks": [
+    {
+      "name": "independent source refinement rate",
+      "error": 4.26186039196157e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent source vs CM rate",
+      "error": 1.6014152752351664e-09,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "positive fit rate",
+      "error": -0.0016966553694433006,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "independent source refinement transport_rate",
+      "error": 1.5394640426815147e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent source vs CM transport_rate",
+      "error": -8.530782023296623e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "positive fit transport_rate",
+      "error": -0.0016294001190279017,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "independent source refinement outgoing_energy_moment",
+      "error": 8.126930624325558e-08,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent source vs CM outgoing_energy_moment",
+      "error": 6.355956889784655e-09,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "positive fit outgoing_energy_moment",
+      "error": 0.0005444456439982481,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "independent source refinement neutrino_energy_change",
+      "error": 3.285658247534072e-07,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent source vs CM neutrino_energy_change",
+      "error": 1.9314556953126718e-08,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "unchanged signed absoluteRT diagnostic",
+      "error": 0.009118161391347345,
+      "tolerance": 0.03,
+      "passed": true
+    },
+    {
+      "name": "global signed-fit rejection flag remainsFalse",
+      "passed": true
+    }
+  ],
+  "passed": 13,
+  "failed": [],
+  "sign_diagnostic": {
+    "name": "NEW postfit diagnostic signed heating/cooling sign match",
+    "passed": false,
+    "fit": 0.06886595010068675,
+    "actual_CM": -0.11647091574722986,
+    "independent_phase": -0.11647052315717828,
+    "classification": "Excluded signed-output quality; not a failure of accepted positive moments or an admitted signedfit"
+  },
+  "E": 8.14,
+  "fit": {
+    "E": 8.14,
+    "rate": 10.145818061242942,
+    "transport_rate": 7.22995145447298,
+    "outgoing_energy_moment": 82.65582496861823,
+    "neutrino_energy_change": 0.06886595010068675,
+    "method": "optional fixed-state Chebyshev moments",
+    "units": {
+      "rate": "s^-1 per incidentnue",
+      "transport_rate": "s^-1 per incidentnue",
+      "outgoing_energy_moment": "MeV s^-1 per incidentnue",
+      "neutrino_energy_change": "MeV s^-1 per incidentnue"
+    },
+    "state": {
+      "T_MeV": 2.0,
+      "mu_e_MeV": 0.17446333200826397,
+      "flavor": "nu_e",
+      "targets": [
+        "e-",
+        "e+"
+      ],
+      "outgoing_neutrinos": "unblocked"
+    },
+    "domain_MeV": [
+      1.0,
+      30.0
+    ],
+    "model_sha": "9067c895b38e43451cce803a39681db961abb7066eea2cb5d9fa2d7fc5dd2e9f",
+    "qualification": "Optional fixed-state moment fit; heldout report is measured evidence, not a uniform certificate. No spectral/AD-chain substitution.",
+    "measured_positive_gate_pass": true,
+    "signed_energy_RT_gate_pass": false,
+    "signed_energy_advice": "Derived signed value is diagnostic; use detailed quadrature when signed-energy accuracy is required. Coefficients were not retuned."
+  },
+  "actual_CM": {
+    "E": 8.14,
+    "rate": 10.163061273722985,
+    "transport_rate": 7.241751164682684,
+    "outgoing_energy_moment": 82.610847852358,
+    "neutrino_energy_change": -0.11647091574722986,
+    "method": "actual detailed quadrature",
+    "units": {
+      "rate": "s^-1 per incidentnue",
+      "transport_rate": "s^-1 per incidentnue",
+      "outgoing_energy_moment": "MeV s^-1 per incidentnue",
+      "neutrino_energy_change": "MeV s^-1 per incidentnue"
+    },
+    "state": {
+      "T_MeV": 2.0,
+      "mu_e_MeV": 0.17446333200826397,
+      "flavor": "nu_e",
+      "targets": [
+        "e-",
+        "e+"
+      ],
+      "outgoing_neutrinos": "unblocked"
+    },
+    "domain_MeV": [
+      1.0,
+      30.0
+    ],
+    "model_sha": "9067c895b38e43451cce803a39681db961abb7066eea2cb5d9fa2d7fc5dd2e9f"
+  },
+  "independent_coarse": {
+    "E": 8.14,
+    "moments": {
+      "rate": 10.163061294329621,
+      "transport_rate": 7.241751159619746,
+      "outgoing_energy_moment": 82.61085509115529,
+      "neutrino_energy_change": -0.11646384468795944
+    },
+    "controls": {
+      "order": 18,
+      "angle": 24,
+      "upper": 100.0,
+      "lower": 0.0,
+      "tail": 65.0
+    },
+    "seconds": 0.6596000830177218
+  },
+  "independent_fine": {
+    "E": 8.14,
+    "moments": {
+      "rate": 10.163061289998266,
+      "transport_rate": 7.241751158504904,
+      "outgoing_energy_moment": 82.610848377429,
+      "neutrino_energy_change": -0.11647052315717828
+    },
+    "controls": {
+      "order": 26,
+      "angle": 36,
+      "upper": 140.0,
+      "lower": 0.0,
+      "tail": 90.0
+    },
+    "seconds": 1.166583125013858
+  },
+  "scope": "Adaptive postfit diagnostic outside qualified signedfit; no refit or claim of preregisteredholdout"
+}

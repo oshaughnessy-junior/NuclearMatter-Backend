@@ -1,0 +1,29 @@
+{
+  "status": "frozen author selected spatial refinement; independent review pending",
+  "main_checks": 54,
+  "time_separation_checks": 8,
+  "total_checks": 62,
+  "files": {
+    "coefficient_range.py": "939d0dc4baa9617f2d76c859f3d38ea4d932827a4d70b263c31ffe6268b593d5",
+    "coefficient_range.json": "24c5f1961a46defb358e9de26f152ea53a1b6c3603653b35d4d84bb9692bf8dd",
+    "results.json": "082b58f2875cbfe856c1374798975032f453f4772a0407e0e6242720e14f9402",
+    "initial_averaging_failure.json": "31b1cf0a53c8137551f70eb9c53c1e7183da438db34a80435a97a4fb1fb6ef53",
+    "RESEARCH_NOTE.md": "76f239bbdcef052a23f328fe1b00b60d3f37d0a7a41f042451b22696639659a5",
+    "refine.py": "78364b0e3bd51214d962743aa15c127cfe97e1d2624ebc7dede137e43064e3cb",
+    "PROTOCOL.json": "f65808334a69f75a7a89b3639d7640b7edda81368d3af684567a6e85bc5f7acc",
+    "time_separation_results.json": "6ba69da2a4a6dc3559f0ee88b10ddc8fe28105f18a4f55692f9e136e9b58a083",
+    "initial_averaging_source.py.txt": "f7c326968a8e7035e533984926442bda8bcd62b0b9c324a9dcde90d6125ae7ce",
+    "time_separation.py": "647fa7b82f67a4533ae41c34293e9e34266dac70d6ba3bb73251f68da3176cbd"
+  },
+  "upstream": {
+    "conductive_thermal_slab/slab.py": "036e45427ba33eef06cd94127487d7afac33220e50e87e6d8bf5448a40965317",
+    "screened_coulomb_transport/lorentz.py": "15f4c1b5604aeef2dd89aa2991c2fe48a08326ecd1878444969d95cae5f513ae",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  }
+}

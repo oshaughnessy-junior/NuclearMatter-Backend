@@ -1,0 +1,279 @@
+{
+  "rows": [
+    {
+      "forward": [
+        {
+          "value": 0.3904274035746027,
+          "reverse_same_phase": 0.06138969858925763,
+          "emin": 4.665495813036619,
+          "upper": 104.66549581303661,
+          "Ein": 10.0,
+          "Eout": 6.3,
+          "cosine": -0.23,
+          "controls": {
+            "order": 16,
+            "phi": 8,
+            "tail": 50.0
+          },
+          "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+        },
+        {
+          "value": 0.3904274035590212,
+          "reverse_same_phase": 0.061389698586807616,
+          "emin": 4.665495813036619,
+          "upper": 164.6654958130366,
+          "Ein": 10.0,
+          "Eout": 6.3,
+          "cosine": -0.23,
+          "controls": {
+            "order": 28,
+            "phi": 8,
+            "tail": 80.0
+          },
+          "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+        }
+      ],
+      "reverse": {
+        "value": 0.15467296192191393,
+        "reverse_same_phase": 0.983692122849638,
+        "emin": 8.365495813036619,
+        "upper": 168.36549581303663,
+        "Ein": 6.3,
+        "Eout": 10.0,
+        "cosine": -0.23,
+        "controls": {
+          "order": 28,
+          "phi": 8,
+          "tail": 80.0
+        },
+        "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+      },
+      "positron": false
+    },
+    {
+      "forward": [
+        {
+          "value": 0.06861633483181848,
+          "reverse_same_phase": 0.010789038051782199,
+          "emin": 4.665495813036619,
+          "upper": 104.66549581303661,
+          "Ein": 10.0,
+          "Eout": 6.3,
+          "cosine": -0.23,
+          "controls": {
+            "order": 16,
+            "phi": 8,
+            "tail": 50.0
+          },
+          "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+        },
+        {
+          "value": 0.068616334842493,
+          "reverse_same_phase": 0.010789038053460633,
+          "emin": 4.665495813036619,
+          "upper": 164.6654958130366,
+          "Ein": 10.0,
+          "Eout": 6.3,
+          "cosine": -0.23,
+          "controls": {
+            "order": 28,
+            "phi": 8,
+            "tail": 80.0
+          },
+          "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+        }
+      ],
+      "reverse": {
+        "value": 0.027183265440817932,
+        "reverse_same_phase": 0.1728806622385816,
+        "emin": 8.365495813036619,
+        "upper": 168.36549581303663,
+        "Ein": 6.3,
+        "Eout": 10.0,
+        "cosine": -0.23,
+        "controls": {
+          "order": 28,
+          "phi": 8,
+          "tail": 80.0
+        },
+        "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+      },
+      "positron": true
+    },
+    {
+      "forward": [
+        {
+          "value": 0.2266383774495071,
+          "reverse_same_phase": 1.4413791774741773,
+          "emin": 8.492343907282756,
+          "upper": 108.49234390728276,
+          "Ein": 10.0,
+          "Eout": 13.7,
+          "cosine": 0.41,
+          "controls": {
+            "order": 16,
+            "phi": 8,
+            "tail": 50.0
+          },
+          "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+        },
+        {
+          "value": 0.22663837744166357,
+          "reverse_same_phase": 1.4413791774242941,
+          "emin": 8.492343907282756,
+          "upper": 168.49234390728276,
+          "Ein": 10.0,
+          "Eout": 13.7,
+          "cosine": 0.41,
+          "controls": {
+            "order": 28,
+            "phi": 8,
+            "tail": 80.0
+          },
+          "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+        }
+      ],
+      "reverse": {
+        "value": 0.7679573644969332,
+        "reverse_same_phase": 0.12075143984317945,
+        "emin": 4.792343907282756,
+        "upper": 164.79234390728277,
+        "Ein": 13.7,
+        "Eout": 10.0,
+        "cosine": 0.41,
+        "controls": {
+          "order": 28,
+          "phi": 8,
+          "tail": 80.0
+        },
+        "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+      },
+      "positron": false
+    },
+    {
+      "forward": [
+        {
+          "value": 0.06408013564581976,
+          "reverse_same_phase": 0.40753809769125793,
+          "emin": 8.492343907282756,
+          "upper": 108.49234390728276,
+          "Ein": 10.0,
+          "Eout": 13.7,
+          "cosine": 0.41,
+          "controls": {
+            "order": 16,
+            "phi": 8,
+            "tail": 50.0
+          },
+          "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+        },
+        {
+          "value": 0.06408013565200373,
+          "reverse_same_phase": 0.40753809773058686,
+          "emin": 8.492343907282756,
+          "upper": 168.49234390728276,
+          "Ein": 10.0,
+          "Eout": 13.7,
+          "cosine": 0.41,
+          "controls": {
+            "order": 28,
+            "phi": 8,
+            "tail": 80.0
+          },
+          "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+        }
+      ],
+      "reverse": {
+        "value": 0.2171336233846165,
+        "reverse_same_phase": 0.03414147565240754,
+        "emin": 4.792343907282756,
+        "upper": 164.79234390728277,
+        "Ein": 13.7,
+        "Eout": 10.0,
+        "cosine": 0.41,
+        "controls": {
+          "order": 28,
+          "phi": 8,
+          "tail": 80.0
+        },
+        "units": "s^-1 MeV^-1 per dcos; no final\u03bdblocking"
+      },
+      "positron": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "redistributionenergyquadrefine",
+      "error": 3.990874297699065e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "directoccupationKMS",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reversedDOSratio",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "redistributionenergyquadrefine",
+      "error": -1.555681139464582e-10,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "directoccupationKMS",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reversedDOSratio",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "redistributionenergyquadrefine",
+      "error": 3.4608094168220305e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "directoccupationKMS",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reversedDOSratio",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "redistributionenergyquadrefine",
+      "error": -9.650369392488756e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "directoccupationKMS",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reversedDOSratio",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

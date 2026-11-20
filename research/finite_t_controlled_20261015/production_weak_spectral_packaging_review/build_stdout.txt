@@ -1,0 +1,292 @@
+running bdist_wheel
+running build
+running build_py
+creating build/lib/nmbackend
+copying src/nmbackend/nscool_io.py -> build/lib/nmbackend
+copying src/nmbackend/durca.py -> build/lib/nmbackend
+copying src/nmbackend/ejecta.py -> build/lib/nmbackend
+copying src/nmbackend/lab_likelihood.py -> build/lib/nmbackend
+copying src/nmbackend/constants.py -> build/lib/nmbackend
+copying src/nmbackend/__init__.py -> build/lib/nmbackend
+copying src/nmbackend/ipad.py -> build/lib/nmbackend
+copying src/nmbackend/postmerger.py -> build/lib/nmbackend
+creating build/lib/nmbackend/tov
+copying src/nmbackend/tov/solver.py -> build/lib/nmbackend/tov
+copying src/nmbackend/tov/__init__.py -> build/lib/nmbackend/tov
+copying src/nmbackend/tov/phase_transition.py -> build/lib/nmbackend/tov
+copying src/nmbackend/tov/family.py -> build/lib/nmbackend/tov
+copying src/nmbackend/tov/central.py -> build/lib/nmbackend/tov
+creating build/lib/nmbackend/priors
+copying src/nmbackend/priors/gp_pca.py -> build/lib/nmbackend/priors
+copying src/nmbackend/priors/bridge.py -> build/lib/nmbackend/priors
+copying src/nmbackend/priors/__init__.py -> build/lib/nmbackend/priors
+creating build/lib/nmbackend/rift
+copying src/nmbackend/rift/compressed.py -> build/lib/nmbackend/rift
+copying src/nmbackend/rift/sequence.py -> build/lib/nmbackend/rift
+copying src/nmbackend/rift/__init__.py -> build/lib/nmbackend/rift
+copying src/nmbackend/rift/evidence.py -> build/lib/nmbackend/rift
+creating build/lib/nmbackend/adapters
+copying src/nmbackend/adapters/rift.py -> build/lib/nmbackend/adapters
+copying src/nmbackend/adapters/__init__.py -> build/lib/nmbackend/adapters
+creating build/lib/nmbackend/inference
+copying src/nmbackend/inference/synthetic.py -> build/lib/nmbackend/inference
+copying src/nmbackend/inference/fisher.py -> build/lib/nmbackend/inference
+copying src/nmbackend/inference/__init__.py -> build/lib/nmbackend/inference
+creating build/lib/nmbackend/cooling
+copying src/nmbackend/cooling/isothermal.py -> build/lib/nmbackend/cooling
+copying src/nmbackend/cooling/runner.py -> build/lib/nmbackend/cooling
+copying src/nmbackend/cooling/__init__.py -> build/lib/nmbackend/cooling
+copying src/nmbackend/cooling/validate.py -> build/lib/nmbackend/cooling
+creating build/lib/nmbackend/eos
+copying src/nmbackend/eos/crust.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/coolcomp.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/polytrope.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/compose.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/metamodel.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/hybrid.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/__init__.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/ddrmf.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/skyrme.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/rmft.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/base.py -> build/lib/nmbackend/eos
+copying src/nmbackend/eos/leptons.py -> build/lib/nmbackend/eos
+creating build/lib/nmbackend/reference
+copying src/nmbackend/reference/reprimand.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/scipy_tov.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/_weak_spectral_common.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/__init__.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/_weak_spectral_decay.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/_weak_decay.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/weak_reference.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/_weak_two_body.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/_weak_current.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/_weak_quadrature.py -> build/lib/nmbackend/reference
+copying src/nmbackend/reference/_weak_spectral_capture.py -> build/lib/nmbackend/reference
+creating build/lib/nmbackend/validation
+copying src/nmbackend/validation/__init__.py -> build/lib/nmbackend/validation
+copying src/nmbackend/validation/reference_matrix.py -> build/lib/nmbackend/validation
+copying src/nmbackend/validation/model_diagnostic.py -> build/lib/nmbackend/validation
+creating build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/crust.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/core_nu.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/heat.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/core_conduct.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/blanket.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/conduct.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/superfluid.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/star.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/__init__.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/crust_nu.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/native.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/curve.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/geometry.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/reference.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/gaps.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/whole.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/_spline.py -> build/lib/nmbackend/cooling/physics
+copying src/nmbackend/cooling/physics/envelope.py -> build/lib/nmbackend/cooling/physics
+running egg_info
+creating src/nmbackend.egg-info
+writing src/nmbackend.egg-info/PKG-INFO
+writing dependency_links to src/nmbackend.egg-info/dependency_links.txt
+writing requirements to src/nmbackend.egg-info/requires.txt
+writing top-level names to src/nmbackend.egg-info/top_level.txt
+writing manifest file 'src/nmbackend.egg-info/SOURCES.txt'
+reading manifest file 'src/nmbackend.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/nmbackend.egg-info/SOURCES.txt'
+creating build/lib/nmbackend/data
+copying src/nmbackend/data/frib_scenario_ladder.yaml -> build/lib/nmbackend/data
+copying src/nmbackend/data/crust_sly_dh2001.dat -> build/lib/nmbackend/data
+copying src/nmbackend/cooling/nscool_nmbackend.patch -> build/lib/nmbackend/cooling
+copying src/nmbackend/cooling/build_nscool.sh -> build/lib/nmbackend/cooling
+copying src/nmbackend/cooling/README.md -> build/lib/nmbackend/cooling
+copying src/nmbackend/data/crust_sly_dh2001.dat -> build/lib/nmbackend/data
+copying src/nmbackend/data/frib_scenario_ladder.yaml -> build/lib/nmbackend/data
+copying src/nmbackend/cooling/README.md -> build/lib/nmbackend/cooling
+copying src/nmbackend/cooling/build_nscool.sh -> build/lib/nmbackend/cooling
+copying src/nmbackend/cooling/nscool_nmbackend.patch -> build/lib/nmbackend/cooling
+installing to build/bdist.macosx-11.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-11.0-arm64/wheel
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/tov
+copying build/lib/nmbackend/tov/solver.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/tov
+copying build/lib/nmbackend/tov/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/tov
+copying build/lib/nmbackend/tov/phase_transition.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/tov
+copying build/lib/nmbackend/tov/family.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/tov
+copying build/lib/nmbackend/tov/central.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/tov
+copying build/lib/nmbackend/nscool_io.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/priors
+copying build/lib/nmbackend/priors/gp_pca.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/priors
+copying build/lib/nmbackend/priors/bridge.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/priors
+copying build/lib/nmbackend/priors/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/priors
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/rift
+copying build/lib/nmbackend/rift/compressed.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/rift
+copying build/lib/nmbackend/rift/sequence.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/rift
+copying build/lib/nmbackend/rift/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/rift
+copying build/lib/nmbackend/rift/evidence.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/rift
+copying build/lib/nmbackend/durca.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend
+copying build/lib/nmbackend/ejecta.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend
+copying build/lib/nmbackend/lab_likelihood.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend
+copying build/lib/nmbackend/constants.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend
+copying build/lib/nmbackend/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/adapters
+copying build/lib/nmbackend/adapters/rift.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/adapters
+copying build/lib/nmbackend/adapters/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/adapters
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/inference
+copying build/lib/nmbackend/inference/synthetic.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/inference
+copying build/lib/nmbackend/inference/fisher.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/inference
+copying build/lib/nmbackend/inference/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/inference
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/data
+copying build/lib/nmbackend/data/crust_sly_dh2001.dat -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/data
+copying build/lib/nmbackend/data/frib_scenario_ladder.yaml -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/data
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/cooling
+copying build/lib/nmbackend/cooling/isothermal.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling
+copying build/lib/nmbackend/cooling/runner.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling
+copying build/lib/nmbackend/cooling/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling
+copying build/lib/nmbackend/cooling/README.md -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling
+copying build/lib/nmbackend/cooling/validate.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling
+copying build/lib/nmbackend/cooling/nscool_nmbackend.patch -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/crust.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/core_nu.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/heat.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/core_conduct.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/blanket.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/conduct.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/superfluid.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/star.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/crust_nu.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/native.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/curve.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/geometry.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/reference.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/gaps.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/whole.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/_spline.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/physics/envelope.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling/physics
+copying build/lib/nmbackend/cooling/build_nscool.sh -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/cooling
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/eos
+copying build/lib/nmbackend/eos/crust.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/coolcomp.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/polytrope.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/compose.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/metamodel.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/hybrid.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/ddrmf.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/skyrme.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/rmft.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/base.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+copying build/lib/nmbackend/eos/leptons.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/eos
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/reference
+copying build/lib/nmbackend/reference/reprimand.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/scipy_tov.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/_weak_spectral_common.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/_weak_spectral_decay.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/_weak_decay.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/weak_reference.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/_weak_two_body.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/_weak_current.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/_weak_quadrature.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+copying build/lib/nmbackend/reference/_weak_spectral_capture.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/reference
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend/validation
+copying build/lib/nmbackend/validation/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/validation
+copying build/lib/nmbackend/validation/reference_matrix.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/validation
+copying build/lib/nmbackend/validation/model_diagnostic.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend/validation
+copying build/lib/nmbackend/ipad.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend
+copying build/lib/nmbackend/postmerger.py -> build/bdist.macosx-11.0-arm64/wheel/./nmbackend
+running install_egg_info
+Copying src/nmbackend.egg-info to build/bdist.macosx-11.0-arm64/wheel/./nmbackend-0.0.1-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-11.0-arm64/wheel/nmbackend-0.0.1.dist-info/WHEEL
+creating '/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_packaging_review/wheels/.tmp-0s_pn0vq/nmbackend-0.0.1-py3-none-any.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it
+adding 'nmbackend/__init__.py'
+adding 'nmbackend/constants.py'
+adding 'nmbackend/durca.py'
+adding 'nmbackend/ejecta.py'
+adding 'nmbackend/ipad.py'
+adding 'nmbackend/lab_likelihood.py'
+adding 'nmbackend/nscool_io.py'
+adding 'nmbackend/postmerger.py'
+adding 'nmbackend/adapters/__init__.py'
+adding 'nmbackend/adapters/rift.py'
+adding 'nmbackend/cooling/README.md'
+adding 'nmbackend/cooling/__init__.py'
+adding 'nmbackend/cooling/build_nscool.sh'
+adding 'nmbackend/cooling/isothermal.py'
+adding 'nmbackend/cooling/nscool_nmbackend.patch'
+adding 'nmbackend/cooling/runner.py'
+adding 'nmbackend/cooling/validate.py'
+adding 'nmbackend/cooling/physics/__init__.py'
+adding 'nmbackend/cooling/physics/_spline.py'
+adding 'nmbackend/cooling/physics/blanket.py'
+adding 'nmbackend/cooling/physics/conduct.py'
+adding 'nmbackend/cooling/physics/core_conduct.py'
+adding 'nmbackend/cooling/physics/core_nu.py'
+adding 'nmbackend/cooling/physics/crust.py'
+adding 'nmbackend/cooling/physics/crust_nu.py'
+adding 'nmbackend/cooling/physics/curve.py'
+adding 'nmbackend/cooling/physics/envelope.py'
+adding 'nmbackend/cooling/physics/gaps.py'
+adding 'nmbackend/cooling/physics/geometry.py'
+adding 'nmbackend/cooling/physics/heat.py'
+adding 'nmbackend/cooling/physics/native.py'
+adding 'nmbackend/cooling/physics/reference.py'
+adding 'nmbackend/cooling/physics/star.py'
+adding 'nmbackend/cooling/physics/superfluid.py'
+adding 'nmbackend/cooling/physics/whole.py'
+adding 'nmbackend/data/crust_sly_dh2001.dat'
+adding 'nmbackend/data/frib_scenario_ladder.yaml'
+adding 'nmbackend/eos/__init__.py'
+adding 'nmbackend/eos/base.py'
+adding 'nmbackend/eos/compose.py'
+adding 'nmbackend/eos/coolcomp.py'
+adding 'nmbackend/eos/crust.py'
+adding 'nmbackend/eos/ddrmf.py'
+adding 'nmbackend/eos/hybrid.py'
+adding 'nmbackend/eos/leptons.py'
+adding 'nmbackend/eos/metamodel.py'
+adding 'nmbackend/eos/polytrope.py'
+adding 'nmbackend/eos/rmft.py'
+adding 'nmbackend/eos/skyrme.py'
+adding 'nmbackend/inference/__init__.py'
+adding 'nmbackend/inference/fisher.py'
+adding 'nmbackend/inference/synthetic.py'
+adding 'nmbackend/priors/__init__.py'
+adding 'nmbackend/priors/bridge.py'
+adding 'nmbackend/priors/gp_pca.py'
+adding 'nmbackend/reference/__init__.py'
+adding 'nmbackend/reference/_weak_current.py'
+adding 'nmbackend/reference/_weak_decay.py'
+adding 'nmbackend/reference/_weak_quadrature.py'
+adding 'nmbackend/reference/_weak_spectral_capture.py'
+adding 'nmbackend/reference/_weak_spectral_common.py'
+adding 'nmbackend/reference/_weak_spectral_decay.py'
+adding 'nmbackend/reference/_weak_two_body.py'
+adding 'nmbackend/reference/reprimand.py'
+adding 'nmbackend/reference/scipy_tov.py'
+adding 'nmbackend/reference/weak_reference.py'
+adding 'nmbackend/rift/__init__.py'
+adding 'nmbackend/rift/compressed.py'
+adding 'nmbackend/rift/evidence.py'
+adding 'nmbackend/rift/sequence.py'
+adding 'nmbackend/tov/__init__.py'
+adding 'nmbackend/tov/central.py'
+adding 'nmbackend/tov/family.py'
+adding 'nmbackend/tov/phase_transition.py'
+adding 'nmbackend/tov/solver.py'
+adding 'nmbackend/validation/__init__.py'
+adding 'nmbackend/validation/model_diagnostic.py'
+adding 'nmbackend/validation/reference_matrix.py'
+adding 'nmbackend-0.0.1.dist-info/licenses/LICENSE'
+adding 'nmbackend-0.0.1.dist-info/METADATA'
+adding 'nmbackend-0.0.1.dist-info/WHEEL'
+adding 'nmbackend-0.0.1.dist-info/top_level.txt'
+adding 'nmbackend-0.0.1.dist-info/RECORD'
+removing build/bdist.macosx-11.0-arm64/wheel
+nmbackend-0.0.1-py3-none-any.whl

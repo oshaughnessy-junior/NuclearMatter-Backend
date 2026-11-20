@@ -1,0 +1,2 @@
+/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_hot_beta_opacity_spectrum/reference.py:57: RuntimeWarning: divide by zero encountered in log
+  logbase=np.log(weight[:,None]/phi_order);logs['j'].append(float(logsumexp(logbase+fn+pv+lv)));logs['chi'].append(float(logsumexp(logbase+nv+fp+fe)));points+=N*phi_order

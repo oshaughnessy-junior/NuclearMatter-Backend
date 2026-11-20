@@ -1,0 +1,45 @@
+{
+  "status": "FROZEN author pairannihilationreference; independent review pending",
+  "checks": 339,
+  "all_pass": true,
+  "source_sha256": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+  "files": {
+    "RESEARCH_NOTE.md": "4a9df7e1cc999090c410b51dadfd2824d0228b1145f2275aee88c8c1e262cf32",
+    "SOURCES.json": "d5eceef9a539d9aee2bd49f5bc4045ff24c236662d14d32bb2c4dd98a77fe596",
+    "check_tail_cp.py": "d6dba3cf4c5e2690b6d43644804db9cfcfe1301a3d3ca833d982adeb45bc13ca",
+    "check_vacuum.py": "d0ebc1df57cf090836dca4373ab1add6a0206c236a29f25c2276aacdb4edc67c",
+    "fd_partners.py": "23501851568f90662c39503a1514eb7321fd3f12d6c4fd244e5721944f7216fe",
+    "fd_results.json": "b12a5c799042c28d50ccb0c36558412134eb28c5dcb42f58dcc9fabd39b1b49e",
+    "fermi_anchor.py": "d8005725535c412ac12398330d83557c2561400562b84a118e3ae871c905abd1",
+    "fermi_anchor_results.json": "64d0f51dcbc824b1de262aa681d1872acdb2ac168d60e83f22078984ba7e2cae",
+    "pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "pre_cleanup_fd_results.json": "8dfc8c43225d6a8f25a68a802b4ed8b0931fde312e582d7bb47638d9b84bc927",
+    "pre_fd_pair.py.txt": "abe14fdea86f75e4bf970a24e4d01831a32e32289a39ef380bfead4b2211d88c",
+    "pre_fd_thermal_results.json": "f92f37a7a3dd51f5081295d9da1dc887f269a22e9464a8a0c8c8ee05d65916f7",
+    "study.py": "9589a7498bdf300c2917ccd1a6ad6f9a0a539d80ce13a43ae4d4bc9cfcfe64b0",
+    "tail_cp_results.json": "82a8e5002b1282cd258f7828aedb7926ededfa9e164fc7b11c952eac37652ed8",
+    "thermal_results.json": "f92f37a7a3dd51f5081295d9da1dc887f269a22e9464a8a0c8c8ee05d65916f7",
+    "vacuum_results.json": "f3b1fe2e11ef86c18c9c6f07b3ef0bc8524102c8663e877904120cc5bd76c4ae"
+  },
+  "upstream": {
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "source_conflict": "2006Eq17 massive integrated formula excluded; Eq11and20-25verifiednumerically",
+  "scope": "e/mu empty physical T2 exactme; masslessFD diagnostic; selectede commonT bothpartner FD/inverse; tau equalsmu couplings but no distinctthermalrun",
+  "unqualified": [
+    "independent review pending",
+    "broad state/radiation domain",
+    "runningEW/QED/medium corrections",
+    "full neutrino inventory",
+    "coupled matter/radiation evolution",
+    "derivatives"
+  ]
+}

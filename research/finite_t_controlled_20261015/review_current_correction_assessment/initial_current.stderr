@@ -1,0 +1,4 @@
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_current_correction_assessment/current_probe.py", line 29
+    ck('exact source AST '+expected.name,0 if ast.dump(expected,include_attributes=False)==ast.dump(actual,include_attributes=False)else1,0)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: expected 'else' after 'if' expression

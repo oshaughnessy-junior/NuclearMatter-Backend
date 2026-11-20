@@ -1,0 +1,40 @@
+{
+  "status": "AUTHOR_FROZEN_INDEPENDENT_REVIEW_REQUIRED",
+  "utc": "2026-10-15T16:17:59.788546+00:00",
+  "checks": {
+    "author": 422,
+    "independent_oracle_forward_data": 51
+  },
+  "all_passed": true,
+  "runtime_seconds": 0.5903832919429988,
+  "quota_used_percent": 10,
+  "quota_reset": 1792652325,
+  "preserved_failure": "initial_fixed_phase_velocity_NR_failure.json;initial_validate.py;initial_tensor_before_log_guard.py",
+  "open_gates": [
+    "independent implementation reviews",
+    "independent timelike/lightlike oracle",
+    "leptonintegratedrate/quadrature/tail",
+    "freeEOSdensitycomposition factory and \u03bc-family coupling",
+    "crossed/leptonic inventories andmoments",
+    "GM1 consistentqstar/weakmass/fieldenergy mapping"
+  ],
+  "files_sha256": {
+    "RESEARCH_NOTE.md": "6c804deb548af22d23cfecffdddfe289e8ec2413f3f34588296a24dfa3a08338",
+    "SOURCES.json": "efa35fa0af26e683ea72aabc9231e32775e95522456806877314a0da7f3c9212",
+    "compare_oracle.py": "0250b2bd0ef5e2c5897464b8062ea1fc0ac75c0d0384f4d88ceea5cfb96f7669",
+    "initial_fixed_phase_velocity_NR_failure.json": "32ffb27746a0458c2fac5f70cec3e6e082d596ffd8a662351108fa823c1703c1",
+    "initial_tensor_before_log_guard.py": "b3b5472e893e3e4682c3c1d079077da53c6aa7fd69439d67344e6ddb365df476",
+    "initial_validate.py": "57ce5874cd293dd2444274182735c5cd71d2cfd974f3d190101e1e9d8d3642ba",
+    "oracle_comparison.json": "4af505794cae7cef457fd2de73eb5d672ec23fe0f498c0f540bcb277ce55902e",
+    "results.json": "1234a25302af2271f97cb658bb8ce70c720ca102a5d628344e8033bed15e4dcd",
+    "tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "validate.py": "ba79da704a2ca325a4275bdf1c1e85c10ce4aebe35d01a7c2badcc23550ab0d7"
+  },
+  "upstream_sha256": {
+    "relativistic_tensor/validate.py": "ba79da704a2ca325a4275bdf1c1e85c10ce4aebe35d01a7c2badcc23550ab0d7",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9"
+  },
+  "oracle_data_sha256": "4243300422d17a2d9c1c24c865fcf2687a0bf2b820de08b66731a4f4c83ddef9"
+}

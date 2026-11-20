@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-16T04:33:02.575131+00:00",
+  "candidate_imported": false,
+  "pure_completed_passes": 114,
+  "future_control_cases": {
+    "representable_stable_cold_pairunderflow_n_T_Y": [
+      0.213,
+      1.0,
+      0.237
+    ],
+    "invalid_T": [
+      0,
+      0.999999999,
+      50.00000001
+    ],
+    "invalid_n": [
+      0,
+      0.019999999,
+      0.400000001
+    ],
+    "invalid_Y": [
+      0,
+      0.049999999,
+      0.500000001,
+      1.0
+    ],
+    "finite_admission_boundaries": "T1/50,n.02/.4,Y.05/.5 are numericalrequestguards; returnedstatesneedindependentlocalstability. Physicaladmissionerror atboundarycanbevalid; guardmustnotbeBoolean/NaNpermissive.",
+    "negative_gas_and_seed": "Inspectfrozenactualprivate/publicAPI beforeconstructingliteralinvalidcontrols,seeds; no speculatingunknownfieldnames."
+  },
+  "gates": {
+    "forward_relative": 2e-09,
+    "field_absolute_MeV": 2e-07,
+    "number_scalar_residual": 2e-09,
+    "gas_moment_FD": 2e-06,
+    "H_matrix_relative": 2e-06,
+    "Cv_relative": 3e-06,
+    "free_energy_second_FD": 0.0001
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "passed": false,
+  "phase": "complete",
+  "partial": null,
+  "rows": [
+    {
+      "label": "dilute",
+      "bath": {
+        "T": 0.2,
+        "ma": 939.56542052,
+        "mb": 938.27208816,
+        "mua": 934.5991075502667,
+        "mub": 933.136728749228,
+        "mul": 0.0,
+        "Enu": 150.0,
+        "ml": 105.6583755,
+        "anti": false,
+        "Mweak": 938.91875434
+      },
+      "result": {
+        "chi": {
+          "log": -10.65157269286508,
+          "value": 2.3663596748305945e-05,
+          "representable": true,
+          "reason": "represented"
+        },
+        "j": {
+          "log": -767.9634666980585,
+          "value": null,
+          "representable": false,
+          "reason": "underflow"
+        },
+        "density": 6.999999993815068e-16,
+        "max_fourmomentum_residual": 4.839975386011816e-16,
+        "empty_radial_nodes": 0,
+        "controls": {
+          "radial": 6,
+          "incident": 6,
+          "outgoing": 10,
+          "azimuth": 6,
+          "tail": 30
+        }
+      }
+    },
+    {
+      "label": "dilute",
+      "bath": {
+        "T": 0.2,
+        "ma": 939.56542052,
+        "mb": 938.27208816,
+        "mua": 934.5991075502667,
+        "mub": 933.136728749228,
+        "mul": 0.0,
+        "Enu": 150.0,
+        "ml": 105.6583755,
+        "anti": false,
+        "Mweak": 938.91875434
+      },
+      "result": {
+        "chi": {
+          "log": -10.65157269198575,
+          "value": 2.3663596769114065e-05,
+          "representable": true,
+          "reason": "represented"
+        },
+        "j": {
+          "log": -767.963466697179,
+          "value": null,
+          "representable": false,
+          "reason": "underflow"
+        },
+        "density": 7.000000000001368e-16,
+        "max_fourmomentum_residual": 4.839975386011816e-16,
+        "empty_radial_nodes": 0,
+        "controls": {
+          "radial": 10,
+          "incident": 10,
+          "outgoing": 16,
+          "azimuth": 8,
+          "tail": 45
+        }
+      }
+    },
+    {
+      "label": "dilute",
+      "bath": {
+        "T": 0.2,
+        "ma": 939.56542052,
+        "mb": 938.27208816,
+        "mua": 934.5991075502667,
+        "mub": 933.136728749228,
+        "mul": 0.0,
+        "Enu": 150.0,
+        "ml": 105.6583755,
+        "anti": false,
+        "Mweak": 938.91875434
+      },
+      "result": {
+        "chi": {
+          "log": -10.651572691985756,
+          "value": 2.3663596769113936e-05,
+          "representable": true,
+          "reason": "represented"
+        },
+        "j": {
+          "log": -767.9634666971789,
+          "value": null,
+          "representable": false,
+          "reason": "underflow"
+        },
+        "density": 7.000000000001341e-16,
+        "max_fourmomentum_residual": 4.839975386011816e-16,
+        "empty_radial_nodes": 0,
+        "controls": {
+          "radial": 14,
+          "incident": 14,
+          "outgoing": 24,
+          "azimuth": 12,
+          "tail": 60
+        }
+      }
+    },
+    {
+      "label": "warm",
+      "bath": {
+        "T": 2,
+        "ma": 939.56542052,
+        "mb": 938.27208816,
+        "mua": 933.6807508996585,
+        "mub": 930.6761152463529,
+        "mul": 97.74668143468162,
+        "Enu": 150.0,
+        "ml": 105.6583755,
+        "anti": false,
+        "Mweak": 938.91875434
+      },
+      "result": {
+        "chi": {
+          "log": 14.692158318474979,
+          "value": 2402831.324346832,
+          "representable": true,
+          "reason": "represented"
+        },
+        "j": {
+          "log": -12.936818790837012,
+          "value": 2.4077477503642013e-06,
+          "representable": true,
+          "reason": "represented"
+        },
+        "density": 7.000000003373123e-05,
+        "max_fourmomentum_residual": 4.839975386011816e-16,
+        "empty_radial_nodes": 0,
+        "controls": {
+          "radial": 6,
+          "incident": 6,
+          "outgoing": 10,
+          "azimuth": 6,
+          "tail": 30
+        }
+      }
+    },
+    {
+      "label": "warm",
+      "bath": {
+        "T": 2,
+        "ma": 939.56542052,
+        "mb": 938.27208816,
+        "mua": 933.6807508996585,
+        "mub": 930.6761152463529,
+        "mul": 97.74668143468162,
+        "Enu": 150.0,
+        "ml": 105.6583755,
+        "anti": false,
+        "Mweak": 938.91875434
+      },
+      "result": {
+        "chi": {
+          "log": 14.69216228418289,
+          "value": 2402840.853292919,
+          "representable": true,
+          "reason": "represented"
+        },
+        "j": {
+          "log": -12.936814825129119,
+          "value": 2.407757298807394e-06,
+          "representable": true,
+          "reason": "represented"
+        },
+        "density": 6.999999999999689e-05,
+        "max_fourmomentum_residual": 4.839975386011816e-16,
+        "empty_radial_nodes": 0,
+        "controls": {
+          "radial": 10,
+          "incident": 10,
+          "outgoing": 16,
+          "azimuth": 8,
+          "tail": 45
+        }
+      }
+    },
+    {
+      "label": "warm",
+      "bath": {
+        "T": 2,
+        "ma": 939.56542052,
+        "mb": 938.27208816,
+        "mua": 933.6807508996585,
+        "mub": 930.6761152463529,
+        "mul": 97.74668143468162,
+        "Enu": 150.0,
+        "ml": 105.6583755,
+        "anti": false,
+        "Mweak": 938.91875434
+      },
+      "result": {
+        "chi": {
+          "log": 14.69216256514079,
+          "value": 2402841.5283901356,
+          "representable": true,
+          "reason": "represented"
+        },
+        "j": {
+          "log": -12.936814544171208,
+          "value": 2.40775797528595e-06,
+          "representable": true,
+          "reason": "represented"
+        },
+        "density": 6.999999999999602e-05,
+        "max_fourmomentum_residual": 4.839975386011816e-16,
+        "empty_radial_nodes": 0,
+        "controls": {
+          "radial": 14,
+          "incident": 14,
+          "outgoing": 24,
+          "azimuth": 12,
+          "tail": 60
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "dilute 0 chi refinement",
+      "error": -8.793250568259482e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute 0 j refinement",
+      "error": -8.795950630652995e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute 1 chi refinement",
+      "error": 5.3290705182007656e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute 1 j refinement",
+      "error": -1.1368683772160957e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute forward density",
+      "error": 2.9976021664879227e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute four momentum",
+      "error": 4.839975386011816e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "dilute separately integrated inverse KMS",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "warm 0 chi refinement",
+      "error": -4.246656794818653e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "warm 0 j refinement",
+      "error": -4.246656787713256e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "warm 1 chi refinement",
+      "error": -2.809578610316443e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warm 1 j refinement",
+      "error": -2.8095787168978234e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "warm forward density",
+      "error": -2.886579864025407e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "warm four momentum",
+      "error": 4.839975386011816e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "warm separately integrated inverse KMS",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "runtime_seconds": 13.897307000122964,
+  "source_sha256": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+}

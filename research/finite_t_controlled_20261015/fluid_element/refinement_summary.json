@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "command": "/usr/local/bin/python3 /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/fluid_element/check_refinement.py",
+  "results_sha256": "ffd43d13af524024b36b31f92155037c48e4232daa5a5d1e8229821c39995676",
+  "script_sha256": "5984da3e6d288b85ff1d08f6968c4890684c1c4e29bf201d3b4f0d4bfc8bb3a0",
+  "comparison": "Matched serialized sample times; scales1Ye or1MeV/baryon and gross-integral magnitude",
+  "history_refinement": [
+    {
+      "T_MeV": 0.5,
+      "nB_fm-3": 1e-08,
+      "initial_Ye": 0.2050480276467267,
+      "scaled_coarse_vs_fine_history_errors": {
+        "Ye": 9.581488935594962e-10,
+        "escaped_energy": 5.1345975615132564e-11,
+        "thermostat_heat": 8.010248832235395e-11
+      }
+    },
+    {
+      "T_MeV": 0.5,
+      "nB_fm-3": 1e-08,
+      "initial_Ye": 0.8550480276467267,
+      "scaled_coarse_vs_fine_history_errors": {
+        "Ye": 2.064737270046635e-11,
+        "escaped_energy": 2.722499516782335e-12,
+        "thermostat_heat": 1.3244905270022448e-12
+      }
+    },
+    {
+      "T_MeV": 2.0,
+      "nB_fm-3": 1e-07,
+      "initial_Ye": 0.2013619440558367,
+      "scaled_coarse_vs_fine_history_errors": {
+        "Ye": 5.5503157625480526e-11,
+        "escaped_energy": 2.867271109462815e-12,
+        "thermostat_heat": 1.3408153069324178e-12
+      }
+    },
+    {
+      "T_MeV": 2.0,
+      "nB_fm-3": 1e-07,
+      "initial_Ye": 0.8513619440558368,
+      "scaled_coarse_vs_fine_history_errors": {
+        "Ye": 1.724375087164276e-10,
+        "escaped_energy": 4.027272138351725e-12,
+        "thermostat_heat": 3.465300318120734e-12
+      }
+    },
+    {
+      "T_MeV": 5.0,
+      "nB_fm-3": 1e-05,
+      "initial_Ye": 0.1072068363136391,
+      "scaled_coarse_vs_fine_history_errors": {
+        "Ye": 1.3304790602575167e-10,
+        "escaped_energy": 5.92248915299302e-12,
+        "thermostat_heat": 2.35431936671418e-12
+      }
+    },
+    {
+      "T_MeV": 5.0,
+      "nB_fm-3": 1e-05,
+      "initial_Ye": 0.757206836313639,
+      "scaled_coarse_vs_fine_history_errors": {
+        "Ye": 3.6603653441602546e-10,
+        "escaped_energy": 3.8877407473286194e-11,
+        "thermostat_heat": 1.106184946301906e-11
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "checkpoint": "uniform_finite_T_GM1_independent_composition",
+  "status": "ready_for_independent_review",
+  "passed": true,
+  "checks": 197,
+  "production_changes": false,
+  "dependencies_added": false,
+  "source_snapshot": "25e68182f726e5bd9c0b372c9a667536940fbd07",
+  "source_git_blobs": {
+    "rmft.py": "1edba14f7422f37f1ae6e4eb58167dc2c2140061",
+    "constants.py": "cbd0b9009e1f333c6c447930670bcbfedaefd68e"
+  },
+  "external_matched_finite_T_model_comparison": false,
+  "qualified_scope": "Selected local uniform GM1 states, cold-source convention match, thermodynamic identities and independent quadrature; no phase-complete EOS or all-domain physical accuracy claim",
+  "next_priority": "Independent review; external matched finiteT point; then consistent RMF charged-current kinematics and implicit derivatives",
+  "files": {
+    "gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "RESEARCH_NOTE.md": "784965add657d2527f5404ee295bc41626492ef91c83b6859be3dda3dbf4a34e",
+    "validation_results.json": "ca12ac86a6178c16647b0ea94fdfa5f3f438d2fb59f6588272d6837b00836b11",
+    "validate_gm1.py": "d3a1856425432cd4162b0cda6852c2eca6530f9585139ca37b39c57912a8f761",
+    "source_snapshot/constants.py": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317",
+    "source_snapshot/rmft.py": "4a717efc9ae79895876e2529c2d2f0325cd5adfb36251bf3c60ea1eac0cc377c"
+  }
+}

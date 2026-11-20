@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "name": "all49initialauthorbytespreserved",
+      "passed": true
+    },
+    {
+      "name": "all15initialreviewbytespreserved",
+      "passed": true
+    },
+    {
+      "name": "all15actualinitialreviewbytesunchanged",
+      "passed": true
+    },
+    {
+      "name": "onlyAPIandmanifestchangedamonginitialauthorfiles",
+      "passed": true
+    }
+  ],
+  "passed": 4,
+  "failed": []
+}

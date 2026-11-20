@@ -1,0 +1,319 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "FDintegral np Ee60.84854974138954 cos-0.9",
+      "error": 7.105427357601254e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FDintegral pn Ee60.84854974138954 cos-0.9",
+      "error": 1.5631940186723426e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FDintegral np Ee61.04854974138954 cos0.0",
+      "error": 1.4210854715202105e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FDintegral pn Ee61.04854974138954 cos0.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FDintegral np Ee61.248549741389546 cos0.9",
+      "error": 2.842170943040441e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "FDintegral pn Ee61.248549741389546 cos0.9",
+      "error": -1.4210854715201903e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.03 frac0.0 c-0.95",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.03 frac0.5 c-0.95",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.03 frac1.0 c0.8",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.32 frac0.0 c-0.95",
+      "error": 1.0410065266621102e-13,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "coldlimit E0.32 frac0.0",
+      "error": 1.0480505352462027e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.32 frac0.5 c-0.95",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.32 frac1.0 c0.8",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.9 frac0.0 c-0.95",
+      "error": 1.4290549444578237e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "coldlimit E0.9 frac0.0",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.9 frac0.5 c-0.95",
+      "error": 1.7510435635163216e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "coldlimit E0.9 frac0.5",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "cold disks E0.9 frac1.0 c0.8",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "heldout coordinate log_j",
+      "error": 5.3290705182008934e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "heldout coordinate log_chi",
+      "error": 5.684341886080963e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "heldout independent coefficient KMS",
+      "error": -2.5224267119483557e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original72 still fails unchanged3e-6 log_j",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original72 still fails unchanged3e-6 log_chi",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "cold_geometry": [
+    {
+      "Enu": 0.03,
+      "Ee": 61.04854974138954,
+      "cosine": -0.95,
+      "pz": -131.5718684875011,
+      "initial_disk": 0.0,
+      "blocked_disk": 0.0,
+      "cold_response": 0.0
+    },
+    {
+      "Enu": 0.03,
+      "Ee": 61.063549741389544,
+      "cosine": -0.95,
+      "pz": -131.78512171765976,
+      "initial_disk": 0.0,
+      "blocked_disk": 0.0,
+      "cold_response": 0.0
+    },
+    {
+      "Enu": 0.03,
+      "Ee": 61.078549741389544,
+      "cosine": 0.8,
+      "pz": -132.0592566475952,
+      "initial_disk": 0.0,
+      "blocked_disk": 0.0,
+      "cold_response": 0.0
+    },
+    {
+      "Enu": 0.32,
+      "Ee": 61.04854974138954,
+      "cosine": -0.95,
+      "pz": -126.81722654121747,
+      "initial_disk": 41.73103268520026,
+      "blocked_disk": 0.0,
+      "cold_response": 1.323022994535488e-05
+    },
+    {
+      "Enu": 0.32,
+      "Ee": 61.20854974138954,
+      "cosine": -0.95,
+      "pz": -129.08964793590044,
+      "initial_disk": 0.0,
+      "blocked_disk": 0.0,
+      "cold_response": 0.0
+    },
+    {
+      "Enu": 0.32,
+      "Ee": 61.36854974138954,
+      "cosine": 0.8,
+      "pz": -131.9915329755814,
+      "initial_disk": 0.0,
+      "blocked_disk": 0.0,
+      "cold_response": 0.0
+    },
+    {
+      "Enu": 0.9,
+      "Ee": 61.04854974138954,
+      "cosine": -0.95,
+      "pz": -117.4382720897854,
+      "initial_disk": 2332.5922288572037,
+      "blocked_disk": 642.3922288572121,
+      "cold_response": 0.000531079314817942
+    },
+    {
+      "Enu": 0.9,
+      "Ee": 61.498549741389546,
+      "cosine": -0.95,
+      "pz": -123.81591768709745,
+      "initial_disk": 793.9585075935793,
+      "blocked_disk": 0.0,
+      "cold_response": 0.000247669948383988
+    },
+    {
+      "Enu": 0.9,
+      "Ee": 61.94854974138954,
+      "cosine": 0.8,
+      "pz": -131.85493031715683,
+      "initial_disk": 0.0,
+      "blocked_disk": 0.0,
+      "cold_response": 0.0
+    }
+  ],
+  "heldout": {
+    "T": 0.01,
+    "Enu": 0.045,
+    "adaptive": {
+      "method": "adaptive_y_q",
+      "log_j": -29.449165008628977,
+      "log_chi": -24.94543916157029,
+      "j": {
+        "log": -29.449165008628977,
+        "value": 1.6232676738590438e-13,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "log": -24.94543916157029,
+        "value": 1.4666734267074662e-11,
+        "representable": true,
+        "reason": null
+      },
+      "relative_quad_errors": [
+        8.099011958287027e-13,
+        8.097845139276708e-13
+      ],
+      "order": 72,
+      "tail": 160.0,
+      "rtol": 2e-10
+    },
+    "gauss": {
+      "method": "Gauss_E_cosine_kinematic_edges",
+      "log_j": -29.44916500862903,
+      "log_chi": -24.94543916157035,
+      "j": {
+        "log": -29.44916500862903,
+        "value": 1.6232676738589572e-13,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "log": -24.94543916157035,
+        "value": 1.4666734267073828e-11,
+        "representable": true,
+        "reason": null
+      },
+      "order": 32,
+      "angle_order": 64,
+      "tail": 180.0,
+      "panel_count_range": [
+        44,
+        44
+      ]
+    }
+  },
+  "original_failure_replay": {
+    "old_logs": [
+      -29.578293240848758,
+      -26.574567393790126
+    ],
+    "resolved": {
+      "method": "Gauss_E_cosine_kinematic_edges",
+      "log_j": -29.577932950095374,
+      "log_chi": -26.574207103036745,
+      "j": {
+        "log": -29.577932950095374,
+        "value": 1.4271411662965006e-13,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "log": -26.574207103036745,
+        "value": 2.877189682036164e-12,
+        "representable": true,
+        "reason": null
+      },
+      "order": 28,
+      "angle_order": 56,
+      "tail": 160.0,
+      "panel_count_range": [
+        44,
+        44
+      ]
+    },
+    "old_fractional_errors": {
+      "log_j": -0.0003602258564652846,
+      "log_chi": -0.0003602258564617331
+    }
+  },
+  "runtime_seconds": 1.9778380000498146,
+  "source_sha256": {
+    "review_physics/cold_capture_probe.py": "7e3d3d95f4dfc7dd6fdaaa48febd93e4ea76b33b1f7e5b18725dc1bffae2e21f",
+    "cold_capture/resolved.py": "d988860e717ce3a08d8fc2d59a3bdc91c506be80ffb44250e6c55cd67b5354a1",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "urca_threshold/initial_cold_extension_failure.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96"
+  }
+}

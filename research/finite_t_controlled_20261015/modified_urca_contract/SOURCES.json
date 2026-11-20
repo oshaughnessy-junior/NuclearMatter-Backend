@@ -1,0 +1,49 @@
+{
+  "accessed_UTC": "2026-10-15",
+  "sources": [
+    {
+      "id": "SOM2023v2",
+      "url": "https://arxiv.org/html/2308.09819v2",
+      "pdf": "https://arxiv.org/pdf/2308.09819",
+      "locations": "Eqs9-11,12-15,21-31;Fig1;AppA-D",
+      "verified": "browser full text/PDF; paperEq23 numerator indices ambiguous in bothrenderings",
+      "raw_bytes_archived": false
+    },
+    {
+      "id": "AHZ2024v1",
+      "url": "https://arxiv.org/html/2406.13717v1",
+      "locations": "Eqs3-10;SecIII;Refs22,27",
+      "verified": "browserfulltext",
+      "raw_bytes_archived": false
+    },
+    {
+      "id": "FM1979",
+      "url": "https://adsabs.harvard.edu/pdf/1979ApJ...232..541F",
+      "locations": "SecIV,Eqs57-61 and sourceinteractionSecIII",
+      "verified": "browserPDF; initialalternateadsURLfailed, canonicaladsPDFsucceeded",
+      "raw_bytes_archived": false
+    },
+    {
+      "id": "SBH2018",
+      "url": "https://arxiv.org/pdf/1807.06569",
+      "locations": "Eqs2-5;Sec2.1",
+      "verified": "browserPDF; HTMLunavailable",
+      "raw_bytes_archived": false
+    },
+    {
+      "id": "SD2000v2",
+      "url": "https://arxiv.org/pdf/astro-ph/0002228",
+      "locations": "Eq69,widthdefinitionsandnearbydomainparagraph",
+      "verified": "browserPDF",
+      "raw_bytes_archived": false
+    },
+    {
+      "id": "NMBpinned",
+      "url": "https://github.com/oshaughnessy-junior/NuclearMatter-Backend/blob/25e68182f726e5bd9c0b372c9a667536940fbd07/src/nmbackend/cooling/physics/core_nu.py",
+      "verified": "connectorcontent11002bytesmatchesGitblob",
+      "raw_bytes_archived": true
+    }
+  ],
+  "quote_policy": "No verbatim prose passages reproduced; source-based summaries bounded, engineering contracts/energy derivation labelled separately",
+  "limitation": "Browser renderings are reference reads, not byte-pinned paper downloads. SnapshotSHA applies only to own records and exactly fetched NMBbytes."
+}

@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "chi14\u219220 warm refinement",
+      "error": -2.0860468905637106e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "j14\u219220 warm refinement",
+      "error": -2.0860646541321007e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fine warm forward density",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "fine separately integrated inverse KMS",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "result": {
+    "panel": 4,
+    "panels": 5,
+    "density": 6.999999999999633e-05,
+    "chi": {
+      "log": 14.692162565349395,
+      "value": 2402841.5288913795,
+      "representable": true,
+      "reason": "represented"
+    },
+    "j": {
+      "log": -12.936814543962601,
+      "value": 2.407757975788224e-06,
+      "representable": true,
+      "reason": "represented"
+    }
+  },
+  "controls": {
+    "radial": 20,
+    "incident": 20,
+    "outgoing": 32,
+    "azimuth": 16,
+    "tail": 80
+  },
+  "provenance": "Recovered complete positive sums from final panel4of5 checkpoint after JSON numpy-bool reporting failure. No fine shell-residual or event-count result retained or claimed.",
+  "runtime_seconds": 19.63594950013794
+}

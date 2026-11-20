@@ -1,0 +1,882 @@
+{
+  "checks": [
+    {
+      "name": "original actual pilot pilot_EC_2_empty.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_EC_2_LTE.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_EC_2_noneq.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_EC_4_empty.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_EC_4_LTE.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_EC_4_noneq.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_PC_2_empty.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_PC_2_LTE.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_PC_2_noneq.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_PC_4_empty.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_PC_4_LTE.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_PC_4_noneq.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_NEUTRON_DECAY_2_empty.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_NEUTRON_DECAY_2_LTE.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_NEUTRON_DECAY_2_noneq.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_NEUTRON_DECAY_4_empty.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_NEUTRON_DECAY_4_LTE.json",
+      "passed": true
+    },
+    {
+      "name": "original actual pilot pilot_NEUTRON_DECAY_4_noneq.json",
+      "passed": true
+    },
+    {
+      "name": "reviewer valid actual pilot 0",
+      "passed": true
+    },
+    {
+      "name": "reviewer valid actual pilot 1",
+      "passed": true
+    },
+    {
+      "name": "reviewer valid actual pilot 2",
+      "passed": true
+    },
+    {
+      "name": "exact reviewer initial failed witness 0",
+      "passed": true
+    },
+    {
+      "name": "exact reviewer initial failed witness 1",
+      "passed": true
+    },
+    {
+      "name": "exact reviewer initial failed witness 2",
+      "passed": true
+    },
+    {
+      "name": "exact reviewer initial failed witness 3",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 4 0",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 4 1",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 4 2",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 4 3",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 8 0",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 8 1",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 8 2",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 8 3",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 8 4",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 8 5",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 8 6",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 8 7",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 0",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 1",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 2",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 3",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 4",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 5",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 6",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 7",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 8",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 9",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 10",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 11",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 12",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 13",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 14",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 16 15",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 0",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 1",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 2",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 3",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 4",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 5",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 6",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 7",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 8",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 9",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 10",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 11",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 12",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 13",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 14",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 15",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 16",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 17",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 18",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 19",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 20",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 21",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 22",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 24 23",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 0",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 1",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 2",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 3",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 4",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 5",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 6",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 7",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 8",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 9",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 10",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 11",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 12",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 13",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 14",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 15",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 16",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 17",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 18",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 19",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 20",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 21",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 22",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 23",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 24",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 25",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 26",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 27",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 28",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 29",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 30",
+      "passed": true
+    },
+    {
+      "name": "original incident EC 32 31",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 4 0",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 4 1",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 4 2",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 4 3",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 8 0",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 8 1",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 8 2",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 8 3",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 8 4",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 8 5",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 8 6",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 8 7",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 0",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 1",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 2",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 3",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 4",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 5",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 6",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 7",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 8",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 9",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 10",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 11",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 12",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 13",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 14",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 16 15",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 0",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 1",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 2",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 3",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 4",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 5",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 6",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 7",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 8",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 9",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 10",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 11",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 12",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 13",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 14",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 15",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 16",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 17",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 18",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 19",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 20",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 21",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 22",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 24 23",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 0",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 1",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 2",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 3",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 4",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 5",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 6",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 7",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 8",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 9",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 10",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 11",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 12",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 13",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 14",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 15",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 16",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 17",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 18",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 19",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 20",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 21",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 22",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 23",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 24",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 25",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 26",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 27",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 28",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 29",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 30",
+      "passed": true
+    },
+    {
+      "name": "original incident PC 32 31",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical/public _weak_current.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical/public _weak_two_body.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical/public _weak_decay.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical/public _weak_quadrature.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical/public _weak_spectral_capture.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical/public _weak_spectral_decay.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical/public weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged common AST SpectralQuantity",
+      "passed": true
+    },
+    {
+      "name": "unchanged common AST SpectralControls",
+      "passed": true
+    },
+    {
+      "name": "unchanged common AST EnergyRule",
+      "passed": true
+    },
+    {
+      "name": "unchanged common AST coefficient",
+      "passed": true
+    },
+    {
+      "name": "unchanged common AST empty_coefficient",
+      "passed": true
+    },
+    {
+      "name": "unchanged common AST validate",
+      "passed": true
+    },
+    {
+      "name": "unchanged common AST differential_inputs",
+      "passed": true
+    },
+    {
+      "name": "unchanged common AST dos",
+      "passed": true
+    },
+    {
+      "name": "canonical per-node arithmetic AST exactly moved",
+      "passed": true
+    },
+    {
+      "name": "canonical completed arithmetic AST exactly moved",
+      "passed": true
+    },
+    {
+      "name": "unchanged result fields SpectralResult",
+      "passed": true
+    },
+    {
+      "name": "unchanged result fields ReconstructionResult",
+      "passed": true
+    },
+    {
+      "name": "unchanged public derived property flavor",
+      "passed": true
+    },
+    {
+      "name": "unchanged public derived property relaxation",
+      "passed": true
+    },
+    {
+      "name": "unchanged public derived property absorption_cm_inverse",
+      "passed": true
+    },
+    {
+      "name": "unchanged public derived property absorption_km_inverse",
+      "passed": true
+    },
+    {
+      "name": "unchanged public derived property kms_log_residual",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical evaluator loop AST",
+      "passed": true
+    }
+  ],
+  "passed": 218,
+  "failed": [],
+  "actual_old_pilot_records": 21,
+  "actual_incident_records": 168,
+  "source_calls": 0,
+  "scope": "canonical record coherence and exact physics/source identity only; not cryptographic physical provenance"
+}

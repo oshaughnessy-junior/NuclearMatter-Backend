@@ -1,0 +1,63 @@
+"""Selected transparent fixed-T free-npe source balance; actual FD events at every Ye.
+
+No scientific join is admitted without explicit independently accepted EC evidence.
+"""
+from __future__ import annotations
+from pathlib import Path
+import hashlib,importlib.util,sys,json,math,numbers,time
+import numpy as np
+from scipy.optimize import brentq
+ROOT=Path(__file__).resolve().parents[1];HERE=Path(__file__).resolve().parent
+sys.dont_write_bytecode=True
+PINS={'hot_electron_capture_moments/electron_capture.py':'b9954da0a2324376c19e4277013436b135d1432f9cb9904b03761be30bd1b3d1','hot_beta_moments/hot_moments.py':'73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a','review_pc_moments/reference.py':'2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133'}
+def verify():
+ pins=dict(PINS);pins.update(json.loads((HERE/'UPSTREAM.json').read_text()))
+ for p,h in pins.items():
+  if hashlib.sha256((ROOT/p).read_bytes()).hexdigest()!=h:raise RuntimeError('Frozen source changed: '+p)
+def load(name,path):
+ s=importlib.util.spec_from_file_location(name,ROOT/path);m=importlib.util.module_from_spec(s);sys.modules[name]=m;s.loader.exec_module(m);return m
+verify();EC=load('transparent_balance_ec','hot_electron_capture_moments/electron_capture.py');BETA=load('transparent_balance_beta','hot_beta_moments/hot_moments.py');PC=load('transparent_balance_pc_reference','review_pc_moments/reference.py')
+def finite(x):return isinstance(x,numbers.Real)and not isinstance(x,(bool,np.bool_))and math.isfinite(x)
+def material(Ye):
+ if not finite(Ye)or not .05<=Ye<=.9:raise ValueError('Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle')
+ return EC.matched(2.,1e-7,float(Ye))
+def require_acceptance():
+ p=HERE/'EC_REVIEW_ACCEPTANCE.json'
+ if not p.exists():raise RuntimeError('Independent EC acceptance pending; scientific source join forbidden')
+ a=json.loads(p.read_text())
+ if a.get('accepted')is not True or a.get('source_sha256')!=PINS['hot_electron_capture_moments/electron_capture.py']:raise RuntimeError('Explicit source-matched EC independent acceptance required')
+ review=ROOT/a['review_path']
+ if hashlib.sha256(review.read_bytes()).hexdigest()!=a['review_sha256']:raise RuntimeError('Frozen EC review changed')
+ verify();return a
+
+def evaluate(Ye,refined=False):
+ require_acceptance();start=time.monotonic();bath,state=material(Ye);b=vars(bath)
+ ec=EC.integrate(bath,proton_order=28 if refined else 20,electron_order=48 if refined else 32,initial_order=12 if refined else 8,outgoing_order=12 if refined else 8,phi_order=12 if refined else 8,tail=60. if refined else 50.,scenarios=[dict(name='empty',mode='empty')])
+ pc=PC.integral(b,order_n=32 if refined else 28,order_e=52 if refined else 44,order_angle=12 if refined else 10,tail=60.)
+ bb=BETA.K.Bath(**b)
+ beta=BETA.integrate(bb,rest_order=24 if refined else 16,parent_order=28 if refined else 20,orient_order=10 if refined else 8,phi_order=16 if refined else 12,coordinate='electron'if refined else'pair',parent_coordinate='direct_p'if refined else'laguerre',tail=80. if refined else 60.,scenarios=[dict(name='empty',mode='empty')])
+ ecrow=ec['scenarios']['empty'];brow=beta['scenarios']['empty'];ps=np.asarray(pc['sums'])[0,0]
+ channels={'EC':ecrow['net'],'beta':brow['net'],'PC':dict(zip(PC.NAMES,map(float,ps)))}
+ rates={k:v['number']for k,v in channels.items()};Q={k:v['neutrino_energy']for k,v in channels.items()};R=rates['beta']+rates['PC']-rates['EC'];Qsum=sum(Q.values());loss=sum(v['material_energy_loss']for v in channels.values())
+ # Species changes reconstructed independently from literal stoichiometry.
+ species=dict(neutron=rates['EC']-rates['beta']-rates['PC'],proton=R,electron_net=R,nue=rates['EC'],antinue=rates['beta']+rates['PC'])
+ mEn=channels['EC']['neutron_energy']-channels['beta']['neutron_energy']-channels['PC']['neutron_energy'];mEp=channels['beta']['proton_energy']+channels['PC']['proton_energy']-channels['EC']['proton_energy'];mEle=channels['beta']['electron_energy']-channels['PC']['positron_energy']-channels['EC']['electron_energy']
+ roots=dict(neutron=state['neutron']['density']/(1e-7*(1-Ye))-1,proton=state['proton']['density']/(1e-7*Ye)-1)
+ return dict(Ye=Ye,refined=refined,bath=b,state=state,chemical_affinity=bath.mu_n-bath.mu_p-bath.mu_e,channels=channels,rates=rates,energy=Q,net_material_number_source=R,dYe_dt=R/1e-7,escaping_energy=Qsum,direct_material_loss=loss,material_energy_from_species=mEn+mEp+mEle,energy_ledger=(mEn+mEp+mEle+Qsum)/Qsum,direct_energy_ledger=(Qsum-loss)/Qsum,species_number_sources=species,lepton_ledger=species['electron_net']+species['nue']-species['antinue'],root_residuals=roots,density_integral_residuals=dict(EC=ec['proton_density']/(1e-7*Ye)-1,PC=pc['neutron_density']/(1e-7*(1-Ye))-1,beta=beta['parent_density']/(1e-7*(1-Ye))-1),raw_sources=dict(EC=ec,PC=pc,beta=beta),seconds=time.monotonic()-start)
+
+def preflight():
+ checks=[]
+ def check(n,ok):checks.append(dict(name=n,passed=bool(ok)))
+ verify();bath,state=material(.3)
+ check('same physical masses weakmass GF Vud',EC.MN==PC.MN==BETA.K.MN and EC.MP==PC.MP==BETA.K.MP and EC.ME==PC.ME==BETA.K.ME and EC.MW==PC.MW and EC.E.GF==PC.GF and EC.E.VUD==PC.VUD)
+ check('actual neutral pair bath',abs(state['neutron']['density']/7e-8-1)<1e-10 and abs(state['proton']['density']/3e-8-1)<1e-10)
+ # Match actual full current matrices used by beta, PC, EC at fresh spacelike/timelike inputs.
+ for q in [np.array([-.4,1.2,-.6,2.3]),np.array([1.,.2,-.3,.1])]:
+  check('current matrices '+str(q.tolist()),np.max(abs(EC.E.vertices(q[None,:],EC.MW)-BETA.B.vertices(q[None,:],EC.MW)))<1e-13)
+ chemical=brentq(lambda y:(lambda b:b.mu_n-b.mu_p-b.mu_e)(material(y)[0]),.05,.9,xtol=1e-12)
+ check('chemical root sameEOS',abs((lambda b:b.mu_n-b.mu_p-b.mu_e)(material(chemical)[0]))<1e-9)
+ try:require_acceptance();gate=True
+ except RuntimeError:gate=False
+ return dict(checks=checks,passed=sum(c['passed']for c in checks),chemical_balance_Ye=chemical,chemical_balance_state=material(chemical)[1],EC_independent_acceptance_present=gate,scientific_source_join_performed=False,pins=PINS)
+if __name__=='__main__':
+ (HERE/'preflight.json').write_text(json.dumps(preflight(),indent=2)+'\n')

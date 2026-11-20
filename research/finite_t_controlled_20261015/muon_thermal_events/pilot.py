@@ -1,0 +1,8 @@
+from pathlib import Path
+import sys,json
+sys.dont_write_bytecode=True
+from muon_events import *
+H=Path(__file__).parent
+m=eos.matter_state(2.,1e-4,.29,.01);b=Bath(2.,m.muon.chemical_potential,m.electron.chemical_potential)
+r=integrate(b,parent_order=12,pair_order=16,pair_angle=8,orientation_order=6,azimuth_order=8)
+(H/'pilot.json').write_text(json.dumps(dict(EOS=m.asdict(),result=r),indent=2)+'\n');print(r['forward']['number'],r['runtime_seconds'],b)

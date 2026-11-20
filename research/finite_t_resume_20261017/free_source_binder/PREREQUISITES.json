@@ -1,0 +1,40 @@
+{
+  "real_package_base": "outputs/nmb-finite-t-20261015/production_weak_packaging_review/package_copy",
+  "base_commit": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "explicit_unmerged_dependency_union": {
+    "finite_t_leptons.py": {
+      "source": "production_lepton_port/staged/src/nmbackend/reference/finite_t_leptons.py",
+      "sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719"
+    },
+    "finite_t_baryons.py": {
+      "source": "production_baryon_port/staged/src/nmbackend/reference/finite_t_baryons.py",
+      "sha256": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b"
+    },
+    "weak_reference.py": {
+      "source": "production_weak_port/staged/src/nmbackend/reference/weak_reference.py",
+      "sha256": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172"
+    },
+    "_weak_current.py": {
+      "source": "production_weak_port/staged/src/nmbackend/reference/_weak_current.py",
+      "sha256": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc"
+    },
+    "_weak_quadrature.py": {
+      "source": "production_weak_port/staged/src/nmbackend/reference/_weak_quadrature.py",
+      "sha256": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69"
+    },
+    "_weak_two_body.py": {
+      "source": "production_weak_port/staged/src/nmbackend/reference/_weak_two_body.py",
+      "sha256": "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366"
+    },
+    "_weak_decay.py": {
+      "source": "production_weak_port/staged/src/nmbackend/reference/_weak_decay.py",
+      "sha256": "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc"
+    }
+  },
+  "PR_heads": {
+    "51": "11c6d41db14b906168efd2e018aca46d2e8d4d3c",
+    "52": "3125f3c450ddb1759132cf8367b4a649f15a75b3",
+    "54": "c17472b8a84655380ab64973ef883a6cd5fb2346"
+  },
+  "PR55_not_used": true
+}

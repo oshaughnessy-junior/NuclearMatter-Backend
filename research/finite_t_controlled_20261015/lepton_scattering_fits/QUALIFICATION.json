@@ -1,0 +1,32 @@
+{
+  "positive_moments": {
+    "measured_heldout_gate_pass": true,
+    "relative_gate": 0.01,
+    "max_heldout_relative": {
+      "rate": 0.0018553208699453316,
+      "transport_rate": 0.002295888578956795,
+      "outgoing_energy_moment": 0.002078177741601017
+    },
+    "uniform_error_certificate": false
+  },
+  "signed_energy": {
+    "absolute_RT_gate_pass": false,
+    "absolute_RT_gate": 0.03,
+    "failed_checks": [
+      {
+        "name": "training signedRT 19.0",
+        "error": -0.03141840430010508,
+        "tolerance": 0.03,
+        "passed": false
+      },
+      {
+        "name": "training signedRT 30.0",
+        "error": 0.059393241076720935,
+        "tolerance": 0.03,
+        "passed": false
+      }
+    ],
+    "advice": "Derived signed value is diagnostic; use detailed quadrature when signed-energy accuracy is required. Coefficients were not retuned."
+  },
+  "validation_sha": "1ee3900de819b887d5a1bee3c50316881493829742bd61cc914c74555b04f68f"
+}

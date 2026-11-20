@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "name": "copied pristine model matches literal pin",
+      "passed": true
+    },
+    {
+      "name": "stale model rejects before physical invocation",
+      "passed": true
+    },
+    {
+      "name": "stale detailed adapter rejects before physical invocation",
+      "passed": true
+    },
+    {
+      "name": "fresh-process actual function module origins match pinned files",
+      "passed": true
+    },
+    {
+      "name": "frozen api/model/reference bytes unchanged",
+      "passed": true
+    }
+  ],
+  "passed": 5,
+  "failed": [],
+  "origins": {
+    "fit_physical_scattering": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/neutrino_lepton_scattering/scatter.py",
+    "pair": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/leptonic_pair_annihilation/pair.py",
+    "events": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_capture_oracle/events.py"
+  },
+  "no_physical_rerun": true
+}

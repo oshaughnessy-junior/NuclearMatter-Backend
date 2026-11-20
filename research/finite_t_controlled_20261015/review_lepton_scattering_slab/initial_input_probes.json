@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "name": "rhs_nan_left",
+      "rejected": false,
+      "returned_nonfinite": true,
+      "successful_ODE": false
+    },
+    {
+      "name": "rhs_nan_f_streaming",
+      "rejected": false,
+      "returned_nonfinite": true,
+      "successful_ODE": false
+    },
+    {
+      "name": "negative_boundary_temperature",
+      "rejected": false,
+      "returned_nonfinite": false,
+      "successful_ODE": true
+    }
+  ],
+  "author_sha": "be7f2c05f595647ef9fa7a868bd9b8b4d78f39dee4b2b2055c32180334906022"
+}

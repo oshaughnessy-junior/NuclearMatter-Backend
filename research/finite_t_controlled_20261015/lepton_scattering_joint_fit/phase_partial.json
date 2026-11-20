@@ -1,0 +1,118 @@
+{
+  "rows": [
+    {
+      "E": 8.161,
+      "total": {
+        "rate": 10.190549054476934,
+        "transport_rate": 7.254656048203225,
+        "outgoing_energy_moment": 82.95247923027279,
+        "neutrino_energy_change": -0.21259160331340507
+      },
+      "controls": {
+        "outer": 12,
+        "angle": 20,
+        "upper": 160.0,
+        "target_tail": 90.0
+      },
+      "seconds": 0.6677372499834746
+    },
+    {
+      "E": 8.161,
+      "total": {
+        "rate": 10.190549074472054,
+        "transport_rate": 7.2546560482265185,
+        "outgoing_energy_moment": 82.9524793901643,
+        "neutrino_energy_change": -0.2125916066022298
+      },
+      "controls": {
+        "outer": 16,
+        "angle": 28,
+        "upper": 160.0,
+        "target_tail": 90.0
+      },
+      "seconds": 1.2566924581769854
+    }
+  ],
+  "checks": [
+    {
+      "name": "independent D vs CM rate",
+      "order": [
+        12,
+        20
+      ],
+      "error": -3.451015473387997e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM transport_rate",
+      "order": [
+        12,
+        20
+      ],
+      "error": -8.469620560447311e-10,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM outgoing_energy_moment",
+      "order": [
+        12,
+        20
+      ],
+      "error": -3.433756057269477e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM neutrino_energy_change",
+      "order": [
+        12,
+        20
+      ],
+      "error": 1.0624723379686569e-10,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM rate",
+      "order": [
+        16,
+        28
+      ],
+      "error": -1.4888915655930646e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM transport_rate",
+      "order": [
+        16,
+        28
+      ],
+      "error": -8.437511800352127e-10,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM outgoing_energy_moment",
+      "order": [
+        16,
+        28
+      ],
+      "error": -1.5062486813377518e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM neutrino_energy_change",
+      "order": [
+        16,
+        28
+      ],
+      "error": -5.511918087767696e-11,
+      "gate": 0.0001,
+      "passed": true
+    }
+  ]
+}

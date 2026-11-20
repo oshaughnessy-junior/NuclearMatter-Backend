@@ -1,0 +1,335 @@
+{
+  "passed": 19,
+  "failed": [],
+  "checks": [
+    {
+      "name": "3.9 grammar tests/test_finite_t_rmf_forward.py",
+      "passed": true
+    },
+    {
+      "name": "no post-minimum helper tests/test_finite_t_rmf_forward.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar tests/test_finite_t_rmf_response.py",
+      "passed": true
+    },
+    {
+      "name": "no post-minimum helper tests/test_finite_t_rmf_response.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar examples/finite_t_rmf.py",
+      "passed": true
+    },
+    {
+      "name": "no post-minimum helper examples/finite_t_rmf.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar src/nmbackend/reference/_rmf_response.py",
+      "passed": true
+    },
+    {
+      "name": "no post-minimum helper src/nmbackend/reference/_rmf_response.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar src/nmbackend/reference/finite_t_rmf.py",
+      "passed": true
+    },
+    {
+      "name": "no post-minimum helper src/nmbackend/reference/finite_t_rmf.py",
+      "passed": true
+    },
+    {
+      "name": "3.9 grammar src/nmbackend/reference/_rmf_moments.py",
+      "passed": true
+    },
+    {
+      "name": "no post-minimum helper src/nmbackend/reference/_rmf_moments.py",
+      "passed": true
+    },
+    {
+      "name": "quad_vec no 1.8 args keyword",
+      "passed": true
+    },
+    {
+      "name": "README exact additive suffix",
+      "passed": true
+    },
+    {
+      "name": "no campaign runtime path src/nmbackend/reference/finite_t_rmf.py",
+      "passed": true
+    },
+    {
+      "name": "no campaign runtime path src/nmbackend/reference/_rmf_response.py",
+      "passed": true
+    },
+    {
+      "name": "no campaign runtime path src/nmbackend/reference/_rmf_moments.py",
+      "passed": true
+    },
+    {
+      "name": "fixture explicitly INTERNAL only",
+      "passed": true
+    },
+    {
+      "name": "only README overlays existing baseline outside new paths",
+      "passed": true
+    }
+  ],
+  "imports": {
+    "tests/test_finite_t_rmf_forward.py": [
+      "from pathlib import Path",
+      "import json, math",
+      "import numpy as np",
+      "from scipy.integrate import quad",
+      "from scipy.optimize import brentq",
+      "from scipy.special import expit",
+      "import pytest",
+      "from nmbackend.reference.finite_t_rmf import state_density",
+      "from nmbackend.reference.finite_t_rmf import state_density"
+    ],
+    "tests/test_finite_t_rmf_response.py": [
+      "import math",
+      "from dataclasses import replace",
+      "from types import SimpleNamespace",
+      "import numpy as np",
+      "from scipy.integrate import quad",
+      "from scipy.special import expit",
+      "import pytest",
+      "from nmbackend.reference._rmf_moments import moments",
+      "from nmbackend.reference.finite_t_rmf import state_density, HBARC",
+      "from nmbackend.reference._rmf_moments import moments",
+      "from nmbackend.reference._rmf_response import response",
+      "from nmbackend.reference.finite_t_rmf import state_density",
+      "from nmbackend.reference.finite_t_rmf import diagnose_density, state_density, _crossing, _M",
+      "from nmbackend.reference.finite_t_rmf import state_density",
+      "from nmbackend.reference.finite_t_rmf import SolveControls",
+      "import nmbackend.reference.finite_t_rmf as R",
+      "from nmbackend.reference.finite_t_rmf import state_density, SolveControls",
+      "from nmbackend.reference.finite_t_rmf import state_density",
+      "from scipy.optimize import brentq",
+      "from nmbackend.reference._rmf_moments import moments",
+      "from nmbackend.reference.finite_t_rmf import state_density, HBARC",
+      "from nmbackend.reference.finite_t_rmf import state_density, SolveControls"
+    ],
+    "examples/finite_t_rmf.py": [
+      "import json",
+      "from nmbackend.reference.finite_t_rmf import state_density, diagnose_density"
+    ],
+    "src/nmbackend/reference/_rmf_response.py": [
+      "from __future__ import annotations",
+      "import math",
+      "import numpy as np"
+    ],
+    "src/nmbackend/reference/finite_t_rmf.py": [
+      "from __future__ import annotations",
+      "from dataclasses import dataclass, asdict",
+      "import math",
+      "import numbers",
+      "import numpy as np",
+      "from scipy.optimize import brentq, least_squares",
+      "from ..constants import HBARC",
+      "from ._rmf_moments import moments, projected_number_scalar",
+      "from ._rmf_response import constraint_jacobian, response"
+    ],
+    "src/nmbackend/reference/_rmf_moments.py": [
+      "from __future__ import annotations",
+      "from dataclasses import dataclass",
+      "import math",
+      "import numpy as np",
+      "from scipy.integrate import quad_vec",
+      "from scipy.special import expit",
+      "from scipy.integrate import quad"
+    ]
+  },
+  "calls": {
+    "tests/test_finite_t_rmf_forward.py": [
+      "ArithmeticError",
+      "Path",
+      "ValueError",
+      "abs",
+      "brentq",
+      "dict",
+      "expit",
+      "float",
+      "getattr",
+      "integrate",
+      "json.loads",
+      "len",
+      "list",
+      "map",
+      "math.hypot",
+      "math.sqrt",
+      "max",
+      "np.linspace",
+      "np.logaddexp",
+      "np.testing.assert_allclose",
+      "oracle",
+      "p.read_text",
+      "pytest.mark.parametrize",
+      "quad",
+      "scalar",
+      "set",
+      "sorted",
+      "species",
+      "splits.append",
+      "state_density",
+      "sum",
+      "zip"
+    ],
+    "tests/test_finite_t_rmf_response.py": [
+      "F",
+      "R.state_density",
+      "SimpleNamespace",
+      "SolveControls",
+      "ValueError",
+      "_crossing",
+      "abs",
+      "brentq",
+      "cv.append",
+      "d",
+      "d.sum",
+      "diagnose_density",
+      "down.sum",
+      "energy",
+      "expit",
+      "float",
+      "getattr",
+      "hess.append",
+      "math.hypot",
+      "math.isfinite",
+      "math.sin",
+      "math.sqrt",
+      "max",
+      "moments",
+      "monkeypatch.setattr",
+      "np.array",
+      "np.asarray",
+      "np.linalg.norm",
+      "np.logaddexp",
+      "np.testing.assert_allclose",
+      "np.zeros",
+      "original_gas",
+      "pair.copy",
+      "pytest.mark.parametrize",
+      "pytest.raises",
+      "quad",
+      "range",
+      "replace",
+      "response",
+      "state_density",
+      "sum",
+      "up.sum"
+    ],
+    "examples/finite_t_rmf.py": [
+      "diagnose_density",
+      "json.dumps",
+      "print",
+      "s.asdict",
+      "spinodal.asdict",
+      "state_density"
+    ],
+    "src/nmbackend/reference/_rmf_response.py": [
+      "ArithmeticError",
+      "abs",
+      "constraint_jacobian",
+      "dict",
+      "float",
+      "math.isfinite",
+      "np.array",
+      "np.diag",
+      "np.linalg.cond",
+      "np.outer",
+      "sum"
+    ],
+    "src/nmbackend/reference/finite_t_rmf.py": [
+      "ArithmeticError",
+      "SolveControls",
+      "UniformRMFState",
+      "ValueError",
+      "_cold_scalar",
+      "_crossing",
+      "_gradient",
+      "_number_root",
+      "_potential",
+      "_real",
+      "_seed",
+      "abs",
+      "all",
+      "asdict",
+      "bool",
+      "brentq",
+      "cold_nu",
+      "constraint_jacobian",
+      "controls.__post_init__",
+      "dataclass",
+      "diagnose_density",
+      "evaluate",
+      "float",
+      "fun",
+      "getattr",
+      "isinstance",
+      "least_squares",
+      "len",
+      "map",
+      "math.asinh",
+      "math.ceil",
+      "math.hypot",
+      "math.isfinite",
+      "max",
+      "moments",
+      "np.array",
+      "np.linalg.eigvalsh",
+      "np.linalg.norm",
+      "np.linspace",
+      "np.max",
+      "projected_number_scalar",
+      "response",
+      "tuple",
+      "zip"
+    ],
+    "src/nmbackend/reference/_rmf_moments.py": [
+      "ArithmeticError",
+      "Gas",
+      "ValueError",
+      "abs",
+      "all",
+      "dataclass",
+      "entropy",
+      "expit",
+      "float",
+      "integrand",
+      "len",
+      "map",
+      "math.exp",
+      "math.isfinite",
+      "math.log",
+      "math.log1p",
+      "math.sqrt",
+      "max",
+      "min",
+      "np.all",
+      "np.array",
+      "np.isfinite",
+      "np.logaddexp",
+      "np.max",
+      "np.zeros",
+      "quad",
+      "quad_vec",
+      "result.append",
+      "set",
+      "sorted",
+      "tuple",
+      "zip"
+    ]
+  },
+  "scope": "STATIC grammar/API inspection only, not Python3.9 or SciPy1.7 execution",
+  "version_sources": [
+    "https://docs.scipy.org/doc/scipy-1.7.0/reference/generated/scipy.integrate.quad_vec.html",
+    "https://numpy.org/doc/1.21/numpy-ref.pdf"
+  ],
+  "version_evidence": "Official SciPy1.7 generated index exposes quad_vec. Direct historical HTML and raw source requests failed cache lookup; retained as limitation. Existing quad_vec max norm/full_output use predates1.7; 1.8-only args keyword not used. NumPy1.21 reference documents logaddexp. Other used NumPy/SciPy primitives are longstanding. No minimum runtime executed."
+}

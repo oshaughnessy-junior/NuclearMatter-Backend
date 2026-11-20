@@ -1,0 +1,30 @@
+{
+  "status": "ACCEPTED_CONTRACT_ONLY_NO_IMPLEMENTED_TENSOR",
+  "independent_checks": 193,
+  "author_files_before": {
+    "SOURCES.json": "0e7b2e6375e03e8978b3a4fd31a750eae4e476cb0b21528793a994bc5d3095cd",
+    "CHECKPOINT.json": "bb3eb3a2984678266dd78e67f7537b92724051dcc8f4844518cf18e06287bfdb",
+    "RESEARCH_CONTRACT.md": "b0d87b151dc643da11e5f988af41a2b97e7a4339392428f5b295bc1aaf0d2a8f",
+    "results.json": "7c74f68962c0de046f669dc59f63bfc0d6a088fccf713bf621d20446d8df6c4d",
+    "probes.py": "1c4fb91653adb78a89930b3c79294c595c4f2a7e7d161f39712a498e044a5fcd"
+  },
+  "author_files_after": {
+    "SOURCES.json": "0e7b2e6375e03e8978b3a4fd31a750eae4e476cb0b21528793a994bc5d3095cd",
+    "CHECKPOINT.json": "bb3eb3a2984678266dd78e67f7537b92724051dcc8f4844518cf18e06287bfdb",
+    "RESEARCH_CONTRACT.md": "b0d87b151dc643da11e5f988af41a2b97e7a4339392428f5b295bc1aaf0d2a8f",
+    "results.json": "7c74f68962c0de046f669dc59f63bfc0d6a088fccf713bf621d20446d8df6c4d",
+    "probes.py": "1c4fb91653adb78a89930b3c79294c595c4f2a7e7d161f39712a498e044a5fcd"
+  },
+  "review_files_sha256": {
+    "SOURCES.json": "bc103156600aeefddcb38d90b00fc5b8527de7f75b8e49b9f1bda60b88256ec9",
+    "spin.py": "b08a92182df27d41cb3f7b0ca3baf8cdf96c8d7e95091a788df5f0e9942be98f",
+    "support_cases.py": "465f639bbb13f6decf225563b41d049eedf28e60caed22ab604ca1917505c7a1",
+    "results.json": "2d89a77fd3b73142313014d04dbb44c0c990930c2137c2ed9413d3066b445488",
+    "support_results.json": "a2490d6b74f08ffad306fc9a0d84147b84baa99f9e01706c6ff29c73c82263e2",
+    "spin_results.json": "07a0676c0b6089dac1ca9b8815cd19507aa221f099efa0aa9a4320ffd90faae5",
+    "initial_probe_import_failure.py": "a935a1aa90487f56981e1e6886f450ced0c84c84b9785ae8e4b9be14d5ca27a5",
+    "probe.py": "a294e77f0308209341f68c1192bd5b1157007c38fd19278ad26742e37c83ffa3",
+    "REVIEW.md": "cbde8ecb98253f7e1ddc49af6911ae65f1bdd37ea38b9f7617c9d3a5b54b9b2b",
+    "initial_import_failure.txt": "ff03fc5d3b42950b1e22f6334fdf8de8e9d6386b5834978ee58e03300cadf4ee"
+  }
+}

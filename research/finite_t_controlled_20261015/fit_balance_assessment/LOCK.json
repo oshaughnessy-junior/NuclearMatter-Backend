@@ -1,0 +1,56 @@
+{
+  "status": "PREREGISTERED_BEFORE_ANY_NEW_SOURCE_CALL",
+  "locked_utc": "2026-10-16T02:02:59.098619+00:00",
+  "states": [
+    {
+      "T": 1.0,
+      "nB": 1e-07,
+      "bracket": [
+        0.25,
+        0.45
+      ],
+      "reference_file": "transparent_balance_grid/state_0.json"
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-06,
+      "bracket": [
+        0.22,
+        0.35
+      ],
+      "reference_file": "transparent_balance_grid/state_2.json"
+    }
+  ],
+  "gates": {
+    "individual_detailed_refinement": 3e-06,
+    "target_density": 3e-08,
+    "EOS_root": 1e-10,
+    "approximate_root_gross_residual": 1e-09,
+    "model_detailed_net_over_gross": 0.001,
+    "model_abs_deltaYe": 0.001
+  },
+  "closure": "Prescribed fixed T,nB; actual free neutral npe/e\u00b1 equilibrium, no muons, empty incoming nue/antinue, EM rethermalization and external thermostat; no photon evolution.",
+  "sources": "Optional EC/PC positive moments + freshly integrated actual beta at every trial. Full detailed EC/PC/beta bothprofiles at each candidate root. No coefficient/basis/gate/domain retuning.",
+  "outside_domain": [
+    {
+      "T": 2.0,
+      "nB": 1e-07,
+      "Ye": 0.5560448218
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-07,
+      "Ye": 0.5490065798
+    }
+  ],
+  "pins": {
+    "free_capture_moment_fit/approximation.py": "9020fb5dab238e2b7c169612b037750c04dfe19932f22976470f806b2514d3b3",
+    "free_capture_moment_fit/COEFFICIENT_FREEZE.json": "6e81f38d4538732abc49462331c7277160ba220518747f43aca1b13421d71a12",
+    "free_capture_moment_fit/MANIFEST.json": "bdcff1c4837be93d5d94c63c5b165d6d7e0a1dbd17e9c94a8edfa513348008cc",
+    "review_free_capture_moment_fit_repair/REVIEW.md": "412ede4320ad2c6b9befb74705b17a4e66f1089bc025080a2f83e0f31fee2eb3",
+    "transparent_balance_grid/grid.py": "44402616f9b966ace87981534659477e01a2a8cb9e54127c9bc84e6b8ea4c9cc",
+    "transparent_balance_grid/state_0.json": "b4a175210a44dd7caaa2820b2c9b4f17cf34f3f6dd3ef9813a7e0f45ed14d57c",
+    "transparent_balance_grid/state_2.json": "d2e524939b283779f2b3f84739961dc4a3f014bfbdc125ce115f11546cd75c4d",
+    "review_transparent_balance_grid/REVIEW.md": "0b2fe53e9a343a8a75f3cfbd38ea5afbb6bdc34895553202975c616deb9a988e"
+  }
+}

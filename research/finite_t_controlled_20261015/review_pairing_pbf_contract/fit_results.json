@@ -1,0 +1,176 @@
+{
+  "checks": [
+    {
+      "name": "freshfit A0.017",
+      "error": -0.0001521268349226409,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit B0.017",
+      "error": -0.0003140405969536423,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit A0.43",
+      "error": -0.003447139501541456,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit B0.43",
+      "error": 0.005174155695279261,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit A2.7",
+      "error": -0.00082603366985038,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit B2.7",
+      "error": -0.012097840380626406,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit A9.3",
+      "error": 0.0028109902308938645,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit B9.3",
+      "error": -9.33118066888628e-05,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit A37.0",
+      "error": 0.003675478349912464,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit B37.0",
+      "error": -0.0063692335115285255,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit A127.0",
+      "error": 0.001441735218716263,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit B127.0",
+      "error": -0.00234519270507493,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit A300.0",
+      "error": 0.0007736850073946826,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "name": "freshfit B300.0",
+      "error": -0.0009764044754057929,
+      "tolerance": 0.05,
+      "passed": true
+    }
+  ],
+  "passed": 14,
+  "failed": [],
+  "rows": [
+    {
+      "channel": "A",
+      "v": 0.017,
+      "fit": 0.00017398315711535342,
+      "relative_error": -0.0001521268349226409
+    },
+    {
+      "channel": "B",
+      "v": 0.017,
+      "fit": 0.0003479284714387985,
+      "relative_error": -0.0003140405969536423
+    },
+    {
+      "channel": "A",
+      "v": 0.43,
+      "fit": 0.1139513868904931,
+      "relative_error": -0.003447139501541456
+    },
+    {
+      "channel": "B",
+      "v": 0.43,
+      "fit": 0.2392635680405906,
+      "relative_error": 0.005174155695279261
+    },
+    {
+      "channel": "A",
+      "v": 2.7,
+      "fit": 4.185383471690453,
+      "relative_error": -0.00082603366985038
+    },
+    {
+      "channel": "B",
+      "v": 2.7,
+      "fit": 3.4311191025646077,
+      "relative_error": -0.012097840380626406
+    },
+    {
+      "channel": "A",
+      "v": 9.3,
+      "fit": 0.016842947188540795,
+      "relative_error": 0.0028109902308938645
+    },
+    {
+      "channel": "B",
+      "v": 9.3,
+      "fit": 0.0035250971020678954,
+      "relative_error": -9.33118066888628e-05
+    },
+    {
+      "channel": "A",
+      "v": 37.0,
+      "fit": 1.0444854851978346e-22,
+      "relative_error": 0.003675478349912464
+    },
+    {
+      "channel": "B",
+      "v": 37.0,
+      "fit": 9.150382180236425e-24,
+      "relative_error": -0.0063692335115285255
+    },
+    {
+      "channel": "A",
+      "v": 127.0,
+      "fit": 2.0710138007234441e-97,
+      "relative_error": 0.001441735218716263
+    },
+    {
+      "channel": "B",
+      "v": 127.0,
+      "fit": 9.503431871794017e-99,
+      "relative_error": -0.00234519270507493
+    },
+    {
+      "channel": "A",
+      "v": 300.0,
+      "fit": 2.9799125581292405e-245,
+      "relative_error": 0.0007736850073946826
+    },
+    {
+      "channel": "B",
+      "v": 300.0,
+      "fit": 8.841013545807819e-247,
+      "relative_error": -0.0009764044754057929
+    }
+  ]
+}

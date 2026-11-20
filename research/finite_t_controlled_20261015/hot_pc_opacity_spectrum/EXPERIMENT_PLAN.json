@@ -1,0 +1,49 @@
+{
+  "incident_edges": [
+    0.0,
+    1.5,
+    1.8060662080187608,
+    2.2,
+    4.0,
+    8.0,
+    16.0,
+    32.0,
+    60.0
+  ],
+  "coarse_order_per_panel": 4,
+  "fine_order_per_panel": 8,
+  "coarse_controls": [
+    8,
+    12,
+    12,
+    4,
+    60.0,
+    35.0
+  ],
+  "fine_controls": [
+    10,
+    16,
+    16,
+    4,
+    75.0,
+    45.0
+  ],
+  "gate_relative_moments": 3e-06,
+  "normalization": "ONE active antinue DOS; actual independent F/B; eventref fresh32/52/12 CMFD",
+  "preregistered_before_collection": true,
+  "additional_incident_refinement": {
+    "order_per_panel": 6,
+    "material_controls": [
+      10,
+      16,
+      16,
+      4,
+      75.0,
+      45.0
+    ],
+    "reason": "coarse4numbermissesCMby1.106e-5 atunchanged3e-6; preservefailureandaddmiddle6beforefine8totalisassembled",
+    "preregistered_before_middle_collection": true,
+    "same_physical_model": true,
+    "same_gate": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN scoped design/source audit; implementation and external native gate OPEN",
+  "manifest_sha256": "2f07a52db20d979ca42f71534f40d011e69b421e240cce21be95269292a23803",
+  "contract_sha256": "f225acd8434612b9d26df3e4e92c167f8c67fcaa0125c9ad485c719bd421d07f",
+  "source_paths_verified": 45,
+  "saved_rows_only": 3,
+  "proposed_files": 9,
+  "current_package_base": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "research_source": "25e68182f726e5bd9c0b372c9a667536940fbd07",
+  "external_native_forward_gate": "OPEN missing actual O2scl execution; no native values",
+  "write_scope": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/finite_t_rmf_integration_contract",
+  "production_or_upstream_changes": false,
+  "quota": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "reset": 1792652325,
+    "last_verified_used_percent": 26
+  },
+  "required_before_general_promotion": [
+    "new independently reviewed implementation",
+    "full branch/stability and response gates",
+    "supported versions/normal CI",
+    "exact matched native forward comparison"
+  ]
+}

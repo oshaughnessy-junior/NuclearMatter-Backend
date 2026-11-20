@@ -1,0 +1,164 @@
+{
+  "locked_before_data_utc": "2026-10-16T03:33:53.593683+00:00",
+  "model": "particle-only physical-mass free n,p plus exact e+-pair flavor; muon species absent, not zero-net pair gas; optional trapped ideal LTE photons",
+  "modules": {
+    "lepton": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+    "baryon": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b"
+  },
+  "constants": {
+    "mn": 939.56542052,
+    "mp": 938.27208816,
+    "me": 0.51099895069,
+    "HBARC": 197.3269804
+  },
+  "selected_forward_baths": [
+    [
+      2,
+      1e-07,
+      0.3
+    ],
+    [
+      1,
+      1e-07,
+      0.3850567101958
+    ],
+    [
+      3,
+      1e-07,
+      0.5490065797957709
+    ],
+    [
+      2,
+      1e-06,
+      0.2786277578701
+    ]
+  ],
+  "admission": {
+    "T": [
+      0.5,
+      5
+    ],
+    "nB": [
+      4e-08,
+      2e-06
+    ],
+    "Ye_open": [
+      0.05,
+      0.9
+    ],
+    "interpretation": "bounded research admission, no uniform accuracy certificate"
+  },
+  "EOS_controls": {
+    "rtol": 2e-12,
+    "tail": 60
+  },
+  "gates": {
+    "forward_fields_relative": 3e-09,
+    "response_old_relative": 3e-08,
+    "independent_finite_difference_relative": 3e-05,
+    "density_charge_relative": 2e-09,
+    "photon_blackbody_relative": 2e-12,
+    "weak_moments_refinement_relative": 3e-06,
+    "weak_energy_lepton_scaled": 2e-09,
+    "cycle_temperature_refinement_relative": 3e-06,
+    "cycle_entropy_relative": 3e-06,
+    "cycle_work_energy_relative_exchange": 3e-06,
+    "cycle_return_temperature_relative": 3e-06,
+    "cycle_root_temperature_relative": 3e-06
+  },
+  "partials": {
+    "e_T": "Cv at fixed nB,Ye",
+    "e_Y": "nB(hp-hn+he)",
+    "e_n": "(1-Y)hn+Y(hp+he)",
+    "h": "mu-T*dmu_dT|ni; electrons net ni"
+  },
+  "finite_differences": {
+    "relative_step": 0.0002,
+    "T_and_Y_centered": true,
+    "nB_centered": true
+  },
+  "weak_point": {
+    "T": 2,
+    "nB": 1e-07,
+    "Ye": 0.3,
+    "incoming_radiation": "empty electron neutrino and antineutrino",
+    "photons": true,
+    "ndot": 2.5e-08,
+    "EC_base": [
+      20,
+      32,
+      8,
+      50
+    ],
+    "EC_fine": [
+      28,
+      48,
+      12,
+      60
+    ],
+    "PC_base": [
+      28,
+      44,
+      10,
+      60
+    ],
+    "PC_fine": [
+      32,
+      52,
+      12,
+      60
+    ],
+    "beta_base": [
+      16,
+      20,
+      8,
+      12,
+      "pair",
+      "laguerre",
+      60
+    ],
+    "beta_fine": [
+      24,
+      28,
+      10,
+      16,
+      "electron",
+      "direct_p",
+      80
+    ]
+  },
+  "cycle": {
+    "T0": 2,
+    "n0": 1e-07,
+    "Ye": 0.3,
+    "photons": true,
+    "tau_seconds": 1,
+    "density": "n0 exp(log(2)*sin(2*pi*t/tau))",
+    "method": "classical RK4 T ODE plus independently Simpson path-work",
+    "steps": [
+      32,
+      64
+    ],
+    "entropy_root_times": [
+      0,
+      0.125,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ]
+  },
+  "claims_excluded": [
+    "weak-on trajectory",
+    "hydro",
+    "new EOS model",
+    "density-dependent mass",
+    "muon completion",
+    "antibaryon completion",
+    "full neutrino inventory",
+    "AD",
+    "long-time accuracy",
+    "uncertainty certificate"
+  ],
+  "timestamp_note": "Original literal03:35 timestamp was a transcription error; original exactbytes preserved; corrected from original lock filesystemmtime without changing any scientific gates/state/protocol."
+}

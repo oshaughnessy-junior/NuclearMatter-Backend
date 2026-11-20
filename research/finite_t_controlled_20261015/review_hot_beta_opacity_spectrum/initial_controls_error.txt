@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_hot_beta_opacity_spectrum/controls.py", line 30, in <module>
+    stored=json.loads((ROOT/'hot_beta_opacity_spectrum/total_fine_0.json').read_text());contract=ns['contract']('fine');row=stored['rows'][0];ns['validate'](contract,row,b,meta);ck('genuine saved-node admission ONLY',0,0)
+                                                                                                 ~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_opacity_spectrum/total.py", line 12, in contract
+    order=6 if rule=='coarse'else 10;controls=[8,10,10,6,50.]if rule=='coarse'else[12,16,16,10,70.];x,w=leggauss(order);E=[];W=[]
+                                                                                                        ^^^^^^^^
+NameError: name 'leggauss' is not defined

@@ -1,0 +1,3195 @@
+{
+  "passed": false,
+  "phase": "complete",
+  "checks": [
+    {
+      "name": "neutron EOS density",
+      "error": -5.384581669432009e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "proton EOS density",
+      "error": -4.04121180963557e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "electron EOS net density",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "muon EOS net density",
+      "error": -1.3766765505351941e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent mu-minus momentum density",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 forward number",
+      "error": 4.674038933671909e-13,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 forward electron_energy",
+      "error": 2.8199664825478976e-13,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 forward antinue_energy",
+      "error": 5.440092820663267e-13,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 forward numu_energy",
+      "error": 5.644373857194296e-13,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 forward parent_energy",
+      "error": 4.587441537751147e-13,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 backward number",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 backward electron_energy",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 backward antinue_energy",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 backward numu_energy",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement0 backward parent_energy",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 forward number",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 forward electron_energy",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 forward antinue_energy",
+      "error": 3.1086244689504383e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 forward numu_energy",
+      "error": 2.886579864025407e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 forward parent_energy",
+      "error": 2.220446049250313e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 backward number",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 backward electron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 backward antinue_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 backward numu_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked refinement1 backward parent_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked per-event energy closure",
+      "error": 4.1354884586199235e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked independently accumulated total energy",
+      "error": -7.35623304131594e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked net vs separate gross",
+      "error": 2.49841638762449e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked per-event energy closure",
+      "error": 4.2999678347815358e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked independently accumulated total energy",
+      "error": -7.356233041319298e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked net vs separate gross",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked per-event energy closure",
+      "error": 4.711816576607641e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked independently accumulated total energy",
+      "error": -7.356233041319315e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked net vs separate gross",
+      "error": -8.744457356689803e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "unblocked total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "unblocked moving time-dilated lifetime",
+      "error": -6.661338147750939e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "unblocked Doppler electron_energy",
+      "error": -1.2212453270876722e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "unblocked Doppler antinue_energy",
+      "error": -1.2212453270876722e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "unblocked Doppler numu_energy",
+      "error": -1.6653345369377348e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "unblocked parent energy",
+      "error": -5.551115123125783e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "unblocked independent phase forward number",
+      "error": 4.440892098500626e-15,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "unblocked independent phase forward electron_energy",
+      "error": 6.661338147750939e-15,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "unblocked independent phase forward antinue_energy",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "unblocked independent phase forward numu_energy",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "unblocked independent phase backward number",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "unblocked independent phase backward electron_energy",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "unblocked independent phase backward antinue_energy",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "unblocked independent phase backward numu_energy",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "unblocked extended forward number",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked extended forward electron_energy",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked extended forward antinue_energy",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked extended forward numu_energy",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked extended backward number",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked extended backward electron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked extended backward antinue_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "unblocked extended backward numu_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 forward number",
+      "error": -0.00011610178566656693,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 forward electron_energy",
+      "error": -2.4577322747521002e-05,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 forward antinue_energy",
+      "error": -0.00019878917965809872,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 forward numu_energy",
+      "error": -0.0001414481372786769,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 forward parent_energy",
+      "error": -0.00011526034381370565,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 backward number",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 backward electron_energy",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 backward antinue_energy",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 backward numu_energy",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement0 backward parent_energy",
+      "error": 0.0,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 forward number",
+      "error": 2.0391783888129567e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 forward electron_energy",
+      "error": 1.062205219781731e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 forward antinue_energy",
+      "error": 2.2709471225734745e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 forward numu_energy",
+      "error": 2.45356565731214e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 forward parent_energy",
+      "error": 1.8895300177845797e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 backward number",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 backward electron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 backward antinue_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 backward numu_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent refinement1 backward parent_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent per-event energy closure",
+      "error": 4.1354884586199235e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent independently accumulated total energy",
+      "error": -3.971216635592603e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent net vs separate gross",
+      "error": 4.046170341582691e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent per-event energy closure",
+      "error": 4.2999678347815358e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent independently accumulated total energy",
+      "error": 7.94150281788769e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent net vs separate gross",
+      "error": -1.348564108030856e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent per-event energy closure",
+      "error": 4.711816576607641e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent independently accumulated total energy",
+      "error": -1.9853794558989132e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent net vs separate gross",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "transparent total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "transparent independent phase forward number",
+      "error": -1.1790441956094355e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "transparent independent phase forward electron_energy",
+      "error": -3.651363211787384e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "transparent independent phase forward antinue_energy",
+      "error": -1.994869547328193e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "transparent independent phase forward numu_energy",
+      "error": -1.3169879742314095e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "transparent independent phase backward number",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "transparent independent phase backward electron_energy",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "transparent independent phase backward antinue_energy",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "transparent independent phase backward numu_energy",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "transparent extended forward number",
+      "error": -1.1750792339171312e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent extended forward electron_energy",
+      "error": -3.651647428881688e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent extended forward antinue_energy",
+      "error": -1.983475772515675e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent extended forward numu_energy",
+      "error": -1.3123109599000315e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent extended backward number",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent extended backward electron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent extended backward antinue_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "transparent extended backward numu_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "FDpartners refinement0 forward number",
+      "error": -0.001654832986095478,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement0 forward electron_energy",
+      "error": -0.0025725956349874624,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement0 forward antinue_energy",
+      "error": -0.00019177026068750713,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "FDpartners refinement0 forward numu_energy",
+      "error": -0.0017886180011836839,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement0 forward parent_energy",
+      "error": -0.0016467581247318064,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement0 backward number",
+      "error": -0.0016548329860972544,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement0 backward electron_energy",
+      "error": -0.002572595634990127,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement0 backward antinue_energy",
+      "error": -0.00019177026068906144,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "FDpartners refinement0 backward numu_energy",
+      "error": -0.0017886180011863484,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement0 backward parent_energy",
+      "error": -0.0016467581247340268,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 forward number",
+      "error": 0.00013380443171362444,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 forward electron_energy",
+      "error": 0.0001927069165066353,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 forward antinue_energy",
+      "error": 0.00013703225864425406,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 forward numu_energy",
+      "error": 0.00012065371902059141,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 forward parent_energy",
+      "error": 0.00014040407483673079,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 backward number",
+      "error": 0.00013380443171251422,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 backward electron_energy",
+      "error": 0.00019270691650508098,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 backward antinue_energy",
+      "error": 0.00013703225864380997,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 backward numu_energy",
+      "error": 0.00012065371901970323,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners refinement1 backward parent_energy",
+      "error": 0.0001404040748358426,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "FDpartners per-event energy closure",
+      "error": 4.1354884586199235e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independently accumulated total energy",
+      "error": 4.025139698475397e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners net vs separate gross",
+      "error": 2.8132724929005805e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "FDpartners total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "FDpartners charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "FDpartners per-event energy closure",
+      "error": 4.2999678347815358e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independently accumulated total energy",
+      "error": -1.0044867827060259e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners net vs separate gross",
+      "error": -7.020603104142495e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "FDpartners total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "FDpartners charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "FDpartners per-event energy closure",
+      "error": 4.711816576607641e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independently accumulated total energy",
+      "error": 1.2055533800921246e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners net vs separate gross",
+      "error": 7.02154249195113e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FDpartners total Le",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "FDpartners total Lmu",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "FDpartners charge",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "independent F/B affinity number",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "independent F/B affinity electron_energy",
+      "error": -2.220446049250313e-15,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "independent F/B affinity antinue_energy",
+      "error": -1.3322676295501878e-15,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "independent F/B affinity numu_energy",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "FD total entropy identity",
+      "error": -2.1094237467877974e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "FD nonnegative total entropy",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independent phase forward number",
+      "error": 1.8379195321216457e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independent phase forward electron_energy",
+      "error": 2.0906755082705786e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independent phase forward antinue_energy",
+      "error": 1.0831560071089541e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independent phase forward numu_energy",
+      "error": 1.81220770389956e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independent phase backward number",
+      "error": 1.8379195321216457e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independent phase backward electron_energy",
+      "error": 2.0906754993887944e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independent phase backward antinue_energy",
+      "error": 1.0831560093294001e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "FDpartners independent phase backward numu_energy",
+      "error": 1.8122077016791138e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "FDpartners extended forward number",
+      "error": -6.786201971475947e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "FDpartners extended forward electron_energy",
+      "error": -8.986730118953901e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "FDpartners extended forward antinue_energy",
+      "error": 5.372854732232923e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "FDpartners extended forward numu_energy",
+      "error": -9.99502586140899e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "FDpartners extended backward number",
+      "error": -6.786201953712379e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "FDpartners extended backward electron_energy",
+      "error": -8.986730110072116e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "FDpartners extended backward antinue_energy",
+      "error": 5.372854747776046e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "FDpartners extended backward numu_energy",
+      "error": -9.995025852527206e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "LTE positive events",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "LTE independently evaluated net",
+      "error": -7.958201631793831e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "LTE separate F/B",
+      "error": -8.881784197001252e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "inverse dominated net sign",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "inverse H theorem",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bad material T",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NaN material",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bad radiation T",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "negative tail",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "boolean order",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nonFD object",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bad phase",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "hotter partner domain",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "EOS": {
+        "temperature": 2.0,
+        "nB": 0.0001,
+        "Ye": 0.29,
+        "Ymu": 0.01,
+        "neutron": {
+          "temperature": 2.0,
+          "mass": 939.56542052,
+          "chemical_potential": 933.6807508996585,
+          "kinetic_chemical_potential": -5.8846696203414695,
+          "density": 6.999999999999623e-05,
+          "kinetic_energy_density": 0.00021248201004120626,
+          "energy_density": 0.06598206144643766,
+          "pressure": 0.00014127784403679964,
+          "entropy_density": 0.0003828433637509434,
+          "free_energy_density": 0.06521637471893577,
+          "cv_fixed_density": 0.00010507535098012023,
+          "dn_dmu_fixed_temperature": 3.437284418587835e-05,
+          "dn_dtemperature_fixed_mu": 0.000153777082169221,
+          "dmu_dtemperature_fixed_density": -4.473795689924268,
+          "log_antiparticle_density": -943.2295066763497,
+          "antiparticle_density": 0.0,
+          "antiparticle_density_representable": false,
+          "log_antiparticle_to_particle_ratio": -933.6624913604347
+        },
+        "proton": {
+          "temperature": 2.0,
+          "mass": 938.27208816,
+          "chemical_potential": 930.6761152463529,
+          "kinetic_chemical_potential": -7.595972913647074,
+          "density": 2.9999999999998788e-05,
+          "kinetic_energy_density": 9.059369002593922e-05,
+          "energy_density": 0.0282387563348248,
+          "pressure": 6.023532550397495e-05,
+          "entropy_density": 0.00018935410146965855,
+          "free_energy_density": 0.027860048131885484,
+          "cv_fixed_density": 4.515019143660267e-05,
+          "dn_dmu_fixed_temperature": 1.4883278245642348e-05,
+          "dn_dtemperature_fixed_mu": 7.908654658109439e-05,
+          "dmu_dtemperature_fixed_density": -5.313785395650317,
+          "log_antiparticle_density": -941.0825833850815,
+          "antiparticle_density": 0.0,
+          "antiparticle_density_representable": false,
+          "log_antiparticle_to_particle_ratio": -930.6682702087794
+        },
+        "electron": {
+          "temperature": 2.0,
+          "chemical_potential": 18.061043957076254,
+          "mass": 0.51099895069,
+          "net_density": 2.8999999999999987e-05,
+          "particle_density": 2.900002485802661e-05,
+          "antiparticle_density": 2.4858026624348556e-11,
+          "energy_density": 0.0004378087622415676,
+          "pressure": 0.000145742207546961,
+          "entropy_density": 2.989034751665915e-05,
+          "free_energy_density": 0.0003780280672082493,
+          "cv_fixed_net_density": 2.869560467147328e-05,
+          "dn_dmu_fixed_temperature": 4.473375353948822e-06,
+          "dn_dtemperature_fixed_mu": 3.134167691224607e-06,
+          "dmu_dtemperature_fixed_net_density": -0.7006270306510174
+        },
+        "muon": {
+          "temperature": 2.0,
+          "chemical_potential": 97.74668143468162,
+          "mass": 105.6583755,
+          "net_density": 9.999999999999862e-07,
+          "particle_density": 9.999999999999862e-07,
+          "antiparticle_density": 3.564706672685924e-49,
+          "energy_density": 0.00010873827942670205,
+          "pressure": 2.006603369434402e-06,
+          "entropy_density": 6.499100680728025e-06,
+          "free_energy_density": 9.5740078065246e-05,
+          "cv_fixed_net_density": 1.5663394344616696e-06,
+          "dn_dmu_fixed_temperature": 4.967208003364982e-07,
+          "dn_dtemperature_fixed_mu": 2.7324220705216665e-06,
+          "dmu_dtemperature_fixed_net_density": -5.500921380120615
+        },
+        "energy_density": 0.09476736482293073,
+        "pressure": 0.00034926198045717,
+        "entropy_density": 0.0006085869134179892,
+        "free_energy_density": 0.09355019099609475,
+        "cv_fixed_composition": 0.00018048748652265786,
+        "zeta_e": 15.056408303770581,
+        "zeta_mu": 94.74204578137596
+      },
+      "radiation": {
+        "temperature": 2.0,
+        "mu_anti_e": 15.0,
+        "mu_nu_mu": 63.38563747760537
+      }
+    },
+    {
+      "anchors": {
+        "n_mu_minus": 9.999999999999866e-07,
+        "n_mu_plus": 3.564706672685924e-49,
+        "mean_m_over_E": 0.9721753607540572,
+        "proper_vacuum": {
+          "rate": 457089.03163053177,
+          "lifetime": 2.1877575938166616e-06,
+          "energy_e": 16905099.02855368,
+          "energy_anti_e": 14487908.079899423,
+          "energy_nu_mu": 16902277.432497006,
+          "fourmomentum_residual": 6.72490687461024e-17
+        }
+      }
+    },
+    {
+      "label": "unblocked",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.4443706942223364,
+            "log": -0.811096167985305,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.9050990285582,
+            "log": 2.827615294087572,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 14.487908079907093,
+            "log": 2.6733143759935567,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 16.902277432506292,
+            "log": 2.8274483721697052,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 48.295284540971586,
+            "log": 3.877333927341237,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.4443706942223365,
+          "electron_energy": 16.9050990285582,
+          "antinue_energy": 14.487908079907092,
+          "numu_energy": 16.902277432506292,
+          "parent_energy": 48.29528454097158
+        },
+        "ledgers": {
+          "material_electron_number": 0.4443706942223365,
+          "material_muon_number": -0.4443706942223365,
+          "antinue_number": 0.4443706942223365,
+          "numu_number": 0.4443706942223365,
+          "material_energy": -31.39018551241338,
+          "radiation_energy": 31.39018551241338,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 12,
+          "pair_order": 16,
+          "pair_angle": 8,
+          "orientation_order": 6,
+          "azimuth_order": 8,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": false
+        },
+        "max_event_energy_residual": 4.1354884586199235e-16,
+        "evaluations": 221184,
+        "runtime_seconds": 0.030026374850422144,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "unblocked",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.4443706942221295,
+            "log": -0.8110961679857707,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.90509902855348,
+            "log": 2.8276152940872925,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 14.487908079899256,
+            "log": 2.673314375993016,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 16.902277432496803,
+            "log": 2.827448372169144,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 48.29528454094954,
+            "log": 3.8773339273407803,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.4443706942221295,
+          "electron_energy": 16.90509902855349,
+          "antinue_energy": 14.487908079899249,
+          "numu_energy": 16.902277432496803,
+          "parent_energy": 48.29528454094954
+        },
+        "ledgers": {
+          "material_electron_number": 0.4443706942221295,
+          "material_muon_number": -0.4443706942221295,
+          "antinue_number": 0.4443706942221295,
+          "numu_number": 0.4443706942221295,
+          "material_energy": -31.39018551239605,
+          "radiation_energy": 31.39018551239605,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 20,
+          "pair_order": 24,
+          "pair_angle": 12,
+          "orientation_order": 10,
+          "azimuth_order": 16,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": false
+        },
+        "max_event_energy_residual": 4.2999678347815358e-16,
+        "evaluations": 2764800,
+        "runtime_seconds": 0.275518209207803,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "unblocked",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.44437069422212866,
+            "log": -0.8110961679857724,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.905099028553433,
+            "log": 2.82761529408729,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 14.487908079899212,
+            "log": 2.6733143759930127,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 16.902277432496753,
+            "log": 2.827448372169141,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 48.29528454094943,
+            "log": 3.877333927340778,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.44437069422212827,
+          "electron_energy": 16.905099028553437,
+          "antinue_energy": 14.487908079899222,
+          "numu_energy": 16.902277432496756,
+          "parent_energy": 48.29528454094941
+        },
+        "ledgers": {
+          "material_electron_number": 0.44437069422212827,
+          "material_muon_number": -0.44437069422212827,
+          "antinue_number": 0.44437069422212827,
+          "numu_number": 0.44437069422212827,
+          "material_energy": -31.39018551239598,
+          "radiation_energy": 31.39018551239598,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 28,
+          "pair_order": 32,
+          "pair_angle": 20,
+          "orientation_order": 16,
+          "azimuth_order": 24,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": false
+        },
+        "max_event_energy_residual": 4.711816576607641e-16,
+        "evaluations": 20643840,
+        "runtime_seconds": 1.9630077090114355,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "unblocked_alternate_dalitz",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.44437069422213066,
+            "log": -0.811096167985768,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.905099028553547,
+            "log": 2.8276152940872965,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 14.487908079899269,
+            "log": 2.6733143759930167,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 16.902277432496813,
+            "log": 2.8274483721691444,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 48.295284540949645,
+            "log": 3.8773339273407825,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.4443706942221303,
+          "electron_energy": 16.90509902855354,
+          "antinue_energy": 14.487908079899274,
+          "numu_energy": 16.90227743249681,
+          "parent_energy": 48.29528454094963
+        },
+        "ledgers": {
+          "material_electron_number": 0.4443706942221303,
+          "material_muon_number": -0.4443706942221303,
+          "antinue_number": 0.4443706942221303,
+          "numu_number": 0.4443706942221303,
+          "material_energy": -31.390185512396084,
+          "radiation_energy": 31.390185512396084,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 28,
+          "pair_order": 32,
+          "pair_angle": 20,
+          "orientation_order": 16,
+          "azimuth_order": 24,
+          "tail": 50.0,
+          "phase": "dalitz",
+          "electron_blocking": false
+        },
+        "max_event_energy_residual": 4.331260472295157e-16,
+        "evaluations": 20643840,
+        "runtime_seconds": 1.9343359998892993,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "unblocked_extended",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.4443706942221289,
+            "log": -0.811096167985772,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.90509902855346,
+            "log": 2.8276152940872916,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 14.487908079899237,
+            "log": 2.6733143759930145,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 16.902277432496774,
+            "log": 2.827448372169142,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 48.29528454094943,
+            "log": 3.877333927340778,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.44437069422212905,
+          "electron_energy": 16.905099028553455,
+          "antinue_energy": 14.487908079899231,
+          "numu_energy": 16.902277432496767,
+          "parent_energy": 48.29528454094947
+        },
+        "ledgers": {
+          "material_electron_number": 0.44437069422212905,
+          "material_muon_number": -0.44437069422212905,
+          "antinue_number": 0.44437069422212905,
+          "numu_number": 0.44437069422212905,
+          "material_energy": -31.390185512396,
+          "radiation_energy": 31.390185512396,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 32,
+          "pair_order": 40,
+          "pair_angle": 24,
+          "orientation_order": 20,
+          "azimuth_order": 32,
+          "tail": 70.0,
+          "phase": "pair",
+          "electron_blocking": false
+        },
+        "max_event_energy_residual": 5.545086959892804e-16,
+        "evaluations": 58982400,
+        "runtime_seconds": 6.78413570788689,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "transparent",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.41158290342426024,
+            "log": -0.8877448127550382,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.422979191704126,
+            "log": 2.7986815243330128,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 13.040041324732803,
+            "log": 2.568024725568087,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 15.267776173912216,
+            "log": 2.7257444749584074,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 44.73079669034914,
+            "log": 3.800662228382701,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.4115829034242604,
+          "electron_energy": 16.422979191704123,
+          "antinue_energy": 13.040041324732801,
+          "numu_energy": 15.26777617391221,
+          "parent_energy": 44.730796690349116
+        },
+        "ledgers": {
+          "material_electron_number": 0.4115829034242604,
+          "material_muon_number": -0.4115829034242604,
+          "antinue_number": 0.4115829034242604,
+          "numu_number": 0.4115829034242604,
+          "material_energy": -28.30781749864501,
+          "radiation_energy": 28.30781749864501,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 12,
+          "pair_order": 16,
+          "pair_angle": 8,
+          "orientation_order": 6,
+          "azimuth_order": 8,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.1354884586199235e-16,
+        "evaluations": 221184,
+        "runtime_seconds": 0.08144704205915332,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "transparent",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.4116315338713412,
+            "log": -0.887626665052728,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.42340027948763,
+            "log": 2.7987071641624435,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 13.04266367839031,
+            "log": 2.568225805453477,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 15.269973543717553,
+            "log": 2.7258883866630645,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 44.7360375015955,
+            "log": 3.8007793848977314,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.41163153387134116,
+          "electron_energy": 16.423400279487637,
+          "antinue_energy": 13.042663678390314,
+          "numu_energy": 15.269973543717557,
+          "parent_energy": 44.73603750159551
+        },
+        "ledgers": {
+          "material_electron_number": 0.41163153387134116,
+          "material_muon_number": -0.41163153387134116,
+          "antinue_number": 0.41163153387134116,
+          "numu_number": 0.41163153387134116,
+          "material_energy": -28.31263722210787,
+          "radiation_energy": 28.31263722210787,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 20,
+          "pair_order": 24,
+          "pair_angle": 12,
+          "orientation_order": 10,
+          "azimuth_order": 16,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.2999678347815358e-16,
+        "evaluations": 2764800,
+        "runtime_seconds": 0.3196476250886917,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "transparent",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.4116306944829249,
+            "log": -0.8876287042290376,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.423382834484656,
+            "log": 2.7987061019577877,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 13.042634059258024,
+            "log": 2.568223534508933,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 15.269936077926802,
+            "log": 2.7258859331004173,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 44.735952971669484,
+            "log": 3.800777495369499,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.4116306944829249,
+          "electron_energy": 16.42338283448466,
+          "antinue_energy": 13.042634059258027,
+          "numu_energy": 15.269936077926806,
+          "parent_energy": 44.735952971669484
+        },
+        "ledgers": {
+          "material_electron_number": 0.4116306944829249,
+          "material_muon_number": -0.4116306944829249,
+          "antinue_number": 0.4116306944829249,
+          "numu_number": 0.4116306944829249,
+          "material_energy": -28.312570137184835,
+          "radiation_energy": 28.312570137184835,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 28,
+          "pair_order": 32,
+          "pair_angle": 20,
+          "orientation_order": 16,
+          "azimuth_order": 24,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.711816576607641e-16,
+        "evaluations": 20643840,
+        "runtime_seconds": 2.6414578328840435,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "transparent_alternate_dalitz",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.4116306896296171,
+            "log": -0.8876287160194796,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.42338277451692,
+            "log": 2.7987060983064245,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 13.042633799074489,
+            "log": 2.5682235145602372,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 15.269935876823581,
+            "log": 2.7258859199305374,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 44.73595245041499,
+            "log": 3.800777483717696,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.4116306896296168,
+          "electron_energy": 16.42338277451692,
+          "antinue_energy": 13.042633799074492,
+          "numu_energy": 15.269935876823583,
+          "parent_energy": 44.73595245041497
+        },
+        "ledgers": {
+          "material_electron_number": 0.4116306896296168,
+          "material_muon_number": -0.4116306896296168,
+          "antinue_number": 0.4116306896296168,
+          "numu_number": 0.4116306896296168,
+          "material_energy": -28.312569675898075,
+          "radiation_energy": 28.312569675898075,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 28,
+          "pair_order": 32,
+          "pair_angle": 20,
+          "orientation_order": 16,
+          "azimuth_order": 24,
+          "tail": 50.0,
+          "phase": "dalitz",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.331260472295157e-16,
+        "evaluations": 20643840,
+        "runtime_seconds": 2.364717666991055,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "transparent_extended",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.4116306896459381,
+            "log": -0.88762871597983,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 16.423382774512252,
+            "log": 2.7987060983061403,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 13.042633800560537,
+            "log": 2.568223514674175,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 15.269935877537758,
+            "log": 2.7258859199773076,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 44.73595245261055,
+            "log": 3.8007774837667743,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "electron_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "antinue_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "numu_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          },
+          "parent_energy": {
+            "value": 0.0,
+            "log": null,
+            "representable": true,
+            "reason": "exact_zero"
+          }
+        },
+        "net": {
+          "number": 0.4116306896459381,
+          "electron_energy": 16.42338277451225,
+          "antinue_energy": 13.04263380056054,
+          "numu_energy": 15.269935877537744,
+          "parent_energy": 44.73595245261054
+        },
+        "ledgers": {
+          "material_electron_number": 0.4116306896459381,
+          "material_muon_number": -0.4116306896459381,
+          "antinue_number": 0.4116306896459381,
+          "numu_number": 0.4116306896459381,
+          "material_energy": -28.312569678098285,
+          "radiation_energy": 28.312569678098285,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": null,
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": null,
+        "controls": {
+          "parent_order": 32,
+          "pair_order": 40,
+          "pair_angle": 24,
+          "orientation_order": 20,
+          "azimuth_order": 32,
+          "tail": 70.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 5.545086959892804e-16,
+        "evaluations": 58982400,
+        "runtime_seconds": 7.669159666867927,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "FDpartners",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.004051265835208872,
+            "log": -5.508725894794435,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.10338969398213486,
+            "log": -2.2692499932279886,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.09118670848805398,
+            "log": -2.3948461327855615,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.2584688318082827,
+            "log": -1.3529801655786973,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.4530452342784716,
+            "log": -0.7917633035649103,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.002114946219806985,
+            "log": -6.158725894794434,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.05397415310398739,
+            "log": -2.9192499932279876,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.04760363606292654,
+            "log": -3.04484613278556,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.13493256206986742,
+            "log": -2.0029801655786965,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.23651035123678144,
+            "log": -1.4417633035649093,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": 0.0019363196154018885,
+          "electron_energy": 0.049415540878147465,
+          "antinue_energy": 0.043583072425127434,
+          "numu_energy": 0.12353626973841517,
+          "parent_energy": 0.2165348830416901
+        },
+        "ledgers": {
+          "material_electron_number": 0.0019363196154018885,
+          "material_muon_number": -0.0019363196154018885,
+          "antinue_number": 0.0019363196154018885,
+          "numu_number": 0.0019363196154018885,
+          "material_energy": -0.1671193421635426,
+          "radiation_energy": 0.1671193421635426,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": {
+          "material": -0.006411239624925735,
+          "radiation": 0.007669847374936964,
+          "total": 0.0012586077500112286,
+          "units": "kB fm^-3 s^-1; prescribed FD baths; no grid entropy claim"
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": {
+          "temperature": 2.0,
+          "mu_anti_e": 15.0,
+          "mu_nu_mu": 63.38563747760537
+        },
+        "controls": {
+          "parent_order": 12,
+          "pair_order": 16,
+          "pair_angle": 8,
+          "orientation_order": 6,
+          "azimuth_order": 8,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.1354884586199235e-16,
+        "evaluations": 221184,
+        "runtime_seconds": 0.09158887504599988,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "FDpartners",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.0040585240920741,
+            "log": -5.506935895579086,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.10367633517859266,
+            "log": -2.266481394431605,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.09121669665837366,
+            "log": -2.3945173212640243,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.25896320328112404,
+            "log": -1.351069299649473,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.4538562351180906,
+            "log": -0.7899747938245034,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.002118735362150126,
+            "log": -6.156935895579084,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.05412379293004398,
+            "log": -2.9164813944316026,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.04761929126059477,
+            "log": -3.044517321264022,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.13519064660941563,
+            "log": -2.001069299649471,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.23693373080005448,
+            "log": -1.439974793824501,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": 0.0019397887299239737,
+          "electron_energy": 0.04955254224854869,
+          "antinue_energy": 0.04359740539777889,
+          "numu_energy": 0.12377255667170846,
+          "parent_energy": 0.21692250431803597
+        },
+        "ledgers": {
+          "material_electron_number": 0.0019397887299239737,
+          "material_muon_number": -0.0019397887299239737,
+          "antinue_number": 0.0019397887299239737,
+          "numu_number": 0.0019397887299239737,
+          "material_energy": -0.16736996206948734,
+          "radiation_energy": 0.16736996206948734,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": {
+          "material": -0.006398330276810513,
+          "radiation": 0.007659192951261093,
+          "total": 0.0012608626744505802,
+          "units": "kB fm^-3 s^-1; prescribed FD baths; no grid entropy claim"
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": {
+          "temperature": 2.0,
+          "mu_anti_e": 15.0,
+          "mu_nu_mu": 63.38563747760537
+        },
+        "controls": {
+          "parent_order": 20,
+          "pair_order": 24,
+          "pair_angle": 12,
+          "orientation_order": 10,
+          "azimuth_order": 16,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.2999678347815358e-16,
+        "evaluations": 2764800,
+        "runtime_seconds": 0.49089029198512435,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "FDpartners",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.00405798111621694,
+            "log": -5.507069691059785,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.10365635988110368,
+            "log": -2.2666740827825187,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.09120419874102234,
+            "log": -2.394654344134606,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.2589319621769141,
+            "log": -1.351189946090419,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.4537925207990399,
+            "log": -0.7901151880436106,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0021184519038970145,
+            "log": -6.157069691059782,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.05411336491035039,
+            "log": -2.916674082782515,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.047612766775623226,
+            "log": -3.0446543441346035,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.1351743373229016,
+            "log": -2.001189946090416,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.2369004690088751,
+            "log": -1.4401151880436074,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": 0.0019395292123199261,
+          "electron_energy": 0.04954299497075329,
+          "antinue_energy": 0.04359143196539911,
+          "numu_energy": 0.12375762485401248,
+          "parent_energy": 0.21689205179016496
+        },
+        "ledgers": {
+          "material_electron_number": 0.0019395292123199261,
+          "material_muon_number": -0.0019395292123199261,
+          "antinue_number": 0.0019395292123199261,
+          "numu_number": 0.0019395292123199261,
+          "material_energy": -0.1673490568194116,
+          "radiation_energy": 0.1673490568194116,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": {
+          "material": -0.006398217564630229,
+          "radiation": 0.007658911552638176,
+          "total": 0.0012606939880079465,
+          "units": "kB fm^-3 s^-1; prescribed FD baths; no grid entropy claim"
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": {
+          "temperature": 2.0,
+          "mu_anti_e": 15.0,
+          "mu_nu_mu": 63.38563747760537
+        },
+        "controls": {
+          "parent_order": 28,
+          "pair_order": 32,
+          "pair_angle": 20,
+          "orientation_order": 16,
+          "azimuth_order": 24,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.711816576607641e-16,
+        "evaluations": 20643840,
+        "runtime_seconds": 3.000825708033517,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "FDpartners_alternate_dalitz",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.004057981862041216,
+            "log": -5.507069507267849,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.10365638155228497,
+            "log": -2.2666738737149896,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.09120420861985991,
+            "log": -2.3946542358190115,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.25893200910076375,
+            "log": -1.3511897648696651,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.45379259927290877,
+            "log": -0.7901150151146652,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0021184522932514278,
+            "log": -6.157069507267845,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.054113376223699015,
+            "log": -2.916673873714987,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.047612771932828674,
+            "log": -3.0446542358190083,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.13517436181929912,
+            "log": -2.001189764869662,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.23690050997582668,
+            "log": -1.4401150151146629,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": 0.0019395295687897887,
+          "electron_energy": 0.04954300532858593,
+          "antinue_energy": 0.043591436687031235,
+          "numu_energy": 0.12375764728146466,
+          "parent_energy": 0.21689208929708187
+        },
+        "ledgers": {
+          "material_electron_number": 0.0019395295687897887,
+          "material_muon_number": -0.0019395295687897887,
+          "antinue_number": 0.0019395295687897887,
+          "numu_number": 0.0019395295687897887,
+          "material_energy": -0.1673490839684959,
+          "radiation_energy": 0.1673490839684959,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": {
+          "material": -0.006398216936408269,
+          "radiation": 0.007658911156121634,
+          "total": 0.0012606942197133653,
+          "units": "kB fm^-3 s^-1; prescribed FD baths; no grid entropy claim"
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": {
+          "temperature": 2.0,
+          "mu_anti_e": 15.0,
+          "mu_nu_mu": 63.38563747760537
+        },
+        "controls": {
+          "parent_order": 28,
+          "pair_order": 32,
+          "pair_angle": 20,
+          "orientation_order": 16,
+          "azimuth_order": 24,
+          "tail": 50.0,
+          "phase": "dalitz",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.331260472295157e-16,
+        "evaluations": 20643840,
+        "runtime_seconds": 3.1103276249486953,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "FDpartners_extended",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.004057978362388995,
+            "log": -5.507070369680212,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.10365626672793055,
+            "log": -2.2666749814559344,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.09120424774371341,
+            "log": -2.3946538068492775,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.25893170337374827,
+            "log": -1.3511909455935047,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.4537922178453922,
+            "log": -0.7901158556477137,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0021184504662727695,
+            "log": -6.157070369680207,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.05411331628012981,
+            "log": -2.91667498145593,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.04761279235727123,
+            "log": -3.044653806849273,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.13517420221580198,
+            "log": -2.0011909455935006,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.23690031085320307,
+            "log": -1.4401158556477092,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": 0.0019395278961162276,
+          "electron_energy": 0.04954295044780075,
+          "antinue_energy": 0.04359145538644218,
+          "numu_energy": 0.12375750115794625,
+          "parent_energy": 0.21689190699218924
+        },
+        "ledgers": {
+          "material_electron_number": 0.0019395278961162276,
+          "material_muon_number": -0.0019395278961162276,
+          "antinue_number": 0.0019395278961162276,
+          "numu_number": 0.0019395278961162276,
+          "material_energy": -0.16734895654438842,
+          "radiation_energy": 0.16734895654438842,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": {
+          "material": -0.006398219868384028,
+          "radiation": 0.00765891300085958,
+          "total": 0.0012606931324755516,
+          "units": "kB fm^-3 s^-1; prescribed FD baths; no grid entropy claim"
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": {
+          "temperature": 2.0,
+          "mu_anti_e": 15.0,
+          "mu_nu_mu": 63.38563747760537
+        },
+        "controls": {
+          "parent_order": 32,
+          "pair_order": 40,
+          "pair_angle": 24,
+          "orientation_order": 20,
+          "azimuth_order": 32,
+          "tail": 70.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 5.545086959892804e-16,
+        "evaluations": 58982400,
+        "runtime_seconds": 9.724115292076021,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "LTE",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.002962365476549452,
+            "log": -5.821767182311575,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.07469859550870889,
+            "log": -2.5942939887776992,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.065670578112932,
+            "log": -2.7231042755146393,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.19202410498160266,
+            "log": -1.6501343680555123,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.33239327860324347,
+            "log": -1.1014364370138208,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0029623654765494546,
+            "log": -5.821767182311574,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.07469859550870894,
+            "log": -2.5942939887776983,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.06567057811293206,
+            "log": -2.7231042755146384,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.19202410498160274,
+            "log": -1.6501343680555118,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.3323932786032439,
+            "log": -1.1014364370138194,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": -2.357510176944556e-18,
+          "electron_energy": -5.711815207588633e-17,
+          "antinue_energy": -5.775352953872488e-17,
+          "numu_energy": -1.5643028772684058e-16,
+          "parent_energy": -2.713019693414519e-16
+        },
+        "ledgers": {
+          "material_electron_number": -2.357510176944556e-18,
+          "material_muon_number": 2.357510176944556e-18,
+          "antinue_number": -2.357510176944556e-18,
+          "numu_number": -2.357510176944556e-18,
+          "material_energy": 2.1418381726556547e-16,
+          "radiation_energy": -2.1418381726556547e-16,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": {
+          "material": 1.3162057977898149e-17,
+          "radiation": -1.3162057977898149e-17,
+          "total": 0.0,
+          "units": "kB fm^-3 s^-1; prescribed FD baths; no grid entropy claim"
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": {
+          "temperature": 2.0,
+          "mu_anti_e": 15.0,
+          "mu_nu_mu": 64.68563747760537
+        },
+        "controls": {
+          "parent_order": 20,
+          "pair_order": 24,
+          "pair_angle": 12,
+          "orientation_order": 10,
+          "azimuth_order": 16,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.2999678347815358e-16,
+        "evaluations": 2764800,
+        "runtime_seconds": 0.5672898748889565,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    },
+    {
+      "label": "inverse_dominant",
+      "result": {
+        "forward": {
+          "number": {
+            "value": 0.002137570488027187,
+            "log": -6.148085380842259,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.05321734493796747,
+            "log": -2.933370903103078,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.046745943468195265,
+            "log": -3.06302779774603,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.140737487540239,
+            "log": -1.9608589143848114,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.24070077594640174,
+            "log": -1.42420071049078,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "backward": {
+          "number": {
+            "value": 0.0040946035447112375,
+            "log": -5.498085380842259,
+            "representable": true,
+            "reason": null
+          },
+          "electron_energy": {
+            "value": 0.10193999704039261,
+            "log": -2.2833709031030787,
+            "representable": true,
+            "reason": null
+          },
+          "antinue_energy": {
+            "value": 0.08954376330410344,
+            "log": -2.4130277977460306,
+            "representable": true,
+            "reason": null
+          },
+          "numu_energy": {
+            "value": 0.26958840355616215,
+            "log": -1.310858914384812,
+            "representable": true,
+            "reason": null
+          },
+          "parent_energy": {
+            "value": 0.46107216390065825,
+            "log": -0.7742007104907804,
+            "representable": true,
+            "reason": null
+          }
+        },
+        "net": {
+          "number": -0.001957033056684048,
+          "electron_energy": -0.04872265210242516,
+          "antinue_energy": -0.04279781983590815,
+          "numu_energy": -0.12885091601592313,
+          "parent_energy": -0.22037138795425645
+        },
+        "ledgers": {
+          "material_electron_number": -0.001957033056684048,
+          "material_muon_number": 0.001957033056684048,
+          "antinue_number": -0.001957033056684048,
+          "numu_number": -0.001957033056684048,
+          "material_energy": 0.17164873585183127,
+          "radiation_energy": -0.17164873585183127,
+          "electric_charge_rate": 0.0,
+          "Yp_number_rate": 0.0
+        },
+        "entropy": {
+          "material": 0.007850654582608155,
+          "radiation": -0.006578583095763521,
+          "total": 0.0012720714868446337,
+          "units": "kB fm^-3 s^-1; prescribed FD baths; no grid entropy claim"
+        },
+        "bath": {
+          "T": 2.0,
+          "mu_mu": 97.74668143468162,
+          "mu_e": 18.061043957076254
+        },
+        "radiation": {
+          "temperature": 2.0,
+          "mu_anti_e": 15.0,
+          "mu_nu_mu": 65.98563747760537
+        },
+        "controls": {
+          "parent_order": 20,
+          "pair_order": 24,
+          "pair_angle": 12,
+          "orientation_order": 10,
+          "azimuth_order": 16,
+          "tail": 50.0,
+          "phase": "pair",
+          "electron_blocking": true
+        },
+        "max_event_energy_residual": 4.2999678347815358e-16,
+        "evaluations": 2764800,
+        "runtime_seconds": 0.5266325830016285,
+        "units": {
+          "number": "fm^-3 s^-1",
+          "energy": "MeV fm^-3 s^-1"
+        }
+      }
+    }
+  ],
+  "runtime_seconds": 41.825522125000134
+}

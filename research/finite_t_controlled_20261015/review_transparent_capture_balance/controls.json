@@ -1,0 +1,146 @@
+{
+  "checks": [
+    {
+      "name": "material invalid nan",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid inf",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid -inf",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid True",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid False",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid np.True_",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid None",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid '0.5'",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid 0",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid 0.049",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid 0.901",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid 1",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "material invalid (0.5+0j)",
+      "passed": true,
+      "result": "Selected fixed-T balance admission .05<=Ye<=.9; not a certified rectangle"
+    },
+    {
+      "name": "refined invalid 0",
+      "passed": true,
+      "result": "Literal refined bool required"
+    },
+    {
+      "name": "refined invalid 1",
+      "passed": true,
+      "result": "Literal refined bool required"
+    },
+    {
+      "name": "refined invalid None",
+      "passed": true,
+      "result": "Literal refined bool required"
+    },
+    {
+      "name": "refined invalid np.True_",
+      "passed": true,
+      "result": "Literal refined bool required"
+    },
+    {
+      "name": "refined invalid 'fine'",
+      "passed": true,
+      "result": "Literal refined bool required"
+    },
+    {
+      "name": "refined invalid nan",
+      "passed": true,
+      "result": "Literal refined bool required"
+    },
+    {
+      "name": "absent independent acceptance blocks before EOS/source",
+      "passed": true,
+      "result": "Independent EC acceptance pending; scientific source join forbidden"
+    },
+    {
+      "name": "accepted false preexecution",
+      "passed": true,
+      "result": "Explicit source-matched EC independent acceptance required"
+    },
+    {
+      "name": "accepted integer preexecution",
+      "passed": true,
+      "result": "Explicit source-matched EC independent acceptance required"
+    },
+    {
+      "name": "wrong EC source hash preexecution",
+      "passed": true,
+      "result": "Explicit source-matched EC independent acceptance required"
+    },
+    {
+      "name": "changed review hash preexecution",
+      "passed": true,
+      "result": "Frozen EC review changed"
+    },
+    {
+      "name": "altered pinned EC rejected before EOS/source",
+      "passed": true,
+      "result": "Explicit source-matched EC independent acceptance required"
+    },
+    {
+      "name": "current source matched acceptance succeeds",
+      "passed": true,
+      "result": "source SHA/review SHA/upstream checks pass"
+    },
+    {
+      "name": "admitted endpoint finite 0.05",
+      "passed": true,
+      "result": "EOS only; no endpoint source/domain certificate"
+    },
+    {
+      "name": "admitted endpoint finite 0.9",
+      "passed": true,
+      "result": "EOS only; no endpoint source/domain certificate"
+    }
+  ],
+  "passed": 28,
+  "failed": []
+}

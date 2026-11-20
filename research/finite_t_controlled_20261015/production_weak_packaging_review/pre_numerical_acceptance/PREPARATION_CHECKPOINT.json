@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_PREPARATION_ONLY_WAITING_ROOT_NUMERICAL_ACCEPTANCE_SIGNAL",
+  "utc": "2026-10-16T05:54:54.603008+00:00",
+  "baseline_blobs": 71,
+  "overlays": 11,
+  "static_python39_ast_files": 8,
+  "all_author_paths_pinned": 207,
+  "candidate_manifest_sha256": "795975d51e75e47360822e70845b1eac5ba68df2f134877b7ed1e34ca339789d",
+  "full_manifest_sha256": "12404beabd3aaf98db37cb2c880ea061cc5d55edd1e813bf8ab8a9c162f11647",
+  "candidate_imports": false,
+  "wheel_build": false,
+  "physical_calls": false,
+  "acceptance": false,
+  "files": {
+    "BEFORE_PIN.json": "b46b718291d26adb99ffee08edd8b229ac2d62f526db7dae665f2c54ec906e2e",
+    "PREPARATION.json": "dba3151123da119cd7e1e2b74773bfa54ec9db0bdebb64e553b584b1fd51af91",
+    "README.diff": "2936b90555d1f7a1831cbddac8ae49f597ed1bc06a9f6e4686e87742611ca730",
+    "REVIEW_PLAN.md": "7f54ec9e934d434a9620612049825d7612b50a493e40b628e78053aaa532b1f5",
+    "preparation_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "preparation_stdout.txt": "2d342973f307e0f198284452f000b068ce352954d619f629c097170b2f7c9375",
+    "prepare.py": "de16c857384cceb7207424faaab6c822abbb2f586e6368c480db0d4e2f37062f"
+  }
+}

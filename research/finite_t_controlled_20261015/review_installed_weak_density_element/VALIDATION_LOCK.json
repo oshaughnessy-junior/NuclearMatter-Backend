@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-16T03:55:20.447366+00:00",
+  "candidate_imported": false,
+  "source_calls_made": false,
+  "author_lock_sha": "55b82078ca4aeb2195ebc000704904694e543f0c50cdefd6ff6f351b3d3f0391",
+  "method": "RK4 independently assembled equations and accumulators in SAME specificu/Ye variables asauthor midpoint; not an independentphysicalmodel/EOS/amplitude.",
+  "steps": [
+    2,
+    4
+  ],
+  "source_profile": "base",
+  "initial": {
+    "T": 2.0,
+    "nB": 1e-07,
+    "Ye": 0.3,
+    "photons": true
+  },
+  "density": {
+    "kind": "n0exp(k*t)",
+    "k": 0.25,
+    "duration": 0.002
+  },
+  "gates": {
+    "initial_forward_relative": 3e-09,
+    "EOS_inverse_absolute_u": 2e-10,
+    "source_energy_relative": 2e-09,
+    "source_density_relative": 3e-08,
+    "stage_energy_escape_or_work_scaled": 2e-08,
+    "stage_lepton_gross_scaled": 2e-08,
+    "EMpair_gross_scaled": 2e-08,
+    "independent_endpoint_quadrature_relative": 3e-05,
+    "material_entropy_change_scaled": 0.0001,
+    "time_abs_Ye": 2e-06,
+    "time_abs_T_MeV": 2e-06,
+    "time_escape_relative": 0.001,
+    "endpoint_source_refine_relative": 3e-06
+  },
+  "endpoint_source_profile": "fine",
+  "no_admission_expansion": true,
+  "prior_binding_review": "11295739f71fe779553a3289bfc445cd44906b551a7ea7809b08968ce6fa25c7",
+  "clarification": "PREPARATION_LOCK predatesauthorLOCK and incorrectlyanticipatedauthorTdotcoordinates. ActualauthorusesuMidpoint. Preserveinitialplan, correctindependenceclaimherebeforedata."
+}

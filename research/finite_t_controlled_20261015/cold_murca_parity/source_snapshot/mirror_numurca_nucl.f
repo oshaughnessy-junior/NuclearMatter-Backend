@@ -1,0 +1,125 @@
+      subroutine numurca_nucl(i,t,qmurca_nucl,tcn,tcp,isf,
+     1     mstn,mstp,kfe,kfm,kfn,kfp)
+
+c     DP: checked partially on March 30, 1993
+
+c**********************************************************************
+c     Rates and suppression factors from:                              
+c     Yakovlev & Levenfish, A&A 297 (1995): p. 717.                    
+c**********************************************************************
+      implicit real*8 (a-h,k-z)
+      parameter (isize=10000)
+      parameter (pi = 3.14159265d0)
+
+      dimension tcn(0:isize),tcp(0:isize)
+      dimension mstp(0:isize),mstn(0:isize)
+      dimension kfe(0:isize),kfm(0:isize),kfp(0:isize),kfn(0:isize)
+
+c     ***************************
+      fexp(x)=dexp(max(x,-7.d2))
+c     ***************************
+c     SINGLET PAIRING:
+      u_1s0(t)=dsqrt(1.d0-t)*(1.456d0-0.157d0/dsqrt(t)+1.764d0/t)
+c     Murca_n:  n+n -> n+p+e+nu
+      rmurca_n_p1s0(u)=
+     1     fexp(3.4370d0-dsqrt((3.4370d0)**2+(1.d0*u)**2))*0.5d0*
+     2     ((0.1477d0+dsqrt((0.8523d0)**2+(0.1175d0*u)**2))**7.5d0+
+     3     (0.1477d0+dsqrt((0.8523d0)**2+(0.1297d0*u)**2))**5.5d0)
+c     rmurca_n_n1s0(u)=rmurca_p_p1s0(u)
+      rmurca_n_n1s0(u)=
+     1     fexp(5.3390d0-dsqrt((5.3390d0)**2+(2.d0*u)**2))*
+     2     (0.2414d0+dsqrt((0.7586d0)**2+(0.1318d0*u)**2))**7.0d0
+c     Murca_p:  n+p -> p+p+e+nu
+      rmurca_p_p1s0(u)=
+     1     fexp(5.3390d0-dsqrt((5.3390d0)**2+(2.d0*u)**2))*
+     2     (0.2414d0+dsqrt((0.7586d0)**2+(0.1318d0*u)**2))**7.0d0
+c     rmurca_p_n1s0(u)=rmurca_n_p1s0(u)
+      rmurca_p_n1s0(u)=
+     1     fexp(3.4370d0-dsqrt((3.4370d0)**2+(1.d0*u)**2))*0.5d0*
+     2     ((0.1477d0+dsqrt((0.8523d0)**2+(0.1175d0*u)**2))**7.5d0+
+     3     (0.1477d0+dsqrt((0.8523d0)**2+(0.1297d0*u)**2))**5.5d0)
+c     ***************************
+c     TRIPLET PAIRING:
+      u_3p2B(t)=dsqrt(1.d0-t)*(0.7893d0+1.188d0/t)
+c     Murca_p:  n+p -> p+p+e+nu
+      rmurca_p_n3p2B(u)=
+     1     fexp(2.3980d0-dsqrt((2.3980d0)**2+(1.d0*u)**2))*0.5d0*
+     2     ((0.1612d0+dsqrt((0.8388d0)**2+(0.1117d0*u)**2))**7+
+     3     (0.1612d0+dsqrt((0.8388d0)**2+(0.1274d0*u)**2))**5)
+c     Murca_n:  n+n -> n+p+e+nu
+      rmurca_n_n3p2B(u,t)=39.1d0*t*fexp(-1.188d0/t)*rmurca_p_n3p2B(u)
+c     This `rmurca_p_n3p2B' is exact in the limit t<<1 and is only approximate
+c     when t~<1 since Yakovlev and Levenfish only calculated the t<<1 limit.
+
+c     u_3p2C(t)=dsqrt(1.d0-t**4)/t*
+c     1          (5.875d0-1.419d0*t**4+0.500d0*t**8)
+c     r_3p2C(u)=1.d0/0.d0
+c     ******************************
+c     ******************************
+      if (kfn(i)*kfp(i).eq.0.) then
+         qmurca_nucl=0.d0
+         return
+      end if
+c     ******************************
+
+      rmn=mstn(i)
+      rmp=mstp(i)
+
+c     Murca_n:  n+n -> n+p+e+nu:
+      alpha_n =1.76d0-0.63d0*(1.68d0/kfn(i))**2
+      beta_n  =0.68d0
+      qmurca_n=8.55d21 *rmn**3*rmp   * 
+     1     (kfe(i)/1.68d0 + 
+     1     kfm(i)/1.68d0) *
+     2     alpha_n * beta_n * (t/1.d9)**8 
+c     Murca_p:  n+p -> p+p+e+nu:
+      alpha_p =alpha_n
+      beta_p  =beta_n
+c     qmurca_p=8.55d21 *rmn   *rmp**3* 
+c     1         (kfe(i)/1.68d0 * (1.d0-kfe(i)/4.d0/kfp(i))+
+c     1          kfm(i)/1.68d0 * (1.d0-kfm(i)/4.d0/kfp(i)) ) *
+c     2         alpha_p * beta_p * (t/1.d9)**8
+      qmurca_p=8.55d21 *rmn   *rmp**3* 
+     1     (kfe(i)/1.68d0) * 
+     1     (kfe(i)+3.d0*kfp(i)-kfn(i))**2/(8.d0*kfe(i)*kfp(i)) * ! From Oleg
+     2     alpha_p * beta_p * (t/1.d9)**8
+
+c     **** effect of superfluidity :
+
+      if(t .lt. tcn(i))then
+         if (i.ge.isf) then
+            tt=t/tcn(i)
+            u=u_1s0(tt)
+            rmurca_n_n=rmurca_n_n1s0(u)
+            rmurca_p_n=rmurca_p_n1s0(u)
+         else
+            tt=t/tcn(i)
+            u=u_3p2B(tt)
+            rmurca_n_n=rmurca_n_n3p2B(u,tt)
+            rmurca_p_n=rmurca_p_n3p2B(u)
+         end if
+      else
+         rmurca_n_n=1.0d0
+         rmurca_p_n=1.0d0
+      end if
+
+      if(t .lt. tcp(i))then
+         tt=t/tcp(i)
+         u=u_1s0(tt)
+         rmurca_n_p=rmurca_n_p1s0(u)
+         rmurca_p_p=rmurca_p_p1s0(u)
+      else
+         rmurca_n_p=1.0d0
+         rmurca_p_p=1.0d0
+      end if
+
+      rmurca_n=min(rmurca_n_p,rmurca_n_n)
+      rmurca_p=min(rmurca_p_p,rmurca_p_n)
+
+      qmurca_n=rmurca_n*qmurca_n
+      qmurca_p=rmurca_p*qmurca_p
+      qmurca_nucl=qmurca_n+qmurca_p
+
+      return
+      end
+

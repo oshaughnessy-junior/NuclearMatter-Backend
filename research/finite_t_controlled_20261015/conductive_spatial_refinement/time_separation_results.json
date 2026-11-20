@@ -1,0 +1,835 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "coarse half-time energy 4",
+      "error": 5.991587434528434e-13,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "coarse half-time energy 8",
+      "error": 4.2193982682792175e-13,
+      "tolerance": 5e-10,
+      "passed": true
+    },
+    {
+      "name": "spatial residual unchanged under time-halving (4, 'L1')",
+      "error": 0.0004473406727409175,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "spatial residual unchanged under time-halving (4, 'L2')",
+      "error": 0.0004892297406552013,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "spatial residual unchanged under time-halving (4, 'Linf')",
+      "error": 0.0005508134394701412,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "spatial residual unchanged under time-halving (8, 'L1')",
+      "error": 0.000516115947561843,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "spatial residual unchanged under time-halving (8, 'L2')",
+      "error": 0.0005198535994159701,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "spatial residual unchanged under time-halving (8, 'Linf')",
+      "error": 0.0006118256019631859,
+      "tolerance": 0.005,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "run": {
+        "theta": [
+          1.0355214786866156,
+          1.014757072236381,
+          0.9853410484771395,
+          0.9645026632899775
+        ],
+        "initial_theta": [
+          1.0360186041022552,
+          1.014950383869246,
+          0.9851175467301305,
+          0.963993747058581
+        ],
+        "initial_energy": 0.0003983991237612762,
+        "initial_entropy": 1.855064800188825e-05,
+        "history": [
+          {
+            "time": 4.6875e-05,
+            "material_energy": 0.0003983991241747779,
+            "entropy": 1.8884450152681018e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 3.3387551933703866e-07,
+            "max_CFL": 0.0008060990925659551
+          },
+          {
+            "time": 9.375e-05,
+            "material_energy": 0.0003983991233899669,
+            "entropy": 1.9217958233209986e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 6.674575254160874e-07,
+            "max_CFL": 0.0008060735052274532
+          },
+          {
+            "time": 0.00014062500000000002,
+            "material_energy": 0.00039839912316211746,
+            "entropy": 1.955117342966996e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.0007462762575757e-06,
+            "max_CFL": 0.0008060479299753739
+          },
+          {
+            "time": 0.0001875,
+            "material_energy": 0.00039839912408195025,
+            "entropy": 1.988409641354204e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.3337420296407352e-06,
+            "max_CFL": 0.0008060223668015129
+          },
+          {
+            "time": 0.000234375,
+            "material_energy": 0.00039839912369376467,
+            "entropy": 2.0216725825033307e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.6664450431260005e-06,
+            "max_CFL": 0.0008059968157015561
+          },
+          {
+            "time": 0.00028125000000000003,
+            "material_energy": 0.00039839912349967123,
+            "entropy": 2.0549062918802027e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.99885557405195e-06,
+            "max_CFL": 0.0008059712766688361
+          },
+          {
+            "time": 0.000328125,
+            "material_energy": 0.00039839912356718233,
+            "entropy": 2.0881107968608818e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 2.33097387952289e-06,
+            "max_CFL": 0.0008059457496975038
+          },
+          {
+            "time": 0.000375,
+            "material_energy": 0.0003983991236768858,
+            "entropy": 2.1212861264656e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 2.662800216424169e-06,
+            "max_CFL": 0.0008059202347813473
+          },
+          {
+            "time": 0.000421875,
+            "material_energy": 0.00039839912393848905,
+            "entropy": 2.1544323003856378e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 2.9943348414093e-06,
+            "max_CFL": 0.0008058947319145971
+          },
+          {
+            "time": 0.00046875,
+            "material_energy": 0.00039839912374439734,
+            "entropy": 2.187549282944845e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 3.325578010905948e-06,
+            "max_CFL": 0.0008058692410909471
+          },
+          {
+            "time": 0.000515625,
+            "material_energy": 0.00039839912316211876,
+            "entropy": 2.2206371864001706e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 3.656529981114874e-06,
+            "max_CFL": 0.000805843762303681
+          },
+          {
+            "time": 0.0005625000000000001,
+            "material_energy": 0.0003983991239469285,
+            "entropy": 2.253696030403993e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 3.987191008027215e-06,
+            "max_CFL": 0.0008058182955486524
+          },
+          {
+            "time": 0.000609375,
+            "material_energy": 0.00039839912384566356,
+            "entropy": 2.2867257714521364e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 4.317561347391227e-06,
+            "max_CFL": 0.0008057928408179328
+          },
+          {
+            "time": 0.00065625,
+            "material_energy": 0.00039839912397224633,
+            "entropy": 2.3197265113700065e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 4.6476412547407245e-06,
+            "max_CFL": 0.0008057673981066244
+          },
+          {
+            "time": 0.000703125,
+            "material_energy": 0.000398399123584059,
+            "entropy": 2.3526981754967962e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 4.977430985383266e-06,
+            "max_CFL": 0.000805741967408583
+          },
+          {
+            "time": 0.00075,
+            "material_energy": 0.0003983991241241439,
+            "entropy": 2.3856409187721517e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 5.306930794393474e-06,
+            "max_CFL": 0.0008057165487172645
+          },
+          {
+            "time": 0.0007968750000000001,
+            "material_energy": 0.0003983991242338487,
+            "entropy": 2.4185547131315432e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 5.6361409366411594e-06,
+            "max_CFL": 0.0008056911420279921
+          },
+          {
+            "time": 0.00084375,
+            "material_energy": 0.0003983991233477732,
+            "entropy": 2.4514394652697894e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 5.965061666743692e-06,
+            "max_CFL": 0.0008056657473319314
+          },
+          {
+            "time": 0.000890625,
+            "material_energy": 0.0003983991237022028,
+            "entropy": 2.484295424992969e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 6.293693239125818e-06,
+            "max_CFL": 0.0008056403646264431
+          },
+          {
+            "time": 0.0009375,
+            "material_energy": 0.00039839912400600145,
+            "entropy": 2.517122462177739e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 6.622035907965475e-06,
+            "max_CFL": 0.0008056149939034153
+          },
+          {
+            "time": 0.000984375,
+            "material_energy": 0.0003983991241578982,
+            "entropy": 2.5499206225166292e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 6.950089927235855e-06,
+            "max_CFL": 0.0008055896351579359
+          },
+          {
+            "time": 0.00103125,
+            "material_energy": 0.0003983991233815283,
+            "entropy": 2.5826899140410624e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 7.2778555506708485e-06,
+            "max_CFL": 0.000805564288383184
+          },
+          {
+            "time": 0.001078125,
+            "material_energy": 0.000398399124191655,
+            "entropy": 2.6154304884336982e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 7.605333031792691e-06,
+            "max_CFL": 0.0008055389535739163
+          },
+          {
+            "time": 0.0011250000000000001,
+            "material_energy": 0.00039839912342372287,
+            "entropy": 2.6481422033838506e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 7.932522623882262e-06,
+            "max_CFL": 0.0008055136307225401
+          },
+          {
+            "time": 0.001171875,
+            "material_energy": 0.00039839912384566313,
+            "entropy": 2.6808252129530922e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 8.259424580030578e-06,
+            "max_CFL": 0.0008054883198261164
+          },
+          {
+            "time": 0.00121875,
+            "material_energy": 0.0003983991233899669,
+            "entropy": 2.713479434786597e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 8.586039153074395e-06,
+            "max_CFL": 0.0008054630208752824
+          },
+          {
+            "time": 0.001265625,
+            "material_energy": 0.0003983991235249882,
+            "entropy": 2.7461050050276315e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 8.912366595652969e-06,
+            "max_CFL": 0.0008054377338670115
+          },
+          {
+            "time": 0.0013125,
+            "material_energy": 0.00039839912350811066,
+            "entropy": 2.7787018916205445e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 9.238407160174102e-06,
+            "max_CFL": 0.000805412458793935
+          },
+          {
+            "time": 0.0013593750000000001,
+            "material_energy": 0.00039839912382878644,
+            "entropy": 2.811270101670503e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 9.564161098808007e-06,
+            "max_CFL": 0.0008053871956492181
+          },
+          {
+            "time": 0.00140625,
+            "material_energy": 0.0003983991240988278,
+            "entropy": 2.8438097075507342e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 9.889628663522686e-06,
+            "max_CFL": 0.0008053619444275047
+          },
+          {
+            "time": 0.001453125,
+            "material_energy": 0.00039839912399756245,
+            "entropy": 2.8763206648531412e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.0214810106057463e-05,
+            "max_CFL": 0.0008053367051230908
+          },
+          {
+            "time": 0.0015,
+            "material_energy": 0.0003983991234827941,
+            "entropy": 2.9088030300995684e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.0539705677933287e-05,
+            "max_CFL": 0.0008053114777304213
+          }
+        ],
+        "reservoirs": null,
+        "controls": {
+          "N": 4,
+          "duration": 0.0015,
+          "steps": 32,
+          "dx": 0.25,
+          "dt": 4.6875e-05
+        },
+        "max_inversion_residual": 1.1315549192092433e-12,
+        "runtime_seconds": 3.48828758392483,
+        "EOS_calls": 269,
+        "transport_calls": 129,
+        "final_W": [
+          0.03614975207657501,
+          0.014865515743540524,
+          -0.01455193271379139,
+          -0.03486973861239297
+        ]
+      }
+    },
+    {
+      "run": {
+        "theta": [
+          1.0384164273345022,
+          1.0325762273130934,
+          1.0217816653491076,
+          1.0076713013880154,
+          0.9923896339749688,
+          0.9782628361748625,
+          0.9674450141528913,
+          0.9615883532718468
+        ],
+        "initial_theta": [
+          1.0389802106661699,
+          1.0330485436171994,
+          1.0220871707895003,
+          1.0077632665957512,
+          0.9922562850950692,
+          0.9779269017075479,
+          0.9669577720651621,
+          0.9610206144108667
+        ],
+        "initial_energy": 0.00039839912350811066,
+        "initial_entropy": 3.515682959652857e-06,
+        "history": [
+          {
+            "time": 4.6875e-05,
+            "material_energy": 0.0003983991232465072,
+            "entropy": 3.876442412144776e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 3.608424693258375e-07,
+            "max_CFL": 0.003243640144828536
+          },
+          {
+            "time": 9.375e-05,
+            "material_energy": 0.00039839912364735084,
+            "entropy": 4.236872756069581e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 7.21355198295457e-07,
+            "max_CFL": 0.0032435243146009827
+          },
+          {
+            "time": 0.00014062500000000002,
+            "material_energy": 0.00039839912333089467,
+            "entropy": 4.596973428153237e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.0815384880804082e-06,
+            "max_CFL": 0.0032434085413761285
+          },
+          {
+            "time": 0.0001875,
+            "material_energy": 0.00039839912340262494,
+            "entropy": 4.956745059765048e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.4413926395915896e-06,
+            "max_CFL": 0.0032432928251331828
+          },
+          {
+            "time": 0.000234375,
+            "material_energy": 0.0003983991237739323,
+            "entropy": 5.316188060386817e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.800917953461819e-06,
+            "max_CFL": 0.003243177165837793
+          },
+          {
+            "time": 0.00028125000000000003,
+            "material_energy": 0.000398399123685326,
+            "entropy": 5.675302591510133e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 2.1601147300426906e-06,
+            "max_CFL": 0.003243061563463781
+          },
+          {
+            "time": 0.000328125,
+            "material_energy": 0.0003983991235629637,
+            "entropy": 6.034088726397245e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 2.518983269405693e-06,
+            "max_CFL": 0.0032429460179730835
+          },
+          {
+            "time": 0.000375,
+            "material_energy": 0.0003983991235460843,
+            "entropy": 6.392547227225477e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 2.877523871361104e-06,
+            "max_CFL": 0.0032428305293443443
+          },
+          {
+            "time": 0.000421875,
+            "material_energy": 0.00039839912346169705,
+            "entropy": 6.75067810558701e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 3.235736835445992e-06,
+            "max_CFL": 0.0032427150975468224
+          },
+          {
+            "time": 0.00046875,
+            "material_energy": 0.00039839912347857493,
+            "entropy": 7.1084816371922875e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 3.593622460914513e-06,
+            "max_CFL": 0.00324259972255101
+          },
+          {
+            "time": 0.000515625,
+            "material_energy": 0.000398399123474354,
+            "entropy": 7.465958260107126e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 3.951181046753562e-06,
+            "max_CFL": 0.0032424844043258965
+          },
+          {
+            "time": 0.0005625000000000001,
+            "material_energy": 0.00039839912343216197,
+            "entropy": 7.823108267369255e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 4.308412891681196e-06,
+            "max_CFL": 0.003242369142843929
+          },
+          {
+            "time": 0.000609375,
+            "material_energy": 0.0003983991236220342,
+            "entropy": 8.179931988187231e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 4.665318294136951e-06,
+            "max_CFL": 0.003242253938078393
+          },
+          {
+            "time": 0.00065625,
+            "material_energy": 0.00039839912354186556,
+            "entropy": 8.53642943084501e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 5.02189755229379e-06,
+            "max_CFL": 0.0032421387899992894
+          },
+          {
+            "time": 0.000703125,
+            "material_energy": 0.00039839912308617083,
+            "entropy": 8.892600994615221e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 5.3781509640407415e-06,
+            "max_CFL": 0.003242023698568143
+          },
+          {
+            "time": 0.00075,
+            "material_energy": 0.0003983991235418659,
+            "entropy": 9.248447646414515e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 5.734078827009824e-06,
+            "max_CFL": 0.0032419086637687305
+          },
+          {
+            "time": 0.0007968750000000001,
+            "material_energy": 0.00039839912346591655,
+            "entropy": 9.60396869222925e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 6.0896814385522275e-06,
+            "max_CFL": 0.0032417936855621944
+          },
+          {
+            "time": 0.00084375,
+            "material_energy": 0.0003983991235334257,
+            "entropy": 9.95916479216432e-06,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 6.444959095754847e-06,
+            "max_CFL": 0.0032416787639280085
+          },
+          {
+            "time": 0.000890625,
+            "material_energy": 0.00039839912354186567,
+            "entropy": 1.031403657305056e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 6.7999120954227815e-06,
+            "max_CFL": 0.003241563898826703
+          },
+          {
+            "time": 0.0009375,
+            "material_energy": 0.00039839912352076883,
+            "entropy": 1.0668583975834839e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 7.154540734098941e-06,
+            "max_CFL": 0.0032414490902373232
+          },
+          {
+            "time": 0.000984375,
+            "material_energy": 0.0003983991232591657,
+            "entropy": 1.1022807282580482e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 7.508845308050856e-06,
+            "max_CFL": 0.0032413343381301205
+          },
+          {
+            "time": 0.00103125,
+            "material_energy": 0.00039839912382034733,
+            "entropy": 1.137670723033897e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 7.862826113276348e-06,
+            "max_CFL": 0.0032412196424678468
+          },
+          {
+            "time": 0.001078125,
+            "material_energy": 0.0003983991234616965,
+            "entropy": 1.1730283218794606e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 8.216483445521682e-06,
+            "max_CFL": 0.003241105003235017
+          },
+          {
+            "time": 0.0011250000000000001,
+            "material_energy": 0.00039839912361359475,
+            "entropy": 1.2083536405611524e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 8.569817600228685e-06,
+            "max_CFL": 0.003240990420389829
+          },
+          {
+            "time": 0.001171875,
+            "material_energy": 0.0003983991236979835,
+            "entropy": 1.2436466877353619e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 8.922828872603688e-06,
+            "max_CFL": 0.003240875893913903
+          },
+          {
+            "time": 0.00121875,
+            "material_energy": 0.00039839912343216024,
+            "entropy": 1.2789074539910949e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 9.275517557558151e-06,
+            "max_CFL": 0.003240761423770169
+          },
+          {
+            "time": 0.001265625,
+            "material_energy": 0.00039839912355030445,
+            "entropy": 1.3141360444470103e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 9.627883949739265e-06,
+            "max_CFL": 0.003240647009927853
+          },
+          {
+            "time": 0.0013125,
+            "material_energy": 0.0003983991236431323,
+            "entropy": 1.3493324176166218e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 9.979928343542817e-06,
+            "max_CFL": 0.0032405326523695347
+          },
+          {
+            "time": 0.0013593750000000001,
+            "material_energy": 0.0003983991234827938,
+            "entropy": 1.3844966184615548e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.0331651033078563e-05,
+            "max_CFL": 0.003240418351052727
+          },
+          {
+            "time": 0.00140625,
+            "material_energy": 0.00039839912376549483,
+            "entropy": 1.4196287094591438e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.0683052312187467e-05,
+            "max_CFL": 0.0032403041059573907
+          },
+          {
+            "time": 0.001453125,
+            "material_energy": 0.00039839912341106307,
+            "entropy": 1.4547286501889658e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.1034132474452808e-05,
+            "max_CFL": 0.003240189917049256
+          },
+          {
+            "time": 0.0015,
+            "material_energy": 0.00039839912337730915,
+            "entropy": 1.489796548721637e-05,
+            "boundary_energy_in": 0.0,
+            "boundary_energy_out": 0.0,
+            "boundary_entropy": 0.0,
+            "face_entropy_production_integral": 1.1384891813191473e-05,
+            "max_CFL": 0.003240075784305453
+          }
+        ],
+        "reservoirs": null,
+        "controls": {
+          "N": 8,
+          "duration": 0.0015,
+          "steps": 32,
+          "dx": 0.125,
+          "dt": 4.6875e-05
+        },
+        "max_inversion_residual": 1.128517418402808e-12,
+        "runtime_seconds": 6.774071000050753,
+        "EOS_calls": 805,
+        "transport_calls": 385,
+        "final_W": [
+          0.0391512717788623,
+          0.03310464016847351,
+          0.02201791598402284,
+          0.007700607190340526,
+          -0.007581522177000039,
+          -0.021501836559124105,
+          -0.032027124246209036,
+          -0.03767675915234753
+        ]
+      }
+    },
+    {
+      "time_separation": {
+        "N": 4,
+        "spatial_difference_steps16": {
+          "L1": 1.4031406346240363e-05,
+          "L2": 1.530456353495366e-05,
+          "Linf": 2.1808115109996085e-05
+        },
+        "spatial_difference_steps32": {
+          "L1": 1.4025129527485934e-05,
+          "L2": 1.5297432699266404e-05,
+          "Linf": 2.1796102907103987e-05
+        },
+        "change": {
+          "L1": 6.276818754428343e-09,
+          "L2": 7.48744764904643e-09,
+          "Linf": 1.2012202892097701e-08
+        },
+        "fraction": {
+          "L1": 0.0004473406727409175,
+          "L2": 0.0004892297406552013,
+          "Linf": 0.0005508134394701412
+        }
+      }
+    },
+    {
+      "time_separation": {
+        "N": 8,
+        "spatial_difference_steps16": {
+          "L1": 3.5769283428801427e-06,
+          "L2": 3.986110892954559e-06,
+          "Linf": 6.216989252225136e-06
+        },
+        "spatial_difference_steps32": {
+          "L1": 3.5752857310155815e-06,
+          "L2": 3.98417779864441e-06,
+          "Linf": 6.2131855390334945e-06
+        },
+        "change": {
+          "L1": 1.846109761046398e-09,
+          "L2": 2.072194095373634e-09,
+          "Linf": 3.8037131916413e-09
+        },
+        "fraction": {
+          "L1": 0.000516115947561843,
+          "L2": 0.0005198535994159701,
+          "Linf": 0.0006118256019631859
+        }
+      }
+    }
+  ],
+  "original_results_sha256": "082b58f2875cbfe856c1374798975032f453f4772a0407e0e6242720e14f9402",
+  "runtime_seconds": 10.72994920797646
+}

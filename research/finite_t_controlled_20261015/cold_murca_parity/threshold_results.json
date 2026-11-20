@@ -1,0 +1,154 @@
+{
+  "checks": [
+    {
+      "name": "1.99 inferred neutron branch",
+      "error": -1.2351562501195146e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "1.99 inferred proton branch",
+      "error": 1.2289044347317288e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "1.99 actual NMB total",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "2.0 inferred neutron branch",
+      "error": -7.034280142736155e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "2.0 inferred proton branch",
+      "error": 6.661250135166817e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "2.0 actual NMB total",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "exact polygon edge proton branch zero",
+      "error": 6.661250135166817e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "2.01 inferred neutron branch",
+      "error": -3.5052456851001904e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "2.01 inferred proton branch",
+      "error": 2.7266528286853423e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "2.01 actual NMB total",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "failed": [],
+  "rows": [
+    {
+      "state": {
+        "T": 1000000000.0,
+        "kfn": 1.99,
+        "kfp": 0.5,
+        "kfe": 0.5,
+        "kfm": 0.0,
+        "mstn": 0.78,
+        "mstp": 0.69,
+        "tcn": 0.0,
+        "tcp": 0.0,
+        "i": 5,
+        "isf": 5
+      },
+      "derived_nB": 0.27037892214863857,
+      "derived_Yp": 0.015614072101288111,
+      "polygon_slack": 0.010000000000000009,
+      "primary_proton_allowed": true,
+      "original_total": 7.428242377522857e+20,
+      "inferred_neutron": 7.427951742428784e+20,
+      "inferred_proton": 2.9063509407309588e+16,
+      "formula_proton": 2.906350940639673e+16
+    },
+    {
+      "state": {
+        "T": 1000000000.0,
+        "kfn": 2.0,
+        "kfp": 0.5,
+        "kfe": 0.5,
+        "kfm": 0.0,
+        "mstn": 0.78,
+        "mstp": 0.69,
+        "tcn": 0.0,
+        "tcp": 0.0,
+        "i": 5,
+        "isf": 5
+      },
+      "derived_nB": 0.2744115390313315,
+      "derived_Yp": 0.015384615384615385,
+      "polygon_slack": 0.0,
+      "primary_proton_allowed": true,
+      "original_total": 7.453328405485786e+20,
+      "inferred_neutron": 7.453328405485781e+20,
+      "inferred_proton": 496484.8484848487,
+      "formula_proton": 0.0
+    },
+    {
+      "state": {
+        "T": 1000000000.0,
+        "kfn": 2.01,
+        "kfp": 0.5,
+        "kfe": 0.5,
+        "kfm": 0.0,
+        "mstn": 0.78,
+        "mstp": 0.69,
+        "tcn": 0.0,
+        "tcp": 0.0,
+        "i": 5,
+        "isf": 5
+      },
+      "derived_nB": 0.27848468438748125,
+      "derived_Yp": 0.015159598433152422,
+      "polygon_slack": -0.009999999999999787,
+      "primary_proton_allowed": false,
+      "original_total": 7.478619861492167e+20,
+      "inferred_neutron": 7.478327255344378e+20,
+      "inferred_proton": 2.9260614778880012e+16,
+      "formula_proton": 2.9260614778676096e+16
+    }
+  ],
+  "physical_extrapolation_gates": [
+    {
+      "name": "primary forbidden-side proton branch must vanish",
+      "error": 3.9125688055819706e-05,
+      "tolerance": 3e-12,
+      "passed": false,
+      "classification": "SHARED LEGACY RECIPE extrapolation, not NMB port mismatch; excluded physical scope"
+    },
+    {
+      "name": "nonnegative physical emissivity at low-kfn extrapolation",
+      "value": -6.421647812929323e+20,
+      "passed": false,
+      "classification": "SHARED LEGACY RECIPE outside fitted alpha domain; excluded physical scope"
+    }
+  ],
+  "physical_extrapolation_failures": 2,
+  "source": "Gusakov2002 Eq14/15 cold proton polygon; no replacement rate implemented"
+}

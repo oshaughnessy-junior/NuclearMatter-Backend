@@ -1,0 +1,706 @@
+{
+  "status": "AUTHOR_GUARD_REPAIR_TESTS_NOT_INDEPENDENT_ACCEPTANCE",
+  "checks": [
+    {
+      "name": "exact initial witness accepted by old0",
+      "passed": true
+    },
+    {
+      "name": "exact initial witness accepted by old1",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS exact initial witness 0",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS exact initial witness 1",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS false",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS boolalias",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS wrong coefficient",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS missing row",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS missing check",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS altered gate",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS stale source",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS retuned",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS incomplete passed",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS altered sourcepins",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS missing sourcepins",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS altered lockedstatecontract",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS missing report",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS unparsable report",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS whitespace-altered report",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS missing source0",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS altered source0",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS missing training0",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS altered coefficients",
+      "passed": true
+    },
+    {
+      "name": "reject beforeEOS source code changed",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 0)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 1)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 2)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 3)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 4)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 5)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 6)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 7)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 8)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 9)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('training', 10)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('heldout', 0)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('heldout', 1)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('heldout', 2)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('heldout', 3)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('heldout', 4)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('heldout', 5)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('heldout', 6)",
+      "passed": true
+    },
+    {
+      "name": "complete API bitwise ('heldout', 7)",
+      "passed": true
+    },
+    {
+      "name": "independentpoint old/new (1.6, 4e-07, 0.32)",
+      "passed": true
+    },
+    {
+      "name": "independentpoint old/new (2.8, 8e-07, 0.23)",
+      "passed": true
+    },
+    {
+      "name": "independentpoint old/new (1.87, 7e-07, 0.41)",
+      "passed": true
+    },
+    {
+      "name": "independentpoint old/new (2.37, 3e-07, 0.27)",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_5.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_5.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_collection_complete.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_collection_complete.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot SOURCE_PIN.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged SOURCE_PIN.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_2.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_2.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot summary.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged summary.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot collect.py",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged collect.py",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot COEFFICIENT_FREEZE.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged COEFFICIENT_FREEZE.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot initial_staged_collect.py.txt",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged initial_staged_collect.py.txt",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_3.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_3.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot STATUS2.md",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged STATUS2.md",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_4.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_4.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_8.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_8.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_3.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_3.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot run_group.py",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged run_group.py",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot check_heldout.py",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged check_heldout.py",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_4.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_4.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_stdout.txt",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_stdout.txt",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_stdout.txt",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_stdout.txt",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot STATUS.md",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged STATUS.md",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot REVISED_LOCK2.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged REVISED_LOCK2.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged RESEARCH_NOTE.md",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot check_api.py",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged check_api.py",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot rank_admission.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged rank_admission.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_5.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_5.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot api_checks.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged api_checks.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_2.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_2.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_9.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_9.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_10.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_10.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot approximation.py",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_6.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_6.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_1.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_1.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_0.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_0.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_7.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_7.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot ALLOWED_ASSESSMENT_ACCEPTANCE.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged ALLOWED_ASSESSMENT_ACCEPTANCE.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_stderr.txt",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_stderr.txt",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot fit_training.py",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged fit_training.py",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_0.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_0.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_stderr.txt",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_stderr.txt",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_7.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_7.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot preflight.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged preflight.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot rank_admission.py",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged rank_admission.py",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot heldout_6.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged heldout_6.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_1.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_1.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot training_collection_complete.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged training_collection_complete.json",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot preflight.py",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged preflight.py",
+      "passed": true
+    },
+    {
+      "name": "initial author snapshot HELDOUT_ASSESSMENT.json",
+      "passed": true
+    },
+    {
+      "name": "physical/model/artifact unchanged HELDOUT_ASSESSMENT.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched CHECKPOINT.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot guards.py",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched guards.py",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot results.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched results.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot VALIDATION_LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched VALIDATION_LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot probe.py",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched probe.py",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot guard_results.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched guard_results.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot partial.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched partial.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot reviewed_initial_consumer/collect.py",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched reviewed_initial_consumer/collect.py",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot reviewed_initial_consumer/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched reviewed_initial_consumer/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot reviewed_initial_consumer/COEFFICIENT_FREEZE.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched reviewed_initial_consumer/COEFFICIENT_FREEZE.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot reviewed_initial_consumer/REVISED_LOCK2.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched reviewed_initial_consumer/REVISED_LOCK2.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot reviewed_initial_consumer/approximation.py",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched reviewed_initial_consumer/approximation.py",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot reviewed_initial_consumer/MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched reviewed_initial_consumer/MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "initial review snapshot reviewed_initial_consumer/HELDOUT_ASSESSMENT.json",
+      "passed": true
+    },
+    {
+      "name": "initial reviewer files untouched reviewed_initial_consumer/HELDOUT_ASSESSMENT.json",
+      "passed": true
+    },
+    {
+      "name": "physical arithmetic suffix unchanged afteratomic-read substitutions",
+      "passed": true
+    }
+  ],
+  "passed": 174,
+  "failed": [],
+  "physical_grid_rerun": false,
+  "source_sha256": "9020fb5dab238e2b7c169612b037750c04dfe19932f22976470f806b2514d3b3",
+  "actual_report_sha256": "62f56d9127ef2daeec15911128c163e253044d32860b8200cf1b32d11a1642b1"
+}

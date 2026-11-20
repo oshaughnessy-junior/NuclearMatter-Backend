@@ -1,0 +1,6 @@
+# Source and normalization provenance
+
+- [Guo et al., arXiv2006.12051v2 Eqs24–27 and47](https://arxiv.org/html/2006.12051v2) specifies the adopted full charged current and physical-q² form factors. This leaf uses the already reviewed free-particle convention, physical neutron/proton masses and separate bare average weak-current mass. No in-medium current insertion or new electroweak normalization is inferred.
+- `hot_electron_capture_moments/electron_capture.py` supplies the independently reviewed reciprocal full-current scalar polynomial, not a fitted amplitude. `relativistic_tensor/tensor.py` supplies exact positive-energy support. Its full16-component current contraction is an absolute forward comparator, not the source of j inferred from chi.
+- `relativistic_delta_oracle/oracle.py` supplies the separately implemented cylindrical original-delta-shell explicit-spinor comparator at new spacelike differential points. This checks numerical/current reductions within the same physical model.
+- Exact matched FD EOS and all seven transitive physics source hashes are declared in `spectrum.py` and frozen in the checkpoint. The accepted event-total and independent-review hashes are recorded in every total-reconstruction node-chunk contract. Both operator coefficients are computed using separate quantum occupations.

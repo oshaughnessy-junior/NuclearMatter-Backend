@@ -1,0 +1,576 @@
+{
+  "checks": [
+    {
+      "name": "commissioned manifest exact",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest CHECKPOINT.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest RESEARCH_NOTE.md",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest check_forward.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest docker_image_inventory.txt",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest fixture.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest momentum_reduction.py",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest o2scl_fixture.cpp",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest results.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest sources/eos_had_rmf.cpp",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest sources/eos_had_rmf.h",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "author frozen manifest sources/fermion_rel.h",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence phi_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward phi_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward phi_mev",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence dirac_mass_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward dirac_mass_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward dirac_mass_mev",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence mu_n_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward mu_n_mev",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward mu_n_mev",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence mu_p_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward mu_p_mev",
+      "error": -8.881784197001252e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward mu_p_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence omega_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward omega_mev",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward omega_mev",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence rho_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward rho_mev",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward rho_mev",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence energy_density",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward energy_density",
+      "error": -1.887379141862766e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward energy_density",
+      "error": -2.6645352591003757e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence pressure",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward pressure",
+      "error": -3.552713678800501e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward pressure",
+      "error": -2.1094237467877974e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence entropy_density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward entropy_density",
+      "error": 1.9095836023552692e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward entropy_density",
+      "error": -1.6653345369377348e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence free_energy_density",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward free_energy_density",
+      "error": -2.220446049250313e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward free_energy_density",
+      "error": -2.7755575615628914e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence scalar_density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward scalar_density",
+      "error": -2.55351295663786e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward scalar_density",
+      "error": -3.4416913763379853e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "own rapidity convergence antiparticle_density",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout authored momentum forward antiparticle_density",
+      "error": 7.194245199571014e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "heldout internal forward antiparticle_density",
+      "error": -2.0872192862952943e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "scalar trace E\u22123P=neutron",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "scalar trace E\u22123P=proton",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "rho half-coupling energy",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "vector chemical work twice field energy",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "heldout Euler identity",
+      "error": -7.531660586070624e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "native status null",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "external code not executed",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "missing header compile retained",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "explicitcommonM",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "zero extra couplings",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "correctpair source calls",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "correctscalar b mass",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "netpairvector density",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "pairenergy additive",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "no driver internal converged field",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "all frozen source/raw unchanged",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 64,
+  "failed": [],
+  "heldout": [
+    0.19,
+    14.0,
+    0.22
+  ],
+  "rapidity_coarse": {
+    "nB": 0.19,
+    "T": 14.0,
+    "Yp": 0.22,
+    "phi_mev": 329.6176401807888,
+    "dirac_mass_mev": 609.3823598192112,
+    "mu_n_mev": 978.1620963822932,
+    "mu_p_mev": 883.9949820735196,
+    "omega_mev": 267.99371862084803,
+    "rho_mev": -46.2952775256048,
+    "energy_density": 179.247482346854,
+    "pressure": 5.485119132503247,
+    "entropy_density": 0.20128489605914313,
+    "free_energy_density": 176.429493802026,
+    "scalar_density": 0.17588321448832855,
+    "antiparticle_density": 2.609027543856817e-41,
+    "nn": 0.1482000000000003,
+    "np": 0.04180000000000012,
+    "gas_n": [
+      0.1482000000000003,
+      0.13615497369424917,
+      98.47993628433996,
+      5.169832371138599,
+      0.13094965256282093,
+      8.269082735777016e-43
+    ],
+    "gas_p": [
+      0.04180000000000012,
+      0.03972824079407937,
+      26.828260422807034,
+      0.8728570987483677,
+      0.07033524349632221,
+      2.526336716499047e-41
+    ],
+    "U": 27.248427988545366,
+    "V": 26.690857651161647,
+    "residual": [
+      -1.9721066884788965e-15,
+      2.060130443805115e-15,
+      2.8220381905842792e-15
+    ],
+    "nfev": 13
+  },
+  "rapidity_fine": {
+    "nB": 0.19,
+    "T": 14.0,
+    "Yp": 0.22,
+    "phi_mev": 329.6176401807888,
+    "dirac_mass_mev": 609.3823598192112,
+    "mu_n_mev": 978.1620963822932,
+    "mu_p_mev": 883.9949820735196,
+    "omega_mev": 267.99371862084803,
+    "rho_mev": -46.2952775256048,
+    "energy_density": 179.247482346854,
+    "pressure": 5.485119132503247,
+    "entropy_density": 0.2012848960591431,
+    "free_energy_density": 176.429493802026,
+    "scalar_density": 0.17588321448832853,
+    "antiparticle_density": 2.609027543856816e-41,
+    "nn": 0.14820000000000033,
+    "np": 0.04180000000000013,
+    "gas_n": [
+      0.14820000000000033,
+      0.13615497369424914,
+      98.47993628433996,
+      5.169832371138599,
+      0.1309496525628209,
+      8.269082735777023e-43
+    ],
+    "gas_p": [
+      0.04180000000000013,
+      0.03972824079407938,
+      26.828260422807045,
+      0.8728570987483679,
+      0.0703352434963222,
+      2.526336716499046e-41
+    ],
+    "U": 27.248427988545366,
+    "V": 26.690857651161647,
+    "residual": [
+      -1.8625452057856245e-15,
+      2.24741502960558e-15,
+      2.988040437089237e-15
+    ],
+    "nfev": 13
+  },
+  "authored_momentum": {
+    "nB": 0.19,
+    "T_MeV": 14.0,
+    "Yp": 0.22,
+    "nn": 0.14819999999999992,
+    "np": 0.04180000000000003,
+    "phi_mev": 329.6176401807888,
+    "omega_mev": 267.993718620848,
+    "rho_mev": -46.29527752560481,
+    "dirac_mass_mev": 609.3823598192112,
+    "mu_n_mev": 978.162096382292,
+    "mu_p_mev": 883.9949820735188,
+    "energy_density": 179.24748234685367,
+    "pressure": 5.485119132503227,
+    "entropy_density": 0.20128489605914693,
+    "free_energy_density": 176.4294938020256,
+    "scalar_density": 0.17588321448832808,
+    "antiparticle_density": 2.609027543857004e-41,
+    "normalized_scalar_residual": 7.304098846218135e-16,
+    "normalized_n_residual": -5.551115123125783e-16,
+    "normalized_p_residual": 6.661338147750939e-16,
+    "order": 224,
+    "tail": 70.0
+  },
+  "internal": {
+    "nB": 0.19,
+    "temperature": 14.0,
+    "Yp": 0.22,
+    "phi_mev": 329.61764018078867,
+    "omega_mev": 267.993718620848,
+    "rho_mev": -46.2952775256048,
+    "dirac_mass_mev": 609.3823598192114,
+    "density_defined_landau_n_mev": 689.7182521696789,
+    "density_defined_landau_p_mev": 645.160595893156,
+    "kinetic_mu_n_mev": 687.0207389986427,
+    "kinetic_mu_p_mev": 639.1489022154741,
+    "mu_n_mev": 978.162096382293,
+    "mu_p_mev": 883.9949820735196,
+    "energy_density": 179.24748234685353,
+    "pressure": 5.485119132503235,
+    "free_energy_density": 176.42949380202552,
+    "entropy_density": 0.20128489605914276,
+    "kinetic_energy_density": 125.30819670714655,
+    "scalar_field_energy_density": 27.24842798854534,
+    "vector_field_energy_density": 26.690857651161647,
+    "scalar_density": 0.17588321448832792,
+    "antiparticle_density": 2.6090275438567617e-41,
+    "max_normalized_equation_residual": 1.3280179720396608e-15,
+    "branch": "local GM1 branch continued from cold first scalar upcrossing",
+    "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+  },
+  "frozen_before": {
+    "external_gm1_forward/fixture.json": "c2795c3177ab1376882298d50f6d877eb9883246a5005313ab380f0703ffbaaa",
+    "external_gm1_forward/CHECKPOINT.json": "7acc69ba3ea765294753b2bdab0d7a7346ce542658750097ad0e9ca91296b559",
+    "external_gm1_forward/check_forward.py": "b3382ead05dcc294e5c92b9bdf83e69cb79fb2549bbefdaf8698a6850974c406",
+    "external_gm1_forward/o2scl_fixture.cpp": "5a2dbb84d9ca98849d2ad5dd880a122e7be079f413dad5357f7a19af30c16be7",
+    "external_gm1_forward/results.json": "8211ec2db2548b584e7ba274dce71c0026c15d028da0fa636128001806556932",
+    "external_gm1_forward/RESEARCH_NOTE.md": "0a7d947b9fe5b6f87135638a64025fff4d83865a132a50543d729dd959f3e22c",
+    "external_gm1_forward/momentum_reduction.py": "645ac56ba1fbb7315ebf5ca98bf3af1ee0099fd79b097f090995e4141fff35ff",
+    "external_gm1_forward/MANIFEST.json": "e07eb96cdd60b4eda2fdfdb674685cca535a840632ba22a23704921bb20811b9",
+    "external_gm1_forward/docker_image_inventory.txt": "b8581ae2a4948b82e04d4b74bdcf39ddc77a88ba1b4c1e26aa046b521ce20e45",
+    "external_gm1_forward/sources/eos_had_rmf.cpp": "82d0fba9a249449b689843e771f58a35c85191faceac67eaaf312d785106989d",
+    "external_gm1_forward/sources/fermion_rel.h": "5b9999e413816668f659ac14a6a8764b225dbd160e52fa4a0e85b013bf7d883e",
+    "external_gm1_forward/sources/eos_had_rmf.h": "e8bfffa0b696d8cf8dd6bb43cced8c6a297deec1422f9ecb4162e97a35699b22",
+    "rmf_reference/CHECKPOINT.json": "35375f9b8fee0617c50b39cc65ca05d4982bc722539f5623c0cbc0e165acdcbd",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_reference/RESEARCH_NOTE.md": "784965add657d2527f5404ee295bc41626492ef91c83b6859be3dda3dbf4a34e",
+    "rmf_reference/validation_results.json": "ca12ac86a6178c16647b0ea94fdfa5f3f438d2fb59f6588272d6837b00836b11",
+    "rmf_reference/validate_gm1.py": "d3a1856425432cd4162b0cda6852c2eca6530f9585139ca37b39c57912a8f761",
+    "rmf_reference/source_snapshot/constants.py": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317",
+    "rmf_reference/source_snapshot/rmft.py": "4a717efc9ae79895876e2529c2d2f0325cd5adfb36251bf3c60ea1eac0cc377c"
+  },
+  "frozen_after": {
+    "external_gm1_forward/fixture.json": "c2795c3177ab1376882298d50f6d877eb9883246a5005313ab380f0703ffbaaa",
+    "external_gm1_forward/CHECKPOINT.json": "7acc69ba3ea765294753b2bdab0d7a7346ce542658750097ad0e9ca91296b559",
+    "external_gm1_forward/check_forward.py": "b3382ead05dcc294e5c92b9bdf83e69cb79fb2549bbefdaf8698a6850974c406",
+    "external_gm1_forward/o2scl_fixture.cpp": "5a2dbb84d9ca98849d2ad5dd880a122e7be079f413dad5357f7a19af30c16be7",
+    "external_gm1_forward/results.json": "8211ec2db2548b584e7ba274dce71c0026c15d028da0fa636128001806556932",
+    "external_gm1_forward/RESEARCH_NOTE.md": "0a7d947b9fe5b6f87135638a64025fff4d83865a132a50543d729dd959f3e22c",
+    "external_gm1_forward/momentum_reduction.py": "645ac56ba1fbb7315ebf5ca98bf3af1ee0099fd79b097f090995e4141fff35ff",
+    "external_gm1_forward/MANIFEST.json": "e07eb96cdd60b4eda2fdfdb674685cca535a840632ba22a23704921bb20811b9",
+    "external_gm1_forward/docker_image_inventory.txt": "b8581ae2a4948b82e04d4b74bdcf39ddc77a88ba1b4c1e26aa046b521ce20e45",
+    "external_gm1_forward/sources/eos_had_rmf.cpp": "82d0fba9a249449b689843e771f58a35c85191faceac67eaaf312d785106989d",
+    "external_gm1_forward/sources/fermion_rel.h": "5b9999e413816668f659ac14a6a8764b225dbd160e52fa4a0e85b013bf7d883e",
+    "external_gm1_forward/sources/eos_had_rmf.h": "e8bfffa0b696d8cf8dd6bb43cced8c6a297deec1422f9ecb4162e97a35699b22",
+    "rmf_reference/CHECKPOINT.json": "35375f9b8fee0617c50b39cc65ca05d4982bc722539f5623c0cbc0e165acdcbd",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_reference/RESEARCH_NOTE.md": "784965add657d2527f5404ee295bc41626492ef91c83b6859be3dda3dbf4a34e",
+    "rmf_reference/validation_results.json": "ca12ac86a6178c16647b0ea94fdfa5f3f438d2fb59f6588272d6837b00836b11",
+    "rmf_reference/validate_gm1.py": "d3a1856425432cd4162b0cda6852c2eca6530f9585139ca37b39c57912a8f761",
+    "rmf_reference/source_snapshot/constants.py": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317",
+    "rmf_reference/source_snapshot/rmft.py": "4a717efc9ae79895876e2529c2d2f0325cd5adfb36251bf3c60ea1eac0cc377c"
+  },
+  "seconds": 0.4722883750218898,
+  "scope": "Same-equation independent numerical/convention audit only. Native externalO2scl gate remainsOPEN. No derivatives/globalphase/weakrates."
+}

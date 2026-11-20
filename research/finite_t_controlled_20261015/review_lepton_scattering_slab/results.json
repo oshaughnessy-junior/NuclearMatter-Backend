@@ -1,0 +1,363 @@
+{
+  "checks": [
+    {
+      "name": "one-helicity polar phase measure",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "outgoing polar measure no extra half or DOS",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "polar weights sum to isotropic DOS at 1.6663642608713691",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "polar weights sum to isotropic DOS at 7.920227476981725",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "polar weights sum to isotropic DOS at 16.079772523018274",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "polar weights sum to isotropic DOS at 22.33363573912863",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "fresh phase edge (7.3, 11.2, 0.27, -0.63)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh edge own tail65/90 (7.3, 11.2, 0.27, -0.63)",
+      "error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "fresh edge author128/256 (7.3, 11.2, 0.27, -0.63)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh reverse DOS KMS (7.3, 11.2, 0.27, -0.63)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh phase edge (8.4, 8.4, -0.5773502691896258, 0.5773502691896258)",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh edge own tail65/90 (8.4, 8.4, -0.5773502691896258, 0.5773502691896258)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "fresh edge author128/256 (8.4, 8.4, -0.5773502691896258, 0.5773502691896258)",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh reverse DOS KMS (8.4, 8.4, -0.5773502691896258, 0.5773502691896258)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh phase edge (6.4, 8.9, 0.5773502691896258, 0.5773502691896258)",
+      "error": 1.6877867992093343e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh edge own tail65/90 (6.4, 8.9, 0.5773502691896258, 0.5773502691896258)",
+      "error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "fresh edge author128/256 (6.4, 8.9, 0.5773502691896258, 0.5773502691896258)",
+      "error": 2.22287255491338e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh reverse DOS KMS (6.4, 8.9, 0.5773502691896258, 0.5773502691896258)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh directed-event+mode streaming RHS",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh independently normalized boundary/heat ledger",
+      "error": 7.337616610476046e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh number conservation 0",
+      "error": -5.311738281704329e-17,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh bath heat sign 0",
+      "error": 2.1652962076355395e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh thermostat entropy 0",
+      "error": -9.198680883139732e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh entropy nonnegative 0",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "fresh number conservation 1",
+      "error": -5.162591100150539e-17,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh bath heat sign 1",
+      "error": -7.866165057322478e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh thermostat entropy 1",
+      "error": 4.263301037543671e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh entropy nonnegative 1",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "new LTE physical paired source -1.13",
+      "error": 2.6222076212735523e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new LTE physical paired source 0.83",
+      "error": 1.5109321328096236e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "new implicit Radau vs explicit DOP853 populations",
+      "error": 5.551115123125783e-17,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new independent ODE heat",
+      "error": -1.709743457922741e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent ODE N/Le boundary ledger",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent ODE E+bath+boundary reservoir ledger",
+      "error": -8.015802793186821e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent ODE positivity",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "passed": 35,
+  "failed": [],
+  "edges": [
+    {
+      "point": [
+        7.3,
+        11.2,
+        0.27,
+        -0.63
+      ],
+      "independent": 0.18877617827129894,
+      "author128": 0.188776178271299,
+      "author256": 0.18877617827129897,
+      "independent_reverse": 0.5636780251246006
+    },
+    {
+      "point": [
+        8.4,
+        8.4,
+        -0.5773502691896258,
+        0.5773502691896258
+      ],
+      "independent": 0.3721549774763676,
+      "author128": 0.37215497747636805,
+      "author256": 0.37215497747636783,
+      "independent_reverse": 0.3721549774763676
+    },
+    {
+      "point": [
+        6.4,
+        8.9,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "independent": 0.35529330933797704,
+      "author128": 0.3552933889148111,
+      "author256": 0.35529330993763636,
+      "independent_reverse": 0.6412613518914616
+    }
+  ],
+  "independent_evolution": {
+    "final": [
+      [
+        0.24436755713548056,
+        0.26466116720082056,
+        0.010945396199511072,
+        0.019758667043677253,
+        0.00014351236804917785,
+        0.0006835358253401426,
+        5.365941182805278e-06,
+        5.90879606041614e-05
+      ],
+      [
+        0.2367552660973752,
+        0.24793606222338502,
+        0.009494843035435966,
+        0.012238752632176449,
+        0.00011315380132162241,
+        0.00021989004973873674,
+        4.010833561348664e-06,
+        1.2950661370681404e-05
+      ]
+    ],
+    "ledger": [
+      1.8593080802804204e-08,
+      9.114951962310429e-09,
+      1.50068188334952e-07,
+      5.6284986482088815e-08,
+      3.42910163514835e-11
+    ],
+    "N": 9.478128840493775e-09,
+    "U": 9.374891083651153e-08,
+    "nfev": 512
+  },
+  "author_evolution": {
+    "cells": 2,
+    "duration": 0.013,
+    "crossing_time": 0.047,
+    "length_cm": 1409024552.6,
+    "left_T": 2.7,
+    "right_T": 1.6,
+    "rad_mu": -0.41,
+    "initial_T": 1.85,
+    "collisions": true,
+    "initial": [
+      [
+        0.24557396439032142,
+        0.24557396439032142,
+        0.010956280713397711,
+        0.010956280713397711,
+        0.00013455666874395586,
+        0.00013455666874395586,
+        4.57977019863994e-06,
+        4.57977019863994e-06
+      ],
+      [
+        0.24557396439032142,
+        0.24557396439032142,
+        0.010956280713397711,
+        0.010956280713397711,
+        0.00013455666874395586,
+        0.00013455666874395586,
+        4.57977019863994e-06,
+        4.57977019863994e-06
+      ]
+    ],
+    "final": [
+      [
+        0.24436755713548058,
+        0.26466116720082056,
+        0.01094539619951107,
+        0.01975866704367726,
+        0.0001435123680491778,
+        0.0006835358253401431,
+        5.3659411828052575e-06,
+        5.908796060416153e-05
+      ],
+      [
+        0.23675526609737524,
+        0.24793606222338496,
+        0.009494843035435966,
+        0.012238752632176437,
+        0.0001131538013216227,
+        0.00021989004973873495,
+        4.0108335613486784e-06,
+        1.295066137068102e-05
+      ]
+    ],
+    "boundary_in_number": 1.8593080802804198e-08,
+    "boundary_out_number": 9.114951962310439e-09,
+    "boundary_in_energy": 1.5006818833495194e-07,
+    "boundary_out_energy": 5.628498648208898e-08,
+    "thermostat_heat": 3.429101635148409e-11,
+    "collision_entropy": 2.1167440570625263e-10,
+    "radiation_number_change": 9.478128840493765e-09,
+    "radiation_energy_change": 9.374891083651141e-08,
+    "number_ledger": 6.617444900424222e-24,
+    "energy_ledger": -5.293955920339377e-23,
+    "min_occupation": 4.0108335613486784e-06,
+    "max_occupation": 0.26466116720082056,
+    "rtol": 2e-11,
+    "max_step": 0.0005,
+    "nfev": 314,
+    "seconds": 0.024118541972711682,
+    "units": "volume-average N fm^-3; E/heat MeVfm^-3; time s; length cm; one helicity axisymmetric nue"
+  },
+  "seconds": 1.1833960840012878,
+  "initial_author_sha256": "be7f2c05f595647ef9fa7a868bd9b8b4d78f39dee4b2b2055c32180334906022",
+  "scope": "selected finite-grid physical edges, independent finite-slab ODE; no continuum convergence or repaired controls"
+}

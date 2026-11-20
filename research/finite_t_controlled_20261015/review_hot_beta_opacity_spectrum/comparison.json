@@ -1,0 +1,653 @@
+{
+  "checks": [
+    {
+      "name": "fresh joint incident/material refine empty F number",
+      "error": 6.173709143908468e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine empty F energy",
+      "error": -1.0728543886617814e-07,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine empty B number",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine empty B energy",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments empty F number",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments empty F energy",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments empty B number",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments empty B energy",
+      "error": 0.0,
+      "gate": 0.0,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine LTE F number",
+      "error": 2.8709832511353284e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine LTE F energy",
+      "error": -1.7649681516296312e-07,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine LTE B number",
+      "error": 2.870983228930868e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine LTE B energy",
+      "error": -1.7649681516296312e-07,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments LTE F number",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments LTE F energy",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments LTE B number",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments LTE B energy",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine emission F number",
+      "error": 3.746563215223375e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine emission F energy",
+      "error": -1.5895517435637885e-07,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine emission B number",
+      "error": 3.746563237427836e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine emission B energy",
+      "error": -1.5895517369024503e-07,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments emission F number",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments emission F energy",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments emission B number",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments emission B energy",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine inverse F number",
+      "error": 2.2376834607484852e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine inverse F energy",
+      "error": -1.8891914299601353e-07,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine inverse B number",
+      "error": 2.2376834163395642e-08,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh joint incident/material refine inverse B energy",
+      "error": -1.8891914310703584e-07,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments inverse F number",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments inverse F energy",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments inverse B number",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "own redundant switch repair selected moments inverse B energy",
+      "error": 0.0,
+      "gate": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "actual above-rest number positive",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "actual above-rest energy positive",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "selected omitted1p4to1p6 number tiny",
+      "error": 8.89348910458546e-41,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "selected omitted1p4to1p6 energy tiny",
+      "error": 2.629064237606846e-40,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.005064786434763602",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.025409296015030162",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.05710356104376023",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.09289643895623977",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.12459070398496983",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.1449352135652364",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.1567530485796848",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.18387906135337356",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.22613808139168032",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.2738619186083197",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.31612093864662644",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.3432469514203152",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.35844131072460594",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.3923488266917169",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.4451726017396004",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.5048273982603996",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.5576511733082831",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.591558689275394",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.6061455342869653",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.6308312506123093",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.6692885863643785",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.7127191162146616",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.7511764519667308",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.7758621682920748",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.7853164363036336",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.7986071378614539",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.8193124301630141",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.8426952724160262",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.8634005647175864",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.8766912662754067",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.8840518291478108",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.9003274368120241",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.9256828488350082",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.9543171511649917",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.9796725631879758",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 0.9959481708521891",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.0050647864347635",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.02540929601503",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.0571035610437602",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.0928964389562397",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.1245907039849699",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.1449352135652364",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.1584413107246059",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.1923488266917168",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.2451726017396003",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.3048273982603995",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.357651173308283",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.391558689275394",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.4067530485796846",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.4338790613533734",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.4761380813916802",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.5238619186083198",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.5661209386466266",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "stale-mu reporter repair leaves raw phase bitwise 1.5932469514203154",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "integrated beta baryon empty",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta charge empty",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta totalLe empty",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta baryon LTE",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta charge LTE",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta totalLe LTE",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta baryon emission",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta charge emission",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta totalLe emission",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta baryon inverse",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta charge inverse",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "integrated beta totalLe inverse",
+      "error": 0.0,
+      "gate": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "all frozen author/upstream bytes unchanged",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "passed": 103,
+  "failed": [],
+  "above_rest_fractions": [
+    0.01033801386422597,
+    0.01748313867425481
+  ],
+  "fine_empty": {
+    "F": [
+      4.2587395037795795e-11,
+      2.0237742396163444e-11
+    ],
+    "B": [
+      0.0,
+      0.0
+    ],
+    "net": [
+      4.2587395037795795e-11,
+      2.0237742396163444e-11
+    ],
+    "entropy": null,
+    "maxkms": 3.530509218307998e-14,
+    "above_rest_endpoint": [
+      4.4026908034200123e-13,
+      3.5381925676597135e-13
+    ],
+    "beyond_1p4": [
+      3.787505337613138e-51,
+      5.320632478365319e-51
+    ]
+  },
+  "source_count": 52
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "Independent entropy-root paths and raw-parameter chain; not external EOS validation",
+  "checks": [
+    {
+      "name": "independent entropy-root de/dtheta|s,n C_sigma",
+      "error": 1.4789598383437276e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independent entropy-root dT/dtheta|s,n C_sigma",
+      "error": 1.1540005340204829e-09,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independent entropy-root de/dtheta|s,n C_omega",
+      "error": 5.926967336817178e-13,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independent entropy-root dT/dtheta|s,n C_omega",
+      "error": 0.0,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independent entropy-root de/dtheta|s,n b",
+      "error": 1.9252662719738995e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independent entropy-root dT/dtheta|s,n b",
+      "error": 3.715883126055551e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "raw C-to-g vector-pressure chain at fixed meson scale",
+      "error": 1.0557110741160614e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

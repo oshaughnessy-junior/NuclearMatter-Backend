@@ -1,0 +1,29 @@
+{
+  "v": 2.2250738585072014e-308,
+  "smallest_positive_normal_binary64": true,
+  "logFA": -1417.3001910833075,
+  "logFB": -1416.6070439027476,
+  "FB_over_FA_minus2_relative": -5.495603971894374e-14,
+  "FA": {
+    "log_value": -1417.3001910833075,
+    "value": null,
+    "status": "positive_below_float64_representation"
+  },
+  "FB": {
+    "log_value": -1416.6070439027476,
+    "value": null,
+    "status": "positive_below_float64_representation"
+  },
+  "checks": [
+    {
+      "name": "smallestNORMALinput angular coefficient",
+      "passed": true,
+      "error": -5.495603971894374e-14,
+      "tolerance": 3e-10
+    },
+    {
+      "name": "normalINPUT with ordinaryOUTPUT underflow admitted",
+      "passed": true
+    }
+  ]
+}

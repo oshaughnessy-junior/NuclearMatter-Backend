@@ -1,0 +1,523 @@
+{
+  "checks": [
+    {
+      "name": "neutron originalpVsBessel",
+      "error": -3.552713678800501e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "neutron originalpVssaveddensity",
+      "error": -3.9968028886505635e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "proton originalpVsBessel",
+      "error": 8.881784197001252e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "proton originalpVssaveddensity",
+      "error": 1.1102230246251565e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeECj ownrefinement",
+      "error": 7.105427357601027e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeECchi ownrefinement",
+      "error": 7.105427357601027e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeEC on_shell",
+      "error": 9.231114409183976e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeEC on_shell",
+      "error": 7.934211978250106e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeECj absoluteoriginalspinor",
+      "error": -5.7731597280507974e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeECchi absoluteoriginalspinor",
+      "error": -9.103828801926243e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeEC KMSafterdirectproducts",
+      "error": 1.9984014443252818e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWpasttimelikeECj ownrefinement",
+      "error": -1.5987211554602128e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWpasttimelikeECchi ownrefinement",
+      "error": -1.5987211554602128e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWpasttimelikeEC on_shell",
+      "error": 2.4333217582608962e-12,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWpasttimelikeEC on_shell",
+      "error": 1.7648332176954317e-12,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWpasttimelikeEC KMSafterdirectproducts",
+      "error": 1.9984014443252818e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWbelowstationarytargetthresholdspacelikePCj ownrefinement",
+      "error": -1.0658141036401446e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWbelowstationarytargetthresholdspacelikePCchi ownrefinement",
+      "error": -1.0658141036401446e-14,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWbelowstationarytargetthresholdspacelikePC on_shell",
+      "error": 1.0549845039067402e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWbelowstationarytargetthresholdspacelikePC on_shell",
+      "error": 1.1868575668950827e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWbelowstationarytargetthresholdspacelikePCj absoluteoriginalspinor",
+      "error": -4.440892098500616e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWbelowstationarytargetthresholdspacelikePCchi absoluteoriginalspinor",
+      "error": -5.329070518200737e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWbelowstationarytargetthresholdspacelikePC KMSafterdirectproducts",
+      "error": 2.5091040356528538e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikePCj ownrefinement",
+      "error": -2.664535259100372e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikePCchi ownrefinement",
+      "error": -2.664535259100372e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikePC on_shell",
+      "error": 7.912383779300551e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikePC on_shell",
+      "error": 1.0549845039067402e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikePCj absoluteoriginalspinor",
+      "error": 1.1546319456101694e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikePCchi absoluteoriginalspinor",
+      "error": 6.661338147750941e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikePC KMSafterdirectproducts",
+      "error": 2.6645352591003757e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "Qrest absoluteSAVEDtimelike j",
+      "error": -2.7533531010703504e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "Qrest absoluteSAVEDtimelike chi",
+      "error": -9.76996261670133e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable relativistic_delta_oracle/oracle.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable relativistic_capture_oracle/events.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable hot_electron_capture_moments/electron_capture.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable review_pc_moments/reference.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable review_hot_beta_opacity_spectrum/reference.py",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable review_hot_ec_opacity_spectrum/results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable hot_ec_opacity_spectrum/results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable hot_pc_opacity_spectrum/results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable hot_beta_opacity_spectrum/pilot_results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable hot_beta_moments/results.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable finite_t_weak_spectral_integration_contract/CONTRACT.md",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "sourceimmutable review_finite_t_weak_spectral_integration_contract/CHECKPOINT.json",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "input": {
+        "channel": "EC",
+        "E": 4.61,
+        "El": 5.897,
+        "cosine": 0.27,
+        "label": "NEWspacelike"
+      },
+      "delta": [
+        {
+          "logj": -2.2547637036625776,
+          "logchi": 1.4549183811473085,
+          "exact_empty": false,
+          "support": {
+            "kind": "spacelike_originalpz",
+            "invariant": -39.48444760519767,
+            "Ea_min": 939.5681900436114,
+            "Ea_upper": 1069.5681900436114
+          },
+          "shell": 9.231114409183976e-16,
+          "points": 1440,
+          "controls": {
+            "order": 20,
+            "phi": 6,
+            "tail": 65.0
+          }
+        },
+        {
+          "logj": -2.2547637036625847,
+          "logchi": 1.4549183811473014,
+          "exact_empty": false,
+          "support": {
+            "kind": "spacelike_originalpz",
+            "invariant": -39.48444760519767,
+            "Ea_min": 939.5681900436114,
+            "Ea_upper": 1109.5681900436114
+          },
+          "shell": 7.934211978250106e-16,
+          "points": 3840,
+          "controls": {
+            "order": 32,
+            "phi": 10,
+            "tail": 85.0
+          }
+        }
+      ],
+      "original_explicit_spinor": {
+        "j": 0.10489832789865224,
+        "chi": 4.284133785247736,
+        "Emin": 939.5681900436114,
+        "max_shell_residual": 6.532151221474229e-16,
+        "min_jacobian": 0.005697103456058221,
+        "order": 36,
+        "nphi": 10,
+        "tail": 90.0
+      }
+    },
+    {
+      "input": {
+        "channel": "EC",
+        "E": 4.61,
+        "El": 5.897,
+        "cosine": 0.99987,
+        "label": "NEWpasttimelike"
+      },
+      "delta": [
+        {
+          "logj": -0.7309660295516283,
+          "logchi": 2.978716055258258,
+          "exact_empty": false,
+          "support": {
+            "kind": "timelike_Qrest_shell",
+            "invariant": 0.049562323070461156,
+            "Ea_min": 939.5741258506132,
+            "Ea_upper": 62127.67798589061
+          },
+          "shell": 2.4333217582608962e-12,
+          "points": 1800,
+          "controls": {
+            "order": 20,
+            "phi": 6,
+            "tail": 65.0
+          }
+        },
+        {
+          "logj": -0.7309660295516123,
+          "logchi": 2.978716055258274,
+          "exact_empty": false,
+          "support": {
+            "kind": "timelike_Qrest_shell",
+            "invariant": 0.049562323070461156,
+            "Ea_min": 939.5741258506132,
+            "Ea_upper": 62127.67798589061
+          },
+          "shell": 1.7648332176954317e-12,
+          "points": 4800,
+          "controls": {
+            "order": 32,
+            "phi": 10,
+            "tail": 85.0
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "channel": "PC",
+        "E": 1.677,
+        "El": 0.5631,
+        "cosine": -0.283,
+        "label": "NEWbelowstationarytargetthresholdspacelike"
+      },
+      "delta": [
+        {
+          "logj": -5.80283708825052,
+          "logchi": -6.369019173060451,
+          "exact_empty": false,
+          "support": {
+            "kind": "spacelike_originalpz",
+            "invariant": -1.852058070413008,
+            "Ea_min": 942.9463150730783,
+            "Ea_upper": 1072.9463150730783
+          },
+          "shell": 1.0549845039067402e-15,
+          "points": 1200,
+          "controls": {
+            "order": 20,
+            "phi": 6,
+            "tail": 65.0
+          }
+        },
+        {
+          "logj": -5.802837088250509,
+          "logchi": -6.36901917306044,
+          "exact_empty": false,
+          "support": {
+            "kind": "spacelike_originalpz",
+            "invariant": -1.852058070413008,
+            "Ea_min": 942.9463150730783,
+            "Ea_upper": 1112.9463150730783
+          },
+          "shell": 1.1868575668950827e-15,
+          "points": 3200,
+          "controls": {
+            "order": 32,
+            "phi": 10,
+            "tail": 85.0
+          }
+        }
+      ],
+      "original_explicit_spinor": {
+        "j": 0.003018977478364928,
+        "chi": 0.0017138393812950873,
+        "Emin": 942.9463150730783,
+        "max_shell_residual": 7.920365528627599e-16,
+        "min_jacobian": 0.0015470301543539407,
+        "order": 36,
+        "nphi": 10,
+        "tail": 90.0
+      }
+    },
+    {
+      "input": {
+        "channel": "PC",
+        "E": 8.431,
+        "El": 7.193,
+        "cosine": 0.417,
+        "label": "NEWspacelike"
+      },
+      "delta": [
+        {
+          "logj": -2.1321394497244617,
+          "logchi": 0.6786784654656293,
+          "exact_empty": false,
+          "support": {
+            "kind": "spacelike_originalpz",
+            "invariant": -70.57778663374386,
+            "Ea_min": 938.3292770247715,
+            "Ea_upper": 1068.3292770247715
+          },
+          "shell": 7.912383779300551e-16,
+          "points": 1440,
+          "controls": {
+            "order": 20,
+            "phi": 6,
+            "tail": 65.0
+          }
+        },
+        {
+          "logj": -2.132139449724459,
+          "logchi": 0.6786784654656319,
+          "exact_empty": false,
+          "support": {
+            "kind": "spacelike_originalpz",
+            "invariant": -70.57778663374386,
+            "Ea_min": 938.3292770247715,
+            "Ea_upper": 1108.3292770247715
+          },
+          "shell": 1.0549845039067402e-15,
+          "points": 3840,
+          "controls": {
+            "order": 32,
+            "phi": 10,
+            "tail": 85.0
+          }
+        }
+      ],
+      "original_explicit_spinor": {
+        "j": 0.11858331921667785,
+        "chi": 1.971270907524512,
+        "Emin": 938.3292770247716,
+        "max_shell_residual": 6.463733353501603e-16,
+        "min_jacobian": 0.007570340134592082,
+        "order": 36,
+        "nphi": 10,
+        "tail": 90.0
+      }
+    }
+  ],
+  "stage": "COMPLETE",
+  "candidate_imported": false,
+  "forwarddensities": {
+    "neutron": {
+      "original_p": 6.999999999999839e-08,
+      "Bessel_fugacity": 6.999999999999864e-08,
+      "saved": 6.999999999999867e-08
+    },
+    "proton": {
+      "original_p": 3.000000000000042e-08,
+      "Bessel_fugacity": 3.0000000000000394e-08,
+      "saved": 3.000000000000039e-08
+    }
+  },
+  "passed": 44,
+  "failed": [],
+  "seconds": 0.11349454196169972,
+  "saved_timelike_anchor": {
+    "logj": -0.6412617562210157,
+    "logchi": 2.613420328588906,
+    "exact_empty": false,
+    "support": {
+      "kind": "timelike_Qrest_shell",
+      "invariant": 0.06332048449216665,
+      "Ea_min": 939.567215949548,
+      "Ea_upper": 48539.893502351304
+    },
+    "shell": 1.4850200085958114e-12,
+    "points": 4800,
+    "controls": {
+      "order": 32,
+      "phi": 10,
+      "tail": 85.0
+    }
+  }
+}

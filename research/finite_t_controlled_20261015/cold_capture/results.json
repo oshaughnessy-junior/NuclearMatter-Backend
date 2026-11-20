@@ -1,0 +1,684 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "T0.01 density roots",
+      "error": 2.6418867093980225e-12,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method0 KMS",
+      "error": 1.9895196601282805e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method0 adaptive estimated error0",
+      "error": 1.319028608739351e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method0 adaptive estimated error1",
+      "error": 1.319027963540908e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method1 KMS",
+      "error": 1.9539925233402755e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method1 adaptive estimated error0",
+      "error": 1.3190305614071788e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method1 adaptive estimated error1",
+      "error": 1.3190270533877312e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method2 KMS",
+      "error": 1.9895196601282805e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method3 KMS",
+      "error": 1.9539925233402755e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method0 versus adaptive64 log_j",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method2 versus adaptive64 log_j",
+      "error": 4.26325641456051e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method3 versus adaptive64 log_j",
+      "error": 3.552713678800438e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method0 versus adaptive64 log_chi",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method2 versus adaptive64 log_chi",
+      "error": 3.9079850466804747e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.01 method3 versus adaptive64 log_chi",
+      "error": 3.552713678800438e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.03 density roots",
+      "error": 2.5301982731207318e-12,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method0 KMS",
+      "error": 1.5853984791647235e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method0 adaptive estimated error0",
+      "error": 2.7436064216563817e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method0 adaptive estimated error1",
+      "error": 2.743593703495171e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method1 KMS",
+      "error": 1.5942802633617248e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method1 adaptive estimated error0",
+      "error": 2.743615069918368e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method1 adaptive estimated error1",
+      "error": 2.7435965393784e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method2 KMS",
+      "error": 1.603162047558726e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method3 KMS",
+      "error": 1.5853984791647235e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method0 versus adaptive64 log_j",
+      "error": 1.3322676295501888e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method2 versus adaptive64 log_j",
+      "error": 2.8421709430403604e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method3 versus adaptive64 log_j",
+      "error": 3.10862446895039e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method0 versus adaptive64 log_chi",
+      "error": 8.881784197001256e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method2 versus adaptive64 log_chi",
+      "error": 2.731148640577848e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.03 method3 versus adaptive64 log_chi",
+      "error": 3.175237850427897e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T.03 unchanged qualified core log_j",
+      "error": 3.2862601528905176e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T.03 unchanged qualified core log_chi",
+      "error": 3.4416913763380446e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.007 density roots",
+      "error": 2.311484337269576e-12,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method0 KMS",
+      "error": 1.0791367799356522e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method0 adaptive estimated error0",
+      "error": 1.9802571818923885e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method0 adaptive estimated error1",
+      "error": 1.9802570714764685e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method1 KMS",
+      "error": 1.0791367799356522e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method1 adaptive estimated error0",
+      "error": 1.980262324901508e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method1 adaptive estimated error1",
+      "error": 1.9802535869452228e-10,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method2 KMS",
+      "error": 1.1501910535116622e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method3 KMS",
+      "error": 1.1501910535116622e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method0 versus adaptive64 log_j",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method2 versus adaptive64 log_j",
+      "error": 1.4210854715202105e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method3 versus adaptive64 log_j",
+      "error": 1.4210854715201903e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method0 versus adaptive64 log_chi",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method2 versus adaptive64 log_chi",
+      "error": 7.105427357601027e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "T0.007 method3 versus adaptive64 log_chi",
+      "error": 2.1316282072802778e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "T": 0.01,
+      "E": 0.03,
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1,
+        "offset_neutron": 54.44701849820937,
+        "offset_proton": 0.0,
+        "pFn": 126.98165214034535,
+        "pFp": 61.04641107877929,
+        "pFe": 61.04641107877929,
+        "delta_p": 4.88882998278676,
+        "EF_n": 8.585910532636673,
+        "EF_p": 1.9843792894565002,
+        "mu_e_cold": 61.04854974138954,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "mu_e": 61.048544352262255,
+      "mu_n": 63.03291945156283,
+      "mu_p": 1.9843378408299925,
+      "affinity": -3.7258470584333736e-05,
+      "independent_densities": [
+        0.009000000000023777,
+        0.0009999999999997817,
+        0.0010000000000009524
+      ],
+      "methods": [
+        {
+          "method": "adaptive_y_q",
+          "log_j": -29.577932950095338,
+          "log_chi": -26.574207103036706,
+          "j": {
+            "log": -29.577932950095338,
+            "value": 1.4271411662965514e-13,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -26.574207103036706,
+            "value": 2.877189682036276e-12,
+            "representable": true,
+            "reason": null
+          },
+          "relative_quad_errors": [
+            1.319028608739351e-10,
+            1.319027963540908e-10
+          ],
+          "order": 32,
+          "tail": 100.0,
+          "rtol": 2e-10
+        },
+        {
+          "method": "adaptive_y_q",
+          "log_j": -29.577932950095338,
+          "log_chi": -26.57420710303671,
+          "j": {
+            "log": -29.577932950095338,
+            "value": 1.4271411662965514e-13,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -26.57420710303671,
+            "value": 2.877189682036266e-12,
+            "representable": true,
+            "reason": null
+          },
+          "relative_quad_errors": [
+            1.3190305614071788e-10,
+            1.3190270533877312e-10
+          ],
+          "order": 64,
+          "tail": 160.0,
+          "rtol": 2e-10
+        },
+        {
+          "method": "Gauss_E_cosine_kinematic_edges",
+          "log_j": -29.57793295009538,
+          "log_chi": -26.57420710303675,
+          "j": {
+            "log": -29.57793295009538,
+            "value": 1.4271411662964906e-13,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -26.57420710303675,
+            "value": 2.8771896820361534e-12,
+            "representable": true,
+            "reason": null
+          },
+          "order": 16,
+          "angle_order": 24,
+          "tail": 100.0,
+          "panel_count_range": [
+            43,
+            43
+          ]
+        },
+        {
+          "method": "Gauss_E_cosine_kinematic_edges",
+          "log_j": -29.577932950095374,
+          "log_chi": -26.574207103036745,
+          "j": {
+            "log": -29.577932950095374,
+            "value": 1.4271411662965006e-13,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -26.574207103036745,
+            "value": 2.877189682036164e-12,
+            "representable": true,
+            "reason": null
+          },
+          "order": 24,
+          "angle_order": 48,
+          "tail": 160.0,
+          "panel_count_range": [
+            44,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "T": 0.03,
+      "E": 0.09,
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1,
+        "offset_neutron": 54.44701849820937,
+        "offset_proton": 0.0,
+        "pFn": 126.98165214034535,
+        "pFp": 61.04641107877929,
+        "pFe": 61.04641107877929,
+        "delta_p": 4.88882998278676,
+        "EF_n": 8.585910532636673,
+        "EF_p": 1.9843792894565002,
+        "mu_e_cold": 61.04854974138954,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "mu_e": 61.048501239253575,
+      "mu_n": 63.03284281591192,
+      "mu_p": 1.984006139408625,
+      "affinity": -0.00033543724971707434,
+      "independent_densities": [
+        0.00900000000000108,
+        0.0009999999999999996,
+        0.0010000000000025301
+      ],
+      "methods": [
+        {
+          "method": "adaptive_y_q",
+          "log_j": -3.683719407483428,
+          "log_chi": -0.6725381658260334,
+          "j": {
+            "log": -3.683719407483428,
+            "value": 0.025129334564983244,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -0.6725381658260334,
+            "value": 0.5104114234543016,
+            "representable": true,
+            "reason": null
+          },
+          "relative_quad_errors": [
+            2.7436064216563817e-11,
+            2.743593703495171e-11
+          ],
+          "order": 32,
+          "tail": 100.0,
+          "rtol": 2e-10
+        },
+        {
+          "method": "adaptive_y_q",
+          "log_j": -3.683719407483429,
+          "log_chi": -0.6725381658260343,
+          "j": {
+            "log": -3.683719407483429,
+            "value": 0.02512933456498321,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -0.6725381658260343,
+            "value": 0.5104114234543011,
+            "representable": true,
+            "reason": null
+          },
+          "relative_quad_errors": [
+            2.743615069918368e-11,
+            2.7435965393784e-11
+          ],
+          "order": 64,
+          "tail": 160.0,
+          "rtol": 2e-10
+        },
+        {
+          "method": "Gauss_E_cosine_kinematic_edges",
+          "log_j": -3.6837194074834576,
+          "log_chi": -0.6725381658260616,
+          "j": {
+            "log": -3.6837194074834576,
+            "value": 0.025129334564982498,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -0.6725381658260616,
+            "value": 0.5104114234542872,
+            "representable": true,
+            "reason": null
+          },
+          "order": 16,
+          "angle_order": 24,
+          "tail": 100.0,
+          "panel_count_range": [
+            43,
+            43
+          ]
+        },
+        {
+          "method": "Gauss_E_cosine_kinematic_edges",
+          "log_j": -3.6837194074834603,
+          "log_chi": -0.6725381658260661,
+          "j": {
+            "log": -3.6837194074834603,
+            "value": 0.02512933456498243,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -0.6725381658260661,
+            "value": 0.5104114234542849,
+            "representable": true,
+            "reason": null
+          },
+          "order": 24,
+          "angle_order": 48,
+          "tail": 160.0,
+          "panel_count_range": [
+            44,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "T": 0.007,
+      "E": 0.021,
+      "reference": {
+        "nB": 0.01,
+        "Yp": 0.1,
+        "offset_neutron": 54.44701849820937,
+        "offset_proton": 0.0,
+        "pFn": 126.98165214034535,
+        "pFp": 61.04641107877929,
+        "pFe": 61.04641107877929,
+        "delta_p": 4.88882998278676,
+        "EF_n": 8.585910532636673,
+        "EF_p": 1.9843792894565002,
+        "mu_e_cold": 61.04854974138954,
+        "cold_beta_residual": 0.0,
+        "calibration_temperature": 0.0
+      },
+      "mu_e": 61.04854710071733,
+      "mu_n": 63.03292433700208,
+      "mu_p": 1.984358980018992,
+      "affinity": -1.8256265761351642e-05,
+      "independent_densities": [
+        0.009000000000020802,
+        0.0010000000000000987,
+        0.0010000000000006874
+      ],
+      "methods": [
+        {
+          "method": "adaptive_y_q",
+          "log_j": -45.52985948463726,
+          "log_chi": -42.52725144667146,
+          "j": {
+            "log": -45.52985948463726,
+            "value": 1.6851294322461494e-20,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -42.52725144667146,
+            "value": 3.3935118197634346e-19,
+            "representable": true,
+            "reason": null
+          },
+          "relative_quad_errors": [
+            1.9802571818923885e-10,
+            1.9802570714764685e-10
+          ],
+          "order": 32,
+          "tail": 100.0,
+          "rtol": 2e-10
+        },
+        {
+          "method": "adaptive_y_q",
+          "log_j": -45.52985948463726,
+          "log_chi": -42.52725144667146,
+          "j": {
+            "log": -45.52985948463726,
+            "value": 1.6851294322461494e-20,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -42.52725144667146,
+            "value": 3.3935118197634346e-19,
+            "representable": true,
+            "reason": null
+          },
+          "relative_quad_errors": [
+            1.980262324901508e-10,
+            1.9802535869452228e-10
+          ],
+          "order": 64,
+          "tail": 160.0,
+          "rtol": 2e-10
+        },
+        {
+          "method": "Gauss_E_cosine_kinematic_edges",
+          "log_j": -45.52985948463724,
+          "log_chi": -42.52725144667145,
+          "j": {
+            "log": -45.52985948463724,
+            "value": 1.6851294322461732e-20,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -42.52725144667145,
+            "value": 3.3935118197634586e-19,
+            "representable": true,
+            "reason": null
+          },
+          "order": 16,
+          "angle_order": 24,
+          "tail": 100.0,
+          "panel_count_range": [
+            43,
+            43
+          ]
+        },
+        {
+          "method": "Gauss_E_cosine_kinematic_edges",
+          "log_j": -45.52985948463727,
+          "log_chi": -42.52725144667148,
+          "j": {
+            "log": -45.52985948463727,
+            "value": 1.6851294322461254e-20,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "log": -42.52725144667148,
+            "value": 3.3935118197633623e-19,
+            "representable": true,
+            "reason": null
+          },
+          "order": 24,
+          "angle_order": 48,
+          "tail": 160.0,
+          "panel_count_range": [
+            44,
+            44
+          ]
+        }
+      ]
+    }
+  ],
+  "runtime_seconds": 3.5429309161845595,
+  "source_sha256": {
+    "cold_capture/resolved.py": "d988860e717ce3a08d8fc2d59a3bdc91c506be80ffb44250e6c55cd67b5354a1",
+    "urca_threshold/threshold_study.py": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+    "urca_threshold/initial_cold_extension_failure.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "end_source_sha256": {
+    "cold_capture/resolved.py": "d988860e717ce3a08d8fc2d59a3bdc91c506be80ffb44250e6c55cd67b5354a1",
+    "urca_threshold/threshold_study.py": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+    "urca_threshold/initial_cold_extension_failure.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  }
+}

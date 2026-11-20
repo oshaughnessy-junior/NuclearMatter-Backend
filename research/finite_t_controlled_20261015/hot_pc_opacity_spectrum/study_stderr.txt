@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_pc_opacity_spectrum/study.py", line 27, in <module>
+    if __name__=='__main__':run()
+                            ~~~^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_pc_opacity_spectrum/study.py", line 26, in run
+    out=dict(rows=rows,checks=checks,passed=sum(c['passed']for c in checks),failed=[c for c in checks if not c['passed']],below_rest_threshold=d,seconds=time.monotonic()-start);(P/'results.json').write_text(json.dumps(out,indent=2)+'\n');print({k:out[k]for k in ['passed','failed','seconds']})
+                                                                                                                                                                                                               ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/rossma/miniconda3/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/Users/rossma/miniconda3/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/rossma/miniconda3/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/rossma/miniconda3/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable

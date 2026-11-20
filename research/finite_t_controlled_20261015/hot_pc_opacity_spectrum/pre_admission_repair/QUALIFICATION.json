@@ -1,0 +1,71 @@
+{
+  "status": "frozen author selected gates pass; independentreview required",
+  "selected_checks": 488,
+  "retained_coarse_failures": [
+    {
+      "name": "coarse actualCM emptyFnumber",
+      "error": 1.1059640484090139e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "coarse actualCM LTEFnumber",
+      "error": 1.0581026461009557e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "coarse actualCM LTEBnumber",
+      "error": 1.0581026452127773e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "coarse actualCM noneqFnumber",
+      "error": 1.0701054425243939e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "coarse actualCM noneqBnumber",
+      "error": 1.0701054418138511e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "globalrefinement emptyF0",
+      "error": 1.1063319683479733e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "globalrefinement LTEF0",
+      "error": 1.058497686967641e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "globalrefinement LTEB0",
+      "error": 1.0584976867900053e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "globalrefinement noneqF0",
+      "error": 1.0704921529880451e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "globalrefinement noneqB0",
+      "error": 1.0704921529658407e-05,
+      "tolerance": 3e-06,
+      "passed": false
+    }
+  ],
+  "additional_coarse_pass": 110,
+  "limits": "Fixed physical free-npe T2,nB1e-7,Ye.3 n+e+<->p+antinue only; no beta/fullantiinventory",
+  "no_uniform_incident_energy_certificate": true,
+  "no_soft_log_tail_certificate": true,
+  "no_beta_join": true
+}

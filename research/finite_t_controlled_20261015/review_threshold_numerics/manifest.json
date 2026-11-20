@@ -1,0 +1,22 @@
+{
+  "author_files_sha256": {
+    "threshold_study.py": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+    "qualified_results.json": "a6dce2b1323d4b0f455b1a42486277ef9ecb2f994e6d1ee0a7659958f070965b",
+    "cold_support.py": "dd97a8bfc967b8b1cb3e051bd89677ee24b0d71f09e37e6deec8bcc6d16d6c4e",
+    "cold_support_results.json": "3cbb352b2478b67f36fb22d0a6fe0a99ae0cf3c1ee95737828a02f0caf8ea560",
+    "plot_threshold.py": "0abbd6b020381e7ef26d6408e713faee415d961bf548c07d8583ec481e368eb0",
+    "RESEARCH_NOTE.md": "ed3e546b0c24a46264b7436023228f1b796786a3310cccb445c215190432f79e",
+    "initial_cold_extension_failure.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96"
+  },
+  "review_files_sha256": {
+    "review_results.json": "720f8769212184a60f9f700df870ac417d4846b58b86339067962ceac3227460",
+    "probe_threshold.py": "66f180f7bf3248f009228b1f65553185e34655385c5eb81dab036c7b8bdeeff2",
+    "REVIEW.md": "8d9dae36741b36b67af3a70786e26883a460ab4af38b8134050a052599b3f35f"
+  },
+  "status": "ACCEPT restricted selected warm spectra; T=.01 remains excluded",
+  "checks": "80/80 PASS",
+  "runtime_seconds": 1.7705291248857975,
+  "new_failures": [],
+  "quota_used_percent": 6,
+  "quota_reset": 1792652325
+}

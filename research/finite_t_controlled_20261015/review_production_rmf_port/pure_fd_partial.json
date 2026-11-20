@@ -1,0 +1,472 @@
+{
+  "raw": [
+    {
+      "relative_step": 0.003,
+      "Cv": 0.16766687794826698,
+      "entropy": 0.18409986532666328,
+      "H": [
+        [
+          880.7796078248145,
+          20.957044392811266
+        ],
+        [
+          20.956899687583732,
+          965.1807421129402
+        ]
+      ],
+      "H_from_free": [
+        [
+          880.7796437563769,
+          20.956890423088172
+        ],
+        [
+          20.956890423088172,
+          965.1803846507266
+        ]
+      ],
+      "muT": [
+        -0.034783136442614195,
+        -0.3654935673048976
+      ],
+      "fgrad": [
+        990.1260391584246,
+        892.8037323112658
+      ],
+      "pressureT": 0.15999646400405704,
+      "gibbsduhemT": 0.15999652576864526
+    },
+    {
+      "relative_step": 0.0015,
+      "Cv": 0.16766697358847457,
+      "entropy": 0.18409991164519193,
+      "H": [
+        [
+          880.7796623860183,
+          20.957051164040546
+        ],
+        [
+          20.95701497809287,
+          965.1802093230431
+        ]
+      ],
+      "H_from_free": [
+        [
+          880.7796686256298,
+          20.957012347934924
+        ],
+        [
+          20.957012347934924,
+          965.1800897140761
+        ]
+      ],
+      "muT": [
+        -0.03478282749632198,
+        -0.3654933672114418
+      ],
+      "fgrad": [
+        990.1259279332312,
+        892.8037330239526
+      ],
+      "pressureT": 0.15999657063741018,
+      "gibbsduhemT": 0.15999658607920547
+    },
+    {
+      "relative_step": 0.00075,
+      "Cv": 0.16766699749351993,
+      "entropy": 0.18409992322954177,
+      "H": [
+        [
+          880.7796760326734,
+          20.957052851593033
+        ],
+        [
+          20.957043807103364,
+          965.180076124255
+        ]
+      ],
+      "H_from_free": [
+        [
+          880.7796705386493,
+          20.957050070539445
+        ],
+        [
+          20.957050070539445,
+          965.1798815234993
+        ]
+      ],
+      "muT": [
+        -0.03478275028170065,
+        -0.36549331720463796
+      ],
+      "fgrad": [
+        990.1259001272826,
+        892.803733202054
+      ],
+      "pressureT": 0.15999659729366644,
+      "gibbsduhemT": 0.15999660115244196
+    }
+  ],
+  "checks": [
+    {
+      "name": "perturbed forward netroots",
+      "error": 6.661338147750939e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.5153933370020924e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.938893903907228e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 6.661338147750939e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": 5.947970000026853e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.1102230246251565e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.758903233298185e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -7.617594094890981e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.585229368453083e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 9.992007221626409e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": 6.625823732544501e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.1102230246251565e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": 4.553589771242444e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.1102230246251565e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.884603875452672e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.5543122344752192e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -7.0251232068979436e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -7.03662480396226e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 6.661338147750939e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.189623670151988e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": 6.117468294319118e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.03364434267713e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -7.522605018153463e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.9984014443252818e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.0940592081454515e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": 7.448951942952967e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 6.661338147750939e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.6079105955971965e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.1102230246251565e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -7.009578394630614e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.133670242145185e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 8.881784197001252e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.808586037167187e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 6.661338147750939e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -7.03662480396226e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.7763568394002505e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.609342041074119e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 5.551115123125783e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.519123905657105e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.6119489631289275e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.7763568394002505e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.71204820368036e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.3322676295501878e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.184984931453398e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 2.220446049250313e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -6.643080508481539e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 5.551115123125783e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -5.9965275001407305e-15,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forward netroots",
+      "error": 1.1102230246251565e-16,
+      "gate": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "perturbed forwardscalar",
+      "error": -5.803052359201264e-15,
+      "gate": 2e-09,
+      "passed": true
+    }
+  ],
+  "seconds": 12.15224212501198
+}

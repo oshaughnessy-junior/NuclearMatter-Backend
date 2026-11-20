@@ -1,0 +1,21 @@
+{
+  "status": "AUTHOR_FROZEN_SELECTED_PASS_DIFFERENT_REVIEW_PENDING",
+  "training_states": 11,
+  "heldout_states": 8,
+  "coefficients": 28,
+  "original_plan_rejected_state": {
+    "T": 1.0,
+    "nB": 1e-06,
+    "Ye": 0.5
+  },
+  "retained_original_admission_failure": true,
+  "physical_checks": 152,
+  "heldout_checks": 32,
+  "API_checks": 113,
+  "max_source_refinement": 9.577842519092883e-09,
+  "max_training_relative_error": 4.3323899040127635e-05,
+  "max_heldout_relative_error": 6.86982759965371e-05,
+  "no_basis_retuning": true,
+  "sources_unchanged": true,
+  "scope": "Optional separate positive ECPCmoments only; detailedphysicalchain reference/default; box INTERSECT actualEOSadmission; no net source/root/AD/uniformerror/physicaluncertainty."
+}

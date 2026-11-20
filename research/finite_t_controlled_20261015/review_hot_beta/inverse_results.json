@@ -1,0 +1,285 @@
+{
+  "checks": [
+    {
+      "name": "new inverse forward root",
+      "error": -2.2870594307278225e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Fnumber",
+      "error": -1.2212453270876722e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Fneutrino_energy",
+      "error": 9.547918011776346e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Felectron_energy",
+      "error": 1.2434497875801753e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Fproton_energy",
+      "error": -1.9984014443252818e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Fneutron_energy",
+      "error": -2.220446049250313e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Fmaterial_energy_loss",
+      "error": -6.727951529228449e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Bnumber",
+      "error": -8.43769498715119e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Bneutrino_energy",
+      "error": 1.9984014443252818e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Belectron_energy",
+      "error": 9.325873406851315e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Bproton_energy",
+      "error": -5.440092820663267e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Bneutron_energy",
+      "error": -5.440092820663267e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent inverse positive Bmaterial_energy_loss",
+      "error": -7.09432512735475e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent signed inverse number",
+      "error": -1.0547118733938987e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent signed inverse neutrino_energy",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent signed inverse electron_energy",
+      "error": 3.3306690738754696e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent signed inverse proton_energy",
+      "error": -1.1324274851176597e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent signed inverse neutron_energy",
+      "error": -1.0769163338864018e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent signed inverse material_energy_loss",
+      "error": -7.382983113757291e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "inverse net sign",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "inverse entropy positive",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "negative affinity entropy",
+      "error": -1.0041407344583376e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "author entropy absolute",
+      "error": -1.63202784619898e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "result": {
+    "scenarios": {
+      "unblocked": {
+        "F": [
+          7.350210699312981e-11,
+          3.5341612502421004e-11,
+          5.999841301647005e-11,
+          6.918532347684481e-08,
+          6.928066350236367e-08,
+          3.5341612502421967e-11
+        ],
+        "B": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "net": [
+          7.350210699312981e-11,
+          3.5341612502421004e-11,
+          5.999841301647005e-11,
+          6.918532347684481e-08,
+          6.928066350236367e-08,
+          3.5341612502421967e-11
+        ],
+        "entropy": 0.0,
+        "max_log_ratio_residual": 0.0
+      },
+      "empty": {
+        "F": [
+          4.25873950656545e-11,
+          2.0237742420493253e-11,
+          3.5010549837196824e-11,
+          4.0086272791382346e-08,
+          4.014152108364006e-08,
+          2.0237742420493805e-11
+        ],
+        "B": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "net": [
+          4.25873950656545e-11,
+          2.0237742420493253e-11,
+          3.5010549837196824e-11,
+          4.0086272791382346e-08,
+          4.014152108364006e-08,
+          2.0237742420493805e-11
+        ],
+        "entropy": 0.0,
+        "max_log_ratio_residual": 0.0
+      },
+      "FD": {
+        "F": [
+          5.2374819922602115e-12,
+          2.5517095892018785e-12,
+          4.244071209921333e-12,
+          4.9298953070880386e-09,
+          4.936691087887163e-09,
+          2.5517095892019475e-12
+        ],
+        "B": [
+          1.1656230536017339e-11,
+          5.6789341283954684e-12,
+          9.445354181116443e-12,
+          1.0971683779107339e-08,
+          1.0986808067416854e-08,
+          5.67893412839562e-12
+        ],
+        "net": [
+          -6.418748543757127e-12,
+          -3.1272245391935888e-12,
+          -5.201282971195114e-12,
+          -6.041788472019306e-09,
+          -6.050116979529692e-09,
+          -3.1272245391936736e-12
+        ],
+        "entropy": 5.1349988350056845e-12,
+        "max_log_ratio_residual": 2.1049828546892968e-13
+      },
+      "LTE": {
+        "F": [
+          1.0123482956249654e-11,
+          4.916491058299948e-12,
+          8.218676439028278e-12,
+          9.528949447717116e-09,
+          9.542084615214446e-09,
+          4.916491058300081e-12
+        ],
+        "B": [
+          1.0123482956249626e-11,
+          4.916491058299935e-12,
+          8.218676439028257e-12,
+          9.528949447717089e-09,
+          9.542084615214426e-09,
+          4.91649105830007e-12
+        ],
+        "net": [
+          2.618447726585243e-26,
+          1.3055200723698127e-26,
+          2.0723944926752725e-26,
+          2.4529367466645815e-23,
+          2.456314661229623e-23,
+          1.3055200723678577e-26
+        ],
+        "entropy": 1.7141852534360313e-38,
+        "max_log_ratio_residual": 1.9895196601282805e-13
+      }
+    },
+    "names": [
+      "number",
+      "neutrino_energy",
+      "electron_energy",
+      "proton_energy",
+      "neutron_energy",
+      "material_energy_loss"
+    ],
+    "density": 6.99999999999984e-08,
+    "proper_density": 6.977708382458518e-08,
+    "rest_rate": 0.001053384620915213,
+    "rest_moments": {
+      "neutrino_energy": 0.0005048801786060259,
+      "electron_energy": 0.0008571201859495914,
+      "proton_energy": 0.9883617639549485
+    },
+    "max_fourmomentum_residual": 3.835820550079916e-13,
+    "controls": {
+      "rest": 28,
+      "parent_per_panel": 16,
+      "orient": 12,
+      "phi": 16,
+      "parent_p_over_sqrt2MT_max": 8.94427190999916
+    },
+    "seconds": 2.123265708098188
+  },
+  "affinity": -1.6
+}

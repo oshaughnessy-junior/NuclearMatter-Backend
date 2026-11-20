@@ -1,0 +1,1 @@
+Initial study computed coldmap and electron onset then TypeError in Hessian comparison normalization: abs called on immutable tuple rather than array. Original driver/partial retained. Corrected review/validation array conversion only, no EOS/root formulas or tolerances changed.

@@ -1,0 +1,22 @@
+{
+  "status": "AUTHOR_FROZEN_INDEPENDENT_REVIEW_PENDING",
+  "version": "joint-lepton-moment-2",
+  "model_sha256": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0",
+  "positive_measured_gate_pass": true,
+  "signed_RT_measured_gate_pass": true,
+  "signed_relative_away_zero_measured_gate_pass": true,
+  "uniform_error_certificate": false,
+  "uniform_sign_certificate": false,
+  "AD_qualification": false,
+  "fallback": "actual fine CM quadrature; no cached rows",
+  "scope": "optional fixed-state moment convenience only; no spectral redistribution, uniform error/sign certificate, AD fidelity, derivative or physical-model uncertainty claim",
+  "counts": {
+    "development_quadrature_pass": 84,
+    "fresh_validation_pass": 80,
+    "independent_phase_pass": 12,
+    "API_math_admission_pass": 624,
+    "density_preservation_pass": 75
+  },
+  "failed_new_gates": [],
+  "v1_failures_preserved": true
+}

@@ -1,0 +1,26 @@
+{
+  "status": "author_frozen_independent_review_required",
+  "utc": "2026-10-15T15:10:24.540082+00:00",
+  "checks": 560,
+  "all_passed": true,
+  "runtime_seconds": 0.5914057909976691,
+  "quota_used_percent": 8,
+  "quota_reset": 1792652325,
+  "frozen_point_sha256": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+  "scope": "Guo2020 vacuum source form factors; no medium/radiative/secondclass terms",
+  "open_gates": [
+    "independent fullcurrent physics/numerics review",
+    "matched external implementation",
+    "finiteT relativistic response with consistentEOSdispersions",
+    "q vs qstar inmediumderivation",
+    "inverse/crossed/multiflavorcollisionmoments"
+  ],
+  "sha256": {
+    "RESEARCH_NOTE.md": "09775b8ad06a92516996aa057e7cddeb11c9258c182e2fdc030070ee68ad6b88",
+    "SOURCES.json": "7f0c96f49466d2bd5aafa5719d2d89e11f979967da2157447f0f10ca7e714f46",
+    "current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "results.json": "37b2ec9faf357b76a5ea92da32183aa7f9502a8e2bc79e9914e5807e21b89b17",
+    "source_polynomial.py": "a31fb9baa0ae836d64ab6d40da6d0965dfc75c5b9d26655201504bf1266766db",
+    "validate.py": "5f710056539e476c6f24a4ebc4440a5ed72b1c8e440fb9316431161bf9d819a3"
+  }
+}

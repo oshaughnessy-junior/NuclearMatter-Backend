@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "fresh matchedNR absolute M1000000.0",
+      "error": 1.6436653687224023e-05,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "fresh matchedNR author/oracle M1000000.0",
+      "error": 5.668798763736049e-13,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "fresh matchedNR absolute M2000000.0",
+      "error": 8.158454337880983e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "fresh matchedNR author/oracle M2000000.0",
+      "error": 1.4662093761330652e-10,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "fresh controlledNR approach",
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "mass": 1000000.0,
+      "Enu": 16.0,
+      "El": 15.993617208929528,
+      "w": 0.006382791070471547,
+      "q": 17.951794376987213,
+      "NR_allowed": 24199904170.42951,
+      "oracle": 24200301935.873623,
+      "author": 24200301935.88734,
+      "relative_limit_difference": 1.6436653687224023e-05
+    },
+    {
+      "mass": 2000000.0,
+      "Enu": 16.0,
+      "El": 15.995520087332842,
+      "w": 0.004479912667157607,
+      "q": 17.952861922403454,
+      "NR_allowed": 96816388973.73163,
+      "oracle": 96817178845.82024,
+      "author": 96817178860.01567,
+      "relative_limit_difference": 8.158454337880983e-06
+    }
+  ]
+}

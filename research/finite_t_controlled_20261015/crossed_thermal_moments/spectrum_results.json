@@ -1,0 +1,311 @@
+{
+  "material": {
+    "T": 0.03,
+    "nB": 1e-12,
+    "Ye": 0.3,
+    "neutron": {
+      "temperature": 0.03,
+      "mass": 939.56542052,
+      "chemical_potential": 939.1130868115629,
+      "kinetic_chemical_potential": -0.4523337084370951,
+      "density": 7.000000000014713e-13,
+      "kinetic_energy_density": 3.150125876606906e-14,
+      "energy_density": 6.577272956241484e-10,
+      "pressure": 2.100000105062658e-14,
+      "entropy_density": 1.230449519077759e-11,
+      "free_energy_density": 6.573581607684251e-10,
+      "cv_fixed_density": 1.050083785065487e-12,
+      "dn_dmu_fixed_temperature": 2.3333330998754947e-11,
+      "dn_dtemperature_fixed_mu": 3.8681646823986166e-10,
+      "dmu_dtemperature_fixed_density": -16.57785029752083,
+      "log_antiparticle_density": -62635.526816730664,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -62607.5391206708
+    },
+    "proton": {
+      "temperature": 0.03,
+      "mass": 938.27208816,
+      "chemical_potential": 937.7943974977201,
+      "kinetic_chemical_potential": -0.4776906622798833,
+      "density": 2.9999999999997035e-13,
+      "kinetic_energy_density": 1.3500539828452777e-14,
+      "energy_density": 2.8149512698780063e-10,
+      "pressure": 9.000000193362322e-15,
+      "entropy_density": 5.526924623525532e-12,
+      "free_energy_density": 2.8132931924909487e-10,
+      "cv_fixed_density": 4.500359638163384e-13,
+      "dn_dmu_fixed_temperature": 9.999999570302997e-12,
+      "dn_dtemperature_fixed_mu": 1.7423081340499983e-10,
+      "dmu_dtemperature_fixed_density": -17.4230820891646,
+      "log_antiparticle_density": -62548.46149372529,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -62519.62649980504
+    },
+    "electron": {
+      "temperature": 0.03,
+      "chemical_potential": 0.3683831307935174,
+      "mass": 0.51099895069,
+      "net_density": 2.9999999999999963e-13,
+      "particle_density": 3.0000000000649485e-13,
+      "antiparticle_density": 6.495141976080126e-24,
+      "energy_density": 1.6775571111700075e-13,
+      "pressure": 9.012965955789004e-15,
+      "entropy_density": 2.2084579278244887e-12,
+      "free_energy_density": 1.015019732822661e-13,
+      "cv_fixed_net_density": 5.100990272359174e-13,
+      "dn_dmu_fixed_temperature": 9.971274723347867e-12,
+      "dn_dtemperature_fixed_mu": 6.344192014743583e-11,
+      "dmu_dtemperature_fixed_net_density": -6.362468381187589
+    },
+    "muons": "absent"
+  },
+  "runs": [
+    {
+      "Enu": 0.42,
+      "j": {
+        "value": 1.2144850944847859e-06,
+        "log": -13.621190361543857,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 2.5551940555544065e-14,
+        "log": -31.298063129851815,
+        "representable": true,
+        "reason": null
+      },
+      "DOS": 1.163079575653826e-09,
+      "max_conditional_energy_residual": 2.1499468871866156e-13,
+      "seconds": 0.02523050014860928,
+      "controls": {
+        "order": 6,
+        "parent_order": 8,
+        "phi_order": 4
+      },
+      "derivation": "Full rest Dalitz dGamma/(dEanti*dEe) averaged parent spin; conditional isotropic cone Jacobian1/(2gamma v Eanti*); parent spin2 and proper time; divide one-helicity DOS only for spectral coefficient comparison"
+    },
+    {
+      "Enu": 0.42,
+      "j": {
+        "value": 1.2144850944859423e-06,
+        "log": -13.621190361542904,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 2.5551940555494863e-14,
+        "log": -31.29806312985374,
+        "representable": true,
+        "reason": null
+      },
+      "DOS": 1.163079575653826e-09,
+      "max_conditional_energy_residual": 2.881583860414594e-13,
+      "seconds": 0.10839479207061231,
+      "controls": {
+        "order": 10,
+        "parent_order": 12,
+        "phi_order": 8
+      },
+      "derivation": "Full rest Dalitz dGamma/(dEanti*dEe) averaged parent spin; conditional isotropic cone Jacobian1/(2gamma v Eanti*); parent spin2 and proper time; divide one-helicity DOS only for spectral coefficient comparison"
+    },
+    {
+      "Enu": 0.42,
+      "j": {
+        "value": 1.214485094485571e-06,
+        "log": -13.62119036154321,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 2.5551940555525e-14,
+        "log": -31.29806312985256,
+        "representable": true,
+        "reason": null
+      },
+      "DOS": 1.163079575653826e-09,
+      "max_conditional_energy_residual": 2.8727020762175925e-13,
+      "seconds": 0.33634408307261765,
+      "controls": {
+        "order": 16,
+        "parent_order": 16,
+        "phi_order": 12
+      },
+      "derivation": "Full rest Dalitz dGamma/(dEanti*dEe) averaged parent spin; conditional isotropic cone Jacobian1/(2gamma v Eanti*); parent spin2 and proper time; divide one-helicity DOS only for spectral coefficient comparison"
+    }
+  ],
+  "tensor": {
+    "j": {
+      "value": 1.2144850944866972e-06,
+      "log": -13.621190361542283,
+      "representable": true,
+      "reason": null
+    },
+    "chi": {
+      "value": 2.5551940555538073e-14,
+      "log": -31.29806312985205,
+      "representable": true,
+      "reason": null
+    },
+    "Enu": 0.42,
+    "bath": {
+      "T": 0.03,
+      "mu_n": 939.1130868115629,
+      "mu_p": 937.7943974977201,
+      "mu_e": 0.3683831307935174
+    },
+    "controls": {
+      "angle_order": 14,
+      "lepton_order": 16,
+      "widths": 12.0,
+      "energy_order": 24,
+      "phi_order": 4,
+      "tail": 70.0
+    },
+    "panels": [
+      {
+        "c": -0.9862838086968124,
+        "center": 0.8732837594199448,
+        "width": 0.001706464441684716,
+        "lower": 0.8528061861197282,
+        "upper": 0.8937613327201614
+      },
+      {
+        "c": -0.9284348836635735,
+        "center": 0.8732654290335082,
+        "width": 0.002002580889380448,
+        "lower": 0.8492344583609428,
+        "upper": 0.8972963997060737
+      },
+      {
+        "c": -0.827201315069765,
+        "center": 0.8732333543219675,
+        "width": 0.0024356034125891167,
+        "lower": 0.844006113370898,
+        "upper": 0.9024605952730369
+      },
+      {
+        "c": -0.6872929048116855,
+        "center": 0.8731890318213006,
+        "width": 0.0029305040031147923,
+        "lower": 0.838022983783923,
+        "upper": 0.9083550798586781
+      },
+      {
+        "c": -0.5152486363581541,
+        "center": 0.8731345381710981,
+        "width": 0.003442814636125529,
+        "lower": 0.8318207625375917,
+        "upper": 0.9144483138046045
+      },
+      {
+        "c": -0.31911236892788974,
+        "center": 0.8730724261891528,
+        "width": 0.003946462026970149,
+        "lower": 0.825714881865511,
+        "upper": 0.9204299705127946
+      },
+      {
+        "c": -0.10805494870734367,
+        "center": 0.8730056040223975,
+        "width": 0.0044247457396592825,
+        "lower": 0.819908655146486,
+        "upper": 0.9261025528983089
+      },
+      {
+        "c": 0.10805494870734367,
+        "center": 0.8729371983282684,
+        "width": 0.004865908791941416,
+        "lower": 0.8145462928249715,
+        "upper": 0.9313281038315654
+      },
+      {
+        "c": 0.31911236892788974,
+        "center": 0.8728704076432937,
+        "width": 0.005261083059728156,
+        "lower": 0.8097374109265558,
+        "upper": 0.9360034043600316
+      },
+      {
+        "c": 0.5152486363581541,
+        "center": 0.8728083528059777,
+        "width": 0.005603317050210388,
+        "lower": 0.805568548203453,
+        "upper": 0.9400481574085023
+      },
+      {
+        "c": 0.6872929048116855,
+        "center": 0.8727539313999942,
+        "width": 0.005887100602646846,
+        "lower": 0.8021087241682321,
+        "upper": 0.9433991386317564
+      },
+      {
+        "c": 0.827201315069765,
+        "center": 0.8727096828895553,
+        "width": 0.0061081266592162165,
+        "lower": 0.7994121629789607,
+        "upper": 0.9460072028001499
+      },
+      {
+        "c": 0.9284348836635735,
+        "center": 0.8726776702396204,
+        "width": 0.0062631723290009315,
+        "lower": 0.7975196022916092,
+        "upper": 0.9478357381876316
+      },
+      {
+        "c": 0.9862838086968124,
+        "center": 0.8726593785310535,
+        "width": 0.006350064580492764,
+        "lower": 0.7964586035651403,
+        "upper": 0.9488601534969666
+      }
+    ],
+    "evaluations": 896,
+    "runtime_seconds": 3.6584504160564393,
+    "units": "j,chi s^-1 per one antinu occupation; DOS E\u00b2/(2pi\u00b2 hbarc\u00b3) fm^-3 MeV^-1"
+  },
+  "checks": [
+    {
+      "name": "conditional_refinement_j_0",
+      "error": 6.465938895414822e-13,
+      "limit": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "conditional_refinement_j_1",
+      "error": 3.055333763768898e-13,
+      "limit": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new_tensor_spectrum_j",
+      "error": 9.272582701665008e-13,
+      "limit": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "conditional_refinement_chi_0",
+      "error": 7.460698725483835e-13,
+      "limit": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "conditional_refinement_chi_1",
+      "error": 1.1795009413610708e-12,
+      "limit": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new_tensor_spectrum_chi",
+      "error": 5.115907697471413e-13,
+      "limit": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": 0,
+  "scope": "New selected Enu .42 spectral anchor only; not full-Enu tensor integration"
+}

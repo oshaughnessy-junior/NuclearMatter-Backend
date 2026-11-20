@@ -1,0 +1,52 @@
+{
+  "scope": "Targeted independent coupling audit, no trajectory replay",
+  "checks": [
+    {
+      "name": "finite-difference two-variable solve (2.0, 1e-07, 0.3)",
+      "scaled_error": 1.0300571761001964e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "finite-difference two-variable solve (5.0, 1e-05, 0.5)",
+      "scaled_error": 8.532307757742658e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "finite-difference two-variable solve (1.4, 1e-07, 0.5285271553)",
+      "scaled_error": 5.804534630726721e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "finite-difference two-variable solve (3.5, 1e-05, 0.2334007699)",
+      "scaled_error": 4.851444402945796e-10,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "independent momentum-energy endpoint ledger 2.0",
+      "scaled_error": 1.5917728242433505e-11,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "all-composition classical bound 2.0",
+      "upper_bound": 0.00012694300518440723,
+      "passed": true
+    },
+    {
+      "name": "independent momentum-energy endpoint ledger 5.0",
+      "scaled_error": 1.2245812379081663e-11,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "all-composition classical bound 5.0",
+      "upper_bound": 0.003211432235274317,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

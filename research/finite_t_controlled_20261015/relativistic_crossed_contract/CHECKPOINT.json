@@ -1,0 +1,19 @@
+{
+  "status": "frozen contract plus vacuum probes; independent review pending",
+  "checks": 66,
+  "source_sha256": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+  "upstream_sha256": {
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "files": {
+    "check_contract.py": "c1015f5c8dd0823c14d71c84275657cd49231479fbdeb0ee11237543cee3e176",
+    "contract_results.json": "622d0a264c1d688fc6df96a9591cc49a1ac9547301444348120ccc97d0feee7d",
+    "beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+    "RESEARCH_CONTRACT.md": "350752e686f55b80e9df77656cbb73d01567661baccdd34c52ced7ec6113ea7d",
+    "results.json": "7e96bbeb56b3b8a35539d70e7c72d4ddf506cb174aa70cea03caa38c82a48e5d",
+    "static_results.json": "da83aae2ecd969403ba36c6134b4d86e8d80ef1a72065dfe317a4738cfff0d47",
+    "probes.py": "5d5d317254f0272af52c2a60d2e709be97c423d519cd45dfbc967d0ec339190a",
+    "check_static.py": "551e5544f2fca6293484d3763207cc5dad000950ed57d88129605217ec71d43a"
+  }
+}

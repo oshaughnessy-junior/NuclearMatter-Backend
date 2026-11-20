@@ -1,0 +1,150 @@
+{
+  "checks": [
+    {
+      "name": "reject outside selected experiment (2.0, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject outside selected experiment (1.0, 1e-06, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject outside selected experiment (True, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject outside selected experiment (1.0, nan, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject outside selected experiment (1.0, 1e-07, True)",
+      "passed": true
+    },
+    {
+      "name": "reject outside selected experiment (1.0, 1e-07, 0.01)",
+      "passed": true
+    },
+    {
+      "name": "reject outside selected experiment (1.0, 1e-07, inf)",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral quadrature flag (1, False)",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral quadrature flag (False, 1)",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral quadrature flag (None, False)",
+      "passed": true
+    },
+    {
+      "name": "reject nonliteral quadrature flag (False, nan)",
+      "passed": true
+    },
+    {
+      "name": "fresh selected EOS baryon root (1.0, 1e-07)",
+      "passed": true
+    },
+    {
+      "name": "fresh selected EOS charge (1.0, 1e-07)",
+      "passed": true
+    },
+    {
+      "name": "fresh selected EOS baryon root (3.0, 1e-07)",
+      "passed": true
+    },
+    {
+      "name": "fresh selected EOS charge (3.0, 1e-07)",
+      "passed": true
+    },
+    {
+      "name": "fresh selected EOS baryon root (2.0, 1e-06)",
+      "passed": true
+    },
+    {
+      "name": "fresh selected EOS charge (2.0, 1e-06)",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged crossed_thermal_moments/moments.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged crossed_thermal_moments/spectrum_anchor.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged relativistic_crossed_contract/beta.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged relativistic_crossed_thermal/kernel.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged relativistic_capture_oracle/events.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged relativistic_tensor/tensor.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged muon_full_current/current.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged muon_vacuum/vacuum_cc.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged relativistic_free_eos/free_baryons.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged thermodynamics/lepton_reference.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged hot_beta_moments/hot_moments.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged positron_capture_moments/moments.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged review_pc_moments/reference.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged hot_electron_capture_moments/electron_capture.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged hot_beta_moments/results.json",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged transparent_capture_balance/balance.py",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged transparent_capture_balance/results.json",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged transparent_capture_balance/summary.json",
+      "passed": true
+    },
+    {
+      "name": "source/oldanchor unchanged transparent_capture_balance/CHECKPOINT.json",
+      "passed": true
+    }
+  ],
+  "passed": 36,
+  "failed": []
+}

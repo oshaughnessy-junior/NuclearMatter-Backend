@@ -1,0 +1,290 @@
+{
+  "checks": [
+    {
+      "path": "src/nmbackend/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/adapters/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/adapters/rift.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/constants.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/README.md",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/build_nscool.sh",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/isothermal.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/nscool_isothermal_tail.f",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/nscool_nmbackend.patch",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/runner.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/validate.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/data/crust_sly_dh2001.dat",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/data/frib_scenario_ladder.yaml",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/durca.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/ejecta.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/base.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/compose.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/coolcomp.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/crust.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/ddrmf.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/hybrid.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/leptons.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/metamodel.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/polytrope.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/rmft.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/eos/skyrme.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/inference/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/inference/fisher.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/inference/synthetic.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/ipad.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/lab_likelihood.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/nscool_io.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/postmerger.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/priors/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/priors/bridge.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/priors/gp_pca.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/reference/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/reference/reprimand.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/reference/scipy_tov.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/rift/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/rift/compressed.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/rift/evidence.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/rift/sequence.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/tov/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/tov/central.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/tov/family.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/tov/phase_transition.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/tov/solver.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/validation/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/validation/model_diagnostic.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/validation/reference_matrix.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/__init__.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/_spline.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/blanket.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/conduct.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/core_conduct.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/core_nu.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/crust.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/crust_nu.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/curve.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/envelope.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/gaps.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/geometry.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/heat.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/native.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/reference.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/star.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/superfluid.py",
+      "passed": true
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/whole.py",
+      "passed": true
+    }
+  ],
+  "passed": 71,
+  "failed": []
+}

@@ -1,0 +1,99 @@
+{
+  "status": "authored selected finite-box freeze pending independent review",
+  "passed": 109,
+  "preserved_failed": [
+    {
+      "name": "1.3 spectral6to8 onepercent gate",
+      "error": -0.02277071366732719,
+      "tolerance": 0.01,
+      "passed": false
+    },
+    {
+      "name": "3.0 spectral6to8 onepercent gate",
+      "error": -0.011116348724810599,
+      "tolerance": 0.01,
+      "passed": false
+    },
+    {
+      "name": "1.3 spectral8to12 onepercent gate",
+      "error": -0.010263966090048093,
+      "tolerance": 0.01,
+      "passed": false
+    },
+    {
+      "name": "3.0 isolated tail quadrature4to6 initial_heat",
+      "error": -4.695217884376213e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "3.0 isolated tail quadrature4to6 activity",
+      "error": -0.0032861399078628617,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "independent actual grid edge (6, 7)",
+      "error": -4.41187833899459e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    }
+  ],
+  "report_counts": {
+    "results.json": {
+      "passed": 66,
+      "failed": 0
+    },
+    "sensitivity_results.json": {
+      "passed": 14,
+      "failed": 5
+    },
+    "followup_results.json": {
+      "passed": 10,
+      "failed": 0
+    },
+    "grid_edge_results.json": {
+      "passed": 4,
+      "failed": 1
+    },
+    "refined_edge_grid_results.json": {
+      "passed": 11,
+      "failed": 0
+    },
+    "fine_time_results.json": {
+      "passed": 4,
+      "failed": 0
+    }
+  },
+  "physical_sources": {
+    "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "files": {
+    "RESEARCH_NOTE.md": "2eb2c9375dbc29ed5e987fb5778aba4be33a6788a05828869862bb791eec74d3",
+    "box.py": "7c724c889678581ecec4c5a645a5e99e940f4ae8142fe39278ff4870342ea77f",
+    "edge_qualification.json": "ad0eca7b2af616286e0816bc59b679104bde7b862ac3b1cdc07d8d08624e7fdb",
+    "fine_time.py": "6e829e0f9825ad947cc15e43a4b3693d2c851011f931993d334643fd4387cfad",
+    "fine_time_results.json": "999280c1977c45272a46a1bbec83372001890351ae0d102e2122bddd647c3e2a",
+    "followup.py": "b2be7151777593a233773d071da3ff053faddd7aabeb671d88c7f241f009e921",
+    "followup_results.json": "3c149f479e39dc5445e3fae78552298d5932302319434bc9ceb13d5f8fcae837",
+    "grid_edge_checks.py": "3e4d9bc1738e8a7683232eafd7aafbcabfaeceb5b3bd3528835812b39e6e728a",
+    "grid_edge_results.json": "f592f01f014b794fca0e61fafeecf01905a9c0f512689849e177f53cf11d5c1f",
+    "initial_box_before16_and_grid_controls.py.txt": "b813b793132c0f7ac34b33e76c1c6269be074d4f8216838e3cd116af0926b9d4",
+    "initial_fine_time_serialization.py.txt": "f2877ec905d0bd83d037b78adb18ca0d174327ebbe5201638bbfd34d2916f3a1",
+    "initial_fine_time_serialization_failure.txt": "b668052cb5fc626579ccc3a7f178f2bcc2a4ff4c3478da2bdd4c8276c458bed8",
+    "make_figure.py": "633abaaf4af3b953baf97f69fe586f391e182e0dad7b2648aa8a0771a75df54b",
+    "partial.json": "bb80621dd3061478a299e94c1c68bd755e0a39ec771a5f8be6786f69e73bd681",
+    "reference_edge.py": "2e3c039780391a8514c9b2ba654e0c7b19846b0393da3be6a6680a38b52883af",
+    "refined_edge_grid.py": "820f8c28191bdd52fdf1c92e73eb1ed7ea0aae45cb4ac00b3914a50450a783fe",
+    "refined_edge_grid_results.json": "b8806bc121b058f285d646e5232ab9f085772d94fca7c566687796742d6107c1",
+    "results.json": "6e8d7fa4c3606e60744c5635d4bbbc433421a13d0889687dcab26ee77ee9cdf4",
+    "sensitivity.py": "084305929973d90c35df007ca06dae50da613c566943bfb338be3e9af52cf1a4",
+    "sensitivity_results.json": "2b4fcb4a185b07fc59ab9d75ab38cd781cc63b09b7ec2a997618ac2c5d2dcb50",
+    "spectral_feedback.pdf": "e10f58dbc34549ccf6265a5e084759ff2b9f1777115082b0d36246f99bf71b4e",
+    "spectral_feedback.png": "0d6cc6dc4bb425d45badd8119188a89ed1fe6b4a917204b29f395205218c0d9b",
+    "study.py": "e85fe001cff3890f8a1b4f3fb4149e5d2b4a52de9a4ef17979e38a62ff7e9a12"
+  }
+}

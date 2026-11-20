@@ -1,0 +1,419 @@
+{
+  "PR51": {
+    "path": "production_lepton_port/staged/src/nmbackend/reference/finite_t_leptons.py",
+    "sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+    "functions": {
+      "state_mu": "temperature_mev, chemical_potential_mev, mass_mev=M_E, *, rtol=2e-12, tail=60.0",
+      "state_density": "temperature_mev, net_density_fm3, mass_mev=M_E, *, rtol=2e-12, tail=60.0",
+      "thermal_energy_density": "state, *, rtol=2e-12, tail=60.0"
+    },
+    "classes": {
+      "LeptonState": {
+        "fields": [
+          {
+            "name": "temperature",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "chemical_potential",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "mass",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "net_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "particle_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "antiparticle_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "energy_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "pressure",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "entropy_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "free_energy_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "cv_fixed_net_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "dn_dmu_fixed_temperature",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "dn_dtemperature_fixed_mu",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "dmu_dtemperature_fixed_net_density",
+            "type": "float",
+            "default": null
+          }
+        ],
+        "methods": {
+          "asdict": "self"
+        }
+      }
+    }
+  },
+  "PR52": {
+    "path": "production_baryon_port/staged/src/nmbackend/reference/finite_t_baryons.py",
+    "sha256": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b",
+    "functions": {
+      "state_mu": "temperature_mev, chemical_potential_mev, mass_mev=M_N, *, rtol=2e-12, tail=60.0",
+      "state_density": "temperature_mev, particle_density_fm3, mass_mev=M_N, *, rtol=2e-12, tail=60.0"
+    },
+    "classes": {
+      "ParticleState": {
+        "fields": [
+          {
+            "name": "temperature",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "mass",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "chemical_potential",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "kinetic_chemical_potential",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "particle_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "kinetic_energy_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "energy_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "pressure",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "entropy_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "free_energy_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "cv_fixed_particle_density",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "dn_dmu_fixed_temperature",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "dn_dtemperature_fixed_mu",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "dmu_dtemperature_fixed_particle_density",
+            "type": "float",
+            "default": null
+          }
+        ],
+        "methods": {
+          "asdict": "self"
+        }
+      }
+    }
+  },
+  "PR54": {
+    "path": "production_weak_port/staged/src/nmbackend/reference/weak_reference.py",
+    "sha256": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+    "functions": {
+      "channel_moments": "channel, bath, radiation=None, controls=None",
+      "spectral_coefficients": "*args, **kwargs"
+    },
+    "classes": {
+      "Current": {
+        "fields": [
+          {
+            "name": "source",
+            "type": "str",
+            "default": "field(default=_C.SOURCE, init=False)"
+          },
+          {
+            "name": "neutron_mass",
+            "type": "float",
+            "default": "field(default=_C.MN, init=False)"
+          },
+          {
+            "name": "proton_mass",
+            "type": "float",
+            "default": "field(default=_C.MP, init=False)"
+          },
+          {
+            "name": "electron_mass",
+            "type": "float",
+            "default": "field(default=_C.ME, init=False)"
+          },
+          {
+            "name": "weak_mass",
+            "type": "float",
+            "default": "field(default=_C.MW, init=False)"
+          }
+        ],
+        "methods": {}
+      },
+      "FreeElectronBath": {
+        "fields": [
+          {
+            "name": "T",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "mu_n",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "mu_p",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "mu_e",
+            "type": "float",
+            "default": null
+          }
+        ],
+        "methods": {
+          "equilibrium_mu_nue": "self",
+          "equilibrium_mu_antinue": "self"
+        }
+      },
+      "Radiation": {
+        "fields": [
+          {
+            "name": "mode",
+            "type": "str",
+            "default": "'empty'"
+          },
+          {
+            "name": "temperature",
+            "type": "object",
+            "default": "None"
+          },
+          {
+            "name": "mu_nue",
+            "type": "object",
+            "default": "None"
+          },
+          {
+            "name": "mu_antinue",
+            "type": "object",
+            "default": "None"
+          }
+        ],
+        "methods": {
+          "empty": "cls",
+          "fd": "cls, temperature, mu_nue, mu_antinue"
+        }
+      },
+      "Controls": {
+        "fields": [
+          {
+            "name": "radial_order",
+            "type": "int",
+            "default": "20"
+          },
+          {
+            "name": "lepton_order",
+            "type": "int",
+            "default": "32"
+          },
+          {
+            "name": "polar_order",
+            "type": "int",
+            "default": "8"
+          },
+          {
+            "name": "azimuth_order",
+            "type": "int",
+            "default": "8"
+          },
+          {
+            "name": "rest_order",
+            "type": "int",
+            "default": "16"
+          },
+          {
+            "name": "parent_order",
+            "type": "int",
+            "default": "20"
+          },
+          {
+            "name": "orient_order",
+            "type": "int",
+            "default": "8"
+          },
+          {
+            "name": "decay_azimuth_order",
+            "type": "int",
+            "default": "12"
+          },
+          {
+            "name": "decay_coordinate",
+            "type": "str",
+            "default": "'pair'"
+          },
+          {
+            "name": "parent_coordinate",
+            "type": "str",
+            "default": "'laguerre'"
+          },
+          {
+            "name": "tail",
+            "type": "float",
+            "default": "60.0"
+          },
+          {
+            "name": "budget_seconds",
+            "type": "float",
+            "default": "110.0"
+          }
+        ],
+        "methods": {
+          "base": "cls, channel",
+          "fine": "cls, channel"
+        }
+      },
+      "MomentResult": {
+        "fields": [
+          {
+            "name": "channel",
+            "type": "str",
+            "default": null
+          },
+          {
+            "name": "bath",
+            "type": "FreeElectronBath",
+            "default": null
+          },
+          {
+            "name": "radiation",
+            "type": "Radiation",
+            "default": null
+          },
+          {
+            "name": "controls",
+            "type": "Controls",
+            "default": null
+          },
+          {
+            "name": "current",
+            "type": "Current",
+            "default": null
+          },
+          {
+            "name": "forward",
+            "type": "tuple",
+            "default": null
+          },
+          {
+            "name": "backward",
+            "type": "tuple",
+            "default": null
+          },
+          {
+            "name": "net",
+            "type": "tuple",
+            "default": null
+          },
+          {
+            "name": "entropy_production",
+            "type": "object",
+            "default": null
+          },
+          {
+            "name": "max_event_kms_error",
+            "type": "float",
+            "default": null
+          },
+          {
+            "name": "diagnostics",
+            "type": "tuple",
+            "default": null
+          },
+          {
+            "name": "particle_stoichiometry",
+            "type": "tuple",
+            "default": null
+          },
+          {
+            "name": "energy_ledger_scaled",
+            "type": "object",
+            "default": null
+          },
+          {
+            "name": "direct_energy_ledger_scaled",
+            "type": "object",
+            "default": null
+          }
+        ],
+        "methods": {
+          "names": "self",
+          "units": "self"
+        }
+      }
+    }
+  }
+}

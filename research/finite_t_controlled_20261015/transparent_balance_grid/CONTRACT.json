@@ -1,0 +1,33 @@
+{
+  "states": [
+    [
+      1,
+      1e-07
+    ],
+    [
+      3,
+      1e-07
+    ],
+    [
+      2,
+      1e-06
+    ]
+  ],
+  "Ye_bracket": [
+    0.05,
+    0.9
+  ],
+  "model": "Physical free particle-only n,p; pair-equilibrated e\u00b1, neutral charge. Fixed T thermostat, exactly empty incoming nue/antinue, no muons/photons evolution.",
+  "inventory": "n decay/inverse + positron capture/inverse + electron capture/inverse; empty incoming selects forward emissions",
+  "source": "Fresh actual phase integrals and FD EOS roots each trial. No rescaling or saved rate feedback.",
+  "profiles": "Original accepted source profiles unchanged; fresh qualification at each new trial; final isolated tail60->80 EC/PC,beta80->100",
+  "gates": {
+    "source_refinement": 3e-06,
+    "density_integrals": 3e-08,
+    "EOS_density": 1e-10,
+    "energy_ledger": 3e-10,
+    "lepton_ledger": 1e-14,
+    "root_gross_normalized": 1e-07
+  },
+  "basis": "Adapter generalized from frozen transparent_capture_balance/balance.py; physical source pure functions imported unchanged, fixed-bath spectral convenience APIs unused."
+}

@@ -1,0 +1,30 @@
+{
+  "status": "frozen author thermal slab; independent review pending",
+  "checks": 53,
+  "files": {
+    "pilot.py": "cc3a0d1a7876b522d02a7a0b5f6c362036819aaca36705657d3ec19c13108a8f",
+    "thermal_profiles.png": "3e125b2c431c1eea527650f92ce2269b3102f2663b95296effa532c51c28f528",
+    "figure_provenance.json": "3621f62270725f43c7f0e8894406c49f005b3ed0e4c94a94d7d1794b99419d0b",
+    "thermal_profiles.pdf": "39a3422be4e9ff037e7bcf053912ac10fde71a1f11b290afc2771e299051fec1",
+    "initial_slab.py.txt": "9ea5c86ea115b1991bf9a8afadb155cfd8e2f64df28419fdb127781defa2e738",
+    "initial_validate.py.txt": "be99062d09966957bcbed1dff6767d3850e6d7ac88bee47f97f90f2dc7b37ddd",
+    "make_figure.py": "a56b1c2c3a61102a812c84d2d4b80140401d14738038879be4b3a1b32bcc5876",
+    "initial_entropy_gate_failure.json": "9fc6d7aefde9bed9672eb00706429444c57f30bdf66574e2b6e055f09f83979e",
+    "results.json": "cf339998246836a2cd3fdac201aaab8db106498eed316a97d8f9d8a1321cd1f2",
+    "RESEARCH_NOTE.md": "b04ea44a3d045af81283c1b83d76f1f4ce0ab622f4a6ab659307171c9d8cb3e4",
+    "validate.py": "62a69b308449077784b894f817bb0f4635b8d7773fc727ceaffa1cacae67b717",
+    "pilot.json": "b14427501ec28dc7fc7b58b561003e4b1ae6a4151fb3cd01a1f4bef016ee9ef7",
+    "slab.py": "036e45427ba33eef06cd94127487d7afac33220e50e87e6d8bf5448a40965317"
+  },
+  "upstream": {
+    "screened_coulomb_transport/lorentz.py": "15f4c1b5604aeef2dd89aa2991c2fe48a08326ecd1878444969d95cae5f513ae",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "figure_visually_checked": true
+}

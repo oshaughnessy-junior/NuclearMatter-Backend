@@ -1,0 +1,1 @@
+Initial negative-probe report embedded an intentional NaN input as a JSON NaN literal. Original exact report/source preserved in initial_admission_*; current strict JSON stores every synthetic invalid payload as JSON TEXT, preserving NaN attack bytes without nonstandard report values. No physical jobs/source/data changed.

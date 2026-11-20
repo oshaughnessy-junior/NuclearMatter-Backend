@@ -1,0 +1,25 @@
+{
+  "status": "accepted_selected_weakOFF_scope",
+  "checks": 13,
+  "files_sha256": {
+    "results.json": "ef27b1d4a0b9f65b924ba06d348f168b0f0b6ff143cde7595624d20acb9dce44",
+    "probe.py": "032b641fcd513d41da43e495a0c3313e164d89b1dc70b2394013eeb0a503fb77",
+    "REVIEW.md": "cbbb93a65a313545da87604ec01f53dbb9d7200d83f0a9c349ee9b18fbb54e03"
+  },
+  "author_sources": {
+    "fd_prescribed_density/density_element.py": "d539c8e2a86cb31c10d459d7f1a5609e8c0c2e1fa737256cb7a67e7ea04309b2",
+    "fd_prescribed_density/weak_off.py": "bbeb0f6cd691ccf9ff427e1730b0c7724e664a368823b94d99eadeb7ac91244b",
+    "fd_prescribed_density/weak_off_results.json": "0830ceddbf993ae323743df2ba71a3872c9b276e5ffd5117d29bb7d6d6b3147b",
+    "fd_prescribed_density/initial_work_budget_stop.txt": "a5e555810156b69fcb31559d39e22c6cc2f053a8273fe417400d9c9840ad9310"
+  },
+  "author_sources_unchanged": true,
+  "upstream_matches_author_frozen_manifest": true,
+  "upstream_sha256": {
+    "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  }
+}

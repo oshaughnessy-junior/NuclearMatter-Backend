@@ -1,0 +1,681 @@
+{
+  "checks": [
+    {
+      "name": "EC forward number",
+      "error": -3.4924951818838447e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EC forward neutrino_energy",
+      "error": -2.3666402171049488e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EC forward charged_lepton_energy",
+      "error": -3.056577213509298e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EC forward proton_energy",
+      "error": -3.356603883674379e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EC forward neutron_energy",
+      "error": -3.3632652218219064e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "EC forward material_energy_loss",
+      "error": -2.366462581421013e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PC forward number",
+      "error": -3.5527136788004946e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PC forward neutrino_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PC forward charged_lepton_energy",
+      "error": -1.7763568394002489e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PC forward proton_energy",
+      "error": -2.664535259100372e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PC forward neutron_energy",
+      "error": -2.664535259100372e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "PC forward material_energy_loss",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY forward number",
+      "error": 2.7140174589016547e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY forward neutrino_energy",
+      "error": 5.208455902369481e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY forward charged_lepton_energy",
+      "error": 1.2725074335687222e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY forward proton_energy",
+      "error": 2.7140245643290313e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY forward neutron_energy",
+      "error": 2.7140245643290313e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEUTRON_DECAY forward material_energy_loss",
+      "error": 5.208399058950324e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh changed-state bath matches fine",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "passed": 19,
+  "failed": [],
+  "base_channel_records": [
+    {
+      "channel": "EC",
+      "bath": {
+        "T": 2.03,
+        "mu_n": 919.466847405433,
+        "mu_p": 916.8311934968228,
+        "mu_e": 0.20141602098619843
+      },
+      "radiation": {
+        "mode": "empty",
+        "temperature": null,
+        "mu_nue": null,
+        "mu_antinue": null
+      },
+      "controls": {
+        "radial_order": 20,
+        "lepton_order": 32,
+        "polar_order": 8,
+        "azimuth_order": 8,
+        "rest_order": 16,
+        "parent_order": 20,
+        "orient_order": 8,
+        "decay_azimuth_order": 12,
+        "decay_coordinate": "pair",
+        "parent_coordinate": "laguerre",
+        "tail": 50.0,
+        "budget_seconds": 110.0
+      },
+      "current": {
+        "source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "neutron_mass": 939.56542052,
+        "proton_mass": 938.27208816,
+        "electron_mass": 0.51099895069,
+        "weak_mass": 938.91875434
+      },
+      "forward": [
+        {
+          "value": 4.315643489067832e-07,
+          "log": -14.655849209136404,
+          "reason": "represented"
+        },
+        {
+          "value": 4.187920450959268e-06,
+          "log": -12.383306259654226,
+          "reason": "represented"
+        },
+        {
+          "value": 4.742228617668686e-06,
+          "log": -12.259003360249805,
+          "reason": "represented"
+        },
+        {
+          "value": 0.0004062561703942807,
+          "log": -7.808526635772829,
+          "reason": "represented"
+        },
+        {
+          "value": 0.00040681047856099017,
+          "log": -7.807163135613772,
+          "reason": "represented"
+        },
+        {
+          "value": 4.187920450959275e-06,
+          "log": -12.383306259654224,
+          "reason": "represented"
+        }
+      ],
+      "backward": [
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        }
+      ],
+      "net": [
+        {
+          "value": 4.315643489067832e-07,
+          "log_abs": -14.655849209136404,
+          "sign": 1
+        },
+        {
+          "value": 4.187920450959268e-06,
+          "log_abs": -12.383306259654226,
+          "sign": 1
+        },
+        {
+          "value": 4.742228617668686e-06,
+          "log_abs": -12.259003360249805,
+          "sign": 1
+        },
+        {
+          "value": 0.0004062561703942807,
+          "log_abs": -7.808526635772829,
+          "sign": 1
+        },
+        {
+          "value": 0.00040681047856099017,
+          "log_abs": -7.807163135613772,
+          "sign": 1
+        },
+        {
+          "value": 4.187920450959275e-06,
+          "log_abs": -12.383306259654224,
+          "sign": 1
+        }
+      ],
+      "entropy_production": null,
+      "max_event_kms_error": 0.0,
+      "diagnostics": [
+        [
+          "incoming_kinetic_upper",
+          101.49999999999999
+        ],
+        [
+          "lepton_total_upper",
+          102.79333236000001
+        ],
+        [
+          "max_event_energy_residual",
+          4.547473508864641e-13
+        ],
+        [
+          "max_four_residual",
+          4.547473508864641e-13
+        ],
+        [
+          "max_mass_relative",
+          1.0549845039067402e-15
+        ],
+        [
+          "parent_particle_density",
+          3.569999999861785e-08
+        ],
+        [
+          "points",
+          327680
+        ]
+      ],
+      "particle_stoichiometry": [
+        [
+          "neutron",
+          1
+        ],
+        [
+          "proton",
+          -1
+        ],
+        [
+          "electron_net",
+          -1
+        ],
+        [
+          "nue",
+          1
+        ]
+      ],
+      "energy_ledger_scaled": 1.5978241138215104e-14,
+      "direct_energy_ledger_scaled": -1.6180497355154537e-15
+    },
+    {
+      "channel": "PC",
+      "bath": {
+        "T": 2.03,
+        "mu_n": 919.466847405433,
+        "mu_p": 916.8311934968228,
+        "mu_e": 0.20141602098619843
+      },
+      "radiation": {
+        "mode": "empty",
+        "temperature": null,
+        "mu_nue": null,
+        "mu_antinue": null
+      },
+      "controls": {
+        "radial_order": 28,
+        "lepton_order": 44,
+        "polar_order": 10,
+        "azimuth_order": 10,
+        "rest_order": 16,
+        "parent_order": 20,
+        "orient_order": 8,
+        "decay_azimuth_order": 12,
+        "decay_coordinate": "pair",
+        "parent_coordinate": "laguerre",
+        "tail": 60.0,
+        "budget_seconds": 110.0
+      },
+      "current": {
+        "source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "neutron_mass": 939.56542052,
+        "proton_mass": 938.27208816,
+        "electron_mass": 0.51099895069,
+        "weak_mass": 938.91875434
+      },
+      "forward": [
+        {
+          "value": 1.1719549877065676e-06,
+          "log": -13.656837273940711,
+          "reason": "represented"
+        },
+        {
+          "value": 1.2750402091325059e-05,
+          "log": -11.269947750282592,
+          "reason": "represented"
+        },
+        {
+          "value": 1.1247530706790457e-05,
+          "log": -11.395361946135637,
+          "reason": "represented"
+        },
+        {
+          "value": 0.0011032279849402052,
+          "log": -6.809514864747271,
+          "reason": "represented"
+        },
+        {
+          "value": 0.0011047308563247396,
+          "log": -6.808153542617039,
+          "reason": "represented"
+        },
+        {
+          "value": 1.2750402091325083e-05,
+          "log": -11.26994775028259,
+          "reason": "represented"
+        }
+      ],
+      "backward": [
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        }
+      ],
+      "net": [
+        {
+          "value": 1.1719549877065676e-06,
+          "log_abs": -13.656837273940711,
+          "sign": 1
+        },
+        {
+          "value": 1.2750402091325059e-05,
+          "log_abs": -11.269947750282592,
+          "sign": 1
+        },
+        {
+          "value": 1.1247530706790457e-05,
+          "log_abs": -11.395361946135637,
+          "sign": 1
+        },
+        {
+          "value": 0.0011032279849402052,
+          "log_abs": -6.809514864747271,
+          "sign": 1
+        },
+        {
+          "value": 0.0011047308563247396,
+          "log_abs": -6.808153542617039,
+          "sign": 1
+        },
+        {
+          "value": 1.2750402091325083e-05,
+          "log_abs": -11.26994775028259,
+          "sign": 1
+        }
+      ],
+      "entropy_production": null,
+      "max_event_kms_error": 0.0,
+      "diagnostics": [
+        [
+          "incoming_kinetic_upper",
+          121.79999999999998
+        ],
+        [
+          "lepton_total_upper",
+          122.31099895068998
+        ],
+        [
+          "max_event_energy_residual",
+          5.968558980384842e-13
+        ],
+        [
+          "max_four_residual",
+          5.968558980384842e-13
+        ],
+        [
+          "max_mass_relative",
+          1.1901317967375158e-15
+        ],
+        [
+          "parent_particle_density",
+          6.929999999999786e-08
+        ],
+        [
+          "points",
+          1232000
+        ]
+      ],
+      "particle_stoichiometry": [
+        [
+          "neutron",
+          -1
+        ],
+        [
+          "proton",
+          1
+        ],
+        [
+          "positron",
+          -1
+        ],
+        [
+          "electron_net",
+          1
+        ],
+        [
+          "antinue",
+          1
+        ]
+      ],
+      "energy_ledger_scaled": 1.4216418385405028e-14,
+      "direct_energy_ledger_scaled": -1.8600921251931812e-15
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "bath": {
+        "T": 2.03,
+        "mu_n": 919.466847405433,
+        "mu_p": 916.8311934968228,
+        "mu_e": 0.20141602098619843
+      },
+      "radiation": {
+        "mode": "empty",
+        "temperature": null,
+        "mu_nue": null,
+        "mu_antinue": null
+      },
+      "controls": {
+        "radial_order": 20,
+        "lepton_order": 32,
+        "polar_order": 8,
+        "azimuth_order": 8,
+        "rest_order": 16,
+        "parent_order": 20,
+        "orient_order": 8,
+        "decay_azimuth_order": 12,
+        "decay_coordinate": "pair",
+        "parent_coordinate": "laguerre",
+        "tail": 60.0,
+        "budget_seconds": 110.0
+      },
+      "current": {
+        "source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "neutron_mass": 939.56542052,
+        "proton_mass": 938.27208816,
+        "electron_mass": 0.51099895069,
+        "weak_mass": 938.91875434
+      },
+      "forward": [
+        {
+          "value": 4.184063388426913e-11,
+          "log": -23.897153146089007,
+          "reason": "represented"
+        },
+        {
+          "value": 1.9884836890628623e-11,
+          "log": -24.64106363993625,
+          "reason": "represented"
+        },
+        {
+          "value": 3.4397370808422656e-11,
+          "log": -24.09304098445783,
+          "reason": "represented"
+        },
+        {
+          "value": 3.938525170538617e-08,
+          "log": -17.049874412916886,
+          "reason": "represented"
+        },
+        {
+          "value": 3.9439533913085186e-08,
+          "log": -17.04849712490135,
+          "reason": "represented"
+        },
+        {
+          "value": 1.9884836890627773e-11,
+          "log": -24.64106363993629,
+          "reason": "represented"
+        }
+      ],
+      "backward": [
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        },
+        {
+          "value": 0.0,
+          "log": null,
+          "reason": "absent_initial_neutrino_occupation"
+        }
+      ],
+      "net": [
+        {
+          "value": 4.184063388426913e-11,
+          "log_abs": -23.897153146089007,
+          "sign": 1
+        },
+        {
+          "value": 1.9884836890628623e-11,
+          "log_abs": -24.64106363993625,
+          "sign": 1
+        },
+        {
+          "value": 3.4397370808422656e-11,
+          "log_abs": -24.09304098445783,
+          "sign": 1
+        },
+        {
+          "value": 3.938525170538617e-08,
+          "log_abs": -17.049874412916886,
+          "sign": 1
+        },
+        {
+          "value": 3.9439533913085186e-08,
+          "log_abs": -17.04849712490135,
+          "sign": 1
+        },
+        {
+          "value": 1.9884836890627773e-11,
+          "log_abs": -24.64106363993629,
+          "sign": 1
+        }
+      ],
+      "entropy_production": null,
+      "max_event_kms_error": 0.0,
+      "diagnostics": [
+        [
+          "max_event_energy_residual",
+          3.766015277406609e-13
+        ],
+        [
+          "max_four_residual",
+          3.766015277406609e-13
+        ],
+        [
+          "parent_particle_density",
+          6.929999999999888e-08
+        ],
+        [
+          "parent_proper_density",
+          6.907601167209406e-08
+        ],
+        [
+          "points",
+          491520
+        ],
+        [
+          "rest_neutrino_energy",
+          0.000504880179462432
+        ],
+        [
+          "rest_rate",
+          0.001053384623565288
+        ]
+      ],
+      "particle_stoichiometry": [
+        [
+          "neutron",
+          -1
+        ],
+        [
+          "proton",
+          1
+        ],
+        [
+          "electron_net",
+          1
+        ],
+        [
+          "antinue",
+          1
+        ]
+      ],
+      "energy_ledger_scaled": 1.7646889809131669e-12,
+      "direct_energy_ledger_scaled": 4.273602228178296e-14
+    }
+  ],
+  "fine_record": "source_1.json",
+  "seconds": 1.1095187910832465,
+  "qualification": "selected base/fine comparisons only; not an independent absolute physical-model oracle or uniform convergence certificate"
+}

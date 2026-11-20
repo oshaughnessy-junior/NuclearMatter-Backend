@@ -1,0 +1,151 @@
+{
+  "checks": [
+    {
+      "name": "one-helicity polar phase measure",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "outgoing polar measure no extra half or DOS",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "polar weights sum to isotropic DOS at 1.6663642608713691",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "polar weights sum to isotropic DOS at 7.920227476981725",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "polar weights sum to isotropic DOS at 16.079772523018274",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "polar weights sum to isotropic DOS at 22.33363573912863",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-15,
+      "passed": true
+    },
+    {
+      "name": "fresh phase edge (7.3, 11.2, 0.27, -0.63)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh edge own tail65/90 (7.3, 11.2, 0.27, -0.63)",
+      "error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "fresh edge author128/256 (7.3, 11.2, 0.27, -0.63)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh reverse DOS KMS (7.3, 11.2, 0.27, -0.63)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh phase edge (8.4, 8.4, -0.5773502691896258, 0.5773502691896258)",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh edge own tail65/90 (8.4, 8.4, -0.5773502691896258, 0.5773502691896258)",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "fresh edge author128/256 (8.4, 8.4, -0.5773502691896258, 0.5773502691896258)",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh reverse DOS KMS (8.4, 8.4, -0.5773502691896258, 0.5773502691896258)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "fresh phase edge (6.4, 8.9, 0.5773502691896258, 0.5773502691896258)",
+      "error": 1.6877867992093343e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh edge own tail65/90 (6.4, 8.9, 0.5773502691896258, 0.5773502691896258)",
+      "error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "fresh edge author128/256 (6.4, 8.9, 0.5773502691896258, 0.5773502691896258)",
+      "error": 2.22287255491338e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "fresh reverse DOS KMS (6.4, 8.9, 0.5773502691896258, 0.5773502691896258)",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "edges": [
+    {
+      "point": [
+        7.3,
+        11.2,
+        0.27,
+        -0.63
+      ],
+      "independent": 0.18877617827129894,
+      "author128": 0.188776178271299,
+      "author256": 0.18877617827129897,
+      "independent_reverse": 0.5636780251246006
+    },
+    {
+      "point": [
+        8.4,
+        8.4,
+        -0.5773502691896258,
+        0.5773502691896258
+      ],
+      "independent": 0.3721549774763676,
+      "author128": 0.37215497747636805,
+      "author256": 0.37215497747636783,
+      "independent_reverse": 0.3721549774763676
+    },
+    {
+      "point": [
+        6.4,
+        8.9,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "independent": 0.35529330933797704,
+      "author128": 0.3552933889148111,
+      "author256": 0.35529330993763636,
+      "independent_reverse": 0.6412613518914616
+    }
+  ],
+  "seconds": 1.1360227090772241
+}

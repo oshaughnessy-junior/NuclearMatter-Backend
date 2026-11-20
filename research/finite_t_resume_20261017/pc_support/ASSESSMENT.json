@@ -1,0 +1,562 @@
+{
+  "status": "PASS_SELECTED_CONDITIONAL_SLICE",
+  "created_utc": "2026-10-17T19:02:28.992500+00:00",
+  "checks": [
+    {
+      "name": "0.1_log_j_s-1_coarse",
+      "error": 1.6370904631778705e-11,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_log_j_s-1_inner",
+      "error": 6.821210263273697e-12,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_log_j_s-1_tail90",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_log_j_s-1_literal",
+      "error": 6.821210263273697e-12,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_log_true_chi_s-1_coarse",
+      "error": 4.547473508865675e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_log_true_chi_s-1_inner",
+      "error": 4.547473508863607e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_log_true_chi_s-1_tail90",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_log_true_chi_s-1_literal",
+      "error": 4.547473508863607e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_coarse_strict_shell",
+      "error": 3.6548541970660153e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_coarse_unsquared_delta",
+      "error": 4.28053711524156e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_coarse_four_conservation",
+      "error": 2.745468289461102e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_coarse_KMS_actual_products",
+      "error": 6.166178678768119e-13,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.1_inner_strict_shell",
+      "error": 3.7903014060702844e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_inner_unsquared_delta",
+      "error": 4.2805374267256213e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_inner_four_conservation",
+      "error": 2.897454798429262e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_inner_KMS_actual_products",
+      "error": 1.1075806938265487e-11,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.1_higher_strict_shell",
+      "error": 3.7903014060702844e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_higher_unsquared_delta",
+      "error": 6.4200033556078605e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_higher_four_conservation",
+      "error": 3.080030832255691e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_higher_KMS_actual_products",
+      "error": 1.7442269850675984e-11,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.1_tail90_strict_shell",
+      "error": 4.063416270128073e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_tail90_unsquared_delta",
+      "error": 6.4200033556078605e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_tail90_four_conservation",
+      "error": 3.080030832255691e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_tail90_KMS_actual_products",
+      "error": 1.7442269850675984e-11,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.1_literal_strict_shell",
+      "error": 3.7903014060702844e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_literal_unsquared_delta",
+      "error": 4.2805374267256213e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_literal_four_conservation",
+      "error": 2.897454798429262e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_literal_KMS_actual_products",
+      "error": 1.1075806938265487e-11,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.15_log_j_s-1_coarse",
+      "error": 1.818989403547511e-12,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_log_j_s-1_inner",
+      "error": 4.547473508865675e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_log_j_s-1_tail90",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_log_j_s-1_literal",
+      "error": 4.547473508865675e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_log_true_chi_s-1_coarse",
+      "error": 9.094947017733418e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_log_true_chi_s-1_inner",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_log_true_chi_s-1_tail90",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_log_true_chi_s-1_literal",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_coarse_strict_shell",
+      "error": 3.519406988061746e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_coarse_unsquared_delta",
+      "error": 4.795562813281328e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_coarse_four_conservation",
+      "error": 1.0843239829839074e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_coarse_KMS_actual_products",
+      "error": 7.205125385212341e-12,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.15_inner_strict_shell",
+      "error": 3.519406988061746e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_inner_unsquared_delta",
+      "error": 4.795956256333928e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_inner_four_conservation",
+      "error": 1.0754814611173564e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_inner_KMS_actual_products",
+      "error": 7.659872736098805e-12,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.15_higher_strict_shell",
+      "error": 3.519406988061746e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_higher_unsquared_delta",
+      "error": 4.797275700874309e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_higher_four_conservation",
+      "error": 1.1295661820798354e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_higher_KMS_actual_products",
+      "error": 8.114620086985269e-12,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.15_tail90_strict_shell",
+      "error": 3.519406988061746e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_tail90_unsquared_delta",
+      "error": 4.797275700874309e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_tail90_four_conservation",
+      "error": 1.1783732056176997e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_tail90_KMS_actual_products",
+      "error": 8.114620086985269e-12,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.15_literal_strict_shell",
+      "error": 3.519406988061746e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_literal_unsquared_delta",
+      "error": 4.795956256333928e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_literal_four_conservation",
+      "error": 1.0754814611173564e-14,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_literal_KMS_actual_products",
+      "error": 7.659872736098805e-12,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "0.1_absolute_phase_Jacobian",
+      "error": 1.668350591010892e-08,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_absolute_phase_Jacobian",
+      "error": 4.3122884374469095e-08,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N8_log_j_s-1",
+      "error": 1.5461409930020252e-11,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N8_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N8_shell",
+      "error": 3.6548541970660153e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N8_delta",
+      "error": 4.279984826195271e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N16_log_j_s-1",
+      "error": 1.0004441719452166e-11,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N16_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N16_shell",
+      "error": 3.7903014060702844e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N16_delta",
+      "error": 4.280242302492689e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N24_log_j_s-1",
+      "error": 1.0913936421215582e-11,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N24_log_true_chi_s-1",
+      "error": 4.547473508863607e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N24_shell",
+      "error": 3.7903014060702844e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N24_delta",
+      "error": 4.280336001258174e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N32_log_j_s-1",
+      "error": 2.2737367544349055e-12,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N32_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N32_shell",
+      "error": 4.063416270128073e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.1_semi_infinite_N32_delta",
+      "error": 4.280384531495977e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N8_log_j_s-1",
+      "error": 2.2737367544297357e-12,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N8_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N8_shell",
+      "error": 3.1108449149996886e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N8_delta",
+      "error": 3.1975676555225133e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N16_log_j_s-1",
+      "error": 4.092726157986552e-12,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N16_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N16_shell",
+      "error": 3.519406988061746e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N16_delta",
+      "error": 3.1978550875699595e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N24_log_j_s-1",
+      "error": 2.728484105322507e-12,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N24_log_true_chi_s-1",
+      "error": 4.547473508865675e-13,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N24_shell",
+      "error": 3.519406988061746e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N24_delta",
+      "error": 3.197959691839902e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N32_log_j_s-1",
+      "error": 1.3642420526584618e-12,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N32_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N32_shell",
+      "error": 3.519406988061746e-13,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "0.15_semi_infinite_N32_delta",
+      "error": 4.791977105838453e-16,
+      "gate": 1e-10,
+      "pass": true
+    }
+  ],
+  "whole_energy_or_transport_qualified": false,
+  "independence": "Literal spinor vs invariant current and finite-difference absolute phase-Jacobian anchor; integrated phase oracle by DIFFERENT reviewer remains pending",
+  "forward_rows": [
+    {
+      "E_MeV": 0.1,
+      "log_j_s-1": -3786.58485976718,
+      "log_true_chi_s-1": -3787.9395418520076,
+      "threshold_initial_proton_energy_MeV": 8498.883134642389
+    },
+    {
+      "E_MeV": 0.15,
+      "log_j_s-1": -2381.239481736936,
+      "log_true_chi_s-1": -2382.5691638217377,
+      "threshold_initial_proton_energy_MeV": 5687.568400492851
+    }
+  ]
+}

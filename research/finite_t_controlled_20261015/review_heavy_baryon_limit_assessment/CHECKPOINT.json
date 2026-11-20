@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_ACCEPTED_SELECTED_POINT_CURRENT_MASS_FAMILY",
+  "passed": 136,
+  "failed": 0,
+  "worker_sha256": "f8e43c2918ae43fe10cefee267b09c8cfc42c8bd62a5e272334f790d218f669d",
+  "author_manifest_sha256": "236dfb8dc548219467fc1dafe3ba1e69886e262a8f478b0d942b36958f2017ab",
+  "author_sources_unchanged": true,
+  "files": {
+    "stdout.txt": "4a53fdde0549b4646dbd97217cb0fa1816768cafbb2b6ba0dfae8dedabed701f",
+    "anchor_audit_results.json": "fe197084dc44fa74a4660dce480045acf18839f23292108e48e791c77102bded",
+    "results.json": "a95e1f56a82006301ec35c19433ac71136cab2544ca107d28cac3d3d408b218c",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "probe.py": "a5105936b3b24a9004d5bd88cb86940615e35501234da97bed53bc137b9cf2c4",
+    "anchor_audit.py": "d49afb978e2d3d2f9686d046759187af31959fa81a41841eefe979e4c288d94e",
+    "REVIEW.md": "f3e36fde255b100227c418029cf357fdb46db56e36c526c282fd632004bdfee1",
+    "partial.json": "67319dd5557aa0d1d4d067e7e2e10f617e618e2be3d6f97d6ceaa87fe447f018",
+    "reviewed_source/worker.py": "f8e43c2918ae43fe10cefee267b09c8cfc42c8bd62a5e272334f790d218f669d",
+    "reviewed_source/LOCK.json": "04b8b93d18d3cd88859fcf0cf5314216720f3b60fc8eadb0f06523b1805acb30",
+    "reviewed_source/point_current.py": "473cc12549951260779a825d6763c240b2ad961e33ae9729928feee5f76e3d86",
+    "reviewed_source/MANIFEST.json": "236dfb8dc548219467fc1dafe3ba1e69886e262a8f478b0d942b36958f2017ab",
+    "reviewed_source/PRE_DATA_ANCHOR.json": "280c8aec0c270484ea82c9e3e88b514422f029f8358b5df812ca5e557466df58"
+  }
+}

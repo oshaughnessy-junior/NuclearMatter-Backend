@@ -1,0 +1,245 @@
+{
+  "checks": [
+    {
+      "name": "peak FD T10000.0",
+      "error": 1.0263778715824401e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD n10000.0",
+      "error": 1.5934877861667474e-09,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD Y10000.0",
+      "error": 3.5792468988660175e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD T20000.0",
+      "error": 1.1965095580990237e-11,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD n20000.0",
+      "error": 3.818931837429318e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak FD Y20000.0",
+      "error": 9.05372443682495e-11,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 nuenumber_fm3_s6",
+      "error": 5.776657587241715e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 nueenergy_MeV_fm3_s6",
+      "error": 3.5021601249744043e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 nuenumber_fm3_s10",
+      "error": 5.902706029388506e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 nueenergy_MeV_fm3_s10",
+      "error": 3.57032872771846e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 antinuenumber_fm3_s6",
+      "error": 1.0480711874709592e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 antinueenergy_MeV_fm3_s6",
+      "error": 9.941480197778571e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 antinuenumber_fm3_s10",
+      "error": 1.0707969355128447e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "peak neglected100-240 antinueenergy_MeV_fm3_s10",
+      "error": 1.0133719911220901e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD T10000.0",
+      "error": 8.764877712508223e-11,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD n10000.0",
+      "error": 1.5826948640551564e-09,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD Y10000.0",
+      "error": 3.5570690837261054e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD T20000.0",
+      "error": 8.217648783670484e-12,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD n20000.0",
+      "error": 3.827653749510773e-10,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint FD Y20000.0",
+      "error": 8.975642451503063e-11,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 nuenumber_fm3_s6",
+      "error": 3.472110207042541e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 nueenergy_MeV_fm3_s6",
+      "error": 2.126880950016102e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 nuenumber_fm3_s10",
+      "error": 3.552601439948139e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 nueenergy_MeV_fm3_s10",
+      "error": 2.170974540713797e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 antinuenumber_fm3_s6",
+      "error": 6.311406291977506e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 antinueenergy_MeV_fm3_s6",
+      "error": 6.047324834934637e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 antinuenumber_fm3_s10",
+      "error": 6.456821293403239e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "endpoint neglected100-240 antinueenergy_MeV_fm3_s10",
+      "error": 6.171892514161964e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "peak",
+      "state": {
+        "T": 2.026895313664173,
+        "nB": 0.00010202013400267558,
+        "Ye": 0.2973945797515789,
+        "u": 8.529019596712539,
+        "entropy": 6.017546848343916
+      },
+      "tails": [
+        {
+          "flavor": "nue",
+          "order": 6,
+          "number": 1.551376546971814e-16,
+          "energy": 1.5889340011510498e-14
+        },
+        {
+          "flavor": "nue",
+          "order": 10,
+          "number": 1.58522805954212e-16,
+          "energy": 1.6198621731494046e-14
+        },
+        {
+          "flavor": "antinue",
+          "order": 6,
+          "number": 1.7672103036165032e-23,
+          "energy": 1.810019884467498e-21
+        },
+        {
+          "flavor": "antinue",
+          "order": 10,
+          "number": 1.805529433630871e-23,
+          "energy": 1.8450204776379903e-21
+        }
+      ]
+    },
+    {
+      "label": "endpoint",
+      "state": {
+        "T": 2.004413271549279,
+        "nB": 0.0001,
+        "Ye": 0.2948002262140444,
+        "u": 8.414697702458614
+      },
+      "tails": [
+        {
+          "flavor": "nue",
+          "order": 6,
+          "number": 8.621419068127609e-17,
+          "energy": 8.828685151761546e-15
+        },
+        {
+          "flavor": "nue",
+          "order": 10,
+          "number": 8.8212827270581e-17,
+          "energy": 9.011717695015856e-15
+        },
+        {
+          "flavor": "antinue",
+          "order": 6,
+          "number": 9.784296541309546e-24,
+          "energy": 1.0019662364347555e-21
+        },
+        {
+          "flavor": "antinue",
+          "order": 10,
+          "number": 1.0009727044383454e-23,
+          "energy": 1.022605545905249e-21
+        }
+      ]
+    }
+  ]
+}

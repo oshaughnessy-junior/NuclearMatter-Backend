@@ -1,0 +1,404 @@
+{
+  "checks": [
+    {
+      "name": "Bessel versus scaledFD momentum 0 number",
+      "error": 0.0,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 0 energy",
+      "error": 4.440892098500626e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 0 thermal",
+      "error": 8.881784197001252e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 0",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 0",
+      "error": 1.0008944408708317e-185,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "preregisteredhalfmin side 0",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredordinaryhole 0",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 1 number",
+      "error": -4.440892098500626e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 1 energy",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 1 thermal",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 1",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 1",
+      "error": 2.9361324934947045e-185,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "preregisteredhalfmin side 1",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredordinaryhole 1",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 2 number",
+      "error": 0.0,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 2 energy",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 2 thermal",
+      "error": -4.440892098500626e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 2",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 2",
+      "error": 3.72939979918911e-185,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "preregisteredhalfmin side 2",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredordinaryhole 2",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 3 number",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 3 energy",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 3 thermal",
+      "error": 4.440892098500626e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 3",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 3",
+      "error": 1.0940097828834401e-184,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "preregisteredhalfmin side 3",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredordinaryhole 3",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 4 number",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 4 energy",
+      "error": 0.0,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 4 thermal",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 4",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 4",
+      "error": 2.9005021637918586e-191,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "preregisteredhalfmin side 4",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredordinaryhole 4",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 5 number",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 5 energy",
+      "error": 0.0,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 5 thermal",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 5",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 5",
+      "error": 8.509587614790319e-191,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "preregisteredhalfmin side 5",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredordinaryhole 5",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 6 number",
+      "error": 0.0,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 6 energy",
+      "error": 0.0,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 6 thermal",
+      "error": 0.0,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 6",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 6",
+      "error": 1.08089248031576e-190,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "preregisteredhalfmin side 6",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredordinaryhole 6",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 7 number",
+      "error": -6.661338147750939e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 7 energy",
+      "error": -6.661338147750939e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 7 thermal",
+      "error": -5.551115123125783e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 7",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 7",
+      "error": 3.1711223505132953e-190,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "preregisteredhalfmin side 7",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "preregisteredordinaryhole 7",
+      "error": 0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 8 number",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 8 energy",
+      "error": -4.440892098500626e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 8 thermal",
+      "error": -6.661338147750939e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 8",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 8",
+      "error": 4.50284433455014e-261,
+      "gate": 1e-150,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 9 number",
+      "error": -1.1102230246251565e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 9 energy",
+      "error": -4.440892098500626e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "Bessel versus scaledFD momentum 9 thermal",
+      "error": -6.661338147750939e-16,
+      "gate": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "scaledpositivehole lies below analyticbound 9",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "diluteFDcorrection negligible 9",
+      "error": 4.50284433455014e-261,
+      "gate": 1e-150,
+      "passed": true
+    }
+  ],
+  "passed": 66,
+  "failed": [],
+  "candidate_imported": false,
+  "lock_sha256": "57c62345dec2dbba00a4c355f0e2e55b37eaf8a5c67d97a4aa19de6b53c092c8"
+}

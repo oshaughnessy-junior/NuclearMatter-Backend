@@ -1,0 +1,96 @@
+{
+  "status": "FRESH_DILUTE_PHYSICAL_FORWARD_PROBE",
+  "rows": [
+    {
+      "z": 40.0,
+      "T": 0.012774973749999998,
+      "particle": 3.8794335840227455e-29,
+      "bessel": 3.878797140295721e-29,
+      "relative_error": 0.00016408275658785776,
+      "gate": 3e-08,
+      "passed": false,
+      "tail_fine_relative": -8.316224526772054e-05,
+      "susceptibility": 6.073489715034046e-27
+    },
+    {
+      "z": 100.0,
+      "T": 0.005109989499999999,
+      "particle": 8.36564747964611e-56,
+      "bessel": 8.358244596100698e-56,
+      "relative_error": 0.0008856983616949421,
+      "gate": 3e-08,
+      "passed": false,
+      "tail_fine_relative": 0.000751287900326858,
+      "susceptibility": 3.2742327473064714e-53
+    },
+    {
+      "z": 300.0,
+      "T": 0.001703329833333333,
+      "particle": 2.2005614826434417e-143,
+      "bessel": 2.198589629850661e-143,
+      "relative_error": 0.0008968716881079253,
+      "gate": 3e-08,
+      "passed": false,
+      "tail_fine_relative": 0.0007607965481915002,
+      "susceptibility": 2.5838348387723012e-140
+    },
+    {
+      "z": 600.0,
+      "T": 0.0008516649166666665,
+      "particle": 3.9929271521073e-274,
+      "bessel": 3.989337950304875e-274,
+      "relative_error": 0.0008996986084246483,
+      "gate": 3e-08,
+      "passed": false,
+      "tail_fine_relative": 0.0007632022414258977,
+      "susceptibility": 9.376756219418378e-271
+    }
+  ],
+  "passed": 0,
+  "failed": [
+    {
+      "z": 40.0,
+      "T": 0.012774973749999998,
+      "particle": 3.8794335840227455e-29,
+      "bessel": 3.878797140295721e-29,
+      "relative_error": 0.00016408275658785776,
+      "gate": 3e-08,
+      "passed": false,
+      "tail_fine_relative": -8.316224526772054e-05,
+      "susceptibility": 6.073489715034046e-27
+    },
+    {
+      "z": 100.0,
+      "T": 0.005109989499999999,
+      "particle": 8.36564747964611e-56,
+      "bessel": 8.358244596100698e-56,
+      "relative_error": 0.0008856983616949421,
+      "gate": 3e-08,
+      "passed": false,
+      "tail_fine_relative": 0.000751287900326858,
+      "susceptibility": 3.2742327473064714e-53
+    },
+    {
+      "z": 300.0,
+      "T": 0.001703329833333333,
+      "particle": 2.2005614826434417e-143,
+      "bessel": 2.198589629850661e-143,
+      "relative_error": 0.0008968716881079253,
+      "gate": 3e-08,
+      "passed": false,
+      "tail_fine_relative": 0.0007607965481915002,
+      "susceptibility": 2.5838348387723012e-140
+    },
+    {
+      "z": 600.0,
+      "T": 0.0008516649166666665,
+      "particle": 3.9929271521073e-274,
+      "bessel": 3.989337950304875e-274,
+      "relative_error": 0.0008996986084246483,
+      "gate": 3e-08,
+      "passed": false,
+      "tail_fine_relative": 0.0007632022414258977,
+      "susceptibility": 9.376756219418378e-271
+    }
+  ]
+}

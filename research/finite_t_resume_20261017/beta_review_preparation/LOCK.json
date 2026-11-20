@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-17T19:35:17.854316+00:00",
+  "candidate_blind": true,
+  "candidate_directories_read": [],
+  "fresh_physics_calls": 0,
+  "quota_guard_utc": "2026-10-17 19:34:01 UTC",
+  "weekly_percent": 93,
+  "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+  "limit": "codex",
+  "window_minutes": 10080,
+  "reset": 1792652325,
+  "heldout_E_MeV": 1.27,
+  "original_anchor_E_MeV": 1.2,
+  "future_max_fresh_integrals": 4,
+  "future_profile_plan": [
+    "rest-Dalitz conditional independent E1.2 lower",
+    "rest-Dalitz conditional independent E1.2 higher",
+    "rest-Dalitz conditional independent E1.27 higher",
+    "candidate E1.27 higher"
+  ],
+  "gates": {
+    "separate_positive_j_chi_relative": 3e-06,
+    "shell_relative": 2e-11,
+    "four_scaled": 2e-12,
+    "unsquared_delta_scaled": 2e-12,
+    "posterior_KMS_log": 2e-09
+  },
+  "controls_initial_plan": {
+    "lower": {
+      "parent": 16,
+      "rest_nu": 16,
+      "electron": 16,
+      "phi": 8
+    },
+    "higher": {
+      "parent": 24,
+      "rest_nu": 24,
+      "electron": 24,
+      "phi": 12
+    },
+    "parent_radial": "threshold-shifted semi-infinite; explicit Jacobi/Laguerre endpoint weights to be specified before first output after static feasibility audit"
+  },
+  "no_new_call_without_root_frozen_handoff": true,
+  "source_sha256": {
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_moments/conditional.py": "656858a96b77890a2ee9d480a2023484534cfcda500afaeef2aaa1958eaff64c",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_moments/hot_spectrum.py": "084a5c50836a4d3617c00245ecf7081f4036cdfc63f801b8db260366f622416b",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_crossed_contract/check_contract.py": "c1015f5c8dd0823c14d71c84275657cd49231479fbdeb0ee11237543cee3e176",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/REPORT.md": "83acefd6b1930ce69511419435194b04b46f1f7472a2e1227071e113c1685cf0",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/ANALYSIS.json": "4c94bf9525f362d695f68b9833740519fbff3a38f19c34148a559d3063390073",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/LOCK.json": "cc7a622aa0cd4ea4afdffbbf719a146ff0cb807c49fd61b6b462cb2913685d90",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/SOURCE_PIN.json": "576a9a2584a730bab076726cb968ac9d0cc696a741876b55bd3a9e86fe082f50",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_spectral_band_total_closure/REVIEW.md": "3a9ef29c03376d09b44d61aa63bb18f0398ad7b0ed795fd8dd0f720790d5f6db"
+  }
+}

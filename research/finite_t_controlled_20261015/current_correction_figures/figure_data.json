@@ -1,0 +1,57 @@
+{
+  "T_MeV": 3,
+  "nB_fm3": 1e-07,
+  "Ye": 0.5490065797957709,
+  "source_sha256": {
+    "current_correction_assessment/comparison.csv": "be49acb5454ff8cb4a050a957ee70e64cf9aecb9a243fa8450d131c0e0cf77f8",
+    "review_current_correction_assessment/REVIEW.md": "7999ebd2db96eb86d4eb406085d1ef8d64b58d68b5edc9553edf415d9c02714a"
+  },
+  "rows": [
+    {
+      "channel": "EC",
+      "moment": "number",
+      "baseline": 5.010099210059188e-06,
+      "F2zero": 4.763749866209821e-06,
+      "F2_removal_fraction": -0.04917055202315179,
+      "F2_addition_fraction": 0.05171332474796153,
+      "allowed": 4.849878328817105e-06,
+      "allowed_over_baseline_minus1": -0.03197958254407307,
+      "allowed_over_F2zero_minus1": 0.018079971666482564
+    },
+    {
+      "channel": "EC",
+      "moment": "neutrino_energy",
+      "baseline": 7.318736618959663e-05,
+      "F2zero": 6.892283477173827e-05,
+      "F2_removal_fraction": -0.05826868269601093,
+      "F2_addition_fraction": 0.0618739991177355,
+      "allowed": 7.070093372165171e-05,
+      "allowed_over_baseline_minus1": -0.03397352025899736,
+      "allowed_over_F2zero_minus1": 0.025798401296206475
+    },
+    {
+      "channel": "PC",
+      "moment": "number",
+      "baseline": 5.0100729184725325e-06,
+      "F2zero": 5.27364267431989e-06,
+      "F2_removal_fraction": 0.052607968014907414,
+      "F2_addition_fraction": -0.04997869065547722,
+      "allowed": 5.53052313526957e-06,
+      "allowed_over_baseline_minus1": 0.10388076686031789,
+      "allowed_over_F2zero_minus1": 0.04871025149287522
+    },
+    {
+      "channel": "PC",
+      "moment": "neutrino_energy",
+      "baseline": 7.811780798644817e-05,
+      "F2zero": 8.297870370641985e-05,
+      "F2_removal_fraction": 0.06222519352840705,
+      "F2_addition_fraction": -0.058580039249222504,
+      "allowed": 8.813485608730491e-05,
+      "allowed_over_baseline_minus1": 0.12823002026112262,
+      "allowed_over_F2zero_minus1": 0.0621382613920749
+    }
+  ],
+  "saved_arithmetic_checks": 16,
+  "scope": "Selected reviewed saved moments; no new physical quadrature/evolution or model uncertainty."
+}

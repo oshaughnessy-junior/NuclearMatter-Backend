@@ -1,0 +1,487 @@
+{
+  "checks": [
+    {
+      "name": "frozen author manifest exact",
+      "passed": true
+    },
+    {
+      "name": "exact8paths",
+      "passed": true,
+      "actual_changed": [
+        "README.md"
+      ],
+      "new": [
+        "tests/test_free_matter_sources.py",
+        "tests/test_free_matter_reference.py",
+        "docs/free_matter_reference.md",
+        "examples/free_matter_reference.py",
+        "tests/data/free_matter_reference_internal.json",
+        "src/nmbackend/reference/free_matter.py",
+        "src/nmbackend/reference/_free_matter_sources.py"
+      ]
+    },
+    {
+      "name": "85unchanged baseline union files",
+      "passed": true
+    },
+    {
+      "name": "candidate exact README.md",
+      "passed": true
+    },
+    {
+      "name": "candidate exact src/nmbackend/reference/free_matter.py",
+      "passed": true
+    },
+    {
+      "name": "candidate exact src/nmbackend/reference/_free_matter_sources.py",
+      "passed": true
+    },
+    {
+      "name": "candidate exact tests/test_free_matter_reference.py",
+      "passed": true
+    },
+    {
+      "name": "candidate exact tests/test_free_matter_sources.py",
+      "passed": true
+    },
+    {
+      "name": "candidate exact tests/data/free_matter_reference_internal.json",
+      "passed": true
+    },
+    {
+      "name": "candidate exact examples/free_matter_reference.py",
+      "passed": true
+    },
+    {
+      "name": "candidate exact docs/free_matter_reference.md",
+      "passed": true
+    },
+    {
+      "name": "explicit frozen prerequisite finite_t_leptons.py",
+      "passed": true
+    },
+    {
+      "name": "explicit frozen prerequisite finite_t_baryons.py",
+      "passed": true
+    },
+    {
+      "name": "explicit frozen prerequisite weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "explicit frozen prerequisite _weak_current.py",
+      "passed": true
+    },
+    {
+      "name": "explicit frozen prerequisite _weak_quadrature.py",
+      "passed": true
+    },
+    {
+      "name": "explicit frozen prerequisite _weak_two_body.py",
+      "passed": true
+    },
+    {
+      "name": "explicit frozen prerequisite _weak_decay.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/nscool_io.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/durca.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/ejecta.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/lab_likelihood.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/constants.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/ipad.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/postmerger.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/tov/solver.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/tov/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/tov/phase_transition.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/tov/family.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/tov/central.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/priors/gp_pca.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/priors/bridge.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/priors/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/rift/compressed.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/rift/sequence.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/rift/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/rift/evidence.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/adapters/rift.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/adapters/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/inference/synthetic.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/inference/fisher.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/inference/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/isothermal.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/runner.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/validate.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/crust.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/coolcomp.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/polytrope.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/compose.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/metamodel.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/hybrid.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/ddrmf.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/skyrme.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/rmft.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/base.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/eos/leptons.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/reprimand.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/scipy_tov.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/free_matter.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/_free_matter_sources.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/finite_t_baryons.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/_weak_decay.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/_weak_two_body.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/_weak_current.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/_weak_quadrature.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/reference/finite_t_leptons.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/validation/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/validation/reference_matrix.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/validation/model_diagnostic.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/crust.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/core_nu.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/heat.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/core_conduct.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/blanket.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/conduct.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/superfluid.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/star.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/crust_nu.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/native.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/curve.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/geometry.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/reference.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/gaps.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/whole.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/_spline.py",
+      "passed": true
+    },
+    {
+      "name": "actual wheel bytes nmbackend/cooling/physics/envelope.py",
+      "passed": true
+    },
+    {
+      "name": "staticPython3.9grammar",
+      "passed": true
+    },
+    {
+      "name": "unchanged coldtest test_units.py",
+      "passed": true
+    },
+    {
+      "name": "unchanged coldtest test_lepton_derivatives.py",
+      "passed": true
+    }
+  ],
+  "passed": 95,
+  "failed": [],
+  "wheel_sha256": "21d1e7bca7ecb001f2abe2051e727ecb06199d89f5a0ad7ade0e16541c089e7c",
+  "wheel_members": [
+    "nmbackend/__init__.py",
+    "nmbackend/constants.py",
+    "nmbackend/durca.py",
+    "nmbackend/ejecta.py",
+    "nmbackend/ipad.py",
+    "nmbackend/lab_likelihood.py",
+    "nmbackend/nscool_io.py",
+    "nmbackend/postmerger.py",
+    "nmbackend/adapters/__init__.py",
+    "nmbackend/adapters/rift.py",
+    "nmbackend/cooling/README.md",
+    "nmbackend/cooling/__init__.py",
+    "nmbackend/cooling/build_nscool.sh",
+    "nmbackend/cooling/isothermal.py",
+    "nmbackend/cooling/nscool_nmbackend.patch",
+    "nmbackend/cooling/runner.py",
+    "nmbackend/cooling/validate.py",
+    "nmbackend/cooling/physics/__init__.py",
+    "nmbackend/cooling/physics/_spline.py",
+    "nmbackend/cooling/physics/blanket.py",
+    "nmbackend/cooling/physics/conduct.py",
+    "nmbackend/cooling/physics/core_conduct.py",
+    "nmbackend/cooling/physics/core_nu.py",
+    "nmbackend/cooling/physics/crust.py",
+    "nmbackend/cooling/physics/crust_nu.py",
+    "nmbackend/cooling/physics/curve.py",
+    "nmbackend/cooling/physics/envelope.py",
+    "nmbackend/cooling/physics/gaps.py",
+    "nmbackend/cooling/physics/geometry.py",
+    "nmbackend/cooling/physics/heat.py",
+    "nmbackend/cooling/physics/native.py",
+    "nmbackend/cooling/physics/reference.py",
+    "nmbackend/cooling/physics/star.py",
+    "nmbackend/cooling/physics/superfluid.py",
+    "nmbackend/cooling/physics/whole.py",
+    "nmbackend/data/crust_sly_dh2001.dat",
+    "nmbackend/data/frib_scenario_ladder.yaml",
+    "nmbackend/eos/__init__.py",
+    "nmbackend/eos/base.py",
+    "nmbackend/eos/compose.py",
+    "nmbackend/eos/coolcomp.py",
+    "nmbackend/eos/crust.py",
+    "nmbackend/eos/ddrmf.py",
+    "nmbackend/eos/hybrid.py",
+    "nmbackend/eos/leptons.py",
+    "nmbackend/eos/metamodel.py",
+    "nmbackend/eos/polytrope.py",
+    "nmbackend/eos/rmft.py",
+    "nmbackend/eos/skyrme.py",
+    "nmbackend/inference/__init__.py",
+    "nmbackend/inference/fisher.py",
+    "nmbackend/inference/synthetic.py",
+    "nmbackend/priors/__init__.py",
+    "nmbackend/priors/bridge.py",
+    "nmbackend/priors/gp_pca.py",
+    "nmbackend/reference/__init__.py",
+    "nmbackend/reference/_free_matter_sources.py",
+    "nmbackend/reference/_weak_current.py",
+    "nmbackend/reference/_weak_decay.py",
+    "nmbackend/reference/_weak_quadrature.py",
+    "nmbackend/reference/_weak_two_body.py",
+    "nmbackend/reference/finite_t_baryons.py",
+    "nmbackend/reference/finite_t_leptons.py",
+    "nmbackend/reference/free_matter.py",
+    "nmbackend/reference/reprimand.py",
+    "nmbackend/reference/scipy_tov.py",
+    "nmbackend/reference/weak_reference.py",
+    "nmbackend/rift/__init__.py",
+    "nmbackend/rift/compressed.py",
+    "nmbackend/rift/evidence.py",
+    "nmbackend/rift/sequence.py",
+    "nmbackend/tov/__init__.py",
+    "nmbackend/tov/central.py",
+    "nmbackend/tov/family.py",
+    "nmbackend/tov/phase_transition.py",
+    "nmbackend/tov/solver.py",
+    "nmbackend/validation/__init__.py",
+    "nmbackend/validation/model_diagnostic.py",
+    "nmbackend/validation/reference_matrix.py",
+    "nmbackend-0.0.1.dist-info/licenses/LICENSE",
+    "nmbackend-0.0.1.dist-info/METADATA",
+    "nmbackend-0.0.1.dist-info/WHEEL",
+    "nmbackend-0.0.1.dist-info/top_level.txt",
+    "nmbackend-0.0.1.dist-info/RECORD"
+  ],
+  "explicit_union_not_main": true,
+  "new_physical_calls": 0
+}

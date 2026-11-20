@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "wheelmoduleexactacceptedbytes",
+      "passed": true
+    },
+    {
+      "name": "wheelrealpackageinitializers",
+      "passed": true
+    },
+    {
+      "name": "unchangednumpyminimum",
+      "passed": true
+    },
+    {
+      "name": "unchangedscipyminimum",
+      "passed": true
+    },
+    {
+      "name": "toppackagefromexactwheel",
+      "passed": true
+    },
+    {
+      "name": "referencefromexactwheel",
+      "passed": true
+    },
+    {
+      "name": "constantsfromexactwheel",
+      "passed": true
+    },
+    {
+      "name": "publicmodulefourdeclaredfunctions",
+      "passed": true
+    },
+    {
+      "name": "immutableLeptonState",
+      "passed": true
+    },
+    {
+      "name": "wheelfreshsignednetroot",
+      "passed": true
+    },
+    {
+      "name": "wheelCPUfloatscalarstate",
+      "passed": true
+    },
+    {
+      "name": "wheelfinitethermal",
+      "passed": true
+    },
+    {
+      "name": "T0doesnotreplacecoldAPI",
+      "passed": true
+    },
+    {
+      "name": "realcoldpackagefunctionpositive",
+      "passed": true
+    },
+    {
+      "name": "realcoldchargeclosure",
+      "passed": true
+    },
+    {
+      "name": "actualexamplewheelstates",
+      "passed": true
+    },
+    {
+      "name": "exampleindependentflavormu",
+      "passed": true
+    },
+    {
+      "name": "exampleexplicitMeVunits",
+      "passed": true
+    },
+    {
+      "name": "exampleexplicitnetnumbersign",
+      "passed": true
+    }
+  ],
+  "passed": 19,
+  "failed": [],
+  "wheel": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_packaging_review/wheels/nmbackend-0.0.1-py3-none-any.whl",
+  "wheel_sha256": "8baeb76730f8c0d3d144232529c14f572fb849751c6abc406b6b1a7e7341494c",
+  "module_path": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_packaging_review/wheels/nmbackend-0.0.1-py3-none-any.whl/nmbackend/reference/finite_t_leptons.py",
+  "cold_function_module": "nmbackend.eos.leptons",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "jax": "0.10.1",
+    "setuptools": "82.0.1",
+    "wheel": "0.47.0"
+  },
+  "installation_performed": false,
+  "site_or_package_stubs": false,
+  "minimum_runtime_tested": false
+}

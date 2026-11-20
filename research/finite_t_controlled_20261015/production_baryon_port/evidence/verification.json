@@ -1,0 +1,42 @@
+{
+  "exact_baseline_package_blobs": 71,
+  "actual_package_module_origins": {
+    "nmbackend.constants": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/constants.py",
+    "nmbackend.ejecta": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/ejecta.py",
+    "nmbackend.ipad": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/ipad.py",
+    "nmbackend.postmerger": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/postmerger.py",
+    "nmbackend.eos.base": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/base.py",
+    "nmbackend.eos.leptons": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/leptons.py",
+    "nmbackend.eos.crust": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/crust.py",
+    "nmbackend.eos.metamodel": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/metamodel.py",
+    "nmbackend.eos.polytrope": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/polytrope.py",
+    "nmbackend.eos.hybrid": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/hybrid.py",
+    "nmbackend.eos.rmft": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/rmft.py",
+    "nmbackend.eos.ddrmf": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/ddrmf.py",
+    "nmbackend.eos.skyrme": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/skyrme.py",
+    "nmbackend.eos.compose": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/compose.py",
+    "nmbackend.eos": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/eos/__init__.py",
+    "nmbackend.tov.solver": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/tov/solver.py",
+    "nmbackend.tov.family": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/tov/family.py",
+    "nmbackend.tov.phase_transition": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/tov/phase_transition.py",
+    "nmbackend.tov.central": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/tov/central.py",
+    "nmbackend.tov": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/tov/__init__.py",
+    "nmbackend": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/__init__.py",
+    "nmbackend.reference.scipy_tov": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/reference/scipy_tov.py",
+    "nmbackend.reference": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/reference/__init__.py",
+    "nmbackend.reference.finite_t_baryons": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_baryon_port/test_mirror/src/nmbackend/reference/finite_t_baryons.py"
+  },
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "jax": "0.10.1",
+    "diffrax": "0.7.2",
+    "pytest": "9.0.3"
+  },
+  "python39_grammar_files": 3,
+  "forward_checks": 48,
+  "candidate_tests": 36,
+  "cold_tests": 13,
+  "candidate_source_sha256": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b"
+}

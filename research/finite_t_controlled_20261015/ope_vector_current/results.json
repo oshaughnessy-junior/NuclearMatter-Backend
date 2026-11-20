@@ -1,0 +1,794 @@
+{
+  "checks": [
+    {
+      "name": "(0, False, 'seagull') literal gauged-H vertex",
+      "error": 1.1435869732718344e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'pion_flight') literal gauged-H vertex",
+      "error": 1.2154508995898608e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False) external defect canceled by sourced pion current",
+      "error": 1.7590660514435942e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False) total static vector divergence",
+      "error": 1.3506484707965663e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'seagull') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'pion_flight') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'seagull') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'seagull') incoming exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'pion_flight') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'pion_flight') incoming exchange",
+      "error": 1.3633989590527618e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'total') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'total') incoming exchange",
+      "error": 1.2440082478673969e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False) sourced transverse matrix NONZERO",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'seagull') charged adjoint reversal",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'pion_flight') charged adjoint reversal",
+      "error": 1.0225492192895714e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, False, 'total') charged adjoint reversal",
+      "error": 1.2440082478673969e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'seagull') literal gauged-H vertex",
+      "error": 1.1435869732718344e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'pion_flight') literal gauged-H vertex",
+      "error": 1.2154508995898608e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True) external defect canceled by sourced pion current",
+      "error": 1.7590660514435942e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True) total static vector divergence",
+      "error": 1.3506484707965663e-14,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'seagull') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'pion_flight') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'seagull') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'seagull') incoming exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'pion_flight') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'pion_flight') incoming exchange",
+      "error": 1.3633989590527618e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'total') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'total') incoming exchange",
+      "error": 1.2440082478673969e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True) sourced transverse matrix NONZERO",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'seagull') charged adjoint reversal",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'pion_flight') charged adjoint reversal",
+      "error": 1.0225492192895714e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(0, True, 'total') charged adjoint reversal",
+      "error": 1.2440082478673969e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'seagull') literal gauged-H vertex",
+      "error": 1.5136148741429513e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'pion_flight') literal gauged-H vertex",
+      "error": 1.874573836773456e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False) external defect canceled by sourced pion current",
+      "error": 8.018470267987868e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False) total static vector divergence",
+      "error": 3.539468823774912e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'seagull') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'pion_flight') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'seagull') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'seagull') incoming exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'pion_flight') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'pion_flight') incoming exchange",
+      "error": 2.025907147887951e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'total') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'total') incoming exchange",
+      "error": 1.1241510742459941e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False) sourced transverse matrix NONZERO",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'seagull') charged adjoint reversal",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'pion_flight') charged adjoint reversal",
+      "error": 2.025907147887951e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, False, 'total') charged adjoint reversal",
+      "error": 1.1241510742459941e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'seagull') literal gauged-H vertex",
+      "error": 1.5136148741429513e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'pion_flight') literal gauged-H vertex",
+      "error": 1.874573836773456e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True) external defect canceled by sourced pion current",
+      "error": 8.018470267987868e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True) total static vector divergence",
+      "error": 3.539468823774912e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'seagull') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'pion_flight') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'seagull') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'seagull') incoming exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'pion_flight') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'pion_flight') incoming exchange",
+      "error": 2.025907147887951e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'total') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'total') incoming exchange",
+      "error": 1.1241510742459941e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True) sourced transverse matrix NONZERO",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'seagull') charged adjoint reversal",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'pion_flight') charged adjoint reversal",
+      "error": 2.025907147887951e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(1, True, 'total') charged adjoint reversal",
+      "error": 1.1241510742459941e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'seagull') literal gauged-H vertex",
+      "error": 6.86684136412257e-17,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'pion_flight') literal gauged-H vertex",
+      "error": 1.2417242813034491e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False) external defect canceled by sourced pion current",
+      "error": 8.871479501988748e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False) total static vector divergence",
+      "error": 5.008698632081037e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'seagull') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'pion_flight') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'seagull') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'seagull') incoming exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'pion_flight') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'pion_flight') incoming exchange",
+      "error": 9.091183996248239e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'total') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'total') incoming exchange",
+      "error": 5.1046106521632845e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False) sourced transverse matrix NONZERO",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'seagull') charged adjoint reversal",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'pion_flight') charged adjoint reversal",
+      "error": 6.363828797373768e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, False, 'total') charged adjoint reversal",
+      "error": 3.573227456514299e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'seagull') literal gauged-H vertex",
+      "error": 6.86684136412257e-17,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'pion_flight') literal gauged-H vertex",
+      "error": 1.2417242813034491e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True) external defect canceled by sourced pion current",
+      "error": 8.871479501988748e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True) total static vector divergence",
+      "error": 5.008698632081037e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'seagull') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'pion_flight') singlepiece cannot complete Ward",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'seagull') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'seagull') incoming exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'pion_flight') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'pion_flight') incoming exchange",
+      "error": 9.091183996248239e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'total') outgoing exchange",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'total') incoming exchange",
+      "error": 5.1046106521632845e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True) sourced transverse matrix NONZERO",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'seagull') charged adjoint reversal",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'pion_flight') charged adjoint reversal",
+      "error": 6.363828797373768e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "(2, True, 'total') charged adjoint reversal",
+      "error": 3.573227456514299e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "soft static vector charge zero",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "soft pion current finite",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "MeV^-3 scale seagull",
+      "error": 1.8785601243318066e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "MeV^-3 scale pion_flight",
+      "error": 2.3454549956787246e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "MeV^-3 scale total",
+      "error": 2.1235180312999266e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "reject complex",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject NaNvector",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject NaNgv",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject Boolgv",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject badcharge",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject overflow",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 107,
+  "failed": [],
+  "points": [
+    {
+      "p": [
+        [
+          0.0,
+          0.0,
+          117.3
+        ],
+        [
+          0.0,
+          0.0,
+          -117.3
+        ],
+        [
+          21.6674093331636,
+          -54.36091538845749,
+          64.65440416613625
+        ],
+        [
+          -19.967409333163598,
+          51.46091538845749,
+          -65.45440416613626
+        ]
+      ],
+      "omega": 6.7,
+      "Q": [
+        -1.7,
+        2.9,
+        0.8
+      ],
+      "charge": {
+        "False": {
+          "external_defect_max": 2.022401816889442e-06,
+          "completed_divergence_max": 3.536362554786704e-20,
+          "seagull_norm": 5.36066136848991e-06,
+          "flight_norm": 1.935898044638051e-06,
+          "transverse_norm": 3.3887527355816065e-06
+        },
+        "True": {
+          "external_defect_max": 2.022401816889442e-06,
+          "completed_divergence_max": 3.536362554786704e-20,
+          "seagull_norm": 5.36066136848991e-06,
+          "flight_norm": 1.935898044638051e-06,
+          "transverse_norm": 3.3887527355816065e-06
+        }
+      }
+    },
+    {
+      "p": [
+        [
+          0.0,
+          0.0,
+          83.1
+        ],
+        [
+          0.0,
+          0.0,
+          -83.1
+        ],
+        [
+          -30.73181518361243,
+          20.54169751903473,
+          55.237840439996326
+        ],
+        [
+          29.33181518361243,
+          -21.241697519034734,
+          -53.13784043999633
+        ]
+      ],
+      "omega": 2.8,
+      "Q": [
+        1.4,
+        0.7,
+        -2.1
+      ],
+      "charge": {
+        "False": {
+          "external_defect_max": 1.2941673510362467e-06,
+          "completed_divergence_max": 1.0587911840678754e-20,
+          "seagull_norm": 4.903712120880976e-06,
+          "flight_norm": 1.5191683813541864e-06,
+          "transverse_norm": 3.507114417836272e-06
+        },
+        "True": {
+          "external_defect_max": 1.2941673510362467e-06,
+          "completed_divergence_max": 1.0587911840678754e-20,
+          "seagull_norm": 4.903712120880976e-06,
+          "flight_norm": 1.5191683813541864e-06,
+          "transverse_norm": 3.507114417836272e-06
+        }
+      }
+    },
+    {
+      "p": [
+        [
+          0.0,
+          0.0,
+          128.7
+        ],
+        [
+          0.0,
+          0.0,
+          -128.7
+        ],
+        [
+          75.86154626119443,
+          -33.29066268336904,
+          52.42436417412962
+        ],
+        [
+          -78.56154626119442,
+          32.89066268336904,
+          -50.524364174129616
+        ]
+      ],
+      "omega": 7.3,
+      "Q": [
+        2.7,
+        0.4,
+        -1.9
+      ],
+      "charge": {
+        "False": {
+          "external_defect_max": 1.933286322606432e-06,
+          "completed_divergence_max": 1.7062313986104272e-20,
+          "seagull_norm": 5.71381546722375e-06,
+          "flight_norm": 2.2033709260515396e-06,
+          "transverse_norm": 3.632577784086901e-06
+        },
+        "True": {
+          "external_defect_max": 1.933286322606432e-06,
+          "completed_divergence_max": 1.7062313986104272e-20,
+          "seagull_norm": 5.71381546722375e-06,
+          "flight_norm": 2.2033709260515396e-06,
+          "transverse_norm": 3.632577784086901e-06
+        }
+      }
+    }
+  ],
+  "pins": {
+    "ope_weak_diagrams/external_legs.py": "d8400295e4bc286ed5453c6da70d5f3d1cfc76e94f926b3eb7603e0ea55d7d14",
+    "ope_nucleon_amplitudes/ope.py": "a4d25710817060fc4fdcfb3f4b013012f67ead9c3cb07dab9407275e6eebefd7"
+  },
+  "seconds": 0.030287292087450624,
+  "scope": "static minimally gauged OPE vector current only; no axial PCAC, realistic transverse completeness, retardation, weak full rate"
+}

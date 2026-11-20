@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Cv perturbed forward (0.2537, 2.73, 0.3237, 0.001)",
+      "error": 1.3519077670558e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "Cv perturbed forward (0.2537, 2.73, 0.3237, 0.0005)",
+      "error": 8.44942354409875e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "exact Cv ladder2.73",
+      "error": 1.0774958703052562e-10,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "newheldout Cv2.73",
+      "error": 0.0001487093834540154,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "Cv perturbed forward (0.1811, 0.12, 0.1817, 0.001)",
+      "error": 1.3110440292702713e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "Cv perturbed forward (0.1811, 0.12, 0.1817, 0.0005)",
+      "error": 9.364600209073366e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "exact Cv ladder0.12",
+      "error": 3.367492951156237e-10,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "newheldout Cv0.12",
+      "error": 5.237192977070038e-07,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "Cv perturbed forward (0.2593, 2.99, 0.3291, 0.001)",
+      "error": 1.788885438426587e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "Cv perturbed forward (0.2593, 2.99, 0.3291, 0.0005)",
+      "error": 1.6262594894787156e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "exact Cv ladder2.99",
+      "error": 9.398226641366136e-11,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "newheldout Cv2.99",
+      "error": 0.0002872355463163778,
+      "tolerance": 0.01,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "n": 0.2537,
+      "T": 2.73,
+      "Y": 0.3237,
+      "reference_Cv_ladder": [
+        0.04342442578639159,
+        0.04342442579107056
+      ],
+      "fitted_Cv": 0.0434308834106568
+    },
+    {
+      "n": 0.1811,
+      "T": 0.12,
+      "Y": 0.1817,
+      "reference_Cv_ladder": [
+        0.001836723918356509,
+        0.0018367239189750245
+      ],
+      "fitted_Cv": 0.0018367248809027853
+    },
+    {
+      "n": 0.2593,
+      "T": 2.99,
+      "Y": 0.3291,
+      "reference_Cv_ladder": [
+        0.04757331920024383,
+        0.04757331920471488
+      ],
+      "fitted_Cv": 0.047586983953046724
+    }
+  ],
+  "runtime_seconds": 3.5840603748802096
+}

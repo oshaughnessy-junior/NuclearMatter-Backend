@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-16T07:13:14.005837+00:00",
+  "status": "PURE PREPARATION FROZEN; waitFROZENcandidate/rootcomparisonhandoff",
+  "report_sha256": "4fdd4a58537e15c471cad851933d05f4680f7c38bb3a7f8f2822e8086fedebaa",
+  "manifest_sha256": "c97ee76473c1c117d0ac66d1b18037fa403d744b0a887c7221c010c756e47b06",
+  "candidate_imported": false,
+  "author_lock_sha256": "c051e3c23f290b657b4caad069a34d4ce7ee85a4e535368fb674bd5590ec188a",
+  "own_initial_lock_sha256": "6bf7fc73a683b89bc85452e268adca45f1b8e8e3c2419ab41c54f220663cc1b1",
+  "high_lock_sha256": "4518f2a77a255541898c72422749813a5cb51a0b6ed219874a96eed2d9672550",
+  "point_checks_passed": 44,
+  "original_incident_internal_checks_passed": 124,
+  "original_coarse_convergence_failed": 6,
+  "retained_original_timelike_map_failed": 2,
+  "higher_quad_passed": 6,
+  "isolated_tail_passed": 12,
+  "local_algebra_static_passed": 141,
+  "retained_prephysics_tail_harness_syntax_failures": 2,
+  "selected_reference_files": [
+    "high_EC_6.431.json",
+    "high_PC_4.237.json",
+    "pure_NEUTRON_DECAY_0.337_fine.json",
+    "high_NEUTRON_DECAY_0.873.json"
+  ],
+  "beta_aboveendpoint_fine_high_error": 1.417920078407723e-06,
+  "maximum_job_seconds": 15.338119499851018,
+  "all_scientific_sources_unchanged": true,
+  "scope": "selectedpositive/logjchi ONLY; no candidateAPI/wholemoment/infiniteRQ/transport/domain/externalphysics/ADcertificate",
+  "quota": {
+    "utc": "2026-10-16 07:07:58 UTC",
+    "usedPercent": 29,
+    "accountId": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "windowDurationMins": 10080,
+    "resetsAt": 1792652325
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "name": "actual exact complete node accepted",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic controls",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic bath",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic state",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic physicalsource",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic implementation",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic units",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic channel",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic boolindex",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic node",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic weight",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic falsezero",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic underflow",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic floor",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic nonfinite",
+      "passed": true
+    },
+    {
+      "name": "reject synthetic boolvalue",
+      "passed": true
+    },
+    {
+      "name": "assembly guard no numerical result change",
+      "passed": true
+    }
+  ],
+  "passed": 17,
+  "failed": [],
+  "scope": "synthetic metadata/representation only; no real raw mutation"
+}

@@ -1,0 +1,851 @@
+{
+  "original_checkpoint_paths_unchanged": 122,
+  "checks": [
+    {
+      "name": "EC 4 empty forward",
+      "passed": true
+    },
+    {
+      "name": "EC 4 empty backward",
+      "passed": true
+    },
+    {
+      "name": "EC 4 empty net",
+      "passed": true
+    },
+    {
+      "name": "EC 4 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 4 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 4 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 4 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 4 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "EC 4 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "EC 4 LTE net",
+      "passed": true
+    },
+    {
+      "name": "EC 4 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 4 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 4 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 4 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 4 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "EC 4 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "EC 4 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "EC 4 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 4 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 4 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 4 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 8 empty forward",
+      "passed": true
+    },
+    {
+      "name": "EC 8 empty backward",
+      "passed": true
+    },
+    {
+      "name": "EC 8 empty net",
+      "passed": true
+    },
+    {
+      "name": "EC 8 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 8 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 8 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 8 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 8 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "EC 8 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "EC 8 LTE net",
+      "passed": true
+    },
+    {
+      "name": "EC 8 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 8 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 8 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 8 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 8 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "EC 8 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "EC 8 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "EC 8 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 8 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 8 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 8 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 16 empty forward",
+      "passed": true
+    },
+    {
+      "name": "EC 16 empty backward",
+      "passed": true
+    },
+    {
+      "name": "EC 16 empty net",
+      "passed": true
+    },
+    {
+      "name": "EC 16 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 16 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 16 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 16 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 16 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "EC 16 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "EC 16 LTE net",
+      "passed": true
+    },
+    {
+      "name": "EC 16 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 16 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 16 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 16 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 16 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "EC 16 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "EC 16 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "EC 16 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 16 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 16 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 16 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 24 empty forward",
+      "passed": true
+    },
+    {
+      "name": "EC 24 empty backward",
+      "passed": true
+    },
+    {
+      "name": "EC 24 empty net",
+      "passed": true
+    },
+    {
+      "name": "EC 24 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 24 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 24 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 24 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 24 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "EC 24 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "EC 24 LTE net",
+      "passed": true
+    },
+    {
+      "name": "EC 24 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 24 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 24 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 24 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 24 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "EC 24 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "EC 24 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "EC 24 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 24 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 24 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 24 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 32 empty forward",
+      "passed": true
+    },
+    {
+      "name": "EC 32 empty backward",
+      "passed": true
+    },
+    {
+      "name": "EC 32 empty net",
+      "passed": true
+    },
+    {
+      "name": "EC 32 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 32 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 32 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 32 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 32 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "EC 32 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "EC 32 LTE net",
+      "passed": true
+    },
+    {
+      "name": "EC 32 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 32 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 32 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 32 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "EC 32 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "EC 32 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "EC 32 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "EC 32 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "EC 32 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EC 32 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "EC 32 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 4 empty forward",
+      "passed": true
+    },
+    {
+      "name": "PC 4 empty backward",
+      "passed": true
+    },
+    {
+      "name": "PC 4 empty net",
+      "passed": true
+    },
+    {
+      "name": "PC 4 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 4 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 4 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 4 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 4 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "PC 4 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "PC 4 LTE net",
+      "passed": true
+    },
+    {
+      "name": "PC 4 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 4 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 4 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 4 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 4 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "PC 4 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "PC 4 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "PC 4 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 4 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 4 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 4 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 8 empty forward",
+      "passed": true
+    },
+    {
+      "name": "PC 8 empty backward",
+      "passed": true
+    },
+    {
+      "name": "PC 8 empty net",
+      "passed": true
+    },
+    {
+      "name": "PC 8 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 8 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 8 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 8 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 8 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "PC 8 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "PC 8 LTE net",
+      "passed": true
+    },
+    {
+      "name": "PC 8 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 8 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 8 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 8 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 8 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "PC 8 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "PC 8 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "PC 8 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 8 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 8 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 8 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 16 empty forward",
+      "passed": true
+    },
+    {
+      "name": "PC 16 empty backward",
+      "passed": true
+    },
+    {
+      "name": "PC 16 empty net",
+      "passed": true
+    },
+    {
+      "name": "PC 16 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 16 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 16 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 16 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 16 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "PC 16 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "PC 16 LTE net",
+      "passed": true
+    },
+    {
+      "name": "PC 16 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 16 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 16 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 16 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 16 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "PC 16 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "PC 16 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "PC 16 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 16 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 16 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 16 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 24 empty forward",
+      "passed": true
+    },
+    {
+      "name": "PC 24 empty backward",
+      "passed": true
+    },
+    {
+      "name": "PC 24 empty net",
+      "passed": true
+    },
+    {
+      "name": "PC 24 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 24 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 24 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 24 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 24 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "PC 24 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "PC 24 LTE net",
+      "passed": true
+    },
+    {
+      "name": "PC 24 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 24 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 24 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 24 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 24 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "PC 24 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "PC 24 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "PC 24 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 24 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 24 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 24 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 32 empty forward",
+      "passed": true
+    },
+    {
+      "name": "PC 32 empty backward",
+      "passed": true
+    },
+    {
+      "name": "PC 32 empty net",
+      "passed": true
+    },
+    {
+      "name": "PC 32 empty entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 32 empty ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 32 empty LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 32 empty entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 32 LTE forward",
+      "passed": true
+    },
+    {
+      "name": "PC 32 LTE backward",
+      "passed": true
+    },
+    {
+      "name": "PC 32 LTE net",
+      "passed": true
+    },
+    {
+      "name": "PC 32 LTE entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 32 LTE ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 32 LTE LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 32 LTE entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "PC 32 common_changed_affinity forward",
+      "passed": true
+    },
+    {
+      "name": "PC 32 common_changed_affinity backward",
+      "passed": true
+    },
+    {
+      "name": "PC 32 common_changed_affinity net",
+      "passed": true
+    },
+    {
+      "name": "PC 32 common_changed_affinity entropy",
+      "passed": true
+    },
+    {
+      "name": "PC 32 common_changed_affinity ordinary_DOS_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PC 32 common_changed_affinity LTE_net_over_gross",
+      "passed": true
+    },
+    {
+      "name": "PC 32 common_changed_affinity entropy_affinity_gross_residual",
+      "passed": true
+    },
+    {
+      "name": "unchanged per-node own source arithmetic AST",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "scope": "metadata/source succession only; originalexecution fingerprints unchanged"
+}

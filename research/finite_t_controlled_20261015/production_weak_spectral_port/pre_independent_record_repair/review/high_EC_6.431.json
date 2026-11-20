@@ -1,0 +1,41 @@
+{
+  "row": {
+    "E": 6.431,
+    "channel": "EC",
+    "logj": -2.165009503170893,
+    "logchi": 2.4551725816390064,
+    "controls": {
+      "order": 14,
+      "qorder": 24,
+      "inner": 40,
+      "phi": 12,
+      "tail": 85.0,
+      "outer_tail": 50.0
+    },
+    "calls": 10128,
+    "timelike": 3744,
+    "exact_empty_differentials": 0,
+    "seconds": 15.335188667057082,
+    "upperleptonenergy": 107.72433236000002
+  },
+  "checks": [
+    {
+      "name": "j fine/highrefinement",
+      "error": 6.962571876636717e-09,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "chi fine/highrefinement",
+      "error": 6.962575429350421e-09,
+      "gate": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 2,
+  "failed": [],
+  "complete": true,
+  "candidate_imported": false,
+  "seconds": 15.338119499851018,
+  "scope": "Oneextraindependentreferencequad rung; originalcoarsegatesunchanged"
+}

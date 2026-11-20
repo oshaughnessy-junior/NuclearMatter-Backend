@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN referencecontract pending independent review",
+  "implemented": "dimensionlessdegenerateenergykernel+reactionledger ONLY",
+  "checks": 207,
+  "counts": {
+    "energy": 47,
+    "reaction_bookkeeping": 160
+  },
+  "absolute_MU_rate_implemented": false,
+  "physical_interaction_and_width_required": true,
+  "files": {
+    "RESEARCH_NOTE.md": "3ce5ab7684f6eae408ba902b01c410bf3faa114c480bedda0890df1c223f156c",
+    "SOURCES.json": "5619913299dc8dbba35fc78e2aa57612701859c22b56e0c95b389af7debf7f5a",
+    "check_energy.py": "8511863e89740fdbd3bc8c1f555d3a72b7fe7bbe769163085db3700bf1bf0ed3",
+    "cold_prescription_audit.json": "b1c4cd3ea342fe6a3822f2e3c39970c1dbf9665be632df69008eda44913650d5",
+    "energy_reference.py": "91956f7a26583f2cd201d518b1630a9859a28efb2c2a8e274445068e0833482c",
+    "energy_results.json": "2bea5ab965c759bfcfee6d8c3eb7df5b179a44a33b8a307f7681054e2804ffdc",
+    "inventory.py": "3522d51ea3e4345beab4fa34d460db69479c091e877c6bf8cd9a18354a378752",
+    "inventory_results.json": "e19c1d1c4a75d3f0d0ce525cefdc5f708b8366b30f49619f8d8e98088f541f2c",
+    "source_snapshot/PROVENANCE.json": "9fe35aa965dd23fca2109e959f42d73a6b5126819ef8dc751d8b0abf4d473f4f",
+    "source_snapshot/core_nu.py": "9c6805f5887d59409bed3232d9290740b2d287b598525e2562ff54ff17111631"
+  }
+}

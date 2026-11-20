@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "volume_number independent reference",
+      "error": 7.351896869067787e-13,
+      "passed": true
+    },
+    {
+      "name": "volume_number log-grid refinement",
+      "error": 8.569143172820759e-10,
+      "passed": true
+    },
+    {
+      "name": "volume_energy independent reference",
+      "error": 8.43991543320044e-13,
+      "passed": true
+    },
+    {
+      "name": "volume_energy log-grid refinement",
+      "error": 1.0427461116790937e-09,
+      "passed": true
+    },
+    {
+      "name": "slab_number_exchange independent reference",
+      "error": 2.729807491164138e-10,
+      "passed": true
+    },
+    {
+      "name": "slab_number_exchange log-grid refinement",
+      "error": 2.699194157074203e-08,
+      "passed": true
+    },
+    {
+      "name": "slab_energy_exchange independent reference",
+      "error": 2.999058779096231e-10,
+      "passed": true
+    },
+    {
+      "name": "slab_energy_exchange log-grid refinement",
+      "error": 5.1102803433344945e-08,
+      "passed": true
+    }
+  ],
+  "coarse": [
+    1.597752520661624e+42,
+    8.147193875056019e+43,
+    4.274164452872037e+45,
+    2.158790057701542e+47
+  ],
+  "fine": [
+    1.597752519292487e+42,
+    8.147193866560565e+43,
+    4.2741645682400374e+45,
+    2.1587901680217716e+47
+  ],
+  "reference": [
+    1.5977525192913125e+42,
+    8.147193866553688e+43,
+    4.274164567073273e+45,
+    2.1587901673743376e+47
+  ],
+  "runtime_seconds": 7.618206750135869
+}

@@ -1,0 +1,52 @@
+{
+  "channel": "PC",
+  "E": 4.237,
+  "kind": "outer",
+  "controls": {
+    "order": 14,
+    "qorder": 24,
+    "inner": 40,
+    "phi": 12,
+    "tail": 85.0,
+    "outer_tail": 60.0
+  },
+  "row": {
+    "E": 4.237,
+    "channel": "PC",
+    "logj": -1.2413742205175247,
+    "logchi": -0.5275563053274244,
+    "controls": {
+      "order": 14,
+      "qorder": 24,
+      "inner": 40,
+      "phi": 12,
+      "tail": 85.0,
+      "outer_tail": 60.0
+    },
+    "calls": 8424,
+    "timelike": 3048,
+    "exact_empty_differentials": 3048,
+    "seconds": 8.650071457959712,
+    "upperleptonenergy": 122.94366763999997
+  },
+  "checks": [
+    {
+      "name": "outer onlyextension j",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "outer onlyextension chi",
+      "error": 0.0,
+      "gate": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 2,
+  "failed": [],
+  "complete": true,
+  "candidate_imported": false,
+  "seconds": 8.65093579213135,
+  "scope": "Isolatedboundextensiononly, no rigorousinfinitedomainerrorcertificate"
+}

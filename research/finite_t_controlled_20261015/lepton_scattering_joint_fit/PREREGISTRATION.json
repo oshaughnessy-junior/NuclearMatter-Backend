@@ -1,0 +1,18 @@
+{
+ "version":"joint-lepton-moment-2",
+ "state":{"T_MeV":2.0,"mu_e_MeV":0.17446333200826397,"flavor":"nu_e","targets":["e-","e+"],"outgoing_neutrinos":"unblocked"},
+ "domain_MeV":[1.0,30.0],
+ "known_development":"ALL v1 training, heldout, fitted-zero diagnostics, reviewer8.14/8.19/23.17 results and failures are known development. None will be called heldout. Original frozen v1 files will remain untouched.",
+ "training_MeV":[1.0,1.2,1.45,1.8,2.5,3.5,4.5,5.5,7.0,8.14,8.19,9.0,10.5,13.5,16.5,19.0,21.5,23.17,24.0,27.5,30.0],
+ "reused_training":"18 qualified v1 train+heldout fine references, now development only; recompute8.14/8.19/23.17 with actual refined CM quadrature",
+ "fresh_heldout_MeV":[1.37,3.63,6.47,8.161,8.227,11.83,17.41,26.39],
+ "fresh_heldout_rule":"Not evaluated until training-only coefficients and sha256 lock exist; no retuning from validation. Any failure retained.",
+ "representation":"log(R), log(Rtransport), g=DeltaQ/(R*T) fitted in affine(log(E)) Chebyshev; Qout=R*(E+T*g). g signed, never logabs. Physical E+T*g>0 enforced densely and at every call.",
+ "candidate_degrees":[2,3,4,5,6,7,8],
+ "training_selection":{"positive_train_relative":0.002,"positive_LOO_relative":0.005,"g_train_absolute":0.0005,"g_LOO_absolute":0.002,"rule":"smallest degree passing train and leave-one-out gates per quantity; if none, select min LOO and retain failed gate"},
+ "validation":{"positive_relative_gate":0.01,"signed_absolute_RT_gate":0.005,"signed_relative_gate":0.02,"relative_only_when_abs_g_above":0.25,"quadrature_positive_gate":0.0001,"quadrature_signed_RT_gate":0.0001},
+ "fallback":{"trigger":"abs(g_fit)<=0.08 OR E+2*g<=0 OR explicit method=detailed OR failed fitted physical moment bounds","action":"fresh actual fine CM quadrature at input E, both target signs, never reference cache; report fine controls, evaluated true signed moment and fallback flag","qualification":"0.08 is a conservative declared diagnostic guard, NOT a certified uniform fit-error bound; outside it no uniform sign guarantee"},
+ "independent_phase_anchor":{"E_MeV":8.161,"orders":[[12,20],[16,28]],"upper_MeV":160,"target_tail_T":90,"gate_positive_relative":0.0001,"gate_signed_RT":0.0001,"interpretation":"distinct analytic-azimuth transverse-shell D integration versus CM event moments; shared interaction model, not model uncertainty"},
+ "api":"strict fixed state/domain/closure, positive R,Rtransport,Qout; signed energy derived jointly; direct quadrature is visible method and never substituted with saved rows",
+ "scope":"optional fixed-state moment convenience only; no spectral redistribution, uniform error/sign certificate, AD fidelity, derivative or physical-model uncertainty claim"
+}

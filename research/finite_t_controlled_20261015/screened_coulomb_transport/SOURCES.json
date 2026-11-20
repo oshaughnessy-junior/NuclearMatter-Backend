@@ -1,0 +1,10 @@
+{
+ "retrieved_UTC_date":"2026-10-15",
+ "primary_sources":[
+  {"url":"https://arxiv.org/html/astro-ph/9903127","authors":"Potekhin,Baiko,Haensel,Yakovlev1999","anchors":"Eqs3,6-9","used_for":"Screening susceptibility; degenerate conductivity and Born transport-frequency/relativistic factor conventions","not_imported":"Correlated solid/liquid fits, nonBorn factors"},
+  {"url":"https://arxiv.org/html/astro-ph/9909100","authors":"Potekhin1999","anchors":"Eqs9,16-19","used_for":"Screening, thermoelectric energy moments and sign conventions","not_imported":"Magnetic or fitted effective potentials"},
+  {"url":"https://geant4.web.cern.ch/documentation/pipelines/master/prm_html/PhysicsReferenceManual/electromagnetic/elastic_scattering/elecnuc.html","used_for":"Separation of screened Rutherford and Mott factors","not_imported":"Atomic screening and all-orders Mott implementation"}
+ ],
+ "ansatz":"Static uncorrelated external point ions,S(q)=1,local susceptibility Yukawa screening,leading Born Dirac electrons,no pairs",
+ "unit_convention":"hbar=c=kB=1;alpha1/137.035999084;HL e²=4pi alpha;conductivity natural units only"
+}

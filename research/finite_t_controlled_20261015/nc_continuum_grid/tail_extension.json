@@ -1,0 +1,260 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "warm cutoff1.5 blocked_out_rate_s",
+      "error": 1.6262045710381887e-94,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "warm cutoff1.5 blocked_transport_rate_s",
+      "error": 3.0889902670381943e-94,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "warm cutoff1.5 energy_to_bath_MeV_s",
+      "error": 4.112654789479113e-91,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "warm cutoff1.5 absolute_energy_transfer_MeV_s",
+      "error": 3.671447501059553e-92,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "warm cutoff1.5 gain_s",
+      "error": 3.0757064006075324e-84,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "warm cutoff1.5 loss_s",
+      "error": 1.6262045710381887e-94,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "warm cutoff1.5 net_collision_s",
+      "error": 1.6706418100797305e-82,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "degenerate cutoff1.5 blocked_out_rate_s",
+      "error": 1.0876345243849526e-262,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "degenerate cutoff1.5 blocked_transport_rate_s",
+      "error": 2.0027383291767385e-262,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "degenerate cutoff1.5 energy_to_bath_MeV_s",
+      "error": 7.960207440682851e-261,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "degenerate cutoff1.5 absolute_energy_transfer_MeV_s",
+      "error": 7.1723013056601805e-261,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "degenerate cutoff1.5 gain_s",
+      "error": 6.916278146438679e-182,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "degenerate cutoff1.5 loss_s",
+      "error": 1.0876345243849523e-262,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "degenerate cutoff1.5 net_collision_s",
+      "error": 1.3545565013698615e-181,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "nearLTE cutoff1.5 blocked_out_rate_s",
+      "error": 1.6316759523783245e-94,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "nearLTE cutoff1.5 blocked_transport_rate_s",
+      "error": 3.102572661569395e-94,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "nearLTE cutoff1.5 energy_to_bath_MeV_s",
+      "error": 3.353185745101451e-91,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "nearLTE cutoff1.5 absolute_energy_transfer_MeV_s",
+      "error": 3.692621663105715e-92,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "nearLTE cutoff1.5 gain_s",
+      "error": 1.6328322976390423e-94,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "nearLTE cutoff1.5 loss_s",
+      "error": 1.6316759523783243e-94,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "nearLTE cutoff1.5 net_collision_s",
+      "error": 3.3542946380127146e-91,
+      "tolerance": 1e-10,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "warm",
+      "cutoff_before": 150.0,
+      "cutoff_after": 225.0,
+      "tail_moments": [
+        1.3820472030375963e-89,
+        2.698941845936843e-89,
+        -1.959152961896206e-87,
+        1.959152961896206e-87,
+        3.1743111644637663e-80,
+        1.6474406497457627e-90,
+        3.1743111642990294e-80
+      ],
+      "relative_to_reference": [
+        1.6262045710381887e-94,
+        3.0889902670381943e-94,
+        4.112654789479113e-91,
+        3.671447501059553e-92,
+        3.0757064006075324e-84,
+        1.6262045710381887e-94,
+        1.6706418100797305e-82
+      ],
+      "absolute_quad_error": 1.9952767794761077e-93,
+      "sampled_log_kernels": [
+        {
+          "Eout": 150.0,
+          "log_forward_at_cos0": -225.80545017847527,
+          "log_reverse_at_cos0": -161.22155058067966
+        },
+        {
+          "Eout": 187.5,
+          "log_forward_at_cos0": -241.99143898157476,
+          "log_reverse_at_cos0": -159.1038264864076
+        },
+        {
+          "Eout": 225.0,
+          "log_forward_at_cos0": -256.3567338514426,
+          "log_reverse_at_cos0": -155.08376446986333
+        }
+      ],
+      "limit": "Sampled finite logarithmic tails may be unrepresentable ordinarily; no mathematical infinite-tail bound or relative-tail accuracy claim"
+    },
+    {
+      "label": "degenerate",
+      "cutoff_before": 126.39221105137457,
+      "cutoff_after": 189.58831657706185,
+      "tail_moments": [
+        2.644065974383199e-257,
+        5.26544788007038e-257,
+        -2.8204221363077843e-255,
+        2.8204221363077843e-255,
+        1.30100276856239e-178,
+        3.0905543207143546e-259,
+        1.3010027685623784e-178
+      ],
+      "relative_to_reference": [
+        1.0876345243849526e-262,
+        2.0027383291767385e-262,
+        7.960207440682851e-261,
+        7.1723013056601805e-261,
+        6.916278146438679e-182,
+        1.0876345243849523e-262,
+        1.3545565013698615e-181
+      ],
+      "absolute_quad_error": 0.0,
+      "sampled_log_kernels": [
+        {
+          "Eout": 126.39221105137457,
+          "log_forward_at_cos0": -736.5001108857278,
+          "log_reverse_at_cos0": -527.4030039526409
+        },
+        {
+          "Eout": 157.99026381421822,
+          "log_forward_at_cos0": -826.1875883010813,
+          "log_reverse_at_cos0": -554.3406629449353
+        },
+        {
+          "Eout": 189.58831657706185,
+          "log_forward_at_cos0": -898.5784651921285,
+          "log_reverse_at_cos0": -563.9000774238832
+        }
+      ],
+      "limit": "Sampled finite logarithmic tails may be unrepresentable ordinarily; no mathematical infinite-tail bound or relative-tail accuracy claim"
+    },
+    {
+      "label": "nearLTE",
+      "cutoff_before": 150.0,
+      "cutoff_after": 225.0,
+      "tail_moments": [
+        1.3820472030375963e-89,
+        2.698941845936843e-89,
+        -1.959152961896206e-87,
+        1.959152961896206e-87,
+        1.6486377775574498e-90,
+        1.647469670894782e-90,
+        1.1681066626672095e-93
+      ],
+      "relative_to_reference": [
+        1.6316759523783245e-94,
+        3.102572661569395e-94,
+        3.353185745101451e-91,
+        3.692621663105715e-92,
+        1.6328322976390423e-94,
+        1.6316759523783243e-94,
+        3.3542946380127146e-91
+      ],
+      "absolute_quad_error": 2.4024401676083838e-99,
+      "sampled_log_kernels": [
+        {
+          "Eout": 150.0,
+          "log_forward_at_cos0": -225.80545017847527,
+          "log_reverse_at_cos0": -161.22155058067966
+        },
+        {
+          "Eout": 187.5,
+          "log_forward_at_cos0": -241.99143898157476,
+          "log_reverse_at_cos0": -159.1038264864076
+        },
+        {
+          "Eout": 225.0,
+          "log_forward_at_cos0": -256.3567338514426,
+          "log_reverse_at_cos0": -155.08376446986333
+        }
+      ],
+      "limit": "Sampled finite logarithmic tails may be unrepresentable ordinarily; no mathematical infinite-tail bound or relative-tail accuracy claim"
+    }
+  ],
+  "runtime_seconds": 0.25025425013154745
+}

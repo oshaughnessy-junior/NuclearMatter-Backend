@@ -1,0 +1,53 @@
+{
+  "scope": "Selected independent source integrals and discarded-panel estimate",
+  "checks": [
+    {
+      "name": "direct signed collision-volume source nue tau=0.03",
+      "error": 8.89591733610473e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "direct signed collision-volume source nue tau=1.0",
+      "error": 2.8459457013241263e-12,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "direct signed collision-volume source nue tau=20.0",
+      "error": 8.256728634137289e-13,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "direct signed collision-volume source antinue tau=0.03",
+      "error": 8.89591733610473e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "direct signed collision-volume source antinue tau=1.0",
+      "error": 2.8459457013241263e-12,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "direct signed collision-volume source antinue tau=20.0",
+      "error": 8.256728634137289e-13,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "estimated discarded-panel j/chi fractions at recorded failure",
+      "error": 4.165768906650955e-18,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "collapsed_panels": 1,
+  "estimated_omitted_j_chi_fractions": [
+    4.165768906650955e-18,
+    4.165768906650955e-18
+  ]
+}

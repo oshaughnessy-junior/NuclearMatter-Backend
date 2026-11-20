@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "name": "(False, 0.017) explicit H[v] central difference",
+      "error": 1.3409461200783985e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "(False, 0.041) explicit H[v] central difference",
+      "error": 1.0103003978316503e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "(True, 0.017) explicit H[v] central difference",
+      "error": 1.3409461200783985e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "(True, 0.041) explicit H[v] central difference",
+      "error": 1.0103003978316503e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "passed": 4,
+  "failed": [],
+  "rows": [
+    {
+      "raising": false,
+      "step": 0.017,
+      "error": 1.3409461200783985e-15
+    },
+    {
+      "raising": false,
+      "step": 0.041,
+      "error": 1.0103003978316503e-15
+    },
+    {
+      "raising": true,
+      "step": 0.017,
+      "error": 1.3409461200783985e-15
+    },
+    {
+      "raising": true,
+      "step": 0.041,
+      "error": 1.0103003978316503e-15
+    }
+  ],
+  "seconds": 0.33040633401833475,
+  "method": "2D periodic Fourier field, stationary pion held fixed for first variation; actual Hamiltonian quadratics and source term, no current formula/defect in H evaluator"
+}

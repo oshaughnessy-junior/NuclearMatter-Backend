@@ -1,0 +1,133 @@
+{
+  "checks": [
+    {
+      "name": "own moment refinement rate",
+      "error": -8.137618899659354e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent phase vs actualCM rate",
+      "error": 1.5597685544550596e-09,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "own moment refinement transport_rate",
+      "error": 1.7597239646053653e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent phase vs actualCM transport_rate",
+      "error": -8.535393393289682e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "own moment refinement outgoing_energy_moment",
+      "error": 8.138231547609531e-08,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent phase vs actualCM outgoing_energy_moment",
+      "error": 6.445936321427094e-09,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "own moment refinement neutrino_energy_change",
+      "error": 3.3521575450334844e-07,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent phase vs actualCM neutrino_energy_change",
+      "error": 1.9899777075030626e-08,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "actual outgoing100..140 tail rate",
+      "error": 2.8318095505391537e-19,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "actual outgoing100..140 tail transport_rate",
+      "error": 4.382207380752514e-19,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "actual outgoing100..140 tail outgoing_energy_moment",
+      "error": 3.544137001802969e-18,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "actual outgoing100..140 tail neutrino_energy_change",
+      "error": 1.329363954495416e-17,
+      "tolerance": 1e-08,
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "failed": [],
+  "rows": [
+    {
+      "E": 8.19,
+      "moments": {
+        "rate": 10.228509438067874,
+        "transport_rate": 7.272445363402205,
+        "outgoing_energy_moment": 83.42531676854074,
+        "neutrino_energy_change": -0.34617552923498546
+      },
+      "controls": {
+        "order": 18,
+        "angle": 24,
+        "upper": 100.0,
+        "lower": 0.0,
+        "tail": 65.0
+      },
+      "seconds": 0.46181133412756026
+    },
+    {
+      "E": 8.19,
+      "moments": {
+        "rate": 10.228509446391445,
+        "transport_rate": 7.272445362122455,
+        "outgoing_energy_moment": 83.42530997919589,
+        "neutrino_energy_change": -0.3461823867499978
+      },
+      "controls": {
+        "order": 26,
+        "angle": 36,
+        "upper": 140.0,
+        "lower": 0.0,
+        "tail": 90.0
+      },
+      "seconds": 1.0973869578447193
+    }
+  ],
+  "tail": {
+    "E": 8.19,
+    "moments": {
+      "rate": 2.8965190692892254e-18,
+      "transport_rate": 3.1869363769214172e-18,
+      "outgoing_energy_moment": 2.9567072607827597e-16,
+      "neutrino_energy_change": 2.719482349007967e-16
+    },
+    "controls": {
+      "order": 16,
+      "angle": 24,
+      "upper": 140.0,
+      "lower": 100.0,
+      "tail": 80.0
+    },
+    "seconds": 0.02699279203079641
+  },
+  "method": "analytic target-azimuth invariant polynomial, adaptive targetENERGY, Gauss directcosine and sinh(F-E) outgoingenergy; signedintegrand accumulated directly, no fit orauthorCM/D/phasefunctions called",
+  "scope": "one new nearzero energy at fixedbath; no uniform certificate or physicaluncertainty"
+}

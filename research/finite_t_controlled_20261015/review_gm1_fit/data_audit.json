@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "coefficients reproduced from training only cold",
+      "error": 3.4638958368304884e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "coefficients reproduced from training only T2",
+      "error": 3.848578899144639e-17,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "coefficients reproduced from training only T4",
+      "error": 1.5352472168984194e-20,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "new final holdouts disjoint old diagnostic coordinates",
+      "passed": true
+    },
+    {
+      "name": "final holdouts disjoint fit states",
+      "passed": true
+    }
+  ],
+  "max_coefficient_differences": {
+    "cold": 3.4638958368304884e-14,
+    "T2": 3.848578899144639e-17,
+    "T4": 1.5352472168984194e-20
+  },
+  "old_new_exact_tuple_overlap": [],
+  "condition_number": 143.892038513871,
+  "limits": "Numerical coefficients depend only on declared training targets. Model-selection history/predeclaration cannot be proven from data disjointness; author explicitly disclosed earlier holdout-informed basis selection."
+}

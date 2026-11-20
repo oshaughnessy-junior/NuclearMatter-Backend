@@ -1,0 +1,109 @@
+{
+  "scope": "Selected independent cold kinematic geometry, no complete Urca or EOS claim",
+  "checks": [
+    {
+      "name": "independent energy-budget polygon root versus analytic onset",
+      "error": 1.9984014443252818e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "cold polygon support E=0.09",
+      "gap_MeV": 3.4298238507574013,
+      "passed": true
+    },
+    {
+      "name": "cold polygon support E=0.3",
+      "gap_MeV": 0.13665859141403303,
+      "passed": true
+    },
+    {
+      "name": "cold polygon support E=0.308908979957265",
+      "gap_MeV": 0.00015308298773675233,
+      "passed": true
+    },
+    {
+      "name": "cold polygon support E=0.30892897995726504",
+      "gap_MeV": -0.0001530826757516479,
+      "passed": true
+    },
+    {
+      "name": "cold polygon support E=0.9",
+      "gap_MeV": -8.564108837732022,
+      "passed": true
+    },
+    {
+      "name": "above-triangle infinitesimal-E support Y=0.1111111111111111",
+      "passed": true
+    },
+    {
+      "name": "above-triangle infinitesimal-E support Y=0.12",
+      "passed": true
+    },
+    {
+      "name": "qualified sub-onset positive log-chi T=0.03",
+      "log_chi": -0.6725381658260687,
+      "passed": true
+    },
+    {
+      "name": "qualified sub-onset positive log-chi T=0.1",
+      "log_chi": 9.605131473876298,
+      "passed": true
+    },
+    {
+      "name": "offset frozen across qualified temperatures",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "independent_onset_MeV": 0.308918979957265,
+  "analytical_onset_MeV": 0.30891897995726564,
+  "witnesses": [
+    {
+      "E_nu_MeV": 0.09,
+      "best_gap_MeV": 3.4298238507574013,
+      "neutron_hole_electron_excitation_MeV": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "E_nu_MeV": 0.3,
+      "best_gap_MeV": 0.13665859141403303,
+      "neutron_hole_electron_excitation_MeV": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "E_nu_MeV": 0.308908979957265,
+      "best_gap_MeV": 0.00015308298773675233,
+      "neutron_hole_electron_excitation_MeV": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "E_nu_MeV": 0.30892897995726504,
+      "best_gap_MeV": -0.0001530826757516479,
+      "neutron_hole_electron_excitation_MeV": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "E_nu_MeV": 0.9,
+      "best_gap_MeV": -8.564108837732022,
+      "neutron_hole_electron_excitation_MeV": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "source_sha256": {
+    "urca_threshold/threshold_study.py": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+    "urca_threshold/cold_support.py": "dd97a8bfc967b8b1cb3e051bd89677ee24b0d71f09e37e6deec8bcc6d16d6c4e"
+  }
+}

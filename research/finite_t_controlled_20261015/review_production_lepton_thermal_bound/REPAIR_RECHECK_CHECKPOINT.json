@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_ACCEPTED_SELECTED_THERMAL_REPAIR",
+  "passed": 139,
+  "failed": 0,
+  "source_sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+  "manifest_sha256": "5e9a2793bc0de9c2e2a01c78061bd7a76f093b260cb8a7564971aae18a1bf282",
+  "initial_review_sha256": "9d3360f9f5badf7d2acc416654e818fe26ec1b5924c7e61f2a20052bfb9e7775",
+  "initial_failures_preserved": true,
+  "files": {
+    "repair_results.json": "7e05f9b3374cb1cd63c05d0d01c8268551583ee2a9f9b81a4e06fb4a07487d8d",
+    "REPAIR_REVIEW.md": "c64c53bb209f8bf8a12f0cb5402ef0f56e724109ce9d8d585a4d010df58a41c3",
+    "repair_probe.py": "14539db10391f948acccc4d915934a454b4b05bd7003474c8aff3191505011d4",
+    "repair_stdout.txt": "7cc07c972bc83bb66bcc1f40b7fdef4bba2e107e260232f48ae4e3cab35b3c42",
+    "REPAIR_VALIDATION_LOCK.json": "3930b7c2ba812ed272b9b6609e0ccd377188977ebe2dbbe762f373daea3e0f1f",
+    "repair_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reviewed_repair_candidate/CHECKPOINT.json": "fd6470946091250491c865175db67ad997982257ada10380f16ecec9170797c2",
+    "reviewed_repair_candidate/CANDIDATE_MANIFEST.json": "5e9a2793bc0de9c2e2a01c78061bd7a76f093b260cb8a7564971aae18a1bf282",
+    "reviewed_repair_candidate/AUTHOR_REPORT.md": "d15b83f825f67ef1aede80ca688d2542c68352d9ff4af684669a99b1b91b3c88",
+    "reviewed_repair_candidate/evidence/HOLE_BOUND_PROOF.md": "d00c7ed988fabcdf87dc2759d6bb331b81c16cbff8ba3a7d70b7cc72cfa380f1",
+    "reviewed_repair_candidate/staged/README.md": "ab0031a2bcf5a2f67dfbad572ff3871498a49457d37a42c53f04003fe3f0b786",
+    "reviewed_repair_candidate/staged/tests/test_finite_t_leptons.py": "f72f41a2c63192587d94d6aebd9000c560f6b1a933f9f2d4d9d8ec4c60b19b6a",
+    "reviewed_repair_candidate/staged/docs/finite_temperature_leptons.md": "493c5de3df04f1892703906afc6267035dc5efb5cf56fb24f083a3f3b3e3aec9",
+    "reviewed_repair_candidate/staged/examples/finite_t_leptons.py": "9ab591e8de539ba679a0d2d1d97009590dd88db6c897c80282befaa2799c777a",
+    "reviewed_repair_candidate/staged/src/nmbackend/reference/finite_t_leptons.py": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719"
+  }
+}

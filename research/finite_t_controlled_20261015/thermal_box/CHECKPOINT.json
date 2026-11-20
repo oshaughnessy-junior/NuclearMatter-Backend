@@ -1,0 +1,47 @@
+{
+  "status": "author_frozen_independent_review_required",
+  "checks": {
+    "physical_experiment": 83,
+    "controls": 20,
+    "exact_state_guard_replay": 14,
+    "eight_bin_LTE": 3
+  },
+  "all_passed": true,
+  "physical_experiment_source_hash": "1ca80f003f3a8ea2b27319e773cf49b711ab5a0527ee817def6466792a558b43",
+  "current_source_hash": "ae356024fd688765f15342d5026f5e9534fcaec96ba713a4e55e25f0658c2710",
+  "preserved_original_source_matches": true,
+  "upstream_sources_unchanged": true,
+  "upstream_sha256": {
+    "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "quantum_slab/fixed_bath.py": "8e73b2c7d41cce51f8a522b8ba4444599010783be2b8af892c50add7e684ecf3",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2"
+  },
+  "runtime_seconds": {
+    "physical_experiment": 69.14141120784916,
+    "guard_replay": 37.118036708794534,
+    "eight_bin_LTE": 10.212605041917413
+  },
+  "files_sha256": {
+    "equilibrium_grid.py": "c14b5fa234a9411b324d5f8c8b8f918d01ec7c858b7e435e9e12464bbd069149",
+    "controls.json": "1100fabab625c6f04b88cea60eb904bbb096ceacf27472c0e1f574858478f337",
+    "box.py": "ae356024fd688765f15342d5026f5e9534fcaec96ba713a4e55e25f0658c2710",
+    "initial_box_before_rate_guards.py": "1ca80f003f3a8ea2b27319e773cf49b711ab5a0527ee817def6466792a558b43",
+    "make_figure.py": "c8c92e4077fe5966b0458fcced33ac6035f59965cb3a192ba418023f3f2c4e79",
+    "guard_replay.json": "cf6022948f89b7c554f61b0c833a000e2c0eca08c3f75cfab8b54dbfb0740103",
+    "equilibrium_grid.json": "dcc3ddfd915d1379fa31fa19d8e5164f04148c98de6039f654019176fc7ee5c7",
+    "results.json": "59e222870f467fce6d3fc37c07dcf93d208de0bfd6a82b43d2254e0e8a53fff5",
+    "RESEARCH_NOTE.md": "013dccb3dda78d93a623a628ba779288ebbf07f5c267bc51d0387199c3b97000",
+    "replay_guarded.py": "8c117536e4115e6fc904256456a1b1a51f9ec0d21bbd6f330142a139100f0cce",
+    "initial83pass_before_rate_guards.json": "59e222870f467fce6d3fc37c07dcf93d208de0bfd6a82b43d2254e0e8a53fff5",
+    "finite_box.png": "aa4b60c2717f36a4239e375df4deb061a9b7861af0a7e08dc1c00fb6afe437c6",
+    "finite_box.pdf": "5c2aae386f89e2d0b63bf2352e9a6024a960d1631f02e4a40391ba2ad462fc6f",
+    "check_controls.py": "311bd6ca83b2e8481e84fa17b85b97c59116e678763a1eca2b42e207e3ea30e4",
+    "study.py": "f5209e914ba5b2af2c625f189020a7a6377770e9d0c02e16c758e45e9968064d"
+  },
+  "scope": "Finite4-bin/flavor closedCCbox with2/4/8time refinement andseparate8-binLTE only; no continuum/gridconvergedtrajectory/rapidrelaxation claim"
+}

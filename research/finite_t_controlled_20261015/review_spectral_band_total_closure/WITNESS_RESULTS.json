@@ -1,0 +1,196 @@
+{
+  "rows": [
+    {
+      "input": {
+        "channel": "PC",
+        "energy_MeV": 0.1,
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "purpose": "reproduce unresolved shell; preserve actual failure, not substitute zero"
+      },
+      "completed": false,
+      "exception": {
+        "type": "ArithmeticError",
+        "message": "Final positive-energy baryon shell unresolved"
+      },
+      "seconds": 0.011349624954164028
+    },
+    {
+      "input": {
+        "channel": "NEUTRON_DECAY",
+        "energy_MeV": 1.2,
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "purpose": "actual fine baseline for unchanged tail-sensitivity witness"
+      },
+      "completed": true,
+      "result": {
+        "channel": "NEUTRON_DECAY",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 1.2,
+        "j": {
+          "value": 5.297961084985073e-24,
+          "log": -53.594720186261625,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 2.3694075874162795e-24,
+          "log": -54.39940227107154,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "conditional lab E; ep pair; theta cone map",
+          [
+            414.74233561444856,
+            429.1326396604201,
+            692.2283712560494
+          ],
+          414.74233561444856,
+          0.7820077025790402,
+          61440,
+          4.440892098500626e-16
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      },
+      "seconds": 0.1359796670731157
+    },
+    {
+      "input": {
+        "channel": "NEUTRON_DECAY",
+        "energy_MeV": 1.2,
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 90.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "purpose": "isolated parameter change ALSO resamples parent Gauss map; not pure infinite-tail error"
+      },
+      "completed": true,
+      "result": {
+        "channel": "NEUTRON_DECAY",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 1.2,
+        "j": {
+          "value": 5.2991466424741336e-24,
+          "log": -53.594496435116596,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 2.3699378043931198e-24,
+          "log": -54.39917851992651,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 90.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "conditional lab E; ep pair; theta cone map",
+          [
+            414.74233561444856,
+            429.1326396604201,
+            757.7220232705369
+          ],
+          414.74233561444856,
+          0.7820077025790402,
+          61440,
+          4.440892098500626e-16
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      },
+      "seconds": 0.13454437511973083
+    }
+  ],
+  "sourcepins": {
+    "production_weak_spectral_port/CANDIDATE_MANIFEST.json": "dcfbafe85645caa4ac6f2ea1f4cd3a7cb55775d030eddc0c9c5a8c9211a8b216",
+    "production_weak_spectral_port/AUTHOR_REPORT.md": "c090139637e868a5f3a495e75d5601a9a2e97d1386f9f87cc5b99b62ee0403ed",
+    "production_weak_spectral_port/MANIFEST.json": "f90bb7d3ee0bbd0ae6025f68edb8ed14b431a5bbcf7a0d7bcf5fa16c2c5ed78c",
+    "production_weak_spectral_port/LOCK.json": "c051e3c23f290b657b4caad069a34d4ce7ee85a4e535368fb674bd5590ec188a",
+    "production_weak_spectral_port/INDEPENDENT_RECORD_ADMISSION_REPAIR.md": "80483604f6c61efa3b40650591197f739a3a8be4cb05c52311f8471f5c62e793",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/weak_reference.py": "76e569023bcde176086384ffbcdff861d120b6b9ba9cafe84041ceabb598b5f9",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_current.py": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_quadrature.py": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_two_body.py": "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_decay.py": "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_common.py": "572acb57fcca43f9f0a4173c4f7bad5fbd1c99d02f643950b18a05bc504c36d3",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_capture.py": "4384208e51ff0e2b78a1e6587beccbb5f8fe1400f7dd911f5fa90464cbd2e684",
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_decay.py": "148142642df36c1d392333ee26b3479c53a523d14764ca67154a6ed664b5cc86",
+    "review_production_weak_spectral_port/REVIEW.md": "89cd023016062705490e1a58dcc88ff1fbd757a11a7cc936e2be7213acf4f096",
+    "review_production_weak_spectral_port/REPAIR_RECHECK.md": "2d760af394f96a523599ce00da6b5492615c2e5750f14141d69d48723866a9fa",
+    "review_production_weak_spectral_port/CHECKPOINT.json": "313b9c52d789e5a07efed74ea80ef81378ad2dadb860019066a0f75466374ff1"
+  },
+  "complete": true,
+  "physical_calls": 3
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.369" timestamp="2026-10-16T00:41:25.868147-04:00" hostname="COS-MATH2519.endpoint.rit.edu"><testcase classname="" name="test_unrepresentable_scalar_and_invalid_seed_field" time="0.811"><failure message="OverflowError: int too large to convert to float">def test_unrepresentable_scalar_and_invalid_seed_field():
+        from nmbackend.reference.finite_t_rmf import state_density,SolveControls
+        for args in [(10**1000,.16,.1),(10.,10**1000,.1),(10.,.16,10**1000)]:
+&gt;           with pytest.raises(ValueError):state_density(*args)
+                                           ^^^^^^^^^^^^^^^^^^^^
+
+outputs/nmb-finite-t-20261015/production_rmf_port/staged/tests/test_finite_t_rmf_response.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/finite_t_rmf.py:238: in state_density
+    s = diagnose_density(temperature_mev, baryon_density_fm3, proton_fraction,
+outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/finite_t_rmf.py:154: in diagnose_density
+    T, nB, Y = [_real(n, v) for n, v in [("T", temperature_mev),
+                ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'T', x = 100000000000000000...0000000000000000000
+
+    def _real(name, x):
+        if isinstance(x, (bool, np.bool_)) or not isinstance(x, numbers.Real):
+            raise ValueError(name+" must be a finite non-Boolean scalar")
+&gt;       x = float(x)
+            ^^^^^^^^
+E       OverflowError: int too large to convert to float
+
+outputs/nmb-finite-t-20261015/production_rmf_port/test_mirror/src/nmbackend/reference/finite_t_rmf.py:24: OverflowError</failure></testcase></testsuite></testsuites>

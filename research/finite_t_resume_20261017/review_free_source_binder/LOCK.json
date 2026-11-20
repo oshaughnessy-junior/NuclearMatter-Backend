@@ -1,0 +1,13 @@
+{
+ "kind":"DIFFERENT binder implementation review; extends candidate-blind prior ORACLE_PLAN",
+ "candidate_manifest":"7b40760f63ce34a9633a4f6d95d65724e51d82a7ab57b6649077ea3a47586fbf",
+ "heldouts":[[1.7,8e-8,0.27],[2.6,1.8e-7,0.41]],
+ "photons":["absent","trapped_LTE"],
+ "forward_gates":{"density_relative":1e-9,"pressure_entropy_relative":3e-8,"specific_energy_absolute_MeV":1e-7,"kinetic_mu_absolute_MeV":1e-7},
+ "response_gates":{"analytic_relative":3e-6,"eY_over_n_absolute_MeV":3e-6,"thermal_enthalpy_absolute_MeV":3e-6,"FD_relative":3e-5},
+ "source_gates":{"log_moment_difference":3e-6,"gross_energy_ledger":2e-8},
+ "fresh_source_groups_max":4,"rate_calls_per_group":3,"group_wall_seconds_max":90,
+ "planned_source_groups":["newheldout0 empty binder","newheldout0 empty independent-chemical-roots directW events","newheldout1 commonT LTE binder","wheel selectedauthorstate0 empty binder/replay"],
+ "independence":"Original momentum FD/root EOS before responses; source assembly checks same physical current/event functions, not a new amplitude model; no ODE or full-domain claim",
+ "quota":{"account":"82f4cfd9-9e20-47cf-9997-761328d89f60","window":10080,"reset":1792652325,"winddown":97,"hard":99}
+}

@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "name": "primary massive separated FD event e",
+      "error": -8.149037000748649e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "primary massive separated FD total energy e",
+      "error": -4.490852134608758e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "primary massive separated FD event mu",
+      "error": -8.315570454442422e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "primary massive separated FD total energy mu",
+      "error": -4.533040609544514e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "flavor": "e",
+      "primary_M00": 8343230.546667654,
+      "event_rate": 1.8942019361365186e-07,
+      "total_energy": 3.113156581765388e-06
+    },
+    {
+      "flavor": "mu",
+      "primary_M00": 1762315.517701999,
+      "event_rate": 4.0010658306066485e-08,
+      "total_energy": 6.593335734362967e-07
+    }
+  ],
+  "all_pass": true
+}

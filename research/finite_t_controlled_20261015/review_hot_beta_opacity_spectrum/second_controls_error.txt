@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_hot_beta_opacity_spectrum/controls.py", line 30, in <module>
+    stored=json.loads((ROOT/'hot_beta_opacity_spectrum/total_fine_0.json').read_text());contract=ns['contract']('fine');row=stored['rows'][0];ns['validate'](contract,row,b,meta);ck('genuine saved-node admission ONLY',0,0)
+                                                                                                 ~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_beta_opacity_spectrum/total.py", line 13, in contract
+    for lo,hi in zip(EDGES[:-1],EDGES[1:]):E.extend(lo+(x+1)*(hi-lo)/2);W.extend(w*(hi-lo)/2)
+                     ^^^^^
+NameError: name 'EDGES' is not defined

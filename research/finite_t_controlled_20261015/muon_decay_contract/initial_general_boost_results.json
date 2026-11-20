@@ -1,0 +1,758 @@
+{
+  "passed": true,
+  "phase": "complete",
+  "checks": [
+    {
+      "name": "0.51099895069 16 independent phase/matrix rate",
+      "error": 3.9879211044535623e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 16 independent phase/matrix energy_e",
+      "error": 2.0317081350640365e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 16 independent phase/matrix energy_anti_e",
+      "error": 4.953815135877448e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 16 independent phase/matrix energy_nu_mu",
+      "error": 5.120348589571222e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 16 absolute exact-mass analytic",
+      "error": -1.9984014443252818e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 16 full energy ledger",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 32 independent phase/matrix rate",
+      "error": -5.551115123125783e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 32 independent phase/matrix energy_e",
+      "error": -7.882583474838611e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 32 independent phase/matrix energy_anti_e",
+      "error": -4.9960036108132044e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 32 independent phase/matrix energy_nu_mu",
+      "error": -4.218847493575595e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 32 absolute exact-mass analytic",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 32 full energy ledger",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 48 independent phase/matrix rate",
+      "error": -7.771561172376096e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 48 independent phase/matrix energy_e",
+      "error": -1.0769163338864018e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 48 independent phase/matrix energy_anti_e",
+      "error": -6.328271240363392e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 48 independent phase/matrix energy_nu_mu",
+      "error": -5.329070518200751e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 48 absolute exact-mass analytic",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 48 full energy ledger",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 refinement method0 rate",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 refinement method0 energy_e",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 refinement method0 energy_anti_e",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 refinement method0 energy_nu_mu",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 refinement method1 rate",
+      "error": -9.992007221626409e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 refinement method1 energy_e",
+      "error": -2.886579864025407e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 refinement method1 energy_anti_e",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.51099895069 refinement method1 energy_nu_mu",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 16 independent phase/matrix rate",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 16 independent phase/matrix energy_e",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 16 independent phase/matrix energy_anti_e",
+      "error": 1.9984014443252818e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 16 independent phase/matrix energy_nu_mu",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 16 absolute exact-mass analytic",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 16 full energy ledger",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "0.0 32 independent phase/matrix rate",
+      "error": -3.1086244689504383e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 32 independent phase/matrix energy_e",
+      "error": -4.440892098500626e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 32 independent phase/matrix energy_anti_e",
+      "error": -1.887379141862766e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 32 independent phase/matrix energy_nu_mu",
+      "error": -2.220446049250313e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 32 absolute exact-mass analytic",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 32 full energy ledger",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "0.0 48 independent phase/matrix rate",
+      "error": -8.881784197001252e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 48 independent phase/matrix energy_e",
+      "error": -1.27675647831893e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 48 independent phase/matrix energy_anti_e",
+      "error": -7.882583474838611e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 48 independent phase/matrix energy_nu_mu",
+      "error": -7.105427357601002e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "0.0 48 absolute exact-mass analytic",
+      "error": 1.9984014443252818e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 48 full energy ledger",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "0.0 refinement method0 rate",
+      "error": 4.6629367034256575e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 refinement method0 energy_e",
+      "error": 5.773159728050814e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 refinement method0 energy_anti_e",
+      "error": 5.773159728050814e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 refinement method0 energy_nu_mu",
+      "error": 4.440892098500626e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 refinement method1 rate",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 refinement method1 energy_e",
+      "error": -2.6645352591003757e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 refinement method1 energy_anti_e",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.0 refinement method1 energy_nu_mu",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "massless flavor moment energy_e",
+      "error": 3.3306690738754696e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "massless flavor moment energy_anti_e",
+      "error": -2.1094237467877974e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "massless flavor moment energy_nu_mu",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 16 independent phase/matrix rate",
+      "error": 2.9531932455029164e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 16 independent phase/matrix energy_e",
+      "error": 2.930988785010413e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 16 independent phase/matrix energy_anti_e",
+      "error": 4.063416270128073e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 16 independent phase/matrix energy_nu_mu",
+      "error": 3.3306690738754696e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 16 absolute exact-mass analytic",
+      "error": -4.39648317751562e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 16 full energy ledger",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 32 independent phase/matrix rate",
+      "error": 1.1324274851176597e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 32 independent phase/matrix energy_e",
+      "error": 1.1324274851176597e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 32 independent phase/matrix energy_anti_e",
+      "error": 1.3100631690576847e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 32 independent phase/matrix energy_nu_mu",
+      "error": -2.4091839634365897e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 32 absolute exact-mass analytic",
+      "error": -4.973799150320701e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 32 full energy ledger",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 48 independent phase/matrix rate",
+      "error": 9.103828801926284e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 48 independent phase/matrix energy_e",
+      "error": 9.103828801926284e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 48 independent phase/matrix energy_anti_e",
+      "error": 1.0658141036401503e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 48 independent phase/matrix energy_nu_mu",
+      "error": -2.6756374893466273e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 48 absolute exact-mass analytic",
+      "error": -5.10702591327572e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 48 full energy ledger",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 refinement method0 rate",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 refinement method0 energy_e",
+      "error": 3.552713678800501e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 refinement method0 energy_anti_e",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 refinement method0 energy_nu_mu",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 refinement method1 rate",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 refinement method1 energy_e",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 refinement method1 energy_anti_e",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "95.09253795000001 refinement method1 energy_nu_mu",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new direct spinors vs invariant",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "new reciprocal spinors",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "massless Michel spectrum 5.0",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "massless Michel spectrum 19.0",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "massless Michel spectrum 43.0",
+      "error": -1.5543122344752192e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "full four-species affinity 3.0",
+      "error": 3.9968028886505635e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "full four-species affinity 0.7",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-12,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "me": 0.51099895069,
+      "order": 16,
+      "pair": {
+        "rate": 457089.0316307056,
+        "lifetime": 2.1877575938158294e-06,
+        "energy_e": 16905099.02855712,
+        "energy_anti_e": 14487908.079906162,
+        "energy_nu_mu": 16902277.4325052,
+        "fourmomentum_residual": 2.0431948311784563e-13
+      },
+      "dalitz": {
+        "rate": 457089.0316305233,
+        "lifetime": 2.187757593816702e-06,
+        "energy_e": 16905099.028553687,
+        "energy_anti_e": 14487908.079898983,
+        "energy_nu_mu": 16902277.432496548,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "me": 0.51099895069,
+      "order": 32,
+      "pair": {
+        "rate": 457089.03163053066,
+        "lifetime": 2.1877575938166667e-06,
+        "energy_e": 16905099.028553627,
+        "energy_anti_e": 14487908.079899382,
+        "energy_nu_mu": 16902277.43249697,
+        "fourmomentum_residual": 5.832377234211969e-12
+      },
+      "dalitz": {
+        "rate": 457089.0316305332,
+        "lifetime": 2.1877575938166544e-06,
+        "energy_e": 16905099.02855376,
+        "energy_anti_e": 14487908.079899454,
+        "energy_nu_mu": 16902277.43249704,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "me": 0.51099895069,
+      "order": 48,
+      "pair": {
+        "rate": 457089.03163053014,
+        "lifetime": 2.187757593816669e-06,
+        "energy_e": 16905099.028553627,
+        "energy_anti_e": 14487908.079899365,
+        "energy_nu_mu": 16902277.432496957,
+        "fourmomentum_residual": 8.362090181684249e-12
+      },
+      "dalitz": {
+        "rate": 457089.0316305337,
+        "lifetime": 2.1877575938166523e-06,
+        "energy_e": 16905099.02855381,
+        "energy_anti_e": 14487908.079899456,
+        "energy_nu_mu": 16902277.432497047,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "me": 0.0,
+      "order": 16,
+      "pair": {
+        "rate": 457174.5465083079,
+        "lifetime": 2.187348371945785e-06,
+        "energy_e": 16906511.96640596,
+        "energy_anti_e": 14491295.971205108,
+        "energy_nu_mu": 16906511.966405954,
+        "fourmomentum_residual": 3.392715518240866e-13
+      },
+      "dalitz": {
+        "rate": 457174.5465083071,
+        "lifetime": 2.187348371945789e-06,
+        "energy_e": 16906511.96640592,
+        "energy_anti_e": 14491295.971205078,
+        "energy_nu_mu": 16906511.966405928,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "me": 0.0,
+      "order": 32,
+      "pair": {
+        "rate": 457174.54650830623,
+        "lifetime": 2.187348371945793e-06,
+        "energy_e": 16906511.9664059,
+        "energy_anti_e": 14491295.971205052,
+        "energy_nu_mu": 16906511.9664059,
+        "fourmomentum_residual": 5.736372883976713e-12
+      },
+      "dalitz": {
+        "rate": 457174.5465083076,
+        "lifetime": 2.1873483719457864e-06,
+        "energy_e": 16906511.966405973,
+        "energy_anti_e": 14491295.97120508,
+        "energy_nu_mu": 16906511.966405936,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "me": 0.0,
+      "order": 48,
+      "pair": {
+        "rate": 457174.5465083041,
+        "lifetime": 2.187348371945804e-06,
+        "energy_e": 16906511.9664058,
+        "energy_anti_e": 14491295.971204968,
+        "energy_nu_mu": 16906511.966405824,
+        "fourmomentum_residual": 1.5670546121888647e-12
+      },
+      "dalitz": {
+        "rate": 457174.54650830815,
+        "lifetime": 2.1873483719457843e-06,
+        "energy_e": 16906511.966406018,
+        "energy_anti_e": 14491295.971205082,
+        "energy_nu_mu": 16906511.966405943,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "me": 95.09253795000001,
+      "order": 16,
+      "pair": {
+        "rate": 50.112618457095316,
+        "lifetime": 0.0199550538524776,
+        "energy_e": 4780.471611752699,
+        "energy_anti_e": 255.28336491371093,
+        "energy_nu_mu": 259.0628815615935,
+        "fourmomentum_residual": 9.06349324025595e-14
+      },
+      "dalitz": {
+        "rate": 50.11261845709384,
+        "lifetime": 0.01995505385247819,
+        "energy_e": 4780.471611752559,
+        "energy_anti_e": 255.28336491370058,
+        "energy_nu_mu": 259.06288156159263,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "me": 95.09253795000001,
+      "order": 32,
+      "pair": {
+        "rate": 50.112618457094115,
+        "lifetime": 0.019955053852478078,
+        "energy_e": 4780.471611752585,
+        "energy_anti_e": 255.28336491370237,
+        "energy_nu_mu": 259.06288156158496,
+        "fourmomentum_residual": 2.0752768400371438e-11
+      },
+      "dalitz": {
+        "rate": 50.11261845709355,
+        "lifetime": 0.019955053852478304,
+        "energy_e": 4780.471611752531,
+        "energy_anti_e": 255.28336491369905,
+        "energy_nu_mu": 259.0628815615912,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "me": 95.09253795000001,
+      "order": 48,
+      "pair": {
+        "rate": 50.11261845709394,
+        "lifetime": 0.01995505385247815,
+        "energy_e": 4780.471611752568,
+        "energy_anti_e": 255.28336491370138,
+        "energy_nu_mu": 259.06288156158394,
+        "fourmomentum_residual": 8.795391588039204e-11
+      },
+      "dalitz": {
+        "rate": 50.11261845709348,
+        "lifetime": 0.01995505385247833,
+        "energy_e": 4780.471611752524,
+        "energy_anti_e": 255.28336491369868,
+        "energy_nu_mu": 259.06288156159087,
+        "fourmomentum_residual": 0.0
+      }
+    },
+    {
+      "thermal_product_probe": {
+        "T": 3.0,
+        "mumu": 96.0,
+        "mue": 29.0,
+        "muanti_e": -4.0,
+        "munu_mu": 63.0,
+        "affinity": 8.0,
+        "log_forward": [
+          -15.322900461153607,
+          -11.916164139068911,
+          -17.609523222350113
+        ],
+        "log_inverse": [
+          -17.98956712782027,
+          -14.582830805735579,
+          -20.276189889016777
+        ]
+      }
+    },
+    {
+      "thermal_product_probe": {
+        "T": 0.7,
+        "mumu": 104.0,
+        "mue": 17.0,
+        "muanti_e": -2.0,
+        "munu_mu": 89.0,
+        "affinity": 0.0,
+        "log_forward": [
+          -74.04642559703694,
+          -68.93600589381995,
+          -101.0917216053989
+        ],
+        "log_inverse": [
+          -74.04642559703693,
+          -68.93600589381997,
+          -101.0917216053989
+        ]
+      }
+    }
+  ],
+  "runtime_seconds": 0.2098863748833537,
+  "source_sha256": "84686abd13cc1a9ddee3257061c4b5840fec84848612ed223cc7121d5840e235"
+}

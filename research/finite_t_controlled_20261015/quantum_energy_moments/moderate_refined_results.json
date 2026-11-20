@@ -1,0 +1,574 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "panel24.0-40.0 outer32->48 emission_number_cm3_s",
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 emission_energy_MeV_cm3_s",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 incoming_left_number_cm2_s",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 incoming_right_number_cm2_s",
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 outgoing_left_number_cm2_s",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 outgoing_right_number_cm2_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 slab_emission_number_cm2_s",
+      "error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 slab_absorbed_boundary_number_cm2_s",
+      "error": 9.992007221626409e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 incoming_left_energy_MeV_cm2_s",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 incoming_right_energy_MeV_cm2_s",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 outgoing_left_energy_MeV_cm2_s",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 outgoing_right_energy_MeV_cm2_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 slab_emission_energy_MeV_cm2_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel24.0-40.0 outer32->48 slab_absorbed_boundary_energy_MeV_cm2_s",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 emission_number_cm3_s",
+      "error": 4.884981308350689e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 emission_energy_MeV_cm3_s",
+      "error": 4.884981308350689e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 incoming_left_number_cm2_s",
+      "error": 4.884981308350689e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 incoming_right_number_cm2_s",
+      "error": 2.55351295663786e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 outgoing_left_number_cm2_s",
+      "error": 4.29278834701563e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 outgoing_right_number_cm2_s",
+      "error": 4.292566302410705e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 slab_emission_number_cm2_s",
+      "error": 4.292566302410705e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 slab_absorbed_boundary_number_cm2_s",
+      "error": 2.3314683517128287e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 incoming_left_energy_MeV_cm2_s",
+      "error": 3.774758283725532e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 incoming_right_energy_MeV_cm2_s",
+      "error": 1.6653345369377348e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 outgoing_left_energy_MeV_cm2_s",
+      "error": 5.000000413701855e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 outgoing_right_energy_MeV_cm2_s",
+      "error": 5.000000413701855e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 slab_emission_energy_MeV_cm2_s",
+      "error": 5.00022245830678e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel40.0-70.0 outer32->48 slab_absorbed_boundary_energy_MeV_cm2_s",
+      "error": 1.4432899320127035e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 emission_number_cm3_s",
+      "error": 2.19824158875781e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 emission_energy_MeV_cm3_s",
+      "error": 2.1649348980190553e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 incoming_left_number_cm2_s",
+      "error": 1.0325074129013956e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 incoming_right_number_cm2_s",
+      "error": 5.218048215738236e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 outgoing_left_number_cm2_s",
+      "error": 2.4646951146678475e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 outgoing_right_number_cm2_s",
+      "error": 2.4646951146678475e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 slab_emission_number_cm2_s",
+      "error": 2.4646951146678475e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 slab_absorbed_boundary_number_cm2_s",
+      "error": 5.440092820663267e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 incoming_left_energy_MeV_cm2_s",
+      "error": 8.992806499463768e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 incoming_right_energy_MeV_cm2_s",
+      "error": 4.773959005888173e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 outgoing_left_energy_MeV_cm2_s",
+      "error": 2.4091839634365897e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 outgoing_right_energy_MeV_cm2_s",
+      "error": 2.4091839634365897e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 slab_emission_energy_MeV_cm2_s",
+      "error": 2.4091839634365897e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "panel70.0-120.0 outer32->48 slab_absorbed_boundary_energy_MeV_cm2_s",
+      "error": 4.773959005888173e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 emission_number_cm3_s",
+      "error": 9.769962616701378e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 emission_energy_MeV_cm3_s",
+      "error": 5.0737192225369654e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 incoming_left_number_cm2_s",
+      "error": 2.8199664825478976e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 incoming_right_number_cm2_s",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 outgoing_left_number_cm2_s",
+      "error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 outgoing_right_number_cm2_s",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 slab_emission_number_cm2_s",
+      "error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 slab_absorbed_boundary_number_cm2_s",
+      "error": 7.882583474838611e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 incoming_left_energy_MeV_cm2_s",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 incoming_right_energy_MeV_cm2_s",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 outgoing_left_energy_MeV_cm2_s",
+      "error": 6.661338147750939e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 outgoing_right_energy_MeV_cm2_s",
+      "error": 1.9984014443252818e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 slab_emission_energy_MeV_cm2_s",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer8->20 slab_absorbed_boundary_energy_MeV_cm2_s",
+      "error": 7.416289804496046e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 emission_number_cm3_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 emission_energy_MeV_cm3_s",
+      "error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 incoming_left_number_cm2_s",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 incoming_right_number_cm2_s",
+      "error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 outgoing_left_number_cm2_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 outgoing_right_number_cm2_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 slab_emission_number_cm2_s",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 slab_absorbed_boundary_number_cm2_s",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 incoming_left_energy_MeV_cm2_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 incoming_right_energy_MeV_cm2_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 outgoing_left_energy_MeV_cm2_s",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 outgoing_right_energy_MeV_cm2_s",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 slab_emission_energy_MeV_cm2_s",
+      "error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "remainder outside24-120 outer12->20 slab_absorbed_boundary_energy_MeV_cm2_s",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    }
+  ],
+  "refined_nue_values": {
+    "emission_number_cm3_s": 1.9501685397250148e+42,
+    "emission_energy_MeV_cm3_s": 9.339811190017767e+43,
+    "incoming_left_number_cm2_s": 1.1080433275144093e+43,
+    "incoming_right_number_cm2_s": 4.953312049985283e+42,
+    "outgoing_left_number_cm2_s": 3.1761752161386535e+45,
+    "outgoing_right_number_cm2_s": 3.1782450685134603e+45,
+    "slab_emission_number_cm2_s": 6.350895785883266e+45,
+    "slab_absorbed_boundary_number_cm2_s": 1.2509246556282342e+43,
+    "incoming_left_energy_MeV_cm2_s": 1.4500094615819241e+44,
+    "incoming_right_energy_MeV_cm2_s": 9.255473499249919e+43,
+    "outgoing_left_energy_MeV_cm2_s": 1.394636599394767e+47,
+    "outgoing_right_energy_MeV_cm2_s": 1.394787657619876e+47,
+    "slab_emission_energy_MeV_cm2_s": 2.789151871870909e+47,
+    "slab_absorbed_boundary_energy_MeV_cm2_s": 2.103171667772629e+44,
+    "radiation_number_gain_cm2_s": 6.338386539326983e+45,
+    "radiation_energy_gain_MeV_cm2_s": 2.7870487002031364e+47,
+    "bath_energy_source_erg_cm2_s": -4.465344305285536e+41,
+    "bath_electron_lepton_source_cm2_s": -6.338386539326983e+45,
+    "emission_energy_erg_cm3_s": 1.49640272546182e+38
+  },
+  "panel_refinements": [
+    {
+      "lo": 24.0,
+      "hi": 40.0,
+      "coarse32": [
+        3.2436580166344057e+41,
+        1.1216604675825705e+43,
+        7.908769919536904e+41,
+        1.0646403254125702e+42,
+        8.263199686198458e+44,
+        8.263199771101062e+44,
+        1.6526388182830287e+45,
+        1.854389870442826e+42,
+        2.2587277989420544e+43,
+        3.187252201590375e+43,
+        2.7522611077220355e+46,
+        2.7522611197579885e+46,
+        5.504519352604222e+46,
+        5.443105124730109e+43
+      ],
+      "fine48": [
+        3.2436580166344077e+41,
+        1.1216604675825715e+43,
+        7.908769919536916e+41,
+        1.0646403254125708e+42,
+        8.263199686198461e+44,
+        8.263199771101064e+44,
+        1.6526388182830287e+45,
+        1.854389870442828e+42,
+        2.2587277989420574e+43,
+        3.187252201590376e+43,
+        2.7522611077220365e+46,
+        2.752261119757989e+46,
+        5.504519352604223e+46,
+        5.443105124730115e+43
+      ]
+    },
+    {
+      "lo": 40.0,
+      "hi": 70.0,
+      "coarse32": [
+        1.5977525192913202e+42,
+        8.147193866553727e+43,
+        3.702475012856011e+40,
+        1.9985814678358805e+41,
+        2.137200724994868e+45,
+        2.137200724993666e+45,
+        4.2744014499864464e+45,
+        2.3688289482474923e+41,
+        1.656515380142236e+42,
+        9.433036228256278e+42,
+        1.0794505314508592e+47,
+        1.079450531450357e+47,
+        2.15890106290035e+47,
+        1.1089551521746905e+43
+      ],
+      "fine48": [
+        1.5977525192913125e+42,
+        8.147193866553688e+43,
+        3.7024750128560287e+40,
+        1.9985814678358855e+41,
+        2.1372007249856933e+45,
+        2.137200724984492e+45,
+        4.274401449968098e+45,
+        2.3688289482474977e+41,
+        1.656515380142242e+42,
+        9.433036228256294e+42,
+        1.0794505314454618e+47,
+        1.0794505314449596e+47,
+        2.158901062889555e+47,
+        1.1089551521746921e+43
+      ]
+    },
+    {
+      "lo": 70.0,
+      "hi": 120.0,
+      "coarse32": [
+        2.8393224411226216e+39,
+        2.0533859263901134e+41,
+        5.7706530147605975e+37,
+        3.703356807111645e+39,
+        1.0622620048570851e+42,
+        1.0622620048570851e+42,
+        2.1245240097141703e+42,
+        3.7610633372592495e+39,
+        4.296479632136323e+39,
+        2.8509622000240245e+41,
+        7.660523962625399e+43,
+        7.660523962625399e+43,
+        1.5321047925250799e+44,
+        2.893926996345388e+41
+      ],
+      "fine48": [
+        2.839322441122684e+39,
+        2.053385926390158e+41,
+        5.770653014760657e+37,
+        3.7033568071116646e+39,
+        1.0622620048571113e+42,
+        1.0622620048571113e+42,
+        2.1245240097142226e+42,
+        3.76106333725927e+39,
+        4.2964796321363615e+39,
+        2.850962200024038e+41,
+        7.660523962625584e+43,
+        7.660523962625584e+43,
+        1.5321047925251167e+44,
+        2.893926996345402e+41
+      ]
+    }
+  ],
+  "original20_to_refined_relative_changes": {
+    "emission_number_cm3_s": 2.542542842931539e-10,
+    "emission_energy_MeV_cm3_s": 3.0730529232414483e-10,
+    "incoming_left_number_cm2_s": 2.220446049250313e-16,
+    "incoming_right_number_cm2_s": 4.440892098500626e-16,
+    "outgoing_left_number_cm2_s": 3.388222058475776e-08,
+    "outgoing_right_number_cm2_s": 3.386015468009873e-08,
+    "slab_emission_number_cm2_s": 3.388998104369989e-08,
+    "slab_absorbed_boundary_number_cm2_s": 1.3322676295501878e-14,
+    "incoming_left_energy_MeV_cm2_s": 4.440892098500626e-16,
+    "incoming_right_energy_MeV_cm2_s": 6.661338147750939e-16,
+    "outgoing_left_energy_MeV_cm2_s": 5.133336955509549e-08,
+    "outgoing_right_energy_MeV_cm2_s": 5.1327810002277374e-08,
+    "slab_emission_energy_MeV_cm2_s": 5.133560265768722e-08,
+    "slab_absorbed_boundary_energy_MeV_cm2_s": 4.3076653355456074e-14
+  },
+  "runtime_seconds": 26.56999329198152,
+  "qualification": "Repairs only dominant failed nue bulk panels; remaining panels retain outer20/tail320 and sampled internal48 qualification. Original8/12 grids remain failed."
+}

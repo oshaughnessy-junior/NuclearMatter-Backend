@@ -1,0 +1,112 @@
+"""Own finite-range radiation postprocessing; NOT an official API result.
+
+Uses only complete actual-node jobs with exact model/state/rule/control pins.
+No KMS branch construction, stored moments, interpolation or fits.
+"""
+from pathlib import Path
+import json,math,hashlib
+import numpy as np
+from numpy.polynomial.legendre import leggauss
+R=Path(__file__).resolve().parent;ROOT=R.parent
+LOCK=json.loads((R/'LOCK.json').read_text());PINS=json.loads((R/'SUCCESSOR_SOURCE_PIN.json').read_text());ADMISSION=json.loads((R/'SUCCESSOR_SOURCE_ADMISSION.json').read_text());H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+SOURCE='Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57';HC=197.3269804
+
+def verify():
+ if H(R/'SUCCESSOR_SOURCE_ADMISSION.json')!='6c674e4a60b066f4ab42ec3acc698e9b8dfce85d33a4a13a61f24714e20fc89a':raise RuntimeError('Changed successor declaration')
+ if H(R/'LOCK.json')!=ADMISSION['original_lock_sha256']:raise RuntimeError('Original LOCK changed')
+ for original,pin in ADMISSION['original_execution']['source_snapshot_mapping'].items():
+  if H(ROOT/pin['verified_snapshot'])!=pin['sha256']:raise RuntimeError('Original execution source snapshot changed')
+ for p,h in PINS.items():
+  if H(ROOT/p)!=h:raise RuntimeError('Source changed; stop study: '+p)
+
+def lse(values):
+ m=max(values);return m+math.log(math.fsum(math.exp(x-m)for x in values))
+
+def represented(log):
+ if not math.isfinite(log):raise ValueError('Finite positive log required')
+ try:value=math.exp(log)
+ except OverflowError:value=math.inf
+ reason='underflow'if value==0 else'overflow'if not math.isfinite(value)else'represented'
+ return dict(value=value if reason=='represented'else None,log=log,reason=reason)
+
+def logfd(x):
+ # Independent scalar stable logistic log, avoiding an identical array helper.
+ return -math.log1p(math.exp(-x))if x>=0 else x-math.log1p(math.exp(x))
+
+def collect(ch,n):
+ verify();lo,hi=LOCK['channels'][ch];x,w=leggauss(n)
+ nodes=[float(e)for e in lo+(x+1)*(hi-lo)/2];weights=[float(v)for v in w*(hi-lo)/2]
+ got=[];paths=[]
+ original=ch in ('EC','PC')
+ rawdir='raw' if original else 'raw_successor'
+ pinfile='SOURCE_PIN.json' if original else 'SUCCESSOR_SOURCE_PIN.json'
+ writer='nodes.py' if original else 'nodes_successor.py'
+ candidate=ADMISSION['original_candidate_manifest'] if original else ADMISSION['repaired_candidate_manifest']
+ for first in range(0,n,LOCK['resources']['chunk_nodes']):
+  p=R/rawdir/f'{ch}_{n}_{first:02d}.json';raw=p.read_bytes();d=json.loads(raw);stop=min(n,first+LOCK['resources']['chunk_nodes'])
+  if d['complete']is not True or d['first_index']!=first or d['last_index_exclusive']!=stop or len(d['rows'])!=stop-first:raise ValueError('Incomplete/overlapping job')
+  if d['worker_sha256']!=H(R/writer):raise ValueError('Changed actual node writer')
+  if d['source_pin_sha256']!=H(R/pinfile)or d['lock_sha256']!=H(R/'LOCK.json')or d['candidate_manifest_sha256']!=candidate:raise ValueError('Missing/stale source controls')
+  if not original and (d['source_pin_file']!='SUCCESSOR_SOURCE_PIN.json'or d['execution_source_group']!='repaired_guard_successor'or d['successor_admission_sha256']!=H(R/'SUCCESSOR_SOURCE_ADMISSION.json')):raise ValueError('Missing declared successor provenance')
+  if d['bath']!=LOCK['bath']or d['controls']!=LOCK['controls']or d['channel']!=ch or d['order']!=n:raise ValueError('Changed source state/control/channel')
+  if d['rule']!=dict(nodes=nodes,weights=weights,lower=lo,upper=hi):raise ValueError('Changed actual nodes/weights/coverage')
+  for i,node in enumerate(d['rows'],first):
+   a=node['result']
+   if node['index']!=i or node['energy']!=nodes[i]or node['weight']!=weights[i]or a['energy']!=nodes[i]:raise ValueError('Duplicate/incomplete/changed node')
+   if a['channel']!=ch or a['bath']!=LOCK['bath']or a['controls']!=LOCK['controls']or a['current_source']!=SOURCE or a['complete']is not True or a['differential_coordinates']is not None or a['units']!='s^-1 per occupation':raise ValueError('Invalid integrated physical coefficient identity')
+   for k in ('j','true_chi'):
+    v=a[k]
+    if v['support']!='positive_support'or isinstance(v['log'],bool)or not isinstance(v['log'],(int,float))or not math.isfinite(v['log']):raise ValueError('Falsezero/unresolved integrated branch')
+    if isinstance(v['value'],bool):raise ValueError('Boolean ordinary coefficient rejected')
+    if represented(v['log'])!=dict(value=v['value'],log=v['log'],reason=v['reason']):raise ValueError('Wrong ordinary/log/underflow encoding')
+   got.append(node)
+  paths.append(dict(path=str(p.relative_to(R)),sha256=hashlib.sha256(raw).hexdigest()))
+ if len(got)!=n:raise ValueError('Incomplete actual node coverage')
+ verify();return got,paths
+
+def process(ch,n):
+ rows,paths=collect(ch,n);results=[]
+ for rad in LOCK['radiation']:
+  forward=[[],[]];backward=[[],[]];nets=[[],[]];ent=[];ordinaryF=[[],[]];ordinaryB=[[],[]]
+  for row in rows:
+   E,w=row['energy'],row['weight'];a=row['result'];j,chi=a['j']['log'],a['true_chi']['log']
+   base=math.log(w)+2*math.log(E)-math.log(2*math.pi**2*HC**3)
+   if rad['mode']=='empty':lf=j;lb=None
+   else:
+    mu=rad['mu_nue']if ch=='EC'else rad['mu_antinue'];lf=j+logfd((E-mu)/rad['T']);lb=chi+logfd((mu-E)/rad['T'])
+   if lb is None:sign=1;netlog=lf;delta=None
+   else:
+    delta=lf-lb;sign=1 if delta>0 else-1 if delta<0 else 0
+    netlog=max(lf,lb)+math.log(-math.expm1(-abs(delta)))if sign else None
+    if sign:ent.append(base+netlog+math.log(abs(delta)))
+   for i in(0,1):
+    le=i*math.log(E);forward[i].append(base+lf+le)
+    if lb is not None:backward[i].append(base+lb+le)
+    if sign:nets[i].append((base+netlog+le,sign))
+    # Independent ordinary DOS/occupations for the finite ranges used here.
+    f=0. if lb is None else 1/(1+math.exp((E-mu)/rad['T']))
+    ww=w*E**(2+i)/(2*math.pi**2*HC**3)
+    ordinaryF[i].append(ww*a['j']['value']*(1-f));ordinaryB[i].append(ww*a['true_chi']['value']*f)
+  f=[represented(lse(v))for v in forward];b=[represented(lse(v))if v else dict(value=0.,log=None,reason='absent_initial_neutrino_occupation')for v in backward]
+  net=[]
+  for values in nets:
+   if not values:net.append(dict(value=0.,sign=0,log_abs=None));continue
+   m=max(v[0]for v in values);scaled=math.fsum(s*math.exp(z-m)for z,s in values)
+   if not scaled:net.append(dict(value=0.,sign=0,log_abs=None))
+   else:
+    sg=1 if scaled>0 else-1;v=represented(m+math.log(abs(scaled)));net.append(dict(value=None if v['value']is None else sg*v['value'],sign=sg,log_abs=v['log']))
+  entropy=None if rad['mode']=='empty'else represented(lse(ent))if ent else dict(value=0.,log=None,reason='exact_numerical_cancellation')
+  arithmetic=[]
+  for i in(0,1):
+   gross=f[i]['value']+b[i]['value'];arithmetic.append(dict(forward_fraction=f[i]['value']/math.fsum(ordinaryF[i])-1,backward_gross=(b[i]['value']-math.fsum(ordinaryB[i]))/gross,net_gross=(net[i]['value']-math.fsum(x-y for x,y in zip(ordinaryF[i],ordinaryB[i])))/gross))
+  z=LOCK['bath']['mu_p']+LOCK['bath']['mu_e']-LOCK['bath']['mu_n'];eq=z if ch=='EC'else-z
+  affinity=None if rad['mode']=='empty'else(eq-(rad['mu_nue']if ch=='EC'else rad['mu_antinue']))/rad['T']
+  gross=f[0]['value']+b[0]['value'];entropy_residual=None if entropy is None else(entropy['value']-net[0]['value']*affinity)/gross
+  results.append(dict(kind='OWN harness finite-range radiation postprocessing, not officialReconstructionResult',channel=ch,order=n,range_MeV=LOCK['channels'][ch],radiation=rad,bath=LOCK['bath'],controls=LOCK['controls'],source_pin_sha256=H(R/'SOURCE_PIN.json')if ch in('EC','PC')else H(R/'SUCCESSOR_SOURCE_PIN.json'),execution_source_group='original_18da0'if ch in('EC','PC')else'repaired_guard_successor',execution_candidate_manifest=ADMISSION['original_candidate_manifest']if ch in('EC','PC')else ADMISSION['repaired_candidate_manifest'],accepted_successor_admission_sha256=H(R/'SUCCESSOR_SOURCE_ADMISSION.json'),actual_job_pins=paths,actual_node_count=len(rows),forward=f,backward=b,net=net,entropy=entropy,entropy_affinity_gross_residual=entropy_residual,ordinary_DOS_arithmetic=arithmetic,LTE_net_over_gross=net[0]['value']/gross if rad['name']=='LTE'else None,complete_finite_rule=True,whole_moment_qualified=False,units=['fm^-3 s^-1','MeV fm^-3 s^-1'],scope='fixed-inner-rule FINITE RANGE; omitted ranges/tails/whole moments OPEN'))
+ return results
+
+if __name__=='__main__':
+ import sys
+ ch=sys.argv[1];data=[]
+ for n in LOCK['incident_orders']:data.extend(process(ch,n))
+ p=R/f'{ch}_successor_processed.json';p.write_text(json.dumps(data,indent=2,allow_nan=False)+'\n');print(ch,'processed',len(data),'rows')

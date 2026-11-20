@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "phase": "complete",
+  "checks": [
+    {
+      "name": "heldout forward independent densities",
+      "error": 2.220446049250313e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "heldout forward u",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "heldout forward P",
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "heldout forward entropy",
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "heldout independent u_n h0.0002",
+      "error": 6.306769773090082e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "heldout independent entropy_n h0.0002",
+      "error": 1.3953150856949037e-08,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "heldout independent u_n h0.0001",
+      "error": 1.5699261890489424e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "heldout independent entropy_n h0.0001",
+      "error": 3.4990197406159496e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent entropy root vs author peak",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent endpoint entropy",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "independent Simpson4->8 pressure work",
+      "error": 2.1906698677298664e-11,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent pressure work vs independent energy",
+      "error": 1.4479528687161292e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent pressure work vs authorGauss8",
+      "error": 1.9944046414366312e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    }
+  ],
+  "raw": {
+    "heldout": {
+      "T": 2.15,
+      "nB": 0.000103,
+      "Ye": 0.287,
+      "direct": {
+        "u": 8.570912839270886,
+        "P": 0.0003739308503166516,
+        "s": 6.096067522146691,
+        "densities": [
+          7.343899999999996e-05,
+          2.9560999999999987e-05,
+          2.9560999999999933e-05
+        ]
+      },
+      "analytic_u_n": 12351.616047809886
+    },
+    "entropy_root": {
+      "T": 2.0246227241176973,
+      "nB": 0.00010202013400267558,
+      "s": 6.019568717690311,
+      "target": 6.019568717690309,
+      "u": 8.57303850374102
+    },
+    "Simpson4": {
+      "nB": [
+        0.0001,
+        0.0001005050335006689,
+        0.00010101006700133778,
+        0.00010151510050200668,
+        0.00010202013400267558
+      ],
+      "P_over_n2": [
+        35378.25639888105,
+        35290.68452835305,
+        35203.77992895492,
+        35117.53417287597,
+        35031.93898034361
+      ],
+      "work": 0.07111724018330537
+    },
+    "Simpson8": {
+      "nB": [
+        0.0001,
+        0.00010025251675033445,
+        0.0001005050335006689,
+        0.00010075755025100334,
+        0.00010101006700133778,
+        0.00010126258375167224,
+        0.00010151510050200668,
+        0.00010176761725234113,
+        0.00010202013400267558
+      ],
+      "P_over_n2": [
+        35378.25639888105,
+        35334.38652211216,
+        35290.68452835305,
+        35247.14935001011,
+        35203.77992895492,
+        35160.5752164166,
+        35117.53417287597,
+        35074.655767961005,
+        35031.93898034361
+      ],
+      "work": 0.07111724018174742
+    }
+  },
+  "runtime_seconds": 17.403263707878068,
+  "source_sha256": {
+    "fd_prescribed_density/density_element.py": "d539c8e2a86cb31c10d459d7f1a5609e8c0c2e1fa737256cb7a67e7ea04309b2",
+    "fd_prescribed_density/weak_off.py": "bbeb0f6cd691ccf9ff427e1730b0c7724e664a368823b94d99eadeb7ac91244b",
+    "fd_prescribed_density/weak_off_results.json": "0830ceddbf993ae323743df2ba71a3872c9b276e5ffd5117d29bb7d6d6b3147b",
+    "fd_prescribed_density/initial_work_budget_stop.txt": "a5e555810156b69fcb31559d39e22c6cc2f053a8273fe417400d9c9840ad9310"
+  },
+  "end_source_sha256": {
+    "fd_prescribed_density/density_element.py": "d539c8e2a86cb31c10d459d7f1a5609e8c0c2e1fa737256cb7a67e7ea04309b2",
+    "fd_prescribed_density/weak_off.py": "bbeb0f6cd691ccf9ff427e1730b0c7724e664a368823b94d99eadeb7ac91244b",
+    "fd_prescribed_density/weak_off_results.json": "0830ceddbf993ae323743df2ba71a3872c9b276e5ffd5117d29bb7d6d6b3147b",
+    "fd_prescribed_density/initial_work_budget_stop.txt": "a5e555810156b69fcb31559d39e22c6cc2f053a8273fe417400d9c9840ad9310"
+  },
+  "scope": "Selected momentum EOS density derivatives, independent entropy roots, Simpson pressure work; weakOFF only"
+}

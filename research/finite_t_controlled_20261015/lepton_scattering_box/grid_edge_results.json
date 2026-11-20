@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "name": "independent actual grid edge (0, 1)",
+      "error": -1.3214429550600926e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent actual grid edge (3, 4)",
+      "error": 2.9819813285314467e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent actual grid edge (6, 7)",
+      "error": -4.41187833899459e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "1.3 time32/64 heat smaller than .1percent",
+      "error": 1.2221898003761389e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "3.0 time32/64 heat smaller than .1percent",
+      "error": 4.1495613982478474e-05,
+      "tolerance": 0.001,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "i": 0,
+      "j": 1,
+      "E": 0.4765217220295659,
+      "F": 2.4400022710364793,
+      "physical_stored": 0.08265260750484678,
+      "independent": 0.08265260750593899
+    },
+    {
+      "i": 3,
+      "j": 4,
+      "E": 9.7987842900522,
+      "F": 14.2012157099478,
+      "physical_stored": 0.3318013257025212,
+      "independent": 0.33180132560357867
+    },
+    {
+      "i": 6,
+      "j": 7,
+      "E": 21.55999772896352,
+      "F": 23.523478277970433,
+      "physical_stored": 0.793983798697195,
+      "independent": 0.7939873016725727
+    }
+  ],
+  "passed": 4,
+  "failed": [
+    {
+      "name": "independent actual grid edge (6, 7)",
+      "error": -4.41187833899459e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    }
+  ],
+  "pins": {
+    "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  }
+}

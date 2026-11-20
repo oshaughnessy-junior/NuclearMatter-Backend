@@ -1,0 +1,8 @@
+Initial optional checkout discovery:
+zsh:1: no matches found: /Users/rossma/.codex/worktrees/*/NuclearMatter-Backend
+
+Later read-only inspection command used the NMB source workdir for relative artifact reads:
+cat: outputs/nmb-finite-t-20261015/production_lepton_port/evidence/test_final_stdout.txt: No such file or directory
+cat: outputs/nmb-finite-t-20261015/production_lepton_port/evidence/test_final_stderr.txt: No such file or directory
+
+The actual test commands used the Genesis working directory. No scientific test failed in these discovery commands.

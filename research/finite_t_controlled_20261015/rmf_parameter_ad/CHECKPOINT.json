@@ -1,0 +1,51 @@
+{
+  "checkpoint": "first_order_GM1_nuclear_coupling_sensitivities",
+  "status": "ready_for_independent_review",
+  "passed": true,
+  "checks": 504,
+  "qualified_derivative_order": 1,
+  "qualified_inputs": [
+    "nB",
+    "T_MeV",
+    "Yp",
+    "C_sigma",
+    "C_omega",
+    "C_rho",
+    "b",
+    "c"
+  ],
+  "fixed_bare_mass_mev": 939.0,
+  "qualified_states": [
+    [
+      0.16,
+      10.0,
+      0.1
+    ],
+    [
+      0.24,
+      20.0,
+      0.3
+    ],
+    [
+      0.32,
+      30.0,
+      0.1
+    ]
+  ],
+  "parameter_pressure_work_included": true,
+  "production_changes": false,
+  "frozen_reference_changes": false,
+  "frozen_manifest_hashes_match": {
+    "rmf_reference/gm1_finite_t.py": true,
+    "rmf_phase/stability.py": true,
+    "rmf_ad/gm1_implicit_ad.py": true
+  },
+  "dependencies_added": false,
+  "next_priority": "Independent parameter-work/implicit derivative review; then local nuclear-parameter sensitivity in a matched controlled weak-response ansatz, retaining external finiteT forward/phase limitations",
+  "files": {
+    "RESEARCH_NOTE.md": "887f5626852f424ff3f76469eb6dbadf4679d1b369972c24ddcea81cd51fa681",
+    "validation_results.json": "a6dde6edd2c012c3e72222fb1ca4d2e1efaecd7d811ee2d473fbe72119cfce74",
+    "gm1_parameter_ad.py": "99265052856aba38384c445b6eed72e53ee9ed9f99e7ee206d3fa1523fa1dbb0",
+    "validate_parameters.py": "115b1f83eab890b5c9f2ff355848af986d04e8ec11e42ac127fd6395686cda52"
+  }
+}

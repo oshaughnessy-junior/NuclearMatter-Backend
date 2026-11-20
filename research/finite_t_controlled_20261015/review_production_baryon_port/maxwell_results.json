@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "name": "independentresponseMaxwell (0, 'smu')",
+      "error": -2.5711655027294e-11,
+      "gate": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independentresponseMaxwell (0, 'kmu')",
+      "error": -2.2268187294116615e-11,
+      "gate": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independentresponseMaxwell (2, 'smu')",
+      "error": -3.477873544710519e-11,
+      "gate": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independentresponseMaxwell (2, 'kmu')",
+      "error": -3.6213143594920894e-11,
+      "gate": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independentresponseMaxwell (5, 'smu')",
+      "error": 1.2276624161700056e-11,
+      "gate": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "independentresponseMaxwell (5, 'kmu')",
+      "error": 1.5359269411874266e-11,
+      "gate": 2e-06,
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": [],
+  "rows": [
+    {
+      "index": 0,
+      "ladder": [
+        {
+          "smu": 3.9802473726010676e-07,
+          "kmu": 1.0527881057517605e-07
+        },
+        {
+          "smu": 3.9802469626087985e-07,
+          "kmu": 1.052787974162082e-07
+        }
+      ],
+      "richardson": {
+        "smu": 3.9802468259447086e-07,
+        "kmu": 1.0527879302988558e-07
+      },
+      "targets": {
+        "smu": 3.980246826047047e-07,
+        "kmu": 1.0527879303222994e-07
+      }
+    },
+    {
+      "index": 2,
+      "ladder": [
+        {
+          "smu": 0.00014220910816780066,
+          "kmu": 6.91269204421933e-05
+        },
+        {
+          "smu": 0.0001422091000253632,
+          "kmu": 6.912691232715274e-05
+        }
+      ],
+      "richardson": {
+        "smu": 0.00014220909731121737,
+        "kmu": 6.912690962213921e-05
+      },
+      "targets": {
+        "smu": 0.00014220909731616323,
+        "kmu": 6.912690962464251e-05
+      }
+    },
+    {
+      "index": 5,
+      "ladder": [
+        {
+          "smu": 0.00052624273686439,
+          "kmu": 0.18448859533732745
+        },
+        {
+          "smu": 0.0005262427366296923,
+          "kmu": 0.18448859522460717
+        }
+      ],
+      "richardson": {
+        "smu": 0.0005262427365514597,
+        "kmu": 0.18448859518703375
+      },
+      "targets": {
+        "smu": 0.0005262427365449993,
+        "kmu": 0.18448859518420013
+      }
+    }
+  ]
+}

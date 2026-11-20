@@ -1,0 +1,5 @@
+{
+  "error": "FileNotFoundError: production_lepton_port/MANIFEST.json",
+  "cause": "Original PR51/52 freeze metadata is CANDIDATE_MANIFEST.json",
+  "resolution": "Corrected source-metadata path only; all three public source hashes already matched; no imports/calls occurred"
+}

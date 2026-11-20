@@ -1,0 +1,114 @@
+{
+  "runs": [
+    {
+      "Enu": 0.365,
+      "j": {
+        "value": 3.203512569124064e-06,
+        "log": -12.651262672315156,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 5.5381704867939645e-12,
+        "log": -25.919356906750416,
+        "representable": true,
+        "reason": null
+      },
+      "DOS": 8.784085967487584e-10,
+      "max_conditional_energy_residual": 2.7960966875184567e-13,
+      "seconds": 0.11167254112660885,
+      "controls": {
+        "order": 10,
+        "parent_order": 12,
+        "phi_order": 8
+      },
+      "derivation": "Full rest Dalitz dGamma/(dEanti*dEe) averaged parent spin; conditional isotropic cone Jacobian1/(2gamma v Eanti*); parent spin2 and proper time; divide one-helicity DOS only for spectral coefficient comparison"
+    },
+    {
+      "Enu": 0.365,
+      "j": {
+        "value": 3.203512569127092e-06,
+        "log": -12.65126267231421,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 5.538170486805377e-12,
+        "log": -25.919356906748355,
+        "representable": true,
+        "reason": null
+      },
+      "DOS": 8.784085967487584e-10,
+      "max_conditional_energy_residual": 2.913225216616411e-13,
+      "seconds": 0.3774306250270456,
+      "controls": {
+        "order": 16,
+        "parent_order": 18,
+        "phi_order": 12
+      },
+      "derivation": "Full rest Dalitz dGamma/(dEanti*dEe) averaged parent spin; conditional isotropic cone Jacobian1/(2gamma v Eanti*); parent spin2 and proper time; divide one-helicity DOS only for spectral coefficient comparison"
+    }
+  ],
+  "material": {
+    "T": 0.055,
+    "nB": 2.3e-12,
+    "Ye": 0.31,
+    "neutron": {
+      "temperature": 0.055,
+      "mass": 939.56542052,
+      "chemical_potential": 938.7311517276308,
+      "kinetic_chemical_potential": -0.8342687923691301,
+      "density": 1.5870000000019411e-12,
+      "kinetic_energy_density": 1.3093708566536743e-13,
+      "energy_density": 1.4912212594527292e-09,
+      "pressure": 8.728500398791895e-14,
+      "entropy_density": 2.804012114808573e-11,
+      "free_energy_density": 1.4896790527895846e-09,
+      "cv_fixed_density": 2.3808482875189336e-12,
+      "dn_dmu_fixed_temperature": 2.8854542818010938e-11,
+      "dn_dtemperature_fixed_mu": 4.809657957674129e-10,
+      "dmu_dtemperature_fixed_density": -16.66863338646264,
+      "log_antiparticle_density": -34162.84742022413,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -34135.678244549745
+    },
+    "proton": {
+      "temperature": 0.055,
+      "mass": 938.27208816,
+      "chemical_potential": 937.393926436329,
+      "kinetic_chemical_potential": -0.878161723670928,
+      "density": 7.130000000013359e-13,
+      "kinetic_energy_density": 5.88268110578681e-14,
+      "energy_density": 6.690468256703913e-10,
+      "pressure": 3.9215000806671485e-14,
+      "entropy_density": 1.316674765169243e-11,
+      "free_energy_density": 6.683226545495482e-10,
+      "cv_fixed_density": 1.0696567061430078e-12,
+      "dn_dmu_fixed_temperature": 1.296363583037273e-11,
+      "dn_dtemperature_fixed_mu": 2.264317663038856e-10,
+      "dmu_dtemperature_fixed_density": -17.46668675876984,
+      "log_antiparticle_density": -34115.02116534532,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -34087.05187037083
+    },
+    "electron": {
+      "temperature": 0.055,
+      "chemical_potential": 0.24248010840793985,
+      "mass": 0.51099895069,
+      "net_density": 7.130000000000003e-13,
+      "particle_density": 7.131058858172616e-13,
+      "antiparticle_density": 1.0588581726098975e-16,
+      "energy_density": 4.304950040615447e-13,
+      "pressure": 3.927439294361363e-14,
+      "entropy_density": 5.39783781291449e-12,
+      "free_energy_density": 1.3361392435124773e-13,
+      "cv_fixed_net_density": 1.365339905064463e-12,
+      "dn_dmu_fixed_temperature": 1.2936003106033574e-11,
+      "dn_dtemperature_fixed_mu": 8.492111593763972e-11,
+      "dmu_dtemperature_fixed_net_density": -6.564710540153707
+    },
+    "muons": "absent"
+  }
+}

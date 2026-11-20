@@ -1,0 +1,140 @@
+{
+  "matter": {
+    "T": 0.03,
+    "nB": 1e-12,
+    "Ye": 0.3,
+    "neutron": {
+      "temperature": 0.03,
+      "mass": 939.56542052,
+      "chemical_potential": 939.1130868115629,
+      "kinetic_chemical_potential": -0.4523337084370951,
+      "density": 7.000000000014713e-13,
+      "kinetic_energy_density": 3.150125876606906e-14,
+      "energy_density": 6.577272956241484e-10,
+      "pressure": 2.100000105062658e-14,
+      "entropy_density": 1.230449519077759e-11,
+      "free_energy_density": 6.573581607684251e-10,
+      "cv_fixed_density": 1.050083785065487e-12,
+      "dn_dmu_fixed_temperature": 2.3333330998754947e-11,
+      "dn_dtemperature_fixed_mu": 3.8681646823986166e-10,
+      "dmu_dtemperature_fixed_density": -16.57785029752083,
+      "log_antiparticle_density": -62635.526816730664,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -62607.5391206708
+    },
+    "proton": {
+      "temperature": 0.03,
+      "mass": 938.27208816,
+      "chemical_potential": 937.7943974977201,
+      "kinetic_chemical_potential": -0.4776906622798833,
+      "density": 2.9999999999997035e-13,
+      "kinetic_energy_density": 1.3500539828452777e-14,
+      "energy_density": 2.8149512698780063e-10,
+      "pressure": 9.000000193362322e-15,
+      "entropy_density": 5.526924623525532e-12,
+      "free_energy_density": 2.8132931924909487e-10,
+      "cv_fixed_density": 4.500359638163384e-13,
+      "dn_dmu_fixed_temperature": 9.999999570302997e-12,
+      "dn_dtemperature_fixed_mu": 1.7423081340499983e-10,
+      "dmu_dtemperature_fixed_density": -17.4230820891646,
+      "log_antiparticle_density": -62548.46149372529,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -62519.62649980504
+    },
+    "electron": {
+      "temperature": 0.03,
+      "chemical_potential": 0.3683831307935174,
+      "mass": 0.51099895069,
+      "net_density": 2.9999999999999963e-13,
+      "particle_density": 3.0000000000649485e-13,
+      "antiparticle_density": 6.495141976080126e-24,
+      "energy_density": 1.6775571111700075e-13,
+      "pressure": 9.012965955789004e-15,
+      "entropy_density": 2.2084579278244887e-12,
+      "free_energy_density": 1.015019732822661e-13,
+      "cv_fixed_net_density": 5.100990272359174e-13,
+      "dn_dmu_fixed_temperature": 9.971274723347867e-12,
+      "dn_dtemperature_fixed_mu": 6.344192014743583e-11,
+      "dmu_dtemperature_fixed_net_density": -6.362468381187589
+    },
+    "muons": "absent"
+  },
+  "spectrum": {
+    "j": {
+      "value": 1.6622798841045385e-06,
+      "log": -13.30732047372075,
+      "representable": true,
+      "reason": null
+    },
+    "chi": {
+      "value": 6.405572059461036e-16,
+      "log": -34.984193242030514,
+      "representable": true,
+      "reason": null
+    },
+    "Enu": 0.3,
+    "bath": {
+      "T": 0.03,
+      "mu_n": 939.1130868115629,
+      "mu_p": 937.7943974977201,
+      "mu_e": 0.3683831307935174
+    },
+    "controls": {
+      "angle_order": 6,
+      "lepton_order": 8,
+      "widths": 9.0,
+      "energy_order": 8,
+      "phi_order": 4,
+      "tail": 50.0
+    },
+    "panels": [
+      {
+        "c": -0.932469514203152,
+        "center": 0.9931518295722345,
+        "width": 0.0032889080955206466,
+        "lower": 0.9635516567125486,
+        "upper": 1.0227520024319203
+      },
+      {
+        "c": -0.6612093864662645,
+        "center": 0.9930780282863103,
+        "width": 0.0039037032798340116,
+        "lower": 0.9579446987678042,
+        "upper": 1.0282113578048164
+      },
+      {
+        "c": -0.2386191860831969,
+        "center": 0.9929630846000872,
+        "width": 0.004703831354745566,
+        "lower": 0.9506286024073771,
+        "upper": 1.0352975667927973
+      },
+      {
+        "c": 0.2386191860831969,
+        "center": 0.9928333202275963,
+        "width": 0.005468196955659115,
+        "lower": 0.9436195476266642,
+        "upper": 1.0420470928285284
+      },
+      {
+        "c": 0.6612093864662645,
+        "center": 0.992718453574769,
+        "width": 0.006064956241115596,
+        "lower": 0.9381338474047286,
+        "upper": 1.0473030597448094
+      },
+      {
+        "c": 0.932469514203152,
+        "center": 0.9926447398653863,
+        "width": 0.006418756244533371,
+        "lower": 0.9348759336645859,
+        "upper": 1.0504135460661865
+      }
+    ],
+    "evaluations": 192,
+    "runtime_seconds": 0.30639533302746713,
+    "units": "j,chi s^-1 per one antinu occupation; DOS E\u00b2/(2pi\u00b2 hbarc\u00b3) fm^-3 MeV^-1"
+  }
+}

@@ -1,0 +1,565 @@
+{
+  "checks": [
+    {
+      "name": "locked model.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "locked training.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "locked PREREGISTRATION.json",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "actual training matches prereg",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh eight distinct from training",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "smallest passing degree rate",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "training-only coefficients rate",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "smallest passing degree transport_rate",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "training-only coefficients transport_rate",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "smallest passing degree g",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "training-only coefficients g",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "18 coefficients",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "new energies not author train/heldouts",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "joint identity 1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "joint identity 30.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "joint identity 7.2",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "joint identity 9.4",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "reject boolE",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject numpyE",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject below",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject above",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject nan",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolT",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject changedT",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject changedmu",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject targetlist",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject wrongflavor",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject blocked",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject method",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "actual fallback invoked 8.1137",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "independent shell refinement (8.1137, 'rate')",
+      "error": -8.384343219702828e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "independent shell vs actual fallback (8.1137, 'rate')",
+      "error": -3.0425251207333304e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "raw fit positive 1percent (8.1137, 'rate')",
+      "error": -0.0006409672845023584,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "independent shell refinement (8.1137, 'transport_rate')",
+      "error": -7.170486426844036e-12,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "independent shell vs actual fallback (8.1137, 'transport_rate')",
+      "error": -8.432955445059065e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "raw fit positive 1percent (8.1137, 'transport_rate')",
+      "error": -0.0003137856257169336,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "independent shell refinement (8.1137, 'outgoing_energy_moment')",
+      "error": -8.468368228875534e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "independent shell vs actual fallback (8.1137, 'outgoing_energy_moment')",
+      "error": -3.259130743060723e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "raw fit positive 1percent (8.1137, 'outgoing_energy_moment')",
+      "error": -0.0006535221128119995,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "shell signed refinement RT 8.1137",
+      "error": -3.4226495143659915e-11,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "actual signed vs shell RT 8.1137",
+      "error": 8.7919091020146e-11,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "raw fit signed unchanged gate 8.1137",
+      "error": -5.1035457095418246e-05,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "actual fallback resolves fresh sign 8.1137",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "actual fallback invoked 8.1293",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "independent shell refinement (8.1293, 'rate')",
+      "error": -8.302347698219137e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "independent shell vs actual fallback (8.1293, 'rate')",
+      "error": -3.015162564068419e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "raw fit positive 1percent (8.1293, 'rate')",
+      "error": -0.000641596625095997,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "independent shell refinement (8.1293, 'transport_rate')",
+      "error": -7.16360304409136e-12,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "independent shell vs actual fallback (8.1293, 'transport_rate')",
+      "error": -8.43593306321111e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "raw fit positive 1percent (8.1293, 'transport_rate')",
+      "error": -0.00030955364466167534,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "independent shell refinement (8.1293, 'outgoing_energy_moment')",
+      "error": -8.391531913787276e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "independent shell vs actual fallback (8.1293, 'outgoing_energy_moment')",
+      "error": -3.2336044952785414e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "raw fit positive 1percent (8.1293, 'outgoing_energy_moment')",
+      "error": -0.0006538815821707233,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "shell signed refinement RT 8.1293",
+      "error": -3.3483160238023954e-11,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "actual signed vs shell RT 8.1293",
+      "error": 8.770062102129938e-11,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "raw fit signed unchanged gate 8.1293",
+      "error": -4.775325192385052e-05,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "name": "actual fallback resolves fresh sign 8.1293",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "physics": [
+    {
+      "E": 8.1137,
+      "auto": {
+        "E": 8.1137,
+        "rate": 10.128636913863602,
+        "transport_rate": 7.225562015574148,
+        "outgoing_energy_moment": 82.18389821109395,
+        "neutrino_energy_change": 0.0031768830788532,
+        "g": 0.00015682678261004854,
+        "method": "actual detailed CM quadrature",
+        "fallback": true,
+        "fallback_reason": "near cancellation or physical-bound guard",
+        "controls": [
+          32,
+          40,
+          40,
+          48,
+          80.0
+        ],
+        "source_pins": {
+          "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+          "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+          "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+        },
+        "seconds": 8.837557124905288,
+        "state": {
+          "T_MeV": 2.0,
+          "mu_e_MeV": 0.17446333200826397,
+          "flavor": "nu_e",
+          "targets": [
+            "e-",
+            "e+"
+          ],
+          "outgoing_neutrinos": "unblocked"
+        },
+        "units": {
+          "rate": "s^-1 per incidentnu_e",
+          "transport_rate": "s^-1 per incidentnu_e",
+          "outgoing_energy_moment": "MeV s^-1 per incidentnu_e",
+          "neutrino_energy_change": "MeV s^-1 per incidentnu_e"
+        },
+        "model_sha": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0",
+        "qualification": "optional fixed-state moment convenience only; no spectral redistribution, uniform error/sign certificate, AD fidelity, derivative or physical-model uncertainty claim"
+      },
+      "diagnostic_fit": {
+        "E": 8.1137,
+        "rate": 10.122144788965212,
+        "transport_rate": 7.223294738075935,
+        "outgoing_energy_moment": 82.1301892162959,
+        "neutrino_energy_change": 0.0021430420688615366,
+        "g": 0.00010585908982441161,
+        "method": "joint Chebyshev diagnostic",
+        "fallback": false,
+        "near_cancellation_guard": true,
+        "state": {
+          "T_MeV": 2.0,
+          "mu_e_MeV": 0.17446333200826397,
+          "flavor": "nu_e",
+          "targets": [
+            "e-",
+            "e+"
+          ],
+          "outgoing_neutrinos": "unblocked"
+        },
+        "units": {
+          "rate": "s^-1 per incidentnu_e",
+          "transport_rate": "s^-1 per incidentnu_e",
+          "outgoing_energy_moment": "MeV s^-1 per incidentnu_e",
+          "neutrino_energy_change": "MeV s^-1 per incidentnu_e"
+        },
+        "model_sha": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0",
+        "qualification": "optional fixed-state moment convenience only; no spectral redistribution, uniform error/sign certificate, AD fidelity, derivative or physical-model uncertainty claim"
+      },
+      "independent_coarse": {
+        "E": 8.1137,
+        "total": {
+          "rate": 10.128636902289742,
+          "transport_rate": 7.225562009429053,
+          "outgoing_energy_moment": 82.18389811471279,
+          "neutrino_energy_change": 0.003176880604516615
+        },
+        "controls": {
+          "outer": 14,
+          "angle": 24,
+          "upper": 150.0,
+          "tail": 70.0
+        },
+        "seconds": 0.5941997498739511
+      },
+      "independent_fine": {
+        "E": 8.1137,
+        "total": {
+          "rate": 10.128636910781939,
+          "transport_rate": 7.225562009480864,
+          "outgoing_energy_moment": 82.18389818430914,
+          "neutrino_energy_change": 0.003176881297852099
+        },
+        "controls": {
+          "outer": 20,
+          "angle": 34,
+          "upper": 180.0,
+          "tail": 90.0
+        },
+        "seconds": 1.3758673330303282
+      }
+    },
+    {
+      "E": 8.1293,
+      "auto": {
+        "E": 8.1293,
+        "rate": 10.149055809650843,
+        "transport_rate": 7.235168374675038,
+        "outgoing_energy_moment": 82.43702469141544,
+        "neutrino_energy_change": -0.06769470197893972,
+        "g": -0.0033350246194610595,
+        "method": "actual detailed CM quadrature",
+        "fallback": true,
+        "fallback_reason": "near cancellation or physical-bound guard",
+        "controls": [
+          32,
+          40,
+          40,
+          48,
+          80.0
+        ],
+        "source_pins": {
+          "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+          "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+          "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+        },
+        "seconds": 8.727975958026946,
+        "state": {
+          "T_MeV": 2.0,
+          "mu_e_MeV": 0.17446333200826397,
+          "flavor": "nu_e",
+          "targets": [
+            "e-",
+            "e+"
+          ],
+          "outgoing_neutrinos": "unblocked"
+        },
+        "units": {
+          "rate": "s^-1 per incidentnu_e",
+          "transport_rate": "s^-1 per incidentnu_e",
+          "outgoing_energy_moment": "MeV s^-1 per incidentnu_e",
+          "neutrino_energy_change": "MeV s^-1 per incidentnu_e"
+        },
+        "model_sha": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0",
+        "qualification": "optional fixed-state moment convenience only; no spectral redistribution, uniform error/sign certificate, AD fidelity, derivative or physical-model uncertainty claim"
+      },
+      "diagnostic_fit": {
+        "E": 8.1293,
+        "rate": 10.14254420969546,
+        "transport_rate": 7.232928701934917,
+        "outgoing_energy_moment": 82.38312063928078,
+        "neutrino_energy_change": -0.0686640045965394,
+        "g": -0.003384949731394915,
+        "method": "joint Chebyshev diagnostic",
+        "fallback": false,
+        "near_cancellation_guard": true,
+        "state": {
+          "T_MeV": 2.0,
+          "mu_e_MeV": 0.17446333200826397,
+          "flavor": "nu_e",
+          "targets": [
+            "e-",
+            "e+"
+          ],
+          "outgoing_neutrinos": "unblocked"
+        },
+        "units": {
+          "rate": "s^-1 per incidentnu_e",
+          "transport_rate": "s^-1 per incidentnu_e",
+          "outgoing_energy_moment": "MeV s^-1 per incidentnu_e",
+          "neutrino_energy_change": "MeV s^-1 per incidentnu_e"
+        },
+        "model_sha": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0",
+        "qualification": "optional fixed-state moment convenience only; no spectral redistribution, uniform error/sign certificate, AD fidelity, derivative or physical-model uncertainty claim"
+      },
+      "independent_coarse": {
+        "E": 8.1293,
+        "total": {
+          "rate": 10.149055798164639,
+          "transport_rate": 7.235168368519669,
+          "outgoing_energy_moment": 82.43702459558128,
+          "neutrino_energy_change": -0.06769470443874163
+        },
+        "controls": {
+          "outer": 14,
+          "angle": 24,
+          "upper": 150.0,
+          "tail": 70.0
+        },
+        "seconds": 0.5969349171500653
+      },
+      "independent_fine": {
+        "E": 8.1293,
+        "total": {
+          "rate": 10.149055806590738,
+          "transport_rate": 7.2351683685714985,
+          "outgoing_energy_moment": 82.43702466475857,
+          "neutrino_energy_change": -0.06769470375909671
+        },
+        "controls": {
+          "outer": 20,
+          "angle": 34,
+          "upper": 180.0,
+          "tail": 90.0
+        },
+        "seconds": 1.3683398750144988
+      }
+    }
+  ],
+  "boundaries": {
+    "0.08": 7.756583763305099,
+    "0.0": 8.11417307513185,
+    "-0.08": 8.471627281739618
+  }
+}

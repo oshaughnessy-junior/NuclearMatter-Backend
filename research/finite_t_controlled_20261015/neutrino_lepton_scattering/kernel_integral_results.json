@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "values": {
+        "rate": 9.302828091392032,
+        "transport_rate": 6.840868529431271,
+        "neutrino_energy_change": -8.654396112596338,
+        "outgoing_energy_moment": 84.37388480132384
+      },
+      "controls": {
+        "order": 10,
+        "angle": 12,
+        "upper": 110.0,
+        "inner": 20,
+        "angular_coordinate": "sqrt(1-c)"
+      },
+      "seconds": 0.6092687081545591,
+      "calls": 2080
+    },
+    {
+      "values": {
+        "rate": 9.302828107051507,
+        "transport_rate": 6.840868529218809,
+        "neutrino_energy_change": -8.654396016235308,
+        "outgoing_energy_moment": 84.37388505427953
+      },
+      "controls": {
+        "order": 16,
+        "angle": 20,
+        "upper": 150.0,
+        "inner": 28,
+        "angular_coordinate": "sqrt(1-c)"
+      },
+      "seconds": 1.9184553751256317,
+      "calls": 5536
+    }
+  ],
+  "checks": [
+    {
+      "name": "shellintegralrefine rate",
+      "error": -1.6833027194351757e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "shellintegralrefine transport_rate",
+      "error": 3.105782298007398e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "shellintegralrefine neutrino_energy_change",
+      "error": 1.1134344779506478e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "shellintegralrefine outgoing_energy_moment",
+      "error": -2.9980329330214772e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

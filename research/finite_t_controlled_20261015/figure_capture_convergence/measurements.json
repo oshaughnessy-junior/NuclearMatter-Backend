@@ -1,0 +1,77 @@
+{
+  "reference_chi_s": 2.3663596774394763e-05,
+  "gate": 3e-06,
+  "source_sha256": {
+    "relativistic_capture_integrals/integration_results.json": "40c19c830be77ccef51a4e5a412c47b95295cc6ac8fa8c0465e0c3213148314c",
+    "relativistic_capture_integrals/heldout_controls_results.json": "129525a7a305f614b2fd8ea298dcfe96e885f50ce2d326f60519e6418edfdb6e",
+    "relativistic_capture_integrals/anchor_results.json": "480b8d3008948486d3dcdb08b44f520e3c456e16e8c8ef01519e52cdf5c61f6a"
+  },
+  "rows": [
+    {
+      "order": 4,
+      "controls": {
+        "lepton_order": 4,
+        "angle_order": 4,
+        "energy_order": 8,
+        "phi_order": 4,
+        "tail": 40.0,
+        "outer_tail": 24.0
+      },
+      "chi_s": 2.9309601547662475e-05,
+      "relative_error": 0.23859453096229988
+    },
+    {
+      "order": 8,
+      "controls": {
+        "lepton_order": 8,
+        "angle_order": 8,
+        "energy_order": 16,
+        "phi_order": 4,
+        "tail": 40.0,
+        "outer_tail": 24.0
+      },
+      "chi_s": 2.355756475665606e-05,
+      "relative_error": 0.004480807323992031
+    },
+    {
+      "order": 12,
+      "controls": {
+        "lepton_order": 12,
+        "angle_order": 12,
+        "energy_order": 24,
+        "phi_order": 4,
+        "tail": 50.0,
+        "outer_tail": 32.0
+      },
+      "chi_s": 2.3663459784030253e-05,
+      "relative_error": 5.7890761838708116e-06
+    },
+    {
+      "order": 16,
+      "controls": {
+        "lepton_order": 16,
+        "angle_order": 16,
+        "energy_order": 32,
+        "phi_order": 4,
+        "tail": 60.0,
+        "outer_tail": 40.0
+      },
+      "chi_s": 2.3663582060172413e-05,
+      "relative_error": 6.218083620224135e-07
+    },
+    {
+      "order": 20,
+      "controls": {
+        "lepton_order": 20,
+        "angle_order": 20,
+        "energy_order": 40,
+        "phi_order": 4,
+        "tail": 70.0,
+        "outer_tail": 48.0
+      },
+      "chi_s": 2.3663596931957454e-05,
+      "relative_error": 6.658442242013507e-09
+    }
+  ],
+  "scope": "SelectedT.2,nB1e-15,Ye.3,Ymu0,E_nu150MeV; joint controls; numerical comparison not model uncertainty"
+}

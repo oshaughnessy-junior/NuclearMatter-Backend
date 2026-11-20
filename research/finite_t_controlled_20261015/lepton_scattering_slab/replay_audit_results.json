@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "exact physical raw replay results.json",
+      "passed": true
+    },
+    {
+      "name": "exact physical raw replay accepted_results.json",
+      "passed": true
+    },
+    {
+      "name": "exact physical raw replay partial_grids.json",
+      "passed": true
+    },
+    {
+      "name": "exact physical raw replay refinement_partial.json",
+      "passed": true
+    },
+    {
+      "name": "original snapshot exactallfiles",
+      "passed": true
+    },
+    {
+      "name": "frozen upstreamphysical sourcebytes exact",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": []
+}

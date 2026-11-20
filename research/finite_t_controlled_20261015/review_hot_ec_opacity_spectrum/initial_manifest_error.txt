@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_hot_ec_opacity_spectrum/probe.py", line 11, in <module>
+    pins=json.loads((A/'MANIFEST.json').read_text());assert all(hashlib.sha256((A/k).read_bytes()).hexdigest()==v for k,v in pins.items())
+                                                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_hot_ec_opacity_spectrum/probe.py", line 11, in <genexpr>
+    pins=json.loads((A/'MANIFEST.json').read_text());assert all(hashlib.sha256((A/k).read_bytes()).hexdigest()==v for k,v in pins.items())
+                                                                               ~~~~~~~~~~~~~~~~^^
+  File "/Users/rossma/miniconda3/lib/python3.13/pathlib/_abc.py", line 625, in read_bytes
+    with self.open(mode='rb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/Users/rossma/miniconda3/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/hot_ec_opacity_spectrum/status'

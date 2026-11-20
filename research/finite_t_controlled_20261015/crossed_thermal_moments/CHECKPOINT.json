@@ -1,0 +1,33 @@
+{
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "checks": 310,
+  "failed": 0,
+  "scope": "Selected physical-free-npe boosted total decay/inverse event and energy moments; NOT all-Enu tensor integration/full antinu inventory",
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "sha256": {
+    "crossed_thermal_moments/initial_study.py": "2a30b0c96bf9d36396f370f86056940651babcef62e04a042623e2285d9e635d",
+    "crossed_thermal_moments/initial_import_cycle_failure.py.txt": "b3e6d8e8f7874bde8c468d29230f1c752933fb7d92a643567c36a775707018e6",
+    "crossed_thermal_moments/partial_results.json": "a6e0ce7a0debec56be58355f89347f573c5015bc3cac241a359e665896d4aa12",
+    "crossed_thermal_moments/initial_driver_syntax_failure.py": "d0d2ef68a20301dc20ccbbcebb88dfba331573849260c14295bffd39761f7a56",
+    "crossed_thermal_moments/moments.py": "55a84c8eb1d6bf78e3f6247c9f814f1cf72471c92a21c09bbd4028df26dba405",
+    "crossed_thermal_moments/initial_refinement_failure.json": "c2f95a1af2248a69f17e193302b180abf5e40b397720612792ba4dff484733bb",
+    "crossed_thermal_moments/results.json": "a87173e7c8aaa0c583f5210d05d911b4b3e233e9835ee26ca0f0968d226803d5",
+    "crossed_thermal_moments/RESEARCH_NOTE.md": "ada4f1352f7c1a640361de16512ebbeb1abdd2e95d3ee66bca34e2670a66b05d",
+    "crossed_thermal_moments/spectrum_anchor.py": "69801c7d01c027021313b4f8d03e6e1e2fe9998b82ca02d92b2def4a46a1e97a",
+    "crossed_thermal_moments/spectrum_results.json": "61ee993dbccb7817322b2eb17a463001db0006ba06dae2e754d5e7c224e09aa2",
+    "crossed_thermal_moments/study.py": "7d490ff13abd5eaf28dd9d05389d0bd8e2e9364bd365b89187a4349c35e74f1b",
+    "crossed_thermal_moments/profile.json": "cb24966d4957e8cb85062bea400001f5bb74b2d9bac32079626d24a38bb29da0",
+    "relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9"
+  }
+}

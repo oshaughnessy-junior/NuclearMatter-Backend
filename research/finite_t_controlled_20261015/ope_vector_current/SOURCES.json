@@ -1,0 +1,22 @@
+{
+  "accessed_UTC": "2026-10-15",
+  "papers": [
+    {
+      "url": "https://archive.int.washington.edu/users/mjs5/Class_560/lec560_3/node2.html",
+      "locations": "Eqs11-15, derivative static pion Hamiltonian/potential conventions"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1604.08423",
+      "locations": "Eqs13-27, full charged isovector, separate vector seagull/flight, Eq21 Dirac bilinear"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1702.06402",
+      "locations": "Eqs1-6, NR spatial forms, explicit half-normalized charged operator, consistent nontrivial form-factor example"
+    }
+  ],
+  "limitation": "online primary renderings, not locally byte-pinned PDFs; equations/normalizations derived locally as declared",
+  "pinned_code": {
+    "ope_weak_diagrams/external_legs.py": "d8400295e4bc286ed5453c6da70d5f3d1cfc76e94f926b3eb7603e0ea55d7d14",
+    "ope_nucleon_amplitudes/ope.py": "a4d25710817060fc4fdcfb3f4b013012f67ead9c3cb07dab9407275e6eebefd7"
+  }
+}

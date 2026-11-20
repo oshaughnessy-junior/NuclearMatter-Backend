@@ -1,0 +1,16 @@
+{
+  "verified_utc": "2026-10-15T15:42:25.243669+00:00",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2006.12051v2",
+      "used": "23-30 quasiparticle/current/phase measure;AppendixB components;AppendixC support"
+    },
+    {
+      "url": "https://arxiv.org/html/1612.02764v2",
+      "used": "3-14 spin/phase/tensor normalization;81 absence of generic CC CVC"
+    }
+  ],
+  "normalization_derivation": "full unaveraged baryon trace;W includes spin;rateGF\u00b2V\u00b2 pl/(32pi\u00b2Enu),NR K independently matches;dilute c\u03c3 target witness",
+  "scope": "research contract and normalization witnesses only;no implemented finiteT tensor",
+  "upstream_current": "muon_full_current source-defined vacuum, separate review gate"
+}

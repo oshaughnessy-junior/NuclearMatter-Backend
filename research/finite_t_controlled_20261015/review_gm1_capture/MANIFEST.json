@@ -1,0 +1,27 @@
+{
+  "status": "selected pilot accepted with completed independent electron outer check; stronger independent refinement incomplete",
+  "completed_checks": 30,
+  "experiment_budget_stop_seconds": 108.04616308305413,
+  "source_sha256": {
+    "gm1_capture_integrals/capture.py": "ef441a4b18b9b97c1b3f88f0d9b4b72087f27f29c49bc3b7a847b0c9f13184a7",
+    "gm1_capture_integrals/validation_results.json": "95d7f3bcd66914771477a03a54b2921b088cddaa23462d8d7a660dbfe538a00a",
+    "gm1_capture_integrals/mu_q16.json": "6ad92efa8bf090f40b4c1dd1f9556ff59c5d54148d236898f7721af84525aa0a",
+    "gm1_capture_integrals/mu_q20.json": "3bb3d02207c32352ec30d648e1719e03d11654fde7b062618b80319b8867be5b",
+    "gm1_capture_integrals/mu_q24.json": "88a02403698ccd66991ddd665dde6b4a7046bea0aa37a44241eb840998c1ed04",
+    "gm1_capture_integrals/mu_cos20.json": "38c59ea7d245a8109b0603db36ddea57bd4c08696cd9a46d84463f29a3a335af",
+    "gm1_capture_integrals/pre_empty_domain_metadata.py": "bf9106a0f4d3de144eea0a97d8e528835d08e4f0441c3d57db5ee059f78fe25c",
+    "gm1_capture_integrals/zero_field_initial8_results.json": "a7147731788d81869d46c492f1de30be3084fd9d8fd00dcaa458bc066bc01533",
+    "gm1_capture_integrals/zero_field_initial12_results.json": "1fe4e6550533132c28a44bf6b57f1e22307cd730e4ce50721bff3ff0ba07d1c5",
+    "gm1_differential_response/adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f"
+  },
+  "review_files": {
+    "recover_selected.py": "1ea4bc553f94291469534dfbee852607efd371c8e6012f65a34263434e80f5bc",
+    "results.json": "a50545576816d355348a3a0c5895241552687df5ada2f01e5c82db7969afe818",
+    "bookkeeping.py": "20a78ad3b02ebd87623a03d4ecf46ba2ff5585a7bc380e251a93530fffc50333",
+    "bookkeeping.json": "f14647d21000ac743eea123b976aa2e0176f8ca68ee205b54ae743fcb5afead9",
+    "probe.py": "8ca1fd30d45601843e17e595c9e1365d4a940637705db3ccc783efa2928d45df",
+    "selected_comparison.json": "63ecbb46802a7d50d3e4948d4c46a4873a24a40223cdfe5c4360748298441c9a",
+    "budget_stop.json": "d361225403cf70a85c2c95336a06b4b211ee464909637252526a48adb120c6fc",
+    "REVIEW.md": "96372d9ac47a011f74e1539cca465adacb652d53075d8c4f7b37905d99d8809a"
+  }
+}

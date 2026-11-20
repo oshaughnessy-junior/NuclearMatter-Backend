@@ -1,0 +1,71 @@
+{
+  "passed": 16,
+  "failed": [],
+  "checks": [
+    {
+      "name": "finalfrozenfingerprint MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "finalfrozenfingerprint CANDIDATE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "all1113frozenauthorfilesunchanged",
+      "passed": true
+    },
+    {
+      "name": "all216initialreviewfilesunchanged",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy README.md",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy docs/weak_reference.md",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy docs/weak_spectral_validation.md",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy examples/free_weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy src/nmbackend/reference/_weak_spectral_capture.py",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy src/nmbackend/reference/_weak_spectral_common.py",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy src/nmbackend/reference/_weak_spectral_decay.py",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy src/nmbackend/reference/weak_reference.py",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy tests/data/free_weak_spectral_reference.json",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy tests/test_weak_reference_reconstruction.py",
+      "passed": true
+    },
+    {
+      "name": "exactrepairedcopy tests/test_weak_reference_spectra.py",
+      "passed": true
+    },
+    {
+      "name": "finalarithmeticAST exactlymoved",
+      "passed": true
+    }
+  ],
+  "physical_calls": 0
+}

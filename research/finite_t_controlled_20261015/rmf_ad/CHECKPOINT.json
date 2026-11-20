@@ -1,0 +1,57 @@
+{
+  "checkpoint": "first_order_implicit_GM1_JAX_oracle",
+  "status": "ready_for_independent_review",
+  "passed": true,
+  "checks": 304,
+  "qualified_inputs": [
+    "nB",
+    "temperature_MeV",
+    "Yp"
+  ],
+  "qualified_derivative_order": 1,
+  "second_derivatives_supported": false,
+  "EOS_parameter_derivatives": false,
+  "callback_domain_failure": "fixed-shape NaN; strict host oracle for diagnostics",
+  "production_changes": false,
+  "frozen_reference_changes": false,
+  "frozen_dependency_hashes_match": {
+    "rmf_reference/gm1_finite_t.py": true,
+    "rmf_phase/stability.py": true
+  },
+  "dependencies_added": false,
+  "environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+    "executable": "/Users/rossma/miniconda3/envs/junior_tools/bin/python",
+    "jax": "0.10.1",
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "platform": "macOS-26.7.1-arm64-arm-64bit",
+    "devices": [
+      "cpu:0"
+    ]
+  },
+  "qualified_states": [
+    [
+      0.16,
+      10.0,
+      0.1
+    ],
+    [
+      0.24,
+      20.0,
+      0.3
+    ],
+    [
+      0.32,
+      30.0,
+      0.1
+    ]
+  ],
+  "next_priority": "Independent first-order rule review; retain local phase/conditioning gates and obtain matched external finiteT forward benchmark before promotion",
+  "files": {
+    "RESEARCH_NOTE.md": "d70d41ae3972b6adae5daf25135b5a751b372d21a348369b05c553df52ce4d40",
+    "gm1_implicit_ad.py": "6f22c97fef1a1c3c38d71c6f7ef6568d9272bb116bb445fdbbea84e8306060ab",
+    "validation_results.json": "308912b50fe14462404b479c62def66d2bb5bef83e93e79cc1e1249d68fa99da",
+    "validate_ad.py": "9d5bd37806f1d5a6a8fa96a5a490c2406dcebd4a2f292efa24e568f7382b15d1"
+  }
+}

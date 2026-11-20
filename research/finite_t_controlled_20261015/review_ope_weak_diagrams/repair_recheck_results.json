@@ -1,0 +1,566 @@
+{
+  "checks": [
+    {
+      "name": "same independently reviewed strong source",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact initial reviewed source",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact commissioned repair source",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author preservation equals independent copy",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "old NaNgv failure reproduced",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "old NaNraising wrong-branch failure reproduced",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects gv=nan",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects gv=inf",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects gv=False",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects gv=(1+0j)",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects gv='1'",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects gv=None",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects raising=nan",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects raising=1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects raising=0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects raising='False'",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired helper rejects raising=None",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'V0')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Vx')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Vy')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Vz')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Ax')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Ay')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Az')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite helper BITWISE (0, 'False')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired physical finiteQ Ward defect (0, 'False')",
+      "error": 6.74914183535803e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'True', 'V0')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'True', 'Vx')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'True', 'Vy')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'True', 'Vz')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'True', 'Ax')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'True', 'Ay')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'True', 'Az')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite helper BITWISE (0, 'True')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired physical finiteQ Ward defect (0, 'True')",
+      "error": 6.74914183535803e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'V0')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Vx')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Vy')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Vz')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Ax')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Ay')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (0, 'False', 'Az')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite helper BITWISE (0, 'False')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired physical finiteQ Ward defect (0, 'False')",
+      "error": 6.74914183535803e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'V0')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Vx')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Vy')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Vz')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Ax')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Ay')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Az')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite helper BITWISE (1, 'False')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired physical finiteQ Ward defect (1, 'False')",
+      "error": 7.0969914373340816e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'True', 'V0')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'True', 'Vx')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'True', 'Vy')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'True', 'Vz')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'True', 'Ax')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'True', 'Ay')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'True', 'Az')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite helper BITWISE (1, 'True')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired physical finiteQ Ward defect (1, 'True')",
+      "error": 7.0969914373340816e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'V0')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Vx')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Vy')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Vz')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Ax')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Ay')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite amplitude BITWISE (1, 'False', 'Az')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "valid finite helper BITWISE (1, 'False')",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repaired physical finiteQ Ward defect (1, 'False')",
+      "error": 7.0969914373340816e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "unchanged exact function AST validate",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "unchanged exact function AST sigma",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "unchanged exact function AST amplitude",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "unchanged exact function AST channel",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "unchanged exact function AST emission_point",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "physical numerical body unchanged rho",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "physical numerical body unchanged direct",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "physical numerical body unchanged vector_defect_direct",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "initial review and two failures unchanged",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "strong source untouched during recheck",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "author repaired sources/raw untouched during recheck",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "passed": 82,
+  "failed": [],
+  "initial_evidence_before": {
+    "results.json": "2776ee8a56ca18ebf12e38594a04023fdb7e5f9265338f7ad66bb4e9b4700dcf",
+    "extra_results.json": "074bb5f9c0bf4e9ae0fa847360135d9a9fcf02fd7ac76ffcdb71bbfc893f54d3",
+    "normalization_results.json": "48eeea99e808effb592a7029a509bc49c3f98e66e746b549ddda056ba760ac72",
+    "MANIFEST.json": "3871bbcc50c212424a7e1c26afe3c2bc7874c2b54f2253fd13c17479a1df0355",
+    "REVIEW.md": "4262fe113474f529a580bc2727e90df8145f260f2d35bd453b7f57281c4f1290",
+    "INITIAL_EVIDENCE_PIN.json": "651440cf9a91696d6e473eea407a1ced4210d4302e5606437f6868f358f07370",
+    "reviewed_initial_author_external_legs.py.txt": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+    "reviewed_initial_author_results.json.txt": "5c8ef9f586970dc7d1e3c533930cf6454df381eaaf433603419f9d6444db11f8",
+    "reviewed_initial_author_CHECKPOINT.json.txt": "55c5d3c4a9c6dcc407fcebe287f1d15e119598b773f191b3087dbb336711f929"
+  },
+  "initial_evidence_after": {
+    "results.json": "2776ee8a56ca18ebf12e38594a04023fdb7e5f9265338f7ad66bb4e9b4700dcf",
+    "extra_results.json": "074bb5f9c0bf4e9ae0fa847360135d9a9fcf02fd7ac76ffcdb71bbfc893f54d3",
+    "normalization_results.json": "48eeea99e808effb592a7029a509bc49c3f98e66e746b549ddda056ba760ac72",
+    "MANIFEST.json": "3871bbcc50c212424a7e1c26afe3c2bc7874c2b54f2253fd13c17479a1df0355",
+    "REVIEW.md": "4262fe113474f529a580bc2727e90df8145f260f2d35bd453b7f57281c4f1290",
+    "INITIAL_EVIDENCE_PIN.json": "651440cf9a91696d6e473eea407a1ced4210d4302e5606437f6868f358f07370",
+    "reviewed_initial_author_external_legs.py.txt": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+    "reviewed_initial_author_results.json.txt": "5c8ef9f586970dc7d1e3c533930cf6454df381eaaf433603419f9d6444db11f8",
+    "reviewed_initial_author_CHECKPOINT.json.txt": "55c5d3c4a9c6dcc407fcebe287f1d15e119598b773f191b3087dbb336711f929"
+  },
+  "author_before": {
+    "initial_check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "CHECKPOINT.json": "dc4af8aec2ce5645384f3b328b8414c83d473c5903fd26000c6e88d7c7c61645",
+    "external_legs.py": "d8400295e4bc286ed5453c6da70d5f3d1cfc76e94f926b3eb7603e0ea55d7d14",
+    "results.json": "ab12b844b7182c33ad307c37fbfae7156beb83c93c2f328d8baa1fd52bb0ec45",
+    "RESEARCH_NOTE.md": "7bd2db74ad9ea994bd7fa8665596f0bb990af79bc88ae6307e2a9eb3502e0977",
+    "helper_repair_results.json": "b228e9ad8cce64bf2a8fe00c6e25453fc06c828e48e2a9c7fcd7166c2212b5bc",
+    "HELPER_REPAIR.md": "726a4731c24e37bb37a337252ac1803896bc7b57feb67ce16db8680ef376c886",
+    "initial_results.json": "bee824f532de0128ce73ff26367fb684ef1a7088fbd532eecab5c3892c6fa0e4",
+    "check_helper_repair.py": "af752dbbf891fac8abe28f3c34d919350024b3074f94e97ea7adeff9b43e7f2c",
+    "check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "initial_external_legs.py": "7aa8a929136b6422257fb9bcf13a0409f63d586b7b26ca0690ba1d17d94b4f96",
+    "pre_helper_repair/initial_check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "pre_helper_repair/CHECKPOINT.json": "55c5d3c4a9c6dcc407fcebe287f1d15e119598b773f191b3087dbb336711f929",
+    "pre_helper_repair/external_legs.py": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+    "pre_helper_repair/results.json": "5c8ef9f586970dc7d1e3c533930cf6454df381eaaf433603419f9d6444db11f8",
+    "pre_helper_repair/RESEARCH_NOTE.md": "fbd32e7d2c7d71f071ceb70ec8821e1f7f1edc0c01e2560bbc603c5fc881462b",
+    "pre_helper_repair/SNAPSHOT.json": "20eb114d4e00dbb6816159d6b8295196d46c78cd839a01a522e45742a3aa9542",
+    "pre_helper_repair/initial_results.json": "bee824f532de0128ce73ff26367fb684ef1a7088fbd532eecab5c3892c6fa0e4",
+    "pre_helper_repair/check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "pre_helper_repair/initial_external_legs.py": "7aa8a929136b6422257fb9bcf13a0409f63d586b7b26ca0690ba1d17d94b4f96"
+  },
+  "author_after": {
+    "initial_check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "CHECKPOINT.json": "dc4af8aec2ce5645384f3b328b8414c83d473c5903fd26000c6e88d7c7c61645",
+    "external_legs.py": "d8400295e4bc286ed5453c6da70d5f3d1cfc76e94f926b3eb7603e0ea55d7d14",
+    "results.json": "ab12b844b7182c33ad307c37fbfae7156beb83c93c2f328d8baa1fd52bb0ec45",
+    "RESEARCH_NOTE.md": "7bd2db74ad9ea994bd7fa8665596f0bb990af79bc88ae6307e2a9eb3502e0977",
+    "helper_repair_results.json": "b228e9ad8cce64bf2a8fe00c6e25453fc06c828e48e2a9c7fcd7166c2212b5bc",
+    "HELPER_REPAIR.md": "726a4731c24e37bb37a337252ac1803896bc7b57feb67ce16db8680ef376c886",
+    "initial_results.json": "bee824f532de0128ce73ff26367fb684ef1a7088fbd532eecab5c3892c6fa0e4",
+    "check_helper_repair.py": "af752dbbf891fac8abe28f3c34d919350024b3074f94e97ea7adeff9b43e7f2c",
+    "check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "initial_external_legs.py": "7aa8a929136b6422257fb9bcf13a0409f63d586b7b26ca0690ba1d17d94b4f96",
+    "pre_helper_repair/initial_check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "pre_helper_repair/CHECKPOINT.json": "55c5d3c4a9c6dcc407fcebe287f1d15e119598b773f191b3087dbb336711f929",
+    "pre_helper_repair/external_legs.py": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+    "pre_helper_repair/results.json": "5c8ef9f586970dc7d1e3c533930cf6454df381eaaf433603419f9d6444db11f8",
+    "pre_helper_repair/RESEARCH_NOTE.md": "fbd32e7d2c7d71f071ceb70ec8821e1f7f1edc0c01e2560bbc603c5fc881462b",
+    "pre_helper_repair/SNAPSHOT.json": "20eb114d4e00dbb6816159d6b8295196d46c78cd839a01a522e45742a3aa9542",
+    "pre_helper_repair/initial_results.json": "bee824f532de0128ce73ff26367fb684ef1a7088fbd532eecab5c3892c6fa0e4",
+    "pre_helper_repair/check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "pre_helper_repair/initial_external_legs.py": "7aa8a929136b6422257fb9bcf13a0409f63d586b7b26ca0690ba1d17d94b4f96"
+  },
+  "seconds": 0.04036149987950921,
+  "scope": "helper-admission repair only; finiteQ interaction-current defect remains nonzero"
+}

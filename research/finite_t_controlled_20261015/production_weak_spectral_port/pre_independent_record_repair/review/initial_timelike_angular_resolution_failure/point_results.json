@@ -1,0 +1,236 @@
+{
+  "checks": [
+    {
+      "name": "neutron originalpVsBessel",
+      "error": -3.552713678800501e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "neutron originalpVssaveddensity",
+      "error": -3.9968028886505635e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "proton originalpVsBessel",
+      "error": 8.881784197001252e-16,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "proton originalpVssaveddensity",
+      "error": 1.1102230246251565e-15,
+      "gate": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeECj ownrefinement",
+      "error": 7.105427357601027e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeECchi ownrefinement",
+      "error": 7.105427357601027e-15,
+      "gate": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeEC on_shell",
+      "error": 9.231114409183976e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeEC on_shell",
+      "error": 7.934211978250106e-16,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeECj absoluteoriginalspinor",
+      "error": -5.7731597280507974e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeECchi absoluteoriginalspinor",
+      "error": -9.103828801926243e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWspacelikeEC KMSafterdirectproducts",
+      "error": 1.9984014443252818e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWpasttimelikeECj ownrefinement",
+      "error": -1.0,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "NEWpasttimelikeECchi ownrefinement",
+      "error": -1.0,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "NEWpasttimelikeEC on_shell",
+      "error": 1.7648332176954317e-12,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWpasttimelikeEC on_shell",
+      "error": 2.3064754220773054e-12,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "NEWpasttimelikeEC KMSafterdirectproducts",
+      "error": 1.4654943925052066e-14,
+      "gate": 3e-10,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "input": {
+        "channel": "EC",
+        "E": 4.61,
+        "El": 5.897,
+        "cosine": 0.27,
+        "label": "NEWspacelike"
+      },
+      "delta": [
+        {
+          "logj": -2.2547637036625776,
+          "logchi": 1.4549183811473085,
+          "exact_empty": false,
+          "support": {
+            "kind": "spacelike_originalpz",
+            "invariant": -39.48444760519767,
+            "Ea_min": 939.5681900436114,
+            "Ea_upper": 1069.5681900436114
+          },
+          "shell": 9.231114409183976e-16,
+          "points": 1440,
+          "controls": {
+            "order": 20,
+            "phi": 6,
+            "tail": 65.0
+          }
+        },
+        {
+          "logj": -2.2547637036625847,
+          "logchi": 1.4549183811473014,
+          "exact_empty": false,
+          "support": {
+            "kind": "spacelike_originalpz",
+            "invariant": -39.48444760519767,
+            "Ea_min": 939.5681900436114,
+            "Ea_upper": 1109.5681900436114
+          },
+          "shell": 7.934211978250106e-16,
+          "points": 3840,
+          "controls": {
+            "order": 32,
+            "phi": 10,
+            "tail": 85.0
+          }
+        }
+      ],
+      "original_explicit_spinor": {
+        "j": 0.10489832789865224,
+        "chi": 4.284133785247736,
+        "Emin": 939.5681900436114,
+        "max_shell_residual": 6.532151221474229e-16,
+        "min_jacobian": 0.005697103456058221,
+        "order": 36,
+        "nphi": 10,
+        "tail": 90.0
+      }
+    },
+    {
+      "input": {
+        "channel": "EC",
+        "E": 4.61,
+        "El": 5.897,
+        "cosine": 0.99987,
+        "label": "NEWpasttimelike"
+      },
+      "delta": [
+        {
+          "logj": -100.25051463463276,
+          "logchi": -96.54083254982288,
+          "exact_empty": false,
+          "support": {
+            "kind": "timelike_Qrest_shell",
+            "invariant": 0.049562323070461156,
+            "Ea_min": 1149.7981192138034,
+            "Ea_upper": 61917.45399252742
+          },
+          "shell": 1.7648332176954317e-12,
+          "points": 120,
+          "controls": {
+            "order": 20,
+            "phi": 6,
+            "tail": 65.0
+          }
+        },
+        {
+          "logj": -37.91102743552997,
+          "logchi": -34.201345350720075,
+          "exact_empty": false,
+          "support": {
+            "kind": "timelike_Qrest_shell",
+            "invariant": 0.049562323070461156,
+            "Ea_min": 1023.2836785152876,
+            "Ea_upper": 62043.968433225935
+          },
+          "shell": 2.3064754220773054e-12,
+          "points": 320,
+          "controls": {
+            "order": 32,
+            "phi": 10,
+            "tail": 85.0
+          }
+        }
+      ]
+    }
+  ],
+  "stage": "differential",
+  "candidate_imported": false,
+  "forwarddensities": {
+    "neutron": {
+      "original_p": 6.999999999999839e-08,
+      "Bessel_fugacity": 6.999999999999864e-08,
+      "saved": 6.999999999999867e-08
+    },
+    "proton": {
+      "original_p": 3.000000000000042e-08,
+      "Bessel_fugacity": 3.0000000000000394e-08,
+      "saved": 3.000000000000039e-08
+    }
+  },
+  "passed": 14,
+  "failed": [
+    {
+      "name": "NEWpasttimelikeECj ownrefinement",
+      "error": -1.0,
+      "gate": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "NEWpasttimelikeECchi ownrefinement",
+      "error": -1.0,
+      "gate": 3e-06,
+      "passed": false
+    }
+  ],
+  "seconds": 0.040389833971858025
+}

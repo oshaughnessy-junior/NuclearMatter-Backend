@@ -1,0 +1,389 @@
+{
+  "passed": 42,
+  "failed": 0,
+  "source_sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+  "rows": [
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.0011981011633237966,
+      "mu": 0.0006349936165616122,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.0011981011633237966,
+      "mu": 0.0006349936165616122,
+      "m": 0.51099895,
+      "actual": 8.972855535689728e-199,
+      "reference": 8.972855535689507e-199,
+      "relative_error": 2.4646951146678475e-14,
+      "prior_exception": null,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 0.0011981011633237966,
+      "mu": 0.0006349936165616122,
+      "m": 0.51099895,
+      "bitwise": true,
+      "relative_change": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.0011981011633237966,
+      "mu": 0.0006349936165616122,
+      "m": 0.51099895,
+      "kernel": 0.26666666666666666,
+      "actual_hole": 0.0,
+      "expected_hole": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.0012011319604613498,
+      "mu": 0.0006365999390445154,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.0012011319604613498,
+      "mu": 0.0006365999390445154,
+      "m": 0.51099895,
+      "actual": 2.6422640538573732e-198,
+      "reference": 2.6422640538573896e-198,
+      "relative_error": 6.217248937900877e-15,
+      "prior_exception": null,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 0.0012011319604613498,
+      "mu": 0.0006365999390445154,
+      "m": 0.51099895,
+      "bitwise": true,
+      "relative_change": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.0012011319604613498,
+      "mu": 0.0006365999390445154,
+      "m": 0.51099895,
+      "kernel": 0.26666666666666666,
+      "actual_hole": 0.0,
+      "expected_hole": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.0012018075507895362,
+      "mu": 0.0006369580019184542,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.0012018075507895362,
+      "mu": 0.0006369580019184542,
+      "m": 0.51099895,
+      "actual": 3.358988864572612e-198,
+      "reference": 3.358988864572336e-198,
+      "relative_error": 8.215650382226158e-14,
+      "prior_exception": null,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 0.0012018075507895362,
+      "mu": 0.0006369580019184542,
+      "m": 0.51099895,
+      "bitwise": true,
+      "relative_change": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.0012018075507895362,
+      "mu": 0.0006369580019184542,
+      "m": 0.51099895,
+      "kernel": 0.26666666666666666,
+      "actual_hole": 5e-324,
+      "expected_hole": 5e-324,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.001204857119225876,
+      "mu": 0.0006385742731897144,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.001204857119225876,
+      "mu": 0.0006385742731897144,
+      "m": 0.51099895,
+      "actual": 9.891317705628012e-198,
+      "reference": 9.89131770562719e-198,
+      "relative_error": 8.304468224196171e-14,
+      "prior_exception": null,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 0.001204857119225876,
+      "mu": 0.0006385742731897144,
+      "m": 0.51099895,
+      "bitwise": true,
+      "relative_change": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.001204857119225876,
+      "mu": 0.0006385742731897144,
+      "m": 0.51099895,
+      "kernel": 0.26666666666666666,
+      "actual_hole": 2e-323,
+      "expected_hole": 2e-323,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.24053783084543884,
+      "mu": 0.12748505034808258,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.24053783084543884,
+      "mu": 0.12748505034808258,
+      "m": 105.6583755,
+      "actual": 4.5458895056184524e-195,
+      "reference": 4.545889505618332e-195,
+      "relative_error": 2.6423307986078726e-14,
+      "prior_exception": "Unresolved finite-temperature lepton quadrature",
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.24053783084543884,
+      "mu": 0.12748505034808258,
+      "m": 105.6583755,
+      "kernel": 0.26666666666666666,
+      "actual_hole": 0.0,
+      "expected_hole": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.24112866489658974,
+      "mu": 0.12779819239519258,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.24112866489658974,
+      "mu": 0.12779819239519258,
+      "m": 105.6583755,
+      "actual": 1.338640584171438e-194,
+      "reference": 1.3386405841714489e-194,
+      "relative_error": 8.215650382226158e-15,
+      "prior_exception": "Unresolved finite-temperature lepton quadrature",
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.24112866489658974,
+      "mu": 0.12779819239519258,
+      "m": 105.6583755,
+      "kernel": 0.26666666666666666,
+      "actual_hole": 0.0,
+      "expected_hole": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.2412603550615325,
+      "mu": 0.12786798818261225,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.2412603550615325,
+      "mu": 0.12786798818261225,
+      "m": 105.6583755,
+      "actual": 1.7017518814670843e-194,
+      "reference": 1.7017518814671017e-194,
+      "relative_error": 1.021405182655144e-14,
+      "prior_exception": "Unresolved finite-temperature lepton quadrature",
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.2412603550615325,
+      "mu": 0.12786798818261225,
+      "m": 105.6583755,
+      "kernel": 0.26666666666666666,
+      "actual_hole": 5e-324,
+      "expected_hole": 5e-324,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.2418547421667922,
+      "mu": 0.12818301334839988,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.2418547421667922,
+      "mu": 0.12818301334839988,
+      "m": 105.6583755,
+      "actual": 5.011196054946209e-194,
+      "reference": 5.0111960549462695e-194,
+      "relative_error": 1.199040866595169e-14,
+      "prior_exception": "Unresolved finite-temperature lepton quadrature",
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.2418547421667922,
+      "mu": 0.12818301334839988,
+      "m": 105.6583755,
+      "kernel": 0.26666666666666666,
+      "actual_hole": 2e-323,
+      "expected_hole": 2e-323,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.0008516649166666665,
+      "mu": -0.0004513824058333333,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.0008516649166666665,
+      "mu": -0.0004513824058333333,
+      "m": 0.51099895,
+      "actual": 2.411480764183275e-274,
+      "reference": 2.4114807641831635e-274,
+      "relative_error": 4.618527782440651e-14,
+      "prior_exception": null,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 0.0008516649166666665,
+      "mu": -0.0004513824058333333,
+      "m": 0.51099895,
+      "bitwise": true,
+      "relative_change": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.0008516649166666665,
+      "mu": -0.0004513824058333333,
+      "m": 0.51099895,
+      "kernel": null,
+      "actual_hole": 0.0,
+      "expected_hole": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.0008516649166666665,
+      "mu": 0.0004513824058333333,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "locked_total_thermal",
+      "T": 0.0008516649166666665,
+      "mu": 0.0004513824058333333,
+      "m": 0.51099895,
+      "actual": 2.411480764183275e-274,
+      "reference": 2.4114807641831635e-274,
+      "relative_error": 4.618527782440651e-14,
+      "prior_exception": null,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 0.0008516649166666665,
+      "mu": 0.0004513824058333333,
+      "m": 0.51099895,
+      "bitwise": true,
+      "relative_change": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "locked_component_restore",
+      "T": 0.0008516649166666665,
+      "mu": 0.0004513824058333333,
+      "m": 0.51099895,
+      "kernel": null,
+      "actual_hole": 0.0,
+      "expected_hole": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.731,
+      "mu": -1.193,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 0.731,
+      "mu": -1.193,
+      "m": 0.51099895,
+      "bitwise": false,
+      "relative_change": 6.661338147750939e-16,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 15.7,
+      "mu": 87.4,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 15.7,
+      "mu": 87.4,
+      "m": 105.6583755,
+      "bitwise": true,
+      "relative_change": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "all_state_fields_bitwise",
+      "T": 0.012,
+      "mu": 153.2,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "prior_success_preservation",
+      "T": 0.012,
+      "mu": 153.2,
+      "m": 105.6583755,
+      "bitwise": false,
+      "relative_change": 1.5987211554602254e-14,
+      "pass_": true
+    }
+  ]
+}

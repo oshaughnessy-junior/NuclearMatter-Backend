@@ -1,0 +1,32 @@
+{
+  "status": "author_frozen_independent_review_required",
+  "utc": "2026-10-15T14:39:40.398830+00:00",
+  "author_checks": 477,
+  "all_passed": true,
+  "runtime_seconds": 0.24365479103289545,
+  "quota_used_percent": 8,
+  "quota_reset": 1792652325,
+  "scope": "vacuum exact relativistic two-body point V-A nucleons; F2=GP=0; no finite-T or medium",
+  "open_gates": [
+    "independent physics/numerical review",
+    "weak magnetism/pseudoscalar/q2 form-factor interference",
+    "matched full-current external forward calculation",
+    "relativistic finiteT response and EOS consistency",
+    "inverse/crossed/flavor inventory and moments"
+  ],
+  "preserved_failures": [
+    "initial_exothermic_threshold_failure.json",
+    "initial_threshold_asymptotic_failure.json"
+  ],
+  "source_sha256": {
+    "RESEARCH_NOTE.md": "8c62881a731086cda71c16dba82ccd3cb7f1d359b5ea754a56a0fd1195b5bec8",
+    "SOURCES.json": "79e3b62ec82cc9a944673dd163a2b5cfa04b5b38428e830bddc24c9b42af3734",
+    "initial_exothermic_threshold_failure.json": "d82f388193253ff8930c2b20edf4fadc29a4029d110848d223ebc993f2f77d5f",
+    "initial_threshold_asymptotic_failure.json": "f43305811ae43647558418477bf6696c8522f4c0b2bd31fa613b7096f4699959",
+    "initial_threshold_validate.py": "7b37171f7478da0ee73d32da8fc6414bfc6d00b81bcd80b8627c48075899823e",
+    "initial_validate.py": "75eb8e46a9b526fd0ab25a6a6a9ad642cb57d786df501c6d0b7c2322ee7d9f65",
+    "results.json": "2d8bd4e8fce4d2aa0e20a466a727b738607792bc422def1467f1385f84361f44",
+    "vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "validate.py": "3f4732711544f45b3772e37975d6336995c94bd9711c0c2d3986380e29006f50"
+  }
+}

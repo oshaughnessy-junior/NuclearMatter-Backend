@@ -1,0 +1,17 @@
+{
+  "checkpoint": "first_bounded_thermodynamics_reference",
+  "status": "reviewable",
+  "passed": true,
+  "checks": 86,
+  "production_changes": false,
+  "dependencies_added": false,
+  "qualified_scope": "Selected analytic limits and finite-temperature ideal lepton pair-gas states; no interacting dense-matter EOS or full domain qualification",
+  "next_priority": "Independent review then couple common-thermal-wavelength ideal nucleon ansatz to weak capture; qualify fixed-composition energy accounting",
+  "files": {
+    "lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "RESEARCH_NOTE.md": "f8c31d2dd1ee265fa440177245429038ffabffaaa8cbf649dd71ebb958ee2d07",
+    "validation_results.json": "16bf9e2e5caa1b3f9e152674e21e0d3e2ff40ff0587a13ca695293310aa3ed9b",
+    "validate_reference.py": "c6a7c8dbc58ab75fe14e109d3229fb70c06ad1b2e2b8d3e74ee3cd173bdec4cf"
+  },
+  "revision": "density inversion repair after independent numerical review"
+}

@@ -1,0 +1,26 @@
+.......................F.........                                        [100%]
+=================================== FAILURES ===================================
+______________ test_support_linear_timelike_and_moving_threshold _______________
+
+    def test_support_linear_timelike_and_moving_threshold():
+        with pytest.raises(ArithmeticError):S.support(C.MN,C.MP,1.,0.)
+        # Exact linear support and the original unsquared positive-energy shell.
+        for ma,mb,w,q in [(C.MN,C.MP,-1.,1.),(C.MP,C.MN,1.,1.),(C.MN,C.MP,-1.29,1.1)]:
+            for lo,hi in S.support(ma,mb,w,q):
+                ea=lo+1. if hi is None else (lo+hi)/2
+                pa=math.sqrt((ea-ma)*(ea+ma));co=((ma-mb)*(ma+mb)+w*w-q*q+2*w*ea)/(2*pa*q)
+                assert abs(co)<=1+1e-10 and ea+w>=mb
+        r=W.capture_differential_coefficients('PC',BATH,1.7,.5987748936352157,-.1995027501115606,W.SpectralControls.fine())
+        assert r.j.value==pytest.approx(.0032402781881332924,rel=3e-10)
+        assert r.true_chi.value==pytest.approx(.0018607452915373856,rel=3e-10)
+        e=W.capture_differential_coefficients('PC',BATH,5.,.6,1.,W.SpectralControls())
+>       assert e.j.value==e.true_chi.value==0 and e.j.support=='exact_kinematic_zero'
+E       AssertionError: assert (6.475533697617611e-113 == 1.9362707915224947e-112)
+E        +  where 6.475533697617611e-113 = SpectralQuantity(value=6.475533697617611e-113, log=-258.3240844797958, support='positive_support', reason='represented').value
+E        +    where SpectralQuantity(value=6.475533697617611e-113, log=-258.3240844797958, support='positive_support', reason='represented') = SpectralResult(channel='PC', bath=FreeElectronBath(T=2.0, mu_n=919.8287578100662, mu_p=916.8449303084382, mu_e=0.17446..., current_source='Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57', complete=True, units='s^-1 MeV^-1 per cosine').j
+E        +  and   1.9362707915224947e-112 = SpectralQuantity(value=1.9362707915224947e-112, log=-257.2287665646057, support='positive_support', reason='represented').value
+E        +    where SpectralQuantity(value=1.9362707915224947e-112, log=-257.2287665646057, support='positive_support', reason='represented') = SpectralResult(channel='PC', bath=FreeElectronBath(T=2.0, mu_n=919.8287578100662, mu_p=916.8449303084382, mu_e=0.17446..., current_source='Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57', complete=True, units='s^-1 MeV^-1 per cosine').true_chi
+
+outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/tests/test_weak_reference_spectra.py:69: AssertionError
+=========================== short test summary info ============================
+FAILED outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/tests/test_weak_reference_spectra.py::test_support_linear_timelike_and_moving_threshold

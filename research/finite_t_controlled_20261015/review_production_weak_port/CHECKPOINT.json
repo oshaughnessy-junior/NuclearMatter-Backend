@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-16T06:04:48.606973+00:00",
+  "status": "ACCEPTED selected total moment scope after narrow signed-log repair",
+  "review_sha256": "ad05069c9ed312408f4b18189358547f3f24645dfd7123b458d029e1a66d2cc3",
+  "manifest_sha256": "fc8e4d031ba7a36f0145e15f1fbe5bf5112306bece0ce861a23e0a17b891dc22",
+  "repair_review_sha256": "312dad12bd0a2f77d35058ca9757724422af78b0150bf56a2e8e2673c07c0080",
+  "candidate_manifest": "80f0b4207003353b8bf59f1357c28baedbf85ccb06d0a85b9289bceb798a174e",
+  "public_module": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+  "helper": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69",
+  "initial_review_pass": 1378,
+  "initial_failed_regression": 2,
+  "initial_unique_findings": 1,
+  "physical_compared_pass": 822,
+  "physical_failed": 0,
+  "repair_recheck_pass": 417,
+  "repair_recheck_failed": 0,
+  "pure_analysis_pass_separate": 499,
+  "retained_independent_coarse_density_failures": 2,
+  "maximum_moment_fraction": 3.947098203838095e-11,
+  "author_and_initial_review_paths_unchanged": true,
+  "scope": "selected explicitchemical freeelectron EC/PC/beta total moments; no spectra/EOS/AD/fullinventory/externalphysics",
+  "quota": {
+    "utc": "2026-10-16 06:03:29 UTC",
+    "usedPercent": 28,
+    "accountId": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "windowDurationMins": 10080,
+    "resetsAt": 1792652325
+  }
+}

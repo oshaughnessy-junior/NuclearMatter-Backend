@@ -1,0 +1,10 @@
+{
+  "reason": "Interrupted before 120s per-batch budget; four completed controls retained, no physics failure",
+  "completed_probes": [
+    "outertail",
+    "baryontail",
+    "innerorder",
+    "leptonorder"
+  ],
+  "unfinished": "angle-order16 control and dilute20 deferred to a separate bounded batch"
+}

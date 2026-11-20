@@ -1,0 +1,47 @@
+{
+  "status": "author_complete_independent_review_required",
+  "utc": "2026-10-15T13:42:00Z",
+  "scope": "Transparent fixed-nB free NR FD n,p,e+- local energy/composition feedback, photonsFalse; no hydro",
+  "initial_gates": "24/24 PASS",
+  "short_gates": "30/30 PASS",
+  "numerical_runtime_seconds": {
+    "initial": 37.90132158296183,
+    "short": 110.26874841703102
+  },
+  "final": {
+    "T": 2.0043814072169996,
+    "Ye": 0.29489199675584404,
+    "u": 8.416314695636478
+  },
+  "unresolved": [
+    "Independent leaf review pending",
+    "Two/four short steps do not certify a trajectory",
+    "Sampled new-state quadrature domain only",
+    "Heavy-static integrated gate remains excluded upstream",
+    "No interacting EOS/current accuracy claim"
+  ],
+  "upstream_sha256": {
+    "quantum_slab/fixed_bath.py": "8e73b2c7d41cce51f8a522b8ba4444599010783be2b8af892c50add7e684ecf3",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+    "quantum_energy_moments/summary.json": "5f2567761792217ec0ef9cf7ebead8909fcd5974ed34cbc90efe8b510afdd07d",
+    "review_physics/energy_moments_review.md": "09d865bd7b4a8989d3eb499496fc5894fafb2d93f4ce69d1f1dade3cba37c6e7"
+  },
+  "files_sha256": {
+    "short_evolution_results.json": "f58fd8654bc204ab78465ddd9e34cb442462d7bdcdf06a1cf323b8fb4b0b8831",
+    "upstream_manifest.json": "483850ce8bece849f65972af6e357e4c3fa7cacff8b8916bd8eb8c1e1c81b92c",
+    "short_evolution.py": "ca6babcaf1fb2e49d24fadb5f2c1606dc6528139b0183294ba8e221084670ab6",
+    "RESEARCH_NOTE.md": "b429b27049cb2ea1cac333419f3ae5433973e93405ff7e184394c2e93b9a7dff",
+    "source_qualification.json": "8b8cf64d11ac0f1fa774e13981e32e82ac1ba459d9450d11db04eb3aa01b0451",
+    "element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "qualify_source.py": "71c9b25e184fce5a6296a9daa67c986b52f9ea10e3fe224c82635b9ec9390c83"
+  },
+  "quota_used_percent": 7,
+  "quota_reset": 1792652325
+}

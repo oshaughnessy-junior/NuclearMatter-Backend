@@ -1,0 +1,195 @@
+{
+  "checks": [
+    {
+      "name": "tail80 actual proton density",
+      "error": -2.6645352591003757e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "('empty', 'forward', 'number') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('empty', 'forward', 'neutrino_energy') isolatedtail60/80",
+      "error": 7.105427357601002e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('empty', 'forward', 'electron_energy') isolatedtail60/80",
+      "error": 1.0658141036401503e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('empty', 'forward', 'proton_energy') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('empty', 'forward', 'neutron_energy') isolatedtail60/80",
+      "error": 1.0880185641326534e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('empty', 'forward', 'material_energy_loss') isolatedtail60/80",
+      "error": 7.105427357601002e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'forward', 'number') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'forward', 'neutrino_energy') isolatedtail60/80",
+      "error": 5.329070518200751e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'forward', 'electron_energy') isolatedtail60/80",
+      "error": 1.0658141036401503e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'forward', 'proton_energy') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'forward', 'neutron_energy') isolatedtail60/80",
+      "error": 1.0658141036401503e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'forward', 'material_energy_loss') isolatedtail60/80",
+      "error": 5.329070518200751e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'backward', 'number') isolatedtail60/80",
+      "error": 1.0658141036401503e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'backward', 'neutrino_energy') isolatedtail60/80",
+      "error": 5.329070518200751e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'backward', 'electron_energy') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'backward', 'proton_energy') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'backward', 'neutron_energy') isolatedtail60/80",
+      "error": 1.0658141036401503e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('LTE', 'backward', 'material_energy_loss') isolatedtail60/80",
+      "error": 7.105427357601002e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'forward', 'number') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'forward', 'neutrino_energy') isolatedtail60/80",
+      "error": 5.329070518200751e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'forward', 'electron_energy') isolatedtail60/80",
+      "error": 1.0658141036401503e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'forward', 'proton_energy') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'forward', 'neutron_energy') isolatedtail60/80",
+      "error": 8.659739592076221e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'forward', 'material_energy_loss') isolatedtail60/80",
+      "error": 7.105427357601002e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'backward', 'number') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'backward', 'neutrino_energy') isolatedtail60/80",
+      "error": 5.329070518200751e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'backward', 'electron_energy') isolatedtail60/80",
+      "error": 9.103828801926284e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'backward', 'proton_energy') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'backward', 'neutron_energy') isolatedtail60/80",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "('noneq', 'backward', 'material_energy_loss') isolatedtail60/80",
+      "error": 5.329070518200751e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 31,
+  "failed": [],
+  "seconds": 2.2158835420850664,
+  "report_recovery_only": true,
+  "raw_source": "tail_raw.json"
+}

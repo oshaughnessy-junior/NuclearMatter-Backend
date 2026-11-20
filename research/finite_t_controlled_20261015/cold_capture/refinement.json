@@ -1,0 +1,188 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "individual control 0 log_j",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 0 log_chi",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 1 log_j",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 1 log_chi",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 2 log_j",
+      "error": 7.105427357600977e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 2 log_chi",
+      "error": 1.0658141036401446e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 3 log_j",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 3 log_chi",
+      "error": 3.5527136788004946e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 4 log_j",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "individual control 4 log_chi",
+      "error": 3.5527136788004946e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "method": "adaptive_y_q",
+      "log_j": -29.577932950095338,
+      "log_chi": -26.574207103036706,
+      "j": {
+        "log": -29.577932950095338,
+        "value": 1.4271411662965514e-13,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "log": -26.574207103036706,
+        "value": 2.877189682036276e-12,
+        "representable": true,
+        "reason": null
+      },
+      "relative_quad_errors": [
+        1.319028608739351e-10,
+        1.319027963540908e-10
+      ],
+      "order": 32,
+      "tail": 160.0,
+      "rtol": 2e-10
+    },
+    {
+      "method": "adaptive_y_q",
+      "log_j": -29.577932950095338,
+      "log_chi": -26.57420710303671,
+      "j": {
+        "log": -29.577932950095338,
+        "value": 1.4271411662965514e-13,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "log": -26.57420710303671,
+        "value": 2.877189682036266e-12,
+        "representable": true,
+        "reason": null
+      },
+      "relative_quad_errors": [
+        1.3190305614071788e-10,
+        1.3190270533877312e-10
+      ],
+      "order": 64,
+      "tail": 100.0,
+      "rtol": 2e-10
+    },
+    {
+      "method": "Gauss_E_cosine_kinematic_edges",
+      "log_j": -29.57793295009538,
+      "log_chi": -26.574207103036755,
+      "j": {
+        "log": -29.57793295009538,
+        "value": 1.4271411662964906e-13,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "log": -26.574207103036755,
+        "value": 2.877189682036133e-12,
+        "representable": true,
+        "reason": null
+      },
+      "order": 16,
+      "angle_order": 48,
+      "tail": 160.0,
+      "panel_count_range": [
+        44,
+        44
+      ]
+    },
+    {
+      "method": "Gauss_E_cosine_kinematic_edges",
+      "log_j": -29.577932950095374,
+      "log_chi": -26.57420710303675,
+      "j": {
+        "log": -29.577932950095374,
+        "value": 1.4271411662965006e-13,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "log": -26.57420710303675,
+        "value": 2.8771896820361534e-12,
+        "representable": true,
+        "reason": null
+      },
+      "order": 24,
+      "angle_order": 32,
+      "tail": 160.0,
+      "panel_count_range": [
+        44,
+        44
+      ]
+    },
+    {
+      "method": "Gauss_E_cosine_kinematic_edges",
+      "log_j": -29.577932950095374,
+      "log_chi": -26.57420710303675,
+      "j": {
+        "log": -29.577932950095374,
+        "value": 1.4271411662965006e-13,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "log": -26.57420710303675,
+        "value": 2.8771896820361534e-12,
+        "representable": true,
+        "reason": null
+      },
+      "order": 24,
+      "angle_order": 48,
+      "tail": 100.0,
+      "panel_count_range": [
+        43,
+        43
+      ]
+    }
+  ],
+  "runtime_seconds": 1.4188825408928096
+}

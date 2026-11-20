@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "current exact qualified source accepted",
+      "passed": true
+    },
+    {
+      "name": "reject changed input_state.T",
+      "passed": true
+    },
+    {
+      "name": "reject changed input_state.nB",
+      "passed": true
+    },
+    {
+      "name": "reject changed input_state.Ye",
+      "passed": true
+    },
+    {
+      "name": "reject changed full_fd_state.neutron",
+      "passed": true
+    },
+    {
+      "name": "reject changed thermodynamic_closure.u_T",
+      "passed": true
+    },
+    {
+      "name": "reject changed environment.numpy",
+      "passed": true
+    },
+    {
+      "name": "reject changed controls.internal_order",
+      "passed": true
+    },
+    {
+      "name": "reject changed controls.coarse_order",
+      "passed": true
+    },
+    {
+      "name": "reject changed controls.fine_order",
+      "passed": true
+    },
+    {
+      "name": "reject changed controls.tail",
+      "passed": true
+    },
+    {
+      "name": "reject changed controls.edges",
+      "passed": true
+    },
+    {
+      "name": "reject changed controls.inventory",
+      "passed": true
+    },
+    {
+      "name": "reject changed source quantum_slab/fixed_bath.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source quantum_slab/guarded_capture.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source capture_endpoint/mapped_capture.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source crossed_opacity/crossed_decay.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source allowed_opacity/allowed_capture.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source response_reference/free_density_response.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source nr_baryon_eos/free_nucleons.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source thermodynamics/lepton_reference.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source weak_rates/static_capture.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source element.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source qualify_source.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source short_evolution.py",
+      "passed": true
+    },
+    {
+      "name": "reject changed source qualification_contract.py",
+      "passed": true
+    },
+    {
+      "name": "reject corrupt physical moments",
+      "passed": true
+    },
+    {
+      "name": "reject rehashed wrong result state",
+      "passed": true
+    },
+    {
+      "name": "reject missing legacy provenance",
+      "passed": true
+    },
+    {
+      "name": "fingerprint stable across checks",
+      "passed": true
+    }
+  ],
+  "runtime_seconds": 0.48214650014415383,
+  "physics": "No trajectory or additional physical rate calculation performed"
+}

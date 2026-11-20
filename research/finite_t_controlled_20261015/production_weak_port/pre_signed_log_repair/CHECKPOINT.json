@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN for DIFFERENT physics/numerics review; not merge/release qualified",
+  "utc": "2026-10-16T05:50:45.061727+00:00",
+  "candidate_manifest_sha256": "795975d51e75e47360822e70845b1eac5ba68df2f134877b7ed1e34ca339789d",
+  "manifest_sha256": "12404beabd3aaf98db37cb2c880ea061cc5d55edd1e813bf8ab8a9c162f11647",
+  "author_report_sha256": "7e9b91ee2c593ca5f78ff652a4e6cb380b997b5762e11b44bce217e6056d1a82",
+  "weak_reference_sha256": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+  "candidate_paths": 11,
+  "pytest_pass": 53,
+  "pytest_fail": 0,
+  "new_tests": 40,
+  "unchanged_cold_tests": 13,
+  "related_raw_pass": 1505,
+  "related_raw_fail": 0,
+  "separate_anchor_pass": 13,
+  "preserved_draft_guard_change": "pre_signed_value_guard; five old/new complete profile groups byte-identical",
+  "max_recorded_collection": [
+    "candidate_1_NEUTRON_DECAY.json",
+    20.20419912505895
+  ],
+  "source_holds": 60,
+  "baseline_package_blobs": 71,
+  "remaining_gates": [
+    "DIFFERENT numerical/physics review",
+    "DIFFERENT packaging review",
+    "normal CI",
+    "minimum declared runtime",
+    "AD/spectra/EOS binders not authorized"
+  ],
+  "quota_latest": "2026-10-16T05:47:30UTC28% same account/window/reset1792652325; deadline10:27:28UTC48winddown51hard"
+}

@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "name": "normalized two-sided Slater V0",
+      "error": 5.418769313974244e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "complete channel spin SUM V0",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "normalized two-sided Slater Vx",
+      "error": 1.4458211382931174e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "complete channel spin SUM Vx",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "normalized two-sided Slater Vy",
+      "error": 1.1412115930626022e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "complete channel spin SUM Vy",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "normalized two-sided Slater Vz",
+      "error": 1.189552110393694e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "complete channel spin SUM Vz",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "normalized two-sided Slater Ax",
+      "error": 2.485119527508386e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "complete channel spin SUM Ax",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "normalized two-sided Slater Ay",
+      "error": 3.593918475683003e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "complete channel spin SUM Ay",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "normalized two-sided Slater Az",
+      "error": 1.6213336203910964e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "complete channel spin SUM Az",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "unchanged authors after normalization",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 15,
+  "failed": [],
+  "author_after": {
+    "ope_weak_diagrams/initial_check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "ope_weak_diagrams/CHECKPOINT.json": "55c5d3c4a9c6dcc407fcebe287f1d15e119598b773f191b3087dbb336711f929",
+    "ope_weak_diagrams/external_legs.py": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484",
+    "ope_weak_diagrams/results.json": "5c8ef9f586970dc7d1e3c533930cf6454df381eaaf433603419f9d6444db11f8",
+    "ope_weak_diagrams/RESEARCH_NOTE.md": "fbd32e7d2c7d71f071ceb70ec8821e1f7f1edc0c01e2560bbc603c5fc881462b",
+    "ope_weak_diagrams/initial_results.json": "bee824f532de0128ce73ff26367fb684ef1a7088fbd532eecab5c3892c6fa0e4",
+    "ope_weak_diagrams/check_algebra.py": "223296aac140c085c2eee75da1375422d9bf8c04faf5a73aada20d6ef5ff29c8",
+    "ope_weak_diagrams/initial_external_legs.py": "7aa8a929136b6422257fb9bcf13a0409f63d586b7b26ca0690ba1d17d94b4f96",
+    "ope_nucleon_amplitudes/CHECKPOINT.json": "8c527b784f0c6cfca1e763698d25e44ffe8aa42e865ed5c8917a097294893a75",
+    "ope_nucleon_amplitudes/check_ope.py": "3d3fbb456615819f8715b965add4cd83d1d83c8fd7d2340e0e006dbae42930f8",
+    "ope_nucleon_amplitudes/initial_driver_syntax_failure.txt": "c143db5b6fe901314b86cd94ac0d971157d1dd73b757814e6c85f10af619d066",
+    "ope_nucleon_amplitudes/SOURCES.md": "d2c78b2a085bec460597664584521f64adaa53d999fcd7a015c44b2e0d7155cc",
+    "ope_nucleon_amplitudes/results.json": "0a23edde0332ed727325618a352703bc9405d265b26d7aedcc4b70cd340dc90a",
+    "ope_nucleon_amplitudes/RESEARCH_NOTE.md": "e472695fa3d39b8a8997885835464f57a8b82176a1f462b53ee0f9bcf1750164",
+    "ope_nucleon_amplitudes/download_failure.txt": "f17df00d39acc721affad8b2016bcf4ff74af420dac7aade0e72ce82c63a41bb",
+    "ope_nucleon_amplitudes/initial_driver_syntax.py.txt": "15e4c3ddf682a57d9f818cf4eff1f4b594f401cdebae82716925be899981cc7b",
+    "ope_nucleon_amplitudes/initial_charge_zero_roundoff_results.json": "e50032b69b13c89b5850fc2232e840ed26a528769f2b4684d0369adfa99427ae",
+    "ope_nucleon_amplitudes/ope.py": "a4d25710817060fc4fdcfb3f4b013012f67ead9c3cb07dab9407275e6eebefd7",
+    "ope_nucleon_amplitudes/initial_charge_zero_roundoff_check.py.txt": "3de0c6497c3bbdf46c8f2838baa2f14e87de57d654d08bb56eed7cfbfbc564cd"
+  }
+}

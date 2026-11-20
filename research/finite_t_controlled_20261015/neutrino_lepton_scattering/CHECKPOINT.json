@@ -1,0 +1,43 @@
+{
+  "status": "FROZEN pending independentreview",
+  "selected_checks": 276,
+  "counts": {
+    "vacuum_results.json": 208,
+    "refinement.json": 24,
+    "differential_results.json": 12,
+    "kernel_integral_results.json": 4,
+    "final_checks.json": 19,
+    "limit_results.json": 9
+  },
+  "coarse": {
+    "checks": 72,
+    "failed": 6,
+    "qualification": "preserved initial transport refinement FAIL"
+  },
+  "initial_domain_failure": "Outgoingenergy50guard blocked firsttailattempt; no completedintegral",
+  "physical_scope": "ActualT2pairFD selectedE10CMrates+transport+energy; selectedkernelandoneelectronchannelintegratedcrossmethodreference",
+  "files": {
+    "final_checks.py": "5f1f2474338233d7c8ca15d85fa6de341022ed0ea7b2062477366fc3bbc775bb",
+    "SOURCES.json": "e2d31413b353fc16e6587e201e06af69c691397ec4d300b6ce2f7de71457a91f",
+    "check_vacuum.py": "8e843755de8270034993a67e0e896c43c94ea8ecadaaeb53b41ec29699d97236",
+    "differential_results.json": "8bd8a3206187c0d83686fe77233d3a64473dd9a3df9e67babb6dd8062fdd4f34",
+    "final_checks.json": "06f0979cb65f5cf6ca8fd2e45ea7503eae877a1913574fe6bdfe5094c37570c7",
+    "initial_kernel_domain_failure.txt": "161dd85327b6e723ba41ed624b72015df06fa9b8db754ada3f8a16fbcae9c047",
+    "initial_scatter_before_energy_tail_guard.py.txt": "0cdda781ff98bbaaf3baa91203abe15d95087f458db1b1e438c7b1f1bdbb1992",
+    "limit_results.json": "e8da40ec8718732a3629bf6dac2d77cd087b18686abff43a793809106fd1f482",
+    "results.json": "89970299c9c242ccbb6d75e3b971852cfed6831a7373255c663cd564ddfbbc66",
+    "check_limits.py": "fce957ba4c9a56dfd494f82c35feb178c116881f4a3035004352dd526cb90229",
+    "RESEARCH_NOTE.md": "fea9afb24f354387e7df508727ac0b2d95c48835c1be3006044048f6eab70100",
+    "refine.py": "c74c0dabaa0df81bfd2ef56d0483d0df821987956a309ea0f715cd2484f86951",
+    "kernel_integral.py": "862b1aabb9e2d38bb66b4c5c9ef0f9070f7e8dbef7474935dab7e9352c1d39a7",
+    "scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+    "kernel_integral_results.json": "d6ded3888985d3d0b33de5925a5f32321d9dcfcc5a1b0a8e261f05507d3d93a4",
+    "vacuum_results.json": "addc99f96db3e7821b485afa683123669d41e7cc87e7841ad1dfb4fe9d7c5043",
+    "study.py": "ea8d53009faea881370b4e24fa7b442fdc52fc14c4f7f7f54bad707c88c7234d",
+    "refinement.json": "68deb6d60bbcac09e13bee8098988653dacd988978cb98fa02d482aa8fe1a119"
+  },
+  "dependencies": {
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  }
+}

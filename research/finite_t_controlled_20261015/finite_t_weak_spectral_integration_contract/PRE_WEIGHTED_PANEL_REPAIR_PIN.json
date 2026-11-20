@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-16T06:30:25.692532+00:00",
+  "initial_author_files": {
+    "SOURCE_PIN.json": "064edd71905c9a9ebad758d78008aa40cb012644d9e463728c571b05881bc252",
+    "CHECKPOINT.json": "2739fc9fe29d2dd9b78f251df7e42f0d809f02344421880b9ad17ad6c6acf538",
+    "REPORT.md": "3bf3816fdca387f3fded3f7c80dd475340b55851716aa804a854209b889a9cbb",
+    "AUDIT_ERRORS.json": "bb81e1c06b765e8c87aa561acdfdcd0e42da21cd7b8d603bc8ca909ab2cd28ab",
+    "CONTRACT.md": "a64ce4ab738103f522d9520c42f2807440c4af51bddbf79c317cd8ff1cde3f6e",
+    "PARTIAL_CHECKPOINT.json": "1c6d52f9d125814045f79c8a33c4ebc1da5f88fdf14e094341dac7000d181921",
+    "AUDIT_RESULTS.json": "39a257fb3f6da73f31a7113e5ea64e11a72ace954173d3300267512fbd89a40b",
+    "MANIFEST.json": "46fe58b89fa59fe9b6d25c15dfb34c43ac82b301f8800b181130b313f9f65388",
+    "SAVED_EVIDENCE.json": "d4b984aa5b4426901ec273becbc1e9393852971f7d01ac90b575fcb4d6f75a81",
+    "DEPENDENCY_GRAPH.md": "ac8cfd27bd2f769bdfa484c10573b00d0ff5945b9c2c0127500fbbd1792cda5b"
+  },
+  "initial_review_files": {
+    "extra.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audit.stdout": "4dc2c122070d0dfc5dd9364d5da7f990c233695eef86b5f7ca9be8886c15545d",
+    "INITIAL_AUTHOR_REPORT.md": "3bf3816fdca387f3fded3f7c80dd475340b55851716aa804a854209b889a9cbb",
+    "LOCK.json": "aa1d126ffbd65b5d184ee53c336691f4e0ee04ae55fc6a08be8d5707f1e03366",
+    "audit.py": "9b47ad3f8e0df4ce2a47b6e95fd7d370b4e0071971dfc34df0248e8500abc121",
+    "INITIAL_CHECKPOINT.json": "e5a94ba8e4ff941a22d3a22c54152d55f504c9841d9a6421923cc7ca39269d40",
+    "INITIAL_REVIEW.md": "0a080037bb3e43174b161cedc73a254ea2a0d82da44748722a89b6ef6f1dd938",
+    "RESULTS.json": "119d32be238d270588bface58d708d687b87e79cf06cf00b8251910f8b481d24",
+    "audit.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "INITIAL_MANIFEST.json": "757f5be3600a482ec06bcc9b0b349f0e04f8cd834ea11e17a43f734c52d4081c",
+    "extra.stdout": "5f9d5b7fc27819e95324bc20b6776769f29ed33dd77e66837f73845b1748113e",
+    "extra_audit.py": "b82dc0d3d9e63198a8968271043ae8ac0e3ed2550ca71fa0ea7da582097ff8c7",
+    "INITIAL_AUTHOR_MANIFEST.json": "46fe58b89fa59fe9b6d25c15dfb34c43ac82b301f8800b181130b313f9f65388",
+    "EXTRA_RESULTS.json": "ce15a602e5d1801787c00a272a02971bf94b6e6dc1140578259264e3c3fe01e3",
+    "INITIAL_AUTHOR_CONTRACT.md": "a64ce4ab738103f522d9520c42f2807440c4af51bddbf79c317cd8ff1cde3f6e"
+  },
+  "snapshot": "pre_weighted_panel_repair",
+  "initial_outcome": "2157PASS1requiredclarificationFAIL; zero new physical calls"
+}

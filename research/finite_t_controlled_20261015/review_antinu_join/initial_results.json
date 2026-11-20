@@ -1,0 +1,68 @@
+{
+  "tested_source_sha256": "e8a5bfc789938837c082fa6b10eadadb1edcdfb254dfdef60ca6ae145fef1815",
+  "checks": [
+    {
+      "name": "different radiation temperature at same chemical potential",
+      "expected": "reject",
+      "rejected": false,
+      "passed": false
+    },
+    {
+      "name": "nonfinite net event source",
+      "expected": "reject",
+      "rejected": false,
+      "passed": false
+    },
+    {
+      "name": "gross positive underflow flag",
+      "expected": "reject",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "same sign different radiation affinity",
+      "expected": "reject",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "changed exact material temperature",
+      "expected": "reject",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "accepted status with empty source and review hash coverage",
+      "expected": "reject",
+      "rejected": false,
+      "passed": false
+    }
+  ],
+  "witnesses": [
+    {
+      "name": "different radiation temperature at same chemical potential",
+      "detail": "{'radiation': ('common_material_T_FD', 2.8093641696198066), 'channels': {'neutron_beta': {'forward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'backward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'net': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}}, 'positron_capture': {'forward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'backward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'net': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}}}, 'scope': 'Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.', 'forward': {'number': 2.0, 'neutrino_energy': 1.0, 'material_energy_loss': 1.0}, 'backward': {'number': 2.0, 'neutrino_energy': 1.0, 'material_energy_loss': 1.0}, 'net': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}, 'sources': {'dn_n_dt': -0.0, 'dn_p_dt': 0.0, 'dn_e_net_dt': 0.0, 'dn_antinu_dt': 0.0, 'matter_Le_dt': 0.0, 'radiation_Le_dt': -0.0, 'matter_energy_dt': -0.0, 'radiation_energy_dt': 0.0}, 'direct_energy_residual': 0.0, 'gross_normalized_net': 0.0, 'affinity_over_T': 0.0, 'reservoir_entropy_from_source': 0.0}"
+    },
+    {
+      "name": "nonfinite net event source",
+      "detail": "{'radiation': ('empty',), 'channels': {'neutron_beta': {'forward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'backward': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}, 'net': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}}, 'positron_capture': {'forward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'backward': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}, 'net': {'number': nan, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}}}, 'scope': 'Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.', 'forward': {'number': 2.0, 'neutrino_energy': 1.0, 'material_energy_loss': 1.0}, 'backward': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}, 'net': {'number': nan, 'neutrino_energy': 1.0, 'material_energy_loss': 1.0}, 'sources': {'dn_n_dt': nan, 'dn_p_dt': nan, 'dn_e_net_dt': nan, 'dn_antinu_dt': nan, 'matter_Le_dt': nan, 'radiation_Le_dt': nan, 'matter_energy_dt': -1.0, 'radiation_energy_dt': 1.0}, 'direct_energy_residual': 0.0, 'gross_normalized_net': nan}"
+    },
+    {
+      "name": "gross positive underflow flag",
+      "detail": "Positive gross moments must be represented, not floored"
+    },
+    {
+      "name": "same sign different radiation affinity",
+      "detail": "Radiation occupations differ"
+    },
+    {
+      "name": "changed exact material temperature",
+      "detail": "Material states/species/roots differ"
+    },
+    {
+      "name": "accepted status with empty source and review hash coverage",
+      "detail": "{'status': 'complete', 'scope': 'Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.', 'matched_state': {'T': 2.0, 'nB': 1e-07, 'Ye': 0.3, 'neutron': {'temperature': 2.0, 'mass': 939.56542052, 'chemical_potential': 919.8287578100662, 'kinetic_chemical_potential': -19.73666270993374, 'density': 6.999999999999867e-08, 'kinetic_energy_density': 2.1055950732222884e-07, 'energy_density': 6.598013894372098e-05, 'pressure': 1.4000127913834654e-07, 'entropy_density': 8.660635880779551e-07, 'free_energy_density': 6.424801176756507e-05, 'cv_fixed_density': 1.0555650416858674e-07, 'dn_dmu_fixed_temperature': 3.4999360442836035e-08, 'dn_dtemperature_fixed_mu': 3.9802468257800983e-07, 'dmu_dtemperature_fixed_density': -11.372341595444237, 'log_antiparticle_density': -936.3035101315536, 'antiparticle_density': 0.0, 'antiparticle_density_representable': False, 'log_antiparticle_to_particle_ratio': -919.8287395366565}, 'proton': {'temperature': 2.0, 'mass': 938.27208816, 'chemical_potential': 916.8449303084382, 'kinetic_chemical_potential': -21.427157851561788, 'density': 3.000000000000039e-08, 'kinetic_energy_density': 9.023964651475486e-08, 'energy_density': 2.8238402291315118e-05, 'pressure': 6.000023542792139e-08, 'entropy_density': 3.9652730874476906e-07, 'free_energy_density': 2.744534767382558e-05, 'cv_fixed_density': 4.523894800630727e-08, 'dn_dmu_fixed_temperature': 1.4999882286989292e-08, 'dn_dtemperature_fixed_mu': 1.8326224598480855e-07, 'dmu_dtemperature_fixed_density': -12.217578943520637, 'log_antiparticle_density': -934.1669909161242, 'antiparticle_density': 0.0, 'antiparticle_density_representable': False, 'log_antiparticle_to_particle_ratio': -916.8449224608399}, 'electron': {'temperature': 2.0, 'chemical_potential': 0.17446333200826397, 'mass': 0.51099895069, 'net_density': 2.999999999999999e-08, 'particle_density': 2.034286367843283e-07, 'antiparticle_density': 1.7342863678432833e-07, 'energy_density': 2.3941492019342855e-06, 'pressure': 7.908453734948221e-07, 'entropy_density': 1.5898803377344317e-06, 'free_energy_density': -7.856114735345779e-07, 'cv_fixed_net_density': 4.776150759539621e-06, 'dn_dmu_fixed_temperature': 1.722234521707307e-07, 'dn_dtemperature_fixed_mu': 3.027289631070514e-08, 'dmu_dtemperature_fixed_net_density': -0.17577685227616174}, 'muons': 'absent'}, 'qualified_controls': {'beta': {'rest_order': 32}, 'positron_capture': {'initial_order': 12}}, 'results': {'empty': {'radiation': ('empty',), 'channels': {'neutron_beta': {'forward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'backward': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}, 'net': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}}, 'positron_capture': {'forward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'backward': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}, 'net': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}}}, 'scope': 'Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.', 'forward': {'number': 2.0, 'neutrino_energy': 1.0, 'material_energy_loss': 1.0}, 'backward': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}, 'net': {'number': 2.0, 'neutrino_energy': 1.0, 'material_energy_loss': 1.0}, 'sources': {'dn_n_dt': -2.0, 'dn_p_dt': 2.0, 'dn_e_net_dt': 2.0, 'dn_antinu_dt': 2.0, 'matter_Le_dt': 2.0, 'radiation_Le_dt': -2.0, 'matter_energy_dt': -1.0, 'radiation_energy_dt': 1.0}, 'direct_energy_residual': 0.0, 'gross_normalized_net': 1.0}, 'LTE': {'radiation': ('common_material_T_FD', 2.8093641696198066), 'channels': {'neutron_beta': {'forward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'backward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'net': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}}, 'positron_capture': {'forward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'backward': {'number': 1.0, 'neutrino_energy': 0.5, 'material_energy_loss': 0.5}, 'net': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}}}, 'scope': 'Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.', 'forward': {'number': 2.0, 'neutrino_energy': 1.0, 'material_energy_loss': 1.0}, 'backward': {'number': 2.0, 'neutrino_energy': 1.0, 'material_energy_loss': 1.0}, 'net': {'number': 0.0, 'neutrino_energy': 0.0, 'material_energy_loss': 0.0}, 'sources': {'dn_n_dt': -0.0, 'dn_p_dt': 0.0, 'dn_e_net_dt': 0.0, 'dn_antinu_dt': 0.0, 'matter_Le_dt': 0.0, 'radiation_Le_dt': -0.0, 'matter_energy_dt': -0.0, 'radiation_energy_dt': 0.0}, 'direct_energy_residual': 0.0, 'gross_normalized_net': 0.0, 'affinity_over_T': 0.0, 'reservoir_entropy_from_source': 0.0}}, 'regressions': [{'name': 'different_affinity', 'rejected': True, 'reason': 'Radiation occupations differ'}, {'name': 'different_matter', 'rejected': True, 'reason': 'Material states/species/roots differ'}], 'source_manifest': {'status': 'accepted_selected_sources', 'sha256': {}, 'synthetic_test_only': True}}"
+    }
+  ],
+  "synthetic_only": true
+}

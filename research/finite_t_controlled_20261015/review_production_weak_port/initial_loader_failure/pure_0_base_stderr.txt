@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_port/worker.py", line 9, in <module>
+    sp=importlib.util.spec_from_file_location('weak_review_unique_oracle_loader',P/'oracles.py');O=importlib.util.module_from_spec(sp);sys.modules[sp.name]=O;sp.loader.exec_module(O)
+                                                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_port/oracles.py", line 23, in <module>
+    E=module('weak_review_dirac_primitives',ebody,{})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_port/oracles.py", line 17, in module
+    tree=ast.fix_missing_locations(ast.Module(body=body,type_ignores=[]));(P/(name+'.py')).write_text('# Generatedselecteddefinitions; environmentexplicitinoracles.py; notupstreamdriver.\n'+ast.unparse(tree)+'\n');exec(compile(tree,m.__file__,'exec'),m.__dict__);return m
+                                                                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_port/weak_review_dirac_primitives.py", line 64, in <module>
+NameError: name 'Bath' is not defined. Did you mean: 'math'?

@@ -1,0 +1,14 @@
+{
+  "locked_utc": "2026-10-16T04:29:22Z",
+  "candidate_imported_or_compared": false,
+  "author_lock_sha256": "909be0ce9098060f4d6e4eab1cec73658ef7cdabedcb5c3dfff8b11eac8fa7c6",
+  "heldouts_nB_T_Yp": [[0.213,12.3,0.237],[0.271,22.7,0.317]],
+  "spinodal_diagnostic_nB_T_Yp": [0.06,1.0,0.1],
+  "pair_gas_t_nu_m_internal_fm": [[0.37,0.13,0.83],[0.21,0.0,0.49]],
+  "model": "EXACTroundedGM1commonM939,spin2,netparticleMINUSanti,scalarPLUSanti,noDiracsea,noleptons,HC197.3269804",
+  "oracle": "Independently authoredoriginalmomentumgasquadrature/grandpotential/scalarmass/thermalmoments; nestedpositivefixednetnuandscalarbrentroots; no candidateimport/fieldseed. Algebraresponsesreuseacceptedderivation, no independentphysicalmodelclaim.",
+  "gates": {"forward_relative":2e-9,"field_absolute_MeV":2e-7,"number_scalar_residual":2e-9,"gas_moment_FD":2e-6,"H_matrix_relative":2e-6,"Cv_relative":3e-6,"free_energy_second_FD":1e-4},
+  "FD_steps": [0.003,0.0015,0.00075],
+  "policy": "Forwardbeforederivatives. No mutablecandidatecomparisons untilFROZENsignal. Admissionboundsarenumericalguards,notuniformcertificate. Full2chargeHneeded; spinodaldefaultrejects/diagnosticonly. No sourcefix/installs/production/PR/git/papers/nativeO2scl or empiricaluncertainty. Pureoracleruns bounded112s/thread1 andquotaidentityguarded.",
+  "planned_invalid_cases": ["nonfinite/Boolean/misdimensionedphysicalscalars","unsupportedmodel/couplingoverrides","T/n/Yrequestboundariesandjustoutside","unsupportedzero-species/netbranch","malformedorwrongmodelinitialseed","invalidorillconditionedcontrols","unrepresentedtinyantibaryoncomponentvsrepresentabletotalstate"]
+}

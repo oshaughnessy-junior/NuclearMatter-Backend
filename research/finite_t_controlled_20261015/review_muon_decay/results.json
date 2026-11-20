@@ -1,0 +1,810 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Weyl trace vs scalar 0.00483633169894799250.17",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "Weyl trace vs spinors 0.00483633169894799250.17",
+      "error": -4.440892098500626e-16,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "reciprocal inverse 0.00483633169894799250.17",
+      "error": 0.0,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "momentum closure 0.00483633169894799250.17",
+      "error": 1.344981374922048e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh shell mu0.00483633169894799250.17",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell e0.00483633169894799250.17",
+      "error": 7.060413474435026e-17,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell anti0.00483633169894799250.17",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell numu0.00483633169894799250.17",
+      "error": 1.0183623350688733e-17,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "full-event affinity 0.17",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "numu partner affinity 0.17",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue partner affinity 0.17",
+      "error": -1.0658141036401503e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "Weyl trace vs scalar 0.00483633169894799250.83",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "Weyl trace vs spinors 0.00483633169894799250.83",
+      "error": 4.440892098500626e-16,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "reciprocal inverse 0.00483633169894799250.83",
+      "error": 0.0,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "momentum closure 0.00483633169894799250.83",
+      "error": 1.344981374922048e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh shell mu0.00483633169894799250.83",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell e0.00483633169894799250.83",
+      "error": 6.956488802545672e-18,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell anti0.00483633169894799250.83",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell numu0.00483633169894799250.83",
+      "error": -2.0367246701377466e-17,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "full-event affinity 0.83",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "numu partner affinity 0.83",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue partner affinity 0.83",
+      "error": -7.105427357601002e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "Weyl trace vs scalar 0.370.52",
+      "error": 4.440892098500626e-16,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "Weyl trace vs spinors 0.370.52",
+      "error": 0.0,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "reciprocal inverse 0.370.52",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "momentum closure 0.370.52",
+      "error": 6.72490687461024e-17,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh shell mu0.370.52",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell e0.370.52",
+      "error": -4.073449340275493e-17,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell anti0.370.52",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell numu0.370.52",
+      "error": -1.3525124762633474e-17,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "full-event affinity 0.52",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "numu partner affinity 0.52",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue partner affinity 0.52",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "Weyl trace vs scalar 0.9870.71",
+      "error": 0.0,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "Weyl trace vs spinors 0.9870.71",
+      "error": 6.661338147750939e-16,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "reciprocal inverse 0.9870.71",
+      "error": 0.0,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "momentum closure 0.9870.71",
+      "error": 3.2048384324314423e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "fresh shell mu0.9870.71",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell e0.9870.71",
+      "error": -4.888139208330591e-16,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell anti0.9870.71",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "fresh shell numu0.9870.71",
+      "error": -5.594031381603918e-21,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "full-event affinity 0.71",
+      "error": -4.973799150320701e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "numu partner affinity 0.71",
+      "error": -4.263256414560601e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue partner affinity 0.71",
+      "error": -5.1514348342607263e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.0048363316989479925 rate",
+      "error": -1.9984014443252818e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.0048363316989479925 energy_e",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.0048363316989479925 energy_anti_e",
+      "error": -1.3322676295501878e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.0048363316989479925 energy_nu_mu",
+      "error": -8.881784197001252e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "analytic total phase 0.0048363316989479925",
+      "error": -5.551115123125783e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent energy ledger 0.0048363316989479925",
+      "error": -7.713569417534318e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.0 rate",
+      "error": -1.2212453270876722e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.0 energy_e",
+      "error": -6.661338147750939e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.0 energy_anti_e",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.0 energy_nu_mu",
+      "error": -6.661338147750939e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "analytic total phase 0.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent energy ledger 0.0",
+      "error": -1.5424253175965422e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent massless anti mean",
+      "error": -5.551115123125783e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent massless e mean",
+      "error": -5.551115123125783e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent massless numu mean",
+      "error": -5.551115123125783e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent massless anti second",
+      "error": -1.3877787807814457e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent massless e second",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent massless numu second",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent massless e anti cross",
+      "error": -4.163336342344337e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.37 rate",
+      "error": -9.992007221626409e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.37 energy_e",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.37 energy_anti_e",
+      "error": -1.3322676295501878e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.37 energy_nu_mu",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "analytic total phase 0.37",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent energy ledger 0.37",
+      "error": 2.0721057632096113e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.987 rate",
+      "error": -3.219646771412954e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.987 energy_e",
+      "error": -3.219646771412954e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.987 energy_anti_e",
+      "error": -7.771561172376096e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "new 1D antinue reduction 0.987 energy_nu_mu",
+      "error": -6.5503158452884236e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "analytic total phase 0.987",
+      "error": -1.0547118733938987e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent energy ledger 0.987",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "analytic massless shape antinue0",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "analytic massless shape numu0",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "analytic massless shape antinue1",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "analytic massless shape numu1",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "analytic massless shape antinue2",
+      "error": -5.551115123125783e-17,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "analytic massless shape numu2",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "analytic massless shape antinue3",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "analytic massless shape numu3",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row2",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row3",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row4",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row5",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row6",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row7",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row8",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row9",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row10",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row11",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row12",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row13",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row14",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reconstructed Q/Le/Lmu row15",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "material Yp 1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron total Le 1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon total Lmu 1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "matter escape energy 1",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "material Yp -1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron total Le -1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "muon total Lmu -1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "matter escape energy -1",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "all frozen source/report bytes unchanged",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "point": {
+        "ratio": 0.0048363316989479925,
+        "frac": 0.17,
+        "c": -0.63,
+        "trace": 3.827554713806186e-14,
+        "author": 3.8275547138061844e-14
+      }
+    },
+    {
+      "point": {
+        "ratio": 0.0048363316989479925,
+        "frac": 0.83,
+        "c": 0.41,
+        "trace": 3.827554713806185e-14,
+        "author": 3.827554713806187e-14
+      }
+    },
+    {
+      "point": {
+        "ratio": 0.37,
+        "frac": 0.52,
+        "c": -0.19,
+        "trace": 5.044074874418016e-14,
+        "author": 5.044074874418016e-14
+      }
+    },
+    {
+      "point": {
+        "ratio": 0.987,
+        "frac": 0.71,
+        "c": 0.57,
+        "trace": 3.726949394695408e-17,
+        "author": 3.7269493946954106e-17
+      }
+    },
+    {
+      "one_dimension": {
+        "ratio": 0.0048363316989479925,
+        "values": [
+          457089.0316305327,
+          14487908.079899441,
+          16905099.0285537,
+          16902277.43249702,
+          510232428.64443696,
+          680476916.3415128,
+          680286077.299557,
+          510321845.49639684
+        ],
+        "author": {
+          "rate": 457089.03163053177,
+          "lifetime": 2.1877575938166616e-06,
+          "energy_e": 16905099.02855368,
+          "energy_anti_e": 14487908.079899423,
+          "energy_nu_mu": 16902277.432497006,
+          "fourmomentum_residual": 6.72490687461024e-17
+        }
+      }
+    },
+    {
+      "one_dimension": {
+        "ratio": 0.0,
+        "values": [
+          457174.5465083071,
+          14491295.971205076,
+          16906511.96640592,
+          16906511.96640592,
+          510375597.06907445,
+          680500796.0920993,
+          680500796.0920993,
+          510375597.06907433
+        ],
+        "author": {
+          "rate": 457174.5465083065,
+          "lifetime": 2.187348371945792e-06,
+          "energy_e": 16906511.96640591,
+          "energy_anti_e": 14491295.97120506,
+          "energy_nu_mu": 16906511.96640591,
+          "fourmomentum_residual": 6.72490687461024e-17
+        }
+      }
+    },
+    {
+      "one_dimension": {
+        "ratio": 0.37,
+        "values": [
+          170154.82694350238,
+          4361906.359479748,
+          8771827.44755039,
+          4844548.791303957,
+          124942250.50601372,
+          457241328.5914931,
+          151288454.062563,
+          222463348.97281322
+        ],
+        "author": {
+          "rate": 170154.8269435022,
+          "lifetime": 5.877000482225741e-06,
+          "energy_e": 8771827.44755038,
+          "energy_anti_e": 4361906.359479742,
+          "energy_nu_mu": 4844548.791303951,
+          "fourmomentum_residual": 6.72490687461024e-17
+        }
+      }
+    },
+    {
+      "one_dimension": {
+        "ratio": 0.987,
+        "values": [
+          0.0021306122573900854,
+          0.001456466956521984,
+          0.222201378566729,
+          0.0014591844129733197,
+          0.0011373308137884851,
+          23.173363661613113,
+          0.0011410499213787098,
+          0.15189481434072002
+        ],
+        "author": {
+          "rate": 0.0021306122573900785,
+          "lifetime": 469.3486562519654,
+          "energy_e": 0.22220137856672828,
+          "energy_anti_e": 0.001456466956521983,
+          "energy_nu_mu": 0.0014591844129733102,
+          "fourmomentum_residual": 1.05076669915785e-18
+        }
+      }
+    }
+  ],
+  "initial_hashes": {
+    "muon_decay_contract/SOURCES.json": "120820f50dd3ea43e354f247b0fedd8dde8791abf96478fe14f31e53f61ab98a",
+    "muon_decay_contract/initial_general_boost.py": "84686abd13cc1a9ddee3257061c4b5840fec84848612ed223cc7121d5840e235",
+    "muon_decay_contract/CHECKPOINT.json": "5d4dbc6d937cbce16efc9d7c7f64629e8ec9bb8e11731756d99316ec8661afd5",
+    "muon_decay_contract/inventory_results.json": "a588ce83f98ab766b286b128dde3ec6e1f3ecda01a23ac9b88582d4e5d6e8aa4",
+    "muon_decay_contract/decay.py": "a05e3db13d57ba3e7890fc58aa3e6e57342cea6ced95f2f77efd1c9dac1f441a",
+    "muon_decay_contract/RESEARCH_CONTRACT.md": "3242cedf88b57164b3eaaa0d39735c57d660efe8f2aaf989800c33001db914d7",
+    "muon_decay_contract/results.json": "1e8fff0c813a59be58dee060415f84facfcc6fbe7eaa4afde4282cadb51badf2",
+    "muon_decay_contract/initial_general_boost_results.json": "b9336d8443b77868b53e72ce3f6667d45ea559a430d8595dfd714ca73a38e9bd",
+    "muon_decay_contract/probes.py": "e657b5d5e4ef9f1ac21215a6040ea3565242915c88c2616ff7e5eb2810357047",
+    "muon_decay_contract/check_inventory.py": "f4d8343e6afd489199b06246eb6b58508d3e9581f4d424ec90c9aa547f6c290e",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  },
+  "final_hashes": {
+    "muon_decay_contract/SOURCES.json": "120820f50dd3ea43e354f247b0fedd8dde8791abf96478fe14f31e53f61ab98a",
+    "muon_decay_contract/initial_general_boost.py": "84686abd13cc1a9ddee3257061c4b5840fec84848612ed223cc7121d5840e235",
+    "muon_decay_contract/CHECKPOINT.json": "5d4dbc6d937cbce16efc9d7c7f64629e8ec9bb8e11731756d99316ec8661afd5",
+    "muon_decay_contract/inventory_results.json": "a588ce83f98ab766b286b128dde3ec6e1f3ecda01a23ac9b88582d4e5d6e8aa4",
+    "muon_decay_contract/decay.py": "a05e3db13d57ba3e7890fc58aa3e6e57342cea6ced95f2f77efd1c9dac1f441a",
+    "muon_decay_contract/RESEARCH_CONTRACT.md": "3242cedf88b57164b3eaaa0d39735c57d660efe8f2aaf989800c33001db914d7",
+    "muon_decay_contract/results.json": "1e8fff0c813a59be58dee060415f84facfcc6fbe7eaa4afde4282cadb51badf2",
+    "muon_decay_contract/initial_general_boost_results.json": "b9336d8443b77868b53e72ce3f6667d45ea559a430d8595dfd714ca73a38e9bd",
+    "muon_decay_contract/probes.py": "e657b5d5e4ef9f1ac21215a6040ea3565242915c88c2616ff7e5eb2810357047",
+    "muon_decay_contract/check_inventory.py": "f4d8343e6afd489199b06246eb6b58508d3e9581f4d424ec90c9aa547f6c290e",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+  },
+  "runtime_seconds": 0.013867791974917054
+}

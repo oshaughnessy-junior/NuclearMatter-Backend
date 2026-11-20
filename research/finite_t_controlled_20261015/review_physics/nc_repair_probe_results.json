@@ -1,0 +1,61 @@
+{
+  "source_sha256": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+  "preserved_source_sha256": "1758dc7a5b2873acefed94557374e815a936e0baf4f1ccca9534f72c95ba3e40",
+  "checks": [
+    {
+      "name": "unchanged physical function AST angular_weight",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical function AST log_kernel",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical function AST kernel",
+      "passed": true
+    },
+    {
+      "name": "unchanged physical function AST bare_static_cross_sections",
+      "passed": true
+    },
+    {
+      "name": "unchanged transition-rate matrix on original held-out state",
+      "passed": true
+    },
+    {
+      "name": "original strict entropy identity after repair",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "independent pair bath heat versus returned radiation energy",
+      "error": 4.4075050265834595e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "number conservation after pair accumulation",
+      "error": 1.503756822184016e-23,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "original failure reproduced on preserved source",
+      "value": 2.167470647407299e-10,
+      "passed": true
+    },
+    {
+      "name": "unchanged held-out valid-control moments Couplings(vector=-0.5, axial=-0.63615)",
+      "passed": true
+    },
+    {
+      "name": "unchanged held-out valid-control moments Couplings(vector=0.03742000000000001, axial=0.63615)",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "original_strict_entropy_error": 2.167470647407299e-10,
+  "repaired_strict_entropy_error": 2.220446049250313e-16,
+  "initial_failure_json_preserved": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_physics/nc_initial_probe_failure.json"
+}

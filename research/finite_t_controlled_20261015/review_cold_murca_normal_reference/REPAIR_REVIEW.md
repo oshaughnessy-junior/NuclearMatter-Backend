@@ -1,0 +1,13 @@
+# Separate recheck: count-stoichiometry inventory naming repair
+
+**ACCEPTED for the scoped naming/unit repair.** This supplements the immutable107-check physical-recipe/geometry review; it does not change or extend its scientific qualification. Author manifest SHA256 `9cbcb2e7a998f5cfce312ba92eff56ad8c95738aa774c01e7816dc99e022c5ae`, repaired inventory `ced2f43384dd397e37c51feabd2a6a1d1980474494e13c9862bec3ab5d792897`.
+
+Run `/Users/rossma/miniconda3/bin/python outputs/nmb-finite-t-20261015/review_cold_murca_normal_reference/repair_probe.py`. Final result: **80 PASS, zero failures**. The scientific implementation, angular oracle, original physical validator and numerical results are byte-identical to the reviewed originals. All eight original author artifacts are preserved exactly in `pre_inventory_repair/`; the prior independent review, probe, raw107-pass evidence and initial geometry-fixture failure are unchanged.
+
+All32 material stoichiometric values retain their exact original integers, now explicitly named delta_Ne,delta_Nmu,delta_Np,delta_Nn per event. Separate radiation Le/Lmu signs match the appropriate material flavor, and every directed event conserves baryon and electric charge. The inventory generator reproduces the saved JSON exactly. Integer stoichiometry is no longer labelled an abundance-fraction increment.
+
+I independently used asymmetric synthetic directed event-number rates and exact rational nB,V,dt. Counting events in a finite volume gives delta_Ni=sum(nu_i R_a V dt); dividing by NB=nB V gives delta_Yi=dt sum(nu_i R_a)/nB. The separate radiation source is a flavor-number density rate, sum(nu_rad R_a), and cancels nB times the corresponding material fraction source. Synthetic example rates are test inputs, not calculated modified-Urca predictions. The repaired contract explicitly says energy-only Q does not supply R_a and must not replace it.
+
+One initial reviewer test mistakenly converted exact rational sources to rounded decimal strings before demanding exact charge-source equality. That79PASS/1FAIL result and exact script are preserved in `initial_repair_results.json` and `initial_repair_probe.py.txt`. The final test retains the rational sources through the identity, with no tolerance relaxation and no author edit. Per-species finite-volume identities already passed initially. This test correction does not indicate a physical or repaired-author failure.
+
+All author file hashes match before and after the recheck. No physical solver or emissivity replay was required. The original limits—source-adopted normalization, supplied beta affinity, assumed number cancellation, cold geometry and no warm/pairing/absolute-matrix qualification—remain in force.

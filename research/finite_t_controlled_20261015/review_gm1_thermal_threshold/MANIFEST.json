@@ -1,0 +1,23 @@
+{
+  "status": "selected thermal-opening claim accepted",
+  "checks": 109,
+  "source_sha256": {
+    "gm1_threshold_thermal_probes/probe.py": "98a1b620c6bc63cb77d8eba70e01bfe291f613b99623a2487af6bfafcf8473ee",
+    "gm1_threshold_thermal_probes/results.json": "1a8104d5a3eb5e1d50610c0f720be60c27880d2940f22d014ef1235c6a182246",
+    "gm1_threshold_thermal_probes/heldout_results.json": "30c8ff2a7f01ec5b1225e76d7942ead6b41653f935be4269537ae5498c8ad1f1",
+    "gm1_threshold_thermal_probes/boltzmann_results.json": "1e4279c531d6a6185314a1e7e8ff2ff3226c9d2c1278d8b46984dc5e88857878",
+    "gm1_threshold_thermal_probes/initial_heldout_scope_failure.py": "6c61bd612ad4a758b7308098d48672a1778b9506e5d45fbacea56751a4547dfc",
+    "gm1_differential_response/adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f",
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e"
+  },
+  "review_files": {
+    "initial_partial_results.json": "9f77154bd6eb73ec08ce5da1d843f65d7b17e37f55fcb32f39ef465fdecdfa58",
+    "initial_probe_import_contract.py": "5789af3dc8b7681174fadc9df842dc47a449b289f0a0a4369b3f4e455b0c7e1e",
+    "initial_probe_complex_reporting.py": "5736b8b48ac314ffabc23d76ae7ef86f4d934f3ad62417b5eb38aff414393886",
+    "results.json": "58ff1ab284226e4a66b01a1e619be5bfff7c862163a230339d9021d909ad94f2",
+    "onset_results.json": "7fabb87373a2093c32c130276fad8a042177739d5e7d28b06f569aa7837cd211",
+    "probe.py": "d5c4beb9a9102b4159291a329940aea7e5d77615f9bbeb923c5e3eb7e5c28553",
+    "check_onsets.py": "392f7a44e8138cb1ca72c680298fbd11528b5dc9220453415a2763165915a228",
+    "REVIEW.md": "d4c2707ca328ec817e7bb9a7152e147b4a276f7c5a1ca5b4af650552f22deb88"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "status": "accepted_sampled_bulk_only_with_preserved_lowT_balance_factor_failure",
+  "passed_checks": 101,
+  "failed_checks": [
+    {
+      "name": "newheldout accuracy 0.12 balance_factor",
+      "error": 0.015378505753862931,
+      "tolerance": 0.01,
+      "passed": false
+    }
+  ],
+  "source_sha256": {
+    "gm1_potential_fit/potential.py": "9306f288b22a9bbd10af107f552cd276ba066f6620cfbb94c52433954a919df4",
+    "gm1_potential_fit/coefficients.json": "ecd8e2f44e54613f9a08678c47b0f982fcd779968d188ebd525032f1ad902234",
+    "gm1_potential_fit/fit_study.py": "d6d240b34315c94454a179a05c206608989d9461dd6183b1c126eaaa0f2ea6e0",
+    "gm1_potential_fit/results.json": "29f04314447f060d21084572447e2c8954f3ea82669e2cda22fff03b9eaf5d8b",
+    "gm1_potential_fit/baseline_results.json": "96f71b04722b70a904e6b7705827974d2d151c78fc224eada17c97351f605235",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d"
+  },
+  "source_unchanged": true,
+  "files_sha256": {
+    "data_audit.py": "bb83995b821823269219974cf1bf4ea1e25ea562873bd971d78977b8886de265",
+    "data_audit.json": "6807b04ca924ae8a79f54409919793c0ed1f7e65f1bf72e81bec2bea21ea3f50",
+    "results.json": "ecd3338571f24f0850e622046b5da9724f41e294847cd73d3cb0fb71e2572648",
+    "cv_probe.py": "52a314d83453c4a14ad1cc44a433eaf3a2e9faf208a7b4422369c80575419786",
+    "probe.py": "f3cda6d14d53e9fa4c6078a792738dc3ed7167db7cb3ef9f0840b844002ed87d",
+    "cv_results.json": "dbc18d129ce5be4b8a9ff630e1ce01ec116e80e636ab8ae9724b9d17ca9b4ba5",
+    "REVIEW.md": "249e4c24c371a949bc0b93e90a86af422aaedc3257a4af1a74a6bccd9838d0c7"
+  },
+  "external_matched_GM1_gate": "OPEN"
+}

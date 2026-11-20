@@ -1,0 +1,497 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "one helicity number bin0",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "phase weighted energy bin0",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "one helicity number bin1",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "phase weighted energy bin1",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "heldout physicalKMS flavor0bin0",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "heldout physicalKMS flavor0bin1",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "heldout physicalKMS flavor1bin0",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "heldout physicalKMS flavor1bin1",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "entropy from material firstlaw and radiation",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "nonnegative finite grid entropy source",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "coupled total energy",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "coupled total lepton",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "step signed material energy",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "step signed material composition",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "actual entropy nondecrease",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "small step approaches entropy tangent",
+      "error": -0.0020509913557651416,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "new state physical rates change",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "old state rates rejected",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "heldout FD collision stationarity",
+      "error": 9.783877524262496e-17,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "heldout": {
+    "T": 2.15,
+    "Ye": 0.28,
+    "nB": 0.00013,
+    "grid": {
+      "edges": [
+        0.0,
+        3.0,
+        9.0
+      ],
+      "weights": [
+        5.934079467621562e-08,
+        1.542860661581606e-06
+      ],
+      "energies": [
+        2.25,
+        6.923076923076923
+      ]
+    },
+    "f": [
+      [
+        0.25,
+        0.07
+      ],
+      [
+        0.11,
+        0.03
+      ]
+    ],
+    "rates": {
+      "T": 2.15,
+      "Ye": 0.28,
+      "nB": 0.00013,
+      "edges": [
+        0.0,
+        3.0,
+        9.0
+      ],
+      "j": [
+        [
+          1273.4585329432534,
+          6988.624518050525
+        ],
+        [
+          0.015298805314318327,
+          0.06918561648238002
+        ]
+      ],
+      "chi": [
+        [
+          1.9976209017850763,
+          96.3539488619768
+        ],
+        [
+          79.0892947292449,
+          3143.587437724215
+        ]
+      ],
+      "channels": [
+        {
+          "flavor": "nue",
+          "E": 2.25,
+          "coefficients": {
+            "flavor": "nue",
+            "energy_MeV": 2.25,
+            "log_j": 7.149491732399978,
+            "log_chi": 0.6919569233773615,
+            "j_s": 1273.4585329432534,
+            "chi_s": 1.9976209017850763,
+            "rate_s": 1275.4561538450384,
+            "feq": 0.9984337988446227,
+            "mu_neutrino_MeV": 16.133699839398624,
+            "true_absorption_cm_inv": 6.663346086528555e-11,
+            "relaxation_cm_inv": 4.2544637792223525e-08,
+            "true_over_relaxation": 0.0015662011553772136,
+            "channels": {
+              "capture": {
+                "log_j": 7.149491732399978,
+                "log_chi": 0.6919569233773615
+              }
+            },
+            "capture_panel_guard": {
+              "used": false,
+              "discarded_panels": []
+            }
+          }
+        },
+        {
+          "flavor": "nue",
+          "E": 6.923076923076923,
+          "coefficients": {
+            "flavor": "nue",
+            "energy_MeV": 6.923076923076923,
+            "log_j": 8.852039037330876,
+            "log_chi": 4.568028378576596,
+            "j_s": 6988.624518050525,
+            "chi_s": 96.3539488619768,
+            "rate_s": 7084.978466912506,
+            "feq": 0.98640024817126,
+            "mu_neutrino_MeV": 16.133699839398624,
+            "true_absorption_cm_inv": 3.2140217770914304e-09,
+            "relaxation_cm_inv": 2.3632944318140605e-07,
+            "true_over_relaxation": 0.01359975182873999,
+            "channels": {
+              "capture": {
+                "log_j": 8.852039037330876,
+                "log_chi": 4.568028378576596
+              }
+            },
+            "capture_panel_guard": {
+              "used": false,
+              "discarded_panels": []
+            }
+          }
+        },
+        {
+          "flavor": "antinue",
+          "E": 2.25,
+          "coefficients": {
+            "flavor": "antinue",
+            "energy_MeV": 2.25,
+            "log_j": -4.179980537663946,
+            "log_chi": 4.370577527172625,
+            "j_s": 0.015298805314318327,
+            "chi_s": 79.0892947292449,
+            "rate_s": 79.10459353455921,
+            "feq": 0.0001933997082942419,
+            "mu_neutrino_MeV": -16.133699839398624,
+            "true_absorption_cm_inv": 2.638134903622055e-09,
+            "relaxation_cm_inv": 2.638645216837283e-09,
+            "true_over_relaxation": 0.9998066002917058,
+            "channels": {
+              "capture": {
+                "log_j": -4.179980537663946,
+                "log_chi": 4.370577527172625
+              },
+              "crossed_neutron_decay": {
+                "log_j": -89.51191037484892,
+                "log_chi": -80.96135231001236
+              }
+            },
+            "capture_panel_guard": {
+              "used": false,
+              "discarded_panels": []
+            }
+          }
+        },
+        {
+          "flavor": "antinue",
+          "E": 6.923076923076923,
+          "coefficients": {
+            "flavor": "antinue",
+            "energy_MeV": 6.923076923076923,
+            "log_j": -2.670962292264079,
+            "log_chi": 8.053119922840828,
+            "j_s": 0.06918561648238002,
+            "chi_s": 3143.587437724215,
+            "rate_s": 3143.6566233406975,
+            "feq": 2.2008006844226496e-05,
+            "mu_neutrino_MeV": -16.133699839398624,
+            "true_absorption_cm_inv": 1.0485878993407548e-07,
+            "relaxation_cm_inv": 1.0486109771783177e-07,
+            "true_over_relaxation": 0.9999779919931557,
+            "channels": {
+              "capture": {
+                "log_j": -2.670962292264079,
+                "log_chi": 8.053119922840828
+              },
+              "crossed_neutron_decay": {
+                "log_j": -167.6445187254716,
+                "log_chi": -156.9204365103667
+              }
+            },
+            "capture_panel_guard": {
+              "used": false,
+              "discarded_panels": []
+            }
+          }
+        }
+      ],
+      "order": 48,
+      "tail": 40.0
+    },
+    "material_energy_source": -526.6936867183545,
+    "composition_source": -78.61427885067648,
+    "entropy_matter_source": 344.9513913252295,
+    "entropy_radiation_source": 195.90276026043077,
+    "entropy_production": 540.8541515856604,
+    "dt": 2.8228737876059656e-07,
+    "before": {
+      "energy_MeV_per_baryon": 8.751550699117992,
+      "electron_lepton_per_baryon": 0.2805386318285995,
+      "entropy_per_baryon": 5.835319647160421,
+      "matter_entropy_per_baryon": 5.830295417514209,
+      "radiation_entropy_per_baryon": 0.0050242296462117905
+    },
+    "after": {
+      "energy_MeV_per_baryon": 8.751550699117992,
+      "electron_lepton_per_baryon": 0.2805386318285995,
+      "entropy_per_baryon": 5.835472010323391,
+      "matter_entropy_per_baryon": 5.830392783792334,
+      "radiation_entropy_per_baryon": 0.005079226531057442
+    },
+    "newT": 2.150162435573078,
+    "newY": 0.2799778081812901,
+    "newf": [
+      [
+        0.2502694699776266,
+        0.07183280049634252
+      ],
+      [
+        0.1099975479935404,
+        0.029973397092588536
+      ]
+    ],
+    "newrates": {
+      "T": 2.150162435573078,
+      "Ye": 0.2799778081812901,
+      "nB": 0.00013,
+      "edges": [
+        0.0,
+        3.0,
+        9.0
+      ],
+      "j": [
+        [
+          1273.360653630687,
+          6988.062203252152
+        ],
+        [
+          0.0153150839578014,
+          0.06927054336573803
+        ]
+      ],
+      "chi": [
+        [
+          1.9994270354898787,
+          96.42488498470885
+        ],
+        [
+          79.08334460767315,
+          3143.348069580967
+        ]
+      ],
+      "channels": [
+        {
+          "flavor": "nue",
+          "E": 2.25,
+          "coefficients": {
+            "flavor": "nue",
+            "energy_MeV": 2.25,
+            "log_j": 7.149414868433246,
+            "log_chi": 0.6928606572610043,
+            "j_s": 1273.360653630687,
+            "chi_s": 1.9994270354898787,
+            "rate_s": 1275.3600806661764,
+            "feq": 0.9984322646868126,
+            "mu_neutrino_MeV": 16.132640328103722,
+            "true_absorption_cm_inv": 6.669370700079048e-11,
+            "relaxation_cm_inv": 4.2541433135925534e-08,
+            "true_over_relaxation": 0.0015677353131873866,
+            "channels": {
+              "capture": {
+                "log_j": 7.149414868433246,
+                "log_chi": 0.6928606572610043
+              }
+            },
+            "capture_panel_guard": {
+              "used": false,
+              "discarded_panels": []
+            }
+          }
+        },
+        {
+          "flavor": "nue",
+          "E": 6.923076923076923,
+          "coefficients": {
+            "flavor": "nue",
+            "energy_MeV": 6.923076923076923,
+            "log_j": 8.851958572652817,
+            "log_chi": 4.568764311298235,
+            "j_s": 6988.062203252152,
+            "chi_s": 96.42488498470885,
+            "rate_s": 7084.487088236866,
+            "feq": 0.9863892920145463,
+            "mu_neutrino_MeV": 16.132640328103722,
+            "true_absorption_cm_inv": 3.2163879514510287e-09,
+            "relaxation_cm_inv": 2.363130525530721e-07,
+            "true_over_relaxation": 0.01361070798545366,
+            "channels": {
+              "capture": {
+                "log_j": 8.851958572652817,
+                "log_chi": 4.568764311298235
+              }
+            },
+            "capture_panel_guard": {
+              "used": false,
+              "discarded_panels": []
+            }
+          }
+        },
+        {
+          "flavor": "antinue",
+          "E": 2.25,
+          "coefficients": {
+            "flavor": "antinue",
+            "energy_MeV": 2.25,
+            "log_j": -4.178917056648997,
+            "log_chi": 4.370502291384697,
+            "j_s": 0.0153150839578014,
+            "chi_s": 79.08334460767315,
+            "rate_s": 79.09865969163096,
+            "feq": 0.00019362001856299221,
+            "mu_neutrino_MeV": -16.132640328103722,
+            "true_absorption_cm_inv": 2.6379364289302153e-09,
+            "relaxation_cm_inv": 2.638447285142542e-09,
+            "true_over_relaxation": 0.999806379981437,
+            "channels": {
+              "capture": {
+                "log_j": -4.178917056648997,
+                "log_chi": 4.370502291384697
+              },
+              "crossed_neutron_decay": {
+                "log_j": -89.50474501129497,
+                "log_chi": -80.95532566326128
+              }
+            },
+            "capture_panel_guard": {
+              "used": false,
+              "discarded_panels": []
+            }
+          }
+        },
+        {
+          "flavor": "antinue",
+          "E": 6.923076923076923,
+          "coefficients": {
+            "flavor": "antinue",
+            "energy_MeV": 6.923076923076923,
+            "log_j": -2.669735522807203,
+            "log_chi": 8.053043775044152,
+            "j_s": 0.06927054336573803,
+            "chi_s": 3143.348069580967,
+            "rate_s": 3143.4173401243343,
+            "feq": 2.2036699512193362e-05,
+            "mu_neutrino_MeV": -16.132640328103722,
+            "true_absorption_cm_inv": 1.0485080547226332e-07,
+            "relaxation_cm_inv": 1.0485311608887553e-07,
+            "true_over_relaxation": 0.9999779633004874,
+            "channels": {
+              "capture": {
+                "log_j": -2.669735522807203,
+                "log_chi": 8.053043775044152
+              },
+              "crossed_neutron_decay": {
+                "log_j": -167.63135034722316,
+                "log_chi": -156.9085710493718
+              }
+            },
+            "capture_panel_guard": {
+              "used": false,
+              "discarded_panels": []
+            }
+          }
+        }
+      ],
+      "order": 48,
+      "tail": 40.0
+    },
+    "largest_rate_fractional_change": 0.0012275222463276059
+  },
+  "runtime_seconds": 5.329673249972984,
+  "source_sha256": {
+    "review_thermal_box_physics/probe.py": "2da041d8cb5788bed95589df8efdfb289fbea8b9a6ca111cbad7b6ac68a9fbe5",
+    "thermal_box/box.py": "ae356024fd688765f15342d5026f5e9534fcaec96ba713a4e55e25f0658c2710",
+    "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "quantum_slab/fixed_bath.py": "8e73b2c7d41cce51f8a522b8ba4444599010783be2b8af892c50add7e684ecf3"
+  }
+}

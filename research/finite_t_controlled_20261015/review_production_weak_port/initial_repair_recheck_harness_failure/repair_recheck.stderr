@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_port/recheck_repair.py", line 38, in <module>
+    t1,t2=[ast.parse(f.read_text())for f in paths];cls=next(n for n in t2.body if isinstance(n,ast.ClassDef)and n.name=='SignedQuantity');post=next(n for n in cls.body if isinstance(n,ast.FunctionDef)and n.name=='__post_init__');branch=next(n for n in post.body if isinstance(n,ast.If));newguard=branch.orelse[0];ck('guardexactfinite_log',0 if isinstance(newguard,ast.Expr)and isinstance(newguard.value,ast.Call)and getattr(newguard.value.func,'id','')=='finite_real'else 1);branch.orelse.pop(0);ck('wholeASTidenticalafterguardremoval',0 if ast.dump(t1,include_attributes=False)==ast.dump(t2,include_attributes=False)else 1)
+                                                                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~^^^
+IndexError: list index out of range

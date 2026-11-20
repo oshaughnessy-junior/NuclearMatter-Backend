@@ -1,0 +1,72 @@
+{
+  "time": "2026-10-15T22:44:24.797837+00:00",
+  "status": "repaired authorFROZEN; independent guarded-source recheck pending",
+  "physical_passes": 55,
+  "guard_passes": 116,
+  "audit_passes": 6,
+  "preserved_coarse_failures": [
+    {
+      "name": "full directional phi(16, 32)",
+      "error": 0.022089930178462946,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "full directional phi(32, 64)",
+      "error": 0.00020094409508053523,
+      "tolerance": 3e-06,
+      "passed": false
+    },
+    {
+      "name": "phi32/64 slab heat",
+      "error": -7.310831301454712e-06,
+      "tolerance": 3e-06,
+      "passed": false
+    }
+  ],
+  "upstream_pins": {
+    "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+    "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "initial_snapshot_pins": {
+    "CHECKPOINT.json": "5d2688e02fe92c5e75e57c8bbdb2af77672332415721619d5857d6e4c611b3d5",
+    "make_figure.py": "f08bce6f80e9e7495c594de4c26b539d4cff8f24459bdb38c4e44edb49070de6",
+    "accepted_results.json": "954a1f02620283114760283fe82f8eb1f308607d23a2355e6b66c3f79d8e4b88",
+    "results.json": "9b5f933c3ad559fd6a7dbb98ee16acda935e1de291d34a9d3be3fb87dd37306b",
+    "RESEARCH_NOTE.md": "7f0be2285e13432c75a4ff102dc2574b73addb364addb80117335e82312082ff",
+    "refine.py": "24485b2802c3df26da97b5d1350e45f331a7fb11c34dc1a1357734075c4c55b8",
+    "check_slab.py": "578ca62175fd5d66364debb963e69af3039fe7f6614d9d9ebe947e688829403a",
+    "figure_data.json": "598eb0192ad66dcadb2bc058101055d06df96fc4c1e1ded5814d642b01e94374",
+    "MANIFEST.json": "0091277ba134951a390dc8150069a4a1e93236721ec041ad9002a4cac4922b0f",
+    "reference.py": "279e96a3ae395fe6b6de0839ab3d13ab6b6e12067c12ae0a810c35bff22e2393",
+    "slab_feedback.pdf": "b24ec5586d0eeaf68449ac863dc146d3e79e3e3515b29c94c638c3525212fb9c",
+    "partial_grids.json": "5bd5d0477506565198b4a0c1fcc46dedfa1d05fc56a561518b08d0174132d9f3",
+    "slab_feedback.png": "bf9c7966383d9169688aa3e60ce9692a223bfdf65c28ee40cbb7a837f5a2ea78",
+    "slab.py": "be7f2c05f595647ef9fa7a868bd9b8b4d78f39dee4b2b2055c32180334906022",
+    "refinement_partial.json": "bfba322c841ed02b7b4596cf6ea9bcf90749a78b999040d8bb15efa8caad4791"
+  },
+  "files": {
+    "REPAIR_NOTE.md": "bc8b10d81ad5d0747e5722755b6ddffbb22f6623f83c41b7c1ba202b0bc2e76e",
+    "RESEARCH_NOTE.md": "43a8773c037b597dda1d0184022636b75d2ab5abd1d44e8123cd267f92deddee",
+    "accepted_results.json": "2ca56fee4754386c186f3d517a4b89fc7ae24fdf3839810b414d60b52f793e02",
+    "audit_replay.py": "94ee08a7c6e9c9aaf1502bc1485f779ada29b1b301d22208332c2cab4156d79f",
+    "check_repair.py": "04ccedf5963cf47e956b003324837e610297ef148316b04251e9e67e2cc6eda3",
+    "check_slab.py": "578ca62175fd5d66364debb963e69af3039fe7f6614d9d9ebe947e688829403a",
+    "figure_data.json": "598eb0192ad66dcadb2bc058101055d06df96fc4c1e1ded5814d642b01e94374",
+    "initial_repair_driver_failure.txt": "172562f3e7a3696068c3b7141bda9b90549ddad23ed8679e4bfce01ed76bf740",
+    "initial_repair_driver_syntax.py.txt": "a53c1aeb5f483f76a735e1fdb0f1c1666aa2f5e30b1877df5128b2e288509e51",
+    "make_figure.py": "f08bce6f80e9e7495c594de4c26b539d4cff8f24459bdb38c4e44edb49070de6",
+    "partial_grids.json": "2f605ec86866f3155797a3dc248598bb42287ef869b97a1191d2b0ee35be5434",
+    "reference.py": "279e96a3ae395fe6b6de0839ab3d13ab6b6e12067c12ae0a810c35bff22e2393",
+    "refine.py": "24485b2802c3df26da97b5d1350e45f331a7fb11c34dc1a1357734075c4c55b8",
+    "refinement_partial.json": "8fee32386b5b809685b142741fa74e3d05cdb5b092f14693ff4708e51f186b3e",
+    "repair_results.json": "7bfbec1975fe566bce720e7b6abe2c3ab85945381d27f5e85b2f1d81f238a204",
+    "replay_audit_results.json": "578649de253c7e92df84f0c09bf1370fdb0b96a58bc183757e6e21f9f8d6438d",
+    "results.json": "1ff5be0e349d1885fcafb82941986baeedfbf562b264fee6bc894edff61dc561",
+    "slab.py": "13c3bee74aa03803693416082271b5fad2dba5d6e8e1759e9eb2020be6694dfa",
+    "slab_feedback.pdf": "b24ec5586d0eeaf68449ac863dc146d3e79e3e3515b29c94c638c3525212fb9c",
+    "slab_feedback.png": "bf9c7966383d9169688aa3e60ce9692a223bfdf65c28ee40cbb7a837f5a2ea78"
+  }
+}

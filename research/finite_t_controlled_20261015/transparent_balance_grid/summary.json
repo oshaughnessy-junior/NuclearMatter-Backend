@@ -1,0 +1,91 @@
+{
+  "states": [
+    {
+      "T": 1.0,
+      "nB": 1e-07,
+      "status": "AUTHOR_SELECTED_PASS",
+      "passed": 413,
+      "failed": [],
+      "seconds": 69.66285250009969,
+      "kinetic_Ye": 0.3850567101958036,
+      "chemical_Ye": 0.5385589338244703,
+      "exception": null,
+      "affinity_MeV": 0.9024227188220688,
+      "rates": {
+        "EC": 1.931157310189378e-08,
+        "beta": 3.165945351993298e-11,
+        "PC": 1.9279913648375038e-08
+      },
+      "energy": {
+        "EC": 8.816615079093207e-08,
+        "beta": 1.4768610719930943e-11,
+        "PC": 1.122766786317366e-07
+      },
+      "escaping_energy": 2.0045759803338861e-07,
+      "normalized_drift": 3.084005833681966e-14,
+      "chemical_dYe_dt": -0.24424058317611025,
+      "max_source_refinement": 1.710986352598809e-08,
+      "max_isolated_tail": 1.1977974168075889e-11,
+      "actual_source_trial_pairs": 10
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-07,
+      "status": "AUTHOR_SELECTED_PASS",
+      "passed": 337,
+      "failed": [],
+      "seconds": 52.45192858297378,
+      "kinetic_Ye": 0.5490065797957709,
+      "chemical_Ye": 0.5934333636038136,
+      "exception": null,
+      "affinity_MeV": 0.5559823373117445,
+      "rates": {
+        "EC": 5.010099210059188e-06,
+        "beta": 2.6291581641715015e-11,
+        "PC": 5.0100729184725325e-06
+      },
+      "energy": {
+        "EC": 7.318736618959663e-05,
+        "beta": 1.2557290977923441e-11,
+        "PC": 7.811780798644817e-05
+      },
+      "escaping_energy": 0.0001513051867333358,
+      "normalized_drift": -5.003481772111938e-13,
+      "chemical_dYe_dt": -9.358106978049785,
+      "max_source_refinement": 4.276338394504364e-09,
+      "max_isolated_tail": 1.6918133560750448e-11,
+      "actual_source_trial_pairs": 8
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-06,
+      "status": "AUTHOR_SELECTED_PASS",
+      "passed": 375,
+      "failed": [],
+      "seconds": 60.90197112504393,
+      "kinetic_Ye": 0.2786277578701185,
+      "chemical_Ye": 0.40054406565185624,
+      "exception": null,
+      "affinity_MeV": 1.6620061689945043,
+      "rates": {
+        "EC": 5.9405868650176035e-06,
+        "beta": 3.1194957239215343e-10,
+        "PC": 5.940274921017989e-06
+      },
+      "energy": {
+        "EC": 5.725581507003356e-05,
+        "beta": 1.4753141784207735e-10,
+        "PC": 6.333380777036452e-05
+      },
+      "escaping_energy": 0.00012058977037181593,
+      "normalized_drift": 4.690427153716426e-10,
+      "chemical_dYe_dt": -7.46900357546321,
+      "max_source_refinement": 1.0138353490063423e-08,
+      "max_isolated_tail": 1.2943313087987462e-11,
+      "actual_source_trial_pairs": 9
+    }
+  ],
+  "source_original_anchor_hashes_unchanged": true,
+  "independent_review": "PENDING",
+  "scope": "Onlythree selected new prescribed baths; actual freebeta+PC+EC with empty incoming neutrinos, fixedT thermostat. No fit/interactingEOS/fullweak/hydro/uncertainty/AD claim."
+}

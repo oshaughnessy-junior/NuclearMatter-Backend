@@ -1,0 +1,357 @@
+{
+  "checks": [
+    {
+      "name": "KMS_physical_4",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_physical_8",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_physical_12",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_physical_16",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_dilute_4",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_dilute_8",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_dilute_12",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_dilute_16",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_outertail_12",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_baryontail_12",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_innerorder_12",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_leptonorder_16",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_angleorder8to16_8",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_phi4to8_8",
+      "error": 1.4210854715202004e-14,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_j",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "KMS_dilute20_20",
+      "error": 0.0,
+      "limit": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "ordinary_log_chi",
+      "error": 0.0,
+      "limit": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "warm_final_joint_refinement",
+      "error": 4.062528091708373e-12,
+      "limit": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "warm_control_outertail",
+      "error": 4.062528091708373e-12,
+      "limit": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "warm_control_baryontail",
+      "error": 4.062528091708373e-12,
+      "limit": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "warm_control_innerorder",
+      "error": 4.062528091708373e-12,
+      "limit": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "warm_control_leptonorder",
+      "error": 4.064304448547773e-12,
+      "limit": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "warm_control_angleorder8to16",
+      "error": 3.3288927170360694e-12,
+      "limit": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "warm_control_phi4to8",
+      "error": 1.0886768819773351e-08,
+      "limit": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "anchor_density_0",
+      "error": 4.141131881851834e-14,
+      "limit": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "anchor_density_1",
+      "error": 5.46229728115577e-14,
+      "limit": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "anchor_density_2",
+      "error": 3.774758283725532e-14,
+      "limit": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "anchor_refinement",
+      "error": 0.0,
+      "limit": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "dilute16_absolute",
+      "error": 6.218083620224135e-07,
+      "limit": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute20_absolute",
+      "error": 6.658442242013507e-09,
+      "limit": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "dilute16_20_refinement",
+      "error": 6.284671949519094e-07,
+      "limit": 3e-06,
+      "passed": true
+    }
+  ],
+  "passed": 54,
+  "failed": 0,
+  "retained_coarse_absolute_failures": [
+    {
+      "order": 4,
+      "relative_error": 0.23859453096229988,
+      "gate": 3e-06,
+      "qualified": false
+    },
+    {
+      "order": 8,
+      "relative_error": -0.004480807323992031,
+      "gate": 3e-06,
+      "qualified": false
+    },
+    {
+      "order": 12,
+      "relative_error": -5.7890761838708116e-06,
+      "gate": 3e-06,
+      "qualified": false
+    },
+    {
+      "order": 16,
+      "relative_error": -6.218083620224135e-07,
+      "gate": 3e-06,
+      "qualified": true
+    }
+  ],
+  "qualification": "Selected capture points only; no crossed beta inventory or GM1; upstream review required"
+}

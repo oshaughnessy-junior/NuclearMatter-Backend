@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "energyorderTrue",
+      "passed": true
+    },
+    {
+      "name": "energyorder7",
+      "passed": true
+    },
+    {
+      "name": "energyorder8.5",
+      "passed": true
+    },
+    {
+      "name": "angleorderTrue",
+      "passed": true
+    },
+    {
+      "name": "angleorder7",
+      "passed": true
+    },
+    {
+      "name": "angleorder8.5",
+      "passed": true
+    },
+    {
+      "name": "Ein0.0",
+      "passed": true
+    },
+    {
+      "name": "Ein-1.0",
+      "passed": true
+    },
+    {
+      "name": "Einnan",
+      "passed": true
+    },
+    {
+      "name": "Eininf",
+      "passed": true
+    },
+    {
+      "name": "Eout0.0",
+      "passed": true
+    },
+    {
+      "name": "Eout-1.0",
+      "passed": true
+    },
+    {
+      "name": "Eoutnan",
+      "passed": true
+    },
+    {
+      "name": "Eoutinf",
+      "passed": true
+    },
+    {
+      "name": "cutoff19.6",
+      "passed": true
+    },
+    {
+      "name": "cutoff0.0",
+      "passed": true
+    },
+    {
+      "name": "cutoffnan",
+      "passed": true
+    },
+    {
+      "name": "reversebad",
+      "passed": true
+    },
+    {
+      "name": "reverseNone",
+      "passed": true
+    },
+    {
+      "name": "nonfiniteordinarynan",
+      "passed": true
+    },
+    {
+      "name": "nonfiniteordinaryinf",
+      "passed": true
+    },
+    {
+      "name": "nonfiniteordinary-inf",
+      "passed": true
+    },
+    {
+      "name": "nonfinitedifference(None, nan)",
+      "passed": true
+    },
+    {
+      "name": "nonfinitedifference(inf, None)",
+      "passed": true
+    },
+    {
+      "name": "nonfinitedifference(0.0, nan)",
+      "passed": true
+    },
+    {
+      "name": "representability-1000.0",
+      "passed": true
+    },
+    {
+      "name": "representability-745.0",
+      "passed": true
+    },
+    {
+      "name": "representability710.0",
+      "passed": true
+    },
+    {
+      "name": "algebraiczero",
+      "passed": true
+    },
+    {
+      "name": "finitehugecancellationlogs",
+      "passed": true
+    }
+  ]
+}

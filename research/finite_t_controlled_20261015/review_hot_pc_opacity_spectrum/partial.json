@@ -1,0 +1,430 @@
+{
+  "checks": [
+    {
+      "name": "commissioned source SHA",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "commissioned manifest SHA",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "new original-delta spinor (1.73, 'j')",
+      "error": -3.6770586575578424e-13,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent logdelta (1.73, 'j')",
+      "error": 3.5882408155891496e-13,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new original-delta spinor (1.73, 'chi')",
+      "error": -3.4194869158448975e-13,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent logdelta (1.73, 'chi')",
+      "error": 3.339550858073029e-13,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new original-delta spinor (6.13, 'j')",
+      "error": -2.0361490271623298e-13,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent logdelta (6.13, 'j')",
+      "error": 2.0250467969164905e-13,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new original-delta spinor (6.13, 'chi')",
+      "error": -1.829925100338247e-13,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent logdelta (6.13, 'chi')",
+      "error": 1.794120407794414e-13,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new original-delta spinor (12.37, 'j')",
+      "error": 1.3322676295501967e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent logdelta (12.37, 'j')",
+      "error": -8.881784197001213e-15,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new original-delta spinor (12.37, 'chi')",
+      "error": 1.4988010832439727e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent logdelta (12.37, 'chi')",
+      "error": -1.0658141036401446e-14,
+      "gate": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "pasttimelike exact empty 1.31",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "pasttimelike exact empty 3.19",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    }
+  ],
+  "points": [
+    {
+      "inputs": [
+        1.73,
+        0.574,
+        -0.31
+      ],
+      "own": {
+        "j": -4.728351048654423,
+        "chi": -5.2680331334643515
+      },
+      "source": {
+        "j": {
+          "value": 0.008841037467385899,
+          "log": -4.7283510486547815,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.005153737324256548,
+          "log": -5.2680331334646855,
+          "representable": true,
+          "reason": null
+        },
+        "support": [
+          {
+            "lower": 940.8686908524963,
+            "upper": null
+          }
+        ],
+        "panels": [
+          [
+            940.8686908524963,
+            942.27208816
+          ],
+          [
+            942.27208816,
+            942.6727578100663
+          ],
+          [
+            942.6727578100663,
+            950.27208816
+          ],
+          [
+            950.27208816,
+            962.27208816
+          ],
+          [
+            962.27208816,
+            964.8449303084382
+          ],
+          [
+            964.8449303084382,
+            966.6727578100663
+          ],
+          [
+            966.6727578100663,
+            986.27208816
+          ],
+          [
+            986.27208816,
+            1100.8686908524965
+          ]
+        ],
+        "points": 1536
+      },
+      "spinor": {
+        "j": 0.008841037467389148,
+        "chi": 0.005153737324258312,
+        "max_shell_residual": 5.959708778487536e-16
+      }
+    },
+    {
+      "inputs": [
+        6.13,
+        4.83,
+        0.47
+      ],
+      "own": {
+        "j": -1.4159514393013923,
+        "chi": 0.24436647588868077
+      },
+      "source": {
+        "j": {
+          "value": 0.24269459439047628,
+          "log": -1.4159514393015948,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 1.2768121656319182,
+          "log": 0.24436647588850136,
+          "representable": true,
+          "reason": null
+        },
+        "support": [
+          {
+            "lower": 938.2737756688443,
+            "upper": null
+          }
+        ],
+        "panels": [
+          [
+            938.2737756688443,
+            940.8449303084382
+          ],
+          [
+            940.8449303084382,
+            942.27208816
+          ],
+          [
+            942.27208816,
+            942.5287578100663
+          ],
+          [
+            942.5287578100663,
+            950.27208816
+          ],
+          [
+            950.27208816,
+            962.27208816
+          ],
+          [
+            962.27208816,
+            964.8449303084382
+          ],
+          [
+            964.8449303084382,
+            966.5287578100663
+          ],
+          [
+            966.5287578100663,
+            986.27208816
+          ],
+          [
+            986.27208816,
+            1098.2737756688443
+          ]
+        ],
+        "points": 1728
+      },
+      "spinor": {
+        "j": 0.24269459439052568,
+        "chi": 1.2768121656321518,
+        "max_shell_residual": 8.999082689411357e-16
+      }
+    },
+    {
+      "inputs": [
+        12.37,
+        10.99,
+        -0.61
+      ],
+      "own": {
+        "j": -4.072011170711887,
+        "chi": 0.7083067444782074
+      },
+      "source": {
+        "j": {
+          "value": 0.017043077478116984,
+          "log": -4.072011170711878,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 2.030550105914405,
+          "log": 0.7083067444782181,
+          "representable": true,
+          "reason": null
+        },
+        "support": [
+          {
+            "lower": 938.2952408113694,
+            "upper": null
+          }
+        ],
+        "panels": [
+          [
+            938.2952408113694,
+            940.8449303084382
+          ],
+          [
+            940.8449303084382,
+            942.27208816
+          ],
+          [
+            942.27208816,
+            942.4487578100662
+          ],
+          [
+            942.4487578100662,
+            950.27208816
+          ],
+          [
+            950.27208816,
+            962.27208816
+          ],
+          [
+            962.27208816,
+            964.8449303084382
+          ],
+          [
+            964.8449303084382,
+            966.4487578100662
+          ],
+          [
+            966.4487578100662,
+            986.27208816
+          ],
+          [
+            986.27208816,
+            1098.2952408113692
+          ]
+        ],
+        "points": 1728
+      },
+      "spinor": {
+        "j": 0.01704307747811676,
+        "chi": 2.0305501059143745,
+        "max_shell_residual": 4.0915675314685383e-16
+      }
+    }
+  ],
+  "rows": [
+    {
+      "E": 3.47,
+      "j": -1.5428339360183543,
+      "chi": -1.2125160208282537,
+      "controls": [
+        8,
+        12,
+        16,
+        6,
+        60.0,
+        90.0
+      ],
+      "calls": 2016,
+      "seconds": 0.8139467078726739
+    },
+    {
+      "E": 3.47,
+      "j": -1.5428339361719257,
+      "chi": -1.212516020981826,
+      "controls": [
+        12,
+        18,
+        24,
+        8,
+        85.0,
+        110.0
+      ],
+      "calls": 4536,
+      "seconds": 2.65956712490879
+    }
+  ],
+  "before": {
+    "hot_pc_opacity_spectrum/initial_total_syntax_error.txt": "9ea5f238bbbf75895a62c412d4aa1c704964302269941f14d9fdfc611e449c2e",
+    "hot_pc_opacity_spectrum/total_middle_2.json": "30440bb9693defde497bc2457e3d2591a93862c81a68872e14adf1483264efa0",
+    "hot_pc_opacity_spectrum/EXPERIMENT_PLAN.json": "a75aea93b42c5a463ba742a30b21f8b890afaf98e584ea28c535c09748bdf96c",
+    "hot_pc_opacity_spectrum/summary.json": "39728b14f4358d7cee73bad4bd222fdbe94c2313d81c901c3e2043f09b763c16",
+    "hot_pc_opacity_spectrum/pilot.py": "cde74bfee85c4fb29f0a8cfd97cb39deae2222c8533d728e56448bad50f5c11d",
+    "hot_pc_opacity_spectrum/INITIAL_UPSTREAM.json": "4d5044f3bbf2afba8e67096870b4bcbd0018ef6faefc6f290670b64194a94adf",
+    "hot_pc_opacity_spectrum/total_fine_1_partial.json": "4756cd6e39ed8ec938c5d5cbe626203c41562bb72dc64c65f68bf8c2817bcf9c",
+    "hot_pc_opacity_spectrum/controls.py": "92302ab1daeecab8668fef44ff38cc5aed98f714fd56a3eae0f11f467c114093",
+    "hot_pc_opacity_spectrum/resume_stdout.txt": "cc41bcd26886f9b8432747575229ea68a9bc9f286548c41d1daf19054f72dbca",
+    "hot_pc_opacity_spectrum/total_middle2_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/total_fine3_stderr.txt": "cc154152df98bea745203a9e1ef93cad40644f3822f8dd52bd0c1163ab8d9238",
+    "hot_pc_opacity_spectrum/CHECKPOINT_PENDING.json": "acfc3df1f7dc0cb78ad85653a2ccd44bfb897cab8c0572116204460feadda8e7",
+    "hot_pc_opacity_spectrum/total_fine_3.json": "ec9196d1f2b56eb2b8247521aed6a858faca86eaa8421820051f9c6f73a21c4e",
+    "hot_pc_opacity_spectrum/total_fine_2.json": "b3d4bfd015dfe44b6c1055f7cb0ad306420a24e7944ab021963280fec5359d6e",
+    "hot_pc_opacity_spectrum/initial_study_reporting.py.txt": "e49847d149dd085b13a900b5de15fc92c47b56edabdf1076118f91cb694e8d7f",
+    "hot_pc_opacity_spectrum/interrupted_total_fine3_partial.json": "5a33d20b1c847554caa31f9885e05725723002dd1f09c2d42d5a5d953a210bf0",
+    "hot_pc_opacity_spectrum/QUALIFICATION.json": "0d4af563f644e433aa94bd9f9029c699efa88dad356ee341fdd8141e9574bd4b",
+    "hot_pc_opacity_spectrum/total_fine2_stdout.txt": "0ad365855b79a3fc66d75246afd38877c2ab438c05cdba1663a806befbb91d7c",
+    "hot_pc_opacity_spectrum/CHECKPOINT.json": "1d0799a65aab17d0f90775e33dc286a04abed08df183e16e6e87c157c9bbcdc6",
+    "hot_pc_opacity_spectrum/combine_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/total_coarse_stdout.txt": "9ce4ec3233b7da17a31684b4970bcaefc04e0373f32d20f28be18af1680d8263",
+    "hot_pc_opacity_spectrum/partial_results.json": "333570a772c7d0d7a698ac285013fb6bc9ddc89a63f297ef08c2b8b314af094a",
+    "hot_pc_opacity_spectrum/isolated_stdout.txt": "d984974c890868fdeeac31b296fe46fa0697caebc1c3dcbc0bec87b43f56fffe",
+    "hot_pc_opacity_spectrum/total_fine_0_partial.json": "2f2ae33f1a679ba34c824cfc9bf56bfb595e1df7c83c5d49579d927aa289df9f",
+    "hot_pc_opacity_spectrum/study_stderr.txt": "7ae583b96b05294090ed9549ba056bad535a7eca5706d27644726071fd0e9842",
+    "hot_pc_opacity_spectrum/total_middle_2_partial.json": "6d174c440af8eb857d8854e7b68690ec8796d2ced3a18f33638fc5ed2c5f6dfc",
+    "hot_pc_opacity_spectrum/results.json": "bb0a3d0eba12795cb393e13a79936d6946ab98dc6d06c25fafa1f9a82557a2aa",
+    "hot_pc_opacity_spectrum/total_fine1_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/total_middle0_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/RESEARCH_NOTE.md": "3a57e5ebde11507dcb3d52e9e90ef5a84093896373a40c5685da53ef8dc5daea",
+    "hot_pc_opacity_spectrum/resume_fine3.py": "8eee43ff307bef545713b30122e30626eb34efdbaa69a6ee293197ee2a21fc2a",
+    "hot_pc_opacity_spectrum/check_assembly.py": "8dcac84018baa1c254ad9c49d753d08abb404c59b93552e5f139d2cc6d64ec92",
+    "hot_pc_opacity_spectrum/total_fine0_stdout.txt": "b17db8082c6ecea2097e6f9d94a3a235cb2fb34ff6423904847363f69bc82492",
+    "hot_pc_opacity_spectrum/total_middle1_stdout.txt": "03a040b54e39aa1229f80ed50f21c1f7a1f8c665f574eec5f525939e5910e754",
+    "hot_pc_opacity_spectrum/initial_assembly_total.py.txt": "bb8ab77c51d0739175168080b96b6aaf26b20600d42c1a6dfb927d627ad97832",
+    "hot_pc_opacity_spectrum/isolated_controls.json": "0471a0f77592240d5e5c43c6deac3fa583616860c639dc85fd8ce79e5d42e148",
+    "hot_pc_opacity_spectrum/total_fine3_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/total_middle2_stdout.txt": "01b1d976917225d12467634c4df5a6ef8ce19f33fe50b31638ec02cc0e112483",
+    "hot_pc_opacity_spectrum/resume_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/total_middle_1_partial.json": "33a93ca8e5c791e7dc77d9a15a29961fbb9a7786b534226d5c889ee19a760468",
+    "hot_pc_opacity_spectrum/total.py": "b07130ddf61e451ebd04ad20e2d97b309c467277b739fe4970e9f79e44fc9ee8",
+    "hot_pc_opacity_spectrum/spectrum.py": "5fbc8fc21fc6b3b26bf43331ebe04b31bf66145b1f7bf51c977dfa47e5f78b0b",
+    "hot_pc_opacity_spectrum/assembly_controls.json": "68cb81af33357008cf59c1b9cdc2fa8bbe2a935305fa3badb9f435d2c0cb6090",
+    "hot_pc_opacity_spectrum/QUOTA_HOLD.json": "64baa2c433ce0bff705dce74344d3f83471beb3215f67fe2dfe6d045eb011610",
+    "hot_pc_opacity_spectrum/controls_results.json": "a9d6df80032428980cece12b0a35c9091d326e1eda1fb20c380d1d453ce095bf",
+    "hot_pc_opacity_spectrum/initial_two_rule_total.py.txt": "7687c37f9e813d2f24232dd9bf864fd944d24ba8c26881d8ca4294d3fbde09e0",
+    "hot_pc_opacity_spectrum/isolated_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/point_results.json": "7ede63c4924f85f8ce06cb35063aeb9e89f3b6eeefc5f8c590cf82ae7299d8e5",
+    "hot_pc_opacity_spectrum/study_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/total_middle_0_partial.json": "e549b07e51c0c2eb99bcfd41dcfb1b10b91c5d712622b3d17c8f479c7163e7ef",
+    "hot_pc_opacity_spectrum/total_fine2_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/FRESH_EVENT_REFERENCE.json": "aa21844fbd887878d0c3debbfb88fed415c40e81fa205ca6f4deaf3e53595fa4",
+    "hot_pc_opacity_spectrum/MANIFEST.json": "1c60b6e64e31aecc32684a50c780182c176e136d05fea854d8791caf62eaf323",
+    "hot_pc_opacity_spectrum/recover_study.py": "6778f93262dc59cf4411deb96639a50c6166e89c349745b64d43c04bbdb622c9",
+    "hot_pc_opacity_spectrum/initial_study_reporting_error.txt": "7ae583b96b05294090ed9549ba056bad535a7eca5706d27644726071fd0e9842",
+    "hot_pc_opacity_spectrum/total_coarse_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/initial_total_syntax.py.txt": "55c2709e009fdde2cf4fae249b1469c8ff70616937e43863f69caaa1fba994d9",
+    "hot_pc_opacity_spectrum/combine_stdout.txt": "aaee7518ef64e7e35a98010ee9e4bd692ef609b5fca98d6cdcbb711caa25af5d",
+    "hot_pc_opacity_spectrum/total_middle_0.json": "892246c333bb6e4f6ce69eb855e8be64d13c40a9f5060bd164819716717248d6",
+    "hot_pc_opacity_spectrum/total_middle0_stdout.txt": "4b913764574bebcf0f94f35902c056f59410b10962ddafdbaed147adeb891dcf",
+    "hot_pc_opacity_spectrum/total_fine1_stdout.txt": "76e9b01d6da3b5ce99b77a1b35bdbf45c83524d5f52ae4556e5d75b78df43a52",
+    "hot_pc_opacity_spectrum/total_coarse_0.json": "214fa93f2d8170b9e082cf6e11fb1aa8312197d6b3c2115dcbca639804f5ec97",
+    "hot_pc_opacity_spectrum/total_results.json": "7770d7edb2c0bf9defb34019776a0f1cd17c02dc01661cf712031eb2671e5fd8",
+    "hot_pc_opacity_spectrum/total_coarse_0_partial.json": "38c0222d80d5d821e6842ace2ebe7b351a783aa75143b8fa007371567b4ae4c8",
+    "hot_pc_opacity_spectrum/total_fine_1.json": "8724379a05a465ca61844d79857a0445ccb0fab2de497ef737c26537c1be3ea3",
+    "hot_pc_opacity_spectrum/total_fine_2_partial.json": "f1e39cc96713185bb68deda2f4fe4df8ec5b13071c7bc0a25be9ba980172744e",
+    "hot_pc_opacity_spectrum/total_fine_0.json": "ee515254d8f370c713f4ec4db8896667974213c4e284189d2aa2099a0d42cf52",
+    "hot_pc_opacity_spectrum/study.py": "508647f741430ea97967f236f41833cb262075020a9696793e74366c004cbe1c",
+    "hot_pc_opacity_spectrum/CONTRACT.json": "c2c81003d2620153c2d005f9fb22a8efe71d91ad837f4146c744652530b4c881",
+    "hot_pc_opacity_spectrum/total_middle_1.json": "f8941780008c814e80db42dbd15905ff084b3d79f3ae87214c16c230784bd1dd",
+    "hot_pc_opacity_spectrum/total_fine_3_partial.json": "f949b2383f830cde1270619b597c1a9d1da47fedcb36919f557ebb561fdd10d4",
+    "hot_pc_opacity_spectrum/total_middle1_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hot_pc_opacity_spectrum/total_fine0_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "adaptive_yq{'Enu': nan}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'Enu': inf}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'Enu': 0.0}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'Enu': -1}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'order': True}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'order': 12.5}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'order': 4}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'tail': nan}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'tail': 59.0}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq{'tail': 241.0}",
+      "passed": true
+    },
+    {
+      "name": "adaptive_yq lowmu domain",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'Enu': nan}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'Enu': inf}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'Enu': 0.0}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'Enu': -1}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'order': True}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'order': 12.5}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'order': 4}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'tail': nan}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'tail': 59.0}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec{'tail': 241.0}",
+      "passed": true
+    },
+    {
+      "name": "gauss_Ec lowmu domain",
+      "passed": true
+    },
+    {
+      "name": "rtol invalid",
+      "passed": true
+    },
+    {
+      "name": "collapsed q coordinate",
+      "passed": true
+    },
+    {
+      "name": "nonfinite resultnan",
+      "passed": true
+    },
+    {
+      "name": "nonfinite resultinf",
+      "passed": true
+    },
+    {
+      "name": "nonfinite result-inf",
+      "passed": true
+    },
+    {
+      "name": "representability-1000.0",
+      "passed": true
+    },
+    {
+      "name": "representability-745.0",
+      "passed": true
+    },
+    {
+      "name": "representability710.0",
+      "passed": true
+    }
+  ]
+}

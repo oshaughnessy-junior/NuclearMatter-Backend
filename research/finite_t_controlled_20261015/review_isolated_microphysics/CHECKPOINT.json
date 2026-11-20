@@ -1,0 +1,50 @@
+{
+  "time": "2026-10-15T20:50:36.776788+00:00",
+  "status": "initial review frozen; NOT ACCEPTED; parent notified; awaiting explicitly commissioned repair recheck",
+  "passed": 14,
+  "failed": [
+    {
+      "name": "missing loaded PC source pin rejected",
+      "passed": false,
+      "details": null
+    },
+    {
+      "name": "actual unpinned changed PC source rejected before evaluation",
+      "passed": false,
+      "details": {
+        "returncode": 0,
+        "status": "ok",
+        "identity": "5e26ee8c1413bda37cbb0f8001e451d778e305e2977d1bdbb53c2c0ebd62b610"
+      }
+    },
+    {
+      "name": "false exact-zero beta emission rejected",
+      "passed": false,
+      "details": null
+    },
+    {
+      "name": "boolean inverse zero rejected",
+      "passed": false,
+      "details": null
+    }
+  ],
+  "files": {
+    "REVIEW.md": "5db3f0ac68f382b7fa2d580b27e23cf5ac222c03e4b9242302fa2dd3a3572d01",
+    "initial_review_results.json": "25074357c7388fff0cc6618b1492454bcc5f83ed810167eac91aad08da54b18f",
+    "missing_pc_mirror/hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+    "missing_pc_mirror/isolated_microphysics/PINS.json": "5e26ee8c1413bda37cbb0f8001e451d778e305e2977d1bdbb53c2c0ebd62b610",
+    "missing_pc_mirror/isolated_microphysics/client.py": "cd8353ee7ca3049bb2f760c1b9681a04cc1d738af0a8efa0025e73a40fb6b0a1",
+    "missing_pc_mirror/isolated_microphysics/protocol.py": "f5125a9ca7e2d7a4bc0e71135ff330f69a8a470cc75a5f427019920ab192a3c6",
+    "missing_pc_mirror/isolated_microphysics/worker_entry.py": "98a60f1a106730fe76083cd46e73b3a86ea783bca4209a10e8ec70f5009b5c3b",
+    "missing_pc_mirror/muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "missing_pc_mirror/muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "missing_pc_mirror/relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "missing_pc_mirror/relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+    "missing_pc_mirror/relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "missing_pc_mirror/relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "missing_pc_mirror/relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "missing_pc_mirror/review_pc_moments/reference.py": "5e20d1e16d00e2e078292c0317968db1abe0bc52543ca2127b74afacb00783ba",
+    "missing_pc_mirror/thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "probe.py": "7b5243c3ef77565832a6a040d14de01a7b57416882814f53539474d880b80c45"
+  }
+}

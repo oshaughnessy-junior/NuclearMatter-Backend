@@ -1,0 +1,78 @@
+[
+  {
+    "T": 0.0008516649166666665,
+    "mu": 0.0004513824058333333,
+    "m": 0.51099895,
+    "alpha": 0.53,
+    "state": {
+      "temperature": 0.0008516649166666665,
+      "chemical_potential": 0.0004513824058333333,
+      "mass": 0.51099895,
+      "net_density": 4.4294709904953663e-274,
+      "particle_density": 6.777615133771356e-274,
+      "antiparticle_density": 2.3481441432761437e-274,
+      "energy_density": 4.67493578938148e-274,
+      "pressure": 7.772089014206514e-277,
+      "entropy_density": 5.495950815308292e-271,
+      "free_energy_density": -5.772703741947758e-277,
+      "cv_fixed_net_density": 2.523892036144373e-268,
+      "dn_dmu_fixed_temperature": 1.0715199250856496e-270,
+      "dn_dtemperature_fixed_mu": 3.1227116620269954e-268,
+      "dmu_dtemperature_fixed_net_density": -291.42824028937525
+    },
+    "cold_edge": 2.4879181442607967e-174,
+    "hole_midpoint_value": 2.8837061989407014e-257,
+    "hole_quadrature": 0.0,
+    "hole_error": 0.0,
+    "quad_status": 1,
+    "quad_success": false,
+    "quad_message": "Target precision not reached.",
+    "estimated_log_hole": -990.7256875339905,
+    "float64_min_subnormal_log": -744.4400719213812,
+    "thermal_outcome": {
+      "error": "Unresolved finite-temperature lepton quadrature"
+    },
+    "total_energy_density_before_cold_subtraction": 4.67493578938148e-274,
+    "cold_reference_rest_energy": 2.2634550251985918e-274,
+    "reconstructed_thermal_from_resolved_bulk": 2.411480764182888e-274,
+    "classical_bessel_thermal": 2.411480764183335e-274
+  },
+  {
+    "T": 0.0008516649166666665,
+    "mu": -0.0004513824058333333,
+    "m": 0.51099895,
+    "alpha": -0.53,
+    "state": {
+      "temperature": 0.0008516649166666665,
+      "chemical_potential": -0.0004513824058333333,
+      "mass": 0.51099895,
+      "net_density": -4.4294709904953663e-274,
+      "particle_density": 2.3481441432761437e-274,
+      "antiparticle_density": 6.777615133771356e-274,
+      "energy_density": 4.67493578938148e-274,
+      "pressure": 7.772089014206514e-277,
+      "entropy_density": 5.495950815308292e-271,
+      "free_energy_density": -5.772703741947758e-277,
+      "cv_fixed_net_density": 2.523892036144373e-268,
+      "dn_dmu_fixed_temperature": 1.0715199250856496e-270,
+      "dn_dtemperature_fixed_mu": -3.1227116620269954e-268,
+      "dmu_dtemperature_fixed_net_density": 291.42824028937525
+    },
+    "cold_edge": 2.4879181442607967e-174,
+    "hole_midpoint_value": 2.8837061989407014e-257,
+    "hole_quadrature": 0.0,
+    "hole_error": 0.0,
+    "quad_status": 1,
+    "quad_success": false,
+    "quad_message": "Target precision not reached.",
+    "estimated_log_hole": -990.7256875339905,
+    "float64_min_subnormal_log": -744.4400719213812,
+    "thermal_outcome": {
+      "error": "Unresolved finite-temperature lepton quadrature"
+    },
+    "total_energy_density_before_cold_subtraction": 4.67493578938148e-274,
+    "cold_reference_rest_energy": 2.2634550251985918e-274,
+    "reconstructed_thermal_from_resolved_bulk": 2.411480764182888e-274,
+    "classical_bessel_thermal": 2.411480764183335e-274
+  }
+]

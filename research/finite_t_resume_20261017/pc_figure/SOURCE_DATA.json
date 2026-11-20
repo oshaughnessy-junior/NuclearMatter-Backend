@@ -1,0 +1,81 @@
+{
+  "status": "Selected frozen author values; different integrated checks at0.10/0.13, not a new0.15 independent integral",
+  "source": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/pc_support/SEMI_INFINITE_RADIAL_RAW.json",
+  "source_sha256": "c5d9f6e8c1745f4cd8fd5a4fa0c2067b54ace44ea147afcc402e223946e1ac0b",
+  "candidate_sha256": "5083e7857f3a9e256f4565b6ba19ce87f572b84abf48a381774f2bb364262e2f",
+  "different_review_sha256": "fe591a912ec7210b4f8897a3714b67c95299134d68efb76eb27409d917d0a7f6",
+  "rows": [
+    {
+      "E_MeV": 0.1,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 32,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -3786.584859767178,
+      "log_true_chi_s-1": -3787.9395418520076,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 8498.883134642389,
+      "threshold_initial_momentum_MeV": 8446.931988887367,
+      "events": 123904,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 4.063416270128073e-13,
+      "max_four_conservation_scaled": 2.2794826432164682e-14,
+      "max_unsquared_delta_scaled": 4.280384531495977e-16,
+      "KMS_log_residual": 1.9716006605108305e-11,
+      "seconds": 0.061647458001971245
+    },
+    {
+      "E_MeV": 0.15,
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "rule": {
+        "radial": 32,
+        "incoming": 22,
+        "outgoing": 22,
+        "phi": 8,
+        "tail": 70.0,
+        "literal": false,
+        "budget": 85.0,
+        "radial_family": "laguerre"
+      },
+      "log_j_s-1": -2381.2394817369373,
+      "log_true_chi_s-1": -2382.5691638217377,
+      "ordinary_j_s-1": null,
+      "ordinary_true_chi_s-1": null,
+      "threshold_initial_proton_energy_MeV": 5687.568400492851,
+      "threshold_initial_momentum_MeV": 5609.641681860319,
+      "events": 123904,
+      "radial_domain": "semi-infinite Eamin..infinity",
+      "max_shell_relative": 3.519406988061746e-13,
+      "max_four_conservation_scaled": 1.0718327577954893e-14,
+      "max_unsquared_delta_scaled": 4.791977105838453e-16,
+      "KMS_log_residual": -9.478862139644662e-12,
+      "seconds": 0.061761457938700914
+    }
+  ],
+  "masses_MeV": {
+    "mn": 939.56542052,
+    "mp": 938.27208816,
+    "me": 0.51099895069
+  },
+  "static_target_threshold_MeV": 1.8060662080187608,
+  "new_rate_integrations": 0,
+  "interpolation_or_fit_of_rates": false
+}

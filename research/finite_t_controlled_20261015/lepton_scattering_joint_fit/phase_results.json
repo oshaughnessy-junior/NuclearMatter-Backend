@@ -1,0 +1,266 @@
+{
+  "rows": [
+    {
+      "E": 8.161,
+      "total": {
+        "rate": 10.190549054476934,
+        "transport_rate": 7.254656048203225,
+        "outgoing_energy_moment": 82.95247923027279,
+        "neutrino_energy_change": -0.21259160331340507
+      },
+      "controls": {
+        "outer": 12,
+        "angle": 20,
+        "upper": 160.0,
+        "target_tail": 90.0
+      },
+      "seconds": 0.6677372499834746
+    },
+    {
+      "E": 8.161,
+      "total": {
+        "rate": 10.190549074472054,
+        "transport_rate": 7.2546560482265185,
+        "outgoing_energy_moment": 82.9524793901643,
+        "neutrino_energy_change": -0.2125916066022298
+      },
+      "controls": {
+        "outer": 16,
+        "angle": 28,
+        "upper": 160.0,
+        "target_tail": 90.0
+      },
+      "seconds": 1.2566924581769854
+    }
+  ],
+  "CM": {
+    "E": 8.161,
+    "total": {
+      "rate": 10.190549089644676,
+      "transport_rate": 7.2546560543476435,
+      "outgoing_energy_moment": 82.95247951511136,
+      "neutrino_energy_change": -0.21259160547884037
+    },
+    "targets": [
+      {
+        "rate": 7.516822656534233,
+        "transport_rate": 5.927408907591118,
+        "neutrino_energy_change": -0.13709239388769456,
+        "outgoing_energy_moment": 61.20769730608814,
+        "target_density": 2.0342863678432757e-07,
+        "energy_ledger": 3.2307490016592055e-14,
+        "max_four_residual": 7.381117939075921e-11,
+        "T": 2.0,
+        "mu_e": 0.17446333200826397,
+        "Ein": 8.161,
+        "flavor": "e",
+        "positron": false,
+        "anti": false,
+        "final_neutrino_blocking": "NONE",
+        "histogram_unqualified": {
+          "edges": [
+            0.0,
+            2.0,
+            4.0,
+            6.0,
+            8.0,
+            10.0,
+            15.0,
+            25.0,
+            1000.0
+          ],
+          "rate": [
+            0.06012834716162891,
+            0.5433334215278932,
+            1.3269417593108104,
+            2.0131689943230233,
+            1.7973130776525006,
+            1.5133641180395832,
+            0.25854534467666523,
+            0.004027593842152253
+          ]
+        },
+        "controls": {
+          "radial": 32,
+          "incident": 40,
+          "outgoing": 40,
+          "phi": 48,
+          "tail": 80.0
+        },
+        "seconds": 4.8645784999243915,
+        "units": "rate s^-1; signed\u03bdenergychange MeV s^-1 per incident\u03bd; targetdensity fm^-3"
+      },
+      {
+        "rate": 2.673726433110443,
+        "transport_rate": 1.3272471467565263,
+        "neutrino_energy_change": -0.0754992115911458,
+        "outgoing_energy_moment": 21.744782209023217,
+        "target_density": 1.734286367843276e-07,
+        "energy_ledger": -4.1397441030710525e-14,
+        "max_four_residual": 7.381117939075921e-11,
+        "T": 2.0,
+        "mu_e": 0.17446333200826397,
+        "Ein": 8.161,
+        "flavor": "e",
+        "positron": true,
+        "anti": false,
+        "final_neutrino_blocking": "NONE",
+        "histogram_unqualified": {
+          "edges": [
+            0.0,
+            2.0,
+            4.0,
+            6.0,
+            8.0,
+            10.0,
+            15.0,
+            25.0,
+            1000.0
+          ],
+          "rate": [
+            0.011316919687727954,
+            0.1251291406665664,
+            0.3996162446493296,
+            0.8202639087054869,
+            0.7848811110466255,
+            0.47857249028870424,
+            0.053391618087588646,
+            0.0005549999784261494
+          ]
+        },
+        "controls": {
+          "radial": 32,
+          "incident": 40,
+          "outgoing": 40,
+          "phi": 48,
+          "tail": 80.0
+        },
+        "seconds": 4.296726540895179,
+        "units": "rate s^-1; signed\u03bdenergychange MeV s^-1 per incident\u03bd; targetdensity fm^-3"
+      }
+    ],
+    "controls": [
+      32,
+      40,
+      40,
+      48,
+      80.0
+    ],
+    "pins": {
+      "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+      "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+      "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+    },
+    "seconds": 9.168098415946588,
+    "units": "R/transport s^-1 per incidentnue; Qout/delta MeV s^-1; no finalnu blocking"
+  },
+  "checks": [
+    {
+      "name": "independent D vs CM rate",
+      "order": [
+        12,
+        20
+      ],
+      "error": -3.451015473387997e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM transport_rate",
+      "order": [
+        12,
+        20
+      ],
+      "error": -8.469620560447311e-10,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM outgoing_energy_moment",
+      "order": [
+        12,
+        20
+      ],
+      "error": -3.433756057269477e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM neutrino_energy_change",
+      "order": [
+        12,
+        20
+      ],
+      "error": 1.0624723379686569e-10,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM rate",
+      "order": [
+        16,
+        28
+      ],
+      "error": -1.4888915655930646e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM transport_rate",
+      "order": [
+        16,
+        28
+      ],
+      "error": -8.437511800352127e-10,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM outgoing_energy_moment",
+      "order": [
+        16,
+        28
+      ],
+      "error": -1.5062486813377518e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "independent D vs CM neutrino_energy_change",
+      "order": [
+        16,
+        28
+      ],
+      "error": -5.511918087767696e-11,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "D phase refinement rate",
+      "error": -1.9621239077949326e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "D phase refinement transport_rate",
+      "error": -3.2107649872159527e-12,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "D phase refinement outgoing_energy_moment",
+      "error": -1.927507375931725e-09,
+      "gate": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "D phase refinement neutrino_energy_change",
+      "error": 1.6136641491479974e-10,
+      "gate": 0.0001,
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "failed": [],
+  "model_sha": "f881ee6f9733fef2120fe5c75cb38f7a8e44bd85f88bba4d3d80a829c690a6f0"
+}

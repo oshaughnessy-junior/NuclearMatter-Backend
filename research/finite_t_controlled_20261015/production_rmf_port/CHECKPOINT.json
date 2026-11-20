@@ -1,0 +1,44 @@
+{
+  "status": "FROZEN candidate; independent physics/numerics and packaging pending",
+  "candidate_manifest_sha256": "185afee22cda5164e62eaff36911125bf7ffc9907427dd552f45cfe322aa55e3",
+  "full_manifest_sha256": "16dba06db264b9867f196fe5aadc4f04f064bb8323dabad9087487c65ae0fce0",
+  "author_report_sha256": "05830a67ea7a0fc0f713a84334e290811675019026a146fbdaa5dce127ade850",
+  "module_sha256": "677c17070cfc63d301abdf8faf6d3dff147b6913aefc3d90855d0be574b04f65",
+  "private_modules": {
+    "src/nmbackend/reference/_rmf_response.py": "af0f9828cafb85904bfc2146eff41d417f6e465bc40d2bf536d135f8f1abe805",
+    "src/nmbackend/reference/_rmf_moments.py": "e5978b2dbb3a992080b55a4681c32078db08cfd0f91e358ecec4124c61bc6617"
+  },
+  "files_staged": 9,
+  "pytest_final_unique": 45,
+  "candidate_tests": 32,
+  "unchanged_cold_unit_tests": 13,
+  "forward_fields_passed": 65,
+  "max_forward_relative": 4.459756145328074e-13,
+  "raw_extra_response_passed": 3,
+  "max_raw_response_error": 6.36977137702388e-11,
+  "preserved_initial_failures": 2,
+  "current_failed": 0,
+  "environment": {
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "jax": "0.10.1",
+    "diffrax": "0.7.2",
+    "pytest": "9.0.3"
+  },
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "open_gates": [
+    "DIFFERENT numerical/physics review",
+    "DIFFERENT packaging/wheel review",
+    "supported/minimum runtimes",
+    "normal admitted CI",
+    "actual matched native O2scl forward",
+    "global phase/higher AD/full matter"
+  ],
+  "quota": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "last_experiment_percent": 26,
+    "reset": 1792652325,
+    "no_reset": true
+  },
+  "production_git_PR_dependency_changes": false
+}

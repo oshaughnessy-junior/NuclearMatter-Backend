@@ -1,0 +1,18 @@
+{
+  "deliverable": "external finite-temperature GM1 candidate audit",
+  "audit_status": "complete_for_bounded_primary_source_search",
+  "external_forward_gate": "OPEN",
+  "external_numerical_results_generated": false,
+  "preferred_candidate": "O2scl eos_had_rmf with explicit target configuration",
+  "runtime_found_in_checked_environment": false,
+  "key_conversion": "o2scl cs,cw,cr = sqrt(NMB C_sigma,C_omega,C_rho); external units fm versus target fm^2",
+  "rejected_finite_T_oracles": [
+    "CompOSE GM(GM1) 54 and its identical Zenodo archive: cold beta-equilibrium npe",
+    "CompOSE XMLSLZ(GM1) 282: cold unified beta-equilibrium npe-muon",
+    "2024 hypernuclear CDF 3D tables: different interaction/species/low-density model"
+  ],
+  "installs": false,
+  "external_code_executed": false,
+  "frozen_or_production_files_changed": false,
+  "next_gate": "Pin independent O2scl revision/build or obtain a genuinely matched external state payload, then compare forward values before derivatives"
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Independent allowed-current targeted checks; no full suite replay",
+  "checks": [
+    {
+      "name": "9 explicit gamma-matrix and Pauli-spin angular contractions",
+      "error": 6.217248937900877e-15,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "absolute optical common-energy-zero invariance",
+      "error": 0.0,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "arbitrary chemical-imbalance integrated KMS",
+      "error": 0.0,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "reversed-species negative-lepton-mu integrated KMS",
+      "error": 0.0,
+      "tolerance": 1e-11,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,124 @@
+{
+  "python": "3.12.12",
+  "numpy": "2.3.5",
+  "scipy": "1.15.2",
+  "syntax": [
+    {
+      "path": "examples/free_weak_reference.py",
+      "python39_syntax": true,
+      "imports": [
+        "from nmbackend.reference import weak_reference as w",
+        "import argparse"
+      ]
+    },
+    {
+      "path": "src/nmbackend/reference/_weak_spectral_capture.py",
+      "python39_syntax": true,
+      "imports": [
+        "from __future__ import annotations",
+        "import math",
+        "import numpy as np",
+        "from numpy.polynomial.legendre import leggauss",
+        "from scipy.special import logsumexp",
+        "from . import _weak_current as C",
+        "from ._weak_quadrature import log_fd",
+        "from ._weak_spectral_common import SpectralResult, coefficient, empty_coefficient, differential_inputs, validate"
+      ]
+    },
+    {
+      "path": "src/nmbackend/reference/_weak_spectral_common.py",
+      "python39_syntax": true,
+      "imports": [
+        "from __future__ import annotations",
+        "from dataclasses import dataclass",
+        "import math",
+        "import numpy as np",
+        "from scipy.special import logsumexp",
+        "from . import _weak_current as C",
+        "from ._weak_quadrature import finite_real, positive, signed, log_fd, Timer, PositiveQuantity, SignedQuantity",
+        "from .weak_reference import FreeElectronBath",
+        "from .weak_reference import Radiation",
+        "from numpy.polynomial.legendre import leggauss",
+        "from .weak_reference import Radiation"
+      ]
+    },
+    {
+      "path": "src/nmbackend/reference/_weak_spectral_decay.py",
+      "python39_syntax": true,
+      "imports": [
+        "from __future__ import annotations",
+        "import math",
+        "import numpy as np",
+        "from numpy.polynomial.legendre import leggauss",
+        "from scipy.special import logsumexp",
+        "from . import _weak_current as C",
+        "from ._weak_quadrature import log_fd",
+        "from ._weak_spectral_common import SpectralResult, coefficient, validate"
+      ]
+    },
+    {
+      "path": "src/nmbackend/reference/weak_reference.py",
+      "python39_syntax": true,
+      "imports": [
+        "from __future__ import annotations",
+        "from dataclasses import dataclass, field",
+        "import math",
+        "from . import _weak_current as _C",
+        "from ._weak_quadrature import PositiveQuantity, SignedQuantity, finite_real",
+        "from ._weak_spectral_common import SpectralControls, SpectralQuantity, SpectralResult, EnergyRule, ReconstructionResult",
+        "from . import _weak_spectral_capture as capture",
+        "from . import _weak_spectral_decay as decay",
+        "from ._weak_spectral_common import validate",
+        "from ._weak_quadrature import Timer",
+        "from ._weak_spectral_common import validate",
+        "from ._weak_spectral_common import validate",
+        "from ._weak_spectral_capture import differential",
+        "from ._weak_quadrature import Timer",
+        "from ._weak_spectral_common import reconstruct",
+        "from ._weak_decay import integrate",
+        "from ._weak_two_body import integrate"
+      ]
+    },
+    {
+      "path": "tests/test_weak_reference_reconstruction.py",
+      "python39_syntax": true,
+      "imports": [
+        "from dataclasses import replace",
+        "import math",
+        "import numpy as np",
+        "import pytest",
+        "from nmbackend.reference import weak_reference as W",
+        "from nmbackend.reference import _weak_spectral_common as S",
+        "from scipy.integrate import quad"
+      ]
+    },
+    {
+      "path": "tests/test_weak_reference_spectra.py",
+      "python39_syntax": true,
+      "imports": [
+        "from dataclasses import replace, FrozenInstanceError",
+        "from pathlib import Path",
+        "import json",
+        "import math",
+        "import numpy as np",
+        "import pytest",
+        "from nmbackend.reference import weak_reference as W",
+        "from nmbackend.reference import _weak_spectral_capture as S",
+        "from nmbackend.reference import _weak_current as C",
+        "from nmbackend.reference import _weak_quadrature as Q"
+      ]
+    }
+  ],
+  "origins": {
+    "nmbackend.reference.weak_reference": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/weak_reference.py",
+    "nmbackend.reference._weak_current": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_current.py",
+    "nmbackend.reference._weak_quadrature": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_quadrature.py",
+    "nmbackend.reference._weak_spectral_common": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_common.py",
+    "nmbackend.reference._weak_spectral_capture": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_capture.py",
+    "nmbackend.reference._weak_spectral_decay": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_decay.py"
+  },
+  "minimum_API_static": "dataclasses3.7; leggauss1.7+; logaddexp long-standingNumPy; scipy.special.logsumexp predates1.7. No scipy.log_expit/new dependency.",
+  "minimum_runtime_executed": false,
+  "full_CI_executed": false,
+  "numpy_validation_pin": "current2.3.5 outside separatecampaign<2.3"
+}

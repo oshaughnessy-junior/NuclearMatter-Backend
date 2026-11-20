@@ -1,0 +1,1046 @@
+{
+  "passed": true,
+  "phase": "complete",
+  "checks": [
+    {
+      "name": "n forward density",
+      "error": -2.4424906541753444e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "p forward density",
+      "error": 1.4654943925052066e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "actual net charge neutrality",
+      "error": -1.787459069646502e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "pair density ratio",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "independent source polynomial amplitude 3.9",
+      "error": -4.440892098500626e-16,
+      "tolerance": 5e-12,
+      "passed": true
+    },
+    {
+      "name": "independent source polynomial amplitude 11.7",
+      "error": -2.220446049250313e-16,
+      "tolerance": 5e-12,
+      "passed": true
+    },
+    {
+      "name": "independent source polynomial amplitude 27.4",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 5e-12,
+      "passed": true
+    },
+    {
+      "name": "independent integrated neutron forward (20, 32, 8, 45.0)",
+      "error": 2.310566997731911e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent event shells (20, 32, 8, 45.0)",
+      "error": 9.25658064129179e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent integrated neutron forward (28, 44, 10, 60.0)",
+      "error": -1.8034962412372124e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent event shells (28, 44, 10, 60.0)",
+      "error": 1.0578949304333473e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent integrated neutron forward (32, 52, 12, 60.0)",
+      "error": -4.661993013854726e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent event shells (32, 52, 12, 60.0)",
+      "error": 1.0578949304333473e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent total empty forward number",
+      "error": -4.571254486052112e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty forward number",
+      "error": -2.421679523578746e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty forward neutrino_energy",
+      "error": -4.354527849415035e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty forward neutrino_energy",
+      "error": -3.6267011616075706e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty forward positron_energy",
+      "error": -4.479150383929209e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty forward positron_energy",
+      "error": -2.4458879366306974e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty forward proton_energy",
+      "error": -4.530242847522459e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty forward proton_energy",
+      "error": -2.760749406860441e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty forward neutron_energy",
+      "error": -4.5287884553602e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty forward neutron_energy",
+      "error": -2.7737734331623187e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty forward material_energy_loss",
+      "error": -4.354472338263804e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty forward material_energy_loss",
+      "error": -3.6267067127226937e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty backward number",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty backward number",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty backward neutrino_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty backward neutrino_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty backward positron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty backward positron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty backward proton_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty backward proton_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty backward neutron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty backward neutron_energy",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total empty backward material_energy_loss",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement empty backward material_energy_loss",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent separate energy ledger empty",
+      "error": -5.889521629704831e-14,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent direct materialloss empty",
+      "error": 5.64942122753461e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE forward number",
+      "error": -4.56400472970131e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE forward number",
+      "error": -2.527072995306412e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE forward neutrino_energy",
+      "error": -4.341815795783077e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE forward neutrino_energy",
+      "error": -3.7370029293271045e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE forward positron_energy",
+      "error": -4.472011649880869e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE forward positron_energy",
+      "error": -2.4990554070569715e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE forward proton_energy",
+      "error": -4.52138326778595e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE forward proton_energy",
+      "error": -2.865790937889301e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE forward neutron_energy",
+      "error": -4.5197290354792585e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE forward neutron_energy",
+      "error": -2.8797864093377257e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE forward material_energy_loss",
+      "error": -4.341760284631846e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE forward material_energy_loss",
+      "error": -3.737012921334326e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE backward number",
+      "error": -4.563138755742102e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE backward number",
+      "error": -2.52704857039987e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE backward neutrino_energy",
+      "error": -4.340738879449191e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE backward neutrino_energy",
+      "error": -3.7369851657587105e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE backward positron_energy",
+      "error": -4.4708792223957516e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE backward positron_energy",
+      "error": -2.499035423042528e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE backward proton_energy",
+      "error": -4.5206061116687124e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE backward proton_energy",
+      "error": -2.8657598516446114e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE backward neutron_energy",
+      "error": -4.518951879362021e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE backward neutron_energy",
+      "error": -2.8797597639851347e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total LTE backward material_energy_loss",
+      "error": -4.340672266067713e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement LTE backward material_energy_loss",
+      "error": -3.7369918270968583e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent separate energy ledger LTE",
+      "error": 4.0364660220685477e-28,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent direct materialloss LTE",
+      "error": -2.617966334726629e-28,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent LTE forward/inverse",
+      "error": -6.956283831750269e-15,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq forward number",
+      "error": -4.56613635790859e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq forward number",
+      "error": -2.4946866794550715e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq forward neutrino_energy",
+      "error": -4.345723780829758e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq forward neutrino_energy",
+      "error": -3.703447548630834e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq forward positron_energy",
+      "error": -4.4740988691671646e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq forward positron_energy",
+      "error": -2.4820479005427387e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq forward proton_energy",
+      "error": -4.5240144963543116e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq forward proton_energy",
+      "error": -2.833492329656906e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq forward neutron_energy",
+      "error": -4.52244908188959e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq forward neutron_energy",
+      "error": -2.8472013635649773e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq forward material_energy_loss",
+      "error": -4.345701576369265e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq forward material_energy_loss",
+      "error": -3.703449769076883e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq backward number",
+      "error": -4.565414712942584e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq backward number",
+      "error": -2.494652262541308e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq backward neutrino_energy",
+      "error": -4.34459135334464e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq backward neutrino_energy",
+      "error": -3.7034308952854644e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq backward positron_energy",
+      "error": -4.473132975135741e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq backward positron_energy",
+      "error": -2.48202902675132e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq backward proton_energy",
+      "error": -4.523192931316089e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq backward proton_energy",
+      "error": -2.833467904750364e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq backward neutron_energy",
+      "error": -4.521638619081614e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq backward neutron_energy",
+      "error": -2.847172497766337e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent total noneq backward material_energy_loss",
+      "error": -4.34459135334464e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent own refinement noneq backward material_energy_loss",
+      "error": -3.7034308952854644e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent separate energy ledger noneq",
+      "error": 6.08145626708727e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent direct materialloss noneq",
+      "error": 8.687794667267529e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "independent entropy source",
+      "error": -4.5681902705041466e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/CHECKPOINT.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/initial_refinement_partial.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/moments.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/results.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/RESEARCH_NOTE.md",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/refine.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/initial_refinement_timeout.txt",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/controls_anchor.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/MATCHED_STATE.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/complete_refinement.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/check_guard_identity.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/guard_identity.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/conditional.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/initial_guard_reporting_failure.txt",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/initial_check_guard_identity.py.txt",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/check_controls_anchor.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/study.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture_moments/refinement.json",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes relativistic_capture_oracle/events.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes positron_capture/pc_kernel.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "frozen bytes relativistic_crossed_thermal/kernel.py",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "independent_densities": {
+        "n": 6.99999999999983e-08,
+        "p": 3.0000000000000434e-08,
+        "electron": 2.0342863678432754e-07,
+        "positron": 1.7342863678432764e-07,
+        "net": 2.99999999999999e-08
+      }
+    },
+    {
+      "reference": {
+        "sums": [
+          [
+            [
+              1.117319533836748e-06,
+              1.1994618193127443e-05,
+              1.0561638371328486e-05,
+              0.0010517450853636096,
+              0.0010531780651854082,
+              1.199461819312743e-05
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              1.0455983940869042e-06,
+              1.1540649782015186e-05,
+              1.0196959833273814e-05,
+              0.0009842325403741513,
+              0.0009855762303228926,
+              1.1540649782015176e-05
+            ],
+            [
+              1.0455983940869012e-06,
+              1.154064978201516e-05,
+              1.0196959833273785e-05,
+              0.0009842325403741476,
+              0.000985576230322889,
+              1.1540649782015145e-05
+            ]
+          ],
+          [
+            [
+              1.0659020322947287e-06,
+              1.1674039353805139e-05,
+              1.0305067701046462e-05,
+              0.0010033447347885345,
+              0.001004713706441293,
+              1.1674039353805124e-05
+            ],
+            [
+              7.144954993572812e-07,
+              7.825342597064506e-06,
+              6.90769345576583e-06,
+              0.0006725620888130645,
+              0.0006734797379543631,
+              7.8253425970645e-06
+            ]
+          ]
+        ],
+        "net": [
+          [
+            1.117319533836748e-06,
+            1.1994618193127443e-05,
+            1.0561638371328486e-05,
+            0.0010517450853636096,
+            0.0010531780651854082,
+            1.199461819312743e-05
+          ],
+          [
+            3.795810901007941e-21,
+            2.822759729725167e-20,
+            2.5272942832128168e-20,
+            3.57790536816573e-18,
+            3.580860022630842e-18,
+            2.8227597297245295e-20
+          ],
+          [
+            3.5140653293744727e-07,
+            3.848696756740629e-06,
+            3.397374245280633e-06,
+            0.00033078264597547006,
+            0.00033123396848693025,
+            3.848696756740625e-06
+          ]
+        ],
+        "entropy": [
+          0.0,
+          0.0,
+          1.4056261317497886e-07
+        ],
+        "neutron_density": 7.000001617396728e-08,
+        "max_shell": 9.25658064129179e-16,
+        "min_amplitude": 4.877205493486992e-15,
+        "controls": {
+          "n": 20,
+          "e": 32,
+          "angle": 8,
+          "tail": 45.0,
+          "maps": "neutronp tangent,positronp logarithm,outangle incidentpositronCMaxis"
+        },
+        "seconds": 0.14909479208290577,
+        "units": "number fm^-3s^-1,energy MeVfm^-3s^-1"
+      }
+    },
+    {
+      "reference": {
+        "sums": [
+          [
+            [
+              1.1173192809464976e-06,
+              1.1994615559112762e-05,
+              1.0561635981957335e-05,
+              0.0010517448493288564,
+              0.0010531778289060122,
+              1.1994615559112762e-05
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              1.045598157890924e-06,
+              1.1540647253754272e-05,
+              1.0196957528707432e-05,
+              0.0009842323199640238,
+              0.0009855760096890707,
+              1.1540647253754267e-05
+            ],
+            [
+              1.0455981578909338e-06,
+              1.1540647253754397e-05,
+              1.0196957528707549e-05,
+              0.0009842323199640336,
+              0.00098557600968908,
+              1.1540647253754396e-05
+            ]
+          ],
+          [
+            [
+              1.065901791369798e-06,
+              1.167403679446119e-05,
+              1.0305065371322003e-05,
+              0.0010033445099519537,
+              0.0010047134813750932,
+              1.1674036794461192e-05
+            ],
+            [
+              7.144953378604807e-07,
+              7.82534088148506e-06,
+              6.907691894104916e-06,
+              0.0006725619381006059,
+              0.0006734795870879865,
+              7.82534088148506e-06
+            ]
+          ]
+        ],
+        "net": [
+          [
+            1.1173192809464976e-06,
+            1.1994615559112762e-05,
+            1.0561635981957335e-05,
+            0.0010517448493288564,
+            0.0010531778289060122,
+            1.1994615559112762e-05
+          ],
+          [
+            -9.992211036881458e-21,
+            -1.2457430364761619e-19,
+            -1.121899231624394e-19,
+            -9.407067291640788e-18,
+            -9.419451672125981e-18,
+            -1.245743036476221e-19
+          ],
+          [
+            3.514064535093179e-07,
+            3.848695912976133e-06,
+            3.3973734772170883e-06,
+            0.0003307825718513478,
+            0.0003312338942871069,
+            3.848695912976133e-06
+          ]
+        ],
+        "entropy": [
+          0.0,
+          0.0,
+          1.405625814037271e-07
+        ],
+        "neutron_density": 6.999999998737383e-08,
+        "max_shell": 1.0578949304333473e-15,
+        "min_amplitude": 4.876701531604022e-15,
+        "controls": {
+          "n": 28,
+          "e": 44,
+          "angle": 10,
+          "tail": 60.0,
+          "maps": "neutronp tangent,positronp logarithm,outangle incidentpositronCMaxis"
+        },
+        "seconds": 0.5385892500635237,
+        "units": "number fm^-3s^-1,energy MeVfm^-3s^-1"
+      }
+    },
+    {
+      "reference": {
+        "sums": [
+          [
+            [
+              1.1173192812170766e-06,
+              1.199461556346285e-05,
+              1.0561635984540592e-05,
+              0.0010517448496192169,
+              0.0010531778291981398,
+              1.1994615563462857e-05
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              1.0455981581551543e-06,
+              1.1540647258067015e-05,
+              1.0196957531255708e-05,
+              0.0009842323202460842,
+              0.0009855760099728955,
+              1.1540647258067022e-05
+            ],
+            [
+              1.0455981581551615e-06,
+              1.154064725806712e-05,
+              1.0196957531255805e-05,
+              0.000984232320246091,
+              0.0009855760099729022,
+              1.1540647258067127e-05
+            ]
+          ],
+          [
+            [
+              1.065901791635707e-06,
+              1.167403679878461e-05,
+              1.030506537387977e-05,
+              0.0010033445102362506,
+              0.0010047134816611554,
+              1.1674036798784613e-05
+            ],
+            [
+              7.144953380387225e-07,
+              7.82534088438312e-06,
+              6.907691895819425e-06,
+              0.0006725619382911742,
+              0.0006734795872797377,
+              7.82534088438312e-06
+            ]
+          ]
+        ],
+        "net": [
+          [
+            1.1173192812170766e-06,
+            1.199461556346285e-05,
+            1.0561635984540592e-05,
+            0.0010517448496192169,
+            0.0010531778291981398,
+            1.1994615563462857e-05
+          ],
+          [
+            -7.27347756208256e-21,
+            -1.049059247011088e-19,
+            -9.532957414734353e-20,
+            -6.843985184805765e-18,
+            -6.85356153535954e-18,
+            -1.0490592470111484e-19
+          ],
+          [
+            3.514064535969846e-07,
+            3.848695914401492e-06,
+            3.3973734780603447e-06,
+            0.0003307825719450764,
+            0.0003312338943814175,
+            3.848695914401494e-06
+          ]
+        ],
+        "entropy": [
+          0.0,
+          0.0,
+          1.4056258143879375e-07
+        ],
+        "neutron_density": 6.99999999967349e-08,
+        "max_shell": 1.0578949304333473e-15,
+        "min_amplitude": 4.8764148302706525e-15,
+        "controls": {
+          "n": 32,
+          "e": 52,
+          "angle": 12,
+          "tail": 60.0,
+          "maps": "neutronp tangent,positronp logarithm,outangle incidentpositronCMaxis"
+        },
+        "seconds": 1.4300220829900354,
+        "units": "number fm^-3s^-1,energy MeVfm^-3s^-1"
+      }
+    },
+    {
+      "author_comparison_controls": {
+        "neutron_order": 28,
+        "positron_order": 56,
+        "initial_order": 12,
+        "outgoing_order": 12,
+        "phi_order": 12,
+        "tail": 40.0,
+        "knmax": 82.80936416961981,
+        "positron_kinetic_max": 81.00503285892978
+      }
+    }
+  ],
+  "initial_hashes": {
+    "positron_capture_moments/CHECKPOINT.json": "a2393261a628d7ed6223526fccea56519af9dcdacf3fa531b14fb2ed0cdaa507",
+    "positron_capture_moments/initial_refinement_partial.json": "915b0f9a6a47d6e7147cc43bc32ea41b0734cc5b42f350a61493725dc3036588",
+    "positron_capture_moments/moments.py": "376c05dfe75f9788a9d9ab7559db899de9c6c559e48c9a8989dcc45ae8276a12",
+    "positron_capture_moments/results.json": "03beb7882dc8f89f42a151cf343e4332be6dbc6fa701abcdb28524a73ef48931",
+    "positron_capture_moments/RESEARCH_NOTE.md": "d3d0ad2d9f44d0284601637f7700c2681905162858e6a69e63f79c8f2945b226",
+    "positron_capture_moments/refine.py": "b65c92fa7fd443d633ca4adf2b8e69e63539d61600c82a7a2cc07b1118e7d844",
+    "positron_capture_moments/initial_refinement_timeout.txt": "9eed5deb7f5e892e199ab3a4357743128aaec10de7c7a3e5932a24c47c3a7994",
+    "positron_capture_moments/controls_anchor.json": "e937a6fef89b8bcc36feca933f6cf7342b8b72bfbfc1f011b960765a8e72e8e1",
+    "positron_capture_moments/MATCHED_STATE.json": "abfb9572ac0ddfa6e52179e03d162ff07648ae3ec15528d98f08f6db1226306e",
+    "positron_capture_moments/complete_refinement.py": "0ce4b01d57eb39c2fe5912ebe140b4510d403c6ac324e323e90cea5ffd52fa98",
+    "positron_capture_moments/check_guard_identity.py": "d4c758d34fdbaa298bccd9fe3ac10ba1f6bb00ad703f2a4fa976b977b3b39f21",
+    "positron_capture_moments/guard_identity.json": "a7c7603b7fb3dae047be0856cb3c891d5bc1e2a6c846b880f6ca24915c8e868c",
+    "positron_capture_moments/conditional.py": "7d2999d2f1d6e786ed7cfc56df97dc40f86138edf83408a18176bdfd82061991",
+    "positron_capture_moments/initial_guard_reporting_failure.txt": "b490af77ec93ac3f0851a3f1e5f6f76247b415575c42e012bb1ece2ba850e92a",
+    "positron_capture_moments/initial_check_guard_identity.py.txt": "d7f48cf9d677ec7e109364b12d026bfb9592fd9c8ba94041f29d24819e7d3090",
+    "positron_capture_moments/check_controls_anchor.py": "71a513e4ecb5309423967b0f3973b7f87cd7c3ffd2dacb001a1600cfed7bb9e7",
+    "positron_capture_moments/study.py": "c651515821a11729047be837ae0170263e4304df1c74c027ed38e2eca8af060d",
+    "positron_capture_moments/refinement.json": "524488939b55d563977d874f17fb42699f382187814d2dd1c36be95d96e77cf9",
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "positron_capture/pc_kernel.py": "6291c802fe8e4b86572c2c7582df28dd9518980500ef67b2d7dec99dc3eeb4e6",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a"
+  },
+  "runtime_seconds": 2.1250496248248965
+}

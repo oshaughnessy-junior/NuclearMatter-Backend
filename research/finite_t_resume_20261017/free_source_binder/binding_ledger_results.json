@@ -1,0 +1,565 @@
+{
+  "checks": [
+    {
+      "name": "current exact state/source provenance 0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "independent signed number aggregate 0",
+      "error": -4.386505300029612e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent signed energy aggregate 0",
+      "error": 2.235649736043576e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent Le events 0",
+      "error": 3.335036276491426e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent full p/n/e material energy 0",
+      "error": 2.2691844820842297e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "rest-inclusive prescribed-density energy first law 0",
+      "error": 2.235649736043576e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'EC', 0)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'EC', 1)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'EC', 2)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'EC', 3)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'EC', 4)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'EC', 5)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'PC', 0)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'PC', 1)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'PC', 2)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'PC', 3)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'PC', 4)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'PC', 5)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'NEUTRON_DECAY', 0)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'NEUTRON_DECAY', 1)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'NEUTRON_DECAY', 2)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'NEUTRON_DECAY', 3)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'NEUTRON_DECAY', 4)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (0, 'NEUTRON_DECAY', 5)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum MB anti bound (0, 'n')",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum MB anti bound (0, 'p')",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "genuine FD entropy-chain ladder (0, 0.002)",
+      "error": 1.3293835646003129e-07,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "genuine FD entropy-chain ladder (0, 0.001)",
+      "error": 3.3232548575893153e-08,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "current exact state/source provenance 1",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "independent signed number aggregate 1",
+      "error": 3.301374462917522e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent signed energy aggregate 1",
+      "error": -4.0005470471212237e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent Le events 1",
+      "error": 2.133481006675459e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent full p/n/e material energy 1",
+      "error": -7.401012037174264e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "rest-inclusive prescribed-density energy first law 1",
+      "error": -4.0005470471212237e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'EC', 0)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'EC', 1)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'EC', 2)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'EC', 3)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'EC', 4)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'EC', 5)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'PC', 0)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'PC', 1)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'PC', 2)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'PC', 3)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'PC', 4)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'PC', 5)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'NEUTRON_DECAY', 0)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'NEUTRON_DECAY', 1)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'NEUTRON_DECAY', 2)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'NEUTRON_DECAY', 3)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'NEUTRON_DECAY', 4)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (1, 'NEUTRON_DECAY', 5)",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum MB anti bound (1, 'n')",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum MB anti bound (1, 'p')",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "genuine FD entropy-chain ladder (1, 0.002)",
+      "error": -2.4015427150391814e-07,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "genuine FD entropy-chain ladder (1, 0.001)",
+      "error": -6.003954057100598e-08,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "current exact state/source provenance 2",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "independent signed number aggregate 2",
+      "error": 1.7704083526099393e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent signed energy aggregate 2",
+      "error": -9.852965259427996e-18,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent Le events 2",
+      "error": 2.127577756205403e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent full p/n/e material energy 2",
+      "error": -5.202365656977981e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "rest-inclusive prescribed-density energy first law 2",
+      "error": -3.7186889689285783e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'EC', 0)",
+      "error": -7.405632909864499e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'EC', 1)",
+      "error": 6.081984669440406e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'EC', 2)",
+      "error": 2.1002523377687423e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'EC', 3)",
+      "error": 5.373407512227919e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'EC', 4)",
+      "error": 2.6830384874256986e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'EC', 5)",
+      "error": 6.081984669440406e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'PC', 0)",
+      "error": 1.2421212637871574e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'PC', 1)",
+      "error": -4.664165857009451e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'PC', 2)",
+      "error": -4.722402557163325e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'PC', 3)",
+      "error": 1.502106442089505e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'PC', 4)",
+      "error": 6.750253991724326e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'PC', 5)",
+      "error": 6.996248785514186e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'NEUTRON_DECAY', 0)",
+      "error": -2.0188942102971495e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'NEUTRON_DECAY', 1)",
+      "error": 1.0397121463179934e-15,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'NEUTRON_DECAY', 2)",
+      "error": -2.488098573915819e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'NEUTRON_DECAY', 3)",
+      "error": -1.7579081690058978e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'NEUTRON_DECAY', 4)",
+      "error": -2.1943604177195307e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "actual F/B versus net (2, 'NEUTRON_DECAY', 5)",
+      "error": -2.0794242926359747e-16,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum MB anti bound (2, 'n')",
+      "error": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "independent momentum MB anti bound (2, 'p')",
+      "error": -2.2737367544323206e-13,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "genuine FD entropy-chain ladder (2, 0.002)",
+      "error": 1.0390424971487643e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "genuine FD entropy-chain ladder (2, 0.001)",
+      "error": 2.597536831412205e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    }
+  ],
+  "passed": 84,
+  "failed": [],
+  "rows": [
+    {
+      "index": 0,
+      "independent_R": 7.864758338386139e-07,
+      "independent_Q": 1.5155020638488612e-05,
+      "entropy_ladder": [
+        {
+          "step": 0.002,
+          "measured": -64.72760944836955,
+          "formula": -64.72761805315271
+        },
+        {
+          "step": 0.001,
+          "measured": -64.727615902089,
+          "formula": -64.72761805315271
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "independent_R": 7.404324794184868e-07,
+      "independent_Q": 1.693834242722023e-05,
+      "entropy_ladder": [
+        {
+          "step": 0.002,
+          "measured": -71.0108246190775,
+          "formula": -71.01080756552874
+        },
+        {
+          "step": 0.001,
+          "measured": -71.010811828985,
+          "formula": -71.01080756552874
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "independent_R": 9.171932151797212e-07,
+      "independent_Q": 1.0211559902253907e-06,
+      "entropy_ladder": [
+        {
+          "step": 0.002,
+          "measured": 5.639943336706619,
+          "formula": 5.6398847359074225
+        },
+        {
+          "step": 0.001,
+          "measured": 5.639899385715749,
+          "formula": 5.6398847359074225
+        }
+      ]
+    }
+  ],
+  "seconds": 6.7122434170451015,
+  "attribution": "Parses actual completed source records; new EOS/anti momentum calculations, zero new weak source calls or time evolution"
+}

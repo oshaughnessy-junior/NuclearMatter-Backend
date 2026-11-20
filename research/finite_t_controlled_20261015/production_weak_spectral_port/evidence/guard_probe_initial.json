@@ -1,0 +1,16 @@
+[
+  {
+    "name": "FD malformed bath",
+    "expected": "ValueError",
+    "actual": "AttributeError",
+    "message": "'object' object has no attribute 'T'",
+    "passed": false
+  },
+  {
+    "name": "empty malformed bath",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "message": "Spectra require the EXACT declared fixed T2 chemical bath; no EOS solve",
+    "passed": true
+  }
+]

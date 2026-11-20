@@ -1,0 +1,35 @@
+{
+  "status": "author_weakOFF_complete_independent_review_required_weakON_not_run",
+  "utc": "2026-10-15T14:14:00Z",
+  "checks": "55/55 PASS",
+  "retry_numerical_runtime_seconds": 76.02679174998775,
+  "preserved_first_attempt": "Interrupted near120s before work completion; no accepted first-attempt result",
+  "history": "nB=n0 exp(.02 sin\u00b2(pi theta)),theta=t/(2e-6 s)",
+  "scope": "One reversible weak-off prescribed-density cycle; independent EOS derivative/entropy/work checks, no hydro",
+  "open_gates": [
+    "WeakON density feedback not run; derivation/design only",
+    "Independent leaf review pending",
+    "No hydro, interacting EOS/current or generic domain claim"
+  ],
+  "upstream_sha256": {
+    "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "files_sha256": {
+    "initial_weak_off.py": "42afc483be5011c78487e87e483013dc43c0ced4488552ef53994db72ab7380c",
+    "initial_work_budget_stop.txt": "a5e555810156b69fcb31559d39e22c6cc2f053a8273fe417400d9c9840ad9310",
+    "initial_density_element.py": "b9ff22bd9973c7558b711b1c72eb4dcf70d565f98421e7d912029da8e97474af",
+    "upstream_manifest.json": "1c90f5dc72ffb4b216ce5df78ab918e8e4464fea9a2f90094f06cfbe05719860",
+    "weak_off_results.json": "0830ceddbf993ae323743df2ba71a3872c9b276e5ffd5117d29bb7d6d6b3147b",
+    "RESEARCH_NOTE.md": "ca857986af5b4786cd2c2ca850744854750c638280d1dea30ccd4a27b75bc34c",
+    "weak_off_partial.json": "e9edcdf243fe00d28f9422677b4eac0de6014a8697db36a6bc8e727f34742af1",
+    "weak_off.py": "bbeb0f6cd691ccf9ff427e1730b0c7724e664a368823b94d99eadeb7ac91244b",
+    "density_element.py": "d539c8e2a86cb31c10d459d7f1a5609e8c0c2e1fa737256cb7a67e7ea04309b2"
+  },
+  "quota_used_percent": 8,
+  "quota_reset": 1792652325
+}

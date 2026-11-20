@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "steps": 2,
+      "integrated_Cv_Tdot": -2.9086210115922044e-09,
+      "integrated_eY_Ydot": -1.2034788530800408e-10,
+      "sum_plus_escaped": 0.0,
+      "endpoint_baryon_density": 1.000000000000018e-07,
+      "endpoint_baryon_relative": 1.7985612998927536e-14,
+      "endpoint_Le_material": 3.015699483091133e-08,
+      "escaped_Le": -1.5699483091133528e-10,
+      "initial_Le_material": 3e-08,
+      "Le_absolute_residual": 0.0
+    },
+    {
+      "steps": 4,
+      "integrated_Cv_Tdot": -2.907780040464455e-09,
+      "integrated_eY_Ydot": -1.2017344891446374e-10,
+      "sum_plus_escaped": 0.0,
+      "endpoint_baryon_density": 1.00000000000002e-07,
+      "endpoint_baryon_relative": 1.9984014443252818e-14,
+      "endpoint_Le_material": 3.015684519688716e-08,
+      "escaped_Le": -1.5684519688716279e-10,
+      "initial_Le_material": 3e-08,
+      "Le_absolute_residual": 0.0
+    }
+  ],
+  "qualification": "Diagnostic decompositions of saved actual stage integrals, no extra prelocked pass gate or independent evolution reference"
+}

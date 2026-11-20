@@ -1,0 +1,581 @@
+{
+  "checks": [
+    {
+      "name": "reject log_F_A 0x0.0000000000001p-1022",
+      "passed": true
+    },
+    {
+      "name": "reject log_F_B 0x0.0000000000001p-1022",
+      "passed": true
+    },
+    {
+      "name": "reject log_F_A 0x0.00000000007e8p-1022",
+      "passed": true
+    },
+    {
+      "name": "reject log_F_B 0x0.00000000007e8p-1022",
+      "passed": true
+    },
+    {
+      "name": "reject log_F_A 0x0.fffffffffffffp-1022",
+      "passed": true
+    },
+    {
+      "name": "reject log_F_B 0x0.fffffffffffffp-1022",
+      "passed": true
+    },
+    {
+      "name": "old reviewer error reproduced 0x0.00000000007e8p-1022",
+      "passed": true
+    },
+    {
+      "name": "old reviewer error reproduced 0x0.0000000000001p-1022",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x0.0p+0",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x0.0p+0",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A -0x0.0p+0",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B -0x0.0p+0",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.0000000000000p-1022",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.0000000000000p-1022",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.0000000000001p-1022",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.0000000000001p-1022",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.1fa182c40c60dp-1020",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.1fa182c40c60dp-1020",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.6e93f5da2824cp-831",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.6e93f5da2824cp-831",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.87e92154ef7acp-665",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.87e92154ef7acp-665",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.16872b020c49cp-6",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.16872b020c49cp-6",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.b851eb851eb85p-2",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.b851eb851eb85p-2",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.599999999999ap+1",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.599999999999ap+1",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.2800000000000p+5",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.2800000000000p+5",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.fc00000000000p+6",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.fc00000000000p+6",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_A 0x1.f300000000000p+8",
+      "passed": true
+    },
+    {
+      "name": "bitwise unchanged log_F_B 0x1.f300000000000p+8",
+      "passed": true
+    },
+    {
+      "name": "normal boundary analytic angular coefficient 0x1.0000000000000p-1022",
+      "passed": true
+    },
+    {
+      "name": "normal INPUT with unrepresented OUTPUT log_F_A 0x1.0000000000000p-1022",
+      "passed": true
+    },
+    {
+      "name": "normal INPUT with unrepresented OUTPUT log_F_B 0x1.0000000000000p-1022",
+      "passed": true
+    },
+    {
+      "name": "normal boundary analytic angular coefficient 0x1.0000000000001p-1022",
+      "passed": true
+    },
+    {
+      "name": "normal INPUT with unrepresented OUTPUT log_F_A 0x1.0000000000001p-1022",
+      "passed": true
+    },
+    {
+      "name": "normal INPUT with unrepresented OUTPUT log_F_B 0x1.0000000000001p-1022",
+      "passed": true
+    },
+    {
+      "name": "deep output log bitwise unchanged log_F_A",
+      "passed": true
+    },
+    {
+      "name": "deep output positive/logNone log_F_A",
+      "passed": true
+    },
+    {
+      "name": "deep output log bitwise unchanged log_F_B",
+      "passed": true
+    },
+    {
+      "name": "deep output positive/logNone log_F_B",
+      "passed": true
+    },
+    {
+      "name": "exact zero policy log_F_A",
+      "passed": true
+    },
+    {
+      "name": "existing invalid policy log_F_A -1.0",
+      "passed": true
+    },
+    {
+      "name": "existing invalid policy log_F_A inf",
+      "passed": true
+    },
+    {
+      "name": "existing invalid policy log_F_A nan",
+      "passed": true
+    },
+    {
+      "name": "existing invalid policy log_F_A True",
+      "passed": true
+    },
+    {
+      "name": "exact zero policy log_F_B",
+      "passed": true
+    },
+    {
+      "name": "existing invalid policy log_F_B -1.0",
+      "passed": true
+    },
+    {
+      "name": "existing invalid policy log_F_B inf",
+      "passed": true
+    },
+    {
+      "name": "existing invalid policy log_F_B nan",
+      "passed": true
+    },
+    {
+      "name": "existing invalid policy log_F_B True",
+      "passed": true
+    },
+    {
+      "name": "all equation and other policy AST unchanged",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged contract.py",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged source_snapshot/core_nu.py",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged source_snapshot/superfluid.py",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged results.json",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged alternate_integral_results.json",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged fortran_results.json",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged endpoint_results.json",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged normalization_results.json",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged initial_small_gap_log_failure.json",
+      "passed": true
+    },
+    {
+      "name": "science/raw unchanged initial_small_gap_quasiparticle.py",
+      "passed": true
+    },
+    {
+      "name": "four legacy endpoint exclusions unchanged",
+      "passed": true
+    }
+  ],
+  "passed": 66,
+  "failed": [],
+  "admission": {
+    "zero": "exact zero remains allowed",
+    "positive": "float64 normal input tiny<=v, with previous upper bounds A1000/B500",
+    "subnormal": "reject0<v<np.finfo(float).tiny; observed angular rounding failure, shared A/B domain policy",
+    "output": "finite log with positive unrepresented ordinaryNone remains allowed"
+  },
+  "boundary": {
+    "tiny": 2.2250738585072014e-308,
+    "below": 2.225073858507201e-308,
+    "above": 2.225073858507202e-308,
+    "minimum_positive": 5e-324
+  },
+  "rejected": [
+    {
+      "function": "log_F_A",
+      "v": 5e-324,
+      "v_hex": "0x0.0000000000001p-1022",
+      "rejected": true,
+      "message": "Subnormal positive gap input unsupported; require v>=float64 tiny or exact zero"
+    },
+    {
+      "function": "log_F_B",
+      "v": 5e-324,
+      "v_hex": "0x0.0000000000001p-1022",
+      "rejected": true,
+      "message": "Subnormal positive gap input unsupported; require v>=float64 tiny or exact zero"
+    },
+    {
+      "function": "log_F_A",
+      "v": 1e-320,
+      "v_hex": "0x0.00000000007e8p-1022",
+      "rejected": true,
+      "message": "Subnormal positive gap input unsupported; require v>=float64 tiny or exact zero"
+    },
+    {
+      "function": "log_F_B",
+      "v": 1e-320,
+      "v_hex": "0x0.00000000007e8p-1022",
+      "rejected": true,
+      "message": "Subnormal positive gap input unsupported; require v>=float64 tiny or exact zero"
+    },
+    {
+      "function": "log_F_A",
+      "v": 2.225073858507201e-308,
+      "v_hex": "0x0.fffffffffffffp-1022",
+      "rejected": true,
+      "message": "Subnormal positive gap input unsupported; require v>=float64 tiny or exact zero"
+    },
+    {
+      "function": "log_F_B",
+      "v": 2.225073858507201e-308,
+      "v_hex": "0x0.fffffffffffffp-1022",
+      "rejected": true,
+      "message": "Subnormal positive gap input unsupported; require v>=float64 tiny or exact zero"
+    }
+  ],
+  "old_failures": [
+    {
+      "v": 1e-320,
+      "v_hex": "0x0.00000000007e8p-1022",
+      "old_log_B": -1473.4686847029352,
+      "relative_small_gap_error": 3.917239779050859e-06,
+      "unchanged_old_gate": 3e-10,
+      "old_physical_gate_pass": false,
+      "warnings": [
+        "The maximum number of subdivisions (120) has been achieved.\n  If increasing the limit yields no improvement it is advised to analyze \n  the integrand in order to determine the difficulties.  If the position of a \n  local difficulty can be determined (singularity, discontinuity) one will \n  probably gain from splitting up the interval and calling the integrator \n  on the subranges.  Perhaps a special-purpose integrator should be used."
+      ]
+    },
+    {
+      "v": 5e-324,
+      "v_hex": "0x0.0000000000001p-1022",
+      "old_log_B": -1488.6630902559955,
+      "relative_small_gap_error": 0.031754163466144236,
+      "unchanged_old_gate": 3e-10,
+      "old_physical_gate_pass": false,
+      "warnings": []
+    }
+  ],
+  "bitwise_rows": [
+    {
+      "v": 0.0,
+      "v_hex": "0x0.0p+0",
+      "log_F_A": {
+        "old": null,
+        "new": null,
+        "hex_old": "-inf",
+        "hex_new": "-inf"
+      },
+      "log_F_B": {
+        "old": null,
+        "new": null,
+        "hex_old": "-inf",
+        "hex_new": "-inf"
+      }
+    },
+    {
+      "v": -0.0,
+      "v_hex": "-0x0.0p+0",
+      "log_F_A": {
+        "old": null,
+        "new": null,
+        "hex_old": "-inf",
+        "hex_new": "-inf"
+      },
+      "log_F_B": {
+        "old": null,
+        "new": null,
+        "hex_old": "-inf",
+        "hex_new": "-inf"
+      }
+    },
+    {
+      "v": 2.2250738585072014e-308,
+      "v_hex": "0x1.0000000000000p-1022",
+      "log_F_A": {
+        "old": -1417.3001910833075,
+        "new": -1417.3001910833075,
+        "hex_old": "-0x1.62533654a956dp+10",
+        "hex_new": "-0x1.62533654a956dp+10"
+      },
+      "log_F_B": {
+        "old": -1416.6070439027476,
+        "new": -1416.6070439027476,
+        "hex_old": "-0x1.6226d9ceab626p+10",
+        "hex_new": "-0x1.6226d9ceab626p+10"
+      }
+    },
+    {
+      "v": 2.225073858507202e-308,
+      "v_hex": "0x1.0000000000001p-1022",
+      "log_F_A": {
+        "old": -1417.3001910833075,
+        "new": -1417.3001910833075,
+        "hex_old": "-0x1.62533654a956dp+10",
+        "hex_new": "-0x1.62533654a956dp+10"
+      },
+      "log_F_B": {
+        "old": -1416.6070439027476,
+        "new": -1416.6070439027476,
+        "hex_old": "-0x1.6226d9ceab626p+10",
+        "hex_new": "-0x1.6226d9ceab626p+10"
+      }
+    },
+    {
+      "v": 1e-307,
+      "v_hex": "0x1.1fa182c40c60dp-1020",
+      "log_F_A": {
+        "old": -1414.2946011171234,
+        "new": -1414.2946011171234,
+        "hex_old": "-0x1.6192dabea4da4p+10",
+        "hex_new": "-0x1.6192dabea4da4p+10"
+      },
+      "log_F_B": {
+        "old": -1413.6014539365635,
+        "new": -1413.6014539365635,
+        "hex_old": "-0x1.61667e38a6e5dp+10",
+        "hex_new": "-0x1.61667e38a6e5dp+10"
+      }
+    },
+    {
+      "v": 1e-250,
+      "v_hex": "0x1.6e93f5da2824cp-831",
+      "log_F_A": {
+        "old": -1151.7999005158022,
+        "new": -1151.7999005158022,
+        "hex_old": "-0x1.1ff33191eedb2p+10",
+        "hex_new": "-0x1.1ff33191eedb2p+10"
+      },
+      "log_F_B": {
+        "old": -1151.1067533352423,
+        "new": -1151.1067533352423,
+        "hex_old": "-0x1.1fc6d50bf0e6bp+10",
+        "hex_new": "-0x1.1fc6d50bf0e6bp+10"
+      }
+    },
+    {
+      "v": 1e-200,
+      "v_hex": "0x1.87e92154ef7acp-665",
+      "log_F_A": {
+        "old": -921.5413912163978,
+        "new": -921.5413912163978,
+        "hex_old": "-0x1.ccc54c4eb0629p+9",
+        "hex_new": "-0x1.ccc54c4eb0629p+9"
+      },
+      "log_F_B": {
+        "old": -920.8482440358378,
+        "new": -920.8482440358378,
+        "hex_old": "-0x1.cc6c9342b479ap+9",
+        "hex_new": "-0x1.cc6c9342b479ap+9"
+      }
+    },
+    {
+      "v": 0.017,
+      "v_hex": "0x1.16872b020c49cp-6",
+      "log_F_A": {
+        "old": -8.656399923215233,
+        "new": -8.656399923215233,
+        "hex_old": "-0x1.15013a6969cd8p+3",
+        "hex_new": "-0x1.15013a6969cd8p+3"
+      },
+      "log_F_B": {
+        "old": -7.9631995512409235,
+        "new": -7.9631995512409235,
+        "hex_old": "-0x1.fda50fbb06815p+2",
+        "hex_new": "-0x1.fda50fbb06815p+2"
+      }
+    },
+    {
+      "v": 0.43,
+      "v_hex": "0x1.b851eb851eb85p-2",
+      "log_F_A": {
+        "old": -2.1685302577440866,
+        "new": -2.1685302577440866,
+        "hex_old": "-0x1.15926644b2dadp+1",
+        "hex_new": "-0x1.15926644b2dadp+1"
+      },
+      "log_F_B": {
+        "old": -1.4353503552808191,
+        "new": -1.4353503552808191,
+        "hex_old": "-0x1.6f731ef23bac6p+0",
+        "hex_new": "-0x1.6f731ef23bac6p+0"
+      }
+    },
+    {
+      "v": 2.7,
+      "v_hex": "0x1.599999999999ap+1",
+      "log_F_A": {
+        "old": 1.4324247048008796,
+        "new": 1.4324247048008796,
+        "hex_old": "0x1.6eb362ad1a2bep+0",
+        "hex_new": "0x1.6eb362ad1a2bep+0"
+      },
+      "log_F_B": {
+        "old": 1.2450580917962442,
+        "new": 1.2450580917962442,
+        "hex_old": "0x1.3ebc2089e291ap+0",
+        "hex_new": "0x1.3ebc2089e291ap+0"
+      }
+    },
+    {
+      "v": 37.0,
+      "v_hex": "0x1.2800000000000p+5",
+      "log_F_A": {
+        "old": -50.61701638064764,
+        "new": -50.61701638064764,
+        "hex_old": "-0x1.94efa648bfd2cp+5",
+        "hex_new": "-0x1.94efa648bfd2cp+5"
+      },
+      "log_F_B": {
+        "old": -53.04185698149008,
+        "new": -53.04185698149008,
+        "hex_old": "-0x1.a855b91cf4df9p+5",
+        "hex_new": "-0x1.a855b91cf4df9p+5"
+      }
+    },
+    {
+      "v": 127.0,
+      "v_hex": "0x1.fc00000000000p+6",
+      "log_F_A": {
+        "old": -222.6241564711506,
+        "new": -222.6241564711506,
+        "hex_old": "-0x1.bd3f916fde5b7p+7",
+        "hex_new": "-0x1.bd3f916fde5b7p+7"
+      },
+      "log_F_B": {
+        "old": -225.70192327639992,
+        "new": -225.70192327639992,
+        "hex_old": "-0x1.c367627cd8e0bp+7",
+        "hex_new": "-0x1.c367627cd8e0bp+7"
+      }
+    },
+    {
+      "v": 499.0,
+      "v_hex": "0x1.f300000000000p+8",
+      "log_F_A": {
+        "old": -957.7364590243396,
+        "new": -957.7364590243396,
+        "hex_old": "-0x1.dede444a10310p+9",
+        "hex_new": "-0x1.dede444a10310p+9"
+      },
+      "log_F_B": {
+        "old": -961.5092089477833,
+        "new": -961.5092089477833,
+        "hex_old": "-0x1.e0c12dc240c7bp+9",
+        "hex_new": "-0x1.e0c12dc240c7bp+9"
+      }
+    }
+  ],
+  "deep_outputs": [
+    {
+      "function": "log_F_A",
+      "v": 1000.0,
+      "result": {
+        "log_value": -1955.2191844706792,
+        "value": null,
+        "status": "positive_below_float64_representation"
+      }
+    },
+    {
+      "function": "log_F_B",
+      "v": 500.0,
+      "result": {
+        "log_value": -963.4972090080902,
+        "value": null,
+        "status": "positive_below_float64_representation"
+      }
+    }
+  ],
+  "scientific_source_pin": "66938b5df4b2915627cf8e4a8bbe3a68ef583322e387e509c7f409268cafe52d",
+  "repaired_helper_pin": "06f6db3fb69f2fe50042a15d5c129f151354561c3263e4cc976e7cf869a419d0",
+  "seconds": 0.7372143329121172
+}

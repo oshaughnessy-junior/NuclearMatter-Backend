@@ -1,0 +1,32 @@
+# Independent free-matter/source binder DESIGN review
+
+ACCEPTED DESIGN SCOPE, with two nonblocking editorial clarifications below. No blocking API, units, thermodynamic-chain or source-sign flaw found. The107 independent saved/API arithmetic checks pass; the author's120 checks remain separately attributed saved/source checks. ZERO new EOS/rate calls, binder execution, implementation or AD acceptance occurred.
+
+Author CONTRACTfbf5e19043e52d9872abd7807c2eaa54f6469390fd8b129565e779467039813c, MANIFEST71d256e0bfaed542498c396fad7885e744617850a57779186060d5aea64a13a5 and CHECKPOINT4a50029a2a9e82798edd08e005fb793a85153b42aedb3c64888339623b46c7c7 verify. All12 author files and23 upstream pins remain unchanged. Own actual-API static expectations were frozen before reading the candidate contract and remain exact. No source/contract/report was edited.
+
+## Actual APIs and dependency boundary
+
+Public signatures and dataclass fields match independently preregistered PR51/52/54 source bytes. Saved immutable GitHub public-module responses equal those files; this is source equality, not new runtime validation. Lepton state_density takes signed NET lepton number and retains pairs at zero; baryon state_density takes positive PARTICLE number with fixed mass and no antibaryon API. Default neutron/proton/electron masses differ from the physical current, including the small electron difference. The proposed factory correctly passes all three physical masses explicitly and preserves exact HBARC/current identity. It does not substitute a GM1/effective mass.
+
+The effective source domain is the declared rectangle INTERSECT actual solved FreeElectronBath bounds: T1–3, both baryon etas[-100,-5], |mu_e/T|<=3, plus literal radiation admission. Independent FD flavor potentials need not be opposite outside imposed LTE; exact common T and all values/controls/current must match. Controls.base is the actual implicit weak default; explicit SourceControls.fine is a proposed binder convenience. Exact empty inverse absence, positive branches, finite logs and unrepresented ordinary values remain distinct. No DOS/c/spin factor is reapplied to integrated moments.
+
+The eight proposed paths isolate state/source/RHS modules, tests/fixture/example/docs/README, with no component edits or eager exports. Local function imports can avoid the documented module cycle. PR51/52/54 versions require a real assembled base; no unmerged component is silently assumed on main. PR55 is not a dependency and incomplete spectral bands cannot replace totals. Portable imports, fresh actual roots/source calls, strict stale/forged/timeout admission and separate numerical/packaging checks are requirements for a FUTURE implementation, not capabilities established by this design.
+
+## Thermodynamic and saved-record review
+
+Previously executed genuine component forward values were checked before response arithmetic. They retain their old execution attribution; current signature equality is not relabelled as fresh execution. The saved EOS electron mu0.17446333200826458 versus event mu0.17446333200826397MeV difference is explicitly tolerated only in the SAVED comparison. A future source must use its actual solved mu, not overwrite it with the old value. The particle/net electron ratio at the selected point is6.78095: treating electron particle number as neutralizing net charge would fail substantially.
+
+Independent derivation from e=f+Ts gives hi=mui−T mui,T at fixed PARTICLE nucleon or NET electron number. Hence eY=n(hp−hn+he), en=(1−Y)hn+Y(hp+he), and eT=sum fixed-number Cv. LTE photon energy/P/s/Cv and f_gamma=−P_gamma are consistent; photons have no fixed-T composition/density derivative. The PLUS-sign identity e+P−n en=T(s+sum ni mui,T) passes saved arithmetic.
+
+R=rPC+rD−rEC, Q=sum signed neutrino-energy nets; Ydot=R/n. Both rest-inclusive density and specific-energy chain rules independently reproduce Tdot−1.7284560792876476MeV/s at the saved point, with R7.86475833838614e-7fm^-3s^-1 and Q1.5155020638488612e-5MeVfm^-3s^-1. Composition work is included once; no additional mass-difference Q belongs in the first law. Event stoichiometry/direct material loss agree. Mechanical work cancels in the entropy-per-baryon source identity; the saved transparent material sigma_dot≈−64.7276s^-1 is allowed. No total-radiation entropy certificate follows from only escaping moments.
+
+The proposed anti-nucleon diagnostic is mathematically correct: FD(E,−mu)<=exp[−(E+mu)/T], and spin2 momentum integration gives m²T K2(m/T)exp(−mu/T)/(pi²HC³). Scaled-K2 logarithms can preserve this bound without ordinary underflow. Its proposed per-species1e-8 particle-ratio admission is NOT computed here, not an existing B capability and not an interacting-model uncertainty estimate. Future implementation must reject unresolved bounds rather than fabricate absence.
+
+Saved-data algebra and source/field requirements cover mass/rest-vs-kinetic, pair-vs-net, stale current/state/radiation labels, omitted/incomplete branch, ordinaryNone-to-zero and duplicate Q/composition-work adversaries at the DESIGN level. This is not a claim that a nonexistent binder has passed runtime negative tests. Future actual forward roots precede derivatives, changing-state quadrature/ledger tests and any time evolution. Numerical independence at the same Hamiltonian does not establish external physics uncertainty.
+
+## Nonblocking editorial clarifications
+
+1. The sentence 'T, mass and total chemical potential include rest energy' is imprecise: T itself has no rest-energy offset. Use 'T and masses are in MeV; total chemical potentials and energies use the rest-inclusive convention.' All displayed equations, actual inputs and saved arithmetic already follow this meaning.
+2. 'Future implementation requires explicit authorization' denotes a separate scoped implementation with different numerical/packaging review; it must not introduce another human-permission gate within the user's authorized campaign. Root will clarify this in paper copy. It is not implementation acceptance or blanket approval from this review.
+
+Frozen author text remains untouched. Native AD, broad-domain errors, paired/interacting EOS, complete weak inventory, transport/hydro, physical uncertainty, minimum runtime/fullCI and an implemented binder remain OPEN. This review accepts only the source-consistent design and honestly attributed saved evidence.

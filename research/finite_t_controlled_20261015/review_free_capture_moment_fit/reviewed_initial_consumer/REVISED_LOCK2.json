@@ -1,0 +1,133 @@
+{
+  "status": "REVISED_LOCK2_BEFORE_ANY_RATE_DATA",
+  "training": [
+    {
+      "T": 1.0,
+      "nB": 1e-07,
+      "Ye": 0.2
+    },
+    {
+      "T": 1.0,
+      "nB": 1e-07,
+      "Ye": 0.5
+    },
+    {
+      "T": 1.0,
+      "nB": 1e-06,
+      "Ye": 0.2
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-07,
+      "Ye": 0.2
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-07,
+      "Ye": 0.5
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-06,
+      "Ye": 0.2
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-06,
+      "Ye": 0.5
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-07,
+      "Ye": 0.2
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-07,
+      "Ye": 0.5
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-06,
+      "Ye": 0.2
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-06,
+      "Ye": 0.5
+    }
+  ],
+  "heldout": [
+    {
+      "T": 1.35,
+      "nB": 2e-07,
+      "Ye": 0.3
+    },
+    {
+      "T": 1.35,
+      "nB": 2e-07,
+      "Ye": 0.45
+    },
+    {
+      "T": 1.35,
+      "nB": 6e-07,
+      "Ye": 0.3
+    },
+    {
+      "T": 1.35,
+      "nB": 6e-07,
+      "Ye": 0.45
+    },
+    {
+      "T": 2.65,
+      "nB": 2e-07,
+      "Ye": 0.3
+    },
+    {
+      "T": 2.65,
+      "nB": 2e-07,
+      "Ye": 0.45
+    },
+    {
+      "T": 2.65,
+      "nB": 6e-07,
+      "Ye": 0.3
+    },
+    {
+      "T": 2.65,
+      "nB": 6e-07,
+      "Ye": 0.45
+    }
+  ],
+  "basis": [
+    "1",
+    "T",
+    "T\u00b2",
+    "eta_e",
+    "eta_e\u00b2",
+    "T*eta_e",
+    "(nB/1e-6)*T^-1.5"
+  ],
+  "eta": "actual EOS total mu_e/T",
+  "outputs": [
+    "log(R_EC_full/R_EC_allowed)",
+    "log(Q_EC_full/Q_EC_allowed)",
+    "log(R_PC_full/R_PC_allowed)",
+    "log(Q_PC_full/Q_PC_allowed)"
+  ],
+  "coefficient_count": 28,
+  "source_refinement_gate": 3e-06,
+  "heldout_gate": 0.01,
+  "fit_method": "Unweighted linear least squares locked7basis; no basis/degrees retuning after heldout",
+  "scope": "Optional approximate positive separate moments, detailed physical source remains reference/default. No net source/root/derivative/current/EOS-family inference.",
+  "source_controls": "Same two existing admitted actual event profiles; no source guard changes.",
+  "original_lock_sha256": "e5b97f0023a02b8f15d036765082499b6d9705f1037ac75bcc3d3a099dfaf5cd",
+  "removed_state": {
+    "T": 1.0,
+    "nB": 1e-06,
+    "Ye": 0.5
+  },
+  "revision_reason": "Original API-admission failure before any actual rate/fitting data; do not bypass |mu_e/T|<=3. All basis,8newheldouts andgates unchanged. Parent-authorized admission-only revision within the user research scope.",
+  "candidate_domain": "Original T1..3,nB1e-7..1e-6,Ye.2...5 box INTERSECT actual EOS |mu_e/T|<=3 andoriginal EC baryoneta<=-5; selected holdouts do not certify wholeintersection.",
+  "locked_utc": "2026-10-16T01:35:24.035198+00:00"
+}

@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "original collapsed panel reproduced",
+      "passed": true,
+      "discarded": [
+        {
+          "cosine": -0.928954645880918,
+          "lo": 61.293332359999994,
+          "hi": 61.29333236,
+          "width": 7.105427357601002e-15
+        }
+      ]
+    },
+    {
+      "name": "guarded rate refinement j",
+      "actual": 1552988.0895517091,
+      "expected": 1552988.0895517063,
+      "error": 1.7990915336980832e-15,
+      "passed": true
+    },
+    {
+      "name": "guarded rate refinement chi",
+      "actual": 5045780.122083106,
+      "expected": 5045780.122083106,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "discarded panel midpoint relative measure j",
+      "actual": 4.165768906650955e-18,
+      "expected": 0.0,
+      "error": 4.165768906650955e-18,
+      "passed": true
+    },
+    {
+      "name": "discarded panel midpoint relative measure chi",
+      "actual": 4.165768906650955e-18,
+      "expected": 0.0,
+      "error": 4.165768906650955e-18,
+      "passed": true
+    },
+    {
+      "name": "nue heldout physical ray ODE",
+      "actual": 0.9999999933031503,
+      "expected": 0.9999999933089363,
+      "error": 5.786038353851217e-12,
+      "passed": true
+    },
+    {
+      "name": "nue heldout left face normalization",
+      "actual": 1.976658064057728e+43,
+      "expected": 1.976658064057728e+43,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nue heldout right face normalization",
+      "actual": 1.976658064057728e+43,
+      "expected": 1.976658064057728e+43,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nue direct volume collision conservation",
+      "actual": 3.9082736718854705e+43,
+      "expected": 3.908273671884394e+43,
+      "error": 2.7544454368865134e-13,
+      "passed": true
+    },
+    {
+      "name": "nue boundary number conservation",
+      "actual": 3.90827367188547e+43,
+      "expected": 3.908273671884394e+43,
+      "error": 2.7531784426653143e-13,
+      "passed": true
+    },
+    {
+      "name": "nue energy bath exchange",
+      "actual": -7.816547343770941e+44,
+      "expected": -7.816547343768788e+44,
+      "error": 2.754952234574993e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue heldout physical ray ODE",
+      "actual": 1.9876988416889824e-13,
+      "expected": 1.9876988416898013e-13,
+      "error": 4.1198430633267175e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue heldout left face normalization",
+      "actual": 7.096770270863189e+27,
+      "expected": 7.096770270863188e+27,
+      "error": 1.5493126955091155e-16,
+      "passed": true
+    },
+    {
+      "name": "antinue heldout right face normalization",
+      "actual": 7.096815705162453e+27,
+      "expected": 7.096815705162452e+27,
+      "error": 1.5493027767033317e-16,
+      "passed": true
+    },
+    {
+      "name": "antinue direct volume collision conservation",
+      "actual": -2.73285283343562e+40,
+      "expected": -2.7328528334348653e+40,
+      "error": 2.7621439125158275e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue boundary number conservation",
+      "actual": -2.7328528334356206e+40,
+      "expected": -2.7328528334348653e+40,
+      "error": 2.763913383311802e-13,
+      "passed": true
+    },
+    {
+      "name": "antinue energy bath exchange",
+      "actual": 2.322924908420277e+40,
+      "expected": 2.3229249084196353e+40,
+      "error": 2.7624561720680587e-13,
+      "passed": true
+    },
+    {
+      "name": "invalid tail rejected before fallback",
+      "passed": true
+    },
+    {
+      "name": "direct guard rejects preserved negative tail",
+      "passed": true
+    },
+    {
+      "name": "heldout flux/ray physical outputs unchanged after control repair",
+      "passed": true
+    }
+  ],
+  "counterexamples": [],
+  "samples": [
+    {
+      "flavor": "nue",
+      "E": 20.0,
+      "tau": 37.5,
+      "feq": 0.9999999933031503,
+      "flux": {
+        "length_cm": 1177062.6728106078,
+        "tau_relaxation": 37.5,
+        "tau_true_absorption": 2.511318658120096e-07,
+        "incoming_left": 2.7798981991097116e+41,
+        "incoming_right": 1.7243474238888607e+41,
+        "outgoing_left": 1.976658064057728e+43,
+        "outgoing_right": 1.976658064057728e+43,
+        "outgoing_both": 3.953316128115456e+43,
+        "radiation_number_gain": 3.9082736718854705e+43,
+        "radiation_energy_gain_MeV": 7.816547343770941e+44,
+        "radiation_electron_lepton_gain": 3.9082736718854705e+43,
+        "bath_electron_lepton_source": -3.9082736718854705e+43,
+        "bath_number_source": -3.9082736718854705e+43,
+        "bath_energy_source_MeV": -7.816547343770941e+44
+      }
+    },
+    {
+      "flavor": "antinue",
+      "E": 0.85,
+      "tau": 37.5,
+      "feq": 1.9876988416889824e-13,
+      "flux": {
+        "length_cm": 109134205006.12268,
+        "tau_relaxation": 37.5,
+        "tau_true_absorption": 37.499999999992546,
+        "incoming_left": 2.2537072331390513e+40,
+        "incoming_right": 4.791456002979886e+39,
+        "outgoing_left": 7.096770270863189e+27,
+        "outgoing_right": 7.096815705162453e+27,
+        "outgoing_both": 1.4193585976025642e+28,
+        "radiation_number_gain": -2.73285283343562e+40,
+        "radiation_energy_gain_MeV": -2.322924908420277e+40,
+        "radiation_electron_lepton_gain": 2.73285283343562e+40,
+        "bath_electron_lepton_source": -2.73285283343562e+40,
+        "bath_number_source": 2.73285283343562e+40,
+        "bath_energy_source_MeV": 2.322924908420277e+40
+      }
+    }
+  ],
+  "source_sha256": {
+    "quantum_slab/fixed_bath.py": "8e73b2c7d41cce51f8a522b8ba4444599010783be2b8af892c50add7e684ecf3",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf"
+  }
+}

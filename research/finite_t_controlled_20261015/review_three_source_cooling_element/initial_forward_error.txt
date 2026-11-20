@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_three_source_cooling_element/forward.py", line 6, in <module>
+    for rel,h in json.loads((A/'MANIFEST.json').read_text()).items():ck('manifest '+rel,int(hashlib.sha256((A/rel).read_bytes()).hexdigest()!=h),0)
+                                                                                                           ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rossma/miniconda3/lib/python3.13/pathlib/_abc.py", line 625, in read_bytes
+    with self.open(mode='rb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/Users/rossma/miniconda3/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/three_source_cooling_element/status'

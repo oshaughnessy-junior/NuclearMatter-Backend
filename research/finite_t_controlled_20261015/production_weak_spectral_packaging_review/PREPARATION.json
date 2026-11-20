@@ -1,0 +1,25 @@
+{
+  "status": "FROZEN_BASE_PREPARATION_ONLY_WAITING_ROOT_DIFFERENT_NUMERICAL_ACCEPTANCE",
+  "utc": "2026-10-16T07:09:39.075995+00:00",
+  "head": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+  "exact_baseline_blobs": 71,
+  "exact_PR54_overlay_reads": 11,
+  "exact_pyproject_license_reads": 2,
+  "base_files_pinned": 86,
+  "candidate_read": false,
+  "candidate_copied": false,
+  "candidate_imports": false,
+  "wheel_build": false,
+  "physical_calls": 0,
+  "minimum_runtime_execution": false,
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "jax": "0.10.1",
+    "diffrax": "0.7.2",
+    "setuptools": "82.0.1",
+    "wheel": "0.47.0"
+  },
+  "base_pin_sha256": "441db5dab0736e4d514b34e5ccbdcc04de448ebe06e4bccd9424e07c5a6693e2"
+}

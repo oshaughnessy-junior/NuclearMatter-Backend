@@ -1,0 +1,49 @@
+from pathlib import Path
+import json,math,hashlib
+R=Path(__file__).resolve().parents[1];checks=[]
+def ck(name,error,gate):
+ checks.append(dict(name=name,error=float(error),gate=gate,passed=bool(math.isfinite(error)and abs(error)<=gate)))
+fi=json.loads((R/'staged/tests/data/free_weak_spectral_reference.json').read_text());lock=json.loads((R/'LOCK.json').read_text());maxsaved=maxref=0.
+for target in fi['spectra']:
+ ch,E=target['channel'],target['E_MeV'];base=json.loads((R/f'evidence/saved_{ch}_{E}_base.json').read_text());fine=json.loads((R/f'evidence/saved_{ch}_{E}_fine.json').read_text())
+ for k in ('j','true_chi'):
+  err=abs(math.expm1(fine['result'][k]['log']-target[k]['log']));ref=abs(math.expm1(base['result'][k]['log']-fine['result'][k]['log']));maxsaved=max(maxsaved,err);maxref=max(maxref,ref)
+  ck(f'saved {ch} {E} {k}',err,3e-6);ck(f'combined refinement {ch} {E} {k}',ref,3e-6)
+ for prof,data in [('base',base),('fine',fine)]:ck(f'KMS {ch} {E} {prof}',data['KMS'],2e-9)
+for ch,es in lock['new_points'].items():
+ for E in es:
+  a=json.loads((R/f'evidence/new_{ch}_{E}_base.json').read_text());b=json.loads((R/f'evidence/new_{ch}_{E}_fine.json').read_text())
+  for k in ('j','true_chi'):ck(f'NEW refinement {ch} {E} {k}',math.expm1(a['result'][k]['log']-b['result'][k]['log']),3e-6)
+  for prof,d in [('base',a),('fine',b)]:ck(f'NEW KMS {ch} {E} {prof}',d['KMS'],2e-9)
+for i,r in enumerate(json.loads((R/'evidence/independent_phase.json').read_text())):
+ for branch in range(2):ck(f'alternate longitudinal literal phase {i} branch{branch}',r['errors'][branch],3e-10);ck(f'alternate phase refinement {i} branch{branch}',r['refinement'][branch],3e-10)
+for i,r in enumerate(json.loads((R/'evidence/isolated_controls.json').read_text())):
+ for branch in range(2):ck(f'isolated control {i} branch{branch}',r['errors'][branch],3e-6)
+# Independent ordinary arithmetic on actual SAVED fresh-node pilots; no new rates.
+pilots=[]
+HC=197.3269804
+for p in [R/f'evidence/pilot_{ch}_{order}_{scenario}.json' for ch in ('EC','PC','NEUTRON_DECAY') for order in (2,4) for scenario in ('empty','LTE','noneq')]:
+ d=json.loads(p.read_text())['result'];ff=[0.,0.];bb=[0.,0.];entropy=0.
+ for E,w,node in zip(d['rule']['nodes'],d['rule']['weights'],d['nodes']):
+  rad=d['radiation'];mu=rad['mu_nue']if d['channel']=='EC'else rad['mu_antinue'];f=0. if rad['mode']=='empty'else 1/(1+math.exp((E-mu)/d['bath']['T']))
+  F=node['j']['value']*(1-f);B=node['true_chi']['value']*f;weight=w*E*E/(2*math.pi**2*HC**3)
+  if B:entropy+=weight*(F-B)*math.log(F/B)
+  for i in (0,1):ff[i]+=weight*E**i*F;bb[i]+=weight*E**i*B
+ for i in (0,1):
+  gross=ff[i]+bb[i]
+  ck(f'{p.name} F{i}',d['forward'][i]['value']/ff[i]-1,3e-9)
+  ck(f'{p.name} B{i}',(d['backward'][i]['value']-bb[i])/gross,3e-9)
+  ck(f'{p.name} signed net{i}',(d['net'][i]['value']-(ff[i]-bb[i]))/gross,3e-9)
+ if d['radiation']['mode']=='FD':
+  val=d['entropy_production']['value'];ck(f'{p.name} entropy direct',(val-entropy)/(ff[0]+bb[0]),3e-9)
+  mu=d['radiation']['mu_nue']if d['channel']=='EC'else d['radiation']['mu_antinue'];z=d['bath']['mu_p']+d['bath']['mu_e']-d['bath']['mu_n'];eq=z if d['channel']=='EC'else-z
+  ck(f'{p.name} entropy affinity',(val-d['net'][0]['value']*(eq-mu)/2)/(ff[0]+bb[0]),3e-9)
+ pilots.append(dict(path=p.name,channel=d['channel'],order=len(d['nodes']),radiation=d['radiation'],R=[v['value']for v in d['forward']],Q_net=d['net'][1]['value'],whole_moment_qualified=d['whole_moment_qualified']))
+# Preserve finite-rule differences as diagnostics, not a whole-moment pass.
+ref=[]
+for ch in ('EC','PC','NEUTRON_DECAY'):
+ for scenario in ('empty','LTE','noneq'):
+  a=json.loads((R/f'evidence/pilot_{ch}_2_{scenario}.json').read_text())['result'];b=json.loads((R/f'evidence/pilot_{ch}_4_{scenario}.json').read_text())['result']
+  ref.append(dict(channel=ch,scenario=scenario,forward_RQ_fractional=[a['forward'][i]['value']/b['forward'][i]['value']-1 for i in(0,1)],scope='finite-range incident-node sensitivity only; no pass gate or whole certificate'))
+out=dict(checks=checks,passed=sum(c['passed']for c in checks),failed=[c for c in checks if not c['passed']],max_saved_error=maxsaved,max_saved_combined_refinement=maxref,pilot_rows=pilots,pilot_incident_refinement=ref,scope='selected spectra + finite-range source pilot; no infinite total reconstruction claim')
+(R/'evidence/ASSESSMENT.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n');print('checks',len(checks),'PASS',out['passed'],'FAIL',len(out['failed']),'maxsaved',maxsaved,'maxref',maxref);print('pilot incident differences',ref)

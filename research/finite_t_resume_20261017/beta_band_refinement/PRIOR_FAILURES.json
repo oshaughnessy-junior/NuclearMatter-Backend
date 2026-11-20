@@ -1,0 +1,76 @@
+{
+  "original_analysis": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/spectral_band_total_closure/ANALYSIS.json",
+  "sha256": "4c94bf9525f362d695f68b9833740519fbff3a38f19c34148a559d3063390073",
+  "failed_checks": [
+    {
+      "name": "NEUTRON_DECAY empty panel412to20 forward0",
+      "error": -1.977787732618628e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY empty panel412to20 forward1",
+      "error": -1.8209768908724924e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY LTE panel412to20 forward0",
+      "error": -1.9174228551771008e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY LTE panel412to20 forward1",
+      "error": -1.7644893922699483e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY LTE panel412to20 backward0",
+      "error": -1.917422858019217e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY LTE panel412to20 backward1",
+      "error": -1.764489395112069e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY common_changed_affinity panel412to20 forward0",
+      "error": -1.924997129325847e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY common_changed_affinity panel412to20 forward1",
+      "error": -1.7715746797874004e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY common_changed_affinity panel412to20 backward0",
+      "error": -1.924997132167963e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    },
+    {
+      "name": "NEUTRON_DECAY common_changed_affinity panel412to20 backward1",
+      "error": -1.7715746826295212e-05,
+      "gate": 3e-06,
+      "category": "incident_panel",
+      "passed": false
+    }
+  ]
+}

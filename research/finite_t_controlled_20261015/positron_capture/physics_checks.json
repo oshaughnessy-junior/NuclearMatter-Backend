@@ -1,0 +1,252 @@
+{
+  "checks": [
+    {
+      "name": "original delta absolute 5.0 j",
+      "error": 2.3092638912203256e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "original delta absolute 5.0 chi",
+      "error": 4.4853010194856324e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "original delta residual 5.0",
+      "error": 3.930948720613777e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "original delta absolute 8.0 j",
+      "error": 2.9531932455029164e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "original delta absolute 8.0 chi",
+      "error": 2.9976021664879227e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "original delta residual 8.0",
+      "error": 4.170651097684452e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "physical rest threshold",
+      "error": -1.2212453270876722e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "vacuum below threshold",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "vacuum above threshold",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "moving invariant support",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "sub-rest moving full spinor amplitude positive",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "sub-rest moving response absorption positive",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "sub-rest moving response emission positive",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "moving direct KMS",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "reject nonpositive Enu",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject below positron rest energy",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolean outer order",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject invalid muons-absent charge",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "inputs": {
+        "T": 2.0,
+        "ma": 938.27208816,
+        "mb": 939.56542052,
+        "mua": 916.8449303084382,
+        "mub": 919.8287578100662,
+        "Enu": 5.0,
+        "El": 3.7,
+        "cosine": 0.3,
+        "ml": 0.51099895069,
+        "mul": -0.17446333200826397,
+        "anti": true,
+        "Mweak": 938.91875434
+      },
+      "oracle": {
+        "chi": 0.7879833562432297,
+        "j": 0.2635278494545049,
+        "Emin": 938.2731666630124,
+        "umax": 127.2462803359393,
+        "max_shell_residual": 3.930948720613777e-16,
+        "min_jacobian": 0.004911702225113317,
+        "panels": 3,
+        "order": 24,
+        "nphi": 8,
+        "tail": 60.0,
+        "q": 5.237866852009628,
+        "w": 1.2999999999999998
+      },
+      "response": {
+        "j": {
+          "value": 0.263527849454511,
+          "log": -1.333596226056117,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 0.787983356243265,
+          "log": -0.23827831086601964,
+          "representable": true,
+          "reason": null
+        },
+        "reciprocal_vertex_error": 0.0,
+        "units": "s^-1 MeV^-1 per dcos",
+        "support": [
+          {
+            "lower": 938.2731666630124,
+            "upper": null
+          }
+        ]
+      }
+    },
+    {
+      "inputs": {
+        "T": 2.0,
+        "ma": 938.27208816,
+        "mb": 939.56542052,
+        "mua": 916.8449303084382,
+        "mub": 919.8287578100662,
+        "Enu": 8.0,
+        "El": 6.5,
+        "cosine": -0.4,
+        "ml": 0.51099895069,
+        "mul": -0.17446333200826397,
+        "anti": true,
+        "Mweak": 938.91875434
+      },
+      "oracle": {
+        "chi": 1.185993639846134,
+        "j": 0.08850139385467726,
+        "Emin": 938.3246019345493,
+        "umax": 127.4064789354739,
+        "max_shell_residual": 4.170651097684452e-16,
+        "min_jacobian": 0.011427449970642389,
+        "panels": 3,
+        "order": 24,
+        "nphi": 8,
+        "tail": 60.0,
+        "q": 12.14331624738759,
+        "w": 1.5
+      },
+      "response": {
+        "j": {
+          "value": 0.08850139385467988,
+          "log": -2.4247369773218854,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 1.1859936398461695,
+          "log": 0.17058093786821132,
+          "representable": true,
+          "reason": null
+        },
+        "reciprocal_vertex_error": 0.0,
+        "units": "s^-1 MeV^-1 per dcos",
+        "support": [
+          {
+            "lower": 938.3246019345493,
+            "upper": null
+          }
+        ]
+      }
+    },
+    {
+      "moving_witness": {
+        "Enu": 1.7,
+        "proton_momentum_z": -100.0,
+        "proton_energy": 943.5859851757691,
+        "s": 883902.7037697245,
+        "positron_energy": 0.5987748936352157,
+        "cosine": -0.1995027501115606,
+        "amplitude_squared": 1.193838158855959e-14,
+        "response": {
+          "j": {
+            "value": 0.0032402781881332265,
+            "log": -5.732096092328757,
+            "representable": true,
+            "reason": null
+          },
+          "chi": {
+            "value": 0.0018607452915373494,
+            "log": -6.286778177138661,
+            "representable": true,
+            "reason": null
+          },
+          "reciprocal_vertex_error": 0.0,
+          "units": "s^-1 MeV^-1 per dcos",
+          "support": [
+            {
+              "lower": 943.4404092855035,
+              "upper": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "all_pass": true
+}

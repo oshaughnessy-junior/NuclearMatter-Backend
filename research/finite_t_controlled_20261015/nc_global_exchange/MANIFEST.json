@@ -1,0 +1,39 @@
+{
+  "leaf_sha256": {
+    "SUMMARY.json": "0581a3847fc5d9245ae249b9375f6214357bfae4952f9a05af9af7c060217d96",
+    "controls.json": "547fec4f09bf4e1f068161ce7f32cff857a7bb4c5baa9bf6b81ef33f56413385",
+    "qualification.json": "0016a7b2a2809487cff91ab6e750221e975afbb1eb8c7d27c15ee53a6889d292",
+    "initial_study_before_split.py": "3be1365673730dabb6e8080794a1a57a7c7a1a2f81c4552913761e31910beca9",
+    "initial_bounded_partial.json": "388be1ed76e4f0307e6ce21031e4307746622e3869b71e285d47abebf3c76e31",
+    "initial_exchange_before_crossings.py": "4117dc26f35e46c7b0173393d324d017762d4afebad0f3448f73a9da20456b32",
+    "results_LTE.json": "e760d93aab0200fd3d6d90999594a6bca290c2d794efab345cf8d99f2520c8dd",
+    "results.json": "388be1ed76e4f0307e6ce21031e4307746622e3869b71e285d47abebf3c76e31",
+    "RESEARCH_NOTE.md": "e1f65c7ed561ef44e6b496929e4bcd85d1898797315474819b2b142e94628ca2",
+    "exchange.py": "e591e509a04f577dba73ee36db967b2e09c20c3ab80c22a18edc480914c2eb94",
+    "run_case.py": "91cebaeb24ad991132b1db5932dae3641923a5c147862a8be74b7c05bbe57334",
+    "hot_paired_6_12_24_72.json": "a8cc1fd05c0ac0277ef014cbda9ce6429cdd67f65a53031520a4c499aedab253",
+    "initial_summary_classification_failure.txt": "e92dad540847e93e427175126a8af5c227159f5f06f2b0b6091862dc12ca6f9a",
+    "check_controls.py": "4d4523c67ad716d21088395001e7e1dfd861ec06efc483cb8e0a50d85befe04b",
+    "qualify.py": "f4ea84936bd0aa5d36c89ab3f841bf589fecc6d12a3ff0ec3268c111ebba298e",
+    "study.py": "80887ecda5215ca7f243333f927ba21a098da06f51c3f9605f08eadd863817ac",
+    "initial_budget_stop.txt": "724f86eb260d11e11ef650d084bda8cc1665992c813a2fa551f851211e6cb7df"
+  },
+  "physical_sources": {
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "nc_global_exchange/exchange.py": "e591e509a04f577dba73ee36db967b2e09c20c3ab80c22a18edc480914c2eb94",
+    "nc_global_exchange/run_case.py": "91cebaeb24ad991132b1db5932dae3641923a5c147862a8be74b7c05bbe57334"
+  },
+  "environment": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+    "executable": "/Users/rossma/miniconda3/bin/python",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+  }
+}

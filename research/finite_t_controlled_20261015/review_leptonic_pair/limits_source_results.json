@@ -1,0 +1,337 @@
+{
+  "checks": [
+    {
+      "name": "massless FD absolute event e",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "massless FD absolute total energy e",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "massless equal partners",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "massless FD absolute event e",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "massless FD absolute total energy e",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "massless equal partners",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "massless number T8",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "massless energy T9",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "CP species exchange number",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "CP species exchange nu_energy",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "CP species exchange electron_energy",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "diagnosed Eq11-vs-Eq17 polynomial difference",
+      "error": -1.887379141862766e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "diagnosed Eq11-vs-Eq17 polynomial difference",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "massless FD absolute event mu",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "massless FD absolute total energy mu",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "massless equal partners",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "massless FD absolute event mu",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "massless FD absolute total energy mu",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "massless equal partners",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "massless number T8",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "massless energy T9",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "CP species exchange number",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "CP species exchange nu_energy",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "CP species exchange electron_energy",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "diagnosed Eq11-vs-Eq17 polynomial difference",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "diagnosed Eq11-vs-Eq17 polynomial difference",
+      "error": 6.439293542825908e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "reject nanT",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boolorder",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject mixedRadT",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject onepartnerNaN",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject badflavor",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject badmixingangle",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject nantail",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "massless_rows": [
+    {
+      "flavor": "e",
+      "T": 1.0,
+      "result": {
+        "number": 7.420594495643003e-10,
+        "nu_energy": 3.046866546965911e-09,
+        "antinu_energy": 3.046866546965911e-09,
+        "electron_energy": 3.046866546965911e-09,
+        "positron_energy": 3.046866546965911e-09,
+        "FDmoments_minus": [
+          0.8224670334241132,
+          1.8030853547393912,
+          5.682196976983476,
+          23.330874490725822
+        ],
+        "FDmoments_plus": [
+          0.8224670334241132,
+          1.8030853547393912,
+          5.682196976983476,
+          23.330874490725822
+        ],
+        "tail": 90.0
+      }
+    },
+    {
+      "flavor": "e",
+      "T": 2.0,
+      "result": {
+        "number": 1.899672190884609e-07,
+        "nu_energy": 1.559995672046546e-06,
+        "antinu_energy": 1.559995672046546e-06,
+        "electron_energy": 1.5599956720465458e-06,
+        "positron_energy": 1.559995672046546e-06,
+        "FDmoments_minus": [
+          3.2898681336964533,
+          14.42468283791513,
+          90.91515163173561,
+          746.5879837032261
+        ],
+        "FDmoments_plus": [
+          3.2898681336964533,
+          14.42468283791513,
+          90.91515163173561,
+          746.5879837032261
+        ],
+        "tail": 90.0
+      }
+    },
+    {
+      "flavor": "mu",
+      "T": 1.0,
+      "result": {
+        "number": 1.585587604797391e-10,
+        "nu_energy": 6.510359558358211e-10,
+        "antinu_energy": 6.510359558358211e-10,
+        "electron_energy": 6.510359558358211e-10,
+        "positron_energy": 6.510359558358211e-10,
+        "FDmoments_minus": [
+          0.8224670334241132,
+          1.8030853547393912,
+          5.682196976983476,
+          23.330874490725822
+        ],
+        "FDmoments_plus": [
+          0.8224670334241132,
+          1.8030853547393912,
+          5.682196976983476,
+          23.330874490725822
+        ],
+        "tail": 90.0
+      }
+    },
+    {
+      "flavor": "mu",
+      "T": 2.0,
+      "result": {
+        "number": 4.0591042682813207e-08,
+        "nu_energy": 3.333304093879403e-07,
+        "antinu_energy": 3.333304093879403e-07,
+        "electron_energy": 3.333304093879403e-07,
+        "positron_energy": 3.333304093879403e-07,
+        "FDmoments_minus": [
+          3.2898681336964533,
+          14.42468283791513,
+          90.91515163173561,
+          746.5879837032261
+        ],
+        "FDmoments_plus": [
+          3.2898681336964533,
+          14.42468283791513,
+          90.91515163173561,
+          746.5879837032261
+        ],
+        "tail": 90.0
+      }
+    }
+  ],
+  "EXCLUDED_printed_source_formula": [
+    {
+      "flavor": "e",
+      "Ecm": 0.6,
+      "printed_sigma_v": 1.2098304827580415e-23,
+      "trace_angular_sigma_v": 1.3835761516682786e-23,
+      "relative_conflict": -0.1255772359914843,
+      "accepted_anchor": false
+    },
+    {
+      "flavor": "e",
+      "Ecm": 0.89,
+      "printed_sigma_v": 2.702752479582052e-23,
+      "trace_angular_sigma_v": 2.8512728589252096e-23,
+      "relative_conflict": -0.05208914989607227,
+      "accepted_anchor": false
+    },
+    {
+      "flavor": "mu",
+      "Ecm": 0.6,
+      "printed_sigma_v": 1.3719054633790138e-24,
+      "trace_angular_sigma_v": 7.334829676130389e-25,
+      "relative_conflict": 0.8703985286033054,
+      "accepted_anchor": false
+    },
+    {
+      "flavor": "mu",
+      "Ecm": 0.89,
+      "printed_sigma_v": 4.4153012693194414e-24,
+      "trace_angular_sigma_v": 3.869568234089905e-24,
+      "relative_conflict": 0.1410320227517292,
+      "accepted_anchor": false
+    }
+  ],
+  "source_url": "https://arxiv.org/html/astro-ph/0511555",
+  "source_interpretation": "Eq6-11 trace independently supports CM amplitude. PrintedEq17 conflicts at finite mass; no erratum asserted. Source number emissivity F=2R, event R must not be doubled again."
+}

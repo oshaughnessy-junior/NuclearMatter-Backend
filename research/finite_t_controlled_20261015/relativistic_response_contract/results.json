@@ -1,0 +1,279 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "qaxis root 939.0100.050.0",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "energy delta Jacobian 939.0100.050.0",
+      "error": -4.0644487775409743e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "support polynomial 939.0100.050.0",
+      "error": -2.1760371282653068e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "qaxis root 700.0180.090.0",
+      "error": 1.5543122344752192e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "energy delta Jacobian 700.0180.090.0",
+      "error": -6.736200486301414e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "support polynomial 700.0180.090.0",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "qaxis root 939.040.00.5",
+      "error": 7.218670106112768e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "energy delta Jacobian 939.040.00.5",
+      "error": -3.696978412293106e-08,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "support polynomial 939.040.00.5",
+      "error": -9.190315175544583e-12,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "occupation KMS U0.00.0E40.0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "occupation KMS U0.00.0E150.0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "occupation KMS U0.00.0E70.0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "occupation KMS U12.0-4.0E40.0",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "occupation KMS U12.0-4.0E150.0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "occupation KMS U12.0-4.0E70.0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "NR spin2 density normalization M100000.0",
+      "error": -6.249992567930462e-08,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "NR spin2 density normalization M1000000.0",
+      "error": -6.249999406904294e-10,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute occupation FalseT0.1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "dilute occupation FalseT0.01",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "dilute occupation FalseT0.001",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "cold dilute target convergence False",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "cold dilute limit False",
+      "error": 9.008335903226694e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "dilute occupation TrueT0.1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "dilute occupation TrueT0.01",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "dilute occupation TrueT0.001",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "cold dilute target convergence True",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "cold dilute limit True",
+      "error": 5.052811166361693e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "dilute radial angular sigma refinement False",
+      "error": 1.2434497875801753e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute radial angular sigma refinement True",
+      "error": 1.2656542480726785e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "NR optical prefactor closure",
+      "error": 0.0,
+      "tolerance": 3e-15,
+      "passed": true
+    }
+  ],
+  "details": {
+    "dilute_moving_targets": [
+      {
+        "antineutrino": false,
+        "T": 0.1,
+        "n_fm3": 1e-18,
+        "fugacity": 6.642353992001933e-14,
+        "mean_vsigma_cm2": 1.1266038800286807e-39,
+        "stationary_sigma_cm2": 1.1255898490598552e-39,
+        "relative_difference": 0.0009008885160721736,
+        "chi_s_inv": 3.3774734638613527e-08
+      },
+      {
+        "antineutrino": false,
+        "T": 0.01,
+        "n_fm3": 1e-18,
+        "fugacity": 2.1008740340515935e-12,
+        "mean_vsigma_cm2": 1.1256912465376612e-39,
+        "stationary_sigma_cm2": 1.1255898490598552e-39,
+        "relative_difference": 9.008385948994224e-05,
+        "chi_s_inv": 3.3747374574860944e-08
+      },
+      {
+        "antineutrino": false,
+        "T": 0.001,
+        "n_fm3": 1e-18,
+        "fugacity": 6.643666346050825e-11,
+        "mean_vsigma_cm2": 1.1255999887513048e-39,
+        "stationary_sigma_cm2": 1.1255898490598552e-39,
+        "relative_difference": 9.008335903226694e-06,
+        "chi_s_inv": 3.37446387352526e-08
+      },
+      {
+        "antineutrino": true,
+        "T": 0.1,
+        "n_fm3": 1e-18,
+        "fugacity": 6.656090816406632e-14,
+        "mean_vsigma_cm2": 4.865709491204478e-40,
+        "stationary_sigma_cm2": 4.863252498728539e-40,
+        "relative_difference": 0.0005052158975051846,
+        "chi_s_inv": 1.4587030082821197e-08
+      },
+      {
+        "antineutrino": true,
+        "T": 0.01,
+        "n_fm3": 1e-18,
+        "fugacity": 2.1052193006926662e-12,
+        "mean_vsigma_cm2": 4.863498226819836e-40,
+        "stationary_sigma_cm2": 4.863252498728539e-40,
+        "relative_difference": 5.052752069967248e-05,
+        "chi_s_inv": 1.4580400878969602e-08
+      },
+      {
+        "antineutrino": true,
+        "T": 0.001,
+        "n_fm3": 1e-18,
+        "fugacity": 6.657407697286879e-11,
+        "mean_vsigma_cm2": 4.86327707182507e-40,
+        "stationary_sigma_cm2": 4.863252498728539e-40,
+        "relative_difference": 5.052811166361693e-06,
+        "chi_s_inv": 1.4579737872974801e-08
+      }
+    ],
+    "dilute_quadrature_refinement": [
+      {
+        "antineutrino": false,
+        "T": 0.1,
+        "coarse": 1.1266038800286807e-39,
+        "refined": 1.1266038800286947e-39,
+        "relative_difference": 1.2434497875801753e-14,
+        "radial_order": 16,
+        "angle_order": 16,
+        "sigma_order": 16
+      },
+      {
+        "antineutrino": true,
+        "T": 0.1,
+        "coarse": 4.865709491204478e-40,
+        "refined": 4.865709491204539e-40,
+        "relative_difference": 1.2656542480726785e-14,
+        "radial_order": 16,
+        "angle_order": 16,
+        "sigma_order": 16
+      }
+    ]
+  },
+  "runtime_seconds": 4.008995207957923,
+  "scope": "kinematic and normalization contract witnesses, not an implemented finiteT tensor",
+  "source_sha256": {
+    "relativistic_response_contract/probes.py": "1c4fb91653adb78a89930b3c79294c595c4f2a7e7d161f39712a498e044a5fcd",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "scope": "Independent held-out algebraic/grid physics checks; no continuum-rate claim",
+  "checks": [
+    {
+      "name": "held-out irregular-grid arbitrary-mu stationary -20.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "held-out irregular-grid arbitrary-mu stationary 7.0",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "held-out irregular-grid arbitrary-mu stationary 30.0",
+      "error": 1.0623925148498635e-20,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "held-out irregular-grid number conservation",
+      "error": 5.24534976525075e-18,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "pairwise (F-B)log(F/B) versus radiation-plus-bath entropy",
+      "error": 2.167470647407299e-10,
+      "tolerance": 2e-12,
+      "passed": false
+    },
+    {
+      "name": "held-out entropy production nonnegative",
+      "value": 1.1959463119512565e-08,
+      "passed": true
+    },
+    {
+      "name": "held-out signed bath-versus-radiation energy",
+      "error": 1.0806704219671997e-17,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "held-out proton DOS-ratio KMS (6.3, 8.7, -0.42)",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "held-out proton DOS-ratio KMS (13.5, 9.2, 0.73)",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    }
+  ],
+  "all_passed": false,
+  "entropy_production_fm_minus3_s_minus1": 1.1959463119512565e-08,
+  "bath_energy_source_MeV_fm_minus3_s_minus1": 1.1260528678660116e-08
+}

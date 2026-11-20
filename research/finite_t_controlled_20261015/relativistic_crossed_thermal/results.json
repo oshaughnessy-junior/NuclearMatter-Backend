@@ -1,0 +1,1132 @@
+{
+  "phase": "complete",
+  "passed": true,
+  "checks": [
+    {
+      "name": "neutron forward density",
+      "error": 2.1018742302203464e-12,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "proton forward density",
+      "error": -9.880984919163893e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "lepton charge root",
+      "error": -1.2212453270876722e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "Qrest spinor differential j (0.3, 0.993, 0.0)",
+      "error": 5.169198402668089e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Qrest spinor differential chi (0.3, 0.993, 0.0)",
+      "error": 3.6948222259532036e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent baryon shells 0.3",
+      "error": 4.483684141603646e-15,
+      "tolerance": 5e-14,
+      "passed": true
+    },
+    {
+      "name": "separate differential antiKMS 0.3",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "finite logs 0.3",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Qrest spinor differential j (0.3, 0.998, -0.54)",
+      "error": -7.448264227577512e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Qrest spinor differential chi (0.3, 0.998, -0.54)",
+      "error": -4.312994406054507e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent baryon shells 0.3",
+      "error": 1.5824767558601103e-15,
+      "tolerance": 5e-14,
+      "passed": true
+    },
+    {
+      "name": "separate differential antiKMS 0.3",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "finite logs 0.3",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Qrest spinor differential j (0.41, 0.883, 0.62)",
+      "error": -1.22248877686778e-11,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Qrest spinor differential chi (0.41, 0.883, 0.62)",
+      "error": -9.983125437379576e-12,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent baryon shells 0.41",
+      "error": 8.176129905277237e-15,
+      "tolerance": 5e-14,
+      "passed": true
+    },
+    {
+      "name": "separate differential antiKMS 0.41",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "finite logs 0.41",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Qrest spinor differential j (0.81, 0.523, 0.9)",
+      "error": -3.9201437771372396e-08,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "Qrest spinor differential chi (0.81, 0.523, 0.9)",
+      "error": -3.92062836726403e-08,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independent baryon shells 0.81",
+      "error": 2.6374612597668504e-15,
+      "tolerance": 5e-14,
+      "passed": true
+    },
+    {
+      "name": "separate differential antiKMS 0.81",
+      "error": -6.217248937900877e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "finite logs 0.81",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact forbidden invariant pair",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "spectrum ladder0 j",
+      "error": -7.569126387675449e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "spectrum ladder0 chi",
+      "error": -7.569126387675449e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "spectrum ladder1 j",
+      "error": -2.93134405633533e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "spectrum ladder1 chi",
+      "error": -2.931699327703199e-11,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "spectrum ladder2 j",
+      "error": -4.867217739955502e-13,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "spectrum ladder2 chi",
+      "error": -4.90274487674349e-13,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "spectrum ladder3 j",
+      "error": -5.151434834260594e-14,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "spectrum ladder3 chi",
+      "error": -5.68434188608064e-14,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "separate integrated antiKMS {'angle_order': 6, 'lepton_order': 8, 'widths': 9.0, 'energy_order': 8, 'phi_order': 4, 'tail': 50.0}",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "separate integrated antiKMS {'angle_order': 10, 'lepton_order': 12, 'widths': 9.0, 'energy_order': 12, 'phi_order': 4, 'tail': 50.0}",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "separate integrated antiKMS {'angle_order': 14, 'lepton_order': 16, 'widths': 9.0, 'energy_order': 16, 'phi_order': 4, 'tail': 50.0}",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "separate integrated antiKMS {'angle_order': 14, 'lepton_order': 16, 'widths': 12.0, 'energy_order': 16, 'phi_order': 4, 'tail': 50.0}",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "separate integrated antiKMS {'angle_order': 14, 'lepton_order': 16, 'widths': 12.0, 'energy_order': 24, 'phi_order': 4, 'tail': 70.0}",
+      "error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "near cold spectrum T0.1",
+      "error": -0.00023272567857990367,
+      "tolerance": 0.003,
+      "passed": true
+    },
+    {
+      "name": "near cold spectrum T0.03",
+      "error": -5.37582128055103e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "near cold spectrum T0.01",
+      "error": -1.8123531105973534e-05,
+      "tolerance": 0.0004,
+      "passed": true
+    },
+    {
+      "name": "independent momentum neutron normalization",
+      "error": 3.4727776210274897e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "underflow chi retained",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "warm outside selected integration",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "degenerate outside selected integration",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NaN bath",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "T zero",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bad tail",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bad angle",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bool order",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "negative neutrino",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "endpoint electron",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "NaN spectral width",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "overendpoint integrated API",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "matched_npe": {
+        "T": 0.03,
+        "nB": 1e-12,
+        "Ye": 0.3,
+        "neutron": {
+          "temperature": 0.03,
+          "mass": 939.56542052,
+          "chemical_potential": 939.1130868115629,
+          "kinetic_chemical_potential": -0.4523337084370951,
+          "density": 7.000000000014713e-13,
+          "kinetic_energy_density": 3.150125876606906e-14,
+          "energy_density": 6.577272956241484e-10,
+          "pressure": 2.100000105062658e-14,
+          "entropy_density": 1.230449519077759e-11,
+          "free_energy_density": 6.573581607684251e-10,
+          "cv_fixed_density": 1.050083785065487e-12,
+          "dn_dmu_fixed_temperature": 2.3333330998754947e-11,
+          "dn_dtemperature_fixed_mu": 3.8681646823986166e-10,
+          "dmu_dtemperature_fixed_density": -16.57785029752083,
+          "log_antiparticle_density": -62635.526816730664,
+          "antiparticle_density": 0.0,
+          "antiparticle_density_representable": false,
+          "log_antiparticle_to_particle_ratio": -62607.5391206708
+        },
+        "proton": {
+          "temperature": 0.03,
+          "mass": 938.27208816,
+          "chemical_potential": 937.7943974977201,
+          "kinetic_chemical_potential": -0.4776906622798833,
+          "density": 2.9999999999997035e-13,
+          "kinetic_energy_density": 1.3500539828452777e-14,
+          "energy_density": 2.8149512698780063e-10,
+          "pressure": 9.000000193362322e-15,
+          "entropy_density": 5.526924623525532e-12,
+          "free_energy_density": 2.8132931924909487e-10,
+          "cv_fixed_density": 4.500359638163384e-13,
+          "dn_dmu_fixed_temperature": 9.999999570302997e-12,
+          "dn_dtemperature_fixed_mu": 1.7423081340499983e-10,
+          "dmu_dtemperature_fixed_density": -17.4230820891646,
+          "log_antiparticle_density": -62548.46149372529,
+          "antiparticle_density": 0.0,
+          "antiparticle_density_representable": false,
+          "log_antiparticle_to_particle_ratio": -62519.62649980504
+        },
+        "electron": {
+          "temperature": 0.03,
+          "chemical_potential": 0.3683831307935174,
+          "mass": 0.51099895069,
+          "net_density": 2.9999999999999963e-13,
+          "particle_density": 3.0000000000649485e-13,
+          "antiparticle_density": 6.495141976080126e-24,
+          "energy_density": 1.6775571111700075e-13,
+          "pressure": 9.012965955789004e-15,
+          "entropy_density": 2.2084579278244887e-12,
+          "free_energy_density": 1.015019732822661e-13,
+          "cv_fixed_net_density": 5.100990272359174e-13,
+          "dn_dmu_fixed_temperature": 9.971274723347867e-12,
+          "dn_dtemperature_fixed_mu": 6.344192014743583e-11,
+          "dmu_dtemperature_fixed_net_density": -6.362468381187589
+        },
+        "muons": "absent"
+      }
+    },
+    {
+      "differential": {
+        "Enu": 0.3,
+        "Ee": 0.993,
+        "c": 0.0,
+        "j": {
+          "value": 6.497424166899744e-05,
+          "log": -9.641519648624529,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 2.50377322735754e-14,
+          "log": -31.318392416934305,
+          "representable": true,
+          "reason": null
+        },
+        "reference_logj": -9.641519648629698,
+        "reference_logchi": -31.318392416934675
+      }
+    },
+    {
+      "differential": {
+        "Enu": 0.3,
+        "Ee": 0.998,
+        "c": -0.54,
+        "j": {
+          "value": 4.125938549442106e-05,
+          "log": -10.095631943926477,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 1.5899245935708783e-14,
+          "log": -31.77250471223624,
+          "representable": true,
+          "reason": null
+        },
+        "reference_logj": -10.09563194391903,
+        "reference_logchi": -31.772504712231928
+      }
+    },
+    {
+      "differential": {
+        "Enu": 0.41,
+        "Ee": 0.883,
+        "c": 0.62,
+        "j": {
+          "value": 4.063366987417893e-05,
+          "log": -10.110913527796054,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 6.125660451802783e-13,
+          "log": -28.121119629439157,
+          "representable": true,
+          "reason": null
+        },
+        "reference_logj": -10.11091352778383,
+        "reference_logchi": -28.121119629429174
+      }
+    },
+    {
+      "differential": {
+        "Enu": 0.81,
+        "Ee": 0.523,
+        "c": 0.9,
+        "j": {
+          "value": 3.7309928505798824e-20,
+          "log": -44.73502748186461,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 3.472836849004552e-22,
+          "log": -49.41190025017437,
+          "representable": true,
+          "reason": null
+        },
+        "reference_logj": -44.735027442663174,
+        "reference_logchi": -49.411900210968085
+      }
+    },
+    {
+      "spectrum": {
+        "j": {
+          "value": 1.6622798841045385e-06,
+          "log": -13.30732047372075,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 6.405572059461036e-16,
+          "log": -34.984193242030514,
+          "representable": true,
+          "reason": null
+        },
+        "Enu": 0.3,
+        "bath": {
+          "T": 0.03,
+          "mu_n": 939.1130868115629,
+          "mu_p": 937.7943974977201,
+          "mu_e": 0.3683831307935174
+        },
+        "controls": {
+          "angle_order": 6,
+          "lepton_order": 8,
+          "widths": 9.0,
+          "energy_order": 8,
+          "phi_order": 4,
+          "tail": 50.0
+        },
+        "panels": [
+          {
+            "c": -0.932469514203152,
+            "center": 0.9931518295722345,
+            "width": 0.0032889080955206466,
+            "lower": 0.9635516567125486,
+            "upper": 1.0227520024319203
+          },
+          {
+            "c": -0.6612093864662645,
+            "center": 0.9930780282863103,
+            "width": 0.0039037032798340116,
+            "lower": 0.9579446987678042,
+            "upper": 1.0282113578048164
+          },
+          {
+            "c": -0.2386191860831969,
+            "center": 0.9929630846000872,
+            "width": 0.004703831354745566,
+            "lower": 0.9506286024073771,
+            "upper": 1.0352975667927973
+          },
+          {
+            "c": 0.2386191860831969,
+            "center": 0.9928333202275963,
+            "width": 0.005468196955659115,
+            "lower": 0.9436195476266642,
+            "upper": 1.0420470928285284
+          },
+          {
+            "c": 0.6612093864662645,
+            "center": 0.992718453574769,
+            "width": 0.006064956241115596,
+            "lower": 0.9381338474047286,
+            "upper": 1.0473030597448094
+          },
+          {
+            "c": 0.932469514203152,
+            "center": 0.9926447398653863,
+            "width": 0.006418756244533371,
+            "lower": 0.9348759336645859,
+            "upper": 1.0504135460661865
+          }
+        ],
+        "evaluations": 192,
+        "runtime_seconds": 0.3175498750060797,
+        "units": "j,chi s^-1 per one antinu occupation; DOS E\u00b2/(2pi\u00b2 hbarc\u00b3) fm^-3 MeV^-1"
+      }
+    },
+    {
+      "spectrum": {
+        "j": {
+          "value": 1.662281142257417e-06,
+          "log": -13.307319716837139,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 6.405576907735364e-16,
+          "log": -34.984192485146906,
+          "representable": true,
+          "reason": null
+        },
+        "Enu": 0.3,
+        "bath": {
+          "T": 0.03,
+          "mu_n": 939.1130868115629,
+          "mu_p": 937.7943974977201,
+          "mu_e": 0.3683831307935174
+        },
+        "controls": {
+          "angle_order": 10,
+          "lepton_order": 12,
+          "widths": 9.0,
+          "energy_order": 12,
+          "phi_order": 4,
+          "tail": 50.0
+        },
+        "panels": [
+          {
+            "c": -0.9739065285171717,
+            "center": 0.99316310458449,
+            "width": 0.0031845481343748512,
+            "lower": 0.9645021713751163,
+            "upper": 1.0218240377938637
+          },
+          {
+            "c": -0.8650633666889845,
+            "center": 0.9931334891023281,
+            "width": 0.003451931360221687,
+            "lower": 0.9620661068603329,
+            "upper": 1.0242008713443234
+          },
+          {
+            "c": -0.6794095682990244,
+            "center": 0.9930829795122588,
+            "width": 0.0038655186700950824,
+            "lower": 0.9582933114814031,
+            "upper": 1.0278726475431146
+          },
+          {
+            "c": -0.43339539412924716,
+            "center": 0.993016058841158,
+            "width": 0.004353383626262622,
+            "lower": 0.9538356062047944,
+            "upper": 1.0321965114775216
+          },
+          {
+            "c": -0.14887433898163122,
+            "center": 0.9929386788406442,
+            "width": 0.004856784931294312,
+            "lower": 0.9492276144589954,
+            "upper": 1.036649743222293
+          },
+          {
+            "c": 0.14887433898163122,
+            "center": 0.992857718942057,
+            "width": 0.005332848154484185,
+            "lower": 0.9448620855516994,
+            "upper": 1.0408533523324146
+          },
+          {
+            "c": 0.43339539412924716,
+            "center": 0.9927803725028482,
+            "width": 0.005750971238268363,
+            "lower": 0.941021631358433,
+            "upper": 1.0445391136472635
+          },
+          {
+            "c": 0.6794095682990244,
+            "center": 0.9927135072917292,
+            "width": 0.006089340100879574,
+            "lower": 0.9379094463838131,
+            "upper": 1.0475175681996454
+          },
+          {
+            "c": 0.8650633666889845,
+            "center": 0.9926630557894964,
+            "width": 0.006332692020023713,
+            "lower": 0.935668827609283,
+            "upper": 1.0496572839697098
+          },
+          {
+            "c": 0.9739065285171717,
+            "center": 0.9926334808560563,
+            "width": 0.00647109286673041,
+            "lower": 0.9343936450554826,
+            "upper": 1.05087331665663
+          }
+        ],
+        "evaluations": 480,
+        "runtime_seconds": 1.0924966249149293,
+        "units": "j,chi s^-1 per one antinu occupation; DOS E\u00b2/(2pi\u00b2 hbarc\u00b3) fm^-3 MeV^-1"
+      }
+    },
+    {
+      "spectrum": {
+        "j": {
+          "value": 1.6622811423053352e-06,
+          "log": -13.307319716808312,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 6.405576907920016e-16,
+          "log": -34.98419248511808,
+          "representable": true,
+          "reason": null
+        },
+        "Enu": 0.3,
+        "bath": {
+          "T": 0.03,
+          "mu_n": 939.1130868115629,
+          "mu_p": 937.7943974977201,
+          "mu_e": 0.3683831307935174
+        },
+        "controls": {
+          "angle_order": 14,
+          "lepton_order": 16,
+          "widths": 9.0,
+          "energy_order": 16,
+          "phi_order": 4,
+          "tail": 50.0
+        },
+        "panels": [
+          {
+            "c": -0.9862838086968124,
+            "center": 0.9931664725102064,
+            "width": 0.0031527050934713843,
+            "lower": 0.964792126668964,
+            "upper": 1.021540818351449
+          },
+          {
+            "c": -0.9284348836635735,
+            "center": 0.9931507317677958,
+            "width": 0.0032988928552115256,
+            "lower": 0.963460696070892,
+            "upper": 1.0228407674646995
+          },
+          {
+            "c": -0.827201315069765,
+            "center": 0.993123187659418,
+            "width": 0.003540207058594986,
+            "lower": 0.9612613241320631,
+            "upper": 1.0249850511867729
+          },
+          {
+            "c": -0.6872929048116855,
+            "center": 0.993085124136984,
+            "width": 0.003848861416040978,
+            "lower": 0.9584453713926152,
+            "upper": 1.0277248768813527
+          },
+          {
+            "c": -0.5152486363581541,
+            "center": 0.9930383231634942,
+            "width": 0.004197371565609157,
+            "lower": 0.9552619790730118,
+            "upper": 1.0308146672539766
+          },
+          {
+            "c": -0.31911236892788974,
+            "center": 0.9929849757938969,
+            "width": 0.004562276329066082,
+            "lower": 0.9519244888323022,
+            "upper": 1.0340454627554916
+          },
+          {
+            "c": -0.10805494870734367,
+            "center": 0.9929275787074046,
+            "width": 0.004924779322287473,
+            "lower": 0.9486045648068173,
+            "upper": 1.0372505926079918
+          },
+          {
+            "c": 0.10805494870734367,
+            "center": 0.9928688169507547,
+            "width": 0.0052701333177165265,
+            "lower": 0.9454376170913059,
+            "upper": 1.0403000168102035
+          },
+          {
+            "c": 0.31911236892788974,
+            "center": 0.9928114381284606,
+            "width": 0.005586796697773065,
+            "lower": 0.942530267848503,
+            "upper": 1.0430926084084182
+          },
+          {
+            "c": 0.5152486363581541,
+            "center": 0.992758123910818,
+            "width": 0.005865726635501097,
+            "lower": 0.9399665841913081,
+            "upper": 1.0455496636303279
+          },
+          {
+            "c": 0.6872929048116855,
+            "center": 0.9927113648497604,
+            "width": 0.00609987151709473,
+            "lower": 0.9378125211959079,
+            "upper": 1.047610208503613
+          },
+          {
+            "c": 0.827201315069765,
+            "center": 0.992673344252575,
+            "width": 0.006283830817369543,
+            "lower": 0.9361188668962491,
+            "upper": 1.0492278216089008
+          },
+          {
+            "c": 0.9284348836635735,
+            "center": 0.9926458361486944,
+            "width": 0.0064136374403420595,
+            "lower": 0.9349230991856159,
+            "upper": 1.050368573111773
+          },
+          {
+            "c": 0.9862838086968124,
+            "center": 0.9926301178453487,
+            "width": 0.0064866436562790964,
+            "lower": 0.9342503249388369,
+            "upper": 1.0510099107518607
+          }
+        ],
+        "evaluations": 896,
+        "runtime_seconds": 2.611841833917424,
+        "units": "j,chi s^-1 per one antinu occupation; DOS E\u00b2/(2pi\u00b2 hbarc\u00b3) fm^-3 MeV^-1"
+      }
+    },
+    {
+      "spectrum": {
+        "j": {
+          "value": 1.6622811423060588e-06,
+          "log": -13.307319716807877,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 6.405576907922792e-16,
+          "log": -34.984192485117646,
+          "representable": true,
+          "reason": null
+        },
+        "Enu": 0.3,
+        "bath": {
+          "T": 0.03,
+          "mu_n": 939.1130868115629,
+          "mu_p": 937.7943974977201,
+          "mu_e": 0.3683831307935174
+        },
+        "controls": {
+          "angle_order": 14,
+          "lepton_order": 16,
+          "widths": 12.0,
+          "energy_order": 16,
+          "phi_order": 4,
+          "tail": 50.0
+        },
+        "panels": [
+          {
+            "c": -0.9862838086968124,
+            "center": 0.9931664725102064,
+            "width": 0.0031527050934713843,
+            "lower": 0.9553340113885498,
+            "upper": 1.030998933631863
+          },
+          {
+            "c": -0.9284348836635735,
+            "center": 0.9931507317677958,
+            "width": 0.0032988928552115256,
+            "lower": 0.9535640175052574,
+            "upper": 1.032737446030334
+          },
+          {
+            "c": -0.827201315069765,
+            "center": 0.993123187659418,
+            "width": 0.003540207058594986,
+            "lower": 0.9506407029562781,
+            "upper": 1.0356056723625577
+          },
+          {
+            "c": -0.6872929048116855,
+            "center": 0.993085124136984,
+            "width": 0.003848861416040978,
+            "lower": 0.9468987871444923,
+            "upper": 1.0392714611294758
+          },
+          {
+            "c": -0.5152486363581541,
+            "center": 0.9930383231634942,
+            "width": 0.004197371565609157,
+            "lower": 0.9426698643761843,
+            "upper": 1.043406781950804
+          },
+          {
+            "c": -0.31911236892788974,
+            "center": 0.9929849757938969,
+            "width": 0.004562276329066082,
+            "lower": 0.9382376598451039,
+            "upper": 1.04773229174269
+          },
+          {
+            "c": -0.10805494870734367,
+            "center": 0.9929275787074046,
+            "width": 0.004924779322287473,
+            "lower": 0.9338302268399549,
+            "upper": 1.0520249305748541
+          },
+          {
+            "c": 0.10805494870734367,
+            "center": 0.9928688169507547,
+            "width": 0.0052701333177165265,
+            "lower": 0.9296272171381563,
+            "upper": 1.056110416763353
+          },
+          {
+            "c": 0.31911236892788974,
+            "center": 0.9928114381284606,
+            "width": 0.005586796697773065,
+            "lower": 0.9257698777551838,
+            "upper": 1.0598529985017373
+          },
+          {
+            "c": 0.5152486363581541,
+            "center": 0.992758123910818,
+            "width": 0.005865726635501097,
+            "lower": 0.9223694042848049,
+            "upper": 1.0631468435368312
+          },
+          {
+            "c": 0.6872929048116855,
+            "center": 0.9927113648497604,
+            "width": 0.00609987151709473,
+            "lower": 0.9195129066446237,
+            "upper": 1.0659098230548971
+          },
+          {
+            "c": 0.827201315069765,
+            "center": 0.992673344252575,
+            "width": 0.006283830817369543,
+            "lower": 0.9172673744441405,
+            "upper": 1.0680793140610096
+          },
+          {
+            "c": 0.9284348836635735,
+            "center": 0.9926458361486944,
+            "width": 0.0064136374403420595,
+            "lower": 0.9156821868645897,
+            "upper": 1.069609485432799
+          },
+          {
+            "c": 0.9862838086968124,
+            "center": 0.9926301178453487,
+            "width": 0.0064866436562790964,
+            "lower": 0.9147903939699995,
+            "upper": 1.070469841720698
+          }
+        ],
+        "evaluations": 896,
+        "runtime_seconds": 2.5346425001043826,
+        "units": "j,chi s^-1 per one antinu occupation; DOS E\u00b2/(2pi\u00b2 hbarc\u00b3) fm^-3 MeV^-1"
+      }
+    },
+    {
+      "spectrum": {
+        "j": {
+          "value": 1.6622811423061443e-06,
+          "log": -13.307319716807825,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": 6.405576907923156e-16,
+          "log": -34.98419248511759,
+          "representable": true,
+          "reason": null
+        },
+        "Enu": 0.3,
+        "bath": {
+          "T": 0.03,
+          "mu_n": 939.1130868115629,
+          "mu_p": 937.7943974977201,
+          "mu_e": 0.3683831307935174
+        },
+        "controls": {
+          "angle_order": 14,
+          "lepton_order": 16,
+          "widths": 12.0,
+          "energy_order": 24,
+          "phi_order": 4,
+          "tail": 70.0
+        },
+        "panels": [
+          {
+            "c": -0.9862838086968124,
+            "center": 0.9931664725102064,
+            "width": 0.0031527050934713843,
+            "lower": 0.9553340113885498,
+            "upper": 1.030998933631863
+          },
+          {
+            "c": -0.9284348836635735,
+            "center": 0.9931507317677958,
+            "width": 0.0032988928552115256,
+            "lower": 0.9535640175052574,
+            "upper": 1.032737446030334
+          },
+          {
+            "c": -0.827201315069765,
+            "center": 0.993123187659418,
+            "width": 0.003540207058594986,
+            "lower": 0.9506407029562781,
+            "upper": 1.0356056723625577
+          },
+          {
+            "c": -0.6872929048116855,
+            "center": 0.993085124136984,
+            "width": 0.003848861416040978,
+            "lower": 0.9468987871444923,
+            "upper": 1.0392714611294758
+          },
+          {
+            "c": -0.5152486363581541,
+            "center": 0.9930383231634942,
+            "width": 0.004197371565609157,
+            "lower": 0.9426698643761843,
+            "upper": 1.043406781950804
+          },
+          {
+            "c": -0.31911236892788974,
+            "center": 0.9929849757938969,
+            "width": 0.004562276329066082,
+            "lower": 0.9382376598451039,
+            "upper": 1.04773229174269
+          },
+          {
+            "c": -0.10805494870734367,
+            "center": 0.9929275787074046,
+            "width": 0.004924779322287473,
+            "lower": 0.9338302268399549,
+            "upper": 1.0520249305748541
+          },
+          {
+            "c": 0.10805494870734367,
+            "center": 0.9928688169507547,
+            "width": 0.0052701333177165265,
+            "lower": 0.9296272171381563,
+            "upper": 1.056110416763353
+          },
+          {
+            "c": 0.31911236892788974,
+            "center": 0.9928114381284606,
+            "width": 0.005586796697773065,
+            "lower": 0.9257698777551838,
+            "upper": 1.0598529985017373
+          },
+          {
+            "c": 0.5152486363581541,
+            "center": 0.992758123910818,
+            "width": 0.005865726635501097,
+            "lower": 0.9223694042848049,
+            "upper": 1.0631468435368312
+          },
+          {
+            "c": 0.6872929048116855,
+            "center": 0.9927113648497604,
+            "width": 0.00609987151709473,
+            "lower": 0.9195129066446237,
+            "upper": 1.0659098230548971
+          },
+          {
+            "c": 0.827201315069765,
+            "center": 0.992673344252575,
+            "width": 0.006283830817369543,
+            "lower": 0.9172673744441405,
+            "upper": 1.0680793140610096
+          },
+          {
+            "c": 0.9284348836635735,
+            "center": 0.9926458361486944,
+            "width": 0.0064136374403420595,
+            "lower": 0.9156821868645897,
+            "upper": 1.069609485432799
+          },
+          {
+            "c": 0.9862838086968124,
+            "center": 0.9926301178453487,
+            "width": 0.0064866436562790964,
+            "lower": 0.9147903939699995,
+            "upper": 1.070469841720698
+          }
+        ],
+        "evaluations": 896,
+        "runtime_seconds": 3.670398207847029,
+        "units": "j,chi s^-1 per one antinu occupation; DOS E\u00b2/(2pi\u00b2 hbarc\u00b3) fm^-3 MeV^-1"
+      }
+    },
+    {
+      "cold_limit": {
+        "T": 0.1,
+        "thermal_dGamma_dEnu_per_neutron": 0.0014089061352233602,
+        "rest_spectrum": 0.0014092341001856038,
+        "relative_difference": -0.00023272567857990367,
+        "controls": {
+          "angle_order": 12,
+          "lepton_order": 16,
+          "widths": 12.0,
+          "energy_order": 16,
+          "phi_order": 4,
+          "tail": 50.0
+        }
+      }
+    },
+    {
+      "cold_limit": {
+        "T": 0.03,
+        "thermal_dGamma_dEnu_per_neutron": 0.0014091583422789532,
+        "rest_spectrum": 0.0014092341001856038,
+        "relative_difference": -5.37582128055103e-05,
+        "controls": {
+          "angle_order": 14,
+          "lepton_order": 16,
+          "widths": 12.0,
+          "energy_order": 24,
+          "phi_order": 4,
+          "tail": 70.0
+        }
+      }
+    },
+    {
+      "cold_limit": {
+        "T": 0.01,
+        "thermal_dGamma_dEnu_per_neutron": 0.0014092085598875535,
+        "rest_spectrum": 0.0014092341001856038,
+        "relative_difference": -1.8123531105973534e-05,
+        "controls": {
+          "angle_order": 12,
+          "lepton_order": 16,
+          "widths": 12.0,
+          "energy_order": 16,
+          "phi_order": 4,
+          "tail": 50.0
+        }
+      }
+    },
+    {
+      "time_dilation_target": {
+        "mean_m_over_E": 0.9999521074261754,
+        "unblocked_total_rate_target": 0.001053334171614472,
+        "NOT_tested_by_selected_energy": true
+      }
+    },
+    {
+      "underflow": {
+        "j": {
+          "value": 1.7339801034719417e-18,
+          "log": -40.89611226995328,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "value": null,
+          "log": -100142.76504365423,
+          "representable": false,
+          "reason": "underflow"
+        }
+      }
+    }
+  ],
+  "runtime_seconds": 15.528656708076596
+}

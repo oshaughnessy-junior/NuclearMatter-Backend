@@ -1,0 +1,2030 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "heavy static neutron E5.0 total",
+      "actual": 6.171646550991463e-43,
+      "expected": 6.171647338070032e-43,
+      "scaled_error": 1.2753135843147147e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy static neutron E5.0 transport",
+      "actual": 6.389003168685223e-43,
+      "expected": 6.3890045983537815e-43,
+      "scaled_error": 2.2377015645504313e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "literature static exact neutron E5.0 total",
+      "actual": 6.171647338070031e-43,
+      "expected": 6.171647338070032e-43,
+      "scaled_error": 1.2906537135599169e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "literature static exact neutron E5.0 transport",
+      "actual": 6.389004598353781e-43,
+      "expected": 6.3890045983537815e-43,
+      "scaled_error": 1.2467450027684557e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "heavy static proton E5.0 total",
+      "actual": 5.123691255521873e-43,
+      "expected": 5.123692024821447e-43,
+      "scaled_error": 1.5014555326819625e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy static proton E5.0 transport",
+      "actual": 5.69036637490269e-43,
+      "expected": 5.690367722854724e-43,
+      "scaled_error": 2.3688311549526288e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "literature static exact proton E5.0 total",
+      "actual": 5.123692024821446e-43,
+      "expected": 5.123692024821447e-43,
+      "scaled_error": 1.5546327759502379e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "literature static exact proton E5.0 transport",
+      "actual": 5.690367722854724e-43,
+      "expected": 5.690367722854724e-43,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "heavy static neutron E10.0 total",
+      "actual": 2.468654786998514e-42,
+      "expected": 2.4686589352280127e-42,
+      "scaled_error": 1.6803574765441212e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy static neutron E10.0 transport",
+      "actual": 2.5555960693349875e-42,
+      "expected": 2.5556018393415126e-42,
+      "scaled_error": 2.2577877493635806e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "literature static exact neutron E10.0 total",
+      "actual": 2.4686589352280124e-42,
+      "expected": 2.4686589352280127e-42,
+      "scaled_error": 1.2906537135599169e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "literature static exact neutron E10.0 transport",
+      "actual": 2.5556018393415123e-42,
+      "expected": 2.5556018393415126e-42,
+      "scaled_error": 1.2467450027684557e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "heavy static proton E10.0 total",
+      "actual": 2.0494730879924953e-42,
+      "expected": 2.0494768099285787e-42,
+      "scaled_error": 1.8160420578325195e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy static proton E10.0 transport",
+      "actual": 2.2761417710036802e-42,
+      "expected": 2.2761470891418897e-42,
+      "scaled_error": 2.3364650882576636e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "literature static exact proton E10.0 total",
+      "actual": 2.0494768099285784e-42,
+      "expected": 2.0494768099285787e-42,
+      "scaled_error": 1.5546327759502379e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "literature static exact proton E10.0 transport",
+      "actual": 2.2761470891418897e-42,
+      "expected": 2.2761470891418897e-42,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "heavy static neutron E20.0 total",
+      "actual": 9.874588480950082e-42,
+      "expected": 9.874635740912051e-42,
+      "scaled_error": 4.785995474535783e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy static neutron E20.0 transport",
+      "actual": 1.0222342692437918e-41,
+      "expected": 1.022240735736605e-41,
+      "scaled_error": 6.3258023156390776e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "literature static exact neutron E20.0 total",
+      "actual": 9.87463574091205e-42,
+      "expected": 9.874635740912051e-42,
+      "scaled_error": 1.2906537135599169e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "literature static exact neutron E20.0 transport",
+      "actual": 1.0222407357366049e-41,
+      "expected": 1.022240735736605e-41,
+      "scaled_error": 1.2467450027684557e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "heavy static proton E20.0 total",
+      "actual": 8.197865038368794e-42,
+      "expected": 8.197907239714315e-42,
+      "scaled_error": 5.147819350401118e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "heavy static proton E20.0 transport",
+      "actual": 9.104528852552525e-42,
+      "expected": 9.104588356567559e-42,
+      "scaled_error": 6.535607399648534e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "literature static exact proton E20.0 total",
+      "actual": 8.197907239714314e-42,
+      "expected": 8.197907239714315e-42,
+      "scaled_error": 1.5546327759502379e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "literature static exact proton E20.0 transport",
+      "actual": 9.104588356567559e-42,
+      "expected": 9.104588356567559e-42,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "vector_only independent transport ratio",
+      "actual": 0.6666662666666078,
+      "expected": 0.6666666666666666,
+      "scaled_error": 6.000000882799839e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "axial_only independent transport ratio",
+      "actual": 1.1111105333330489,
+      "expected": 1.1111111111111112,
+      "scaled_error": 5.200002560545869e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E5.0->4.0 c-0.8",
+      "actual": -0.05371289737158058,
+      "expected": -0.05371289737158047,
+      "scaled_error": 1.1102230246251565e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E5.0->4.0 c-0.8",
+      "actual": 16.58789419975264,
+      "expected": 16.58789419975264,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E5.0->4.0 c0.0",
+      "actual": -0.05371289737158058,
+      "expected": -0.05371289737158047,
+      "scaled_error": 1.1102230246251565e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E5.0->4.0 c0.0",
+      "actual": 1.6657098028675714,
+      "expected": 1.6657098028675714,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E5.0->4.0 c0.6",
+      "actual": -0.05371289737158058,
+      "expected": -0.05371289737158047,
+      "scaled_error": 1.1102230246251565e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E5.0->4.0 c0.6",
+      "actual": 0.0007492034013509715,
+      "expected": 0.0007492034013509715,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E10.0->11.0 c-0.8",
+      "actual": 0.30937964039135046,
+      "expected": 0.30937964039135024,
+      "scaled_error": 2.220446049250313e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E10.0->11.0 c-0.8",
+      "actual": 428.8727114835993,
+      "expected": 428.8727114835993,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E10.0->11.0 c0.0",
+      "actual": 0.30937964039135046,
+      "expected": 0.30937964039135024,
+      "scaled_error": 2.220446049250313e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E10.0->11.0 c0.0",
+      "actual": 338.4246860661717,
+      "expected": 338.4246860661717,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E10.0->11.0 c0.6",
+      "actual": 0.30937964039135046,
+      "expected": 0.30937964039135024,
+      "scaled_error": 2.220446049250313e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E10.0->11.0 c0.6",
+      "actual": 105.79478867694559,
+      "expected": 105.79478867694559,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E20.0->16.0 c-0.8",
+      "actual": -1.5537128973715824,
+      "expected": -1.5537128973715806,
+      "scaled_error": 1.143297994375484e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E20.0->16.0 c-0.8",
+      "actual": 130.48191119976755,
+      "expected": 130.48191119976755,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E20.0->16.0 c0.0",
+      "actual": -1.5537128973715824,
+      "expected": -1.5537128973715806,
+      "scaled_error": 1.143297994375484e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E20.0->16.0 c0.0",
+      "actual": 13.538448590958474,
+      "expected": 13.538448590958474,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E20.0->16.0 c0.6",
+      "actual": -1.5537128973715788,
+      "expected": -1.5537128973715806,
+      "scaled_error": 1.143297994375484e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E20.0->16.0 c0.6",
+      "actual": 0.00623748292335376,
+      "expected": 0.00623748292335376,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E10.0->10.0000002 c-0.8",
+      "actual": 6.000000141170858e-08,
+      "expected": 6.000000056761938e-08,
+      "scaled_error": 8.440892033601262e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E10.0->10.0000002 c-0.8",
+      "actual": 847.0889105223753,
+      "expected": 847.0889105223753,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E10.0->10.0000002 c0.0",
+      "actual": 6.000000318806542e-08,
+      "expected": 6.000000056761938e-08,
+      "scaled_error": 2.6204460427603767e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E10.0->10.0000002 c0.0",
+      "actual": 1058.5761064624992,
+      "expected": 1058.5761064624992,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 KMS E10.0->10.0000002 c0.6",
+      "actual": 6.000000141170858e-08,
+      "expected": 6.000000056761938e-08,
+      "scaled_error": 8.440892033601262e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final Pauli E10.0->10.0000002 c0.6",
+      "actual": 1579.592016137037,
+      "expected": 1579.592016137037,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 constant offset cancels",
+      "actual": 6.0137079436585985,
+      "expected": 6.013707943658597,
+      "scaled_error": 2.9538462061055086e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E5.0 rate_s",
+      "actual": 1270.3283024026794,
+      "expected": 1270.328302402681,
+      "scaled_error": 1.2529168444820641e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E5.0 angular_transport_rate_s",
+      "actual": 1313.6962930874483,
+      "expected": 1313.6962930874483,
+      "scaled_error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E5.0 energy_to_bath_MeV_s",
+      "actual": -49.89924865972841,
+      "expected": -49.8992486597284,
+      "scaled_error": 1.4239547785687393e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final-blocking bounds E5.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E10.0 rate_s",
+      "actual": 4998.611715979778,
+      "expected": 4998.611715979771,
+      "scaled_error": 1.2736462190207578e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E10.0 angular_transport_rate_s",
+      "actual": 5142.914234093116,
+      "expected": 5142.914234093123,
+      "scaled_error": 1.4147538308047313e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E10.0 energy_to_bath_MeV_s",
+      "actual": -105.21425215255067,
+      "expected": -105.2142521525506,
+      "scaled_error": 6.7532936006605e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final-blocking bounds E10.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E20.0 rate_s",
+      "actual": 19377.702619692795,
+      "expected": 19377.70261969282,
+      "scaled_error": 1.3141832212742297e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E20.0 angular_transport_rate_s",
+      "actual": 19741.496530034623,
+      "expected": 19741.496530034663,
+      "scaled_error": 2.027088818576946e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 moment refinement E20.0 energy_to_bath_MeV_s",
+      "actual": 3470.880549144994,
+      "expected": 3470.880549144992,
+      "scaled_error": 5.24071450397203e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 final-blocking bounds E20.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 closed-grid FD stationary mu-5.0",
+      "actual": 4.632212376930045e-23,
+      "expected": 0.0,
+      "scaled_error": 8.794614966020415e-19,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 closed-grid FD number mu-5.0",
+      "actual": 2.938735877055719e-39,
+      "expected": 0.0,
+      "scaled_error": 5.579418304361925e-35,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 closed-grid FD stationary mu0.0",
+      "actual": 5.691003624106793e-22,
+      "expected": 0.0,
+      "scaled_error": 9.57150582025822e-19,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 closed-grid FD number mu0.0",
+      "actual": 2.350988701644575e-38,
+      "expected": 0.0,
+      "scaled_error": 3.9540480954594626e-35,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 closed-grid FD stationary mu8.0",
+      "actual": 2.5410997303358253e-20,
+      "expected": 0.0,
+      "scaled_error": 1.7416809188767475e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 closed-grid FD number mu8.0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 nonequilibrium number conservation",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 radiation vs pairwise bath energy",
+      "actual": 6.776263578034403e-21,
+      "expected": 0.0,
+      "scaled_error": 3.1060076346673054e-20,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=7e-05 bath+radiation entropy production positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E5.0->4.0 c-0.8",
+      "actual": -0.05371289737158058,
+      "expected": -0.05371289737158047,
+      "scaled_error": 1.1102230246251565e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E5.0->4.0 c-0.8",
+      "actual": 708.1674689767634,
+      "expected": 708.1674689767634,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E5.0->4.0 c0.0",
+      "actual": -0.05371289737158058,
+      "expected": -0.05371289737158047,
+      "scaled_error": 1.1102230246251565e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E5.0->4.0 c0.0",
+      "actual": 77.58407597455513,
+      "expected": 77.58407597455513,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E5.0->4.0 c0.6",
+      "actual": -0.05371289737158058,
+      "expected": -0.05371289737158047,
+      "scaled_error": 1.1102230246251565e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E5.0->4.0 c0.6",
+      "actual": 0.03518077725161391,
+      "expected": 0.03518077725161391,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E10.0->11.0 c-0.8",
+      "actual": 0.3093796403913487,
+      "expected": 0.30937964039135024,
+      "scaled_error": 1.5543122344752192e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E10.0->11.0 c-0.8",
+      "actual": 8754.971271119311,
+      "expected": 8754.971271119311,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E10.0->11.0 c0.0",
+      "actual": 0.3093796403913487,
+      "expected": 0.30937964039135024,
+      "scaled_error": 1.5543122344752192e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E10.0->11.0 c0.0",
+      "actual": 8673.374042859052,
+      "expected": 8673.374042859052,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E10.0->11.0 c0.6",
+      "actual": 0.30937964039135046,
+      "expected": 0.30937964039135024,
+      "scaled_error": 2.220446049250313e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E10.0->11.0 c0.6",
+      "actual": 4219.31434474595,
+      "expected": 4219.31434474595,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E20.0->16.0 c-0.8",
+      "actual": -1.5537128973715824,
+      "expected": -1.5537128973715806,
+      "scaled_error": 1.143297994375484e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E20.0->16.0 c-0.8",
+      "actual": 5395.053086441807,
+      "expected": 5395.053086441807,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E20.0->16.0 c0.0",
+      "actual": -1.5537128973715824,
+      "expected": -1.5537128973715806,
+      "scaled_error": 1.143297994375484e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E20.0->16.0 c0.0",
+      "actual": 628.3788068268258,
+      "expected": 628.3788068268258,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E20.0->16.0 c0.6",
+      "actual": -1.5537128973715788,
+      "expected": -1.5537128973715806,
+      "scaled_error": 1.143297994375484e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E20.0->16.0 c0.6",
+      "actual": 0.29289674319769243,
+      "expected": 0.29289674319769243,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E10.0->10.0000002 c-0.8",
+      "actual": 6.000000141170858e-08,
+      "expected": 6.000000056761938e-08,
+      "scaled_error": 8.440892033601262e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E10.0->10.0000002 c-0.8",
+      "actual": 12196.406363705304,
+      "expected": 12196.406363705304,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E10.0->10.0000002 c0.0",
+      "actual": 6.000000318806542e-08,
+      "expected": 6.000000056761938e-08,
+      "scaled_error": 2.6204460427603767e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E10.0->10.0000002 c0.0",
+      "actual": 15134.633430260363,
+      "expected": 15134.633430260363,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 KMS E10.0->10.0000002 c0.6",
+      "actual": 6.000000318806542e-08,
+      "expected": 6.000000056761938e-08,
+      "scaled_error": 2.6204460427603767e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final Pauli E10.0->10.0000002 c0.6",
+      "actual": 22464.658630384907,
+      "expected": 22464.658630384907,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 constant offset cancels",
+      "actual": 9.365498553868395,
+      "expected": 9.365498553868395,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E5.0 rate_s",
+      "actual": 24597.090601558335,
+      "expected": 24597.090601558353,
+      "scaled_error": 7.395140478242635e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E5.0 angular_transport_rate_s",
+      "actual": 25441.443378498476,
+      "expected": 25441.443378498432,
+      "scaled_error": 1.7159303831792715e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E5.0 energy_to_bath_MeV_s",
+      "actual": -1425.0466327957959,
+      "expected": -1425.0466327957972,
+      "scaled_error": 9.573315155188202e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final-blocking bounds E5.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E10.0 rate_s",
+      "actual": 96684.10306341229,
+      "expected": 96684.10306341224,
+      "scaled_error": 4.515297169015266e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E10.0 angular_transport_rate_s",
+      "actual": 99462.94824130597,
+      "expected": 99462.94824130602,
+      "scaled_error": 4.389146557287625e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E10.0 energy_to_bath_MeV_s",
+      "actual": -2945.8671054314873,
+      "expected": -2945.867105431487,
+      "scaled_error": 1.5436791091085434e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final-blocking bounds E10.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E20.0 rate_s",
+      "actual": 379311.5159087462,
+      "expected": 379311.5159087464,
+      "scaled_error": 4.603682604311241e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E20.0 angular_transport_rate_s",
+      "actual": 387898.5408145463,
+      "expected": 387898.5408145466,
+      "scaled_error": 7.502949197905898e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 moment refinement E20.0 energy_to_bath_MeV_s",
+      "actual": 97918.89751323032,
+      "expected": 97918.8975132303,
+      "scaled_error": 1.4861191861765674e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 final-blocking bounds E20.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 closed-grid FD stationary mu-5.0",
+      "actual": 1.6411253760503477e-21,
+      "expected": 0.0,
+      "scaled_error": 2.1759412091227975e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 closed-grid FD number mu-5.0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 closed-grid FD stationary mu0.0",
+      "actual": 2.0328780232786856e-20,
+      "expected": 0.0,
+      "scaled_error": 2.3862070449835884e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 closed-grid FD number mu0.0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 closed-grid FD stationary mu8.0",
+      "actual": 1.0299915339486495e-18,
+      "expected": 0.0,
+      "scaled_error": 4.898823242613871e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 closed-grid FD number mu8.0",
+      "actual": -4.81482486096809e-35,
+      "expected": 0.0,
+      "scaled_error": 2.2900164866016765e-34,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 nonequilibrium number conservation",
+      "actual": -5.421010862427522e-20,
+      "expected": 0.0,
+      "scaled_error": 4.0997707334508385e-19,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 radiation vs pairwise bath energy",
+      "actual": -8.673617379884035e-19,
+      "expected": 0.0,
+      "scaled_error": 2.7331804889672257e-19,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=2.0,n=0.002 bath+radiation entropy production positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E5.0->4.0 c-0.8",
+      "actual": -1.5537128973715806,
+      "expected": -1.5537128973715806,
+      "scaled_error": 0.0,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E5.0->4.0 c-0.8",
+      "actual": 782.5295495215449,
+      "expected": 782.5295495215449,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E5.0->4.0 c0.0",
+      "actual": -1.5537128973715806,
+      "expected": -1.5537128973715806,
+      "scaled_error": 0.0,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E5.0->4.0 c0.0",
+      "actual": 0.05839252210522663,
+      "expected": 0.05839252210522663,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E5.0->4.0 c0.6",
+      "actual": -1.5537128973715824,
+      "expected": -1.5537128973715806,
+      "scaled_error": 1.143297994375484e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E5.0->4.0 c0.6",
+      "actual": 7.760397338778134e-16,
+      "expected": 7.760397338778134e-16,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E10.0->11.0 c-0.8",
+      "actual": 1.8093796403913505,
+      "expected": 1.8093796403913502,
+      "scaled_error": 1.2271863790674982e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E10.0->11.0 c-0.8",
+      "actual": 1552.121083769301,
+      "expected": 1552.121083769301,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E10.0->11.0 c0.0",
+      "actual": 1.8093796403913496,
+      "expected": 1.8093796403913502,
+      "scaled_error": 3.6815591372024944e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E10.0->11.0 c0.0",
+      "actual": 1916.7838420593228,
+      "expected": 1916.7838420593228,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E10.0->11.0 c0.6",
+      "actual": 1.8093796403913505,
+      "expected": 1.8093796403913502,
+      "scaled_error": 1.2271863790674982e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E10.0->11.0 c0.6",
+      "actual": 2007.4025151037627,
+      "expected": 2007.4025151037627,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E20.0->16.0 c-0.8",
+      "actual": -7.553712897371582,
+      "expected": -7.553712897371581,
+      "scaled_error": 2.3516340421388777e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E20.0->16.0 c-0.8",
+      "actual": 14965.314010550652,
+      "expected": 14965.314010550652,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E20.0->16.0 c0.0",
+      "actual": -7.553712897371582,
+      "expected": -7.553712897371581,
+      "scaled_error": 2.3516340421388777e-16,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E20.0->16.0 c0.0",
+      "actual": 3.9818314200008462,
+      "expected": 3.9818314200008462,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E20.0->16.0 c0.6",
+      "actual": -7.553712897371568,
+      "expected": -7.553712897371581,
+      "scaled_error": 1.6461438294972144e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E20.0->16.0 c0.6",
+      "actual": 5.825625278649344e-14,
+      "expected": 5.825625278649344e-14,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E10.0->10.0000002 c-0.8",
+      "actual": 3.6000000136482413e-07,
+      "expected": 3.6000000140891336e-07,
+      "scaled_error": 4.408922957488881e-17,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E10.0->10.0000002 c-0.8",
+      "actual": 4303.733462902628,
+      "expected": 4303.733462902628,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E10.0->10.0000002 c0.0",
+      "actual": 3.600000049175378e-07,
+      "expected": 3.6000000140891336e-07,
+      "scaled_error": 3.508624449225612e-15,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E10.0->10.0000002 c0.0",
+      "actual": 5324.052341482379,
+      "expected": 5324.052341482379,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 KMS E10.0->10.0000002 c0.6",
+      "actual": 3.6000000136482413e-07,
+      "expected": 3.6000000140891336e-07,
+      "scaled_error": 4.408922957488881e-17,
+      "tolerance": 4e-11,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final Pauli E10.0->10.0000002 c0.6",
+      "actual": 7884.416779794373,
+      "expected": 7884.416779794373,
+      "scaled_error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 constant offset cancels",
+      "actual": 8.003156186594596,
+      "expected": 8.003156186594596,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E5.0 rate_s",
+      "actual": 11580.93083414838,
+      "expected": 11580.930834148376,
+      "scaled_error": 3.1413526763880705e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E5.0 angular_transport_rate_s",
+      "actual": 11881.12002378137,
+      "expected": 11881.120023781374,
+      "scaled_error": 3.0619830452094556e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E5.0 energy_to_bath_MeV_s",
+      "actual": 959.3748870508772,
+      "expected": 959.3748870508772,
+      "scaled_error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final-blocking bounds E5.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E10.0 rate_s",
+      "actual": 49785.87770843227,
+      "expected": 49785.87770843223,
+      "scaled_error": 8.768700622447114e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E10.0 angular_transport_rate_s",
+      "actual": 52126.54268606275,
+      "expected": 52126.542686062785,
+      "scaled_error": 6.979129287360946e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E10.0 energy_to_bath_MeV_s",
+      "actual": 23773.935891286797,
+      "expected": 23773.93589128682,
+      "scaled_error": 9.181430009050467e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final-blocking bounds E10.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E20.0 rate_s",
+      "actual": 264349.74961554504,
+      "expected": 264349.74961554504,
+      "scaled_error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E20.0 angular_transport_rate_s",
+      "actual": 291661.326661656,
+      "expected": 291661.3266616566,
+      "scaled_error": 1.995727770277598e-15,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 moment refinement E20.0 energy_to_bath_MeV_s",
+      "actual": 408416.05423410103,
+      "expected": 408416.0542341009,
+      "scaled_error": 2.85041003212392e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 final-blocking bounds E20.0",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 closed-grid FD stationary mu-5.0",
+      "actual": 9.244467222807586e-33,
+      "expected": 0.0,
+      "scaled_error": 2.2146286700384656e-23,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 closed-grid FD number mu-5.0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 closed-grid FD stationary mu0.0",
+      "actual": 1.5146137204333826e-28,
+      "expected": 0.0,
+      "scaled_error": 1.699876727299335e-23,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 closed-grid FD number mu0.0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 closed-grid FD stationary mu8.0",
+      "actual": 5.283616162682464e-23,
+      "expected": 0.0,
+      "scaled_error": 6.522495602211271e-21,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 closed-grid FD number mu8.0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 nonequilibrium number conservation",
+      "actual": -3.925371864379755e-27,
+      "expected": 0.0,
+      "scaled_error": 1.7819474545124813e-22,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 radiation vs pairwise bath energy",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "T=0.5,n=0.005 bath+radiation entropy production positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "independent q angle integral 10.0->9.0",
+      "actual": 20637.759662307395,
+      "expected": 20637.759662307362,
+      "scaled_error": 1.5865001724787402e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent q angle integral 10.0->11.0",
+      "actual": 19487.555731416713,
+      "expected": 19487.555731416705,
+      "scaled_error": 3.7336430050350283e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "independent q angle integral 20.0->16.0",
+      "actual": 5009.039817488891,
+      "expected": 5009.039817488891,
+      "scaled_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "repair rejects negative tail",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects NaN tail",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects negative radiation T",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects zero radiation T",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects NaN radiation mu",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects infinite tolerance",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects negative tolerance",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects noninteger angle order",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects boolean angle order",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects NaN incident energy",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects energy nan",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects energy inf",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects weight nan",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects weight inf",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects occupation nan",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects occupation inf",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects empty grid",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair rejects invalid grid angle",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "repair heldout irregular entropy identity",
+      "actual": 1.1959463116920388e-08,
+      "expected": 1.1959463116920387e-08,
+      "scaled_error": 1.3833072680039007e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "repair heldout paired energy identity",
+      "actual": -1.1260528678660111e-08,
+      "expected": -1.1260528678660116e-08,
+      "scaled_error": 4.4075050265834595e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "repair heldout number conservation",
+      "actual": 5.9736334275680075e-25,
+      "expected": 0.0,
+      "scaled_error": 7.253136002715336e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "repair heldout positive entropy",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    }
+  ],
+  "selected_moments": [
+    {
+      "species": {
+        "T": 2.0,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": -5.874636391540794,
+        "density": 6.999999999999998e-05,
+        "kinetic_energy_density": 0.0002119300865803259,
+        "energy_density": 0.0002119300865803259,
+        "pressure": 0.00014128672438688393,
+        "entropy_density": 0.0003822206791875327,
+        "free_energy_density": -0.0005525112717947396,
+        "dn_dmu": 3.436855106301183e-05,
+        "dn_dT_fixed_mu": 0.00015345137039964865,
+        "dmu_dT_fixed_density": -4.464877501478271,
+        "cv_fixed_density": 0.00010451888112608101,
+        "fluctuation_A0": 6.873710212602366e-05,
+        "fluctuation_A1": 0.0006138054815985946,
+        "fluctuation_A2": 0.005899208094651524,
+        "fermi_momentum": 25.15896765850433,
+        "temperature_over_mass": 0.002129925452609159,
+        "fermi_momentum_over_mass": 0.026793362788609512,
+        "mu": -5.874636391540794
+      },
+      "Ein": 5.0,
+      "unblocked": {
+        "rate_s": 1270.328302402681,
+        "angular_transport_rate_s": 1313.6962930874483,
+        "energy_to_bath_MeV_s": -49.8992486597284,
+        "inverse_mfp_cm_inv": 4.2373591079555477e-08,
+        "angular_transport_inverse_mfp_cm_inv": 4.382019153688811e-08
+      },
+      "blocked": {
+        "rate_s": 1069.991022086308,
+        "angular_transport_rate_s": 1106.9886832231753,
+        "energy_to_bath_MeV_s": -48.41569500158882,
+        "inverse_mfp_cm_inv": 3.5691058715236524e-08,
+        "angular_transport_inverse_mfp_cm_inv": 3.692516785139322e-08
+      }
+    },
+    {
+      "species": {
+        "T": 2.0,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": -5.874636391540794,
+        "density": 6.999999999999998e-05,
+        "kinetic_energy_density": 0.0002119300865803259,
+        "energy_density": 0.0002119300865803259,
+        "pressure": 0.00014128672438688393,
+        "entropy_density": 0.0003822206791875327,
+        "free_energy_density": -0.0005525112717947396,
+        "dn_dmu": 3.436855106301183e-05,
+        "dn_dT_fixed_mu": 0.00015345137039964865,
+        "dmu_dT_fixed_density": -4.464877501478271,
+        "cv_fixed_density": 0.00010451888112608101,
+        "fluctuation_A0": 6.873710212602366e-05,
+        "fluctuation_A1": 0.0006138054815985946,
+        "fluctuation_A2": 0.005899208094651524,
+        "fermi_momentum": 25.15896765850433,
+        "temperature_over_mass": 0.002129925452609159,
+        "fermi_momentum_over_mass": 0.026793362788609512,
+        "mu": -5.874636391540794
+      },
+      "Ein": 10.0,
+      "unblocked": {
+        "rate_s": 4998.611715979771,
+        "angular_transport_rate_s": 5142.914234093123,
+        "energy_to_bath_MeV_s": -105.2142521525506,
+        "inverse_mfp_cm_inv": 1.6673573942876747e-07,
+        "angular_transport_inverse_mfp_cm_inv": 1.7154915331769696e-07
+      },
+      "blocked": {
+        "rate_s": 4823.809104943061,
+        "angular_transport_rate_s": 4962.218442515215,
+        "energy_to_bath_MeV_s": -126.03952792216518,
+        "inverse_mfp_cm_inv": 1.6090495194989399e-07,
+        "angular_transport_inverse_mfp_cm_inv": 1.655217904953171e-07
+      }
+    },
+    {
+      "species": {
+        "T": 2.0,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": -5.874636391540794,
+        "density": 6.999999999999998e-05,
+        "kinetic_energy_density": 0.0002119300865803259,
+        "energy_density": 0.0002119300865803259,
+        "pressure": 0.00014128672438688393,
+        "entropy_density": 0.0003822206791875327,
+        "free_energy_density": -0.0005525112717947396,
+        "dn_dmu": 3.436855106301183e-05,
+        "dn_dT_fixed_mu": 0.00015345137039964865,
+        "dmu_dT_fixed_density": -4.464877501478271,
+        "cv_fixed_density": 0.00010451888112608101,
+        "fluctuation_A0": 6.873710212602366e-05,
+        "fluctuation_A1": 0.0006138054815985946,
+        "fluctuation_A2": 0.005899208094651524,
+        "fermi_momentum": 25.15896765850433,
+        "temperature_over_mass": 0.002129925452609159,
+        "fermi_momentum_over_mass": 0.026793362788609512,
+        "mu": -5.874636391540794
+      },
+      "Ein": 20.0,
+      "unblocked": {
+        "rate_s": 19377.70261969282,
+        "angular_transport_rate_s": 19741.496530034663,
+        "energy_to_bath_MeV_s": 3470.880549144992,
+        "inverse_mfp_cm_inv": 6.463705841356696e-07,
+        "angular_transport_inverse_mfp_cm_inv": 6.585054427898471e-07
+      },
+      "blocked": {
+        "rate_s": 19348.993483140388,
+        "angular_transport_rate_s": 19710.887371252797,
+        "energy_to_bath_MeV_s": 3449.501567748371,
+        "inverse_mfp_cm_inv": 6.454129504198664e-07,
+        "angular_transport_inverse_mfp_cm_inv": 6.574844311544621e-07
+      }
+    },
+    {
+      "species": {
+        "T": 2.0,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": 1.8238578638736676,
+        "density": 0.0019999999999999996,
+        "kinetic_energy_density": 0.007535428441929703,
+        "energy_density": 0.007535428441929703,
+        "pressure": 0.0050236189612864685,
+        "entropy_density": 0.004455665837734418,
+        "free_energy_density": -0.001375903233539132,
+        "dn_dmu": 0.0006643655087681272,
+        "dn_dT_fixed_mu": 0.0008941458711734104,
+        "dmu_dT_fixed_density": -1.3458643764203595,
+        "cv_fixed_density": 0.002645905627340548,
+        "fluctuation_A0": 0.0013287310175362544,
+        "fluctuation_A1": 0.0035765834846936415,
+        "fluctuation_A2": 0.02021081511204732,
+        "fermi_momentum": 76.91365833868961,
+        "temperature_over_mass": 0.002129925452609159,
+        "fermi_momentum_over_mass": 0.08191017927442984,
+        "mu": 1.8238578638736676
+      },
+      "Ein": 5.0,
+      "unblocked": {
+        "rate_s": 24597.090601558353,
+        "angular_transport_rate_s": 25441.443378498432,
+        "energy_to_bath_MeV_s": -1425.0466327957972,
+        "inverse_mfp_cm_inv": 8.204706271015782e-07,
+        "angular_transport_inverse_mfp_cm_inv": 8.486352041083846e-07
+      },
+      "blocked": {
+        "rate_s": 20731.449508310052,
+        "angular_transport_rate_s": 21456.39491690873,
+        "energy_to_bath_MeV_s": -1383.3152049398964,
+        "inverse_mfp_cm_inv": 6.915267197385617e-07,
+        "angular_transport_inverse_mfp_cm_inv": 7.157082956672889e-07
+      }
+    },
+    {
+      "species": {
+        "T": 2.0,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": 1.8238578638736676,
+        "density": 0.0019999999999999996,
+        "kinetic_energy_density": 0.007535428441929703,
+        "energy_density": 0.007535428441929703,
+        "pressure": 0.0050236189612864685,
+        "entropy_density": 0.004455665837734418,
+        "free_energy_density": -0.001375903233539132,
+        "dn_dmu": 0.0006643655087681272,
+        "dn_dT_fixed_mu": 0.0008941458711734104,
+        "dmu_dT_fixed_density": -1.3458643764203595,
+        "cv_fixed_density": 0.002645905627340548,
+        "fluctuation_A0": 0.0013287310175362544,
+        "fluctuation_A1": 0.0035765834846936415,
+        "fluctuation_A2": 0.02021081511204732,
+        "fermi_momentum": 76.91365833868961,
+        "temperature_over_mass": 0.002129925452609159,
+        "fermi_momentum_over_mass": 0.08191017927442984,
+        "mu": 1.8238578638736676
+      },
+      "Ein": 10.0,
+      "unblocked": {
+        "rate_s": 96684.10306341224,
+        "angular_transport_rate_s": 99462.94824130602,
+        "energy_to_bath_MeV_s": -2945.867105431487,
+        "inverse_mfp_cm_inv": 3.2250345358391984e-06,
+        "angular_transport_inverse_mfp_cm_inv": 3.317726833585187e-06
+      },
+      "blocked": {
+        "rate_s": 93279.10013643476,
+        "angular_transport_rate_s": 95936.05024678117,
+        "energy_to_bath_MeV_s": -3537.0300851517436,
+        "inverse_mfp_cm_inv": 3.1114558637907682e-06,
+        "angular_transport_inverse_mfp_cm_inv": 3.2000821797452013e-06
+      }
+    },
+    {
+      "species": {
+        "T": 2.0,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": 1.8238578638736676,
+        "density": 0.0019999999999999996,
+        "kinetic_energy_density": 0.007535428441929703,
+        "energy_density": 0.007535428441929703,
+        "pressure": 0.0050236189612864685,
+        "entropy_density": 0.004455665837734418,
+        "free_energy_density": -0.001375903233539132,
+        "dn_dmu": 0.0006643655087681272,
+        "dn_dT_fixed_mu": 0.0008941458711734104,
+        "dmu_dT_fixed_density": -1.3458643764203595,
+        "cv_fixed_density": 0.002645905627340548,
+        "fluctuation_A0": 0.0013287310175362544,
+        "fluctuation_A1": 0.0035765834846936415,
+        "fluctuation_A2": 0.02021081511204732,
+        "fermi_momentum": 76.91365833868961,
+        "temperature_over_mass": 0.002129925452609159,
+        "fermi_momentum_over_mass": 0.08191017927442984,
+        "mu": 1.8238578638736676
+      },
+      "Ein": 20.0,
+      "unblocked": {
+        "rate_s": 379311.5159087464,
+        "angular_transport_rate_s": 387898.5408145466,
+        "energy_to_bath_MeV_s": 97918.8975132303,
+        "inverse_mfp_cm_inv": 1.2652470260234045e-05,
+        "angular_transport_inverse_mfp_cm_inv": 1.2938902579548768e-05
+      },
+      "blocked": {
+        "rate_s": 378713.05409210117,
+        "angular_transport_rate_s": 387248.25380309566,
+        "energy_to_bath_MeV_s": 97299.70038258498,
+        "inverse_mfp_cm_inv": 1.2632507722796054e-05,
+        "angular_transport_inverse_mfp_cm_inv": 1.2917211339689395e-05
+      }
+    },
+    {
+      "species": {
+        "T": 0.5,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": 5.766506681577592,
+        "density": 0.004999999999999999,
+        "kinetic_energy_density": 0.01793250394069269,
+        "energy_density": 0.01793250394069269,
+        "pressure": 0.01195500262712846,
+        "entropy_density": 0.0021099463198664048,
+        "free_energy_density": 0.016877530780759487,
+        "dn_dmu": 0.0012844411817008632,
+        "dn_dT_fixed_mu": 0.00018652268725710008,
+        "dmu_dT_fixed_density": -0.14521699390711362,
+        "cv_fixed_density": 0.002075792025496256,
+        "fluctuation_A0": 0.0006422205908504316,
+        "fluctuation_A1": 4.663067181427502e-05,
+        "fluctuation_A2": 0.0005223337893664332,
+        "fermi_momentum": 104.38789457565042,
+        "temperature_over_mass": 0.0005324813631522897,
+        "fermi_momentum_over_mass": 0.11116921680047968,
+        "mu": 5.766506681577592
+      },
+      "Ein": 5.0,
+      "unblocked": {
+        "rate_s": 11580.930834148376,
+        "angular_transport_rate_s": 11881.120023781374,
+        "energy_to_bath_MeV_s": 959.3748870508772,
+        "inverse_mfp_cm_inv": 3.862982715245083e-07,
+        "angular_transport_inverse_mfp_cm_inv": 3.9631150506732804e-07
+      },
+      "blocked": {
+        "rate_s": 9686.610569090826,
+        "angular_transport_rate_s": 9920.447815263607,
+        "energy_to_bath_MeV_s": 702.3694917603668,
+        "inverse_mfp_cm_inv": 3.231105490015638e-07,
+        "angular_transport_inverse_mfp_cm_inv": 3.3091051994588896e-07
+      }
+    },
+    {
+      "species": {
+        "T": 0.5,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": 5.766506681577592,
+        "density": 0.004999999999999999,
+        "kinetic_energy_density": 0.01793250394069269,
+        "energy_density": 0.01793250394069269,
+        "pressure": 0.01195500262712846,
+        "entropy_density": 0.0021099463198664048,
+        "free_energy_density": 0.016877530780759487,
+        "dn_dmu": 0.0012844411817008632,
+        "dn_dT_fixed_mu": 0.00018652268725710008,
+        "dmu_dT_fixed_density": -0.14521699390711362,
+        "cv_fixed_density": 0.002075792025496256,
+        "fluctuation_A0": 0.0006422205908504316,
+        "fluctuation_A1": 4.663067181427502e-05,
+        "fluctuation_A2": 0.0005223337893664332,
+        "fermi_momentum": 104.38789457565042,
+        "temperature_over_mass": 0.0005324813631522897,
+        "fermi_momentum_over_mass": 0.11116921680047968,
+        "mu": 5.766506681577592
+      },
+      "Ein": 10.0,
+      "unblocked": {
+        "rate_s": 49785.87770843223,
+        "angular_transport_rate_s": 52126.542686062785,
+        "energy_to_bath_MeV_s": 23773.93589128682,
+        "inverse_mfp_cm_inv": 1.6606781251459044e-06,
+        "angular_transport_inverse_mfp_cm_inv": 1.7387543046884383e-06
+      },
+      "blocked": {
+        "rate_s": 47730.08417669657,
+        "angular_transport_rate_s": 49875.905986445454,
+        "energy_to_bath_MeV_s": 22422.746643111193,
+        "inverse_mfp_cm_inv": 1.5921042342131424e-06,
+        "angular_transport_inverse_mfp_cm_inv": 1.6636811452556773e-06
+      }
+    },
+    {
+      "species": {
+        "T": 0.5,
+        "mass": 939.0,
+        "offset": 0.0,
+        "kinetic_mu": 5.766506681577592,
+        "density": 0.004999999999999999,
+        "kinetic_energy_density": 0.01793250394069269,
+        "energy_density": 0.01793250394069269,
+        "pressure": 0.01195500262712846,
+        "entropy_density": 0.0021099463198664048,
+        "free_energy_density": 0.016877530780759487,
+        "dn_dmu": 0.0012844411817008632,
+        "dn_dT_fixed_mu": 0.00018652268725710008,
+        "dmu_dT_fixed_density": -0.14521699390711362,
+        "cv_fixed_density": 0.002075792025496256,
+        "fluctuation_A0": 0.0006422205908504316,
+        "fluctuation_A1": 4.663067181427502e-05,
+        "fluctuation_A2": 0.0005223337893664332,
+        "fermi_momentum": 104.38789457565042,
+        "temperature_over_mass": 0.0005324813631522897,
+        "fermi_momentum_over_mass": 0.11116921680047968,
+        "mu": 5.766506681577592
+      },
+      "Ein": 20.0,
+      "unblocked": {
+        "rate_s": 264349.74961554504,
+        "angular_transport_rate_s": 291661.3266616566,
+        "energy_to_bath_MeV_s": 408416.0542341009,
+        "inverse_mfp_cm_inv": 8.817758504636732e-06,
+        "angular_transport_inverse_mfp_cm_inv": 9.728774653218815e-06
+      },
+      "blocked": {
+        "rate_s": 263740.1596840459,
+        "angular_transport_rate_s": 290920.84400898736,
+        "energy_to_bath_MeV_s": 407181.76122820773,
+        "inverse_mfp_cm_inv": 8.79742477324249e-06,
+        "angular_transport_inverse_mfp_cm_inv": 9.70407481061406e-06
+      }
+    }
+  ],
+  "closed_grid_tests": [
+    {
+      "T": 2.0,
+      "n": 7e-05,
+      "mu_nu": -5.0,
+      "max_scaled_bin_source": 8.794614966020415e-19,
+      "number_source": 2.938735877055719e-39
+    },
+    {
+      "T": 2.0,
+      "n": 7e-05,
+      "mu_nu": 0.0,
+      "max_scaled_bin_source": 9.57150582025822e-19,
+      "number_source": 2.350988701644575e-38
+    },
+    {
+      "T": 2.0,
+      "n": 7e-05,
+      "mu_nu": 8.0,
+      "max_scaled_bin_source": 1.7416809188767475e-18,
+      "number_source": 0.0
+    },
+    {
+      "T": 2.0,
+      "n": 7e-05,
+      "non_equilibrium": true,
+      "number_source": 0.0,
+      "neutrino_energy_source": -4.659827973345347e-05,
+      "bath_energy_source": 4.659827973345348e-05,
+      "total_entropy_production_fm3_s": 1.1649569933363365e-05
+    },
+    {
+      "T": 2.0,
+      "n": 0.002,
+      "mu_nu": -5.0,
+      "max_scaled_bin_source": 2.1759412091227975e-18,
+      "number_source": 0.0
+    },
+    {
+      "T": 2.0,
+      "n": 0.002,
+      "mu_nu": 0.0,
+      "max_scaled_bin_source": 2.3862070449835884e-18,
+      "number_source": 0.0
+    },
+    {
+      "T": 2.0,
+      "n": 0.002,
+      "mu_nu": 8.0,
+      "max_scaled_bin_source": 4.898823242613871e-18,
+      "number_source": -4.81482486096809e-35
+    },
+    {
+      "T": 2.0,
+      "n": 0.002,
+      "non_equilibrium": true,
+      "number_source": -5.421010862427522e-20,
+      "neutrino_energy_source": -0.002112640981654552,
+      "bath_energy_source": 0.0021126409816545513,
+      "total_entropy_production_fm3_s": 0.0005281602454136378
+    },
+    {
+      "T": 0.5,
+      "n": 0.005,
+      "mu_nu": -5.0,
+      "max_scaled_bin_source": 2.2146286700384656e-23,
+      "number_source": 0.0
+    },
+    {
+      "T": 0.5,
+      "n": 0.005,
+      "mu_nu": 0.0,
+      "max_scaled_bin_source": 1.699876727299335e-23,
+      "number_source": 0.0
+    },
+    {
+      "T": 0.5,
+      "n": 0.005,
+      "mu_nu": 8.0,
+      "max_scaled_bin_source": 6.522495602211271e-21,
+      "number_source": 0.0
+    },
+    {
+      "T": 0.5,
+      "n": 0.005,
+      "non_equilibrium": true,
+      "number_source": -3.925371864379755e-27,
+      "neutrino_energy_source": -1.1841553002957352e-09,
+      "bath_energy_source": 1.1841553002957352e-09,
+      "total_entropy_production_fm3_s": 1.1841553002957352e-09
+    }
+  ],
+  "repair_regression": {
+    "original_entropy_relative_error": 2.167470647407299e-10,
+    "repaired_entropy_relative_error": 2.220446049250313e-16,
+    "gross_transition_flux": 0.03972473035162735,
+    "original_number_source": [
+      -1.1474838170499483e-09,
+      2.1740264409672236e-09,
+      1.9439395156518186e-09,
+      -2.967809231008145e-09,
+      -2.6729087693189157e-12
+    ],
+    "repaired_number_source": [
+      -1.1474838170507546e-09,
+      2.174026440966396e-09,
+      1.9439395156430455e-09,
+      -2.967809231559866e-09,
+      -2.6729079988202573e-12
+    ],
+    "pair_entropy": 1.1959463116920387e-08,
+    "macro_entropy": 1.1959463116920388e-08
+  },
+  "runtime_seconds": 5.33073425013572,
+  "couplings": {
+    "neutron": {
+      "vector": -0.5,
+      "axial": -0.63615
+    },
+    "proton": {
+      "vector": 0.03742000000000001,
+      "axial": 0.63615
+    },
+    "sin2thetaW": 0.23129,
+    "GF_MeVminus2": 1.1663785e-11,
+    "gA": 1.2723
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1801.07077",
+      "verified": "2026-10-15",
+      "equations": "1,2; dynamic kernel and density/spin Fourier convention"
+    },
+    {
+      "url": "https://arxiv.org/html/astro-ph/0404432",
+      "verified": "2026-10-15",
+      "equations": "9,14,18,20,23,33; static absolute/transport and collision measure"
+    }
+  ],
+  "source_sha256": {
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "environment": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+  },
+  "scope": "Leading free unpolarized NR nuclear NC; exact quadratic phase space and Pauli blocking; selected moments and closed discrete-grid identities only; independent review required"
+}

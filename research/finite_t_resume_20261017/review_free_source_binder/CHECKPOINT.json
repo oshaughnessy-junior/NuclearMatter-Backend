@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-10-17T19:29:54.559404+00:00",
+  "status": "ACCEPTED selected DIFFERENT implementation/numerical/packaging scope",
+  "review_sha256": "9200e61e6970223096ac8386977e6bc960ab486ed0c4a79cd4682e01cd23f0f0",
+  "manifest_sha256": "bca67eaeb7566fd621eeca58cff6568ae811c8cee913b15777fb7dcf067f8efa",
+  "source_pin_sha256": "ed247203525189d6f3700e842cfa1d3c0e552f4917bc897ed6b3abe4f57376f1",
+  "new_review_assertions_passed": 294,
+  "candidate_failed": 0,
+  "preserved_reviewer_fixture_failed": 1,
+  "preserved_reviewer_syntax_failure": 1,
+  "fresh_full_source_groups": 4,
+  "fresh_event_channel_calls": 12,
+  "cold_unit_test_cases": 13,
+  "author_manifest_members_unchanged": 126,
+  "prior_source_pins_unchanged": 16,
+  "minimum_runtime_CI_AD_ODE_uniform_physics_qualified": false,
+  "no_more_physical_calls": true
+}

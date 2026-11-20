@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "4.1 electron independent signed net root",
+      "error": -4.6201797122961836e-17,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "4.1 muon independent signed net root",
+      "error": -1.724867092590575e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "4.1 two-lepton neutrality",
+      "error": 1.6755851756594159e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "4.1 independent affinities",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 5e-13,
+      "passed": true
+    },
+    {
+      "name": "2.9 electron independent signed net root",
+      "error": -1.0842021724855044e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "2.9 muon independent signed net root",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "2.9 muon pair gas retained",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "2.9 two-lepton neutrality",
+      "error": 4.560026784277269e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "2.9 independent affinities",
+      "error": -2.1316282072803006e-14,
+      "tolerance": 5e-13,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "T": 4.1,
+      "nB": 0.0011,
+      "Ye": -0.027,
+      "Ymu": 0.19,
+      "zeta_e": -24.273554253412954,
+      "zeta_mu": 100.26149599698351,
+      "mu_e": -16.01334972627956,
+      "mu_mu": 108.5217005241169
+    },
+    {
+      "T": 2.9,
+      "nB": 0.0017,
+      "Ye": 0.22,
+      "Ymu": 0.0,
+      "zeta_e": 37.99210391144902,
+      "zeta_mu": -5.364764100404955,
+      "mu_e": 43.356868011854,
+      "mu_mu": 0.0
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "job": {
+    "id": 55,
+    "type": "baseline",
+    "incident_order": 32,
+    "incident_index": 23,
+    "E_MeV": 1.3494566400395325,
+    "weight_MeV": 0.01085186911632723,
+    "kernel_rule": {
+      "radial": 16,
+      "cone": 20,
+      "electron": 20,
+      "phi": 14,
+      "family": "laguerre",
+      "tail": 70.0,
+      "budget": 85.0
+    }
+  },
+  "lock_sha256": "00c77ec0dc6e112a7ccf23d2b920b591e581fe0b162ec4bf71f12664b237afd2",
+  "candidate_sha256": "148c99c37dc0550ca983b53d86123e25125469b15fd2fde9edc16c169c2ac191",
+  "complete": true,
+  "result": {
+    "E_MeV": 1.3494566400395325,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 16,
+      "cone": 20,
+      "electron": 20,
+      "phi": 14,
+      "family": "laguerre",
+      "tail": 70.0,
+      "budget": 85.0
+    },
+    "parent_min_energy_MeV": 1082.9097897724043,
+    "parent_min_momentum_MeV": 538.4333137427408,
+    "log_j_s-1": -82.14485468301292,
+    "log_true_chi_s-1": -82.87480844780305,
+    "j_s-1": 2.1132111544810385e-36,
+    "true_chi_s-1": 1.018422539194628e-36,
+    "max_shell_relative": 4.440892098500626e-16,
+    "max_lab_energy_scaled": 3.279045811642961e-16,
+    "max_unsquared_rest_delta_scaled": 1.209993846502954e-16,
+    "literal_current_reciprocity": 8.881784197001252e-16,
+    "KMS_actual_products": -1.2434497875801753e-14,
+    "events": 89600,
+    "seconds": 0.14212587499059737,
+    "radial_domain": "semi-infinite"
+  },
+  "seconds": 0.14214162505231798
+}

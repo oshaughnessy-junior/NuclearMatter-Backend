@@ -1,0 +1,47 @@
+{
+  "workdir": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/cold_murca_parity",
+  "compiler_version": "GNU Fortran (Homebrew GCC 15.2.0_1) 15.2.0\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "local_compile": [
+    "/opt/homebrew/bin/gfortran",
+    "-std=legacy",
+    "-ffixed-line-length-none",
+    "-O0",
+    "-fcheck=all",
+    "-ffpe-trap=invalid,zero,overflow",
+    "-I",
+    "source_snapshot",
+    "driver.f",
+    "source_snapshot/numurca_nucl.f",
+    "-o",
+    "cold_mu_reference"
+  ],
+  "mirror_compile": [
+    "/opt/homebrew/bin/gfortran",
+    "-std=legacy",
+    "-ffixed-line-length-none",
+    "-O0",
+    "-fcheck=all",
+    "-ffpe-trap=invalid,zero,overflow",
+    "mirror_driver.f",
+    "source_snapshot/mirror_numurca_nucl.f",
+    "-o",
+    "cold_mu_mirror"
+  ],
+  "experiments": [
+    [
+      "/Users/rossma/miniconda3/envs/junior_tools/bin/python",
+      "run_parity.py"
+    ],
+    [
+      "/Users/rossma/miniconda3/envs/junior_tools/bin/python",
+      "threshold_probe.py"
+    ],
+    [
+      "/Users/rossma/miniconda3/envs/junior_tools/bin/python",
+      "mirror_check.py"
+    ]
+  ],
+  "bounded_seconds_per_experiment": 120,
+  "no_full_NSCOOL_build": true,
+  "no_installs": true
+}

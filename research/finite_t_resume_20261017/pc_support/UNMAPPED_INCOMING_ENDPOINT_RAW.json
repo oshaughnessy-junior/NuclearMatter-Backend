@@ -1,0 +1,312 @@
+[
+  {
+    "E_MeV": 0.1,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 8,
+      "incoming": 10,
+      "outgoing": 10,
+      "phi": 4,
+      "tail": 70.0,
+      "literal": false,
+      "budget": 85.0
+    },
+    "log_j_s-1": -3786.584725985439,
+    "log_true_chi_s-1": -3787.9394080702596,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 8498.883134642389,
+    "threshold_initial_momentum_MeV": 8446.931988887367,
+    "events": 25600,
+    "max_shell_relative": 3.6548541970660153e-13,
+    "max_four_conservation_scaled": 2.5357525618831696e-14,
+    "max_unsquared_delta_scaled": 4.28053711524156e-16,
+    "KMS_log_residual": 1.0621059587379023e-11,
+    "seconds": 0.029503292171284556,
+    "tag": "coarse"
+  },
+  {
+    "E_MeV": 0.1,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 12,
+      "incoming": 16,
+      "outgoing": 16,
+      "phi": 6,
+      "tail": 70.0,
+      "literal": false,
+      "budget": 85.0
+    },
+    "log_j_s-1": -3786.584825390348,
+    "log_true_chi_s-1": -3787.939507475168,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 8498.883134642389,
+    "threshold_initial_momentum_MeV": 8446.931988887367,
+    "events": 147456,
+    "max_shell_relative": 3.7903014060702844e-13,
+    "max_four_conservation_scaled": 2.7369523789625458e-14,
+    "max_unsquared_delta_scaled": 6.36777950633852e-16,
+    "KMS_log_residual": 9.711564885606094e-12,
+    "seconds": 0.08715537493117154,
+    "tag": "inner"
+  },
+  {
+    "E_MeV": 0.1,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 16,
+      "incoming": 22,
+      "outgoing": 22,
+      "phi": 8,
+      "tail": 70.0,
+      "literal": false,
+      "budget": 85.0
+    },
+    "log_j_s-1": -3786.5848462222566,
+    "log_true_chi_s-1": -3787.9395283070817,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 8498.883134642389,
+    "threshold_initial_momentum_MeV": 8446.931988887367,
+    "events": 495616,
+    "max_shell_relative": 4.063416270128073e-13,
+    "max_four_conservation_scaled": 2.874907633892348e-14,
+    "max_unsquared_delta_scaled": 6.408688243254215e-16,
+    "KMS_log_residual": 1.5168533096243664e-11,
+    "seconds": 0.2398613749537617,
+    "tag": "higher"
+  },
+  {
+    "E_MeV": 0.1,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 16,
+      "incoming": 22,
+      "outgoing": 22,
+      "phi": 8,
+      "tail": 90.0,
+      "literal": false,
+      "budget": 85.0
+    },
+    "log_j_s-1": -3786.5848462222566,
+    "log_true_chi_s-1": -3787.9395283070817,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 8498.883134642389,
+    "threshold_initial_momentum_MeV": 8446.931988887367,
+    "events": 557568,
+    "max_shell_relative": 4.063416270128073e-13,
+    "max_four_conservation_scaled": 2.874907633892348e-14,
+    "max_unsquared_delta_scaled": 6.408688243254215e-16,
+    "KMS_log_residual": 1.5168533096243664e-11,
+    "seconds": 0.26095341704785824,
+    "tag": "tail90"
+  },
+  {
+    "E_MeV": 0.1,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 12,
+      "incoming": 16,
+      "outgoing": 16,
+      "phi": 6,
+      "tail": 70.0,
+      "literal": true,
+      "budget": 85.0
+    },
+    "log_j_s-1": -3786.584825390348,
+    "log_true_chi_s-1": -3787.9395074751683,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 8498.883134642389,
+    "threshold_initial_momentum_MeV": 8446.931988887367,
+    "events": 147456,
+    "max_shell_relative": 3.7903014060702844e-13,
+    "max_four_conservation_scaled": 2.7369523789625458e-14,
+    "max_unsquared_delta_scaled": 6.36777950633852e-16,
+    "KMS_log_residual": 1.0166312236492558e-11,
+    "seconds": 3.9326302078552544,
+    "tag": "literal"
+  },
+  {
+    "E_MeV": 0.15,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 8,
+      "incoming": 10,
+      "outgoing": 10,
+      "phi": 4,
+      "tail": 70.0,
+      "literal": false,
+      "budget": 85.0
+    },
+    "log_j_s-1": -2381.2393481190147,
+    "log_true_chi_s-1": -2382.569030203818,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 5687.568400492851,
+    "threshold_initial_momentum_MeV": 5609.641681860319,
+    "events": 25600,
+    "max_shell_relative": 3.381739333008227e-13,
+    "max_four_conservation_scaled": 9.809432962128805e-15,
+    "max_unsquared_delta_scaled": 4.784606830977541e-16,
+    "KMS_log_residual": -6.750378034325877e-12,
+    "seconds": 0.027736041927710176,
+    "tag": "coarse"
+  },
+  {
+    "E_MeV": 0.15,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 12,
+      "incoming": 16,
+      "outgoing": 16,
+      "phi": 6,
+      "tail": 70.0,
+      "literal": false,
+      "budget": 85.0
+    },
+    "log_j_s-1": -2381.23944740189,
+    "log_true_chi_s-1": -2382.5691294866924,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 5687.568400492851,
+    "threshold_initial_momentum_MeV": 5609.641681860319,
+    "events": 147456,
+    "max_shell_relative": 3.381739333008227e-13,
+    "max_four_conservation_scaled": 1.0873722058136626e-14,
+    "max_unsquared_delta_scaled": 4.795956256333928e-16,
+    "KMS_log_residual": -7.659872736098805e-12,
+    "seconds": 0.08499962510541081,
+    "tag": "inner"
+  },
+  {
+    "E_MeV": 0.15,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 16,
+      "incoming": 22,
+      "outgoing": 22,
+      "phi": 8,
+      "tail": 70.0,
+      "literal": false,
+      "budget": 85.0
+    },
+    "log_j_s-1": -2381.239468208441,
+    "log_true_chi_s-1": -2382.569150293242,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 5687.568400492851,
+    "threshold_initial_momentum_MeV": 5609.641681860319,
+    "events": 495616,
+    "max_shell_relative": 3.519406988061746e-13,
+    "max_four_conservation_scaled": 1.0334250977677439e-14,
+    "max_unsquared_delta_scaled": 4.797275700874309e-16,
+    "KMS_log_residual": -9.024114788758197e-12,
+    "seconds": 0.23636858398094773,
+    "tag": "higher"
+  },
+  {
+    "E_MeV": 0.15,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 16,
+      "incoming": 22,
+      "outgoing": 22,
+      "phi": 8,
+      "tail": 90.0,
+      "literal": false,
+      "budget": 85.0
+    },
+    "log_j_s-1": -2381.239468208441,
+    "log_true_chi_s-1": -2382.569150293242,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 5687.568400492851,
+    "threshold_initial_momentum_MeV": 5609.641681860319,
+    "events": 557568,
+    "max_shell_relative": 3.6548541970660153e-13,
+    "max_four_conservation_scaled": 1.0520234196179167e-14,
+    "max_unsquared_delta_scaled": 4.797275700874309e-16,
+    "KMS_log_residual": -9.024114788758197e-12,
+    "seconds": 0.2647895000409335,
+    "tag": "tail90"
+  },
+  {
+    "E_MeV": 0.15,
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "rule": {
+      "radial": 12,
+      "incoming": 16,
+      "outgoing": 16,
+      "phi": 6,
+      "tail": 70.0,
+      "literal": true,
+      "budget": 85.0
+    },
+    "log_j_s-1": -2381.23944740189,
+    "log_true_chi_s-1": -2382.5691294866924,
+    "ordinary_j_s-1": null,
+    "ordinary_true_chi_s-1": null,
+    "threshold_initial_proton_energy_MeV": 5687.568400492851,
+    "threshold_initial_momentum_MeV": 5609.641681860319,
+    "events": 147456,
+    "max_shell_relative": 3.381739333008227e-13,
+    "max_four_conservation_scaled": 1.0873722058136626e-14,
+    "max_unsquared_delta_scaled": 4.795956256333928e-16,
+    "KMS_log_residual": -7.659872736098805e-12,
+    "seconds": 3.9423350419383496,
+    "tag": "literal"
+  }
+]

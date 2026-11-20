@@ -1,0 +1,1376 @@
+{
+  "passed": true,
+  "phase": "complete",
+  "checks": [
+    {
+      "name": "analytic Coulomb integral a1e-08 v\u00b20.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a1e-08 v\u00b20.37",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a1e-08 v\u00b21.0",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.0001 v\u00b20.0",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.0001 v\u00b20.37",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.0001 v\u00b21.0",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.13 v\u00b20.0",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.13 v\u00b20.37",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.13 v\u00b21.0",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.9 v\u00b20.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.9 v\u00b20.37",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a0.9 v\u00b21.0",
+      "error": 3.1086244689504383e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a3.9 v\u00b20.0",
+      "error": 2.220446049250313e-15,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a3.9 v\u00b20.37",
+      "error": 1.865174681370263e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a3.9 v\u00b21.0",
+      "error": 7.926992395823618e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a4.0 v\u00b20.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a4.0 v\u00b20.37",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a4.0 v\u00b21.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a70.0 v\u00b20.0",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a70.0 v\u00b20.37",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a70.0 v\u00b21.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a10000.0 v\u00b20.0",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a10000.0 v\u00b20.37",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a10000.0 v\u00b21.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a100000000.0 v\u00b20.0",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a100000000.0 v\u00b20.37",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "analytic Coulomb integral a100000000.0 v\u00b21.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "0.003 independent p vs E K0",
+      "error": 1.5765166949677223e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.003 moment tail/rtol K0",
+      "error": 8.215650382226158e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.003 independent p vs E K1",
+      "error": 1.021405182655144e-14,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.003 moment tail/rtol K1",
+      "error": 4.218847493575595e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.003 independent p vs E K2",
+      "error": 6.8833827526759706e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.003 moment tail/rtol K2",
+      "error": 2.220446049250313e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.003 angular dcs vs analytic nu at0.23",
+      "error": -2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.003 angular dcs vs analytic nu at1.0",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.003 angular dcs vs analytic nu at3.1",
+      "error": -8.881784197001252e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.003 forward electron density",
+      "error": 3.275157922644212e-11,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.003 screening susceptibility FD 0.001",
+      "error": 1.6319594609015553e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "0.003 screening susceptibility FD 0.0005",
+      "error": 4.0784027044438176e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "0.003 positive thermoelectric covariance",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.003 kappa open no greater than Estar0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.003 Onsager/Kelvin sign",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "0.003 positive sigma",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.003 independent p vs E K0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.003 moment tail/rtol K0",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.003 independent p vs E K1",
+      "error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.003 moment tail/rtol K1",
+      "error": -1.887379141862766e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.003 independent p vs E K2",
+      "error": 3.774758283725532e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.003 moment tail/rtol K2",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.003 angular dcs vs analytic nu at0.23",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.003 angular dcs vs analytic nu at1.0",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.003 angular dcs vs analytic nu at3.1",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.003 forward electron density",
+      "error": 5.955014259484415e-12,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.003 screening susceptibility FD 0.001",
+      "error": -1.620603096164075e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "0.003 screening susceptibility FD 0.0005",
+      "error": -4.101404771361672e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "0.003 positive thermoelectric covariance",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.003 kappa open no greater than Estar0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.003 Onsager/Kelvin sign",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "0.003 positive sigma",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.07 independent p vs E K0",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.07 moment tail/rtol K0",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.07 independent p vs E K1",
+      "error": -4.6629367034256575e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.07 moment tail/rtol K1",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.07 independent p vs E K2",
+      "error": -1.4432899320127035e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.07 moment tail/rtol K2",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.07 angular dcs vs analytic nu at0.23",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.07 angular dcs vs analytic nu at1.0",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.07 angular dcs vs analytic nu at3.1",
+      "error": 6.217248937900877e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.07 forward electron density",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.07 screening susceptibility FD 0.001",
+      "error": 2.0190782379359007e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "0.07 screening susceptibility FD 0.0005",
+      "error": 5.002043224067165e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "0.07 positive thermoelectric covariance",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.07 kappa open no greater than Estar0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.07 Onsager/Kelvin sign",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "0.07 positive sigma",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.25 independent p vs E K0",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.25 moment tail/rtol K0",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.25 independent p vs E K1",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.25 moment tail/rtol K1",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.25 independent p vs E K2",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "0.25 moment tail/rtol K2",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.25 angular dcs vs analytic nu at0.23",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.25 angular dcs vs analytic nu at1.0",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.25 angular dcs vs analytic nu at3.1",
+      "error": -6.661338147750939e-15,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "0.25 forward electron density",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "0.25 screening susceptibility FD 0.001",
+      "error": 2.8094637727349436e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "0.25 screening susceptibility FD 0.0005",
+      "error": 1.411804007034334e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "0.25 positive thermoelectric covariance",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.25 kappa open no greater than Estar0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.25 Onsager/Kelvin sign",
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "passed": true
+    },
+    {
+      "name": "0.25 positive sigma",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full angle+momentum chain K0",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "full angle+momentum chain K1",
+      "error": -3.4416913763379853e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "full angle+momentum chain K2",
+      "error": -1.4432899320127035e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "degenerate final WF",
+      "error": 0.00011342365570721213,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "degenerate final Drude",
+      "error": 6.575531756780606e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "WF T\u00b2 convergence",
+      "error": -0.0020113763907415594,
+      "tolerance": 0.015,
+      "passed": true
+    },
+    {
+      "name": "WF T\u00b2 convergence",
+      "error": -0.0005028897061184479,
+      "tolerance": 0.015,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "kind": "selected_state",
+      "result": {
+        "K": [
+          0.9820705177380666,
+          0.024999768915255446,
+          0.0006707159787703601
+        ],
+        "sigma": 0.09005708118906293,
+        "kappa_open": 0.011439077643036772,
+        "kappa_Estar_zero": 0.22357199292345337,
+        "seebeck": -28.021054144271535,
+        "peltier": -0.0840631624328146,
+        "Lorenz_ratio": 42.34010064136227,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 0.0005082305194254674,
+        "born_Zalpha_over_vF": 0.28361922583444105,
+        "controls": {
+          "tail": 60.0,
+          "rtol": 2e-10,
+          "energy_window": [
+            4.604610623245372,
+            64.60461062324538
+          ]
+        },
+        "estimated_scaled_error": 4.974023385959892e-11,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.003,
+          "ne_fm3": 1e-14,
+          "Z": 1,
+          "mu": 0.4971851188202639,
+          "screening_squared": 2.34042060427783e-06,
+          "ni_natural": 7.683505569453848e-08,
+          "screening_susceptibility_natural": 2.552223594436354e-05,
+          "pair_log_ratio": -331.45324056553557,
+          "pair_ratio_representable": true,
+          "pair_ratio": 1.1263843647589177e-144,
+          "gas": {
+            "temperature": 0.003,
+            "mass": 0.51099895069,
+            "chemical_potential": 0.4971851188202639,
+            "kinetic_chemical_potential": -0.013813831869736115,
+            "density": 1.0000000000327507e-14,
+            "kinetic_energy_density": 4.5408031514873735e-17,
+            "energy_density": 5.155397538582229e-15,
+            "pressure": 3.005257694230414e-17,
+            "entropy_density": 7.11996423863544e-14,
+            "free_energy_density": 4.941798611423166e-15,
+            "cv_fixed_density": 1.520479612103335e-14,
+            "dn_dmu_fixed_temperature": 3.321691604653537e-12,
+            "dn_dtemperature_fixed_mu": 2.033163832528538e-11,
+            "dmu_dtemperature_fixed_density": -6.120868745551722,
+            "log_antiparticle_density": -363.68943186741944,
+            "antiparticle_density": 1.1263843647958202e-158,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -331.45324056553557
+          }
+        }
+      },
+      "momentum_K": [
+        0.9820705177380822,
+        0.024999768915255703,
+        0.0006707159787703648
+      ],
+      "finer": {
+        "K": [
+          0.9820705177380746,
+          0.024999768915255554,
+          0.0006707159787703616
+        ],
+        "sigma": 0.09005708118906365,
+        "kappa_open": 0.01143907764303717,
+        "kappa_Estar_zero": 0.22357199292345387,
+        "seebeck": -28.021054144271428,
+        "peltier": -0.08406316243281428,
+        "Lorenz_ratio": 42.3401006413634,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 0.0005082305194254674,
+        "born_Zalpha_over_vF": 0.28361922583444105,
+        "controls": {
+          "tail": 85,
+          "rtol": 4e-12,
+          "energy_window": [
+            4.604610623245372,
+            89.60461062324538
+          ]
+        },
+        "estimated_scaled_error": 2.7968185808605886e-12,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.003,
+          "ne_fm3": 1e-14,
+          "Z": 1,
+          "mu": 0.4971851188202639,
+          "screening_squared": 2.34042060427783e-06,
+          "ni_natural": 7.683505569453848e-08,
+          "screening_susceptibility_natural": 2.552223594436354e-05,
+          "pair_log_ratio": -331.45324056553557,
+          "pair_ratio_representable": true,
+          "pair_ratio": 1.1263843647589177e-144,
+          "gas": {
+            "temperature": 0.003,
+            "mass": 0.51099895069,
+            "chemical_potential": 0.4971851188202639,
+            "kinetic_chemical_potential": -0.013813831869736115,
+            "density": 1.0000000000327507e-14,
+            "kinetic_energy_density": 4.5408031514873735e-17,
+            "energy_density": 5.155397538582229e-15,
+            "pressure": 3.005257694230414e-17,
+            "entropy_density": 7.11996423863544e-14,
+            "free_energy_density": 4.941798611423166e-15,
+            "cv_fixed_density": 1.520479612103335e-14,
+            "dn_dmu_fixed_temperature": 3.321691604653537e-12,
+            "dn_dtemperature_fixed_mu": 2.033163832528538e-11,
+            "dmu_dtemperature_fixed_density": -6.120868745551722,
+            "log_antiparticle_density": -363.68943186741944,
+            "antiparticle_density": 1.1263843647958202e-158,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -331.45324056553557
+          }
+        }
+      }
+    },
+    {
+      "kind": "selected_state",
+      "result": {
+        "K": [
+          7.767874820396547,
+          0.033931383485729674,
+          0.00038458883833726674
+        ],
+        "sigma": 0.7123237290313512,
+        "kappa_open": 0.07879028308784512,
+        "kappa_Estar_zero": 0.12819627944575557,
+        "seebeck": -4.80828827890471,
+        "peltier": -0.014424864836714131,
+        "Lorenz_ratio": 36.87007272895783,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 0.610622173151063,
+        "born_Zalpha_over_vF": 0.029276569020370288,
+        "controls": {
+          "tail": 60.0,
+          "rtol": 2e-10,
+          "energy_window": [
+            -5.3826180606354095,
+            60.0
+          ]
+        },
+        "estimated_scaled_error": 3.4537649619648995e-11,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.003,
+          "ne_fm3": 1e-11,
+          "Z": 1,
+          "mu": 0.5271468048719062,
+          "screening_squared": 0.00062491885139248,
+          "ni_natural": 7.683505569453848e-05,
+          "screening_susceptibility_natural": 0.006814726524867918,
+          "pair_log_ratio": -348.34822452837165,
+          "pair_ratio_representable": true,
+          "pair_ratio": 5.179505594936624e-152,
+          "gas": {
+            "temperature": 0.003,
+            "mass": 0.51099895069,
+            "chemical_potential": 0.5271468048719062,
+            "kinetic_chemical_potential": 0.01614785418190623,
+            "density": 1.0000000000059555e-11,
+            "kinetic_energy_density": 1.1316173943174182e-13,
+            "energy_density": 5.223151246362174e-12,
+            "pressure": 7.440552090199118e-14,
+            "entropy_density": 8.696239504569674e-12,
+            "free_energy_density": 5.1970625278484654e-12,
+            "cv_fixed_density": 7.967593262607549e-12,
+            "dn_dmu_fixed_temperature": 8.869293401647545e-10,
+            "dn_dtemperature_fixed_mu": 3.1598565065710387e-10,
+            "dmu_dtemperature_fixed_density": -0.35626924981239977,
+            "log_antiparticle_density": -373.6766605513002,
+            "antiparticle_density": 5.179505594967494e-163,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -348.34822452837165
+          }
+        }
+      },
+      "momentum_K": [
+        7.767874820396548,
+        0.033931383485729674,
+        0.00038458883833726815
+      ],
+      "finer": {
+        "K": [
+          7.767874820396551,
+          0.03393138348572961,
+          0.00038458883833726766
+        ],
+        "sigma": 0.7123237290313515,
+        "kappa_open": 0.07879028308784564,
+        "kappa_Estar_zero": 0.12819627944575587,
+        "seebeck": -4.8082882789046995,
+        "peltier": -0.014424864836714098,
+        "Lorenz_ratio": 36.87007272895806,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 0.610622173151063,
+        "born_Zalpha_over_vF": 0.029276569020370288,
+        "controls": {
+          "tail": 85,
+          "rtol": 4e-12,
+          "energy_window": [
+            -5.3826180606354095,
+            85.0
+          ]
+        },
+        "estimated_scaled_error": 2.1788389355801657e-12,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.003,
+          "ne_fm3": 1e-11,
+          "Z": 1,
+          "mu": 0.5271468048719062,
+          "screening_squared": 0.00062491885139248,
+          "ni_natural": 7.683505569453848e-05,
+          "screening_susceptibility_natural": 0.006814726524867918,
+          "pair_log_ratio": -348.34822452837165,
+          "pair_ratio_representable": true,
+          "pair_ratio": 5.179505594936624e-152,
+          "gas": {
+            "temperature": 0.003,
+            "mass": 0.51099895069,
+            "chemical_potential": 0.5271468048719062,
+            "kinetic_chemical_potential": 0.01614785418190623,
+            "density": 1.0000000000059555e-11,
+            "kinetic_energy_density": 1.1316173943174182e-13,
+            "energy_density": 5.223151246362174e-12,
+            "pressure": 7.440552090199118e-14,
+            "entropy_density": 8.696239504569674e-12,
+            "free_energy_density": 5.1970625278484654e-12,
+            "cv_fixed_density": 7.967593262607549e-12,
+            "dn_dmu_fixed_temperature": 8.869293401647545e-10,
+            "dn_dtemperature_fixed_mu": 3.1598565065710387e-10,
+            "dmu_dtemperature_fixed_density": -0.35626924981239977,
+            "log_antiparticle_density": -373.6766605513002,
+            "antiparticle_density": 5.179505594967494e-163,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -348.34822452837165
+          }
+        }
+      }
+    },
+    {
+      "kind": "selected_state",
+      "result": {
+        "K": [
+          999.4708391754535,
+          20.78898350524814,
+          16.60773521876676
+        ],
+        "sigma": 91.65271218714211,
+        "kappa_open": 231.0760652687029,
+        "kappa_Estar_zero": 237.25336026809654,
+        "seebeck": -0.981245075739644,
+        "peltier": -0.06868715530177509,
+        "Lorenz_ratio": 36.017337271540804,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 91.44294075065696,
+        "born_Zalpha_over_vF": 0.01483013575347409,
+        "controls": {
+          "tail": 60.0,
+          "rtol": 2e-10,
+          "energy_window": [
+            -33.75060869939868,
+            60.0
+          ]
+        },
+        "estimated_scaled_error": 1.5050592729417646e-10,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.07,
+          "ne_fm3": 1e-07,
+          "Z": 2,
+          "mu": 2.873541559647908,
+          "screening_squared": 0.07564722607567713,
+          "ni_natural": 0.3841752784726924,
+          "screening_susceptibility_natural": 0.8249313601628381,
+          "pair_log_ratio": -54.90647703231915,
+          "pair_ratio_representable": true,
+          "pair_ratio": 1.4269869587683018e-24,
+          "gas": {
+            "temperature": 0.07,
+            "mass": 0.51099895069,
+            "chemical_potential": 2.873541559647908,
+            "kinetic_chemical_potential": 2.362542608957908,
+            "density": 1.0000000000000017e-07,
+            "kinetic_energy_density": 1.6894818576980246e-07,
+            "energy_density": 2.2004808083880255e-07,
+            "pressure": 6.903818984462348e-08,
+            "entropy_density": 2.4744495980497327e-08,
+            "free_energy_density": 2.1831596612016773e-07,
+            "cv_fixed_density": 2.4682864226499154e-08,
+            "dn_dmu_fixed_temperature": 1.0736393078732095e-07,
+            "dn_dtemperature_fixed_mu": 1.745508233668798e-08,
+            "dmu_dtemperature_fixed_density": -0.16257864451018517,
+            "log_antiparticle_density": -71.02457268327747,
+            "antiparticle_density": 1.426986958768306e-31,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -54.90647703231915
+          }
+        }
+      },
+      "momentum_K": [
+        999.4708391754544,
+        20.788983505248044,
+        16.607735218766734
+      ],
+      "finer": {
+        "K": [
+          999.4708391754535,
+          20.78898350524814,
+          16.60773521876676
+        ],
+        "sigma": 91.65271218714211,
+        "kappa_open": 231.0760652687029,
+        "kappa_Estar_zero": 237.25336026809654,
+        "seebeck": -0.981245075739644,
+        "peltier": -0.06868715530177509,
+        "Lorenz_ratio": 36.017337271540804,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 91.44294075065696,
+        "born_Zalpha_over_vF": 0.01483013575347409,
+        "controls": {
+          "tail": 85,
+          "rtol": 4e-12,
+          "energy_window": [
+            -33.75060869939868,
+            85.0
+          ]
+        },
+        "estimated_scaled_error": 1.5050720214390216e-10,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.07,
+          "ne_fm3": 1e-07,
+          "Z": 2,
+          "mu": 2.873541559647908,
+          "screening_squared": 0.07564722607567713,
+          "ni_natural": 0.3841752784726924,
+          "screening_susceptibility_natural": 0.8249313601628381,
+          "pair_log_ratio": -54.90647703231915,
+          "pair_ratio_representable": true,
+          "pair_ratio": 1.4269869587683018e-24,
+          "gas": {
+            "temperature": 0.07,
+            "mass": 0.51099895069,
+            "chemical_potential": 2.873541559647908,
+            "kinetic_chemical_potential": 2.362542608957908,
+            "density": 1.0000000000000017e-07,
+            "kinetic_energy_density": 1.6894818576980246e-07,
+            "energy_density": 2.2004808083880255e-07,
+            "pressure": 6.903818984462348e-08,
+            "entropy_density": 2.4744495980497327e-08,
+            "free_energy_density": 2.1831596612016773e-07,
+            "cv_fixed_density": 2.4682864226499154e-08,
+            "dn_dmu_fixed_temperature": 1.0736393078732095e-07,
+            "dn_dtemperature_fixed_mu": 1.745508233668798e-08,
+            "dmu_dtemperature_fixed_density": -0.16257864451018517,
+            "log_antiparticle_density": -71.02457268327747,
+            "antiparticle_density": 1.426986958768306e-31,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -54.90647703231915
+          }
+        }
+      }
+    },
+    {
+      "kind": "selected_state",
+      "result": {
+        "K": [
+          3445.7995387292276,
+          88.1449518296182,
+          711.1569982806055
+        ],
+        "sigma": 315.98407977393373,
+        "kappa_open": 2835.60885843891,
+        "kappa_Estar_zero": 2844.627993122422,
+        "seebeck": -0.33789349484037345,
+        "peltier": -0.08447337371009336,
+        "Lorenz_ratio": 35.89559145470374,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 315.9009500932401,
+        "born_Zalpha_over_vF": 0.04379123472214743,
+        "controls": {
+          "tail": 60.0,
+          "rtol": 2e-10,
+          "energy_window": [
+            -60.0,
+            60.0
+          ]
+        },
+        "estimated_scaled_error": 5.126369954159316e-10,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.25,
+          "ne_fm3": 0.0001,
+          "Z": 6,
+          "mu": 28.332584739081135,
+          "screening_squared": 7.4591345364692065,
+          "ni_natural": 128.05842615756416,
+          "screening_susceptibility_natural": 81.34170039032809,
+          "pair_log_ratio": -126.43237551895261,
+          "pair_ratio_representable": true,
+          "pair_ratio": 1.2334370175346916e-55,
+          "gas": {
+            "temperature": 0.25,
+            "mass": 0.51099895069,
+            "chemical_potential": 28.332584739081135,
+            "kinetic_chemical_potential": 27.821585788391136,
+            "density": 0.00010000000000000005,
+            "kinetic_energy_density": 0.002075821719600432,
+            "energy_density": 0.002126921614669432,
+            "pressure": 0.000708513851247753,
+            "entropy_density": 8.70796803627931e-06,
+            "free_energy_density": 0.002124744622660362,
+            "cv_fixed_density": 8.705292789621389e-06,
+            "dn_dmu_fixed_temperature": 1.0586534968323052e-05,
+            "dn_dtemperature_fixed_mu": 6.145759219461788e-07,
+            "dmu_dtemperature_fixed_density": -0.05805260397147019,
+            "log_antiparticle_density": -135.6427158909288,
+            "antiparticle_density": 1.2334370175346862e-59,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -126.43237551895261
+          }
+        }
+      },
+      "momentum_K": [
+        3445.7995387292294,
+        88.1449518296181,
+        711.1569982806056
+      ],
+      "finer": {
+        "K": [
+          3445.7995387292276,
+          88.1449518296182,
+          711.1569982806055
+        ],
+        "sigma": 315.98407977393373,
+        "kappa_open": 2835.60885843891,
+        "kappa_Estar_zero": 2844.627993122422,
+        "seebeck": -0.33789349484037345,
+        "peltier": -0.08447337371009336,
+        "Lorenz_ratio": 35.89559145470374,
+        "WF_limit": 35.875940666636,
+        "sigma_Fermi_surface": 315.9009500932401,
+        "born_Zalpha_over_vF": 0.04379123472214743,
+        "controls": {
+          "tail": 85,
+          "rtol": 4e-12,
+          "energy_window": [
+            -85,
+            85.0
+          ]
+        },
+        "estimated_scaled_error": 5.126397024871532e-10,
+        "units": {
+          "K0": "MeV",
+          "K1": "MeV\u00b2",
+          "K2": "MeV\u00b3",
+          "sigma": "MeV, Heaviside-Lorentz charge convention",
+          "kappa": "MeV\u00b2",
+          "seebeck": "dimensionless kB=1, eHL positive"
+        },
+        "state": {
+          "T": 0.25,
+          "ne_fm3": 0.0001,
+          "Z": 6,
+          "mu": 28.332584739081135,
+          "screening_squared": 7.4591345364692065,
+          "ni_natural": 128.05842615756416,
+          "screening_susceptibility_natural": 81.34170039032809,
+          "pair_log_ratio": -126.43237551895261,
+          "pair_ratio_representable": true,
+          "pair_ratio": 1.2334370175346916e-55,
+          "gas": {
+            "temperature": 0.25,
+            "mass": 0.51099895069,
+            "chemical_potential": 28.332584739081135,
+            "kinetic_chemical_potential": 27.821585788391136,
+            "density": 0.00010000000000000005,
+            "kinetic_energy_density": 0.002075821719600432,
+            "energy_density": 0.002126921614669432,
+            "pressure": 0.000708513851247753,
+            "entropy_density": 8.70796803627931e-06,
+            "free_energy_density": 0.002124744622660362,
+            "cv_fixed_density": 8.705292789621389e-06,
+            "dn_dmu_fixed_temperature": 1.0586534968323052e-05,
+            "dn_dtemperature_fixed_mu": 6.145759219461788e-07,
+            "dmu_dtemperature_fixed_density": -0.05805260397147019,
+            "log_antiparticle_density": -135.6427158909288,
+            "antiparticle_density": 1.2334370175346862e-59,
+            "antiparticle_density_representable": true,
+            "log_antiparticle_to_particle_ratio": -126.43237551895261
+          }
+        }
+      }
+    },
+    {
+      "kind": "nested_angular_momentum",
+      "K": [
+        999.4708391754544,
+        20.78898350524807,
+        16.607735218766734
+      ]
+    },
+    {
+      "kind": "degenerate_ladder",
+      "values": [
+        {
+          "T_over_TF": 0.02,
+          "T": 0.04736465360877741,
+          "WF_relative": 0.0018102174909306878,
+          "Drude_relative": 0.0010512901377450756,
+          "result": {
+            "K": [
+              1996.9863224256387,
+              19.03250330302768,
+              14.946878189738188
+            ],
+            "sigma": 183.12611581737838,
+            "kappa_open": 311.7406261023896,
+            "kappa_Estar_zero": 315.5703050886093,
+            "seebeck": -0.6644753294630645,
+            "peltier": -0.0314726438115963,
+            "Lorenz_ratio": 35.940883921934336,
+            "WF_limit": 35.875940666636,
+            "sigma_Fermi_surface": 182.93379931829483,
+            "born_Zalpha_over_vF": 0.007415067876737045,
+            "controls": {
+              "tail": 80,
+              "rtol": 2e-12,
+              "energy_window": [
+                -49.94499928200392,
+                80.0
+              ]
+            },
+            "estimated_scaled_error": 2.9846567435121476e-10,
+            "units": {
+              "K0": "MeV",
+              "K1": "MeV\u00b2",
+              "K2": "MeV\u00b3",
+              "sigma": "MeV, Heaviside-Lorentz charge convention",
+              "kappa": "MeV\u00b2",
+              "seebeck": "dimensionless kB=1, eHL positive"
+            },
+            "state": {
+              "T": 0.04736465360877741,
+              "ne_fm3": 1e-07,
+              "Z": 1,
+              "mu": 2.876626541172752,
+              "screening_squared": 0.07573089555545254,
+              "ni_natural": 0.7683505569453848,
+              "screening_susceptibility_natural": 0.8258437740256569,
+              "pair_log_ratio": -78.73824841864023,
+              "pair_ratio_representable": true,
+              "pair_ratio": 6.374016700897683e-35,
+              "gas": {
+                "temperature": 0.04736465360877741,
+                "mass": 0.51099895069,
+                "chemical_potential": 2.876626541172752,
+                "kinetic_chemical_potential": 2.365627590482752,
+                "density": 1.0000000000000009e-07,
+                "kinetic_energy_density": 1.6847933814661435e-07,
+                "energy_density": 2.195792332156144e-07,
+                "pressure": 6.887698666133088e-08,
+                "entropy_density": 1.675438748533042e-08,
+                "free_energy_density": 2.187856674559445e-07,
+                "cv_fixed_density": 1.673523113580387e-08,
+                "dn_dmu_fixed_temperature": 1.0748268047189803e-07,
+                "dn_dtemperature_fixed_mu": 1.1823428619047166e-08,
+                "dmu_dtemperature_fixed_density": -0.11000310531089212,
+                "log_antiparticle_density": -94.85634406959855,
+                "antiparticle_density": 6.374016700897657e-42,
+                "antiparticle_density_representable": true,
+                "log_antiparticle_to_particle_ratio": -78.73824841864023
+              }
+            }
+          }
+        },
+        {
+          "T_over_TF": 0.01,
+          "T": 0.023682326804388705,
+          "WF_relative": 0.00045346646447330663,
+          "Drude_relative": 0.00026298148158443446,
+          "result": {
+            "K": [
+              1995.7451608832619,
+              4.7575705828526145,
+              3.6954226926433082
+            ],
+            "sigma": 183.01229976876303,
+            "kappa_open": 155.56247307547886,
+            "kappa_Estar_zero": 156.04136887252517,
+            "seebeck": -0.33240549047945733,
+            "peltier": -0.007872135457107627,
+            "Lorenz_ratio": 35.89220920260975,
+            "WF_limit": 35.875940666636,
+            "sigma_Fermi_surface": 182.96418357668915,
+            "born_Zalpha_over_vF": 0.007415067876737045,
+            "controls": {
+              "tail": 80,
+              "rtol": 2e-12,
+              "energy_window": [
+                -80,
+                80.0
+              ]
+            },
+            "estimated_scaled_error": 2.9689082825608455e-10,
+            "units": {
+              "K0": "MeV",
+              "K1": "MeV\u00b2",
+              "K2": "MeV\u00b3",
+              "sigma": "MeV, Heaviside-Lorentz charge convention",
+              "kappa": "MeV\u00b2",
+              "seebeck": "dimensionless kB=1, eHL positive"
+            },
+            "state": {
+              "T": 0.023682326804388705,
+              "ne_fm3": 1e-07,
+              "Z": 1,
+              "mu": 2.878580366145849,
+              "screening_squared": 0.07578397585857496,
+              "ni_natural": 0.7683505569453848,
+              "screening_susceptibility_natural": 0.8264226135803134,
+              "pair_log_ratio": -151.46381502634074,
+              "pair_ratio_representable": true,
+              "pair_ratio": 1.6599726249961097e-66,
+              "gas": {
+                "temperature": 0.023682326804388705,
+                "mass": 0.51099895069,
+                "chemical_potential": 2.878580366145849,
+                "kinetic_chemical_potential": 2.367581415455849,
+                "density": 1.0000000000000004e-07,
+                "kinetic_energy_density": 1.6818189997972788e-07,
+                "energy_density": 2.192817950487279e-07,
+                "pressure": 6.877471815734022e-08,
+                "entropy_density": 8.380789316967526e-09,
+                "free_energy_density": 2.1908331845724474e-07,
+                "cv_fixed_density": 8.378389762493071e-09,
+                "dn_dmu_fixed_temperature": 1.0755801581843018e-07,
+                "dn_dtemperature_fixed_mu": 5.915722925869896e-09,
+                "dmu_dtemperature_fixed_density": -0.05500029803316835,
+                "log_antiparticle_density": -167.58191067729905,
+                "antiparticle_density": 1.6599726249961264e-73,
+                "antiparticle_density_representable": true,
+                "log_antiparticle_to_particle_ratio": -151.46381502634074
+              }
+            }
+          }
+        },
+        {
+          "T_over_TF": 0.005,
+          "T": 0.011841163402194353,
+          "WF_relative": 0.00011342365570721213,
+          "Drude_relative": 6.575531756780606e-05,
+          "result": {
+            "K": [
+              1995.4345382083554,
+              1.1893579383907815,
+              0.9212728903317401
+            ],
+            "sigma": 182.98381528526826,
+            "kappa_open": 77.74269762803743,
+            "kappa_Estar_zero": 77.80256542706047,
+            "seebeck": -0.16622376680056883,
+            "peltier": -0.0019682827840137845,
+            "Lorenz_ratio": 35.880009846978346,
+            "WF_limit": 35.875940666636,
+            "sigma_Fermi_surface": 182.97178391751083,
+            "born_Zalpha_over_vF": 0.007415067876737045,
+            "controls": {
+              "tail": 80,
+              "rtol": 2e-12,
+              "energy_window": [
+                -80,
+                80.0
+              ]
+            },
+            "estimated_scaled_error": 2.965116094409475e-10,
+            "units": {
+              "K0": "MeV",
+              "K1": "MeV\u00b2",
+              "K2": "MeV\u00b3",
+              "sigma": "MeV, Heaviside-Lorentz charge convention",
+              "kappa": "MeV\u00b2",
+              "seebeck": "dimensionless kB=1, eHL positive"
+            },
+            "state": {
+              "T": 0.011841163402194353,
+              "ne_fm3": 1e-07,
+              "Z": 1,
+              "mu": 2.879068815359541,
+              "screening_squared": 0.07579725658819779,
+              "ni_natural": 0.7683505569453848,
+              "screening_susceptibility_natural": 0.8265674396488959,
+              "pair_log_ratio": -295.7137108813125,
+              "pair_ratio_representable": true,
+              "pair_ratio": 3.7425459492289815e-129,
+              "gas": {
+                "temperature": 0.011841163402194353,
+                "mass": 0.51099895069,
+                "chemical_potential": 2.879068815359541,
+                "kinetic_chemical_potential": 2.368069864669541,
+                "density": 9.999999999999997e-08,
+                "kinetic_energy_density": 1.6810748058319132e-07,
+                "energy_density": 2.192073756521913e-07,
+                "pressure": 6.874913036055754e-08,
+                "entropy_density": 4.1908446923133615e-09,
+                "free_energy_density": 2.1915775117539642e-07,
+                "cv_fixed_density": 4.1905445915236765e-09,
+                "dn_dmu_fixed_temperature": 1.0757686477575484e-07,
+                "dn_dtemperature_fixed_mu": 2.958362542927555e-09,
+                "dmu_dtemperature_fixed_density": -0.027499988488178147,
+                "log_antiparticle_density": -311.83180653227083,
+                "antiparticle_density": 3.742545949229019e-136,
+                "antiparticle_density_representable": true,
+                "log_antiparticle_to_particle_ratio": -295.7137108813125
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "runtime_seconds": 0.2001641250681132,
+  "source_sha256": "15f4c1b5604aeef2dd89aa2991c2fe48a08326ecd1878444969d95cae5f513ae"
+}

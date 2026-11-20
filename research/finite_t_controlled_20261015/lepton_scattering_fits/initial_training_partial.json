@@ -1,0 +1,291 @@
+{
+  "part": "training",
+  "rows": [
+    {
+      "E": 1.0,
+      "coarse": {
+        "E": 1.0,
+        "total": {
+          "rate": 1.1049876541874089,
+          "transport_rate": 1.2928129459411015,
+          "outgoing_energy_moment": 4.47940783131015,
+          "neutrino_energy_change": 3.374420177122742
+        },
+        "targets": [
+          {
+            "rate": 0.798017418596428,
+            "transport_rate": 0.9761677574885773,
+            "neutrino_energy_change": 2.717103775203374,
+            "outgoing_energy_moment": 3.5151211937998017,
+            "target_density": 2.0342863678432749e-07,
+            "energy_ledger": 4.440892098500626e-16,
+            "max_four_residual": 1.20650156532065e-10,
+            "T": 2.0,
+            "mu_e": 0.17446333200826397,
+            "Ein": 1.0,
+            "flavor": "e",
+            "positron": false,
+            "anti": false,
+            "final_neutrino_blocking": "NONE",
+            "histogram_unqualified": {
+              "edges": [
+                0.0,
+                2.0,
+                4.0,
+                6.0,
+                8.0,
+                10.0,
+                15.0,
+                25.0,
+                1000.0
+              ],
+              "rate": [
+                0.194128110784219,
+                0.2455964723361748,
+                0.1626742338988587,
+                0.09525269796788717,
+                0.05120054138516966,
+                0.04197458179588948,
+                0.007080685825953608,
+                0.00011009460227325057
+              ]
+            },
+            "controls": {
+              "radial": 24,
+              "incident": 24,
+              "outgoing": 24,
+              "phi": 32,
+              "tail": 60.0
+            },
+            "seconds": 0.6485775841865689,
+            "units": "rate s^-1; signed\u03bdenergychange MeV s^-1 per incident\u03bd; targetdensity fm^-3"
+          },
+          {
+            "rate": 0.30697023559098086,
+            "transport_rate": 0.3166451884525243,
+            "neutrino_energy_change": 0.6573164019193679,
+            "outgoing_energy_moment": 0.9642866375103478,
+            "target_density": 1.7342863678432775e-07,
+            "energy_ledger": 9.992007221626409e-16,
+            "max_four_residual": 1.20650156532065e-10,
+            "T": 2.0,
+            "mu_e": 0.17446333200826397,
+            "Ein": 1.0,
+            "flavor": "e",
+            "positron": true,
+            "anti": false,
+            "final_neutrino_blocking": "NONE",
+            "histogram_unqualified": {
+              "edges": [
+                0.0,
+                2.0,
+                4.0,
+                6.0,
+                8.0,
+                10.0,
+                15.0,
+                25.0,
+                1000.0
+              ],
+              "rate": [
+                0.12500367356330935,
+                0.1029634268884011,
+                0.044461496130558616,
+                0.019411324898597374,
+                0.00852180087159553,
+                0.0057962186784729945,
+                0.0008015178588787978,
+                1.077670116685926e-05
+              ]
+            },
+            "controls": {
+              "radial": 24,
+              "incident": 24,
+              "outgoing": 24,
+              "phi": 32,
+              "tail": 60.0
+            },
+            "seconds": 0.6469920829404145,
+            "units": "rate s^-1; signed\u03bdenergychange MeV s^-1 per incident\u03bd; targetdensity fm^-3"
+          }
+        ],
+        "controls": [
+          24,
+          24,
+          24,
+          32,
+          60.0
+        ],
+        "pins": {
+          "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+          "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+          "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+        },
+        "seconds": 1.2973885831888765,
+        "units": "R/transport s^-1 per incidentnue; Qout/delta MeV s^-1; no finalnu blocking"
+      },
+      "fine": {
+        "E": 1.0,
+        "total": {
+          "rate": 1.1049876532963099,
+          "transport_rate": 1.2928129349119766,
+          "outgoing_energy_moment": 4.479407829137919,
+          "neutrino_energy_change": 3.374420175841618
+        },
+        "targets": [
+          {
+            "rate": 0.7980174179191929,
+            "transport_rate": 0.9761677508708905,
+            "neutrino_energy_change": 2.717103774863621,
+            "outgoing_energy_moment": 3.515121192782807,
+            "target_density": 2.0342863678432757e-07,
+            "energy_ledger": 6.661338147750939e-15,
+            "max_four_residual": 6.393179319275077e-10,
+            "T": 2.0,
+            "mu_e": 0.17446333200826397,
+            "Ein": 1.0,
+            "flavor": "e",
+            "positron": false,
+            "anti": false,
+            "final_neutrino_blocking": "NONE",
+            "histogram_unqualified": {
+              "edges": [
+                0.0,
+                2.0,
+                4.0,
+                6.0,
+                8.0,
+                10.0,
+                15.0,
+                25.0,
+                1000.0
+              ],
+              "rate": [
+                0.19424937835070757,
+                0.24546275144963886,
+                0.16268424289997283,
+                0.09531000347513383,
+                0.05117145176845511,
+                0.041948440461125766,
+                0.007081514650378073,
+                0.00010963486377954518
+              ]
+            },
+            "controls": {
+              "radial": 32,
+              "incident": 40,
+              "outgoing": 40,
+              "phi": 48,
+              "tail": 80.0
+            },
+            "seconds": 4.332464792067185,
+            "units": "rate s^-1; signed\u03bdenergychange MeV s^-1 per incident\u03bd; targetdensity fm^-3"
+          },
+          {
+            "rate": 0.3069702353771169,
+            "transport_rate": 0.31664518404108616,
+            "neutrino_energy_change": 0.6573164009779968,
+            "outgoing_energy_moment": 0.9642866363551122,
+            "target_density": 1.734286367843276e-07,
+            "energy_ledger": 1.4432899320127035e-15,
+            "max_four_residual": 6.393179319275077e-10,
+            "T": 2.0,
+            "mu_e": 0.17446333200826397,
+            "Ein": 1.0,
+            "flavor": "e",
+            "positron": true,
+            "anti": false,
+            "final_neutrino_blocking": "NONE",
+            "histogram_unqualified": {
+              "edges": [
+                0.0,
+                2.0,
+                4.0,
+                6.0,
+                8.0,
+                10.0,
+                15.0,
+                25.0,
+                1000.0
+              ],
+              "rate": [
+                0.1250588706193144,
+                0.10290289890642106,
+                0.044470831879463144,
+                0.019423692052907702,
+                0.00850949780735711,
+                0.005792076876362303,
+                0.000801627990663701,
+                1.0739244627151811e-05
+              ]
+            },
+            "controls": {
+              "radial": 32,
+              "incident": 40,
+              "outgoing": 40,
+              "phi": 48,
+              "tail": 80.0
+            },
+            "seconds": 4.116431083064526,
+            "units": "rate s^-1; signed\u03bdenergychange MeV s^-1 per incident\u03bd; targetdensity fm^-3"
+          }
+        ],
+        "controls": [
+          32,
+          40,
+          40,
+          48,
+          80.0
+        ],
+        "pins": {
+          "neutrino_lepton_scattering/scatter.py": "8628fb1fe917a6d84caf6aa789a50feab359790db1c8216eb936c8e0dcfa4064",
+          "leptonic_pair_annihilation/pair.py": "e12f1a009f6ccf451ffd36656ecaadebb1d0db8869159897e923336b64a18af6",
+          "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76"
+        },
+        "seconds": 8.452952916966751,
+        "units": "R/transport s^-1 per incidentnue; Qout/delta MeV s^-1; no finalnu blocking"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "quadrature (1.0, 'rate')",
+      "error": 8.064333645307897e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "quadrature (1.0, 'transport_rate')",
+      "error": 8.531106487907891e-09,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "quadrature (1.0, 'outgoing_energy_moment')",
+      "error": 4.849369794612812e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "quadrature signedRT 1.0",
+      "error": 5.797006382270696e-10,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "energy eventledger (1.0, False)",
+      "error": 1.8950521994598357e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "energy eventledger (1.0, True)",
+      "error": 1.4967436834634215e-15,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": [],
+  "seconds": 9.750732292188331
+}

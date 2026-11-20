@@ -1,0 +1,1633 @@
+{
+  "checks": [
+    {
+      "name": "hotcoarse exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcoarse exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcoarse exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotpaired_ref exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotpaired_ref exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotpaired_ref exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotenergy_only exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotenergy_only exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotenergy_only exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotangle_only exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotangle_only exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotangle_only exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotdirect exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotdirect exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotdirect exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcutoff108 exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcutoff108 exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcutoff108 exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcrossing72_108 exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcrossing72_108 exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcrossing72_108 exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "hotcoarse positive gross eventcount",
+      "error": 3.662201258158859e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "hotenergy_only positive gross eventcount",
+      "error": 6.448308886852772e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hotangle_only positive gross eventcount",
+      "error": 3.114811595317235e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot independent positive forwardeventcount",
+      "error": 3.2063032340268194e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot independent positive reverseeventcount",
+      "error": 3.20630325623128e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot FD radiation entropy flux",
+      "error": 7.31117929065613e-18,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "hot FD bath+radiation Hidentity",
+      "error": 1.462235858131226e-17,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "hot cutoff108->144 1",
+      "error": 1.357734348009061e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot independent direct108 1",
+      "error": 9.938727942896202e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot cutoff108->144 2",
+      "error": 1.35773420629716e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot independent direct108 2",
+      "error": 3.1176618071822673e-15,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot cutoff108->144 3",
+      "error": 1.357734348009061e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot independent direct108 3",
+      "error": 9.938727942896202e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot cutoff108->144 4",
+      "error": 1.3577342062971594e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot independent direct108 4",
+      "error": 2.879585814633802e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "hot direct108 number source",
+      "error": 3.7231086801973455e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "hot independent finitebox decomposition 1",
+      "error": 4.786836924001873e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "hot independent finitebox decomposition 2",
+      "error": 4.790143726017247e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "hot independent finitebox decomposition 3",
+      "error": 4.786836924001873e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "hot independent finitebox decomposition 4",
+      "error": 4.788726523222841e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "coldcoarse exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcoarse exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcoarse exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldpaired_ref exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldpaired_ref exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldpaired_ref exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldenergy_only exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldenergy_only exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldenergy_only exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldangle_only exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldangle_only exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldangle_only exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "colddirect exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "colddirect exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "colddirect exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcutoff108 exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcutoff108 exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcutoff108 exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcrossing72_108 exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcrossing72_108 exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcrossing72_108 exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "coldcoarse positive gross eventcount",
+      "error": 3.647289474262294e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "coldenergy_only positive gross eventcount",
+      "error": 6.3255980453647e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldangle_only positive gross eventcount",
+      "error": 3.055333764878654e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent positive forwardeventcount",
+      "error": 3.145109694902004e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold independent positive reverseeventcount",
+      "error": 3.145109783719846e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold FD radiation entropy flux",
+      "error": 1.7928887254337324e-17,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "cold FD bath+radiation Hidentity",
+      "error": 8.964443627168662e-19,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "packetcoarse exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcoarse exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcoarse exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetpaired_ref exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetpaired_ref exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetpaired_ref exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetenergy_only exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetenergy_only exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetenergy_only exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetangle_only exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetangle_only exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetangle_only exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetdirect exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetdirect exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetdirect exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcutoff108 exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcutoff108 exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcutoff108 exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcrossing72_108 exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcrossing72_108 exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcrossing72_108 exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "packetcoarse positive gross eventcount",
+      "error": 5.173591784501941e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "packetenergy_only positive gross eventcount",
+      "error": 6.448113043511228e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packetangle_only positive gross eventcount",
+      "error": 3.114627775691048e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet independent positive forwardeventcount",
+      "error": 3.2061234445102116e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet independent positive reverseeventcount",
+      "error": 3.206123411203521e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet cutoff108->144 1",
+      "error": 4.3564326152193395e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet independent direct108 1",
+      "error": 1.2367778072925493e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet cutoff108->144 2",
+      "error": 7.90386165646776e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet independent direct108 2",
+      "error": 4.3829655593414996e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet cutoff108->144 3",
+      "error": 4.3564326152193395e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet independent direct108 3",
+      "error": 1.2367778072925493e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet cutoff108->144 4",
+      "error": 3.106518946178532e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet independent direct108 4",
+      "error": 3.442551389202425e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "packet direct108 number source",
+      "error": 1.5858128535004854e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "packet independent finitebox decomposition 1",
+      "error": 1.5379642521619198e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "packet independent finitebox decomposition 2",
+      "error": 2.8125570547930256e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "packet independent finitebox decomposition 3",
+      "error": 1.5379642521619198e-13,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "packet independent finitebox decomposition 4",
+      "error": 1.0965190435616963e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "LTEcoarse exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcoarse exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcoarse exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEpaired_ref exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEpaired_ref exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEpaired_ref exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEenergy_only exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEenergy_only exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEenergy_only exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEangle_only exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEangle_only exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEangle_only exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEdirect exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEdirect exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEdirect exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcutoff108 exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcutoff108 exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcutoff108 exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcrossing72_108 exact current sourcehashes",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcrossing72_108 exact FD bathstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcrossing72_108 exact prescribed radiation",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "LTEcoarse positive gross eventcount",
+      "error": 3.6044442700555734e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "LTEenergy_only positive gross eventcount",
+      "error": 6.386138617919812e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "LTEangle_only positive gross eventcount",
+      "error": 3.0846270338003023e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "LTE independent positive forwardeventcount",
+      "error": 3.175253682208279e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "LTE independent positive reverseeventcount",
+      "error": 3.175253682208279e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "LTE FD radiation entropy flux",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "LTE FD bath+radiation Hidentity",
+      "error": 2.0439893013952175e-30,
+      "tolerance": 3e-12,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "label": "hot",
+      "paired144": {
+        "method": "paired",
+        "cutoff": 144.0,
+        "outgoing_limit": null,
+        "energy_order": 12,
+        "inner_order": 24,
+        "angle_order": 48,
+        "values": [
+          0.0,
+          -0.01836179750256425,
+          -0.006120599167521419,
+          0.01836179750256425,
+          0.0030602995837607106,
+          0.05445431608410352,
+          0.06418079095281284
+        ],
+        "labels": [
+          "Nrad_fm3_s",
+          "Erad_MeV_fm3_s",
+          "Srad_kB_fm3_s",
+          "Qbath_MeV_fm3_s",
+          "Stotal_kB_fm3_s",
+          "gross_forward_fm3_s",
+          "gross_reverse_fm3_s"
+        ],
+        "outer_panels": [
+          {
+            "lo": 0.0,
+            "hi": 2.0,
+            "values": [
+              0.0,
+              -2.4211366584653787e-08,
+              -8.070455528217933e-09,
+              2.4211366584653787e-08,
+              4.035227764109007e-09,
+              5.280482680563684e-06,
+              5.392850202928599e-06
+            ]
+          },
+          {
+            "lo": 2.0,
+            "hi": 5.0,
+            "values": [
+              0.0,
+              -1.6133329258657244e-05,
+              -5.3777764195524126e-06,
+              1.6133329258657244e-05,
+              2.688888209776216e-06,
+              0.0005676688398182608,
+              0.0005980014628035083
+            ]
+          },
+          {
+            "lo": 5.0,
+            "hi": 10.0,
+            "values": [
+              0.0,
+              -0.0009993676468724902,
+              -0.0003331225489574966,
+              0.0009993676468724902,
+              0.00016656127447874837,
+              0.00991870643159247,
+              0.010923623973687359
+            ]
+          },
+          {
+            "lo": 10.0,
+            "hi": 16.0,
+            "values": [
+              0.0,
+              -0.005243122081162449,
+              -0.0017477073603874857,
+              0.005243122081162449,
+              0.000873853680193743,
+              0.022395593291546893,
+              0.02588584639011606
+            ]
+          },
+          {
+            "lo": 16.0,
+            "hi": 24.0,
+            "values": [
+              0.0,
+              -0.007747822402316582,
+              -0.0025826074674388604,
+              0.007747822402316582,
+              0.0012913037337194315,
+              0.016602287036211492,
+              0.020284701389907744
+            ]
+          },
+          {
+            "lo": 24.0,
+            "hi": 36.0,
+            "values": [
+              0.0,
+              -0.00392025617653249,
+              -0.001306752058844163,
+              0.00392025617653249,
+              0.0006533760294220819,
+              0.0046551151425512855,
+              0.006052681116165604
+            ]
+          },
+          {
+            "lo": 36.0,
+            "hi": 52.0,
+            "values": [
+              0.0,
+              -0.0004260643043560477,
+              -0.00014202143478534896,
+              0.0004260643043560477,
+              7.101071739267455e-05,
+              0.00030522669758748406,
+              0.0004240153199277737
+            ]
+          },
+          {
+            "lo": 52.0,
+            "hi": 72.0,
+            "values": [
+              0.0,
+              -8.971509368438973e-06,
+              -2.9905031228129815e-06,
+              8.971509368438973e-06,
+              1.495251561406495e-06,
+              4.424280700905169e-06,
+              6.507185562417731e-06
+            ]
+          },
+          {
+            "lo": 72.0,
+            "hi": 100.0,
+            "values": [
+              0.0,
+              -3.583318931835542e-08,
+              -1.1944396439451752e-08,
+              3.583318931835542e-08,
+              5.972198219725874e-09,
+              1.3878705201903402e-08,
+              2.1260178145015674e-08
+            ]
+          },
+          {
+            "lo": 100.0,
+            "hi": 144.0,
+            "values": [
+              0.0,
+              -8.141188257293771e-12,
+              -2.7137294190979343e-12,
+              8.141188257293771e-12,
+              1.3568647095489668e-12,
+              2.7089639212108234e-12,
+              4.261300779091438e-12
+            ]
+          }
+        ],
+        "runtime_seconds": 2.657471332931891,
+        "source_hashes": {
+          "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+          "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+          "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+          "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+          "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+          "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+          "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+          "nc_global_exchange/exchange.py": "e591e509a04f577dba73ee36db967b2e09c20c3ab80c22a18edc480914c2eb94",
+          "nc_global_exchange/run_case.py": "91cebaeb24ad991132b1db5932dae3641923a5c147862a8be74b7c05bbe57334"
+        },
+        "bath": {
+          "T": 2.0,
+          "mass": 939.0,
+          "offset": 0.0,
+          "kinetic_mu": 1.8238578638736676,
+          "density": 0.0019999999999999996,
+          "kinetic_energy_density": 0.007535428441929703,
+          "energy_density": 0.007535428441929703,
+          "pressure": 0.0050236189612864685,
+          "entropy_density": 0.004455665837734418,
+          "free_energy_density": -0.001375903233539132,
+          "dn_dmu": 0.0006643655087681272,
+          "dn_dT_fixed_mu": 0.0008941458711734104,
+          "dmu_dT_fixed_density": -1.3458643764203595,
+          "cv_fixed_density": 0.002645905627340548,
+          "fluctuation_A0": 0.0013287310175362544,
+          "fluctuation_A1": 0.0035765834846936415,
+          "fluctuation_A2": 0.02021081511204732,
+          "fermi_momentum": 76.91365833868961,
+          "temperature_over_mass": 0.002129925452609159,
+          "fermi_momentum_over_mass": 0.08191017927442984,
+          "mu": 1.8238578638736676
+        },
+        "radiation": {
+          "T": 3.0,
+          "mu": 4.0,
+          "packet": false
+        }
+      },
+      "direct108": {
+        "method": "direct",
+        "cutoff": 108.0,
+        "outgoing_limit": null,
+        "energy_order": 16,
+        "inner_order": 32,
+        "angle_order": 96,
+        "values": [
+          -4.416909895374586e-16,
+          -0.01836179747763563,
+          -0.006120599159211291,
+          0.01836179747763563,
+          0.0030602995796065184,
+          0.11863510323005132,
+          0.11863510323005111
+        ],
+        "labels": [
+          "Nrad_fm3_s",
+          "Erad_MeV_fm3_s",
+          "Srad_kB_fm3_s",
+          "Qbath_MeV_fm3_s",
+          "Stotal_kB_fm3_s",
+          "gross_forward_fm3_s",
+          "gross_reverse_fm3_s"
+        ],
+        "outer_panels": [
+          {
+            "lo": 0.0,
+            "hi": 2.0,
+            "values": [
+              5.3942293645168305e-08,
+              9.291084996895569e-08,
+              -4.095277487057251e-08,
+              -9.291084996895569e-08,
+              -8.74081998550503e-08,
+              9.138554949886174e-06,
+              9.19249724353134e-06
+            ]
+          },
+          {
+            "lo": 2.0,
+            "hi": 5.0,
+            "values": [
+              1.400323634448164e-05,
+              5.994772355954727e-05,
+              1.3115927272069507e-06,
+              -5.994772355954727e-05,
+              -2.86622690525667e-05,
+              0.0010019904466927305,
+              0.001015993683037206
+            ]
+          },
+          {
+            "lo": 5.0,
+            "hi": 10.0,
+            "values": [
+              0.0003568540617017293,
+              0.0029244549055414044,
+              0.0004990128862448294,
+              -0.0029244549055414044,
+              -0.0009632145665258755,
+              0.018695027589545436,
+              0.01905188165124706
+            ]
+          },
+          {
+            "lo": 10.0,
+            "hi": 16.0,
+            "values": [
+              0.0006290749655787754,
+              0.007916201707709215,
+              0.001799967281798038,
+              -0.007916201707709215,
+              -0.002158133572056572,
+              0.04643995785328785,
+              0.04706903281886665
+            ]
+          },
+          {
+            "lo": 16.0,
+            "hi": 24.0,
+            "values": [
+              -0.00023337629112197048,
+              -0.005292732190044419,
+              -0.0014530756751855113,
+              0.005292732190044419,
+              0.0011932904198367002,
+              0.03874042075545492,
+              0.03850704446433319
+            ]
+          },
+          {
+            "lo": 24.0,
+            "hi": 36.0,
+            "values": [
+              -0.0006237844888165262,
+              -0.018096649055981778,
+              -0.005200503700238559,
+              0.018096649055981778,
+              0.003847820827752326,
+              0.012688186235412402,
+              0.012064401746595949
+            ]
+          },
+          {
+            "lo": 36.0,
+            "hi": 52.0,
+            "values": [
+              -0.00013756322893922042,
+              -0.005577320267678115,
+              -0.0016756891173070824,
+              0.005577320267678115,
+              0.0011129710165319782,
+              0.0010400410619004834,
+              0.0009024778329612663
+            ]
+          },
+          {
+            "lo": 52.0,
+            "hi": 72.0,
+            "values": [
+              -5.224963859567216e-06,
+              -0.0002929726020053427,
+              -9.069091552235713e-05,
+              0.0002929726020053427,
+              5.57953854803132e-05,
+              2.0249854456192397e-05,
+              1.502489059662519e-05
+            ]
+          },
+          {
+            "lo": 72.0,
+            "hi": 100.0,
+            "values": [
+              -3.721762754418096e-08,
+              -2.8190132661044096e-06,
+              -8.900475853092306e-07,
+              2.8190132661044096e-06,
+              5.19459047742975e-07,
+              9.085288768968815e-08,
+              5.363526014550761e-08
+            ]
+          },
+          {
+            "lo": 100.0,
+            "hi": 108.0,
+            "values": [
+              -1.5554244794615848e-11,
+              -1.596320005767201e-09,
+              -5.113676755295801e-10,
+              1.596320005767201e-09,
+              2.8679232735402043e-10,
+              2.5463724277117554e-11,
+              9.90947948250165e-12
+            ]
+          }
+        ],
+        "runtime_seconds": 17.263017874909565,
+        "source_hashes": {
+          "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+          "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+          "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+          "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+          "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+          "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+          "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+          "nc_global_exchange/exchange.py": "e591e509a04f577dba73ee36db967b2e09c20c3ab80c22a18edc480914c2eb94",
+          "nc_global_exchange/run_case.py": "91cebaeb24ad991132b1db5932dae3641923a5c147862a8be74b7c05bbe57334"
+        },
+        "bath": {
+          "T": 2.0,
+          "mass": 939.0,
+          "offset": 0.0,
+          "kinetic_mu": 1.8238578638736676,
+          "density": 0.0019999999999999996,
+          "kinetic_energy_density": 0.007535428441929703,
+          "energy_density": 0.007535428441929703,
+          "pressure": 0.0050236189612864685,
+          "entropy_density": 0.004455665837734418,
+          "free_energy_density": -0.001375903233539132,
+          "dn_dmu": 0.0006643655087681272,
+          "dn_dT_fixed_mu": 0.0008941458711734104,
+          "dmu_dT_fixed_density": -1.3458643764203595,
+          "cv_fixed_density": 0.002645905627340548,
+          "fluctuation_A0": 0.0013287310175362544,
+          "fluctuation_A1": 0.0035765834846936415,
+          "fluctuation_A2": 0.02021081511204732,
+          "fermi_momentum": 76.91365833868961,
+          "temperature_over_mass": 0.002129925452609159,
+          "fermi_momentum_over_mass": 0.08191017927442984,
+          "mu": 1.8238578638736676
+        },
+        "radiation": {
+          "T": 3.0,
+          "mu": 4.0,
+          "packet": false
+        }
+      },
+      "upper_upper_72_108": [
+        -3.5816455993484227e-08,
+        -1.1938818664494727e-08,
+        3.5816455993484227e-08,
+        5.969409332247356e-09
+      ]
+    },
+    {
+      "label": "packet",
+      "paired144": {
+        "method": "paired",
+        "cutoff": 144.0,
+        "outgoing_limit": null,
+        "energy_order": 12,
+        "inner_order": 24,
+        "angle_order": 48,
+        "values": [
+          0.0,
+          -0.00858400564353903,
+          0.0157710281658852,
+          0.00858400564353903,
+          0.020063030987654756,
+          0.15276218870978292,
+          0.16559413861993427
+        ],
+        "labels": [
+          "Nrad_fm3_s",
+          "Erad_MeV_fm3_s",
+          "Srad_kB_fm3_s",
+          "Qbath_MeV_fm3_s",
+          "Stotal_kB_fm3_s",
+          "gross_forward_fm3_s",
+          "gross_reverse_fm3_s"
+        ],
+        "outer_panels": [
+          {
+            "lo": 0.0,
+            "hi": 2.0,
+            "values": [
+              0.0,
+              -2.2941240178216576e-08,
+              -2.631338845830663e-09,
+              2.2941240178216576e-08,
+              8.839281243277738e-09,
+              2.208266375435902e-06,
+              2.3166239066463726e-06
+            ]
+          },
+          {
+            "lo": 2.0,
+            "hi": 5.0,
+            "values": [
+              0.0,
+              -1.4114969079230508e-05,
+              -1.274933160501127e-07,
+              1.4114969079230508e-05,
+              6.929991223565146e-06,
+              0.00016248279754962485,
+              0.00018786664439458266
+            ]
+          },
+          {
+            "lo": 5.0,
+            "hi": 10.0,
+            "values": [
+              0.0,
+              -0.006812103104121729,
+              0.001925907427572449,
+              0.006812103104121729,
+              0.0053319589796333175,
+              0.008574833457246564,
+              0.014687673707884276
+            ]
+          },
+          {
+            "lo": 10.0,
+            "hi": 16.0,
+            "values": [
+              0.0,
+              -0.018395311656022848,
+              -9.312932123762882e-05,
+              0.018395311656022848,
+              0.009104526506773826,
+              0.09994758154955673,
+              0.11611834278135745
+            ]
+          },
+          {
+            "lo": 16.0,
+            "hi": 24.0,
+            "values": [
+              0.0,
+              0.01726784472698771,
+              0.014152234900397517,
+              -0.01726784472698771,
+              0.005518312536903664,
+              0.043309227347289335,
+              0.03361718316304443
+            ]
+          },
+          {
+            "lo": 24.0,
+            "hi": 36.0,
+            "values": [
+              0.0,
+              -0.0005650360429813194,
+              -0.00019210092254569037,
+              0.0005650360429813194,
+              9.041709894497018e-05,
+              0.0007194053121520166,
+              0.0009161735863445925
+            ]
+          },
+          {
+            "lo": 36.0,
+            "hi": 52.0,
+            "values": [
+              0.0,
+              -6.391055438406375e-05,
+              -2.1303426089774746e-05,
+              6.391055438406375e-05,
+              1.0651851102257158e-05,
+              4.57842552786168e-05,
+              6.360284545946357e-05
+            ]
+          },
+          {
+            "lo": 52.0,
+            "hi": 72.0,
+            "values": [
+              0.0,
+              -1.34572649779672e-06,
+              -4.485754902484077e-07,
+              1.34572649779672e-06,
+              2.2428775864995464e-07,
+              6.636421224878501e-07,
+              9.760778769002144e-07
+            ]
+          },
+          {
+            "lo": 72.0,
+            "hi": 100.0,
+            "values": [
+              0.0,
+              -5.374978398223372e-09,
+              -1.7916594660300748e-09,
+              5.374978398223372e-09,
+              8.958297330816071e-10,
+              2.0818057803545764e-09,
+              3.1890267219352027e-09
+            ]
+          },
+          {
+            "lo": 100.0,
+            "hi": 144.0,
+            "values": [
+              0.0,
+              -1.2211782385940779e-12,
+              -4.070594128646905e-13,
+              1.2211782385940779e-12,
+              2.035297064323471e-13,
+              4.0634458818162367e-13,
+              6.391951168637179e-13
+            ]
+          }
+        ],
+        "runtime_seconds": 2.7122486671432853,
+        "source_hashes": {
+          "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+          "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+          "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+          "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+          "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+          "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+          "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+          "nc_global_exchange/exchange.py": "e591e509a04f577dba73ee36db967b2e09c20c3ab80c22a18edc480914c2eb94",
+          "nc_global_exchange/run_case.py": "91cebaeb24ad991132b1db5932dae3641923a5c147862a8be74b7c05bbe57334"
+        },
+        "bath": {
+          "T": 2.0,
+          "mass": 939.0,
+          "offset": 0.0,
+          "kinetic_mu": 1.8238578638736676,
+          "density": 0.0019999999999999996,
+          "kinetic_energy_density": 0.007535428441929703,
+          "energy_density": 0.007535428441929703,
+          "pressure": 0.0050236189612864685,
+          "entropy_density": 0.004455665837734418,
+          "free_energy_density": -0.001375903233539132,
+          "dn_dmu": 0.0006643655087681272,
+          "dn_dT_fixed_mu": 0.0008941458711734104,
+          "dmu_dT_fixed_density": -1.3458643764203595,
+          "cv_fixed_density": 0.002645905627340548,
+          "fluctuation_A0": 0.0013287310175362544,
+          "fluctuation_A1": 0.0035765834846936415,
+          "fluctuation_A2": 0.02021081511204732,
+          "fermi_momentum": 76.91365833868961,
+          "temperature_over_mass": 0.002129925452609159,
+          "fermi_momentum_over_mass": 0.08191017927442984,
+          "mu": 1.8238578638736676
+        },
+        "radiation": {
+          "T": 3.0,
+          "mu": 4.0,
+          "packet": true
+        }
+      },
+      "direct108": {
+        "method": "direct",
+        "cutoff": 108.0,
+        "outgoing_limit": null,
+        "energy_order": 16,
+        "inner_order": 32,
+        "angle_order": 96,
+        "values": [
+          -5.0485352985333465e-16,
+          -0.008584005639798404,
+          0.01577102816782296,
+          0.008584005639798404,
+          0.020063030987722174,
+          0.3183563171223608,
+          0.3183563171223609
+        ],
+        "labels": [
+          "Nrad_fm3_s",
+          "Erad_MeV_fm3_s",
+          "Srad_kB_fm3_s",
+          "Qbath_MeV_fm3_s",
+          "Stotal_kB_fm3_s",
+          "gross_forward_fm3_s",
+          "gross_reverse_fm3_s"
+        ],
+        "outer_panels": [
+          {
+            "lo": 0.0,
+            "hi": 2.0,
+            "values": [
+              4.937009614324357e-08,
+              8.414172250359512e-08,
+              1.0700418797936115e-07,
+              -8.414172250359512e-08,
+              6.49333267275637e-08,
+              3.8977660664368425e-06,
+              3.947136162580089e-06
+            ]
+          },
+          {
+            "lo": 2.0,
+            "hi": 5.0,
+            "values": [
+              1.2971897503090774e-05,
+              5.673634436467647e-05,
+              3.184828370912663e-05,
+              -5.673634436467647e-05,
+              3.480111526788371e-06,
+              0.00029726099216338615,
+              0.0003102328896664773
+            ]
+          },
+          {
+            "lo": 5.0,
+            "hi": 10.0,
+            "values": [
+              0.0032440318922504455,
+              0.028418720463692933,
+              0.004910337728465065,
+              -0.028418720463692933,
+              -0.009299022503381391,
+              0.017424854009059788,
+              0.02066888590131028
+            ]
+          },
+          {
+            "lo": 10.0,
+            "hi": 16.0,
+            "values": [
+              -0.004987360998652768,
+              -0.0845419577441925,
+              -0.00878907452852043,
+              0.0845419577441925,
+              0.03348190434357584,
+              0.2037678454456307,
+              0.19878048444697813
+            ]
+          },
+          {
+            "lo": 16.0,
+            "hi": 24.0,
+            "values": [
+              0.0016094679265392646,
+              0.045168934954517015,
+              0.018795224739335214,
+              -0.045168934954517015,
+              -0.0037892427379233166,
+              0.09474531767518202,
+              0.09635478560172163
+            ]
+          },
+          {
+            "lo": 24.0,
+            "hi": 36.0,
+            "values": [
+              0.00014226554913696188,
+              0.0031945128708183745,
+              0.0011283434705265621,
+              -0.0031945128708183745,
+              -0.00046891296488261504,
+              0.0019580807830484603,
+              0.0021003463321854062
+            ]
+          },
+          {
+            "lo": 36.0,
+            "hi": 52.0,
+            "values": [
+              -2.0636306631741198e-05,
+              -0.0008366676519927247,
+              -0.00029052384308587693,
+              0.0008366676519927247,
+              0.00012780998291048688,
+              0.0001560093405057864,
+              0.0001353730338740459
+            ]
+          },
+          {
+            "lo": 52.0,
+            "hi": 72.0,
+            "values": [
+              -7.837452646114558e-07,
+              -4.39459272891152e-05,
+              -1.509050757918065e-05,
+              4.39459272891152e-05,
+              6.882456065376905e-06,
+              3.037478951432058e-06,
+              2.2537336868205857e-06
+            ]
+          },
+          {
+            "lo": 72.0,
+            "hi": 100.0,
+            "values": [
+              -5.582644153873557e-09,
+              -4.228519915605111e-07,
+              -1.4409808410812694e-07,
+              4.228519915605111e-07,
+              6.732791167212982e-08,
+              1.362793317615781e-08,
+              8.045289022284204e-09
+            ]
+          },
+          {
+            "lo": 100.0,
+            "hi": 108.0,
+            "values": [
+              -2.3331367192062174e-12,
+              -2.3944800086648955e-10,
+              -8.113139162736565e-11,
+              2.3944800086648955e-10,
+              3.859260880587934e-11,
+              3.819558641581464e-12,
+              1.4864219223752642e-12
+            ]
+          }
+        ],
+        "runtime_seconds": 17.250108666019514,
+        "source_hashes": {
+          "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+          "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+          "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+          "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+          "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+          "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+          "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+          "nc_global_exchange/exchange.py": "e591e509a04f577dba73ee36db967b2e09c20c3ab80c22a18edc480914c2eb94",
+          "nc_global_exchange/run_case.py": "91cebaeb24ad991132b1db5932dae3641923a5c147862a8be74b7c05bbe57334"
+        },
+        "bath": {
+          "T": 2.0,
+          "mass": 939.0,
+          "offset": 0.0,
+          "kinetic_mu": 1.8238578638736676,
+          "density": 0.0019999999999999996,
+          "kinetic_energy_density": 0.007535428441929703,
+          "energy_density": 0.007535428441929703,
+          "pressure": 0.0050236189612864685,
+          "entropy_density": 0.004455665837734418,
+          "free_energy_density": -0.001375903233539132,
+          "dn_dmu": 0.0006643655087681272,
+          "dn_dT_fixed_mu": 0.0008941458711734104,
+          "dmu_dT_fixed_density": -1.3458643764203595,
+          "cv_fixed_density": 0.002645905627340548,
+          "fluctuation_A0": 0.0013287310175362544,
+          "fluctuation_A1": 0.0035765834846936415,
+          "fluctuation_A2": 0.02021081511204732,
+          "fermi_momentum": 76.91365833868961,
+          "temperature_over_mass": 0.002129925452609159,
+          "fermi_momentum_over_mass": 0.08191017927442984,
+          "mu": 1.8238578638736676
+        },
+        "radiation": {
+          "T": 3.0,
+          "mu": 4.0,
+          "packet": true
+        }
+      },
+      "upper_upper_72_108": [
+        -5.372468399492689e-09,
+        -1.7908227997865197e-09,
+        5.372468399492689e-09,
+        8.954113999598268e-10
+      ]
+    }
+  ],
+  "runtime_seconds": 40.36462991591543
+}

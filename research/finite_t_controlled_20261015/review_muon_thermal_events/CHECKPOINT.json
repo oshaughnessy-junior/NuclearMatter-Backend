@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN: selected common-T mu-minus decay/inverse accepted",
+  "checks": 74,
+  "all_pass": true,
+  "source": "muon_thermal_events/muon_events.py",
+  "source_sha256": "24caed4dcd68b5785b994a89f1a84d253b9fae3c8acf2c1eed2867ef192e4884",
+  "files": {
+    "probe.py": "6cd9443452b9252ffe13cba8ceab745a3dc35e6f661e5af028a06002809a5b67",
+    "anchors.py": "db4d4776c1cac00501e5a72de419b0657a95cd0e98849095b38c9602bd7c233a",
+    "results.json": "f9fa50e1cc2834beb24c976e09347342085263409bcbbe2956935b3bcc7f6186",
+    "anchors.json": "b6e30eade8cff081e197a286f7a590aa289a3abb8dd11b7b55514a4f8c5cce2c",
+    "REVIEW.md": "3ee0ac7500ddfe7c0d2dc7b6e619dbe200a098406c86e03639086b89b27f12a3"
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "original_author_coarse_failures": 18,
+  "limits": [
+    "selected common-T unpolarized free mu-minus3body channel only",
+    "no full inventory/coupledODE/hot partner tail/extreme signed-log representation claim"
+  ]
+}

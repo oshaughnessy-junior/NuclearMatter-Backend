@@ -1,0 +1,281 @@
+{
+  "created_utc": "2026-10-17T19:39:31.781469+00:00",
+  "status": "AUTHOR_SELECTED_PASS_PENDING_DIFFERENT_REVIEW",
+  "checks": [
+    {
+      "name": "E120_PANEL_log_j_s-1",
+      "error": 1.4210854715201903e-14,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E120_PANEL_log_true_chi_s-1",
+      "error": 1.4210854715201903e-14,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E120_PANEL_max_shell_relative",
+      "error": 4.440892098500626e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_PANEL_max_lab_energy_scaled",
+      "error": 3.5310929203763315e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_PANEL_max_unsquared_rest_delta_scaled",
+      "error": 1.209993846502954e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_PANEL_literal_current_reciprocity",
+      "error": 7.771561172376096e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_PANEL_actual_products_KMS",
+      "error": 1.2212453270876722e-15,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI16_log_j_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI16_log_true_chi_s-1",
+      "error": 1.4210854715202105e-14,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI16_max_shell_relative",
+      "error": 4.440892098500626e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI16_max_lab_energy_scaled",
+      "error": 3.484355013445045e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI16_max_unsquared_rest_delta_scaled",
+      "error": 1.209993846502954e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI16_literal_current_reciprocity",
+      "error": 8.881784197001252e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI16_actual_products_KMS",
+      "error": 1.2989609388114332e-14,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI24_log_j_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI24_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI24_max_shell_relative",
+      "error": 4.440892098500626e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI24_max_lab_energy_scaled",
+      "error": 3.5413408829159293e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI24_max_unsquared_rest_delta_scaled",
+      "error": 1.209993846502954e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI24_literal_current_reciprocity",
+      "error": 7.771561172376096e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E120_SEMI24_actual_products_KMS",
+      "error": 1.2212453270876722e-15,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "E130_PANEL_log_j_s-1",
+      "error": 1.4210854715201903e-14,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E130_PANEL_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E130_PANEL_max_shell_relative",
+      "error": 4.440892098500626e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_PANEL_max_lab_energy_scaled",
+      "error": 3.421285967494497e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_PANEL_max_unsquared_rest_delta_scaled",
+      "error": 1.209993846502954e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_PANEL_literal_current_reciprocity",
+      "error": 6.661338147750939e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_PANEL_actual_products_KMS",
+      "error": 2.9976021664879227e-15,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI16_log_j_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI16_log_true_chi_s-1",
+      "error": 2.842170943040441e-14,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI16_max_shell_relative",
+      "error": 4.440892098500626e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI16_max_lab_energy_scaled",
+      "error": 3.3743583367198183e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI16_max_unsquared_rest_delta_scaled",
+      "error": 1.209993846502954e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI16_literal_current_reciprocity",
+      "error": 8.881784197001252e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI16_actual_products_KMS",
+      "error": 1.7208456881689926e-14,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI24_log_j_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI24_log_true_chi_s-1",
+      "error": 0.0,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI24_max_shell_relative",
+      "error": 4.440892098500626e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI24_max_lab_energy_scaled",
+      "error": 3.296315683302006e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI24_max_unsquared_rest_delta_scaled",
+      "error": 1.209993846502954e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI24_literal_current_reciprocity",
+      "error": 7.771561172376096e-16,
+      "gate": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "E130_SEMI24_actual_products_KMS",
+      "error": 1.1213252548714081e-14,
+      "gate": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "1.2_absolute_phase_Jacobian",
+      "error": 7.217670905390605e-11,
+      "gate": 3e-06,
+      "pass": true
+    },
+    {
+      "name": "1.3_absolute_phase_Jacobian",
+      "error": 5.446443296364123e-11,
+      "gate": 3e-06,
+      "pass": true
+    }
+  ],
+  "fresh_profile_calls": 8,
+  "old_failed_tail_witness": {
+    "relative_j_change": 0.00022377617918348388,
+    "gate": 3e-06,
+    "pass": false,
+    "preserved": true
+  },
+  "separate_angular_axes": "OPEN; profiles couple inner orders",
+  "upper_incident_panel_order_convergence": "OPEN; not rerun",
+  "whole_energy_qualification": false,
+  "independent_integrated_phase_review": "PENDING"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "CHECKPOINT originalcandidate recordguardrepair PENDING; beta/publicjobs notstarted",
+  "utc": "2026-10-16T07:33:49.641125+00:00",
+  "lock_sha256": "657ace7fcd48d712a7a961769400bed05a2a45bd9b47509a7131bae615740716",
+  "candidate_manifest": "18da0dfe7f52c8fea7c59d9fe7e1687b5893738c36cf836091587cff02406ad0",
+  "manifest_sha256": "0d1113d295e547ac5277009d5ad7691dc52c7c5a528d835c9c934d3481145db2",
+  "completed_physical_nodes": {
+    "EC": 84,
+    "PC": 84,
+    "NEUTRON_DECAY": 0
+  },
+  "passed": 71,
+  "coarse_fail_count": 9,
+  "required24to32": {
+    "EC": 3.5527136788004946e-15,
+    "PC": 1.1564083024488944e-12
+  },
+  "no_further_source_calls": "until originalsource guardrepair disposition/formalidentity proof",
+  "whole_energy_moments_tails": "OPEN",
+  "candidate_original_physical_sources_unchanged": true
+}

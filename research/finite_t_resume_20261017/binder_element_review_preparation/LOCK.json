@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-10-17T20:04:29.016947+00:00",
+  "status": "CANDIDATE-BLIND STATIC PREPARATION; no binder_short_element path read/imported",
+  "initial": {
+    "T_MeV": 2,
+    "nB_fm3": 1e-07,
+    "Ye": 0.3,
+    "photons": "absent",
+    "radiation": "exactly empty incoming nue and antinue",
+    "muons": "absent",
+    "density_evolution": "fixed",
+    "duration_s": 0.0002
+  },
+  "methods": {
+    "author_proposed": "Euler2/4 in T,Ye, not yet read",
+    "independent": "Heun2/4 in rest-inclusive ENERGY DENSITY e and Ye with fresh canonical EOS temperature inversion at every stage",
+    "step_counts": [
+      2,
+      4
+    ],
+    "source_groups_per_run": [
+      4,
+      8
+    ],
+    "fresh_source_groups_max": 12,
+    "event_channel_calls_per_group": 3,
+    "event_channel_calls_max": 36,
+    "source_profiles": "F.SourceControls.fine(); no fit/cache/saved source substitution",
+    "private_T_bracket_MeV": [
+      1.9,
+      2.1
+    ],
+    "root_xtol_MeV": 2e-12,
+    "root_energy_residual": "abs(e(T)-target)<=max(2e-18 MeVfm^-3,1e-8*abs(h*Qstage))",
+    "corrected_final_EOS": "invert corrected e,Ye; no final source attributed unless actually called"
+  },
+  "gates": {
+    "initial_RQ_relative_to_accepted_binder": 3e-06,
+    "Heun2vs4_final_T_absolute_MeV": 2e-06,
+    "Heun2vs4_final_Ye_absolute": 2e-06,
+    "Heun2vs4_change_normalized_T_and_Ye": 0.002,
+    "authorEuler4vsHeun4_final_T_absolute_MeV": 2e-06,
+    "authorEuler4vsHeun4_final_Ye_absolute": 2e-06,
+    "authorEuler4vsHeun4_change_normalized_T_and_Ye": 0.002,
+    "Heun2vs4_escaped_energy_and_number_relative": 3e-05,
+    "energy_ledger_over_gross_escape": 3e-06,
+    "Le_ledger_over_gross_event_count": 3e-09,
+    "material_entropy_endpoint_vs_integral_over_gross_entropy_scale": 0.0001
+  },
+  "resource": {
+    "physics_calls_now": 0,
+    "individual_source_group_max_seconds": 90,
+    "threads": 1,
+    "serial": true,
+    "future_calls_require_separate_author_freeze_root_handoff": true,
+    "stop_new_calls_used_percent": 97,
+    "hard_stop_used_percent": 99,
+    "reset_unix": 1792652325,
+    "window_minutes": 10080,
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "last_verified_used_percent": 96,
+    "last_verified_utc": "2026-10-17T20:00:17Z",
+    "no_resets": true
+  },
+  "partial_policy": "If quota prevents Heun4, retain Heun2/partial actual stages and label fine/time acceptance OPEN. Never extend calls/profile/gates or infer missing endpoints. Freeze on unavailable/changed identity/reset.",
+  "scope": "Controlled reference only; no public ODE API/time/domain/AD/empirical qualification"
+}

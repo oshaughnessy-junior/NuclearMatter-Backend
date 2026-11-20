@@ -1,0 +1,235 @@
+{
+  "created_utc": "2026-10-17T19:51:37.589897+00:00",
+  "candidate_band_blind": true,
+  "candidate_band_directories_read": [],
+  "fresh_physics_calls": 0,
+  "interval_MeV": [
+    1.1,
+    1.4
+  ],
+  "incident_rule": {
+    "name": "Gauss-Legendre",
+    "order": 24,
+    "nodes": [
+      {
+        "index": 0,
+        "E_MeV": 1.100721917000447,
+        "weight_MeV": 0.0018511844699980176
+      },
+      {
+        "index": 1,
+        "E_MeV": 1.1037907166043037,
+        "weight_MeV": 0.0042797082943400525
+      },
+      {
+        "index": 2,
+        "E_MeV": 1.10925881719959,
+        "weight_MeV": 0.006641615822612913
+      },
+      {
+        "index": 3,
+        "E_MeV": 1.11703767094934,
+        "weight_MeV": 0.008894787737315479
+      },
+      {
+        "index": 4,
+        "E_MeV": 1.1269997021039146,
+        "weight_MeV": 0.01100197221166204
+      },
+      {
+        "index": 5,
+        "E_MeV": 1.1389813712632169,
+        "weight_MeV": 0.012928524229793013
+      },
+      {
+        "index": 6,
+        "E_MeV": 1.1527859522094537,
+        "weight_MeV": 0.014642797815617113
+      },
+      {
+        "index": 7,
+        "E_MeV": 1.1681867792916742,
+        "weight_MeV": 0.016116640517394858
+      },
+      {
+        "index": 8,
+        "E_MeV": 1.1849309738560934,
+        "weight_MeV": 0.017325850208058855
+      },
+      {
+        "index": 9,
+        "E_MeV": 1.2027435980455756,
+        "weight_MeV": 0.018250570939170527
+      },
+      {
+        "index": 10,
+        "E_MeV": 1.2213321698789577,
+        "weight_MeV": 0.018875618452024272
+      },
+      {
+        "index": 11,
+        "E_MeV": 1.2403914660706092,
+        "weight_MeV": 0.019190729302012845
+      },
+      {
+        "index": 12,
+        "E_MeV": 1.259608533929391,
+        "weight_MeV": 0.019190729302012845
+      },
+      {
+        "index": 13,
+        "E_MeV": 1.2786678301210426,
+        "weight_MeV": 0.018875618452024272
+      },
+      {
+        "index": 14,
+        "E_MeV": 1.2972564019544246,
+        "weight_MeV": 0.018250570939170527
+      },
+      {
+        "index": 15,
+        "E_MeV": 1.3150690261439069,
+        "weight_MeV": 0.017325850208058855
+      },
+      {
+        "index": 16,
+        "E_MeV": 1.331813220708326,
+        "weight_MeV": 0.016116640517394858
+      },
+      {
+        "index": 17,
+        "E_MeV": 1.3472140477905463,
+        "weight_MeV": 0.014642797815617113
+      },
+      {
+        "index": 18,
+        "E_MeV": 1.3610186287367831,
+        "weight_MeV": 0.012928524229793013
+      },
+      {
+        "index": 19,
+        "E_MeV": 1.3730002978960856,
+        "weight_MeV": 0.01100197221166204
+      },
+      {
+        "index": 20,
+        "E_MeV": 1.3829623290506603,
+        "weight_MeV": 0.008894787737315479
+      },
+      {
+        "index": 21,
+        "E_MeV": 1.39074118280041,
+        "weight_MeV": 0.006641615822612913
+      },
+      {
+        "index": 22,
+        "E_MeV": 1.3962092833956965,
+        "weight_MeV": 0.0042797082943400525
+      },
+      {
+        "index": 23,
+        "E_MeV": 1.3992780829995533,
+        "weight_MeV": 0.0018511844699980176
+      }
+    ]
+  },
+  "baseline_inner": {
+    "parent": 24,
+    "rest_nu": 24,
+    "electron": 24,
+    "phi": 12,
+    "parent_domain": "threshold-shifted semi-infinite generalizedLaguerre alpha1.5"
+  },
+  "fresh_call_max": 28,
+  "actual_calls_require_root_frozen_handoff": true,
+  "inner_checks": [
+    {
+      "index": 0,
+      "name": "parent_only",
+      "parent": 32,
+      "rest_nu": 24,
+      "electron": 24,
+      "phi": 12
+    },
+    {
+      "index": 0,
+      "name": "angular_coupled",
+      "parent": 24,
+      "rest_nu": 32,
+      "electron": 32,
+      "phi": 16
+    },
+    {
+      "index": 23,
+      "name": "parent_only",
+      "parent": 32,
+      "rest_nu": 24,
+      "electron": 24,
+      "phi": 12
+    },
+    {
+      "index": 23,
+      "name": "angular_coupled",
+      "parent": 24,
+      "rest_nu": 32,
+      "electron": 32,
+      "phi": 16
+    }
+  ],
+  "radiation": [
+    {
+      "name": "empty",
+      "mode": "empty"
+    },
+    {
+      "name": "FD_muanti0",
+      "mode": "FD",
+      "T_MeV": 2.0,
+      "mu_antinu_MeV": 0.0
+    }
+  ],
+  "gates": {
+    "separate_positive_number_energy_branch_relative": 3e-06,
+    "inner_positive_j_chi_relative": 3e-06,
+    "structural_empty_inverse": "exact zero, no relative comparison",
+    "source_shell_relative": 2e-11,
+    "source_four_scaled": 2e-12,
+    "source_unsquared_delta_scaled": 2e-12
+  },
+  "quota": {
+    "fresh_utc": "2026-10-17 19:49:35 UTC",
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "limit": "codex",
+    "window_minutes": 10080,
+    "reset": 1792652325,
+    "used_percent": 94,
+    "stop_new": 97,
+    "checkpoint": 99
+  },
+  "source_pins": {
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/LOCK.json": "b8cafb94fcad4e2ecc66969c8d2044f1aacef425aed977b5f49fc5e921c7d4e0",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/RESULTS.json": "8f6391b6b254e05e50597fb435df4227fc74a0f42df5b03478300027c6b6a93d",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/REVIEW.md": "cedb91c9465bc1cece10bcdcf5f64d5cb28c7287996ff1923f3da8e4e6b5cd50",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/bounded_job.py": "974d05b7146e7680c40d4be4bd4a2432fa5d6ac2a5aa298d515fc5aba5ccf45b",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/finalize.py": "3a44c1bc05e02ace03a023fae6bdb997ccc9b53ce4c3dad51d9dd94478436d95",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job0.json": "4240ca73dc0c0d16aa393ff654a7838c02c21e6c304a54a1b66fb075ff043c63",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job0.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job0.stdout": "df9956f0f6639bb8f2cd6f8df26a2259d43541df8561ffd365badd522caf6575",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job1.json": "bd08ca393498a69a65ef01b953aa7efa75fe145e458abd055068e64168215300",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job1.stdout": "e610f035da6c6356b73dab594eb01b9f7c8999ebd85eb2df324b8d76c684b57e",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job2.json": "715ceeb7af70053c36efe0d67b8f34047e50df885c6f58bd2517d9de327e220e",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job2.stdout": "b94bb0fcc094a1279d8c200d1c1f63b7ca425476ceed0cbd8881697a6ab0c958",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job3.json": "54d16978c75405bd967eac30bf1cff1780a0afbec1a6f92676e71bd275782ebf",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job3.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/job3.stdout": "38ce831619bcce791127b12b5dff83813864fe947a0be89056c545fbc39bdd48",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/lock_review.py": "3393699ea2c95728fa7b0e9afd2f66fb1afdebd1c78af313b5af0bae8d385df5",
+    "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/review_beta_support/run_job.py": "f214384869cf80f9b51006e55cf959b95b7b8fdbe593c9a172fbfd4bafa9b6b9"
+  },
+  "source_review_checkpoint": "2cae22ff1c83537f94e272364e17d807723ed2d1855c47c53c8bd5eeb9859716",
+  "source_review_manifest": "61705a2cfd3f38c22facb92a11809f8bc9abc9f759b0975d7c90f65bf1336b4f",
+  "same_current_and_parent_radial_method": true,
+  "whole_energy_qualified": false,
+  "original_12_failed_gates_remain_failed": true
+}

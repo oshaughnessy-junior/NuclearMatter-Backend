@@ -1,0 +1,108 @@
+{
+  "utc": "2026-10-16T08:33:52.290629+00:00",
+  "verified_current_source_pins": 16,
+  "pins": {
+    "production_weak_spectral_port/CANDIDATE_MANIFEST.json": {
+      "sha256": "dcfbafe85645caa4ac6f2ea1f4cd3a7cb55775d030eddc0c9c5a8c9211a8b216",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/CANDIDATE_MANIFEST.json",
+      "stored_path": "production_weak_spectral_port/CANDIDATE_MANIFEST.json"
+    },
+    "production_weak_spectral_port/AUTHOR_REPORT.md": {
+      "sha256": "c090139637e868a5f3a495e75d5601a9a2e97d1386f9f87cc5b99b62ee0403ed",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/AUTHOR_REPORT.md",
+      "stored_path": "production_weak_spectral_port/AUTHOR_REPORT.md"
+    },
+    "production_weak_spectral_port/MANIFEST.json": {
+      "sha256": "f90bb7d3ee0bbd0ae6025f68edb8ed14b431a5bbcf7a0d7bcf5fa16c2c5ed78c",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/MANIFEST.json",
+      "stored_path": "production_weak_spectral_port/MANIFEST.json.gz"
+    },
+    "production_weak_spectral_port/LOCK.json": {
+      "sha256": "c051e3c23f290b657b4caad069a34d4ce7ee85a4e535368fb674bd5590ec188a",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/LOCK.json",
+      "stored_path": "production_weak_spectral_port/LOCK.json"
+    },
+    "production_weak_spectral_port/INDEPENDENT_RECORD_ADMISSION_REPAIR.md": {
+      "sha256": "80483604f6c61efa3b40650591197f739a3a8be4cb05c52311f8471f5c62e793",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/INDEPENDENT_RECORD_ADMISSION_REPAIR.md",
+      "stored_path": "production_weak_spectral_port/INDEPENDENT_RECORD_ADMISSION_REPAIR.md"
+    },
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/weak_reference.py": {
+      "sha256": "76e569023bcde176086384ffbcdff861d120b6b9ba9cafe84041ceabb598b5f9",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/pre_bath_guard_repair/staged/src/nmbackend/reference/weak_reference.py",
+      "stored_path": "production_weak_spectral_port/pre_bath_guard_repair/staged/src/nmbackend/reference/weak_reference.py"
+    },
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_current.py": {
+      "sha256": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc",
+      "prerequisite_commit": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+      "repository_path": "src/nmbackend/reference/_weak_current.py",
+      "git_blob": "d900e478848c97f2985adfa07cc669a1e86d9671",
+      "source": "ExactPR54contents+base proof retained in archive45"
+    },
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_quadrature.py": {
+      "sha256": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69",
+      "prerequisite_commit": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+      "repository_path": "src/nmbackend/reference/_weak_quadrature.py",
+      "git_blob": "1721498446870820581c6827e433c2855a0ea29b",
+      "source": "ExactPR54contents+base proof retained in archive45"
+    },
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_two_body.py": {
+      "sha256": "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366",
+      "prerequisite_commit": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+      "repository_path": "src/nmbackend/reference/_weak_two_body.py",
+      "git_blob": "314d046dde4ab20f96d6d3fe002f7200b321786e",
+      "source": "ExactPR54contents+base proof retained in archive45"
+    },
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_decay.py": {
+      "sha256": "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc",
+      "prerequisite_commit": "c17472b8a84655380ab64973ef883a6cd5fb2346",
+      "repository_path": "src/nmbackend/reference/_weak_decay.py",
+      "git_blob": "31ec33733b49dd797101635f3ad475078d07600f",
+      "source": "ExactPR54contents+base proof retained in archive45"
+    },
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_common.py": {
+      "sha256": "572acb57fcca43f9f0a4173c4f7bad5fbd1c99d02f643950b18a05bc504c36d3",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/staged/src/nmbackend/reference/_weak_spectral_common.py",
+      "stored_path": "production_weak_spectral_port/staged/src/nmbackend/reference/_weak_spectral_common.py"
+    },
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_capture.py": {
+      "sha256": "4384208e51ff0e2b78a1e6587beccbb5f8fe1400f7dd911f5fa90464cbd2e684",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/pre_bath_guard_repair/staged/src/nmbackend/reference/_weak_spectral_capture.py",
+      "stored_path": "production_weak_spectral_port/pre_bath_guard_repair/staged/src/nmbackend/reference/_weak_spectral_capture.py"
+    },
+    "production_weak_spectral_port/test_mirror/src/nmbackend/reference/_weak_spectral_decay.py": {
+      "sha256": "148142642df36c1d392333ee26b3479c53a523d14764ca67154a6ed664b5cc86",
+      "archive": 44,
+      "original_path": "production_weak_spectral_port/pre_bath_guard_repair/staged/src/nmbackend/reference/_weak_spectral_decay.py",
+      "stored_path": "production_weak_spectral_port/pre_bath_guard_repair/staged/src/nmbackend/reference/_weak_spectral_decay.py"
+    },
+    "review_production_weak_spectral_port/REVIEW.md": {
+      "sha256": "89cd023016062705490e1a58dcc88ff1fbd757a11a7cc936e2be7213acf4f096",
+      "archive": 44,
+      "original_path": "review_production_weak_spectral_port/REVIEW.md",
+      "stored_path": "review_production_weak_spectral_port/REVIEW.md"
+    },
+    "review_production_weak_spectral_port/REPAIR_RECHECK.md": {
+      "sha256": "2d760af394f96a523599ce00da6b5492615c2e5750f14141d69d48723866a9fa",
+      "archive": 44,
+      "original_path": "review_production_weak_spectral_port/REPAIR_RECHECK.md",
+      "stored_path": "review_production_weak_spectral_port/REPAIR_RECHECK.md"
+    },
+    "review_production_weak_spectral_port/CHECKPOINT.json": {
+      "sha256": "313b9c52d789e5a07efed74ea80ef81378ad2dadb860019066a0f75466374ff1",
+      "archive": 44,
+      "original_path": "review_production_weak_spectral_port/CHECKPOINT.json",
+      "stored_path": "review_production_weak_spectral_port/CHECKPOINT.json"
+    }
+  },
+  "reviewer_read": false,
+  "physical_calls": 0
+}

@@ -1,0 +1,34 @@
+{
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "checks": 217,
+  "files_sha256": {
+    "initial_mapping_list_loader_failure.py": "c13bb2652584e07fe86710abcadf5170d0256ace2d9b3ccd9dc9e6dfb75e34db",
+    "initial_mapping_list_loader_failure.txt": "b9c99e128157986b1b4d6417c7c5f95785d9c534f96b427f190993a3f66cb5a3",
+    "check_mapping.py": "aa87023514683a9990843527695ca1537fa271078d8595f64388eba569711551",
+    "adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f",
+    "results.json": "8e10d05b6ab43495d0ac255345c7d4ec15483ab4ef2a84c40e8e8359a7f607e4",
+    "RESEARCH_NOTE.md": "243e3f47c3eb0ae387acabe74cac1f448d098ea204e101027cecc23dbeef8e6b",
+    "mapping_results.json": "be8c2b6be653363338d085342601ae69c9bb2ed290c12025c46ecf5a4a7179ad",
+    "refinement_results.json": "85f003a7b8c409512fc4905d859de9f3986e07797429456c5d60a1679beca574",
+    "validate.py": "8415a50639a28492dd95ecd157867d9eb0abdb176f8b81e1de2d5a2affe0d4ab",
+    "refine_controls.py": "d1934c3cc39140a99b8771738e9f51405e816735366139d0b336c1c0712723a9"
+  },
+  "physical_source_hashes": {
+    "gm1_differential_response/validate.py": "8415a50639a28492dd95ecd157867d9eb0abdb176f8b81e1de2d5a2affe0d4ab",
+    "gm1_differential_response/adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "environment": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+    "executable": "/Users/rossma/miniconda3/bin/python",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+  },
+  "scope": "Selected locallystable uniformGM1differentialtensor underGuoHartreecurrentansatz; nointegratedrate/externalphysicalvalidation"
+}

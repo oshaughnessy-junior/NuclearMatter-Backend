@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "strict integrated density reference1",
+      "error": -1.8037393800796053e-10,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "strict integrated density reference2",
+      "error": -4.664424402278655e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "actual source empty n",
+      "error": -4.571230492939465e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source empty p",
+      "error": 4.571230492939465e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source empty positron",
+      "error": -4.571230492939465e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source empty electron_net",
+      "error": 4.571230492939465e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source empty antinue",
+      "error": 4.571230492939465e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "baryon conservation empty",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electric charge empty",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron Le empty",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "actual source LTE n",
+      "error": -4.236731396295236e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source LTE p",
+      "error": 4.236731396295236e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source LTE positron",
+      "error": -4.236731396295236e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source LTE electron_net",
+      "error": 4.236731396295236e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source LTE antinue",
+      "error": 4.236731396295236e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "baryon conservation LTE",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electric charge LTE",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron Le LTE",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "actual source noneq n",
+      "error": -9.015677368363901e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source noneq p",
+      "error": 9.015677368363901e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source noneq positron",
+      "error": -9.015677368363901e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source noneq electron_net",
+      "error": 9.015677368363901e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "actual source noneq antinue",
+      "error": 9.015677368363901e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "baryon conservation noneq",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electric charge noneq",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "electron Le noneq",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "excluded_own_coarse_diagnostics": [
+    {
+      "name": "strict integrated density reference0",
+      "error": 2.3105667534828456e-07,
+      "tolerance": 3e-08,
+      "passed": false
+    }
+  ],
+  "scope": "Strict author3e-8density gate applied only completed fine references; coarse20p quadrature remains failed at that gate. Species sources independently matched to physical eventstoichiometry and integrated reference Rnet."
+}

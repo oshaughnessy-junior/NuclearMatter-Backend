@@ -1,0 +1,58 @@
+{
+  "n": 0.1811,
+  "T": 0.12,
+  "Y": 0.1817,
+  "exact": {
+    "nB": 0.1811,
+    "temperature": 0.12,
+    "Yp": 0.1817,
+    "phi_mev": 319.44432973712566,
+    "omega_mev": 255.44032864334514,
+    "rho_mev": -50.16261270812109,
+    "dirac_mass_mev": 619.5556702628745,
+    "density_defined_landau_n_mev": 698.7208882183082,
+    "density_defined_landau_p_mev": 649.7055000467542,
+    "kinetic_mu_n_mev": 698.7206957280154,
+    "kinetic_mu_p_mev": 649.7050614265568,
+    "mu_n_mev": 979.2423307254211,
+    "mu_p_mev": 880.0640837158414,
+    "energy_density": 170.02712881428042,
+    "pressure": 4.050331186890841,
+    "free_energy_density": 170.02690840455764,
+    "entropy_density": 0.0018367476897500794,
+    "kinetic_energy_density": 119.95999205801493,
+    "scalar_field_energy_density": 25.491224913567294,
+    "vector_field_energy_density": 24.575911842698197,
+    "scalar_density": 0.1695780772051645,
+    "antiparticle_density": 0.0,
+    "max_normalized_equation_residual": 2.108710058086058e-15,
+    "branch": "local GM1 branch continued from cold first scalar upcrossing",
+    "phase_assessment": "uniform local solution only; mechanical stability/coexistence unassessed"
+  },
+  "old_prediction": {
+    "free_per_baryon": 938.8564846240372,
+    "free_energy_density": 170.02690936541313,
+    "entropy_density": 0.001836748964301478,
+    "energy_density": 170.02712977528887,
+    "pressure": 4.050377269342335,
+    "mu_n": 979.2422525716897,
+    "mu_p": 880.0658653198855,
+    "cv_fixed_nY": 0.0018367248809027853,
+    "chemical_hessian": [
+      [
+        755.0040693867071,
+        -107.02347799734383
+      ],
+      [
+        -107.02347799734383,
+        825.6698085426187
+      ]
+    ],
+    "min_chemical_eigenvalue": 677.6318524988748
+  },
+  "delta_mu": -0.001859757775378057,
+  "balance_factor_error": 0.015378505753862931,
+  "gate": 0.01,
+  "passed": false,
+  "role": "DEVELOPMENT: old independent failure, no longer a heldout"
+}

@@ -1,0 +1,458 @@
+{
+  "checks": [
+    {
+      "name": "reject invalid or excluded state (0.9, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (3.1, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (2.0, 9e-08, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (2.0, 1.1e-06, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (2.0, 1e-07, 0.19)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (2.0, 1e-07, 0.51)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (True, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (2.0, True, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (2.0, 1e-07, False)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (nan, 1e-07, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (2.0, inf, 0.3)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (2.0, 1e-07, nan)",
+      "passed": true
+    },
+    {
+      "name": "reject invalid or excluded state (1.0, 1e-06, 0.5)",
+      "passed": true
+    },
+    {
+      "name": "API positive heldout0",
+      "passed": true
+    },
+    {
+      "name": "API exact heldout arithmetic0",
+      "passed": true
+    },
+    {
+      "name": "API no net source/root0",
+      "passed": true
+    },
+    {
+      "name": "API positive heldout1",
+      "passed": true
+    },
+    {
+      "name": "API exact heldout arithmetic1",
+      "passed": true
+    },
+    {
+      "name": "API no net source/root1",
+      "passed": true
+    },
+    {
+      "name": "API positive heldout2",
+      "passed": true
+    },
+    {
+      "name": "API exact heldout arithmetic2",
+      "passed": true
+    },
+    {
+      "name": "API no net source/root2",
+      "passed": true
+    },
+    {
+      "name": "API positive heldout3",
+      "passed": true
+    },
+    {
+      "name": "API exact heldout arithmetic3",
+      "passed": true
+    },
+    {
+      "name": "API no net source/root3",
+      "passed": true
+    },
+    {
+      "name": "API positive heldout4",
+      "passed": true
+    },
+    {
+      "name": "API exact heldout arithmetic4",
+      "passed": true
+    },
+    {
+      "name": "API no net source/root4",
+      "passed": true
+    },
+    {
+      "name": "API positive heldout5",
+      "passed": true
+    },
+    {
+      "name": "API exact heldout arithmetic5",
+      "passed": true
+    },
+    {
+      "name": "API no net source/root5",
+      "passed": true
+    },
+    {
+      "name": "API positive heldout6",
+      "passed": true
+    },
+    {
+      "name": "API exact heldout arithmetic6",
+      "passed": true
+    },
+    {
+      "name": "API no net source/root6",
+      "passed": true
+    },
+    {
+      "name": "API positive heldout7",
+      "passed": true
+    },
+    {
+      "name": "API exact heldout arithmetic7",
+      "passed": true
+    },
+    {
+      "name": "API no net source/root7",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 0)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 0, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 0, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 1)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 1, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 1, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 2)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 2, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 2, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 3)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 3, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 3, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 4)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 4, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 4, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 5)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 5, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 5, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 6)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 6, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 6, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 7)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 7, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 7, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 8)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 8, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 8, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 9)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 9, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 9, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('training', 10)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 10, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('training', 10, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('heldout', 0)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 0, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 0, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('heldout', 1)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 1, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 1, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('heldout', 2)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 2, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 2, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('heldout', 3)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 3, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 3, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('heldout', 4)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 4, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 4, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('heldout', 5)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 5, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 5, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('heldout', 6)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 6, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 6, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "selected sourcequalified ('heldout', 7)",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 7, 'coarse')",
+      "passed": true
+    },
+    {
+      "name": "actual EOSroot ('heldout', 7, 'refined')",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_0.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_1.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_2.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_3.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_4.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_5.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_6.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_7.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_8.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_9.json",
+      "passed": true
+    },
+    {
+      "name": "training byteidentity training_10.json",
+      "passed": true
+    },
+    {
+      "name": "same7basis",
+      "passed": true
+    },
+    {
+      "name": "same8heldouts",
+      "passed": true
+    },
+    {
+      "name": "sameheldoutgate",
+      "passed": true
+    },
+    {
+      "name": "samephysicalgate",
+      "passed": true
+    },
+    {
+      "name": "removeONLYoutofadmissioncorner",
+      "passed": true
+    },
+    {
+      "name": "originalpreflightblockpreserved",
+      "passed": true
+    },
+    {
+      "name": "rankbeforedata",
+      "passed": true
+    },
+    {
+      "name": "coefficientsbeforeheldout",
+      "passed": true
+    }
+  ],
+  "passed": 113,
+  "failed": []
+}

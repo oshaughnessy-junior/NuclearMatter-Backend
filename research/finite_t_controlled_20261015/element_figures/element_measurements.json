@@ -1,0 +1,71 @@
+{
+  "source_sha256": {
+    "transparent_antinu_element/results.json": "576d2991cd95a6f7baeb625be0306071d191ce39e242e17844e3e6f945e1494b",
+    "review_transparent_element/results.json": "f1c6578e9a596407b8612d015e107fc305975b611fa8d4bbff3dc6ef14a214ac"
+  },
+  "Euler4": {
+    "time_s": [
+      0.0,
+      0.0005,
+      0.001,
+      0.0015,
+      0.002
+    ],
+    "Ye": [
+      0.3,
+      0.3055868093417084,
+      0.3111049346522321,
+      0.31655563258971575,
+      0.3219401286112853
+    ],
+    "final_T_MeV": 1.995541068003036
+  },
+  "Heun8": {
+    "time_s": [
+      0.0,
+      0.00025,
+      0.0005,
+      0.00075,
+      0.001,
+      0.00125,
+      0.0015,
+      0.00175,
+      0.002
+    ],
+    "Ye": [
+      0.3,
+      0.3027848063122609,
+      0.3055525480285493,
+      0.3083033809428925,
+      0.3110374589156683,
+      0.31375493390399134,
+      0.31645595599149406,
+      0.31914067341755936,
+      0.3218092326059971
+    ],
+    "final_T_MeV": 1.9955690477112278
+  },
+  "successive_grid_changes": {
+    "Euler": {
+      "finer_steps": [
+        2,
+        4
+      ],
+      "successive_Ye_change": [
+        0.00027391392272080317,
+        0.0001331948328274768
+      ]
+    },
+    "Heun": {
+      "finer_steps": [
+        4,
+        8
+      ],
+      "successive_Ye_change": [
+        1.2324209490155447e-06,
+        3.0588748001214583e-07
+      ]
+    }
+  },
+  "scope": "Named beta+PC channels only; actual changing sources, prescribed empty radiation, not complete beta balance. Guides anchored to measured last difference, no fitted trajectory or exact-solution claim."
+}

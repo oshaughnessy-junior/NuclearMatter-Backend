@@ -1,0 +1,30 @@
+{
+  "grids": [
+    4,
+    8,
+    16
+  ],
+  "common_time_steps": 16,
+  "fine_time_ladder": [
+    16,
+    32,
+    64
+  ],
+  "duration": 0.0015,
+  "initial_temperature": "theta(x)=1+.04*cos(pi*x)",
+  "cell_initialization": "actual EOS W averaged by Gauss; exact projection from16 to8/4",
+  "comparison": "cell-averaged W, conservative pair projection; L1/L2/Linf",
+  "temporal_estimate": "first-order 2*D16vs32, verified32vs64 ladder; target<.1 of8vs16 spatial difference",
+  "gates": {
+    "initial_quadrature": 3e-11,
+    "projection": 5e-11,
+    "energy": 5e-10,
+    "temporal_fraction": 0.1
+  },
+  "frozen_sources": {
+    "conductive_thermal_slab/slab.py": "036e45427ba33eef06cd94127487d7afac33220e50e87e6d8bf5448a40965317",
+    "screened_coulomb_transport/lorentz.py": "15f4c1b5604aeef2dd89aa2991c2fe48a08326ecd1878444969d95cae5f513ae",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  }
+}

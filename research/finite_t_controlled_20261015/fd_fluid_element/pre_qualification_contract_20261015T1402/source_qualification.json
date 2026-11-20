@@ -1,0 +1,623 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "uT FD T2.0Y0.3photonsFalseh0.0001",
+      "error": 1.167177465788427e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.0Y0.3photonsFalseh0.0001",
+      "error": 3.947448923291574e-09,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.0Y0.3photonsFalseh5e-05",
+      "error": 2.8063551482659932e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.0Y0.3photonsFalseh5e-05",
+      "error": 9.898836195176841e-10,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "energy inverse photonsFalseT2.0Y0.3",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.2Y0.28photonsFalseh0.0001",
+      "error": 1.967470630859225e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.2Y0.28photonsFalseh0.0001",
+      "error": 4.410106391183888e-09,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.2Y0.28photonsFalseh5e-05",
+      "error": 1.4738432696503878e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.2Y0.28photonsFalseh5e-05",
+      "error": 1.1018681522756424e-09,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "energy inverse photonsFalseT2.2Y0.28",
+      "error": 7.771561172376096e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.0Y0.3photonsTrueh0.0001",
+      "error": 2.394151543683165e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.0Y0.3photonsTrueh0.0001",
+      "error": 3.947448923291574e-09,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "uT FD T2.0Y0.3photonsTrueh5e-05",
+      "error": 2.8833380127935015e-11,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "uY FD T2.0Y0.3photonsTrueh5e-05",
+      "error": 9.889151719733036e-10,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "energy inverse photonsTrueT2.0Y0.3",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "nue outer6->10 number_fm3_s",
+      "error": 8.112980909302792e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "nue new100MeV panels versus accepted320MeV number_fm3_s",
+      "error": 1.2896350654045818e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "nue outer6->10 energy_MeV_fm3_s",
+      "error": 1.0376419656843439e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "nue new100MeV panels versus accepted320MeV energy_MeV_fm3_s",
+      "error": 1.5345502646368914e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "antinue outer6->10 number_fm3_s",
+      "error": 8.458953497658683e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "antinue new100MeV panels versus accepted320MeV number_fm3_s",
+      "error": 1.8515182720335588e-08,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "antinue outer6->10 energy_MeV_fm3_s",
+      "error": 1.3902007045540898e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "antinue new100MeV panels versus accepted320MeV energy_MeV_fm3_s",
+      "error": 2.7646898104194406e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "initial heating sign",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    }
+  ],
+  "coarse_source": {
+    "T": 2.0,
+    "nB": 0.0001,
+    "Ye": 0.3,
+    "outer_order": 6,
+    "internal_order": 48,
+    "tail": 40.0,
+    "edges": [
+      0.0,
+      0.1,
+      0.5,
+      0.78233341,
+      1.80433131,
+      4.0,
+      8.0,
+      16.0,
+      24.0,
+      40.0,
+      64.0,
+      100.0
+    ],
+    "moments": {
+      "nue": {
+        "number_fm3_s": 0.2596362099079473,
+        "energy_MeV_fm3_s": 4.357622709329079
+      },
+      "antinue": {
+        "number_fm3_s": 1.4075342073156516e-07,
+        "energy_MeV_fm3_s": 1.5012974487202963e-06
+      }
+    },
+    "panels": [
+      {
+        "flavor": "nue",
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          3.2106234767149226e-10,
+          2.426896569186104e-11
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.1,
+        "hi": 0.5,
+        "values": [
+          6.115344960090684e-08,
+          2.373629456266246e-08
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.5,
+        "hi": 0.78233341,
+        "values": [
+          2.4203210342906735e-07,
+          1.6173057943831527e-07
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.78233341,
+        "hi": 1.80433131,
+        "values": [
+          7.322859573574702e-06,
+          1.0801970651508304e-05
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 1.80433131,
+        "hi": 4.0,
+        "values": [
+          0.00021823711295347012,
+          0.0007236702584950871
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 4.0,
+        "hi": 8.0,
+        "values": [
+          0.0051082503291998895,
+          0.03433686037603873
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 8.0,
+        "hi": 16.0,
+        "values": [
+          0.1098088925454764,
+          1.4479196506667658
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 16.0,
+        "hi": 24.0,
+        "values": [
+          0.12889272615822014,
+          2.457301720124671
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 24.0,
+        "hi": 40.0,
+        "values": [
+          0.01556772760011518,
+          0.41594077746709424
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 40.0,
+        "hi": 64.0,
+        "values": [
+          3.2748682371865046e-05,
+          0.001388969197459504
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 64.0,
+        "hi": 100.0,
+        "values": [
+          1.1134214230911932e-09,
+          7.377675979705092e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          1.1578334789231596e-13,
+          8.581870002611127e-15
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.1,
+        "hi": 0.5,
+        "values": [
+          6.536721020474856e-12,
+          2.2778959245323322e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.5,
+        "hi": 0.78233341,
+        "values": [
+          5.409602285529048e-12,
+          3.3406679527429977e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.78233341,
+        "hi": 1.80433131,
+        "values": [
+          1.546571752232055e-12,
+          2.58617589118222e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 1.80433131,
+        "hi": 4.0,
+        "values": [
+          3.4252849057513122e-09,
+          1.1606276083487702e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 4.0,
+        "hi": 8.0,
+        "values": [
+          3.941104119831512e-08,
+          2.4982594006639314e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 8.0,
+        "hi": 16.0,
+        "values": [
+          8.121581624379442e-08,
+          9.190523059110933e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 16.0,
+        "hi": 24.0,
+        "values": [
+          1.5388974926397904e-08,
+          2.860438582419882e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 24.0,
+        "hi": 40.0,
+        "values": [
+          1.2958182760683574e-09,
+          3.463880665632399e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 40.0,
+        "hi": 64.0,
+        "values": [
+          2.876400362274071e-12,
+          1.2204164900723738e-10
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 64.0,
+        "hi": 100.0,
+        "values": [
+          1.0246962827683023e-16,
+          6.7903642483546414e-15
+        ]
+      }
+    ],
+    "dYe_dt": -2596.360691545265,
+    "energy_loss_MeV_per_baryon_s": 43576.24210626528,
+    "dT_dt_no_photons": 2263.8601455248954,
+    "runtime_seconds": 14.402681916952133
+  },
+  "fine_source": {
+    "T": 2.0,
+    "nB": 0.0001,
+    "Ye": 0.3,
+    "outer_order": 10,
+    "internal_order": 48,
+    "tail": 40.0,
+    "edges": [
+      0.0,
+      0.1,
+      0.5,
+      0.78233341,
+      1.80433131,
+      4.0,
+      8.0,
+      16.0,
+      24.0,
+      40.0,
+      64.0,
+      100.0
+    ],
+    "moments": {
+      "nue": {
+        "number_fm3_s": 0.25963623097218513,
+        "energy_MeV_fm3_s": 4.357623161494345
+      },
+      "antinue": {
+        "number_fm3_s": 1.4075353979432993e-07,
+        "energy_MeV_fm3_s": 1.5012976574308024e-06
+      }
+    },
+    "panels": [
+      {
+        "flavor": "nue",
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          3.21062347671492e-10,
+          2.4268965691861013e-11
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.1,
+        "hi": 0.5,
+        "values": [
+          6.115344960090653e-08,
+          2.3736294562662685e-08
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.5,
+        "hi": 0.78233341,
+        "values": [
+          2.420321034290673e-07,
+          1.6173057943831524e-07
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 0.78233341,
+        "hi": 1.80433131,
+        "values": [
+          7.3228595735746776e-06,
+          1.080197065150832e-05
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 1.80433131,
+        "hi": 4.0,
+        "values": [
+          0.0002182371129534693,
+          0.0007236702584950799
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 4.0,
+        "hi": 8.0,
+        "values": [
+          0.005108250329220961,
+          0.034336860376294354
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 8.0,
+        "hi": 16.0,
+        "values": [
+          0.10980890725374572,
+          1.4479199173020825
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 16.0,
+        "hi": 24.0,
+        "values": [
+          0.12889274005835052,
+          2.4573018426110447
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 24.0,
+        "hi": 40.0,
+        "values": [
+          0.0155677197840422,
+          0.4159408367535246
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 40.0,
+        "hi": 64.0,
+        "values": [
+          3.2748953428157414e-05,
+          0.0013889729131914862
+        ]
+      },
+      {
+        "flavor": "nue",
+        "lo": 64.0,
+        "hi": 100.0,
+        "values": [
+          1.1142552100873416e-09,
+          7.38179186592686e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          1.1578334789231578e-13,
+          8.581870002611108e-15
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.1,
+        "hi": 0.5,
+        "values": [
+          6.536721018223661e-12,
+          2.277895922707154e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.5,
+        "hi": 0.78233341,
+        "values": [
+          5.409695749581032e-12,
+          3.3407056931611346e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 0.78233341,
+        "hi": 1.80433131,
+        "values": [
+          1.530225653874816e-12,
+          2.5527024769617707e-12
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 1.80433131,
+        "hi": 4.0,
+        "values": [
+          3.4254203515529738e-09,
+          1.160651655069428e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 4.0,
+        "hi": 8.0,
+        "values": [
+          3.941104119985236e-08,
+          2.4982594005538907e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 8.0,
+        "hi": 16.0,
+        "values": [
+          8.121581616413086e-08,
+          9.190523069785382e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 16.0,
+        "hi": 24.0,
+        "values": [
+          1.538897492746229e-08,
+          2.8604385822745763e-07
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 24.0,
+        "hi": 40.0,
+        "values": [
+          1.2958182021468272e-09,
+          3.463880703600346e-08
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 40.0,
+        "hi": 64.0,
+        "values": [
+          2.876420870663399e-12,
+          1.2204190271199158e-10
+        ]
+      },
+      {
+        "flavor": "antinue",
+        "lo": 64.0,
+        "hi": 100.0,
+        "values": [
+          1.0254436882805069e-16,
+          6.794045140608327e-15
+        ]
+      }
+    ],
+    "dYe_dt": -2596.3609021864536,
+    "energy_loss_MeV_per_baryon_s": 43576.24662792003,
+    "dT_dt_no_photons": 2263.8597776032625,
+    "runtime_seconds": 23.074068000074476
+  },
+  "runtime_seconds": 37.90132158296183,
+  "scope": "Initial physical source plus independent FD derivatives; no trajectory yet"
+}

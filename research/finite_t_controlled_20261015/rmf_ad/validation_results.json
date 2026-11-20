@@ -1,0 +1,3773 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 local Hessian positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal equations",
+      "actual": 4.119968255444917e-15,
+      "expected": 0.0,
+      "scaled_error": 4.119968255444917e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 implicit linear equations",
+      "actual": 1.1102230246251565e-16,
+      "expected": 0.0,
+      "scaled_error": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal phi_mev",
+      "actual": 286.84152054639947,
+      "expected": 286.84152054639947,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal omega_mev",
+      "actual": 225.67892094387201,
+      "expected": 225.67892094387201,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal rho_mev",
+      "actual": -55.693566948096006,
+      "expected": -55.693566948096006,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal dirac_mass_mev",
+      "actual": 652.1584794536006,
+      "expected": 652.1584794536006,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal kinetic_mu_n_mev",
+      "actual": 725.0005595155691,
+      "expected": 725.0005595155691,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal kinetic_mu_p_mev",
+      "actual": 663.9905912076009,
+      "expected": 663.9905912076009,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal mu_n_mev",
+      "actual": 978.5262639334891,
+      "expected": 978.5262639334891,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal mu_p_mev",
+      "actual": 861.822728677425,
+      "expected": 861.822728677425,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal energy_density",
+      "actual": 151.7931270781473,
+      "expected": 151.7931270781473,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal pressure",
+      "actual": 4.230329338027903,
+      "expected": 4.230329338027903,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal free_energy_density",
+      "actual": 150.4666163272335,
+      "expected": 150.4666163272335,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 primal entropy_density",
+      "actual": 0.13265107509138074,
+      "expected": 0.13265107509138074,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 analytic thermal moment n n_T",
+      "actual": 0.17380054947462797,
+      "expected": 0.17380055355402618,
+      "scaled_error": 2.3471721606773945e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 analytic thermal moment n rho_s_T",
+      "actual": 0.13285395292218877,
+      "expected": 0.1328539575403847,
+      "scaled_error": 3.4761448001086154e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 analytic thermal moment n s_T",
+      "actual": 1.9223476222383549,
+      "expected": 1.9223476109217772,
+      "scaled_error": 5.886852934740821e-09,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 analytic thermal moment p n_T",
+      "actual": 0.24938603299130885,
+      "expected": 0.24938601671499006,
+      "scaled_error": 6.526556303015595e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 analytic thermal moment p rho_s_T",
+      "actual": 0.23461443655166783,
+      "expected": 0.23461441939806396,
+      "scaled_error": 7.311402221004844e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 analytic thermal moment p s_T",
+      "actual": 0.7355583089901376,
+      "expected": 0.7355583171804768,
+      "scaled_error": 1.1134860409217917e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 jacfwd analytic Jacobian",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 jacrev analytic Jacobian",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian phi_mev",
+      "actual": 1.5921897415897075e-12,
+      "expected": 0.0,
+      "scaled_error": 1.1074329795652875e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian dirac_mass_mev",
+      "actual": 1.5921897415897075e-12,
+      "expected": 0.0,
+      "scaled_error": 1.1074329795652875e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian kinetic_mu_n_mev",
+      "actual": 1.5932048710277944e-12,
+      "expected": 0.0,
+      "scaled_error": 1.6050883858414759e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian kinetic_mu_p_mev",
+      "actual": 1.591617602222419e-12,
+      "expected": 0.0,
+      "scaled_error": 1.2287933039217595e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian mu_n_mev",
+      "actual": 1.5926343665578304e-12,
+      "expected": 0.0,
+      "scaled_error": 2.610138976572384e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian mu_p_mev",
+      "actual": 1.5774067643911592e-12,
+      "expected": 0.0,
+      "scaled_error": 7.254610510896083e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian energy_density",
+      "actual": 1.1718572319005113e-13,
+      "expected": 0.0,
+      "scaled_error": 1.2096132941110824e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian pressure",
+      "actual": 2.55894540037701e-13,
+      "expected": 0.0,
+      "scaled_error": 2.9631335728808232e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian free_energy_density",
+      "actual": 1.1718572319005113e-13,
+      "expected": 0.0,
+      "scaled_error": 1.2118028449340405e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 refined Jacobian entropy_density",
+      "actual": 3.5544547519174975e-15,
+      "expected": 0.0,
+      "scaled_error": 1.5216601680556904e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 df/dT=-s",
+      "actual": -0.13265107509138074,
+      "expected": -0.13265107509138074,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 df/dn=mu_bar",
+      "actual": 966.8559104078827,
+      "expected": 966.8559104078827,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 df/dY=n*mu_diff",
+      "actual": -18.672565640970248,
+      "expected": -18.672565640970262,
+      "scaled_error": 7.61055282302576e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 Cv independent canonical formula",
+      "actual": 0.11664571569960533,
+      "expected": 0.11664571569960529,
+      "scaled_error": 3.5692149663396726e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 Phi_T canonical formula",
+      "actual": -0.23273888730862774,
+      "expected": -0.23273888730862796,
+      "scaled_error": 9.540502985673585e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 Cv=T*ds/dT",
+      "actual": 0.11664571569960533,
+      "expected": 0.11664571569960533,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 frozen Cv positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 chemical Jacobian vs full Hessian",
+      "actual": 6.393305442999231e-13,
+      "expected": 0.0,
+      "scaled_error": 9.869936960500908e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD phi_mev",
+      "actual": 14.376258012684069,
+      "expected": 14.37625801268704,
+      "scaled_error": 2.067189521566716e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD omega_mev",
+      "actual": 14.104932558992001,
+      "expected": 14.104932558987096,
+      "scaled_error": 3.477167446971682e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD rho_mev",
+      "actual": -3.4808479342560004,
+      "expected": -3.4808479342550194,
+      "scaled_error": 2.8182588929118017e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD dirac_mass_mev",
+      "actual": -14.376258012684069,
+      "expected": -14.37625801268799,
+      "scaled_error": 2.7270097274939877e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD kinetic_mu_n_mev",
+      "actual": -9.902232317503504,
+      "expected": -9.902232317515805,
+      "scaled_error": 1.2422725218320046e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD kinetic_mu_p_mev",
+      "actual": -12.874897183455605,
+      "expected": -12.874897183460613,
+      "scaled_error": 3.889390228841687e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD mu_n_mev",
+      "actual": 5.943124208616496,
+      "expected": 5.943124208621005,
+      "scaled_error": 7.587392890554837e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD mu_p_mev",
+      "actual": -0.5103885915916062,
+      "expected": -0.5103885916165988,
+      "scaled_error": 4.896771594185351e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD energy_density",
+      "actual": 9.686346201733171,
+      "expected": 9.686346201751425,
+      "scaled_error": 1.884492098617787e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD pressure",
+      "actual": 0.8476436685753097,
+      "expected": 0.847643668574305,
+      "scaled_error": 1.1853469500641819e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD free_energy_density",
+      "actual": 9.668559104078827,
+      "expected": 9.668559104098998,
+      "scaled_error": 2.0861983356794623e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 FD entropy_density",
+      "actual": 0.0017787097654343097,
+      "expected": 0.001778709765444993,
+      "scaled_error": 6.006204460304657e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction0 perturbation residuals",
+      "actual": 5.6396136761984346e-15,
+      "expected": 0.0,
+      "scaled_error": 5.6396136761984346e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD phi_mev",
+      "actual": -0.23273888730862774,
+      "expected": -0.2327388873027303,
+      "scaled_error": 2.5339337418016506e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD dirac_mass_mev",
+      "actual": 0.23273888730862774,
+      "expected": 0.23273888731030942,
+      "scaled_error": 7.225619192435008e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD kinetic_mu_n_mev",
+      "actual": -0.08351789405574775,
+      "expected": -0.08351789404059673,
+      "scaled_error": 1.8141045702931075e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD kinetic_mu_p_mev",
+      "actual": -1.02704871893258,
+      "expected": -1.027048718928351,
+      "scaled_error": 4.1176834822547244e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD mu_n_mev",
+      "actual": -0.08351789405574775,
+      "expected": -0.08351789407091322,
+      "scaled_error": 1.8158343518888864e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD mu_p_mev",
+      "actual": -1.02704871893258,
+      "expected": -1.0270487189416144,
+      "scaled_error": 8.796397555409765e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD energy_density",
+      "actual": 0.11664571569960533,
+      "expected": 0.11664571572064612,
+      "scaled_error": 1.8038205670082652e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD pressure",
+      "actual": 0.10419171884443178,
+      "expected": 0.10419171884521461,
+      "scaled_error": 7.513381496412084e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD free_energy_density",
+      "actual": -0.13265107509138074,
+      "expected": -0.1326510750734163,
+      "scaled_error": 1.354262337096802e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 FD entropy_density",
+      "actual": 0.011664571569960532,
+      "expected": 0.01166457156997804,
+      "scaled_error": 1.501003610633843e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction1 perturbation residuals",
+      "actual": 5.204170427930421e-15,
+      "expected": 0.0,
+      "scaled_error": 5.204170427930421e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD phi_mev",
+      "actual": 0.3463385128840853,
+      "expected": 0.34633851288958795,
+      "scaled_error": 1.5888079677281313e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD rho_mev",
+      "actual": 2.7846783474048,
+      "expected": 2.784678347405508,
+      "scaled_error": 2.542046556869061e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD dirac_mass_mev",
+      "actual": -0.3463385128840853,
+      "expected": -0.34633851289716705,
+      "scaled_error": 3.777159458740987e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD kinetic_mu_n_mev",
+      "actual": -1.3719264785691527,
+      "expected": -1.3719264785796288,
+      "scaled_error": 7.636024687860071e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD kinetic_mu_p_mev",
+      "actual": 2.8348107360756467,
+      "expected": 2.834810736074663,
+      "scaled_error": 3.469923361373855e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD mu_n_mev",
+      "actual": -2.7642656522715527,
+      "expected": -2.764265652272494,
+      "scaled_error": 3.4058561777814443e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD mu_p_mev",
+      "actual": 4.227149909778047,
+      "expected": 4.227149909771318,
+      "scaled_error": 1.5920248937733833e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD energy_density",
+      "actual": -0.343258326423346,
+      "expected": -0.34325832641523374,
+      "scaled_error": 2.3633188168668804e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD pressure",
+      "actual": -0.3304198553706549,
+      "expected": -0.3304198553716553,
+      "scaled_error": 3.027729572620437e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD free_energy_density",
+      "actual": -0.37345131281940497,
+      "expected": -0.3734513128136996,
+      "scaled_error": 1.52774415744085e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 FD entropy_density",
+      "actual": 0.003019298639605864,
+      "expected": 0.0030192986396060384,
+      "scaled_error": 5.774179044389499e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction2 perturbation residuals",
+      "actual": 4.111744765913091e-15,
+      "expected": 0.0,
+      "scaled_error": 4.111744765913091e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD phi_mev",
+      "actual": 16.596099622133153,
+      "expected": 16.59609962212869,
+      "scaled_error": 2.6887090835630245e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD omega_mev",
+      "actual": 16.9259190707904,
+      "expected": 16.925919070795697,
+      "scaled_error": 3.1295766409702724e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD rho_mev",
+      "actual": -6.2655262816608,
+      "expected": -6.265526281660409,
+      "scaled_error": 6.237281388667174e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD dirac_mass_mev",
+      "actual": -16.596099622133153,
+      "expected": -16.596099622137217,
+      "scaled_error": 2.448951585664427e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD kinetic_mu_n_mev",
+      "actual": -10.99571434197211,
+      "expected": -10.995714341968702,
+      "scaled_error": 3.100143081926185e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD kinetic_mu_p_mev",
+      "actual": -19.32196749438885,
+      "expected": -19.321967494388065,
+      "scaled_error": 4.0635081455496295e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD mu_n_mev",
+      "actual": 9.062967869648688,
+      "expected": 9.062967869616992,
+      "scaled_error": 3.4972578013517936e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD mu_p_mev",
+      "actual": -5.528811564428849,
+      "expected": -5.528811564418372,
+      "scaled_error": 1.894973723866613e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD energy_density",
+      "actual": 12.079356903586643,
+      "expected": 12.079356903599603,
+      "scaled_error": 1.0729295941576249e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD pressure",
+      "actual": 1.4421132158538967,
+      "expected": 1.4421132158549899,
+      "scaled_error": 7.580026159026943e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD free_energy_density",
+      "actual": 11.656852581853798,
+      "expected": 11.656852581864996,
+      "scaled_error": 9.60649835531125e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 FD entropy_density",
+      "actual": 0.01969974940774968,
+      "expected": 0.019699749407761185,
+      "scaled_error": 5.840016466476289e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.16,T=10.0,Y=0.1 direction3 perturbation residuals",
+      "actual": 6.069257901184665e-15,
+      "expected": 0.0,
+      "scaled_error": 6.069257901184665e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 local Hessian positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal equations",
+      "actual": 3.854941057726238e-15,
+      "expected": 0.0,
+      "scaled_error": 3.854941057726238e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 implicit linear equations",
+      "actual": 4.440892098500626e-16,
+      "expected": 0.0,
+      "scaled_error": 4.440892098500626e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal phi_mev",
+      "actual": 392.64802819069996,
+      "expected": 392.64802819069996,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal omega_mev",
+      "actual": 338.518381415808,
+      "expected": 338.518381415808,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal rho_mev",
+      "actual": -41.770175211072,
+      "expected": -41.770175211072,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal dirac_mass_mev",
+      "actual": 546.3519718093002,
+      "expected": 546.3519718093002,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal kinetic_mu_n_mev",
+      "actual": 636.8599022169,
+      "expected": 636.8599022169,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal kinetic_mu_p_mev",
+      "actual": 594.2677633172353,
+      "expected": 594.2677633172353,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal mu_n_mev",
+      "actual": 996.263371238244,
+      "expected": 996.263371238244,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal mu_p_mev",
+      "actual": 911.9010571275073,
+      "expected": 911.9010571275073,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal energy_density",
+      "actual": 227.46023039885236,
+      "expected": 227.46023039885236,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal pressure",
+      "actual": 11.459323022192446,
+      "expected": 11.459323022192446,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal free_energy_density",
+      "actual": 221.56979945901267,
+      "expected": 221.56979945901267,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 primal entropy_density",
+      "actual": 0.2945215469919851,
+      "expected": 0.2945215469919851,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 analytic thermal moment n n_T",
+      "actual": 0.28066229271589954,
+      "expected": 0.280662285205634,
+      "scaled_error": 2.6759083483879153e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 analytic thermal moment n rho_s_T",
+      "actual": 0.19681834014565863,
+      "expected": 0.19681833404221433,
+      "scaled_error": 3.1010547544860624e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 analytic thermal moment n s_T",
+      "actual": 1.7323884123679847,
+      "expected": 1.732388482555804,
+      "scaled_error": 4.0515057702746553e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 analytic thermal moment p n_T",
+      "actual": 0.304354278461742,
+      "expected": 0.30435424967178293,
+      "scaled_error": 9.459358334718359e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 analytic thermal moment p rho_s_T",
+      "actual": 0.24765213779752415,
+      "expected": 0.2476521081914913,
+      "scaled_error": 1.195468637990582e-07,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 analytic thermal moment p s_T",
+      "actual": 1.1465099883703147,
+      "expected": 1.1465100739221787,
+      "scaled_error": 7.461937403201282e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 jacfwd analytic Jacobian",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 jacrev analytic Jacobian",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian phi_mev",
+      "actual": 9.106690628923817e-13,
+      "expected": 0.0,
+      "scaled_error": 7.524317584322312e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian dirac_mass_mev",
+      "actual": 9.106690628923817e-13,
+      "expected": 0.0,
+      "scaled_error": 7.524317584322312e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian kinetic_mu_n_mev",
+      "actual": 1.1541471731138732e-12,
+      "expected": 0.0,
+      "scaled_error": 1.4905842086086023e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian kinetic_mu_p_mev",
+      "actual": 7.563957064616858e-13,
+      "expected": 0.0,
+      "scaled_error": 8.209163458309632e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian mu_n_mev",
+      "actual": 1.2710591013815612e-12,
+      "expected": 0.0,
+      "scaled_error": 1.6755218113703848e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian mu_p_mev",
+      "actual": 7.757711507519146e-13,
+      "expected": 0.0,
+      "scaled_error": 1.657073922390752e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian energy_density",
+      "actual": 2.291436917133687e-13,
+      "expected": 0.0,
+      "scaled_error": 2.3486456403097204e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian pressure",
+      "actual": 2.561922323364871e-13,
+      "expected": 0.0,
+      "scaled_error": 1.6714631263595215e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian free_energy_density",
+      "actual": 2.291436917133687e-13,
+      "expected": 0.0,
+      "scaled_error": 2.3594703577436643e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 refined Jacobian entropy_density",
+      "actual": 2.706115801902488e-15,
+      "expected": 0.0,
+      "scaled_error": 1.130732588219786e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 df/dT=-s",
+      "actual": -0.2945215469919851,
+      "expected": -0.2945215469919851,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 df/dn=mu_bar",
+      "actual": 970.9546770050229,
+      "expected": 970.9546770050229,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 df/dY=n*mu_diff",
+      "actual": -20.246955386576786,
+      "expected": -20.24695538657679,
+      "scaled_error": 1.7546903279867247e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 Cv independent canonical formula",
+      "actual": 0.25305737088429187,
+      "expected": 0.25305737088429187,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 Phi_T canonical formula",
+      "actual": -0.4672181671615543,
+      "expected": -0.46721816716155445,
+      "scaled_error": 3.5643616922153976e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 Cv=T*ds/dT",
+      "actual": 0.25305737088429187,
+      "expected": 0.25305737088429187,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 frozen Cv positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 chemical Jacobian vs full Hessian",
+      "actual": 1.372800929372411e-12,
+      "expected": 0.0,
+      "scaled_error": 1.5399937634243433e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD phi_mev",
+      "actual": 12.101882257040742,
+      "expected": 12.101882257029692,
+      "scaled_error": 9.131402589452449e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD omega_mev",
+      "actual": 14.104932558992001,
+      "expected": 14.104932558990413,
+      "scaled_error": 1.1258919585628225e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD rho_mev",
+      "actual": -1.7404239671280002,
+      "expected": -1.7404239671288717,
+      "scaled_error": 5.007544660330541e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD dirac_mass_mev",
+      "actual": -12.101882257040742,
+      "expected": -12.101882257021165,
+      "scaled_error": 1.6177011403058408e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD kinetic_mu_n_mev",
+      "actual": -7.6754114526107164,
+      "expected": -7.675411452591637,
+      "scaled_error": 2.4858405220160143e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD kinetic_mu_p_mev",
+      "actual": -9.133734930799797,
+      "expected": -9.133734930780216,
+      "scaled_error": 2.1437869162069436e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD mu_n_mev",
+      "actual": 7.299733089945282,
+      "expected": 7.299733089962501,
+      "scaled_error": 2.3588691272018525e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD mu_p_mev",
+      "actual": 4.100985644628203,
+      "expected": 4.100985644631312,
+      "scaled_error": 7.582354382149247e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD energy_density",
+      "actual": 9.754633307080828,
+      "expected": 9.754633307084267,
+      "scaled_error": 3.5255316451324766e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD pressure",
+      "actual": 1.521626125524038,
+      "expected": 1.521626125527753,
+      "scaled_error": 2.4414856071902665e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD free_energy_density",
+      "actual": 9.70954677005023,
+      "expected": 9.709546770050773,
+      "scaled_error": 5.5982550548405695e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 FD entropy_density",
+      "actual": 0.002254326851529953,
+      "expected": 0.002254326851555688,
+      "scaled_error": 1.1415849671144815e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction0 perturbation residuals",
+      "actual": 6.365957710006632e-15,
+      "expected": 0.0,
+      "scaled_error": 6.365957710006632e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD phi_mev",
+      "actual": -0.4672181671615543,
+      "expected": -0.4672181671594444,
+      "scaled_error": 4.515808639944489e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD dirac_mass_mev",
+      "actual": 0.4672181671615543,
+      "expected": 0.4672181671670235,
+      "scaled_error": 1.1705957857380377e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD kinetic_mu_n_mev",
+      "actual": -0.12624817286184165,
+      "expected": -0.1262481728701914,
+      "scaled_error": 6.613771220424806e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD kinetic_mu_p_mev",
+      "actual": -0.4568632138323537,
+      "expected": -0.45686321383868744,
+      "scaled_error": 1.3863595606915418e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD mu_n_mev",
+      "actual": -0.12624817286184165,
+      "expected": -0.12624817286829662,
+      "scaled_error": 5.112925832029771e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD mu_p_mev",
+      "actual": -0.4568632138323537,
+      "expected": -0.45686321383868744,
+      "scaled_error": 1.3863595606915418e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD energy_density",
+      "actual": 0.25305737088429187,
+      "expected": 0.25305737087630104,
+      "scaled_error": 3.1577148660276035e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD pressure",
+      "actual": 0.2404177025552662,
+      "expected": 0.24041770255169106,
+      "scaled_error": 1.4870536345505818e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD free_energy_density",
+      "actual": -0.2945215469919851,
+      "expected": -0.2945215470006701,
+      "scaled_error": 2.9488683478285254e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 FD entropy_density",
+      "actual": 0.012652868544214593,
+      "expected": 0.01265286854421066,
+      "scaled_error": 3.1080842310961943e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction1 perturbation residuals",
+      "actual": 4.625929269271486e-15,
+      "expected": 0.0,
+      "scaled_error": 4.625929269271486e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD phi_mev",
+      "actual": 0.3306016470479125,
+      "expected": 0.3306016470512911,
+      "scaled_error": 1.0219474789440106e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD rho_mev",
+      "actual": 4.1770175211072,
+      "expected": 4.177017521107255,
+      "scaled_error": 1.3183344753318256e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD dirac_mass_mev",
+      "actual": -0.3306016470479125,
+      "expected": -0.33060164707308104,
+      "scaled_error": 7.61294873950938e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD kinetic_mu_n_mev",
+      "actual": -2.0404323854334323,
+      "expected": -2.0404323854525805,
+      "scaled_error": 9.384402387863395e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD kinetic_mu_p_mev",
+      "actual": 2.4276913342421405,
+      "expected": 2.427691334226741,
+      "scaled_error": 6.343161185137103e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD mu_n_mev",
+      "actual": -4.128941145987032,
+      "expected": -4.128941145997563,
+      "scaled_error": 2.550349586399966e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD mu_p_mev",
+      "actual": 4.5162000947957415,
+      "expected": 4.516200094777408,
+      "scaled_error": 4.05955860119028e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD energy_density",
+      "actual": -0.37320006379836684,
+      "expected": -0.37320006380336207,
+      "scaled_error": 1.3384848876467331e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD pressure",
+      "actual": -0.368495705700528,
+      "expected": -0.368495705702306,
+      "scaled_error": 4.825082481079403e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD free_energy_density",
+      "actual": -0.40493910773153574,
+      "expected": -0.40493910773449215,
+      "scaled_error": 7.300882616190213e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 FD entropy_density",
+      "actual": 0.0015869521966584586,
+      "expected": 0.0015869521966582756,
+      "scaled_error": 1.1532378045219853e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction2 perturbation residuals",
+      "actual": 5.979144735966313e-15,
+      "expected": 0.0,
+      "scaled_error": 5.979144735966313e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD phi_mev",
+      "actual": 13.480036588988314,
+      "expected": 13.480036588985437,
+      "scaled_error": 2.1347850659246566e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD omega_mev",
+      "actual": 16.9259190707904,
+      "expected": 16.925919070792855,
+      "scaled_error": 1.4503940032936426e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD rho_mev",
+      "actual": -5.221271901384,
+      "expected": -5.221271901383773,
+      "scaled_error": 4.354756460451181e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD dirac_mass_mev",
+      "actual": -13.480036588988314,
+      "expected": -13.480036588994912,
+      "scaled_error": 4.894192428912717e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD kinetic_mu_n_mev",
+      "actual": -7.894791347922916,
+      "expected": -7.894791347932066,
+      "scaled_error": 1.1589937816592725e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD kinetic_mu_p_mev",
+      "actual": -13.557917881156364,
+      "expected": -13.55791788115918,
+      "scaled_error": 2.0766651746445556e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD mu_n_mev",
+      "actual": 11.641763673559481,
+      "expected": 11.641763673541542,
+      "scaled_error": 1.5409544656772589e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD mu_p_mev",
+      "actual": 0.7573652389420364,
+      "expected": 0.7573652389680774,
+      "scaled_error": 3.4383604945850226e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD energy_density",
+      "actual": 12.415657546849065,
+      "expected": 12.4156575468542,
+      "scaled_error": 4.1362671315038893e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD pressure",
+      "actual": 2.511033224248194,
+      "expected": 2.511033224250022,
+      "scaled_error": 7.279358831617187e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD free_energy_density",
+      "actual": 11.454473824972553,
+      "expected": 11.454473824979061,
+      "scaled_error": 5.682121727293236e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 FD entropy_density",
+      "actual": 0.023024854599506907,
+      "expected": 0.023024854599523747,
+      "scaled_error": 7.314137612461266e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.24,T=20.0,Y=0.3 direction3 perturbation residuals",
+      "actual": 5.396917818124097e-15,
+      "expected": 0.0,
+      "scaled_error": 5.396917818124097e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 local Hessian positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal equations",
+      "actual": 9.75781955236954e-17,
+      "expected": 0.0,
+      "scaled_error": 9.75781955236954e-17,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 implicit linear equations",
+      "actual": 1.1102230246251565e-16,
+      "expected": 0.0,
+      "scaled_error": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal phi_mev",
+      "actual": 466.9263879634984,
+      "expected": 466.9263879634984,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal omega_mev",
+      "actual": 451.35784188774403,
+      "expected": 451.35784188774403,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal rho_mev",
+      "actual": -111.38713389619201,
+      "expected": -111.38713389619201,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal dirac_mass_mev",
+      "actual": 472.07361203650163,
+      "expected": 472.07361203650163,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal kinetic_mu_n_mev",
+      "actual": 612.4732600306453,
+      "expected": 612.4732600306453,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal kinetic_mu_p_mev",
+      "actual": 482.70321049016167,
+      "expected": 482.70321049016167,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal mu_n_mev",
+      "actual": 1119.5246688664852,
+      "expected": 1119.5246688664852,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal mu_p_mev",
+      "actual": 878.3674854298096,
+      "expected": 878.3674854298096,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal energy_density",
+      "actual": 320.9267542224673,
+      "expected": 320.9267542224673,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal pressure",
+      "actual": 41.56301980511239,
+      "expected": 41.56301980511239,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal free_energy_density",
+      "actual": 308.9678443621893,
+      "expected": 308.9678443621893,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 primal entropy_density",
+      "actual": 0.39863032867593384,
+      "expected": 0.39863032867593384,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 analytic thermal moment n n_T",
+      "actual": 0.357034992083871,
+      "expected": 0.3570349851090825,
+      "scaled_error": 1.9535308346282717e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 analytic thermal moment n rho_s_T",
+      "actual": 0.20358385656840464,
+      "expected": 0.20358385159438955,
+      "scaled_error": 2.443226734215135e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 analytic thermal moment n s_T",
+      "actual": 2.0779671368404666,
+      "expected": 2.07796722451889,
+      "scaled_error": 4.219432441181276e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 analytic thermal moment p n_T",
+      "actual": 0.28651128404650555,
+      "expected": 0.28651128287467287,
+      "scaled_error": 4.090005373206961e-09,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 analytic thermal moment p rho_s_T",
+      "actual": 0.23850349290875522,
+      "expected": 0.23850348592107007,
+      "scaled_error": 2.9298042021233513e-08,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 analytic thermal moment p s_T",
+      "actual": 0.8455337587008639,
+      "expected": 0.8455337647882141,
+      "scaled_error": 7.199417022700696e-09,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 jacfwd analytic Jacobian",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 jacrev analytic Jacobian",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian phi_mev",
+      "actual": 3.4990187685101925e-13,
+      "expected": 0.0,
+      "scaled_error": 3.7534267636458807e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian dirac_mass_mev",
+      "actual": 3.4990187685101925e-13,
+      "expected": 0.0,
+      "scaled_error": 3.7534267636458807e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian kinetic_mu_n_mev",
+      "actual": 2.898479359210817e-13,
+      "expected": 0.0,
+      "scaled_error": 6.580156875380113e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian kinetic_mu_p_mev",
+      "actual": 3.813237108166689e-13,
+      "expected": 0.0,
+      "scaled_error": 4.868379480412636e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian mu_n_mev",
+      "actual": 4.547487747466193e-13,
+      "expected": 0.0,
+      "scaled_error": 3.79123662656978e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian mu_p_mev",
+      "actual": 4.856754594675151e-13,
+      "expected": 0.0,
+      "scaled_error": 6.679372892700647e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian energy_density",
+      "actual": 4.582863244080423e-13,
+      "expected": 0.0,
+      "scaled_error": 4.140741814900304e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian pressure",
+      "actual": 2.2737368221949554e-13,
+      "expected": 0.0,
+      "scaled_error": 6.333231982256357e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian free_energy_density",
+      "actual": 4.58286378199527e-13,
+      "expected": 0.0,
+      "scaled_error": 4.1733575092914204e-16,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 refined Jacobian entropy_density",
+      "actual": 1.1762717183702212e-15,
+      "expected": 0.0,
+      "scaled_error": 2.4206131757275817e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 df/dT=-s",
+      "actual": -0.39863032867593384,
+      "expected": -0.39863032867593384,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 df/dn=mu_bar",
+      "actual": 1095.4089505228176,
+      "expected": 1095.4089505228176,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 df/dY=n*mu_diff",
+      "actual": -77.17029869973618,
+      "expected": -77.1702986997362,
+      "scaled_error": 1.84149277048873e-16,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 Cv independent canonical formula",
+      "actual": 0.3412000350231405,
+      "expected": 0.3412000350231405,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 Phi_T canonical formula",
+      "actual": -0.49733145333494255,
+      "expected": -0.4973314533349425,
+      "scaled_error": 1.116180182432021e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 Cv=T*ds/dT",
+      "actual": 0.3412000350231405,
+      "expected": 0.3412000350231405,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 frozen Cv positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 chemical Jacobian vs full Hessian",
+      "actual": 1.3923737144427707e-13,
+      "expected": 0.0,
+      "scaled_error": 9.92668150228904e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD phi_mev",
+      "actual": 9.30850541794866,
+      "expected": 9.308505417933096,
+      "scaled_error": 1.6720663444895963e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD omega_mev",
+      "actual": 14.104932558992001,
+      "expected": 14.10493255899136,
+      "scaled_error": 4.546386991511763e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD rho_mev",
+      "actual": -3.4808479342560004,
+      "expected": -3.4808479342541907,
+      "scaled_error": 5.198915793851665e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD dirac_mass_mev",
+      "actual": -9.30850541794866,
+      "expected": -9.308505417933096,
+      "scaled_error": 1.6720663444895963e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD kinetic_mu_n_mev",
+      "actual": -4.178631905697855,
+      "expected": -4.178631905701498,
+      "scaled_error": 8.71890120936193e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD kinetic_mu_p_mev",
+      "actual": -6.999404660059615,
+      "expected": -6.999404660047996,
+      "scaled_error": 1.6600197660864151e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD mu_n_mev",
+      "actual": 11.666724620422144,
+      "expected": 11.666724620431523,
+      "scaled_error": 8.039243589934336e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD mu_p_mev",
+      "actual": 5.365103931804384,
+      "expected": 5.365103931804545,
+      "scaled_error": 2.996405959868352e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD energy_density",
+      "actual": 11.048021859609001,
+      "expected": 11.048021859591017,
+      "scaled_error": 1.6277879307847308e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD pressure",
+      "actual": 3.5317000164993186,
+      "expected": 3.531700016499073,
+      "scaled_error": 6.953629467389649e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD free_energy_density",
+      "actual": 10.954089505228175,
+      "expected": 10.954089505210618,
+      "scaled_error": 1.6028270530636396e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 FD entropy_density",
+      "actual": 0.0031310784793607783,
+      "expected": 0.003131078479344055,
+      "scaled_error": 5.3410248576039626e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction0 perturbation residuals",
+      "actual": 1.7358083561994316e-15,
+      "expected": 0.0,
+      "scaled_error": 1.7358083561994316e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD phi_mev",
+      "actual": -0.49733145333494255,
+      "expected": -0.4973314533543771,
+      "scaled_error": 3.9077691421454475e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD rho_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD dirac_mass_mev",
+      "actual": 0.49733145333494255,
+      "expected": 0.4973314533543771,
+      "scaled_error": 3.9077691421454475e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD kinetic_mu_n_mev",
+      "actual": -0.1970312864762688,
+      "expected": -0.19703128645384518,
+      "scaled_error": 1.1380740044458318e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD kinetic_mu_p_mev",
+      "actual": -1.3577969010743585,
+      "expected": -1.3577969010498236,
+      "scaled_error": 1.8069579185385872e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD mu_n_mev",
+      "actual": -0.1970312864762688,
+      "expected": -0.19703128646900345,
+      "scaled_error": 3.687411839256923e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD mu_p_mev",
+      "actual": -1.3577969010743585,
+      "expected": -1.357796901055508,
+      "scaled_error": 1.3883134304148708e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD energy_density",
+      "actual": 0.3412000350231405,
+      "expected": 0.34120003503138224,
+      "scaled_error": 2.4155157611712457e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD pressure",
+      "actual": 0.2984358173363889,
+      "expected": 0.29843581734176894,
+      "scaled_error": 1.802742647632617e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD free_energy_density",
+      "actual": -0.39863032867593384,
+      "expected": -0.3986303286675745,
+      "scaled_error": 2.0970227681132923e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 FD entropy_density",
+      "actual": 0.01137333450077135,
+      "expected": 0.011373334500811941,
+      "scaled_error": 3.5689440604673622e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction1 perturbation residuals",
+      "actual": 1.734723475976807e-15,
+      "expected": 0.0,
+      "scaled_error": 1.734723475976807e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD phi_mev",
+      "actual": 1.010106477132362,
+      "expected": 1.010106477131482,
+      "scaled_error": 8.711584266015526e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD omega_mev",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD rho_mev",
+      "actual": 5.5693566948096,
+      "expected": 5.569356694811016,
+      "scaled_error": 2.542046556869061e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD dirac_mass_mev",
+      "actual": -1.010106477132362,
+      "expected": -1.010106477131482,
+      "scaled_error": 8.711584266015526e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD kinetic_mu_n_mev",
+      "actual": -2.787105202459679,
+      "expected": -2.7871052024636356,
+      "scaled_error": 1.4195340624591398e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD kinetic_mu_p_mev",
+      "actual": 7.031001194221842,
+      "expected": 7.0310011942221236,
+      "scaled_error": 4.0044447620960665e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD mu_n_mev",
+      "actual": -5.57178354986448,
+      "expected": -5.571783549870209,
+      "scaled_error": 1.028171815324602e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD mu_p_mev",
+      "actual": 9.815679541626642,
+      "expected": 9.815679541655223,
+      "scaled_error": 2.911829122442021e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD energy_density",
+      "actual": -1.32053897599189,
+      "expected": -1.3205389760220971,
+      "scaled_error": 2.287487961135402e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD pressure",
+      "actual": -1.2905719170289178,
+      "expected": -1.2905719170293632,
+      "scaled_error": 3.451349526533038e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD free_energy_density",
+      "actual": -1.5434059739947237,
+      "expected": -1.5434059740262758,
+      "scaled_error": 2.0443159351215483e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 FD entropy_density",
+      "actual": 0.007428899933427774,
+      "expected": 0.0074288999334269174,
+      "scaled_error": 1.1535400998963705e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction2 perturbation residuals",
+      "actual": 1.0885563980778155e-15,
+      "expected": 0.0,
+      "scaled_error": 1.0885563980778155e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD phi_mev",
+      "actual": 9.567163173019718,
+      "expected": 9.567163173008453,
+      "scaled_error": 1.1775334936546122e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD omega_mev",
+      "actual": 16.9259190707904,
+      "expected": 16.925919070790957,
+      "scaled_error": 3.2953959264417865e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD rho_mev",
+      "actual": -8.354035042214399,
+      "expected": -8.354035042213562,
+      "scaled_error": 1.0015089320667104e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD dirac_mass_mev",
+      "actual": -9.567163173019718,
+      "expected": -9.5671631730094,
+      "scaled_error": 1.0785701773319088e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD kinetic_mu_n_mev",
+      "actual": -3.258982572002324,
+      "expected": -3.2589825719924193,
+      "scaled_error": 3.0392815910151594e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD kinetic_mu_p_mev",
+      "actual": -15.98079121956433,
+      "expected": -15.980791219561752,
+      "scaled_error": 1.6128699377629733e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD mu_n_mev",
+      "actual": 17.84395401989528,
+      "expected": 17.843954019906505,
+      "scaled_error": 6.291528891234167e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD mu_p_mev",
+      "actual": -3.231889669881129,
+      "expected": -3.231889669895812,
+      "scaled_error": 4.543138239538345e-12,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD energy_density",
+      "actual": 14.828070523064056,
+      "expected": 14.828070523062328,
+      "scaled_error": 1.165623809280003e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD pressure",
+      "actual": 5.713309847042732,
+      "expected": 5.713309847043983,
+      "scaled_error": 2.1904000078080177e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD free_energy_density",
+      "actual": 13.624790328020765,
+      "expected": 13.624790328021655,
+      "scaled_error": 6.531878694009588e-14,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 FD entropy_density",
+      "actual": 0.0175202878764734,
+      "expected": 0.017520287876479634,
+      "scaled_error": 3.558500988462849e-13,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "n=0.32,T=30.0,Y=0.1 direction3 perturbation residuals",
+      "actual": 1.9471871206235264e-15,
+      "expected": 0.0,
+      "scaled_error": 1.9471871206235264e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "JIT primal",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "JIT first JVP",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "reverse weighted scalar functional",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "higher derivatives explicitly unsupported",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "invalid staged state returns NaN sentinel",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "invalid staged JVP returns NaN sentinel",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "strict host preflight rejects invalid T",
+      "actual": 1.0,
+      "expected": 1.0,
+      "scaled_error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "states": [
+    {
+      "x": [
+        0.16,
+        10.0,
+        0.1
+      ],
+      "outputs": [
+        286.84152054639947,
+        225.67892094387201,
+        -55.693566948096006,
+        652.1584794536006,
+        725.0005595155691,
+        663.9905912076009,
+        978.5262639334891,
+        861.822728677425,
+        151.7931270781473,
+        4.230329338027903,
+        150.4666163272335,
+        0.13265107509138074
+      ],
+      "jacobian": [
+        [
+          1437.6258012684068,
+          -0.23273888730862774,
+          17.316925644204265
+        ],
+        [
+          1410.4932558992,
+          0.0,
+          0.0
+        ],
+        [
+          -348.0847934256,
+          0.0,
+          139.23391737024
+        ],
+        [
+          -1437.6258012684068,
+          0.23273888730862774,
+          -17.316925644204265
+        ],
+        [
+          -990.2232317503504,
+          -0.08351789405574775,
+          -68.59632392845764
+        ],
+        [
+          -1287.4897183455605,
+          -1.02704871893258,
+          141.74053680378233
+        ],
+        [
+          594.3124208616496,
+          -0.08351789405574775,
+          -138.21328261357763
+        ],
+        [
+          -51.03885915916062,
+          -1.02704871893258,
+          211.35749548890234
+        ],
+        [
+          968.634620173317,
+          0.11664571569960533,
+          -17.1629163211673
+        ],
+        [
+          84.76436685753097,
+          0.10419171884443178,
+          -16.520992768532743
+        ],
+        [
+          966.8559104078827,
+          -0.13265107509138074,
+          -18.672565640970248
+        ],
+        [
+          0.17787097654343098,
+          0.011664571569960532,
+          0.1509649319802932
+        ]
+      ],
+      "diagnostics": {
+        "max_equation_residual": 4.119968255444917e-15,
+        "implicit_jacobian_condition": 22.463421107515227,
+        "canonical_scalar_curvature_fm_minus2": 0.12397884653541252,
+        "implicit_linear_residual": 1.1102230246251565e-16,
+        "canonical_cv_formula": 0.11664571569960529,
+        "canonical_dphi_dT_mev_per_mev": -0.23273888730862796
+      },
+      "directional_ladders": [
+        {
+          "direction": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              14.376258502454675,
+              14.104932558992545,
+              -3.4808479342558485,
+              -14.376258502457517,
+              -9.902232605901418,
+              -12.87489731211906,
+              5.943123920221183,
+              -0.5103887202523083,
+              9.686346483679387,
+              0.8476441483995512,
+              9.668559365787388,
+              0.0017787117891479576
+            ],
+            [
+              14.376258135123976,
+              14.104932558988992,
+              -3.480847934255493,
+              -14.376258135121134,
+              -9.90223238960084,
+              -12.87489721561883,
+              5.943124136513234,
+              -0.5103886237520783,
+              9.686346272206947,
+              0.8476437885311494,
+              9.668559169493562,
+              0.0017787102713551217
+            ],
+            [
+              14.376258043296275,
+              14.10493255898757,
+              -3.480847934255138,
+              -14.376258043296275,
+              -9.902232335537065,
+              -12.874897191500168,
+              5.943124190594062,
+              -0.5103885996504687,
+              9.686346219365305,
+              0.8476436985635161,
+              9.66855912044764,
+              0.0017787098919225253
+            ]
+          ],
+          "richardson": [
+            14.37625801268704,
+            14.104932558987096,
+            -3.4808479342550194,
+            -14.37625801268799,
+            -9.902232317515805,
+            -12.874897183460613,
+            5.943124208621005,
+            -0.5103885916165988,
+            9.686346201751425,
+            0.847643668574305,
+            9.668559104098998,
+            0.001778709765444993
+          ],
+          "analytic": [
+            14.376258012684069,
+            14.104932558992001,
+            -3.4808479342560004,
+            -14.376258012684069,
+            -9.902232317503504,
+            -12.874897183455605,
+            5.943124208616496,
+            -0.5103885915916062,
+            9.686346201733171,
+            0.8476436685753097,
+            9.668559104078827,
+            0.0017787097654343097
+          ],
+          "max_perturbed_equation_residual": 5.6396136761984346e-15
+        },
+        {
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              -0.23273881061385282,
+              0.0,
+              0.0,
+              0.2327388106152739,
+              -0.08351802588038026,
+              -1.0270483881782866,
+              -0.08351802588322244,
+              -1.0270483881811288,
+              0.11664568270006725,
+              0.10419168593609474,
+              -0.1326510558762095,
+              0.011664572113662813
+            ],
+            [
+              -0.23273886813512945,
+              0.0,
+              0.0,
+              0.23273886813512945,
+              -0.08351792700977967,
+              -1.0270486362401243,
+              -0.08351792700977967,
+              -1.0270486362458087,
+              0.1166457074575078,
+              0.10419171061784027,
+              -0.1326510702796213,
+              0.011664571705889692
+            ],
+            [
+              -0.23273888251083008,
+              0.0,
+              0.0,
+              0.23273888251651442,
+              -0.08351790228289246,
+              -1.0270486982562943,
+              -0.08351790230562983,
+              -1.027048698267663,
+              0.11664571365486154,
+              0.10419171678837102,
+              -0.13265107387496755,
+              0.011664571603955953
+            ]
+          ],
+          "richardson": [
+            -0.2327388873027303,
+            0.0,
+            0.0,
+            0.23273888731030942,
+            -0.08351789404059673,
+            -1.027048718928351,
+            -0.08351789407091322,
+            -1.0270487189416144,
+            0.11664571572064612,
+            0.10419171884521461,
+            -0.1326510750734163,
+            0.01166457156997804
+          ],
+          "analytic": [
+            -0.23273888730862774,
+            0.0,
+            0.0,
+            0.23273888730862774,
+            -0.08351789405574775,
+            -1.02704871893258,
+            -0.08351789405574775,
+            -1.02704871893258,
+            0.11664571569960533,
+            0.10419171884443178,
+            -0.13265107509138074,
+            0.011664571569960532
+          ],
+          "max_perturbed_equation_residual": 5.204170427930421e-15
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            0.02
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              0.3463385230858762,
+              0.0,
+              2.784678347404679,
+              -0.3463385230872973,
+              -1.3719265053140361,
+              2.834821413142663,
+              -2.7642656790192177,
+              4.227160586847845,
+              -0.343258331130869,
+              -0.33041985916524297,
+              -0.37345139819962014,
+              0.0030193067069181345
+            ],
+            [
+              0.3463385154361731,
+              0.0,
+              2.784678347405034,
+              -0.3463385154361731,
+              -1.3719264852568358,
+              2.8348134053203466,
+              -2.7642656589648595,
+              4.227152579017002,
+              -0.3432583276108403,
+              -0.33041985632022985,
+              -0.3734513341754564,
+              0.0030193006564149805
+            ],
+            [
+              0.34633851352623424,
+              0.0,
+              2.7846783474053893,
+              -0.3463385135319186,
+              -1.3719264802489306,
+              2.834811403386084,
+              -2.7642656539455857,
+              4.227150577082739,
+              -0.34325832671413536,
+              -0.33041985560879894,
+              -0.3734513181541388,
+              0.003019299143808274
+            ]
+          ],
+          "richardson": [
+            0.34633851288958795,
+            0.0,
+            2.784678347405508,
+            -0.34633851289716705,
+            -1.3719264785796288,
+            2.834810736074663,
+            -2.764265652272494,
+            4.227149909771318,
+            -0.34325832641523374,
+            -0.3304198553716553,
+            -0.3734513128136996,
+            0.0030192986396060384
+          ],
+          "analytic": [
+            0.3463385128840853,
+            0.0,
+            2.7846783474048,
+            -0.3463385128840853,
+            -1.3719264785691527,
+            2.8348107360756467,
+            -2.7642656522715527,
+            4.227149909778047,
+            -0.343258326423346,
+            -0.3304198553706549,
+            -0.37345131281940497,
+            0.003019298639605864
+          ],
+          "max_perturbed_equation_residual": 4.111744765913091e-15
+        },
+        {
+          "direction": [
+            0.012,
+            1.7,
+            -0.015
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              16.596100257467583,
+              16.925919070790485,
+              -6.265526281660527,
+              -16.59610025746474,
+              -10.995714846069404,
+              -19.32197914197218,
+              9.062967365551344,
+              -5.528823212011957,
+              12.07935816310055,
+              1.4421148499095704,
+              11.656854233420688,
+              0.019699746155243947
+            ],
+            [
+              16.59609978096057,
+              16.925919070791906,
+              -6.2655262816608825,
+              -16.59609978095773,
+              -10.995714467986772,
+              -19.3219704062642,
+              9.062967743636818,
+              -5.5288144763096625,
+              12.079357218460984,
+              1.4421136243685684,
+              11.656852994741485,
+              0.01969974859462459
+            ],
+            [
+              16.59609966183666,
+              16.925919070794748,
+              -6.265526281660527,
+              -16.596099661842345,
+              -10.99571437347322,
+              -19.3219682223571,
+              9.06296783812195,
+              -5.528812292391194,
+              12.079356982314948,
+              1.4421133179833845,
+              11.656852685084118,
+              0.019699749204477035
+            ]
+          ],
+          "richardson": [
+            16.59609962212869,
+            16.925919070795697,
+            -6.265526281660409,
+            -16.596099622137217,
+            -10.995714341968702,
+            -19.321967494388065,
+            9.062967869616992,
+            -5.528811564418372,
+            12.079356903599603,
+            1.4421132158549899,
+            11.656852581864996,
+            0.019699749407761185
+          ],
+          "analytic": [
+            16.596099622133153,
+            16.9259190707904,
+            -6.2655262816608,
+            -16.596099622133153,
+            -10.99571434197211,
+            -19.32196749438885,
+            9.062967869648688,
+            -5.528811564428849,
+            12.079356903586643,
+            1.4421132158538967,
+            11.656852581853798,
+            0.01969974940774968
+          ],
+          "max_perturbed_equation_residual": 6.069257901184665e-15
+        }
+      ]
+    },
+    {
+      "x": [
+        0.24,
+        20.0,
+        0.3
+      ],
+      "outputs": [
+        392.64802819069996,
+        338.518381415808,
+        -41.770175211072,
+        546.3519718093002,
+        636.8599022169,
+        594.2677633172353,
+        996.263371238244,
+        911.9010571275073,
+        227.46023039885236,
+        11.459323022192446,
+        221.56979945901267,
+        0.2945215469919851
+      ],
+      "jacobian": [
+        [
+          1210.1882257040743,
+          -0.4672181671615543,
+          16.530082352395624
+        ],
+        [
+          1410.4932558992,
+          0.0,
+          0.0
+        ],
+        [
+          -174.0423967128,
+          0.0,
+          208.85087605536
+        ],
+        [
+          -1210.1882257040743,
+          0.4672181671615543,
+          -16.530082352395624
+        ],
+        [
+          -767.5411452610716,
+          -0.12624817286184165,
+          -102.02161927167161
+        ],
+        [
+          -913.3734930799797,
+          -0.4568632138323537,
+          121.38456671210703
+        ],
+        [
+          729.9733089945282,
+          -0.12624817286184165,
+          -206.4470572993516
+        ],
+        [
+          410.09856446282026,
+          -0.4568632138323537,
+          225.81000473978705
+        ],
+        [
+          975.4633307080828,
+          0.25305737088429187,
+          -18.660003189918342
+        ],
+        [
+          152.1626125524038,
+          0.2404177025552662,
+          -18.4247852850264
+        ],
+        [
+          970.9546770050229,
+          -0.2945215469919851,
+          -20.246955386576786
+        ],
+        [
+          0.2254326851529953,
+          0.012652868544214593,
+          0.07934760983292292
+        ]
+      ],
+      "diagnostics": {
+        "max_equation_residual": 3.854941057726238e-15,
+        "implicit_jacobian_condition": 17.545967115889127,
+        "canonical_scalar_curvature_fm_minus2": 0.1404060183303385,
+        "implicit_linear_residual": 4.440892098500626e-16,
+        "canonical_cv_formula": 0.25305737088429187,
+        "canonical_dphi_dT_mev_per_mev": -0.46721816716155445
+      },
+      "directional_ladders": [
+        {
+          "direction": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              12.101882324303403,
+              14.104932558991834,
+              -1.7404239671281019,
+              -12.101882324301982,
+              -7.675411519795716,
+              -9.133734848424524,
+              7.299733022765054,
+              4.100985727001216,
+              9.754633573751903,
+              1.5216265644281357,
+              9.709546992179696,
+              0.0022543290785936865
+            ],
+            [
+              12.101882273859133,
+              14.104932558990413,
+              -1.7404239671279242,
+              -12.101882273861975,
+              -7.67541146940971,
+              -9.133734910210478,
+              7.299733073136849,
+              4.100985665223789,
+              9.754633373754018,
+              1.5216262352497623,
+              9.709546825588689,
+              0.002254327408299228
+            ],
+            [
+              12.101882261237051,
+              14.104932558990413,
+              -1.7404239671286348,
+              -12.101882261231367,
+              -7.675411456796155,
+              -9.133734925637782,
+              7.299733085756088,
+              4.100985649779432,
+              9.754633323751705,
+              1.5216261529582553,
+              9.709546783935252,
+              0.002254326990741573
+            ]
+          ],
+          "richardson": [
+            12.101882257029692,
+            14.104932558990413,
+            -1.7404239671288717,
+            -12.101882257021165,
+            -7.675411452591637,
+            -9.133734930780216,
+            7.299733089962501,
+            4.100985644631312,
+            9.754633307084267,
+            1.521626125527753,
+            9.709546770050773,
+            0.002254326851555688
+          ],
+          "analytic": [
+            12.101882257040742,
+            14.104932558992001,
+            -1.7404239671280002,
+            -12.101882257040742,
+            -7.6754114526107164,
+            -9.133734930799797,
+            7.299733089945282,
+            4.100985644628203,
+            9.754633307080828,
+            1.521626125524038,
+            9.70954677005023,
+            0.002254326851529953
+          ],
+          "max_perturbed_equation_residual": 6.365957710006632e-15
+        },
+        {
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              -0.46721810410730313,
+              0.0,
+              0.0,
+              0.4672181041087242,
+              -0.1262482471986459,
+              -0.4568632448780363,
+              -0.12624824719580374,
+              -0.4568632448780363,
+              0.2530573446513529,
+              0.24041767218725418,
+              -0.294521531353098,
+              0.012652868797262407
+            ],
+            [
+              -0.4672181514024487,
+              0.0,
+              0.0,
+              0.4672181514024487,
+              -0.1262481914466207,
+              -0.4568632215921298,
+              -0.12624819145230504,
+              -0.4568632215921298,
+              0.2530573643241496,
+              0.2404176949628578,
+              -0.29452154308415857,
+              0.012652868607471168
+            ],
+            [
+              -0.4672181632201955,
+              0.0,
+              0.0,
+              0.46721816322587983,
+              -0.12624817751429873,
+              -0.456863215777048,
+              -0.12624817751429873,
+              -0.456863215777048,
+              0.25305736923826316,
+              0.24041770065448276,
+              -0.29452154602154224,
+              0.012652868560025787
+            ]
+          ],
+          "richardson": [
+            -0.4672181671594444,
+            0.0,
+            0.0,
+            0.4672181671670235,
+            -0.1262481728701914,
+            -0.45686321383868744,
+            -0.12624817286829662,
+            -0.45686321383868744,
+            0.25305737087630104,
+            0.24041770255169106,
+            -0.2945215470006701,
+            0.01265286854421066
+          ],
+          "analytic": [
+            -0.4672181671615543,
+            0.0,
+            0.0,
+            0.4672181671615543,
+            -0.12624817286184165,
+            -0.4568632138323537,
+            -0.12624817286184165,
+            -0.4568632138323537,
+            0.25305737088429187,
+            0.2404177025552662,
+            -0.2945215469919851,
+            0.012652868544214593
+          ],
+          "max_perturbed_equation_residual": 4.625929269271486e-15
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            0.02
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              0.33060164979161755,
+              0.0,
+              4.1770175211073735,
+              -0.33060164979303863,
+              -2.04043244963259,
+              2.4276921198293167,
+              -4.128941210188941,
+              4.516200880382826,
+              -0.37320006562922003,
+              -0.368495706122296,
+              -0.40493913082997324,
+              0.0015869532600173986
+            ],
+            [
+              0.3306016477296225,
+              0.0,
+              4.177017521106308,
+              -0.3306016477324647,
+              -2.0404324014748454,
+              2.42769153064728,
+              -4.128941162042565,
+              4.516200291197947,
+              -0.37320006424295116,
+              -0.3684957058041505,
+              -0.4049391134927305,
+              0.001586952462512281
+            ],
+            [
+              0.33060164722087393,
+              0.0,
+              4.177017521107018,
+              -0.33060164723792695,
+              -2.0404323894581466,
+              2.427691383331876,
+              -4.128941150008814,
+              4.516200143882543,
+              -0.37320006391325933,
+              -0.36849570572776713,
+              -0.40493910917405174,
+              0.001586952263121777
+            ]
+          ],
+          "richardson": [
+            0.3306016470512911,
+            0.0,
+            4.177017521107255,
+            -0.33060164707308104,
+            -2.0404323854525805,
+            2.427691334226741,
+            -4.128941145997563,
+            4.516200094777408,
+            -0.37320006380336207,
+            -0.368495705702306,
+            -0.40493910773449215,
+            0.0015869521966582756
+          ],
+          "analytic": [
+            0.3306016470479125,
+            0.0,
+            4.1770175211072,
+            -0.3306016470479125,
+            -2.0404323854334323,
+            2.4276913342421405,
+            -4.128941145987032,
+            4.5162000947957415,
+            -0.37320006379836684,
+            -0.368495705700528,
+            -0.40493910773153574,
+            0.0015869521966584586
+          ],
+          "max_perturbed_equation_residual": 5.979144735966313e-15
+        },
+        {
+          "direction": [
+            0.012,
+            1.7,
+            -0.015
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              13.480036837751186,
+              16.925919070790485,
+              -5.221271901384128,
+              -13.480036837754028,
+              -7.89479218792053,
+              -13.557919539690033,
+              11.64176283355971,
+              0.7573635804050127,
+              12.41565868927097,
+              2.5110345195295203,
+              11.454475045020018,
+              0.023024855747856565
+            ],
+            [
+              13.480036651179717,
+              16.925919070789064,
+              -5.221271901383773,
+              -13.480036651174032,
+              -7.894791557919234,
+              -13.557918295782656,
+              11.641763463569532,
+              0.7573648243067055,
+              12.415657832465854,
+              2.5110335480698076,
+              11.454474129995162,
+              0.023024854886605217
+            ],
+            [
+              13.480036604534007,
+              16.925919070791906,
+              -5.221271901383773,
+              -13.480036604539691,
+              -7.894791400428858,
+              -13.557917984815049,
+              11.64176362104854,
+              0.7573651353027344,
+              12.415657618257114,
+              2.5110333052049683,
+              11.454473901233087,
+              0.023024854671294115
+            ]
+          ],
+          "richardson": [
+            13.480036588985437,
+            16.925919070792855,
+            -5.221271901383773,
+            -13.480036588994912,
+            -7.894791347932066,
+            -13.55791788115918,
+            11.641763673541542,
+            0.7573652389680774,
+            12.4156575468542,
+            2.511033224250022,
+            11.454473824979061,
+            0.023024854599523747
+          ],
+          "analytic": [
+            13.480036588988314,
+            16.9259190707904,
+            -5.221271901384,
+            -13.480036588988314,
+            -7.894791347922916,
+            -13.557917881156364,
+            11.641763673559481,
+            0.7573652389420364,
+            12.415657546849065,
+            2.511033224248194,
+            11.454473824972553,
+            0.023024854599506907
+          ],
+          "max_perturbed_equation_residual": 5.396917818124097e-15
+        }
+      ]
+    },
+    {
+      "x": [
+        0.32,
+        30.0,
+        0.1
+      ],
+      "outputs": [
+        466.9263879634984,
+        451.35784188774403,
+        -111.38713389619201,
+        472.07361203650163,
+        612.4732600306453,
+        482.70321049016167,
+        1119.5246688664852,
+        878.3674854298096,
+        320.9267542224673,
+        41.56301980511239,
+        308.9678443621893,
+        0.39863032867593384
+      ],
+      "jacobian": [
+        [
+          930.8505417948661,
+          -0.49733145333494255,
+          50.5053238566181
+        ],
+        [
+          1410.4932558992,
+          0.0,
+          0.0
+        ],
+        [
+          -348.0847934256,
+          0.0,
+          278.46783474048
+        ],
+        [
+          -930.8505417948661,
+          0.49733145333494255,
+          -50.5053238566181
+        ],
+        [
+          -417.8631905697855,
+          -0.1970312864762688,
+          -139.35526012298396
+        ],
+        [
+          -699.9404660059615,
+          -1.3577969010743585,
+          351.5500597110921
+        ],
+        [
+          1166.6724620422144,
+          -0.1970312864762688,
+          -278.589177493224
+        ],
+        [
+          536.5103931804384,
+          -1.3577969010743585,
+          490.78397708133207
+        ],
+        [
+          1104.8021859609,
+          0.3412000350231405,
+          -66.02694879959449
+        ],
+        [
+          353.17000164993186,
+          0.2984358173363889,
+          -64.52859585144589
+        ],
+        [
+          1095.4089505228176,
+          -0.39863032867593384,
+          -77.17029869973618
+        ],
+        [
+          0.3131078479360778,
+          0.01137333450077135,
+          0.3714449966713887
+        ]
+      ],
+      "diagnostics": {
+        "max_equation_residual": 9.75781955236954e-17,
+        "implicit_jacobian_condition": 12.1222661972357,
+        "canonical_scalar_curvature_fm_minus2": 0.1627620081986435,
+        "implicit_linear_residual": 1.1102230246251565e-16,
+        "canonical_cv_formula": 0.3412000350231405,
+        "canonical_dphi_dT_mev_per_mev": -0.4973314533349425
+      },
+      "directional_ladders": [
+        {
+          "direction": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              9.308505708521864,
+              14.104932558988992,
+              -3.480847934255493,
+              -9.308505708521864,
+              -4.178632376786595,
+              -6.999404865715064,
+              11.66672414933032,
+              5.365103726146003,
+              11.048022077996222,
+              3.5317002421837884,
+              10.95408968919287,
+              0.003131079626765565
+            ],
+            [
+              9.308505490594143,
+              14.10493255898757,
+              -3.480847934255138,
+              -9.308505490594143,
+              -4.178632023473483,
+              -6.9994047114761315,
+              11.66672450265196,
+              5.365103880387778,
+              11.048021914206174,
+              3.5317000729204295,
+              10.954089551219681,
+              0.003131078766210882
+            ],
+            [
+              9.308505436098358,
+              14.104932558990413,
+              -3.4808479342544274,
+              -9.308505436098358,
+              -4.1786319351444945,
+              -6.99940467290503,
+              11.666724590986632,
+              5.3651039189503535,
+              11.048021873244807,
+              3.531700030604412,
+              10.954089516712884,
+              0.003131078551060762
+            ]
+          ],
+          "richardson": [
+            9.308505417933096,
+            14.10493255899136,
+            -3.4808479342541907,
+            -9.308505417933096,
+            -4.178631905701498,
+            -6.999404660047996,
+            11.666724620431523,
+            5.365103931804545,
+            11.048021859591017,
+            3.531700016499073,
+            10.954089505210618,
+            0.003131078479344055
+          ],
+          "analytic": [
+            9.30850541794866,
+            14.104932558992001,
+            -3.4808479342560004,
+            -9.30850541794866,
+            -4.178631905697855,
+            -6.999404660059615,
+            11.666724620422144,
+            5.365103931804384,
+            11.048021859609001,
+            3.5317000164993186,
+            10.954089505228175,
+            0.0031310784793607783
+          ],
+          "max_perturbed_equation_residual": 1.7358083561994316e-15
+        },
+        {
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              -0.49733142570715927,
+              0.0,
+              0.0,
+              0.49733142570858035,
+              -0.19703131617632152,
+              -1.3577968635999582,
+              -0.1970313161791637,
+              -1.357796863595695,
+              0.3412000219100264,
+              0.2984358022660061,
+              -0.3986303209643438,
+              0.011373334578139438
+            ],
+            [
+              -0.4973314464308487,
+              0.0,
+              0.0,
+              0.4973314464308487,
+              -0.1970312938965435,
+              -1.3577968917047656,
+              -0.1970312938965435,
+              -1.35779689171045,
+              0.3412000317496222,
+              0.298435813568787,
+              -0.39863032674247734,
+              0.01137333452011502
+            ],
+            [
+              -0.497331451623495,
+              0.0,
+              0.0,
+              0.497331451623495,
+              -0.19703128831451977,
+              -1.3577968987135591,
+              -0.19703128832588845,
+              -1.3577968987192435,
+              0.34120003421094225,
+              0.29843581639852346,
+              -0.3986303281863002,
+              0.011373334505637711
+            ]
+          ],
+          "richardson": [
+            -0.4973314533543771,
+            0.0,
+            0.0,
+            0.4973314533543771,
+            -0.19703128645384518,
+            -1.3577969010498236,
+            -0.19703128646900345,
+            -1.357796901055508,
+            0.34120003503138224,
+            0.29843581734176894,
+            -0.3986303286675745,
+            0.011373334500811941
+          ],
+          "analytic": [
+            -0.49733145333494255,
+            0.0,
+            0.0,
+            0.49733145333494255,
+            -0.1970312864762688,
+            -1.3577969010743585,
+            -0.1970312864762688,
+            -1.3577969010743585,
+            0.3412000350231405,
+            0.2984358173363889,
+            -0.39863032867593384,
+            0.01137333450077135
+          ],
+          "max_perturbed_equation_residual": 1.734723475976807e-15
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            0.02
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              1.0101064807827242,
+              0.0,
+              5.569356694809358,
+              -1.0101064807827242,
+              -2.787105251101707,
+              7.031033163883649,
+              -5.571783598509228,
+              9.815711511279801,
+              -1.320538977992669,
+              -1.2905719138673888,
+              -1.5434064769152656,
+              0.007428916630751459
+            ],
+            [
+              1.0101064780485558,
+              0.0,
+              5.569356694810068,
+              -1.0101064780485558,
+              -2.787105214628127,
+              7.031009186573556,
+              -5.571783562027122,
+              9.815687533983919,
+              -1.3205389765033715,
+              -1.2905719162411344,
+              -1.5434060997336019,
+              0.007428904107728562
+            ],
+            [
+              1.0101064773607504,
+              0.0,
+              5.569356694810779,
+              -1.0101064773607504,
+              -2.7871052055047585,
+              7.031003192309981,
+              -5.571783552909437,
+              9.815681539737398,
+              -1.3205389761424158,
+              -1.290571916832306,
+              -1.5434060054531074,
+              0.007428900977002328
+            ]
+          ],
+          "richardson": [
+            1.010106477131482,
+            0.0,
+            5.569356694811016,
+            -1.010106477131482,
+            -2.7871052024636356,
+            7.0310011942221236,
+            -5.571783549870209,
+            9.815679541655223,
+            -1.3205389760220971,
+            -1.2905719170293632,
+            -1.5434059740262758,
+            0.0074288999334269174
+          ],
+          "analytic": [
+            1.010106477132362,
+            0.0,
+            5.5693566948096,
+            -1.010106477132362,
+            -2.787105202459679,
+            7.031001194221842,
+            -5.57178354986448,
+            9.815679541626642,
+            -1.32053897599189,
+            -1.2905719170289178,
+            -1.5434059739947237,
+            0.007428899933427774
+          ],
+          "max_perturbed_equation_residual": 1.0885563980778155e-15
+        },
+        {
+          "direction": [
+            0.012,
+            1.7,
+            -0.015
+          ],
+          "steps": [
+            0.02,
+            0.01,
+            0.005
+          ],
+          "finite_differences": [
+            [
+              9.567163973099468,
+              16.925919070791906,
+              -8.354035042214392,
+              -9.567163973099468,
+              -3.258984291093725,
+              -15.980813426868679,
+              17.843952300796673,
+              -3.2319118771823696,
+              14.8280719895439,
+              5.71331093816827,
+              13.624792380335293,
+              0.017520278025448532
+            ],
+            [
+              9.567163373040444,
+              16.925919070794748,
+              -8.354035042215457,
+              -9.567163373037602,
+              -3.2589830017741406,
+              -15.980796771367523,
+              17.843953590124784,
+              -3.231895221671266,
+              14.8280708896948,
+              5.713310119826076,
+              13.624790841109302,
+              0.01752028541372741
+            ],
+            [
+              9.56716322301645,
+              16.925919070791906,
+              -8.354035042214036,
+              -9.56716322301645,
+              -3.2589826794378496,
+              -15.980792607513195,
+              17.843953912461075,
+              -3.2318910578396753,
+              14.828070614720446,
+              5.713309915239506,
+              13.624790456293567,
+              0.01752028726079158
+            ]
+          ],
+          "richardson": [
+            9.567163173008453,
+            16.925919070790957,
+            -8.354035042213562,
+            -9.5671631730094,
+            -3.2589825719924193,
+            -15.980791219561752,
+            17.843954019906505,
+            -3.231889669895812,
+            14.828070523062328,
+            5.713309847043983,
+            13.624790328021655,
+            0.017520287876479634
+          ],
+          "analytic": [
+            9.567163173019718,
+            16.9259190707904,
+            -8.354035042214399,
+            -9.567163173019718,
+            -3.258982572002324,
+            -15.98079121956433,
+            17.84395401989528,
+            -3.231889669881129,
+            14.828070523064056,
+            5.713309847042732,
+            13.624790328020765,
+            0.0175202878764734
+          ],
+          "max_perturbed_equation_residual": 1.9471871206235264e-15
+        }
+      ]
+    }
+  ],
+  "output_order": [
+    "phi_mev",
+    "omega_mev",
+    "rho_mev",
+    "dirac_mass_mev",
+    "kinetic_mu_n_mev",
+    "kinetic_mu_p_mev",
+    "mu_n_mev",
+    "mu_p_mev",
+    "energy_density",
+    "pressure",
+    "free_energy_density",
+    "entropy_density"
+  ],
+  "second_derivative_probe": {
+    "supported": false,
+    "error_type": "ValueError",
+    "message": "Pure callbacks do not support JVP. Please use `jax.custom_jvp` to use callbacks while taking gradients."
+  },
+  "runtime_seconds": 44.55855154199526,
+  "environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+    "executable": "/Users/rossma/miniconda3/envs/junior_tools/bin/python",
+    "jax": "0.10.1",
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "platform": "macOS-26.7.1-arm64-arm-64bit",
+    "devices": [
+      "cpu:0"
+    ]
+  },
+  "frozen_sha256": {
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d"
+  }
+}

@@ -1,0 +1,343 @@
+[
+  {
+    "channel": "EC",
+    "E": 0.1,
+    "variation": {
+      "name": "fine",
+      "changes": {}
+    },
+    "path": "controls/control_00_0.json",
+    "complete": true
+  },
+  {
+    "channel": "EC",
+    "E": 0.1,
+    "variation": {
+      "name": "higher_coupled_orders",
+      "changes": {
+        "lepton_order": 16,
+        "angle_order": 20,
+        "energy_order": 20,
+        "phi_order": 8
+      }
+    },
+    "path": "controls/control_00_1.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 2.6645352591003792e-15,
+      "true_chi": 1.776356839400252e-15
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "EC",
+    "E": 30.0,
+    "variation": {
+      "name": "fine",
+      "changes": {}
+    },
+    "path": "controls/control_01_0.json",
+    "complete": true
+  },
+  {
+    "channel": "EC",
+    "E": 30.0,
+    "variation": {
+      "name": "higher_coupled_orders",
+      "changes": {
+        "lepton_order": 16,
+        "angle_order": 20,
+        "energy_order": 20,
+        "phi_order": 8
+      }
+    },
+    "path": "controls/control_01_1.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 8.526512829120839e-14,
+      "true_chi": 8.526512829120839e-14
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "EC",
+    "E": 55.0,
+    "variation": {
+      "name": "fine",
+      "changes": {}
+    },
+    "path": "controls/control_02_0.json",
+    "complete": true
+  },
+  {
+    "channel": "EC",
+    "E": 55.0,
+    "variation": {
+      "name": "higher_coupled_orders",
+      "changes": {
+        "lepton_order": 16,
+        "angle_order": 20,
+        "energy_order": 20,
+        "phi_order": 8
+      }
+    },
+    "path": "controls/control_02_1.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 0.0,
+      "true_chi": 1.776356839400252e-15
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "PC",
+    "E": 0.1,
+    "variation": {
+      "name": "fine",
+      "changes": {}
+    },
+    "path": "controls/control_03_0.json",
+    "complete": false,
+    "error": {
+      "type": "ArithmeticError",
+      "message": "Final positive-energy baryon shell unresolved"
+    },
+    "passed": false
+  },
+  {
+    "channel": "PC",
+    "E": 0.1,
+    "variation": {
+      "name": "higher_coupled_orders",
+      "changes": {
+        "lepton_order": 16,
+        "angle_order": 20,
+        "energy_order": 20,
+        "phi_order": 8
+      }
+    },
+    "path": "controls/control_03_1.json",
+    "complete": false,
+    "error": {
+      "type": "ArithmeticError",
+      "message": "Final positive-energy baryon shell unresolved"
+    },
+    "passed": false
+  },
+  {
+    "channel": "PC",
+    "E": 30.0,
+    "variation": {
+      "name": "fine",
+      "changes": {}
+    },
+    "path": "controls/control_04_0.json",
+    "complete": true
+  },
+  {
+    "channel": "PC",
+    "E": 30.0,
+    "variation": {
+      "name": "higher_coupled_orders",
+      "changes": {
+        "lepton_order": 16,
+        "angle_order": 20,
+        "energy_order": 20,
+        "phi_order": 8
+      }
+    },
+    "path": "controls/control_04_1.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 1.0480505352462027e-13,
+      "true_chi": 1.0480505352462027e-13
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "PC",
+    "E": 55.0,
+    "variation": {
+      "name": "fine",
+      "changes": {}
+    },
+    "path": "controls/control_05_0.json",
+    "complete": true
+  },
+  {
+    "channel": "PC",
+    "E": 55.0,
+    "variation": {
+      "name": "higher_coupled_orders",
+      "changes": {
+        "lepton_order": 16,
+        "angle_order": 20,
+        "energy_order": 20,
+        "phi_order": 8
+      }
+    },
+    "path": "controls/control_05_1.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 0.0,
+      "true_chi": 0.0
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 0.01,
+    "variation": {
+      "name": "fine",
+      "changes": {}
+    },
+    "path": "controls/control_06_0.json",
+    "complete": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 0.01,
+    "variation": {
+      "name": "higher_coupled_orders",
+      "changes": {
+        "parent_order": 16,
+        "cone_order": 20,
+        "electron_order": 20,
+        "decay_phi_order": 14
+      }
+    },
+    "path": "controls/control_06_1.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 3.552713678800507e-15,
+      "true_chi": 7.105427357601027e-15
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 1.2,
+    "variation": {
+      "name": "fine",
+      "changes": {}
+    },
+    "path": "controls/control_07_0.json",
+    "complete": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 1.2,
+    "variation": {
+      "name": "higher_coupled_orders",
+      "changes": {
+        "parent_order": 16,
+        "cone_order": 20,
+        "electron_order": 20,
+        "decay_phi_order": 14
+      }
+    },
+    "path": "controls/control_07_1.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 9.93795591584601e-07,
+      "true_chi": 9.9379560579547e-07
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "EC",
+    "E": 0.1,
+    "variation": {
+      "name": "isolated_inner_tail90",
+      "changes": {
+        "tail": 90.0
+      }
+    },
+    "path": "controls/control_08_0.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 3.5527136788004946e-15,
+      "true_chi": 5.329070518200737e-15
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "EC",
+    "E": 55.0,
+    "variation": {
+      "name": "isolated_outer_tail50",
+      "changes": {
+        "outer_tail": 50.0
+      }
+    },
+    "path": "controls/control_09_0.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 0.0,
+      "true_chi": 0.0
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "PC",
+    "E": 0.1,
+    "variation": {
+      "name": "isolated_inner_tail90",
+      "changes": {
+        "tail": 90.0
+      }
+    },
+    "path": "controls/control_10_0.json",
+    "complete": false,
+    "error": {
+      "type": "ArithmeticError",
+      "message": "Final positive-energy baryon shell unresolved"
+    },
+    "passed": false
+  },
+  {
+    "channel": "PC",
+    "E": 55.0,
+    "variation": {
+      "name": "isolated_outer_tail50",
+      "changes": {
+        "outer_tail": 50.0
+      }
+    },
+    "path": "controls/control_11_0.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 0.0,
+      "true_chi": 0.0
+    },
+    "gate": 3e-06,
+    "passed": true
+  },
+  {
+    "channel": "NEUTRON_DECAY",
+    "E": 1.2,
+    "variation": {
+      "name": "isolated_parent_tail90",
+      "changes": {
+        "tail": 90.0
+      }
+    },
+    "path": "controls/control_12_0.json",
+    "complete": true,
+    "relative_changes": {
+      "j": 0.00022377617918348388,
+      "true_chi": 0.00022377617918348388
+    },
+    "gate": 3e-06,
+    "passed": false
+  }
+]

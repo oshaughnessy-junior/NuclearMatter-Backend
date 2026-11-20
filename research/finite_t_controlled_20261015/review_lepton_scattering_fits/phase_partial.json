@@ -1,0 +1,38 @@
+{
+  "rows": [
+    {
+      "E": 8.19,
+      "moments": {
+        "rate": 10.228509438067874,
+        "transport_rate": 7.272445363402205,
+        "outgoing_energy_moment": 83.42531676854074,
+        "neutrino_energy_change": -0.34617552923498546
+      },
+      "controls": {
+        "order": 18,
+        "angle": 24,
+        "upper": 100.0,
+        "lower": 0.0,
+        "tail": 65.0
+      },
+      "seconds": 0.46181133412756026
+    },
+    {
+      "E": 8.19,
+      "moments": {
+        "rate": 10.228509446391445,
+        "transport_rate": 7.272445362122455,
+        "outgoing_energy_moment": 83.42530997919589,
+        "neutrino_energy_change": -0.3461823867499978
+      },
+      "controls": {
+        "order": 26,
+        "angle": 36,
+        "upper": 140.0,
+        "lower": 0.0,
+        "tail": 90.0
+      },
+      "seconds": 1.0973869578447193
+    }
+  ]
+}

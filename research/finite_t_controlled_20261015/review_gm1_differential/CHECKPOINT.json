@@ -1,0 +1,24 @@
+{
+  "status": "ACCEPT_SELECTED_DIFFERENTIAL_PRESCRIPTION_EXTERNAL_GM1_FORWARD_OPEN",
+  "checks": 35,
+  "failed": 0,
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "sha256": {
+    "review_gm1_differential/SOURCES.json": "37d5f49f5dc597f38736df57a452444fa2b1db6b82eb9f84ec5a9028eae84d28",
+    "review_gm1_differential/results.json": "3f723362837913fc786753f7f9de54fcdd3664bf78eaaa35c2d2c1385b1ae975",
+    "review_gm1_differential/probe.py": "fd7c990cf05246a4d901f9bae1026c4e59744b72c50d16eec0a10928072c25a6",
+    "review_gm1_differential/REVIEW.md": "191f1ad77ac12d68fb2e2884bfc7e020b2900528a017ff3f9cce8e4514bf8b1e",
+    "gm1_differential_response/adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  }
+}

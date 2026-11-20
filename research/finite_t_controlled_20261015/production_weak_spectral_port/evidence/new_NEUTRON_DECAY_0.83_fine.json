@@ -1,0 +1,67 @@
+{
+  "name": "new_NEUTRON_DECAY_0.83_fine",
+  "result": {
+    "channel": "NEUTRON_DECAY",
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "energy": 0.83,
+    "j": {
+      "value": 0.0005581834678717144,
+      "log": -7.490822854155326,
+      "support": "positive_support",
+      "reason": "represented"
+    },
+    "true_chi": {
+      "value": 0.0002074739146003905,
+      "log": -8.480504938965236,
+      "support": "positive_support",
+      "reason": "represented"
+    },
+    "controls": {
+      "lepton_order": 12,
+      "angle_order": 16,
+      "energy_order": 16,
+      "phi_order": 6,
+      "tail": 70.0,
+      "outer_tail": 40.0,
+      "parent_order": 12,
+      "cone_order": 16,
+      "electron_order": 16,
+      "decay_phi_order": 10,
+      "budget_seconds": 110.0
+    },
+    "geometry": [
+      "conditional lab E; ep pair; theta cone map",
+      [
+        55.99465316822382,
+        61.30466280863145,
+        122.6093256172629,
+        214.56631983021006,
+        306.52331404315726,
+        429.1326396604201,
+        535.0518624081506
+      ],
+      55.99465316822382,
+      0.7820077025790402,
+      184320,
+      4.440892098500626e-16
+    ],
+    "differential_coordinates": null,
+    "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+    "complete": true,
+    "units": "s^-1 per occupation"
+  },
+  "KMS": 4.440892098500626e-15,
+  "relaxation": {
+    "value": 0.0007656573824721047,
+    "log": -7.174775769651841,
+    "support": "positive_support",
+    "reason": "represented"
+  },
+  "seconds": 0.37169358413666487,
+  "source": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/weak_reference.py"
+}

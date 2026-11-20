@@ -1,0 +1,41 @@
+{
+  "status": "accepted_selected_fine_log_interface_only",
+  "utc": "2026-10-15T16:04:50.892180+00:00",
+  "independent_checks": 55,
+  "all_passed": true,
+  "original_coarse_failures_still_failed": [
+    {
+      "name": "cold_repair comparison0 gain_s",
+      "error": 9.141736642170883e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "cold_repair comparison1 gain_s",
+      "error": 3.481047973108442e-05,
+      "tolerance": 3e-05,
+      "passed": false
+    }
+  ],
+  "author_source_hashes_match": {
+    "nc_log_gain/log_gain.py": true,
+    "nc_continuum_grid/redistribution.py": true,
+    "neutral_current/free_nc.py": true,
+    "response_reference/free_density_response.py": true,
+    "review_nc_continuum/overflow_log_evidence.json": true,
+    "review_nc_continuum/refined_results.json": true
+  },
+  "quota_used_percent": 9,
+  "quota_reset": 1792652325,
+  "files_sha256": {
+    "REVIEW.md": "8e6b21887f7018f03935281913d95c5bd29319d4183bd1520a8bf7a73820f443",
+    "probe.py": "1b2ffbd04b648ae0a1eef21d2ee014d993e2225931394f9e3dd0d2feb63fc6f8",
+    "results.json": "2a0f9868ddacb086fb73cdab698e9a38030097f1cbe6d59aeaf9081212e67289"
+  },
+  "limits": [
+    "oldAPIoverflow still fails",
+    "coarse gain grids remain failed",
+    "finite cutoff not infinite tail bound",
+    "no broadcold/globalfluidtransport qualification"
+  ]
+}

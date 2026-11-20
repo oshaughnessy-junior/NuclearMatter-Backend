@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "False E141.3 own spinor vs source invariants",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "False E141.3 Lorentz invariance",
+      "error": 0.0,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "False E141.3 k boost inversion",
+      "error": 4.588170121829124e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "False E141.3 pa boost inversion",
+      "error": 2.3992198322065175e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "False E141.3 l boost inversion",
+      "error": 2.182366977072367e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "False E141.3 pb boost inversion",
+      "error": 1.2076919825910937e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "False E208.1 own spinor vs source invariants",
+      "error": -7.771561172376096e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "False E208.1 Lorentz invariance",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "False E208.1 k boost inversion",
+      "error": 1.640615759264592e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "False E208.1 pa boost inversion",
+      "error": 3.569808413482772e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "False E208.1 l boost inversion",
+      "error": 3.1710107358069504e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "False E208.1 pb boost inversion",
+      "error": 2.394966891900134e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "True E141.3 own spinor vs source invariants",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "True E141.3 Lorentz invariance",
+      "error": -4.440892098500626e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "True E141.3 k boost inversion",
+      "error": 3.4416759436994662e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "True E141.3 pa boost inversion",
+      "error": 2.4024768884053636e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "True E141.3 l boost inversion",
+      "error": 1.1106375794010524e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "True E141.3 pb boost inversion",
+      "error": 3.6193209434588483e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "True E208.1 own spinor vs source invariants",
+      "error": 6.661338147750939e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "True E208.1 Lorentz invariance",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "True E208.1 k boost inversion",
+      "error": 3.281925678894254e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "True E208.1 pa boost inversion",
+      "error": 3.5745919191426017e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "True E208.1 l boost inversion",
+      "error": 1.605060346151541e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "True E208.1 pb boost inversion",
+      "error": 1.1963885778435822e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "anti": false,
+      "E": 141.3,
+      "cosine": -0.37,
+      "spinor_amplitude": 2.3734884720095234e-10,
+      "source_invariant": 2.3734884720095234e-10,
+      "boosted_amplitude": 2.3734884720095234e-10
+    },
+    {
+      "anti": false,
+      "E": 208.1,
+      "cosine": 0.61,
+      "spinor_amplitude": 4.525255752497538e-10,
+      "source_invariant": 4.525255752497542e-10,
+      "boosted_amplitude": 4.525255752497542e-10
+    },
+    {
+      "anti": true,
+      "E": 141.3,
+      "cosine": -0.37,
+      "spinor_amplitude": 8.619589990672726e-11,
+      "source_invariant": 8.619589990672728e-11,
+      "boosted_amplitude": 8.619589990672723e-11
+    },
+    {
+      "anti": true,
+      "E": 208.1,
+      "cosine": 0.61,
+      "spinor_amplitude": 2.7563661866922685e-10,
+      "source_invariant": 2.756366186692267e-10,
+      "boosted_amplitude": 2.7563661866922674e-10
+    }
+  ]
+}

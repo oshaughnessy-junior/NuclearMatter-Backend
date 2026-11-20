@@ -1,0 +1,1736 @@
+{
+  "checks": [
+    {
+      "name": "point0_False_V0_scalar_reference",
+      "error": 5.735366656408538e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_V0_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_V0_in_exchange",
+      "error": 1.220478371609415e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_V0_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_V0_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_V0_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vx_scalar_reference",
+      "error": 2.12377340982619e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vx_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vx_in_exchange",
+      "error": 6.211575116685791e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vx_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vx_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vx_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vy_scalar_reference",
+      "error": 1.8137986830551275e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vy_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vy_in_exchange",
+      "error": 6.1978559553670665e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vy_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vy_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vy_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vz_scalar_reference",
+      "error": 2.2837801811198477e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vz_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vz_in_exchange",
+      "error": 6.982071073087044e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vz_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vz_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Vz_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ax_scalar_reference",
+      "error": 2.3666442533360487e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ax_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ax_in_exchange",
+      "error": 1.4586138428386332e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ax_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ax_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ax_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ay_scalar_reference",
+      "error": 2.8836809839968574e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ay_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ay_in_exchange",
+      "error": 2.1205584512162728e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ay_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ay_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Ay_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Az_scalar_reference",
+      "error": 1.8680548360407774e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Az_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Az_in_exchange",
+      "error": 6.768008719134964e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Az_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Az_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_False_Az_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_V0_scalar_reference",
+      "error": 5.735366656408538e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_V0_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_V0_in_exchange",
+      "error": 1.220478371609415e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_V0_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_V0_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_V0_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vx_scalar_reference",
+      "error": 2.12377340982619e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vx_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vx_in_exchange",
+      "error": 6.211575116685791e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vx_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vx_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vx_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vy_scalar_reference",
+      "error": 1.8137986830551275e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vy_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vy_in_exchange",
+      "error": 6.1978559553670665e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vy_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vy_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vy_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vz_scalar_reference",
+      "error": 2.2837801811198477e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vz_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vz_in_exchange",
+      "error": 6.982071073087044e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vz_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vz_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Vz_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ax_scalar_reference",
+      "error": 2.3666442533360487e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ax_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ax_in_exchange",
+      "error": 1.4586138428386332e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ax_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ax_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ax_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ay_scalar_reference",
+      "error": 2.8836809839968574e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ay_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ay_in_exchange",
+      "error": 2.1205584512162728e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ay_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ay_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Ay_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Az_scalar_reference",
+      "error": 1.8680548360407774e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Az_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Az_in_exchange",
+      "error": 6.768008719134964e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Az_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Az_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_True_Az_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_exact_vector_divergence_defect",
+      "error": 6.05923460188919e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_finiteQ_defect_NOTzero",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "point0_V0_dimensional_scale",
+      "error": 8.569754890933211e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_Vx_dimensional_scale",
+      "error": 2.1228295311778762e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_Ax_dimensional_scale",
+      "error": 3.5490041991001e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point0_Az_dimensional_scale",
+      "error": 4.044826699156605e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_V0_scalar_reference",
+      "error": 7.713806480648727e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_V0_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_V0_in_exchange",
+      "error": 2.3854863255369914e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_V0_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_V0_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_V0_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vx_scalar_reference",
+      "error": 2.513952880802615e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vx_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vx_in_exchange",
+      "error": 3.714141694227376e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vx_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vx_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vx_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vy_scalar_reference",
+      "error": 2.1135620581023774e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vy_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vy_in_exchange",
+      "error": 3.5938072274903356e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vy_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vy_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vy_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vz_scalar_reference",
+      "error": 2.1415179150196877e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vz_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vz_in_exchange",
+      "error": 2.6690960631361763e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vz_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vz_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Vz_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ax_scalar_reference",
+      "error": 4.488517180437107e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ax_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ax_in_exchange",
+      "error": 2.046944753181825e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ax_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ax_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ax_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ay_scalar_reference",
+      "error": 4.076491572731791e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ay_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ay_in_exchange",
+      "error": 1.2248854802680741e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ay_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ay_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Ay_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Az_scalar_reference",
+      "error": 2.723242454417376e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Az_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Az_in_exchange",
+      "error": 7.028476970644743e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Az_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Az_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_False_Az_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_V0_scalar_reference",
+      "error": 7.713806480648727e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_V0_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_V0_in_exchange",
+      "error": 2.3854863255369914e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_V0_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_V0_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_V0_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vx_scalar_reference",
+      "error": 2.513952880802615e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vx_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vx_in_exchange",
+      "error": 3.714141694227376e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vx_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vx_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vx_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vy_scalar_reference",
+      "error": 2.1135620581023774e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vy_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vy_in_exchange",
+      "error": 3.5938072274903356e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vy_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vy_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vy_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vz_scalar_reference",
+      "error": 2.1415179150196877e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vz_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vz_in_exchange",
+      "error": 2.6690960631361763e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vz_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vz_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Vz_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ax_scalar_reference",
+      "error": 4.488517180437107e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ax_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ax_in_exchange",
+      "error": 2.046944753181825e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ax_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ax_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ax_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ay_scalar_reference",
+      "error": 4.076491572731791e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ay_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ay_in_exchange",
+      "error": 1.2248854802680741e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ay_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ay_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Ay_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Az_scalar_reference",
+      "error": 2.723242454417376e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Az_out_exchange",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Az_in_exchange",
+      "error": 7.028476970644743e-18,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Az_forbidden_nn_pp",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Az_forbidden_np_np",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_True_Az_forbidden_pp_nn",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_exact_vector_divergence_defect",
+      "error": 5.082474942133169e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_finiteQ_defect_NOTzero",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "point1_V0_dimensional_scale",
+      "error": 3.4184882290056653e-15,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_Vx_dimensional_scale",
+      "error": 9.368932480352359e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_Ax_dimensional_scale",
+      "error": 3.541574006867465e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "point1_Az_dimensional_scale",
+      "error": 2.1786694173046583e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "strong_isospin_scalar_total_charge_commutator",
+      "error": 5.274636742435503e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "soft_vector_zero",
+      "error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "soft_axial_x",
+      "error": 6.03983210051957e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "soft_axial_x_nonzero",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "soft_axial_y",
+      "error": 1.3810102032068076e-16,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "soft_axial_y_nonzero",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "soft_axial_z",
+      "error": 4.932717656985465e-17,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "soft_axial_z_nonzero",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "reject_pole",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_gap_zero",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_gap_nan",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_omega_nan",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_bad_energy",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_bad_momentum",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_bad_component",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_coupling_inf",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_raising_nan",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_complex_momentum",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "reject_overflow_invariant",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "passed": 199,
+  "failed": 0,
+  "seconds": 0.06717908289283514,
+  "points": [
+    {
+      "p": [
+        [
+          0.0,
+          0.0,
+          100.0
+        ],
+        [
+          0.0,
+          0.0,
+          -100.0
+        ],
+        [
+          24.514740456794033,
+          59.76004235126355,
+          -35.24530189446952
+        ],
+        [
+          -26.514740456794033,
+          -58.76004235126355,
+          32.24530189446952
+        ]
+      ],
+      "omega": 5.0,
+      "Q": [
+        2.0,
+        -1.0,
+        3.0
+      ],
+      "denominators": [
+        -4.687965921192758,
+        -5.326943556975506,
+        5.1165777072642005,
+        4.8834222927358
+      ],
+      "channels": {
+        "V0": {
+          "spin_sum_abs2_MeV^-6": 2.2058186354973133e-12,
+          "matrix_real": [
+            [
+              6.301037903031723e-07,
+              -2.8077312197204266e-07,
+              -2.8077312197204266e-07,
+              -4.5344966263382196e-07
+            ],
+            [
+              -2.8077312197204266e-07,
+              -1.5041424835205557e-07,
+              1.1295156571644882e-07,
+              2.8077312197204266e-07
+            ],
+            [
+              -2.8077312197204266e-07,
+              1.1295156571644882e-07,
+              -1.5041424835205557e-07,
+              2.8077312197204266e-07
+            ],
+            [
+              -4.5344966263382196e-07,
+              2.8077312197204266e-07,
+              2.8077312197204266e-07,
+              6.301037903031723e-07
+            ]
+          ],
+          "matrix_imag": [
+            [
+              0.0,
+              -8.274124908694972e-09,
+              -8.274124908694972e-09,
+              -3.8635657582946034e-07
+            ],
+            [
+              8.274124908694972e-09,
+              -3.768371792960019e-23,
+              -2.1392014428239643e-23,
+              8.274124908694972e-09
+            ],
+            [
+              8.274124908694972e-09,
+              2.1392014428239643e-23,
+              3.768371792960019e-23,
+              8.274124908694972e-09
+            ],
+            [
+              3.8635657582946034e-07,
+              -8.274124908694972e-09,
+              -8.274124908694972e-09,
+              0.0
+            ]
+          ]
+        },
+        "Ax": {
+          "spin_sum_abs2_MeV^-6": 1.2775351503785154e-09,
+          "matrix_real": [
+            [
+              3.537741336847738e-07,
+              4.848695280751804e-06,
+              -1.387267256077414e-05,
+              3.995250803673691e-06
+            ],
+            [
+              1.3608145344283926e-06,
+              -2.8151195375550704e-06,
+              -8.263571324338475e-07,
+              7.487781524851424e-06
+            ],
+            [
+              7.487781524851424e-06,
+              8.263571324338475e-07,
+              2.8151195375550704e-06,
+              1.3608145344283926e-06
+            ],
+            [
+              -3.995250803673691e-06,
+              -1.387267256077414e-05,
+              4.848695280751804e-06,
+              -3.537741336847738e-07
+            ]
+          ],
+          "matrix_imag": [
+            [
+              -8.866470542150313e-06,
+              3.579275204953206e-06,
+              -3.5640243832425285e-06,
+              -8.866470542150313e-06
+            ],
+            [
+              -3.045660537807428e-23,
+              8.866470542150313e-06,
+              8.866470542150313e-06,
+              4.715584638344425e-07
+            ],
+            [
+              -4.715584638344425e-07,
+              8.866470542150313e-06,
+              8.866470542150313e-06,
+              3.045660537807428e-23
+            ],
+            [
+              -8.866470542150313e-06,
+              3.5640243832425285e-06,
+              -3.579275204953206e-06,
+              -8.866470542150313e-06
+            ]
+          ]
+        },
+        "Ay": {
+          "spin_sum_abs2_MeV^-6": 6.3947592082444e-10,
+          "matrix_real": [
+            [
+              -1.0425397384954928e-08,
+              -3.579275204953206e-06,
+              3.5640243832425285e-06,
+              -8.866470542150313e-06
+            ],
+            [
+              3.045660537807428e-23,
+              -6.681186261571367e-06,
+              -2.1957096779639e-06,
+              -4.715584638344425e-07
+            ],
+            [
+              -4.715584638344425e-07,
+              2.1957096779639e-06,
+              6.681186261571367e-06,
+              3.045660537807428e-23
+            ],
+            [
+              8.866470542150313e-06,
+              3.5640243832425285e-06,
+              -3.579275204953206e-06,
+              1.0425397384954928e-08
+            ]
+          ],
+          "matrix_imag": [
+            [
+              3.995250803673691e-06,
+              1.8532151270141042e-06,
+              7.357370918716427e-06,
+              -3.995250803673691e-06
+            ],
+            [
+              1.3608145344283926e-06,
+              -3.995250803673691e-06,
+              -3.995250803673691e-06,
+              -6.531697140722392e-06
+            ],
+            [
+              6.531697140722392e-06,
+              -3.995250803673691e-06,
+              -3.995250803673691e-06,
+              -1.3608145344283926e-06
+            ],
+            [
+              -3.995250803673691e-06,
+              -7.357370918716427e-06,
+              -1.8532151270141042e-06,
+              3.995250803673691e-06
+            ]
+          ]
+        },
+        "Az": {
+          "spin_sum_abs2_MeV^-6": 1.1154414994895908e-09,
+          "matrix_real": [
+            [
+              -7.939307757819966e-07,
+              -8.263571324338475e-07,
+              -2.8151195375550704e-06,
+              3.8473780921041795e-07
+            ],
+            [
+              3.995250803673691e-06,
+              1.936259111594661e-05,
+              -5.390315430493654e-06,
+              3.537741336847738e-07
+            ],
+            [
+              3.537741336847738e-07,
+              5.390315430493654e-06,
+              -1.936259111594661e-05,
+              3.995250803673691e-06
+            ],
+            [
+              -3.8473780921041795e-07,
+              -2.8151195375550704e-06,
+              -8.263571324338475e-07,
+              7.939307757819966e-07
+            ]
+          ],
+          "matrix_imag": [
+            [
+              0.0,
+              2.1957096779639e-06,
+              6.681186261571367e-06,
+              4.5630764212376524e-07
+            ],
+            [
+              8.866470542150313e-06,
+              1.8420121879297093e-23,
+              1.1604354787488151e-23,
+              1.0425397384954928e-08
+            ],
+            [
+              -1.0425397384954928e-08,
+              1.1604354787488151e-23,
+              1.8420121879297093e-23,
+              -8.866470542150313e-06
+            ],
+            [
+              4.5630764212376524e-07,
+              -6.681186261571367e-06,
+              -2.1957096779639e-06,
+              0.0
+            ]
+          ]
+        }
+      },
+      "vector_divergence_max_MeV^-2": 2.3764651889916117e-06
+    },
+    {
+      "p": [
+        [
+          0.0,
+          0.0,
+          135.0
+        ],
+        [
+          0.0,
+          0.0,
+          -135.0
+        ],
+        [
+          80.88000794396011,
+          -33.23147853532856,
+          57.55902225374106
+        ],
+        [
+          -77.88000794396011,
+          29.231478535328566,
+          -59.55902225374106
+        ]
+      ],
+      "omega": 8.0,
+      "Q": [
+        -3.0,
+        4.0,
+        2.0
+      ],
+      "denominators": [
+        -7.72790202342918,
+        -8.302981895633653,
+        8.261925339154113,
+        7.738074660845887
+      ],
+      "channels": {
+        "V0": {
+          "spin_sum_abs2_MeV^-6": 2.4959987969954013e-12,
+          "matrix_real": [
+            [
+              4.2301771118842925e-07,
+              2.9959760457083313e-07,
+              2.9959760457083313e-07,
+              1.7663488623217496e-07
+            ],
+            [
+              2.9959760457083313e-07,
+              2.1663510449494553e-07,
+              -4.823596326419454e-07,
+              -2.9959760457083313e-07
+            ],
+            [
+              2.9959760457083313e-07,
+              -4.823596326419454e-07,
+              2.1663510449494553e-07,
+              -2.9959760457083313e-07
+            ],
+            [
+              1.7663488623217496e-07,
+              -2.9959760457083313e-07,
+              -2.9959760457083313e-07,
+              4.2301771118842925e-07
+            ]
+          ],
+          "matrix_imag": [
+            [
+              0.0,
+              3.1525635383677965e-07,
+              3.1525635383677965e-07,
+              4.089956706584042e-08
+            ],
+            [
+              -3.1525635383677965e-07,
+              3.6197655808857425e-23,
+              7.160231978858313e-23,
+              -3.1525635383677965e-07
+            ],
+            [
+              -3.1525635383677965e-07,
+              -7.160231978858313e-23,
+              -3.6197655808857425e-23,
+              -3.1525635383677965e-07
+            ],
+            [
+              -4.089956706584042e-08,
+              3.1525635383677965e-07,
+              3.1525635383677965e-07,
+              0.0
+            ]
+          ]
+        },
+        "Ax": {
+          "spin_sum_abs2_MeV^-6": 3.4284997007834226e-10,
+          "matrix_real": [
+            [
+              -3.7749298175924946e-07,
+              4.714470337546296e-06,
+              1.5145233720216524e-06,
+              6.919744696832929e-06
+            ],
+            [
+              -1.8374960608930705e-06,
+              -2.4596644291758868e-06,
+              -4.837573249416292e-06,
+              -4.81224701595962e-06
+            ],
+            [
+              -4.81224701595962e-06,
+              4.837573249416292e-06,
+              2.4596644291758868e-06,
+              -1.8374960608930705e-06
+            ],
+            [
+              -6.919744696832929e-06,
+              1.5145233720216524e-06,
+              4.714470337546296e-06,
+              3.7749298175924946e-07
+            ]
+          ],
+          "matrix_imag": [
+            [
+              2.6010209786537415e-06,
+              -3.1081287837338836e-06,
+              2.3944200812837753e-06,
+              2.6010209786537415e-06
+            ],
+            [
+              -5.66224197130831e-23,
+              -2.6010209786537415e-06,
+              -2.6010209786537415e-06,
+              6.621752479471493e-07
+            ],
+            [
+              -6.621752479471493e-07,
+              -2.6010209786537415e-06,
+              -2.6010209786537415e-06,
+              5.66224197130831e-23
+            ],
+            [
+              2.6010209786537415e-06,
+              -2.3944200812837753e-06,
+              3.1081287837338836e-06,
+              2.6010209786537415e-06
+            ]
+          ]
+        },
+        "Ay": {
+          "spin_sum_abs2_MeV^-6": 8.181613598684159e-10,
+          "matrix_real": [
+            [
+              3.9722300583434217e-07,
+              3.1081287837338836e-06,
+              -2.3944200812837753e-06,
+              2.6010209786537415e-06
+            ],
+            [
+              5.66224197130831e-23,
+              1.0327312285092727e-06,
+              1.9655127559788112e-06,
+              -6.621752479471493e-07
+            ],
+            [
+              -6.621752479471493e-07,
+              -1.9655127559788112e-06,
+              -1.0327312285092727e-06,
+              5.66224197130831e-23
+            ],
+            [
+              -2.6010209786537415e-06,
+              -2.3944200812837753e-06,
+              3.1081287837338836e-06,
+              -3.9722300583434217e-07
+            ]
+          ],
+          "matrix_imag": [
+            [
+              6.919744696832929e-06,
+              -1.1640105108966017e-05,
+              3.6264352286372487e-06,
+              -6.919744696832929e-06
+            ],
+            [
+              -1.8374960608930705e-06,
+              -6.919744696832929e-06,
+              -6.919744696832929e-06,
+              6.151803273415358e-06
+            ],
+            [
+              -6.151803273415358e-06,
+              -6.919744696832929e-06,
+              -6.919744696832929e-06,
+              1.8374960608930705e-06
+            ],
+            [
+              -6.919744696832929e-06,
+              -3.6264352286372487e-06,
+              1.1640105108966017e-05,
+              6.919744696832929e-06
+            ]
+          ]
+        },
+        "Az": {
+          "spin_sum_abs2_MeV^-6": 7.077966887401042e-10,
+          "matrix_real": [
+            [
+              -5.330023160974221e-07,
+              -4.837573249416292e-06,
+              -2.4596644291758868e-06,
+              1.5621162141082796e-06
+            ],
+            [
+              6.919744696832929e-06,
+              4.253056280422216e-06,
+              -1.5551919475262416e-05,
+              -3.7749298175924946e-07
+            ],
+            [
+              -3.7749298175924946e-07,
+              1.5551919475262416e-05,
+              -4.253056280422216e-06,
+              6.919744696832929e-06
+            ],
+            [
+              -1.5621162141082796e-06,
+              -2.4596644291758868e-06,
+              -4.837573249416292e-06,
+              5.330023160974221e-07
+            ]
+          ],
+          "matrix_imag": [
+            [
+              0.0,
+              -1.9655127559788112e-06,
+              -1.0327312285092727e-06,
+              1.3758839503972574e-06
+            ],
+            [
+              -2.6010209786537415e-06,
+              1.797325825424195e-23,
+              4.044773391571687e-23,
+              -3.9722300583434217e-07
+            ],
+            [
+              3.9722300583434217e-07,
+              4.044773391571687e-23,
+              1.797325825424195e-23,
+              2.6010209786537415e-06
+            ],
+            [
+              1.3758839503972574e-06,
+              1.0327312285092727e-06,
+              1.9655127559788112e-06,
+              0.0
+            ]
+          ]
+        }
+      },
+      "vector_divergence_max_MeV^-2": 3.499809068389548e-06
+    }
+  ],
+  "controls": {
+    "pole": "External propagator excluded: |D| <= pole_gap; no width supplied",
+    "gap_zero": "Finite omega and positive finite exclusion gap required",
+    "gap_nan": "Finite omega and positive finite exclusion gap required",
+    "omega_nan": "Finite omega and positive finite exclusion gap required",
+    "bad_energy": "Common-mass NR energy not conserved",
+    "bad_momentum": "Outgoing weak momentum not conserved",
+    "bad_component": "Unsupported current component",
+    "coupling_inf": "Finite weak couplings required",
+    "raising_nan": "raising must be Boolean",
+    "complex_momentum": "Real momenta required",
+    "overflow_invariant": "Nonrepresentable kinetic invariants"
+  },
+  "scope": "Algebra-only off-pole common-mass Born external legs; no completed MU current/rate",
+  "source_sha256": "372ae513793b7b2c359cdf57ed0566faec2af259e33683d4f52c68d882541484"
+}

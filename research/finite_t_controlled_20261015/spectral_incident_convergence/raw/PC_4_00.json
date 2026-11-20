@@ -1,0 +1,369 @@
+{
+  "kind": "actual detailed spectral nodes; candidate qualification pending",
+  "channel": "PC",
+  "order": 4,
+  "first_index": 0,
+  "last_index_exclusive": 4,
+  "rule": {
+    "nodes": [
+      2.277727376811895,
+      3.3200379128302875,
+      4.679962087169713,
+      5.722272623188105
+    ],
+    "weights": [
+      0.6957096902749069,
+      1.304290309725093,
+      1.304290309725093,
+      0.6957096902749069
+    ],
+    "lower": 2.0,
+    "upper": 6.0
+  },
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "controls": {
+    "lepton_order": 12,
+    "angle_order": 16,
+    "energy_order": 16,
+    "phi_order": 6,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 110.0
+  },
+  "source_pin_sha256": "1bdaa55b6364c82060077f39292a8d9f7700e873c28e307e9788d95556b8b49c",
+  "lock_sha256": "657ace7fcd48d712a7a961769400bed05a2a45bd9b47509a7131bae615740716",
+  "worker_sha256": "0037b1d910a57d818a9cc299dc0924543d6845f7f53ab626dfacb61a141a63fe",
+  "candidate_manifest_sha256": "18da0dfe7f52c8fea7c59d9fe7e1687b5893738c36cf836091587cff02406ad0",
+  "rows": [
+    {
+      "index": 0,
+      "energy": 2.277727376811895,
+      "weight": 0.6957096902749069,
+      "result": {
+        "channel": "PC",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 2.277727376811895,
+        "j": {
+          "value": 0.060232307003283886,
+          "log": -2.8095464094343576,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 0.04617278120873729,
+          "log": -3.075364805838314,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "El=ME+y\u00b2",
+          [
+            0.51099895069,
+            0.5523772308557666,
+            0.6895722399038937,
+            0.825536667991736,
+            0.840389088159819,
+            0.9123920524858322,
+            0.9843950168118454,
+            1.0563979811378585,
+            1.1284009454638717,
+            1.4164128027679241,
+            1.5536078118160512,
+            1.825536667991736,
+            1.848430588724003,
+            1.9843950168118454,
+            2.7124661606361604,
+            2.9843950168118454,
+            5.825536667991736,
+            6.984395016811845,
+            11.825536667991736,
+            12.984395016811845,
+            23.825536667991734,
+            24.984395016811845,
+            80.98439501681185
+          ],
+          "exact q-axis support",
+          4224,
+          0
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      },
+      "KMS_log_residual": -2.220446049250313e-15,
+      "seconds": 1.9204514999873936
+    },
+    {
+      "index": 1,
+      "energy": 3.3200379128302875,
+      "weight": 1.304290309725093,
+      "result": {
+        "channel": "PC",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 3.3200379128302875,
+        "j": {
+          "value": 0.19571829343705516,
+          "log": -1.6310789320093289,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 0.25265204314842055,
+          "log": -1.3757420604040878,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "El=ME+y\u00b2",
+          [
+            0.51099895069,
+            0.5570291940235232,
+            0.5637205007667472,
+            0.825536667991736,
+            1.0267055528303217,
+            1.2885217200553105,
+            1.2952130267985345,
+            1.782874710819726,
+            1.825536667991736,
+            1.9047901318250238,
+            2.0267055528303217,
+            2.1486209738356195,
+            2.2705363948409176,
+            2.7515067721188853,
+            2.758198078862109,
+            3.0267055528303217,
+            3.4896906048938963,
+            4.026705552830322,
+            4.952675656957471,
+            5.825536667991736,
+            8.026705552830322,
+            11.825536667991736,
+            14.026705552830322,
+            23.825536667991734,
+            26.02670555283032,
+            82.02670555283032
+          ],
+          "exact q-axis support",
+          4800,
+          0
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      },
+      "KMS_log_residual": -3.3306690738754696e-15,
+      "seconds": 2.081292040878907
+    },
+    {
+      "index": 2,
+      "energy": 4.679962087169713,
+      "weight": 1.304290309725093,
+      "result": {
+        "channel": "PC",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 4.679962087169713,
+        "j": {
+          "value": 0.3170769477351535,
+          "log": -1.1486107972259276,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 0.8079041623482814,
+          "log": -0.21331183845097446,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "El=ME+y\u00b2",
+          [
+            0.51099895069,
+            0.825536667991736,
+            0.9374460283811505,
+            1.1628110063908048,
+            1.386629727169634,
+            1.825536667991736,
+            2.0493553887705653,
+            2.2747203667802194,
+            2.386629727169634,
+            3.0159932737064956,
+            3.201311500438065,
+            3.386629727169634,
+            3.571947953901203,
+            3.7572661806327723,
+            4.2731741095493945,
+            4.386629727169634,
+            4.498539087559049,
+            5.386629727169634,
+            5.610448447948463,
+            5.825536667991736,
+            7.834267168727292,
+            9.386629727169634,
+            11.825536667991736,
+            15.386629727169634,
+            23.825536667991734,
+            27.386629727169634,
+            83.38662972716963
+          ],
+          "exact q-axis support",
+          4992,
+          0
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      },
+      "KMS_log_residual": -2.6645352591003757e-15,
+      "seconds": 2.1116217500530183
+    },
+    {
+      "index": 3,
+      "energy": 5.722272623188105,
+      "weight": 0.6957096902749069,
+      "result": {
+        "channel": "PC",
+        "bath": {
+          "T": 2.0,
+          "mu_n": 919.8287578100662,
+          "mu_p": 916.8449303084382,
+          "mu_e": 0.17446333200826397
+        },
+        "energy": 5.722272623188105,
+        "j": {
+          "value": 0.3400499851047829,
+          "log": -1.0786626571635107,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "true_chi": {
+          "value": 1.4590587990014987,
+          "log": 0.377791569620638,
+          "support": "positive_support",
+          "reason": "represented"
+        },
+        "controls": {
+          "lepton_order": 12,
+          "angle_order": 16,
+          "energy_order": 16,
+          "phi_order": 6,
+          "tail": 70.0,
+          "outer_tail": 40.0,
+          "parent_order": 12,
+          "cone_order": 16,
+          "electron_order": 16,
+          "decay_phi_order": 10,
+          "budget_seconds": 110.0
+        },
+        "geometry": [
+          "El=ME+y\u00b2",
+          [
+            0.51099895069,
+            0.825536667991736,
+            1.2274544316832394,
+            1.6251047358051034,
+            1.825536667991736,
+            2.4289402631881103,
+            2.629372195374743,
+            3.027022499496607,
+            3.4289402631881103,
+            3.961634341957609,
+            4.19528730257286,
+            4.42894026318811,
+            4.662593223803361,
+            4.896246184418612,
+            5.42894026318811,
+            5.43320772275775,
+            5.825536667991736,
+            5.830858026879614,
+            6.42894026318811,
+            7.232775790571117,
+            10.036611317954124,
+            10.42894026318811,
+            11.825536667991736,
+            16.42894026318811,
+            23.825536667991734,
+            28.42894026318811,
+            84.42894026318811
+          ],
+          "exact q-axis support",
+          4992,
+          0
+        ],
+        "differential_coordinates": null,
+        "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+        "complete": true,
+        "units": "s^-1 per occupation"
+      },
+      "KMS_log_residual": -2.220446049250313e-15,
+      "seconds": 2.112709959037602
+    }
+  ],
+  "complete": true,
+  "seconds": 8.232479040976614
+}

@@ -1,0 +1,10 @@
+from pathlib import Path
+import sys,json,time
+sys.dont_write_bytecode=True
+from kernel import *
+H=Path(__file__).parent
+m=eos.matter_state(.03,1e-12,.3,0.);bath=Bath.from_matter(m)
+d=differential(bath,.3,.993,0.,energy_order=8)
+print('EOS',m.neutron.density,m.proton.density,m.electron.net_density,'DIFF',d['j'],d['chi'])
+r=spectral(bath,.3,angle_order=6,lepton_order=8,energy_order=8,widths=9.)
+(H/'pilot.json').write_text(json.dumps(dict(matter=m.asdict(),spectrum=r),indent=2)+'\n');print(r['j'],r['chi'],r['runtime_seconds'])

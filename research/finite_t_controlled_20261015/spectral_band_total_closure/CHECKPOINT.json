@@ -1,0 +1,36 @@
+{
+  "frozen_utc": "2026-10-16T08:29:39.376720+00:00",
+  "status": "FROZEN; selected EC numerical agreement, PC incomplete and beta control failures; DIFFERENT review pending",
+  "manifest_sha256": "7c94c16b1d5824d76f0cd629a8d72c31975dce7b3c6884d50ef86f86d79d8dcb",
+  "report_sha256": "83acefd6b1930ce69511419435194b04b46f1f7472a2e1227071e113c1685cf0",
+  "analysis_sha256": "4c94bf9525f362d695f68b9833740519fbff3a38f19c34148a559d3063390073",
+  "canonical_sha256": "47a51d64fbdaab690173f389167c1f2e00ffd7d77fe07f9ab0d76d3fb1e2952d",
+  "lock_sha256": "cc7a622aa0cd4ea4afdffbbf719a146ff0cb807c49fd61b6b462cb2913685d90",
+  "source_pin_sha256": "576a9a2584a730bab076726cb968ac9d0cc696a741876b55bd3a9e86fe082f50",
+  "passed": 188,
+  "numeric_failed": 12,
+  "blocked": 6,
+  "counts": {
+    "EC": {
+      "jobs": 40,
+      "complete_jobs": 40,
+      "complete_coefficient_nodes": 160,
+      "incomplete_jobs": 0
+    },
+    "PC": {
+      "jobs": 2,
+      "complete_jobs": 0,
+      "complete_coefficient_nodes": 0,
+      "incomplete_jobs": 2
+    },
+    "NEUTRON_DECAY": {
+      "jobs": 40,
+      "complete_jobs": 40,
+      "complete_coefficient_nodes": 160,
+      "incomplete_jobs": 0
+    }
+  },
+  "source_pins_verified_unchanged": true,
+  "whole_moment_qualified": false,
+  "no_further_scientific_calls_planned": true
+}

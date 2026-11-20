@@ -1,0 +1,312 @@
+{
+  "source_sha256": {
+    "gm1_affinity_fit/holdout_results.json": "9f910bc26d3062f1868be46aafcd374efef4d93c3bdcc4d9e7df74d1adb7ef46",
+    "gm1_affinity_fit/coefficients.json": "1e03c7e192ab869018c2da575d613026f8be81d75ca7709f8b5de1d8ce59ea8b",
+    "gm1_affinity_fit/potential.py": "5996a98f69d76f56ab03e5c59361fc7e8b4a75c71d0a877936850c1785806be2",
+    "gm1_potential_fit/coefficients.json": "ecd8e2f44e54613f9a08678c47b0f982fcd779968d188ebd525032f1ad902234",
+    "gm1_potential_fit/potential.py": "9306f288b22a9bbd10af107f552cd276ba066f6620cfbb94c52433954a919df4"
+  },
+  "rows": [
+    {
+      "group": "density",
+      "n": 0.2563,
+      "T": 0.12,
+      "Y": 0.203,
+      "old_balance": 0.0044836876055275076,
+      "new_balance": 2.872938053555951e-06,
+      "old_delta_mu": 0.0005368398988139234,
+      "new_delta_mu": -3.447530616540462e-07
+    },
+    {
+      "group": "density",
+      "n": 0.2563,
+      "T": 0.77,
+      "Y": 0.203,
+      "old_balance": 0.0007025597964483557,
+      "new_balance": 6.819402236751957e-07,
+      "old_delta_mu": 0.0005407810999713547,
+      "new_delta_mu": -5.250941512713325e-07
+    },
+    {
+      "group": "density",
+      "n": 0.2563,
+      "T": 0.12,
+      "Y": 0.293,
+      "old_balance": 0.003382764569550446,
+      "new_balance": 1.4201152828639606e-06,
+      "old_delta_mu": 0.00040524670703234733,
+      "new_delta_mu": -1.7041395494743483e-07
+    },
+    {
+      "group": "density",
+      "n": 0.2563,
+      "T": 0.77,
+      "Y": 0.293,
+      "old_balance": 0.0005297340810989782,
+      "new_balance": 1.392578030884708e-07,
+      "old_delta_mu": 0.00040778724257961585,
+      "new_delta_mu": -1.0722851584432647e-07
+    },
+    {
+      "group": "density",
+      "n": 0.2598,
+      "T": 0.12,
+      "Y": 0.203,
+      "old_balance": 0.0032839464026268046,
+      "new_balance": 6.029434315727333e-06,
+      "old_delta_mu": 0.00039342792319985165,
+      "new_delta_mu": -7.235342991407379e-07
+    },
+    {
+      "group": "density",
+      "n": 0.2598,
+      "T": 0.77,
+      "Y": 0.203,
+      "old_balance": 0.0005170913443805191,
+      "new_balance": 1.5070237600783733e-06,
+      "old_delta_mu": 0.0003980574280149085,
+      "new_delta_mu": -1.1604091696426622e-06
+    },
+    {
+      "group": "density",
+      "n": 0.2598,
+      "T": 0.12,
+      "Y": 0.293,
+      "old_balance": 0.002579849491517928,
+      "new_balance": 5.092659982376491e-06,
+      "old_delta_mu": 0.00030918328707230103,
+      "new_delta_mu": -6.111207540016039e-07
+    },
+    {
+      "group": "density",
+      "n": 0.2598,
+      "T": 0.77,
+      "Y": 0.293,
+      "old_balance": 0.00040543454966192793,
+      "new_balance": 5.915585070108294e-07,
+      "old_delta_mu": 0.0003121213351278129,
+      "new_delta_mu": -4.5550018512585666e-07
+    },
+    {
+      "group": "composition",
+      "n": 0.1873,
+      "T": 0.12,
+      "Y": 0.3264,
+      "old_balance": 0.02082305293131866,
+      "new_balance": 5.425571188010237e-06,
+      "old_delta_mu": 0.0024731059864961935,
+      "new_delta_mu": -6.510703087769798e-07
+    },
+    {
+      "group": "composition",
+      "n": 0.1873,
+      "T": 1.37,
+      "Y": 0.3264,
+      "old_balance": 0.0018435231291236594,
+      "new_balance": 3.7790020511722445e-07,
+      "old_delta_mu": 0.002523301518522203,
+      "new_delta_mu": -5.177233788344893e-07
+    },
+    {
+      "group": "composition",
+      "n": 0.2371,
+      "T": 0.12,
+      "Y": 0.3264,
+      "old_balance": 0.027120979904892647,
+      "new_balance": 6.393023406998888e-06,
+      "old_delta_mu": 0.003211166799815146,
+      "new_delta_mu": -7.671652610952151e-07
+    },
+    {
+      "group": "composition",
+      "n": 0.2371,
+      "T": 1.37,
+      "Y": 0.3264,
+      "old_balance": 0.002374531897183086,
+      "new_balance": 6.145552561369029e-07,
+      "old_delta_mu": 0.0032492524971985404,
+      "new_delta_mu": -8.419409596172045e-07
+    },
+    {
+      "group": "composition",
+      "n": 0.1873,
+      "T": 0.12,
+      "Y": 0.3296,
+      "old_balance": 0.022731911213164462,
+      "new_balance": 8.884644690064057e-06,
+      "old_delta_mu": 0.002697286950024136,
+      "new_delta_mu": -1.0661620990504161e-06
+    },
+    {
+      "group": "composition",
+      "n": 0.1873,
+      "T": 1.37,
+      "Y": 0.3296,
+      "old_balance": 0.0020107011279859475,
+      "new_balance": 6.429711388839085e-07,
+      "old_delta_mu": 0.002751894852508485,
+      "new_delta_mu": -8.808707434582175e-07
+    },
+    {
+      "group": "composition",
+      "n": 0.2371,
+      "T": 0.12,
+      "Y": 0.3296,
+      "old_balance": 0.02960878876396139,
+      "new_balance": 1.0548797292955953e-05,
+      "old_delta_mu": 0.0035014696030657433,
+      "new_delta_mu": -1.2658623518291279e-06
+    },
+    {
+      "group": "composition",
+      "n": 0.2371,
+      "T": 1.37,
+      "Y": 0.3296,
+      "old_balance": 0.002589429486583328,
+      "new_balance": 9.972016912580736e-07,
+      "old_delta_mu": 0.003542933285757499,
+      "new_delta_mu": -1.3661669981956948e-06
+    },
+    {
+      "group": "temperature",
+      "n": 0.2077,
+      "T": 0.173,
+      "Y": 0.2133,
+      "old_balance": 0.004259079386501064,
+      "new_balance": 2.2187249780362266e-06,
+      "old_delta_mu": 0.0007352560859317236,
+      "new_delta_mu": -3.838398470179527e-07
+    },
+    {
+      "group": "temperature",
+      "n": 0.2077,
+      "T": 2.63,
+      "Y": 0.2133,
+      "old_balance": 0.0002919166974696712,
+      "new_balance": 1.82076922219902e-07,
+      "old_delta_mu": 0.0007676288779521201,
+      "new_delta_mu": 4.788622618434601e-07
+    },
+    {
+      "group": "temperature",
+      "n": 0.2077,
+      "T": 0.173,
+      "Y": 0.2731,
+      "old_balance": 0.0017239026737531022,
+      "new_balance": 1.4564245887305271e-06,
+      "old_delta_mu": -0.00029849252257463377,
+      "new_delta_mu": -2.5196163733198773e-07
+    },
+    {
+      "group": "temperature",
+      "n": 0.2077,
+      "T": 2.63,
+      "Y": 0.2731,
+      "old_balance": 0.00012334070622135185,
+      "new_balance": 8.38235096744877e-09,
+      "old_delta_mu": -0.0003244060640099633,
+      "new_delta_mu": -2.2045583136787172e-08
+    },
+    {
+      "group": "temperature",
+      "n": 0.2279,
+      "T": 0.173,
+      "Y": 0.2133,
+      "old_balance": 0.004728707686305694,
+      "new_balance": 2.2741501440881395e-06,
+      "old_delta_mu": 0.0008161383071865203,
+      "new_delta_mu": -3.9342842228506925e-07
+    },
+    {
+      "group": "temperature",
+      "n": 0.2279,
+      "T": 2.63,
+      "Y": 0.2133,
+      "old_balance": 0.0003233244050197792,
+      "new_balance": 6.613029324903392e-09,
+      "old_delta_mu": 0.0008502057464738755,
+      "new_delta_mu": -1.7392267182003707e-08
+    },
+    {
+      "group": "temperature",
+      "n": 0.2279,
+      "T": 0.173,
+      "Y": 0.2731,
+      "old_balance": 0.001905925072802438,
+      "new_balance": 1.412057213931897e-06,
+      "old_delta_mu": -0.00033003965302214056,
+      "new_delta_mu": -2.442860704832128e-07
+    },
+    {
+      "group": "temperature",
+      "n": 0.2279,
+      "T": 2.63,
+      "Y": 0.2731,
+      "old_balance": 0.00013347086757708806,
+      "new_balance": 6.125788121596774e-08,
+      "old_delta_mu": -0.00035105180984373874,
+      "new_delta_mu": -1.6110823253256967e-07
+    },
+    {
+      "group": "joint",
+      "n": 0.2597,
+      "T": 0.12,
+      "Y": 0.3297,
+      "old_balance": 0.031090963691146906,
+      "new_balance": 1.2793488336253068e-05,
+      "old_delta_mu": 0.0036740915696782395,
+      "new_delta_mu": -1.5352284208347555e-06
+    },
+    {
+      "group": "joint",
+      "n": 0.2597,
+      "T": 0.43,
+      "Y": 0.3297,
+      "old_balance": 0.008589547320705031,
+      "new_balance": 4.419486469682316e-06,
+      "old_delta_mu": 0.0036777328332391335,
+      "new_delta_mu": -1.9003833813258098e-06
+    },
+    {
+      "group": "joint",
+      "n": 0.2597,
+      "T": 2.91,
+      "Y": 0.3297,
+      "old_balance": 0.0013286677616825098,
+      "new_balance": 6.029536252357145e-06,
+      "old_delta_mu": 0.003863856863517867,
+      "new_delta_mu": -1.7546003391544218e-05
+    },
+    {
+      "group": "endpoint",
+      "n": 0.18,
+      "T": 0.12,
+      "Y": 0.33,
+      "old_balance": 0.02204441990789781,
+      "new_balance": 8.757287186142215e-06,
+      "old_delta_mu": 0.0026165945452021333,
+      "new_delta_mu": -1.0508790637686616e-06
+    },
+    {
+      "group": "endpoint",
+      "n": 0.26,
+      "T": 3.0,
+      "Y": 0.18,
+      "old_balance": 0.0013270374851838298,
+      "new_balance": 8.413248637842297e-06,
+      "old_delta_mu": -0.003983756337561317,
+      "new_delta_mu": 2.5239639739993436e-05
+    },
+    {
+      "group": "endpoint",
+      "n": 0.26,
+      "T": 0.12,
+      "Y": 0.33,
+      "old_balance": 0.03132510071802374,
+      "new_balance": 1.3236905759471884e-05,
+      "old_delta_mu": 0.003701337714460351,
+      "new_delta_mu": -1.5884392041698447e-06
+    }
+  ],
+  "scope": "Both frozen fits evaluated on new-fit blocked samples; old failed development point excluded. New basis and coefficients frozen before these actual EOS states. Errors compare same lepton contribution/temperature, not actual weak emissivity."
+}

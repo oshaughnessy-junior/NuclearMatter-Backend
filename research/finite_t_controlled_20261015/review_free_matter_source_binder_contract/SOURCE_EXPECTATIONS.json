@@ -1,0 +1,147 @@
+{
+  "utc": "2026-10-16T09:01:54.474593+00:00",
+  "status": "STATIC_FROM_FROZEN_ACTUAL_APIS;noauthorcandidatecontractread",
+  "sourcepins": {
+    "production_lepton_port/staged/src/nmbackend/reference/finite_t_leptons.py": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+    "production_baryon_port/staged/src/nmbackend/reference/finite_t_baryons.py": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b",
+    "production_weak_port/staged/src/nmbackend/reference/weak_reference.py": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+    "production_lepton_port/CANDIDATE_MANIFEST.json": "5e9a2793bc0de9c2e2a01c78061bd7a76f093b260cb8a7564971aae18a1bf282",
+    "production_baryon_port/CANDIDATE_MANIFEST.json": "199716b691d88a4fc9b83ed7f8e8b48e36fbff16fcc9b1e8684d18d0922fc523",
+    "production_weak_port/CANDIDATE_MANIFEST.json": "80f0b4207003353b8bf59f1357c28baedbf85ccb06d0a85b9289bceb798a174e",
+    "production_lepton_port/test_mirror/src/nmbackend/constants.py": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317",
+    "installed_free_matter_binding/forward_results.json": "199cd2693525c9beebc9c57ea6a6b28b41029bcea90702d547980272d7a42675",
+    "installed_free_matter_binding/partial_results.json": "eef5e8084f972712d49e4b178a69605a52ab179151266f103a4ed472b69fc127",
+    "installed_free_matter_binding/weak_fine.json": "c319aaa72e43c1024c9d03938bede1ef512fdd832671ff7d9bc65c71da63a6ad",
+    "review_installed_free_matter_binding/REVIEW.md": "11295739f71fe779553a3289bfc445cd44906b551a7ea7809b08968ce6fa25c7",
+    "production_weak_port/staged/src/nmbackend/reference/_weak_current.py": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc",
+    "production_weak_port/staged/src/nmbackend/reference/_weak_quadrature.py": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69",
+    "production_weak_port/staged/src/nmbackend/reference/_weak_two_body.py": "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366",
+    "production_weak_port/staged/src/nmbackend/reference/_weak_decay.py": "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc"
+  },
+  "interfaces": {
+    "leptons": {
+      "source": "production_lepton_port/staged/src/nmbackend/reference/finite_t_leptons.py",
+      "sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+      "functions": {
+        "state_mu": "temperature_mev, chemical_potential_mev, mass_mev=M_E, *, rtol=2e-12, tail=60.0",
+        "state_density": "temperature_mev, net_density_fm3, mass_mev=M_E, *, rtol=2e-12, tail=60.0",
+        "thermal_energy_density": "state, *, rtol=2e-12, tail=60.0"
+      },
+      "records": {
+        "LeptonState": [
+          "temperature",
+          "chemical_potential",
+          "mass",
+          "net_density",
+          "particle_density",
+          "antiparticle_density",
+          "energy_density",
+          "pressure",
+          "entropy_density",
+          "free_energy_density",
+          "cv_fixed_net_density",
+          "dn_dmu_fixed_temperature",
+          "dn_dtemperature_fixed_mu",
+          "dmu_dtemperature_fixed_net_density"
+        ]
+      }
+    },
+    "baryons": {
+      "source": "production_baryon_port/staged/src/nmbackend/reference/finite_t_baryons.py",
+      "sha256": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b",
+      "functions": {
+        "state_mu": "temperature_mev, chemical_potential_mev, mass_mev=M_N, *, rtol=2e-12, tail=60.0",
+        "state_density": "temperature_mev, particle_density_fm3, mass_mev=M_N, *, rtol=2e-12, tail=60.0"
+      },
+      "records": {
+        "ParticleState": [
+          "temperature",
+          "mass",
+          "chemical_potential",
+          "kinetic_chemical_potential",
+          "particle_density",
+          "kinetic_energy_density",
+          "energy_density",
+          "pressure",
+          "entropy_density",
+          "free_energy_density",
+          "cv_fixed_particle_density",
+          "dn_dmu_fixed_temperature",
+          "dn_dtemperature_fixed_mu",
+          "dmu_dtemperature_fixed_particle_density"
+        ]
+      }
+    },
+    "weak": {
+      "source": "production_weak_port/staged/src/nmbackend/reference/weak_reference.py",
+      "sha256": "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172",
+      "functions": {
+        "channel_moments": "channel, bath, radiation=None, controls=None",
+        "spectral_coefficients": "*args, **kwargs"
+      },
+      "records": {
+        "Current": [
+          "source",
+          "neutron_mass",
+          "proton_mass",
+          "electron_mass",
+          "weak_mass"
+        ],
+        "FreeElectronBath": [
+          "T",
+          "mu_n",
+          "mu_p",
+          "mu_e"
+        ],
+        "Radiation": [
+          "mode",
+          "temperature",
+          "mu_nue",
+          "mu_antinue"
+        ],
+        "Controls": [
+          "radial_order",
+          "lepton_order",
+          "polar_order",
+          "azimuth_order",
+          "rest_order",
+          "parent_order",
+          "orient_order",
+          "decay_azimuth_order",
+          "decay_coordinate",
+          "parent_coordinate",
+          "tail",
+          "budget_seconds"
+        ],
+        "MomentResult": [
+          "channel",
+          "bath",
+          "radiation",
+          "controls",
+          "current",
+          "forward",
+          "backward",
+          "net",
+          "entropy_production",
+          "max_event_kms_error",
+          "diagnostics",
+          "particle_stoichiometry",
+          "energy_ledger_scaled",
+          "direct_energy_ledger_scaled"
+        ]
+      }
+    }
+  },
+  "masses": {
+    "EOS_default_n": 939.565421,
+    "EOS_default_p": 938.272088,
+    "EOS_default_e": 0.51099895,
+    "weak_n": 939.56542052,
+    "weak_p": 938.27208816,
+    "weak_e": 0.51099895069,
+    "weak_current_mass": 938.91875434,
+    "HBARC": 197.3269804
+  },
+  "physical_calls": 0,
+  "candidate_contract_read": false
+}

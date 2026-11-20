@@ -1,0 +1,97 @@
+{
+  "source_sha256": {
+    "allowed_rate_assessment/results.json": "5d1cfaa9c48f2f175b910dc4dee7f820032a8cd9977c994c89339ee02ba68407",
+    "transparent_balance_grid/summary.json": "a71d783eff63b9af8d83e3aad3fd16adc66f7ed599c9195487c4f5114c6b509a",
+    "transparent_capture_balance/summary.json": "6c96b8b9d1ed329f1f04e7b50a7eb3cd0a080c3fadfdce38ecbebc4075e4c09b",
+    "review_allowed_rate_assessment/REVIEW.md": "0c232395374f40ea416e6ad87deeea05fdbe60dee91e5a11a63909078d6e652f",
+    "review_transparent_balance_grid/REVIEW.md": "0b2fe53e9a343a8a75f3cfbd38ea5afbb6bdc34895553202975c616deb9a988e"
+  },
+  "rows": [
+    {
+      "T": 1.0,
+      "nB": 1e-07,
+      "kinetic": 0.3850567101958036,
+      "chemical": 0.5385589338244703,
+      "allowed": 0.3908749908805034,
+      "errors": {
+        "EC": [
+          -0.012351047299681062,
+          -0.013638176138502378
+        ],
+        "PC": [
+          0.034804059820526145,
+          0.04200033174243445
+        ],
+        "beta": [
+          0.003072242713373363,
+          0.0020567709145711266
+        ]
+      }
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-07,
+      "kinetic": 0.5560448218021664,
+      "chemical": 0.6145204990481219,
+      "allowed": 0.5753198401595206,
+      "errors": {
+        "EC": [
+          -0.022593261211943383,
+          -0.024411940143641453
+        ],
+        "PC": [
+          0.06872220239310267,
+          0.08423100578873477
+        ],
+        "beta": [
+          0.0047286954399334835,
+          0.0021246625345945347
+        ]
+      }
+    },
+    {
+      "T": 3.0,
+      "nB": 1e-07,
+      "kinetic": 0.5490065797957709,
+      "chemical": 0.5934333636038136,
+      "allowed": 0.580009790303799,
+      "errors": {
+        "EC": [
+          -0.03197958254407307,
+          -0.03397352025899736
+        ],
+        "PC": [
+          0.10388076686031789,
+          0.12823002026112262
+        ],
+        "beta": [
+          0.006306105036697929,
+          0.002107200176318713
+        ]
+      }
+    },
+    {
+      "T": 2.0,
+      "nB": 1e-06,
+      "kinetic": 0.2786277578701185,
+      "chemical": 0.40054406565185624,
+      "allowed": 0.28776840020154076,
+      "errors": {
+        "EC": [
+          -0.02244367743349407,
+          -0.0241924453582133
+        ],
+        "PC": [
+          0.06828163952316157,
+          0.08389819724641834
+        ],
+        "beta": [
+          0.004579002687314038,
+          0.0019916181813406375
+        ]
+      }
+    }
+  ],
+  "scope": "Saved accepted selected-bath evidence only; no new physical quadrature, fit or evolution.",
+  "arithmetic_checks": 16
+}

@@ -1,0 +1,789 @@
+{
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "checks": [
+    {
+      "name": "massless T=1.0 mu=0.0 P",
+      "actual": 4.9953493943850294e-08,
+      "expected": 4.9953493943850294e-08,
+      "scaled_error": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=1.0 mu=0.0 n",
+      "actual": 0.0,
+      "expected": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=1.0 mu=0.0 s",
+      "actual": 1.9981397577540118e-07,
+      "expected": 1.9981397577540118e-07,
+      "scaled_error": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=1.0 mu=0.0 cv_n",
+      "actual": 5.994419273262037e-07,
+      "expected": 5.994419273262034e-07,
+      "scaled_error": 5.298884524764168e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=10.0 mu=3.0 P",
+      "actual": 0.000519146289573868,
+      "expected": 0.0005191462895738679,
+      "scaled_error": 2.0884328642230165e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=10.0 mu=3.0 n",
+      "actual": 1.3133574218252828e-05,
+      "expected": 1.3133574218252823e-05,
+      "scaled_error": 3.8696226930081593e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=10.0 mu=3.0 s",
+      "actual": 0.00020371844356407133,
+      "expected": 0.00020371844356407127,
+      "scaled_error": 2.6610309639061057e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=10.0 mu=3.0 cv_n",
+      "actual": 0.0005881444006596147,
+      "expected": 0.0005881444006596144,
+      "scaled_error": 5.53028561320767e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=0.01 mu=100.0 P",
+      "actual": 0.1098903822029987,
+      "expected": 0.10989038220299861,
+      "scaled_error": 7.577253366274543e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=0.01 mu=100.0 n",
+      "actual": 0.0043956148542901715,
+      "expected": 0.004395614854290171,
+      "scaled_error": 1.9732432588852695e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=0.01 mu=100.0 s",
+      "actual": 4.3382977427806e-06,
+      "expected": 4.338297742780773e-06,
+      "scaled_error": 3.983007425606498e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=0.01 mu=100.0 cv_n",
+      "actual": 4.338297571511408e-06,
+      "expected": 4.33829757151167e-06,
+      "scaled_error": 6.033085015198219e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=10.0 mu=-3.0 P",
+      "actual": 0.000519146289573868,
+      "expected": 0.0005191462895738679,
+      "scaled_error": 2.0884328642230165e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=10.0 mu=-3.0 n",
+      "actual": -1.3133574218252828e-05,
+      "expected": -1.3133574218252823e-05,
+      "scaled_error": 3.8696226930081593e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=10.0 mu=-3.0 s",
+      "actual": 0.00020371844356407133,
+      "expected": 0.00020371844356407127,
+      "scaled_error": 2.6610309639061057e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "massless T=10.0 mu=-3.0 cv_n",
+      "actual": 0.0005881444006596147,
+      "expected": 0.0005881444006596144,
+      "scaled_error": 5.53028561320767e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "nonrelativistic Maxwell-Boltzmann density",
+      "actual": 5.4908574829081295e-18,
+      "expected": 5.490848332371714e-18,
+      "scaled_error": 1.666506860430161e-06,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "nonrelativistic Maxwell-Boltzmann P/nT",
+      "actual": 1.0000000540753504,
+      "expected": 1.0,
+      "scaled_error": 5.4075350419680035e-08,
+      "tolerance": 2e-06,
+      "passed": true
+    },
+    {
+      "name": "nonrelativistic Maxwell-Boltzmann cv/n",
+      "actual": 1.5000035086112282,
+      "expected": 1.5,
+      "scaled_error": 2.339074152146736e-06,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "massive cold n",
+      "actual": 0.013603106661435398,
+      "expected": 0.01360310665345161,
+      "scaled_error": 5.86909111706576e-10,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "massive cold energy",
+      "actual": 2.0878276860526177,
+      "expected": 2.0878276840465504,
+      "scaled_error": 9.608395020309474e-10,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "massive cold P",
+      "actual": 0.36073151414372534,
+      "expected": 0.3607315135747395,
+      "scaled_error": 1.5773112051967396e-09,
+      "tolerance": 5e-09,
+      "passed": true
+    },
+    {
+      "name": "massive degenerate thermal increment",
+      "actual": 5.689856963743113e-10,
+      "expected": 5.68985696233074e-10,
+      "scaled_error": 2.4822656916636764e-10,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "massive degenerate Sommerfeld cv/nT",
+      "actual": 0.08365525768905169,
+      "expected": 0.08365525770323134,
+      "scaled_error": 1.695010909955313e-10,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e density inversion",
+      "actual": 1.0000000000000002e-06,
+      "expected": 1e-06,
+      "scaled_error": 2.1175823681357508e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e Euler identity",
+      "actual": 0.001998034709672802,
+      "expected": 0.00199803470967285,
+      "scaled_error": 2.4092963062808056e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e quadrature/tail pressure",
+      "actual": 0.0004993675067951644,
+      "expected": 0.0004993675067951643,
+      "scaled_error": 2.171150821253241e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e quadrature/tail energy_density",
+      "actual": 0.0014986672028776374,
+      "expected": 0.0014986672028776354,
+      "scaled_error": 1.3021996522821425e-15,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e quadrature/tail entropy_density",
+      "actual": 0.00019978041254447158,
+      "expected": 0.00019978041254446746,
+      "scaled_error": 2.0622483470584922e-14,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e quadrature/tail cv_fixed_net_density",
+      "actual": 0.0005993160546300486,
+      "expected": 0.0005993160546300486,
+      "scaled_error": 0.0,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e cv fixed-n finite difference",
+      "actual": 0.0005993160546300486,
+      "expected": 0.0005993184518440276,
+      "scaled_error": 3.999900172777356e-06,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e dmu/dT fixed-n FD",
+      "actual": -0.04612768652604463,
+      "expected": -0.046128055471657964,
+      "scaled_error": 7.998291052133597e-06,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "pair_rich_e Maxwell ds/dmu=dn/dT",
+      "actual": 2.000685760182412e-07,
+      "expected": 2.0006857599347302e-07,
+      "scaled_error": 1.2379853341181094e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "degenerate_e density inversion",
+      "actual": 0.010000000000000002,
+      "expected": 0.01,
+      "scaled_error": 1.734723475976807e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "degenerate_e Euler identity",
+      "actual": 1.315214984729855,
+      "expected": 1.3152149847298797,
+      "scaled_error": 1.8739864913978678e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "degenerate_e quadrature/tail pressure",
+      "actual": 0.3287963016032234,
+      "expected": 0.32879630160322354,
+      "scaled_error": 5.064943032563015e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "degenerate_e quadrature/tail energy_density",
+      "actual": 0.9864186831266316,
+      "expected": 0.9864186831266318,
+      "scaled_error": 2.251017835765447e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "degenerate_e quadrature/tail entropy_density",
+      "actual": 7.504289037816989e-07,
+      "expected": 7.504289037789861e-07,
+      "scaled_error": 3.6150456867499414e-12,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "degenerate_e quadrature/tail cv_fixed_net_density",
+      "actual": 7.50428903604384e-07,
+      "expected": 7.504289036071191e-07,
+      "scaled_error": 3.644674896632258e-12,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "degenerate_e cv fixed-n finite difference",
+      "actual": 7.50428903604384e-07,
+      "expected": 7.504286081427836e-07,
+      "scaled_error": 3.9372379631676625e-07,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "degenerate_e dmu/dT fixed-n FD",
+      "actual": -5.0028215988197104e-05,
+      "expected": -5.002817715649144e-05,
+      "scaled_error": 7.761966930156671e-07,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "warm_mu density inversion",
+      "actual": 0.004999999999999997,
+      "expected": 0.005,
+      "scaled_error": 6.938893903907228e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "warm_mu Euler identity",
+      "actual": 0.8950371690088812,
+      "expected": 0.8950371690088815,
+      "scaled_error": 3.7212634169860036e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "warm_mu quadrature/tail pressure",
+      "actual": 0.12922285281810086,
+      "expected": 0.12922285281810084,
+      "scaled_error": 2.1478844500282587e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "warm_mu quadrature/tail energy_density",
+      "actual": 0.7658143161907803,
+      "expected": 0.7658143161907803,
+      "scaled_error": 0.0,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "warm_mu quadrature/tail entropy_density",
+      "actual": 0.011241818587013619,
+      "expected": 0.01124181858701362,
+      "scaled_error": 1.5430986210547228e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "warm_mu quadrature/tail cv_fixed_net_density",
+      "actual": 0.008400071852252637,
+      "expected": 0.008400071852252637,
+      "scaled_error": 0.0,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "warm_mu cv fixed-n finite difference",
+      "actual": 0.008400071852252637,
+      "expected": 0.00840006937266602,
+      "scaled_error": 2.951864452093418e-07,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "warm_mu dmu/dT fixed-n FD",
+      "actual": -1.4720736170117306,
+      "expected": -1.4720733049678358,
+      "scaled_error": 2.119757852210489e-07,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "warm_mu Maxwell ds/dmu=dn/dT",
+      "actual": 0.00023809535868956502,
+      "expected": 0.00023809535964540204,
+      "scaled_error": 4.014513460932449e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "cold_mu density inversion",
+      "actual": 0.0019999999999996397,
+      "expected": 0.002,
+      "scaled_error": 1.8019440106709084e-13,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "cold_mu Euler identity",
+      "actual": 0.2613764149457819,
+      "expected": 0.2613764149458291,
+      "scaled_error": 1.805230917883247e-13,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "cold_mu quadrature/tail pressure",
+      "actual": 0.019125841011624626,
+      "expected": 0.019125841011624622,
+      "scaled_error": 1.8140101393946002e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "cold_mu quadrature/tail energy_density",
+      "actual": 0.24225057393415728,
+      "expected": 0.2422505739341572,
+      "scaled_error": 3.4372148430706436e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "cold_mu quadrature/tail entropy_density",
+      "actual": 4.360728892267545e-06,
+      "expected": 4.360728892268354e-06,
+      "scaled_error": 1.8550028782162526e-13,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "cold_mu quadrature/tail cv_fixed_net_density",
+      "actual": 4.360727661411105e-06,
+      "expected": 4.3607276614114275e-06,
+      "scaled_error": 7.400589487843285e-14,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "cold_mu cv fixed-n finite difference",
+      "actual": 4.360727661411105e-06,
+      "expected": 4.3607089605934846e-06,
+      "scaled_error": 4.288481022057943e-06,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "cold_mu dmu/dT fixed-n FD",
+      "actual": -0.000978522648133946,
+      "expected": -0.000978523729600056,
+      "scaled_error": 1.1052017210311897e-06,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "cold_mu Maxwell ds/dmu=dn/dT",
+      "actual": 1.2970343676779135e-07,
+      "expected": 1.2970343505241265e-07,
+      "scaled_error": 1.3225391437059622e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "dilute_e density inversion",
+      "actual": 1.0000000000000004e-12,
+      "expected": 1e-12,
+      "scaled_error": 4.0389678347315804e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute_e Euler identity",
+      "actual": 2.6634269436598346e-12,
+      "expected": 2.6634269436598342e-12,
+      "scaled_error": 1.516455273663938e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "dilute_e quadrature/tail pressure",
+      "actual": 3.3677462602113016e-13,
+      "expected": 3.3677462602113026e-13,
+      "scaled_error": 2.9982720806868055e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "dilute_e quadrature/tail energy_density",
+      "actual": 2.3266523176387046e-12,
+      "expected": 2.3266523176387058e-12,
+      "scaled_error": 5.207870300317176e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "dilute_e quadrature/tail entropy_density",
+      "actual": 2.6327212960616908e-11,
+      "expected": 2.6327212960616928e-11,
+      "scaled_error": 7.363880725131373e-16,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "dilute_e quadrature/tail cv_fixed_net_density",
+      "actual": 1.5340898514717176e-10,
+      "expected": 1.534089851471716e-10,
+      "scaled_error": 1.010999223447716e-15,
+      "tolerance": 5e-08,
+      "passed": true
+    },
+    {
+      "name": "dilute_e cv fixed-n finite difference",
+      "actual": 1.5340898514717176e-10,
+      "expected": 1.5341098953090187e-10,
+      "scaled_error": 1.3065450762313276e-05,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "dilute_e dmu/dT fixed-n FD",
+      "actual": -1.7466441714596768,
+      "expected": -1.7467059065834951,
+      "scaled_error": 3.5343742518798566e-05,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "name": "dilute_e Maxwell ds/dmu=dn/dT",
+      "actual": 5.864042142485803e-11,
+      "expected": 5.864042136217655e-11,
+      "scaled_error": 1.068912375056941e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T0.01 n-1e-18",
+      "actual": -9.999999999999999e-19,
+      "expected": -1e-18,
+      "scaled_error": 1.9259299443872356e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T0.01 n1e-18",
+      "actual": 9.999999999999999e-19,
+      "expected": 1e-18,
+      "scaled_error": 1.9259299443872356e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T0.01 n-1e-24",
+      "actual": -9.999999999999997e-25,
+      "expected": -1e-24,
+      "scaled_error": 1.8367099231598244e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T0.01 n1e-24",
+      "actual": 9.999999999999997e-25,
+      "expected": 1e-24,
+      "scaled_error": 1.8367099231598244e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T0.01 n-1e-30",
+      "actual": -1e-30,
+      "expected": -1e-30,
+      "scaled_error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T0.01 n1e-30",
+      "actual": 1e-30,
+      "expected": 1e-30,
+      "scaled_error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T1.0 n-1e-18",
+      "actual": -1.0000000000000003e-18,
+      "expected": -1e-18,
+      "scaled_error": 1.9259299443872356e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T1.0 n1e-18",
+      "actual": 1.0000000000000003e-18,
+      "expected": 1e-18,
+      "scaled_error": 1.9259299443872356e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T1.0 n-1e-24",
+      "actual": -1e-24,
+      "expected": -1e-24,
+      "scaled_error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T1.0 n1e-24",
+      "actual": 1e-24,
+      "expected": 1e-24,
+      "scaled_error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T1.0 n-1e-30",
+      "actual": -1e-30,
+      "expected": -1e-30,
+      "scaled_error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T1.0 n1e-30",
+      "actual": 1e-30,
+      "expected": 1e-30,
+      "scaled_error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T10.0 n-1e-18",
+      "actual": -9.999999999999999e-19,
+      "expected": -1e-18,
+      "scaled_error": 1.9259299443872356e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T10.0 n1e-18",
+      "actual": 9.999999999999999e-19,
+      "expected": 1e-18,
+      "scaled_error": 1.9259299443872356e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T10.0 n-1e-24",
+      "actual": -1e-24,
+      "expected": -1e-24,
+      "scaled_error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T10.0 n1e-24",
+      "actual": 1e-24,
+      "expected": 1e-24,
+      "scaled_error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T10.0 n-1e-30",
+      "actual": -1.0000000000000003e-30,
+      "expected": -1e-30,
+      "scaled_error": 1.7516230804060211e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "pair symmetric inversion T10.0 n1e-30",
+      "actual": 1.0000000000000003e-30,
+      "expected": 1e-30,
+      "scaled_error": 1.7516230804060211e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    }
+  ],
+  "sample_states": [
+    {
+      "label": "pair_rich_e",
+      "thermal_energy_density": 0.0014940569703261529,
+      "temperature": 10.0,
+      "chemical_potential": 0.23058422813414683,
+      "mass": 0.51099895069,
+      "net_density": 1.0000000000000002e-06,
+      "particle_density": 2.4269942806807035e-05,
+      "antiparticle_density": 2.326994280680703e-05,
+      "energy_density": 0.0014986672028776374,
+      "pressure": 0.0004993675067951644,
+      "entropy_density": 0.00019978041254447158,
+      "free_energy_density": -0.0004991369225670786,
+      "cv_fixed_net_density": 0.0005993160546300486,
+      "dn_dmu_fixed_temperature": 4.337277480424045e-06,
+      "dn_dtemperature_fixed_mu": 2.0006857599347302e-07,
+      "dmu_dtemperature_fixed_net_density": -0.04612768652604463
+    },
+    {
+      "label": "degenerate_e",
+      "thermal_energy_density": 3.752144518669716e-10,
+      "temperature": 0.001,
+      "chemical_potential": 131.5214983979451,
+      "mass": 0.51099895069,
+      "net_density": 0.010000000000000002,
+      "particle_density": 0.010000000000000002,
+      "antiparticle_density": 0.0,
+      "energy_density": 0.9864186831266316,
+      "pressure": 0.3287963016032234,
+      "entropy_density": 7.504289037816989e-07,
+      "free_energy_density": 0.9864186823762027,
+      "cv_fixed_net_density": 7.50428903604384e-07,
+      "dn_dmu_fixed_temperature": 0.00022810303429472148,
+      "dn_dtemperature_fixed_mu": 1.141158786725946e-08,
+      "dmu_dtemperature_fixed_net_density": -5.0028215988197104e-05
+    },
+    {
+      "label": "warm_mu",
+      "thermal_energy_density": 0.10283474366255871,
+      "temperature": 20.0,
+      "chemical_potential": 134.04015945372183,
+      "mass": 105.6583755,
+      "net_density": 0.004999999999999997,
+      "particle_density": 0.005000013844939112,
+      "antiparticle_density": 1.3844939114726667e-08,
+      "energy_density": 0.7658143161907803,
+      "pressure": 0.12922285281810086,
+      "entropy_density": 0.011241818587013619,
+      "free_energy_density": 0.540977944450508,
+      "cv_fixed_net_density": 0.008400071852252637,
+      "dn_dmu_fixed_temperature": 0.0001617414760334671,
+      "dn_dtemperature_fixed_mu": 0.00023809535964540204,
+      "dmu_dtemperature_fixed_net_density": -1.4720736170117306
+    },
+    {
+      "label": "cold_mu",
+      "thermal_energy_density": 2.1803642922766662e-08,
+      "temperature": 0.01,
+      "chemical_potential": 130.68818566927007,
+      "mass": 105.6583755,
+      "net_density": 0.0019999999999996397,
+      "particle_density": 0.0019999999999996397,
+      "antiparticle_density": 0.0,
+      "energy_density": 0.24225057393415728,
+      "pressure": 0.019125841011624626,
+      "entropy_density": 4.360728892267545e-06,
+      "free_energy_density": 0.24225053032686836,
+      "cv_fixed_net_density": 4.360727661411105e-06,
+      "dn_dmu_fixed_temperature": 0.00013255026370596388,
+      "dn_dtemperature_fixed_mu": 1.2970343505241265e-07,
+      "dmu_dtemperature_fixed_net_density": -0.000978522648133946
+    },
+    {
+      "label": "dilute_e",
+      "thermal_energy_density": 1.8134710420757365e-12,
+      "temperature": 0.1,
+      "chemical_potential": 0.030705647598143097,
+      "mass": 0.51099895069,
+      "net_density": 1.0000000000000004e-12,
+      "particle_density": 2.182132389007687e-12,
+      "antiparticle_density": 1.1821323890076878e-12,
+      "energy_density": 2.3266523176387046e-12,
+      "pressure": 3.3677462602113016e-13,
+      "entropy_density": 2.6327212960616908e-11,
+      "free_energy_density": -3.060689784229864e-13,
+      "cv_fixed_net_density": 1.5340898514717176e-10,
+      "dn_dmu_fixed_temperature": 3.3573192708833505e-11,
+      "dn_dtemperature_fixed_mu": 5.864042136217655e-11,
+      "dmu_dtemperature_fixed_net_density": -1.7466441714596768
+    }
+  ],
+  "passed": true
+}

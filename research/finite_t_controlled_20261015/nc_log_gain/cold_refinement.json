@@ -1,0 +1,1495 @@
+{
+  "passed": true,
+  "phase": "complete",
+  "runs": [
+    {
+      "values": [
+        179081.9843648371,
+        211504.57954806258,
+        328400.41211402393,
+        328594.105732561,
+        1.842569779228406e-12,
+        2.5194358719176924e-11,
+        -2.3351788939948414e-11
+      ],
+      "moments": [
+        {
+          "sign": 1,
+          "log_abs": 12.095598993178237,
+          "value": 179081.9843648371,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.262001929943569,
+          "value": 211504.57954806258,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.701988911474434,
+          "value": 328400.41211402393,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.702578546909395,
+          "value": 328594.105732561,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -27.019859899527194,
+          "value": 1.842569779228406e-12,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -24.40440100682176,
+          "value": 2.5194358719176924e-11,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": -1,
+          "log_abs": -24.4803475206178,
+          "value": -2.3351788939948414e-11,
+          "representable": true,
+          "reason": null
+        }
+      ],
+      "positive_component_logs": {
+        "out": 12.095598993178237,
+        "transport": 12.262001929943569,
+        "energy_positive": 12.702283772650658,
+        "energy_negative": 4.5731304442248675,
+        "gain": -27.019859899527194,
+        "loss": -24.40440100682176,
+        "net_positive": -27.184086208976286,
+        "net_negative": -24.415538984644574
+      },
+      "panels": [
+        {
+          "lo": 0.0,
+          "hi": 7.265862807756648,
+          "logs": {
+            "out": -1102.461475174253,
+            "transport": -1101.7693501240135,
+            "energy_positive": -1099.948822055295,
+            "energy_negative": null,
+            "gain": -1262.3370817209598,
+            "loss": -1138.961475174253,
+            "net_positive": null,
+            "net_negative": -1138.961475174253
+          }
+        },
+        {
+          "lo": 7.265862807756648,
+          "hi": 13.432931403878325,
+          "logs": {
+            "out": -105.20562523641863,
+            "transport": -104.51748444035911,
+            "energy_positive": -103.38419473130382,
+            "energy_negative": null,
+            "gain": -203.50409752281195,
+            "loss": -141.70562523641863,
+            "net_positive": null,
+            "net_negative": -141.70562523641863
+          }
+        },
+        {
+          "lo": 13.432931403878325,
+          "hi": 17.54431046795944,
+          "logs": {
+            "out": 11.197911317090066,
+            "transport": 11.581971991719977,
+            "energy_positive": 12.18852416188219,
+            "energy_negative": null,
+            "gain": -48.22371269300411,
+            "loss": -25.302088682909933,
+            "net_positive": null,
+            "net_negative": -25.30208868302092
+          }
+        },
+        {
+          "lo": 17.54431046795944,
+          "hi": 18.983293140387833,
+          "logs": {
+            "out": 11.416993099642568,
+            "transport": 11.43591227784169,
+            "energy_positive": 11.747161115818077,
+            "energy_negative": null,
+            "gain": -34.23723518161893,
+            "loss": -25.083006900357432,
+            "net_positive": null,
+            "net_negative": -25.08311267757537
+          }
+        },
+        {
+          "lo": 18.983293140387833,
+          "hi": 19.6,
+          "logs": {
+            "out": 9.575694214794588,
+            "transport": 9.319956258194253,
+            "energy_positive": 8.627322022121069,
+            "energy_negative": null,
+            "gain": -29.46773803604215,
+            "loss": -26.924305785205412,
+            "net_positive": null,
+            "net_negative": -27.00616265989244
+          }
+        },
+        {
+          "lo": 19.6,
+          "hi": 20.21670685961217,
+          "logs": {
+            "out": 6.732848442092861,
+            "transport": 6.410516578344158,
+            "energy_positive": null,
+            "energy_negative": 4.55987902191645,
+            "gain": -27.757395786455476,
+            "loss": -29.76715155790714,
+            "net_positive": -27.90129087141232,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 20.21670685961217,
+          "hi": 21.65568953204056,
+          "logs": {
+            "out": 0.5932584752387227,
+            "transport": 0.4104857751218418,
+            "energy_positive": null,
+            "energy_negative": 0.24286156187215502,
+            "gain": -27.897794851200544,
+            "loss": -35.90674152476128,
+            "net_positive": -27.898127381221563,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 21.65568953204056,
+          "hi": 25.76706859612168,
+          "logs": {
+            "out": -16.638450886399003,
+            "transport": -16.472429171896202,
+            "energy_positive": null,
+            "energy_negative": -15.879410956838715,
+            "gain": -30.99067698243872,
+            "loss": -53.138450886399,
+            "net_positive": -30.990676982679346,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 25.76706859612168,
+          "hi": 31.934137192243355,
+          "logs": {
+            "out": -85.49949957902847,
+            "transport": -84.81569335108354,
+            "energy_positive": null,
+            "energy_negative": -83.6759224595327,
+            "gain": -60.01565178417676,
+            "loss": -121.99949957902847,
+            "net_positive": -60.015651784176754,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 31.934137192243355,
+          "hi": 44.26827438448671,
+          "logs": {
+            "out": -353.8253846697778,
+            "transport": -353.1353966393703,
+            "energy_positive": null,
+            "energy_negative": -351.3113261761672,
+            "gain": -266.7504194619188,
+            "loss": -390.3253846697778,
+            "net_positive": -266.7504194619188,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 44.26827438448671,
+          "hi": 68.93654876897341,
+          "logs": {
+            "out": -973.0546711640517,
+            "transport": -972.3628709487086,
+            "energy_positive": null,
+            "energy_negative": -969.8483432180878,
+            "gain": -762.6489198272392,
+            "loss": -1009.5546711640517,
+            "net_positive": -762.6489198272392,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 68.93654876897341,
+          "hi": 118.27309753794682,
+          "logs": {
+            "out": -2080.0900305680116,
+            "transport": -2079.3976834333193,
+            "energy_positive": null,
+            "energy_negative": -2076.190848777032,
+            "gain": -1622.9302006776811,
+            "loss": -2116.5900305680116,
+            "net_positive": -1622.9302006776811,
+            "net_negative": null
+          }
+        }
+      ],
+      "cutoff": 118.27309753794682,
+      "energy_order": 128,
+      "angle_order": 384,
+      "reverse": "kms",
+      "labels": [
+        "blocked_out_rate_s",
+        "blocked_transport_rate_s",
+        "energy_to_bath_MeV_s",
+        "absolute_energy_transfer_MeV_s",
+        "gain_s",
+        "loss_s",
+        "net_collision_s"
+      ]
+    },
+    {
+      "values": [
+        179082.06200250128,
+        211504.5797049889,
+        328400.4172991755,
+        328594.11529137637,
+        1.8425807700751517e-12,
+        2.5194369641722597e-11,
+        -2.3351788871647445e-11
+      ],
+      "moments": [
+        {
+          "sign": 1,
+          "log_abs": 12.095599426709548,
+          "value": 179082.06200250128,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.262001930685521,
+          "value": 211504.5797049889,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.701988927263548,
+          "value": 328400.4172991755,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.702578575999434,
+          "value": 328594.11529137637,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -27.01985393458948,
+          "value": 1.8425807700751517e-12,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -24.404400573290452,
+          "value": 2.5194369641722597e-11,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": -1,
+          "log_abs": -24.480347523542672,
+          "value": -2.3351788871647445e-11,
+          "representable": true,
+          "reason": null
+        }
+      ],
+      "positive_component_logs": {
+        "out": 12.095599426709548,
+        "transport": 12.262001930685521,
+        "energy_positive": 12.702283795092194,
+        "energy_negative": 4.57315302429139,
+        "gain": -27.01985393458948,
+        "loss": -24.404400573290452,
+        "net_positive": -27.184082459343152,
+        "net_negative": -24.415538752084366
+      },
+      "panels": [
+        {
+          "lo": 0.0,
+          "hi": 7.265862807756648,
+          "logs": {
+            "out": -1102.4614751742406,
+            "transport": -1101.7693501240008,
+            "energy_positive": -1099.9488220552826,
+            "energy_negative": null,
+            "gain": -1262.3370817209468,
+            "loss": -1138.9614751742406,
+            "net_positive": null,
+            "net_negative": -1138.9614751742406
+          }
+        },
+        {
+          "lo": 7.265862807756648,
+          "hi": 13.432931403878325,
+          "logs": {
+            "out": -105.2056252364155,
+            "transport": -104.51748444035597,
+            "energy_positive": -103.3841947313007,
+            "energy_negative": null,
+            "gain": -203.5040975228089,
+            "loss": -141.70562523641553,
+            "net_positive": null,
+            "net_negative": -141.70562523641553
+          }
+        },
+        {
+          "lo": 13.432931403878325,
+          "hi": 17.54431046795944,
+          "logs": {
+            "out": 11.19791131731173,
+            "transport": 11.581971992020685,
+            "energy_positive": 12.18852416224859,
+            "energy_negative": null,
+            "gain": -48.22371269300793,
+            "loss": -25.302088682688268,
+            "net_positive": null,
+            "net_negative": -25.302088682799255
+          }
+        },
+        {
+          "lo": 17.54431046795944,
+          "hi": 18.983293140387833,
+          "logs": {
+            "out": 11.416993097975201,
+            "transport": 11.435912277641808,
+            "energy_positive": 11.747161114522466,
+            "energy_negative": null,
+            "gain": -34.237235181688064,
+            "loss": -25.0830069020248,
+            "net_positive": null,
+            "net_negative": -25.083112679242905
+          }
+        },
+        {
+          "lo": 18.983293140387833,
+          "hi": 19.6,
+          "logs": {
+            "out": 9.575698310090727,
+            "transport": 9.319956268383873,
+            "energy_positive": 8.627323359201736,
+            "energy_negative": null,
+            "gain": -29.467722414484687,
+            "loss": -26.92430168990927,
+            "net_positive": null,
+            "net_negative": -27.0061595477979
+          }
+        },
+        {
+          "lo": 19.6,
+          "hi": 20.21670685961217,
+          "logs": {
+            "out": 6.732870785946993,
+            "transport": 6.410516626866445,
+            "energy_positive": null,
+            "energy_negative": 4.5599019032136825,
+            "gain": -27.757386138877834,
+            "loss": -29.767129214053007,
+            "net_positive": -27.90128318876229,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 20.21670685961217,
+          "hi": 21.65568953204056,
+          "logs": {
+            "out": 0.5932584732503621,
+            "transport": 0.4104857750070492,
+            "energy_positive": null,
+            "energy_negative": 0.2428615600099402,
+            "gain": -27.897794851996014,
+            "loss": -35.906741526749634,
+            "net_positive": -27.89812738201664,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 21.65568953204056,
+          "hi": 25.76706859612168,
+          "logs": {
+            "out": -16.638450886407654,
+            "transport": -16.472429171898956,
+            "energy_positive": null,
+            "energy_negative": -15.879410956847082,
+            "gain": -30.990676982442196,
+            "loss": -53.138450886407654,
+            "net_positive": -30.99067698268282,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 25.76706859612168,
+          "hi": 31.934137192243355,
+          "logs": {
+            "out": -85.49949957902673,
+            "transport": -84.81569335108178,
+            "energy_positive": null,
+            "energy_negative": -83.67592245953097,
+            "gain": -60.01565178417496,
+            "loss": -121.99949957902673,
+            "net_positive": -60.01565178417496,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 31.934137192243355,
+          "hi": 44.26827438448671,
+          "logs": {
+            "out": -353.82538466977303,
+            "transport": -353.1353966393655,
+            "energy_positive": null,
+            "energy_negative": -351.3113261761625,
+            "gain": -266.75041946191396,
+            "loss": -390.32538466977303,
+            "net_positive": -266.75041946191396,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 44.26827438448671,
+          "hi": 68.93654876897341,
+          "logs": {
+            "out": -973.0546711640418,
+            "transport": -972.3628709486987,
+            "energy_positive": null,
+            "energy_negative": -969.848343218078,
+            "gain": -762.6489198272292,
+            "loss": -1009.5546711640418,
+            "net_positive": -762.6489198272292,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 68.93654876897341,
+          "hi": 118.27309753794682,
+          "logs": {
+            "out": -2080.0900305679966,
+            "transport": -2079.3976834333043,
+            "energy_positive": null,
+            "energy_negative": -2076.190848777017,
+            "gain": -1622.9302006776659,
+            "loss": -2116.5900305679966,
+            "net_positive": -1622.9302006776659,
+            "net_negative": null
+          }
+        }
+      ],
+      "cutoff": 118.27309753794682,
+      "energy_order": 160,
+      "angle_order": 512,
+      "reverse": "kms",
+      "labels": [
+        "blocked_out_rate_s",
+        "blocked_transport_rate_s",
+        "energy_to_bath_MeV_s",
+        "absolute_energy_transfer_MeV_s",
+        "gain_s",
+        "loss_s",
+        "net_collision_s"
+      ]
+    },
+    {
+      "values": [
+        179082.05805837977,
+        211504.57969530203,
+        328400.4166642394,
+        328594.11462410237,
+        1.842580527097434e-12,
+        2.519436908683929e-11,
+        -2.3351788559741857e-11
+      ],
+      "moments": [
+        {
+          "sign": 1,
+          "log_abs": 12.095599404685446,
+          "value": 179082.05805837977,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.262001930639721,
+          "value": 211504.57969530203,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.701988925330127,
+          "value": 328400.4166642394,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.70257857396874,
+          "value": 328594.11462410237,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -27.01985406645764,
+          "value": 1.842580527097434e-12,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -24.404400595314552,
+          "value": 2.519436908683929e-11,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": -1,
+          "log_abs": -24.48034753689949,
+          "value": -2.3351788559741857e-11,
+          "representable": true,
+          "reason": null
+        }
+      ],
+      "positive_component_logs": {
+        "out": 12.095599404685446,
+        "transport": 12.262001930639721,
+        "energy_positive": 12.702283793110123,
+        "energy_negative": 4.573152857340874,
+        "gain": -27.01985406645764,
+        "loss": -24.404400595314552,
+        "net_positive": -27.184082545251197,
+        "net_negative": -24.415538769994015
+      },
+      "panels": [
+        {
+          "lo": 0.0,
+          "hi": 7.265862807756648,
+          "logs": {
+            "out": -1102.461475174246,
+            "transport": -1101.7693501240065,
+            "energy_positive": -1099.9488220552882,
+            "energy_negative": null,
+            "gain": -1262.3370817209525,
+            "loss": -1138.961475174246,
+            "net_positive": null,
+            "net_negative": -1138.961475174246
+          }
+        },
+        {
+          "lo": 7.265862807756648,
+          "hi": 13.432931403878325,
+          "logs": {
+            "out": -105.20562523641779,
+            "transport": -104.51748444035827,
+            "energy_positive": -103.38419473130298,
+            "energy_negative": null,
+            "gain": -203.50409752281104,
+            "loss": -141.7056252364178,
+            "net_positive": null,
+            "net_negative": -141.7056252364178
+          }
+        },
+        {
+          "lo": 13.432931403878325,
+          "hi": 17.54431046795944,
+          "logs": {
+            "out": 11.197911317330785,
+            "transport": 11.581971992046487,
+            "energy_positive": 12.188524162278535,
+            "energy_negative": null,
+            "gain": -48.223712693007855,
+            "loss": -25.302088682669215,
+            "net_positive": null,
+            "net_negative": -25.3020886827802
+          }
+        },
+        {
+          "lo": 17.54431046795944,
+          "hi": 18.983293140387833,
+          "logs": {
+            "out": 11.416993098003664,
+            "transport": 11.435912277644391,
+            "energy_positive": 11.74716111453966,
+            "energy_negative": null,
+            "gain": -34.23723518151825,
+            "loss": -25.083006901996335,
+            "net_positive": null,
+            "net_negative": -25.08311267921446
+          }
+        },
+        {
+          "lo": 18.983293140387833,
+          "hi": 19.6,
+          "logs": {
+            "out": 9.57569803774664,
+            "transport": 9.31995626732643,
+            "energy_positive": 8.627323241116937,
+            "energy_negative": null,
+            "gain": -29.467723075625052,
+            "loss": -26.92430196225336,
+            "net_positive": null,
+            "net_negative": -27.006159786977076
+          }
+        },
+        {
+          "lo": 19.6,
+          "hi": 20.21670685961217,
+          "logs": {
+            "out": 6.732870757909088,
+            "transport": 6.410516625401515,
+            "energy_positive": null,
+            "energy_negative": 4.559901734034842,
+            "gain": -27.757386295050175,
+            "loss": -29.767129242090913,
+            "net_positive": -27.901283364765387,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 20.21670685961217,
+          "hi": 21.65568953204056,
+          "logs": {
+            "out": 0.5932584733560429,
+            "transport": 0.41048577501379135,
+            "energy_positive": null,
+            "energy_negative": 0.24286156010896054,
+            "gain": -27.89779485199189,
+            "loss": -35.906741526643955,
+            "net_positive": -27.898127382012547,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 21.65568953204056,
+          "hi": 25.76706859612168,
+          "logs": {
+            "out": -16.638450886407586,
+            "transport": -16.472429171898874,
+            "energy_positive": null,
+            "energy_negative": -15.87941095684702,
+            "gain": -30.990676982442228,
+            "loss": -53.13845088640759,
+            "net_positive": -30.990676982682853,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 25.76706859612168,
+          "hi": 31.934137192243355,
+          "logs": {
+            "out": -85.49949957902805,
+            "transport": -84.81569335108313,
+            "energy_positive": null,
+            "energy_negative": -83.67592245953229,
+            "gain": -60.01565178417644,
+            "loss": -121.99949957902805,
+            "net_positive": -60.01565178417644,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 31.934137192243355,
+          "hi": 44.26827438448671,
+          "logs": {
+            "out": -353.8253846697765,
+            "transport": -353.13539663936893,
+            "energy_positive": null,
+            "energy_negative": -351.3113261761659,
+            "gain": -266.75041946191766,
+            "loss": -390.3253846697765,
+            "net_positive": -266.75041946191766,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 44.26827438448671,
+          "hi": 68.93654876897341,
+          "logs": {
+            "out": -973.0546711640475,
+            "transport": -972.3628709487044,
+            "energy_positive": null,
+            "energy_negative": -969.8483432180836,
+            "gain": -762.6489198272353,
+            "loss": -1009.5546711640475,
+            "net_positive": -762.6489198272353,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 68.93654876897341,
+          "hi": 118.27309753794682,
+          "logs": {
+            "out": -2080.090030568003,
+            "transport": -2079.3976834333107,
+            "energy_positive": null,
+            "energy_negative": -2076.190848777024,
+            "gain": -1622.9302006776736,
+            "loss": -2116.590030568003,
+            "net_positive": -1622.9302006776736,
+            "net_negative": null
+          }
+        }
+      ],
+      "cutoff": 118.27309753794682,
+      "energy_order": 192,
+      "angle_order": 640,
+      "reverse": "kms",
+      "labels": [
+        "blocked_out_rate_s",
+        "blocked_transport_rate_s",
+        "energy_to_bath_MeV_s",
+        "absolute_energy_transfer_MeV_s",
+        "gain_s",
+        "loss_s",
+        "net_collision_s"
+      ]
+    },
+    {
+      "values": [
+        179082.05805837977,
+        211504.57969530203,
+        328400.4166642394,
+        328594.11462410237,
+        1.842580527097434e-12,
+        2.519436908683929e-11,
+        -2.3351788559741857e-11
+      ],
+      "moments": [
+        {
+          "sign": 1,
+          "log_abs": 12.095599404685446,
+          "value": 179082.05805837977,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.262001930639721,
+          "value": 211504.57969530203,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.701988925330127,
+          "value": 328400.4166642394,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.70257857396874,
+          "value": 328594.11462410237,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -27.01985406645764,
+          "value": 1.842580527097434e-12,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -24.404400595314552,
+          "value": 2.519436908683929e-11,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": -1,
+          "log_abs": -24.48034753689949,
+          "value": -2.3351788559741857e-11,
+          "representable": true,
+          "reason": null
+        }
+      ],
+      "positive_component_logs": {
+        "out": 12.095599404685446,
+        "transport": 12.262001930639721,
+        "energy_positive": 12.702283793110123,
+        "energy_negative": 4.573152857340874,
+        "gain": -27.01985406645764,
+        "loss": -24.404400595314552,
+        "net_positive": -27.184082545251197,
+        "net_negative": -24.415538769994015
+      },
+      "panels": [
+        {
+          "lo": 0.0,
+          "hi": 7.265862807756648,
+          "logs": {
+            "out": -1102.461475174246,
+            "transport": -1101.7693501240065,
+            "energy_positive": -1099.9488220552882,
+            "energy_negative": null,
+            "gain": -1262.3370817209525,
+            "loss": -1138.961475174246,
+            "net_positive": null,
+            "net_negative": -1138.961475174246
+          }
+        },
+        {
+          "lo": 7.265862807756648,
+          "hi": 13.432931403878325,
+          "logs": {
+            "out": -105.20562523641779,
+            "transport": -104.51748444035827,
+            "energy_positive": -103.38419473130298,
+            "energy_negative": null,
+            "gain": -203.50409752281104,
+            "loss": -141.7056252364178,
+            "net_positive": null,
+            "net_negative": -141.7056252364178
+          }
+        },
+        {
+          "lo": 13.432931403878325,
+          "hi": 17.54431046795944,
+          "logs": {
+            "out": 11.197911317330785,
+            "transport": 11.581971992046487,
+            "energy_positive": 12.188524162278535,
+            "energy_negative": null,
+            "gain": -48.223712693007855,
+            "loss": -25.302088682669215,
+            "net_positive": null,
+            "net_negative": -25.3020886827802
+          }
+        },
+        {
+          "lo": 17.54431046795944,
+          "hi": 18.983293140387833,
+          "logs": {
+            "out": 11.416993098003664,
+            "transport": 11.435912277644391,
+            "energy_positive": 11.74716111453966,
+            "energy_negative": null,
+            "gain": -34.23723518151825,
+            "loss": -25.083006901996335,
+            "net_positive": null,
+            "net_negative": -25.08311267921446
+          }
+        },
+        {
+          "lo": 18.983293140387833,
+          "hi": 19.6,
+          "logs": {
+            "out": 9.57569803774664,
+            "transport": 9.31995626732643,
+            "energy_positive": 8.627323241116937,
+            "energy_negative": null,
+            "gain": -29.46772307562505,
+            "loss": -26.92430196225336,
+            "net_positive": null,
+            "net_negative": -27.006159786977076
+          }
+        },
+        {
+          "lo": 19.6,
+          "hi": 20.21670685961217,
+          "logs": {
+            "out": 6.732870757909088,
+            "transport": 6.410516625401515,
+            "energy_positive": null,
+            "energy_negative": 4.559901734034842,
+            "gain": -27.757386295050175,
+            "loss": -29.767129242090913,
+            "net_positive": -27.901283364765384,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 20.21670685961217,
+          "hi": 21.65568953204056,
+          "logs": {
+            "out": 0.5932584733560429,
+            "transport": 0.41048577501379135,
+            "energy_positive": null,
+            "energy_negative": 0.24286156010896054,
+            "gain": -27.897794851991886,
+            "loss": -35.906741526643955,
+            "net_positive": -27.898127382012547,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 21.65568953204056,
+          "hi": 25.76706859612168,
+          "logs": {
+            "out": -16.638450886407586,
+            "transport": -16.472429171898874,
+            "energy_positive": null,
+            "energy_negative": -15.87941095684702,
+            "gain": -30.990676982442224,
+            "loss": -53.13845088640759,
+            "net_positive": -30.990676982682853,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 25.76706859612168,
+          "hi": 31.934137192243355,
+          "logs": {
+            "out": -85.49949957902805,
+            "transport": -84.81569335108313,
+            "energy_positive": null,
+            "energy_negative": -83.67592245953229,
+            "gain": -60.01565178417644,
+            "loss": -121.99949957902805,
+            "net_positive": -60.01565178417644,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 31.934137192243355,
+          "hi": 44.26827438448671,
+          "logs": {
+            "out": -353.8253846697765,
+            "transport": -353.13539663936893,
+            "energy_positive": null,
+            "energy_negative": -351.3113261761659,
+            "gain": -266.75041946191766,
+            "loss": -390.3253846697765,
+            "net_positive": -266.75041946191766,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 44.26827438448671,
+          "hi": 68.93654876897341,
+          "logs": {
+            "out": -973.0546711640475,
+            "transport": -972.3628709487044,
+            "energy_positive": null,
+            "energy_negative": -969.8483432180836,
+            "gain": -762.6489198272352,
+            "loss": -1009.5546711640475,
+            "net_positive": -762.6489198272352,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 68.93654876897341,
+          "hi": 118.27309753794682,
+          "logs": {
+            "out": -2080.090030568003,
+            "transport": -2079.3976834333107,
+            "energy_positive": null,
+            "energy_negative": -2076.190848777024,
+            "gain": -1622.9302006776736,
+            "loss": -2116.590030568003,
+            "net_positive": -1622.9302006776736,
+            "net_negative": null
+          }
+        }
+      ],
+      "cutoff": 118.27309753794682,
+      "energy_order": 192,
+      "angle_order": 640,
+      "reverse": "direct",
+      "labels": [
+        "blocked_out_rate_s",
+        "blocked_transport_rate_s",
+        "energy_to_bath_MeV_s",
+        "absolute_energy_transfer_MeV_s",
+        "gain_s",
+        "loss_s",
+        "net_collision_s"
+      ]
+    },
+    {
+      "values": [
+        179082.05805837977,
+        211504.57969530203,
+        328400.4166642394,
+        328594.11462410237,
+        1.842580527097434e-12,
+        2.519436908683929e-11,
+        -2.3351788559741857e-11
+      ],
+      "moments": [
+        {
+          "sign": 1,
+          "log_abs": 12.095599404685446,
+          "value": 179082.05805837977,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.262001930639721,
+          "value": 211504.57969530203,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.701988925330127,
+          "value": 328400.4166642394,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": 12.70257857396874,
+          "value": 328594.11462410237,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -27.01985406645764,
+          "value": 1.842580527097434e-12,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": 1,
+          "log_abs": -24.404400595314552,
+          "value": 2.519436908683929e-11,
+          "representable": true,
+          "reason": null
+        },
+        {
+          "sign": -1,
+          "log_abs": -24.48034753689949,
+          "value": -2.3351788559741857e-11,
+          "representable": true,
+          "reason": null
+        }
+      ],
+      "positive_component_logs": {
+        "out": 12.095599404685446,
+        "transport": 12.262001930639721,
+        "energy_positive": 12.702283793110123,
+        "energy_negative": 4.573152857340874,
+        "gain": -27.01985406645764,
+        "loss": -24.404400595314552,
+        "net_positive": -27.184082545251197,
+        "net_negative": -24.415538769994015
+      },
+      "panels": [
+        {
+          "lo": 0.0,
+          "hi": 7.265862807756648,
+          "logs": {
+            "out": -1102.461475174246,
+            "transport": -1101.7693501240065,
+            "energy_positive": -1099.9488220552882,
+            "energy_negative": null,
+            "gain": -1262.3370817209525,
+            "loss": -1138.961475174246,
+            "net_positive": null,
+            "net_negative": -1138.961475174246
+          }
+        },
+        {
+          "lo": 7.265862807756648,
+          "hi": 13.432931403878325,
+          "logs": {
+            "out": -105.20562523641779,
+            "transport": -104.51748444035827,
+            "energy_positive": -103.38419473130298,
+            "energy_negative": null,
+            "gain": -203.50409752281104,
+            "loss": -141.7056252364178,
+            "net_positive": null,
+            "net_negative": -141.7056252364178
+          }
+        },
+        {
+          "lo": 13.432931403878325,
+          "hi": 17.54431046795944,
+          "logs": {
+            "out": 11.197911317330785,
+            "transport": 11.581971992046487,
+            "energy_positive": 12.188524162278535,
+            "energy_negative": null,
+            "gain": -48.223712693007855,
+            "loss": -25.302088682669215,
+            "net_positive": null,
+            "net_negative": -25.3020886827802
+          }
+        },
+        {
+          "lo": 17.54431046795944,
+          "hi": 18.983293140387833,
+          "logs": {
+            "out": 11.416993098003664,
+            "transport": 11.435912277644391,
+            "energy_positive": 11.74716111453966,
+            "energy_negative": null,
+            "gain": -34.23723518151825,
+            "loss": -25.083006901996335,
+            "net_positive": null,
+            "net_negative": -25.08311267921446
+          }
+        },
+        {
+          "lo": 18.983293140387833,
+          "hi": 19.6,
+          "logs": {
+            "out": 9.57569803774664,
+            "transport": 9.31995626732643,
+            "energy_positive": 8.627323241116937,
+            "energy_negative": null,
+            "gain": -29.467723075625052,
+            "loss": -26.92430196225336,
+            "net_positive": null,
+            "net_negative": -27.006159786977076
+          }
+        },
+        {
+          "lo": 19.6,
+          "hi": 20.21670685961217,
+          "logs": {
+            "out": 6.732870757909088,
+            "transport": 6.410516625401515,
+            "energy_positive": null,
+            "energy_negative": 4.559901734034842,
+            "gain": -27.757386295050175,
+            "loss": -29.767129242090913,
+            "net_positive": -27.901283364765387,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 20.21670685961217,
+          "hi": 21.65568953204056,
+          "logs": {
+            "out": 0.5932584733560429,
+            "transport": 0.41048577501379135,
+            "energy_positive": null,
+            "energy_negative": 0.24286156010896054,
+            "gain": -27.89779485199189,
+            "loss": -35.906741526643955,
+            "net_positive": -27.898127382012547,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 21.65568953204056,
+          "hi": 25.76706859612168,
+          "logs": {
+            "out": -16.638450886407586,
+            "transport": -16.472429171898874,
+            "energy_positive": null,
+            "energy_negative": -15.87941095684702,
+            "gain": -30.990676982442228,
+            "loss": -53.13845088640759,
+            "net_positive": -30.990676982682853,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 25.76706859612168,
+          "hi": 31.934137192243355,
+          "logs": {
+            "out": -85.49949957902805,
+            "transport": -84.81569335108313,
+            "energy_positive": null,
+            "energy_negative": -83.67592245953229,
+            "gain": -60.01565178417644,
+            "loss": -121.99949957902805,
+            "net_positive": -60.01565178417644,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 31.934137192243355,
+          "hi": 44.26827438448671,
+          "logs": {
+            "out": -353.8253846697765,
+            "transport": -353.13539663936893,
+            "energy_positive": null,
+            "energy_negative": -351.3113261761659,
+            "gain": -266.75041946191766,
+            "loss": -390.3253846697765,
+            "net_positive": -266.75041946191766,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 44.26827438448671,
+          "hi": 68.93654876897341,
+          "logs": {
+            "out": -973.0546711640475,
+            "transport": -972.3628709487044,
+            "energy_positive": null,
+            "energy_negative": -969.8483432180836,
+            "gain": -762.6489198272353,
+            "loss": -1009.5546711640475,
+            "net_positive": -762.6489198272353,
+            "net_negative": null
+          }
+        },
+        {
+          "lo": 68.93654876897341,
+          "hi": 177.40964630692025,
+          "logs": {
+            "out": -2080.090030567995,
+            "transport": -2079.397683433303,
+            "energy_positive": null,
+            "energy_negative": -2076.1908487770156,
+            "gain": -1622.9302006776677,
+            "loss": -2116.590030567995,
+            "net_positive": -1622.9302006776677,
+            "net_negative": null
+          }
+        }
+      ],
+      "cutoff": 177.40964630692025,
+      "energy_order": 192,
+      "angle_order": 640,
+      "reverse": "kms",
+      "labels": [
+        "blocked_out_rate_s",
+        "blocked_transport_rate_s",
+        "energy_to_bath_MeV_s",
+        "absolute_energy_transfer_MeV_s",
+        "gain_s",
+        "loss_s",
+        "net_collision_s"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "coldrefine0 blocked_out_rate_s",
+      "error": 4.115071240429202e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine0 blocked_transport_rate_s",
+      "error": 6.961525800264212e-10,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine0 energy_to_bath_MeV_s",
+      "error": 1.3855693481445996e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine0 absolute_energy_transfer_MeV_s",
+      "error": 2.7059344653856954e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine0 gain_s",
+      "error": 5.833052542203454e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine0 loss_s",
+      "error": 4.115071240429202e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine0 net_collision_s",
+      "error": 1.628168888601067e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine1 blocked_out_rate_s",
+      "error": 2.202410187557291e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine1 blocked_transport_rate_s",
+      "error": 4.579980839025666e-11,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine1 energy_to_bath_MeV_s",
+      "error": 1.9334205347831812e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine1 absolute_energy_transfer_MeV_s",
+      "error": 2.030693613264134e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine1 gain_s",
+      "error": 1.3186816771870724e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine1 loss_s",
+      "error": 2.202410009921607e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine1 net_collision_s",
+      "error": 1.3356817873955151e-08,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine3 blocked_out_rate_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine3 blocked_transport_rate_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine3 energy_to_bath_MeV_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine3 absolute_energy_transfer_MeV_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine3 gain_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine3 loss_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine3 net_collision_s",
+      "error": 0.0,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "coldrefine4 blocked_out_rate_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "coldrefine4 blocked_transport_rate_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "coldrefine4 energy_to_bath_MeV_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "coldrefine4 absolute_energy_transfer_MeV_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "coldrefine4 gain_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "coldrefine4 loss_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "coldrefine4 net_collision_s",
+      "error": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "cold archive q-outer reference blocked_out_rate_s",
+      "error": 7.152204787308492e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold archive q-outer reference blocked_transport_rate_s",
+      "error": 1.2030531082452e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold archive q-outer reference energy_to_bath_MeV_s",
+      "error": 1.537552013042287e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold archive q-outer reference absolute_energy_transfer_MeV_s",
+      "error": 1.5366549046547107e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold archive q-outer reference gain_s",
+      "error": 5.3174300518321616e-09,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold archive q-outer reference loss_s",
+      "error": 7.152204762883585e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "cold archive q-outer reference net_collision_s",
+      "error": 7.712355665212556e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    }
+  ],
+  "runtime_seconds": 13.453321333043277,
+  "scope": "Exactcoldselectedpoint; originalcoarsegainfailuresretainFAIL"
+}

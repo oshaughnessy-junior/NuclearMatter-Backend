@@ -1,0 +1,9 @@
+{
+  "status": "REJECTED_DEPENDENCY_CHANGED",
+  "stage": "Post-integration provenance check",
+  "observed_error": "A dependency changed during this run; rerun to establish provenance",
+  "numerical_assertions": "All limiting, root, derivative, ODE and ledger assertions completed before provenance rejection",
+  "original_numeric_payload": "Not retained by initial version; no accepted results published from that run",
+  "resolution": "Parent confirmed base-kernel repairs complete; rerun with dependency hashes checked before and after",
+  "scope": "Concurrency/reproducibility event, not an established physics or numerical failure"
+}

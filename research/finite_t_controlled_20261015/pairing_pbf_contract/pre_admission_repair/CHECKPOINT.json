@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_AUTHOR_CONTRACT_PENDING_DIFFERENT_REVIEW",
+  "passing_controls": {
+    "results.json": 101,
+    "alternate_integral_results.json": 16,
+    "endpoint_results.json": 6,
+    "fortran_results.json": 8,
+    "normalization_results.json": 1
+  },
+  "total_pass": 132,
+  "failed_selected": [],
+  "raw_endpoint_failed_exact_zero_gates": 4,
+  "preserved_helper_failure": "initial_small_gap_log_failure.json",
+  "scope": "Exact legacy scalar/source audit + independently normalized dimensionless BCS A/B phase integrals; no full conserving current/pairedEOS/cooling-profile qualification",
+  "quota_percent": 21,
+  "reset": 1792652325,
+  "utc": "2026-10-15T23:51:23.727704+00:00"
+}

@@ -1,0 +1,52 @@
+"""Locked finite-range incident-rule assessment; all coarse failures retained."""
+from pathlib import Path
+import json,math,hashlib
+R=Path(__file__).resolve().parent;LOCK=json.loads((R/'LOCK.json').read_text());checks=[];comparisons=[];summary=[]
+def ck(name,error,gate):checks.append(dict(name=name,error=float(error),gate=gate,passed=bool(math.isfinite(error)and abs(error)<=gate)))
+for ch in LOCK['channels']:
+ rows=json.loads((R/f'{ch}_successor_processed.json').read_text())
+ for rad in LOCK['radiation']:
+  selected=[r for r in rows if r['radiation']==rad];assert [r['order']for r in selected]==LOCK['incident_orders']
+  for a,b in zip(selected[:-1],selected[1:]):
+   errors={}
+   for branch in('forward','backward'):
+    for i in(0,1):
+     v,w=a[branch][i],b[branch][i]
+     if v['log']is None:
+      assert rad['mode']=='empty'and branch=='backward'and v['value']==w['value']==0. and w['log']is None
+      continue
+     error=abs(math.expm1(v['log']-w['log']));errors[f'{branch}_{i}']=error
+     ck(f'{ch} {rad["name"]} {a["order"]}->{b["order"]} {branch}{i}',error,3e-6)
+   comparisons.append(dict(channel=ch,radiation=rad,orders=[a['order'],b['order']],positive_RQ_fractional_changes=errors,max_change=max(errors.values()),gate=3e-6,passed=max(errors.values())<=3e-6))
+  for a in selected:
+   assert a['complete_finite_rule']is True and a['whole_moment_qualified']is False
+   for i,ar in enumerate(a['ordinary_DOS_arithmetic']):
+    for key,error in ar.items():ck(f'{ch} {rad["name"]} n{a["order"]} ordinary DOS {i}{key}',error,3e-9)
+   if rad['mode']=='FD':ck(f'{ch} {rad["name"]} n{a["order"]} entropy-affinity',a['entropy_affinity_gross_residual'],3e-9)
+   if rad['name']=='LTE':ck(f'{ch} LTE n{a["order"]} direct net/gross',a['LTE_net_over_gross'],2e-9)
+   # Stoichiometric finite-bin identities, declared algebraic not new physics.
+   sign=-1 if ch=='EC'else1;netR=a['net'][0]['value'];n=-sign*netR;p=sign*netR;e=sign*netR;radiationLe=-sign*netR
+   gross=a['forward'][0]['value']+a['backward'][0]['value']
+   for label,error in [('baryon',n+p),('charge',p-e),('Le',e+radiationLe)]:ck(f'{ch} {rad["name"]} n{a["order"]} {label} algebra',error/gross,3e-9)
+  finest=next(v for v in comparisons if v['channel']==ch and v['radiation']==rad and v['orders']==[24,32]);prior=next(v for v in comparisons if v['channel']==ch and v['radiation']==rad and v['orders']==[16,24])
+  summary.append(dict(channel=ch,radiation=rad,range_MeV=LOCK['channels'][ch],finest24to32_max=finest['max_change'],prior16to24_max=prior['max_change'],finite_incident_target_pass=finest['passed']and prior['passed'],finest_positive_F_RQ=selected[-1]['forward'],finest_positive_B_RQ=selected[-1]['backward'],finest_net_RQ=selected[-1]['net'],execution_source_group=selected[-1]['execution_source_group'],whole_energy_moments_tails='OPEN',qualification='fixed inner profile finite range ONLY; DIFFERENT study review PENDING'))
+# Actual per-node diagnostics are separate from posterior source moment algebra.
+nodecounts={};allseconds=[]
+for ch in LOCK['channels']:
+ count=0;directory='raw_successor'if ch=='NEUTRON_DECAY'else'raw'
+ for n in LOCK['incident_orders']:
+  for first in range(0,n,4):
+   p=R/directory/f'{ch}_{n}_{first:02d}.json';d=json.loads(p.read_text());assert d['complete']is True
+   for node in d['rows']:
+    ck(f'{ch} n{n} node{node["index"]} posterior KMS',node['KMS_log_residual'],2e-9);allseconds.append(node['seconds']);count+=1
+ nodecounts[ch]=count
+# Own harness vs actual fresh public API: results must exist, no adoption of a
+# missing/interrupted comparison or synthetic official output record.
+public=[]
+for ch in LOCK['channels']:
+ for rad in('empty','LTE'):
+  p=R/'raw_successor'/f'public_agreement_{ch}_{rad}.json';d=json.loads(p.read_text());assert not d['failed']
+  for c in d['checks']:ck(f'fresh public {ch} {rad} '+c['name'],c['error'],c['gate'])
+  public.append(dict(path=str(p.relative_to(R)),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),passed=d['passed'],seconds=d['seconds'],public_execution_candidate=d['public_execution_candidate'],reference_execution_group=d['reference_execution_group']))
+out=dict(kind='Author finite-range incident-convergence assessment; no whole moments',checks=checks,passed=sum(c['passed']for c in checks),failed=[c for c in checks if not c['passed']],coarse_failures_preserved=[v for v in comparisons if not v['passed']],comparisons=comparisons,summary=summary,actual_coefficient_nodes=nodecounts,total_actual_coefficient_nodes=sum(nodecounts.values()),actual_public_comparisons=public,max_single_coefficient_seconds=max(allseconds),fixed_state=LOCK['bath'],source_succession_sha256=hashlib.sha256((R/'SUCCESSOR_SOURCE_ADMISSION.json').read_bytes()).hexdigest(),whole_energy_moments_tails='OPEN',independent_study_review='PENDING')
+(R/'ANALYSIS_SUCCESSOR.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n');print('PASS',out['passed'],'retainedcoarseFAIL',len(out['failed']),'nodes',out['total_actual_coefficient_nodes']);print([(s['channel'],s['radiation']['name'],s['finest24to32_max'])for s in summary])

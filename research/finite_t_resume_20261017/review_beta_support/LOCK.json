@@ -1,0 +1,81 @@
+{
+  "created_utc": "2026-10-17T19:43:07.316321+00:00",
+  "blind_prep_files": {
+    "ANALYTIC_SUPPORT.json": "3a02e87e7e8973474ed092c05a5001d7a753602820d449c268c6a7f561e79a7e",
+    "LOCK.json": "d48328ad7ff18b3600944b92151ca35e58389b7374c25cb283089ec07456e696",
+    "ORACLE_PLAN.md": "8f8ffc28983d4148e9a0325053825e9c09ee6c61e85b92508455f0f83cb29b86",
+    "SAVED_FAILED_GATES.json": "44be6a33cb501a10b546bfccace90851500e1f032c19e351e8df81d91940f2f5",
+    "prepare.py": "d2c4a596c3bb969dc9ae21ea4a7d994fa569b3a9211779d9ac5dc11680d3589a"
+  },
+  "blind_prep_checkpoint": "6257b765dbe024b655ed3b9980470187f3c26f82ad125d8f320cafd5dba07dcc",
+  "author_files": {
+    "ASSESSMENT.json": "480c585f9b28d7bda969bfd68191e11ab36ae7b98a739e9d2749a31c6c40eb7f",
+    "E120_PANEL.json": "a8519adadb4c27340618a55fd3952fdce02fe3d0cb42735732647ee245870d09",
+    "E120_SEMI16.json": "c409a209d019e7b7cd83dd78232e057c8a48b2dfe9fadb5e3092798d9c7c06ce",
+    "E120_SEMI24.json": "7bcf1395ca4a77d81b120c66bac1c2151497257956fb555f14a379477b762e66",
+    "E130_PANEL.json": "739a3b91710f84d519bd114eb16c13463db77b55632f3521856e10ee45db4069",
+    "E130_SEMI16.json": "7a729cd644a00a1d74a43ea59e2f7ec7ce1686b2a3e7e58334a799301cb80f91",
+    "E130_SEMI24.json": "5d057f7ff693e1912a2116e5c420fea0559b61d9db88cdcd1ebb13f207afce71",
+    "OLD_TAIL70.json": "1b876ffb685f5b4f4dc29a99c0f339fb19acceec4ffc7ddeefde6136a9293e7f",
+    "OLD_TAIL90.json": "c57aa78e7eab98901a033dc58d9c7d2b30d89f975bffc339053d96814152b44c",
+    "ORIGINAL_SOURCE_PIN.json": "229fb81a86e8e0e0530216d8665c10e0e7440f4b4ca1fbe932bc2372487f7956",
+    "PHASE_JACOBIAN_RAW.json": "cdf3724fdd84cf600e83758fc769b058013be7e171a43951b20b042f6a06a27d",
+    "PRIOR_BAND_REPORT.md": "83acefd6b1930ce69511419435194b04b46f1f7472a2e1227071e113c1685cf0",
+    "PRIOR_CONTROL_ASSESSMENT.json": "df0e4964bab8c2a4edec2d30dcc85fdba677c67bc08eb11b80a32602c14fe858",
+    "README.md": "a42ac6d9a7903164f57645f239dccc2bb8aff0dbb0402c859aae5636726cff1d",
+    "REPORT.md": "965b500e41284aa87dbe5584706824ee2e5b0333606b677f31e8a51eb7f828d0",
+    "assess.py": "bd7e8ccc1bad18bf07587cb79ba066cb0d108f9c03d099b79effaaa375a34e48",
+    "beta_pr55_reference/__init__.py": "8b3f4cb81b5ffbc5f56de56d004fc41ddb828c0c912f79bfee2385ebded01273",
+    "beta_pr55_reference/_weak_current.py": "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc",
+    "beta_pr55_reference/_weak_decay.py": "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc",
+    "beta_pr55_reference/_weak_quadrature.py": "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69",
+    "beta_pr55_reference/_weak_spectral_capture.py": "4384208e51ff0e2b78a1e6587beccbb5f8fe1400f7dd911f5fa90464cbd2e684",
+    "beta_pr55_reference/_weak_spectral_common.py": "572acb57fcca43f9f0a4173c4f7bad5fbd1c99d02f643950b18a05bc504c36d3",
+    "beta_pr55_reference/_weak_spectral_decay.py": "148142642df36c1d392333ee26b3479c53a523d14764ca67154a6ed664b5cc86",
+    "beta_pr55_reference/_weak_two_body.py": "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366",
+    "beta_pr55_reference/weak_reference.py": "76e569023bcde176086384ffbcdff861d120b6b9ba9cafe84041ceabb598b5f9",
+    "conditional_beta.py": "148c99c37dc0550ca983b53d86123e25125469b15fd2fde9edc16c169c2ac191",
+    "phase_jacobian.py": "208cb89161240c0c3bbd45625556bb84152812e3c5080546af96807c0ae8f656",
+    "run_one.py": "c276a94a62eb09ed4e0d4befc3c2f90540a147c41b4fd2a367d7d5e805d4b4ba"
+  },
+  "author_manifest": "acec26c884203ed396e7d9ff0684a31568f172826a692b50a52fb589380547f6",
+  "jobs": [
+    {
+      "kind": "oracle",
+      "E": 1.2,
+      "parent": 16,
+      "rest_nu": 16,
+      "electron": 16,
+      "phi": 8
+    },
+    {
+      "kind": "oracle",
+      "E": 1.2,
+      "parent": 24,
+      "rest_nu": 24,
+      "electron": 24,
+      "phi": 12
+    },
+    {
+      "kind": "oracle",
+      "E": 1.27,
+      "parent": 24,
+      "rest_nu": 24,
+      "electron": 24,
+      "phi": 12
+    },
+    {
+      "kind": "candidate",
+      "E": 1.27,
+      "parent": 24,
+      "rest_nu": 24,
+      "electron": 24,
+      "phi": 12
+    }
+  ],
+  "actual_oracle_map": "threshold-shifted parent genLaguerre alpha1.5; rest_nu endpoint gap Jacobi beta.5; affine exact rest electron energy; original energy-cone Jacobian and literal old beta spinor current",
+  "branch_relative_gate": 3e-06,
+  "max_calls": 4,
+  "max_seconds": 90,
+  "no_extra_rungs": true
+}

@@ -1,0 +1,184 @@
+{
+  "checks": [
+    {
+      "name": "1S0 pre-clamp Tc asymptote 1e-05",
+      "error": -4.9373654698814384e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "3P2B pre-clamp Tc asymptote 1e-05",
+      "error": -7.423543586260184e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "1S0 pre-clamp Tc asymptote 1e-06",
+      "error": -4.937564282325724e-06,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "3P2B pre-clamp Tc asymptote 1e-06",
+      "error": -7.428936862452495e-06,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "1S0 pre-clamp Tc asymptote 1e-07",
+      "error": -4.942879392455524e-07,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "3P2B pre-clamp Tc asymptote 1e-07",
+      "error": -7.434771871484003e-07,
+      "tolerance": 0.001,
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": [],
+  "slopes": {
+    "1S0": 2.2344480483961867e+21,
+    "3P2B": 6.792583439324786e+21
+  },
+  "rows": [
+    {
+      "delta": 0.001,
+      "T": 999000000.0,
+      "actual_tau": 0.999,
+      "1S0": {
+        "Q": 2.2234712905274624e+18,
+        "leading_linear_Tc_prediction": 2.2344480483961866e+18,
+        "relative_to_linear": -0.0049125142455663795
+      },
+      "3P2B": {
+        "Q": 6.745891484716081e+18,
+        "leading_linear_Tc_prediction": 6.792583439324787e+18,
+        "relative_to_linear": -0.00687396114096861
+      }
+    },
+    {
+      "delta": 0.0001,
+      "T": 999900000.0,
+      "actual_tau": 0.9999,
+      "1S0": {
+        "Q": 2.2333453288698954e+17,
+        "leading_linear_Tc_prediction": 2.234448048396187e+17,
+        "relative_to_linear": -0.0004935086886818096
+      },
+      "3P2B": {
+        "Q": 6.787577460125606e+17,
+        "leading_linear_Tc_prediction": 6.792583439324786e+17,
+        "relative_to_linear": -0.0007369772110855655
+      }
+    },
+    {
+      "delta": 1e-05,
+      "T": 999990000.0,
+      "actual_tau": 0.99999,
+      "1S0": {
+        "Q": 2.2343377255298028e+16,
+        "leading_linear_Tc_prediction": 2.2344480483961868e+16,
+        "relative_to_linear": -4.9373654698814384e-05
+      },
+      "3P2B": {
+        "Q": 6.792079188932535e+16,
+        "leading_linear_Tc_prediction": 6.7925834393247864e+16,
+        "relative_to_linear": -7.423543586260184e-05
+      }
+    },
+    {
+      "delta": 1e-06,
+      "T": 999999000.0,
+      "actual_tau": 0.999999,
+      "1S0": {
+        "Q": 2234437015665312.0,
+        "leading_linear_Tc_prediction": 2234448048396186.5,
+        "relative_to_linear": -4.937564282325724e-06
+      },
+      "3P2B": {
+        "Q": 6792532977651282.0,
+        "leading_linear_Tc_prediction": 6792583439324786.0,
+        "relative_to_linear": -7.428936862452495e-06
+      }
+    },
+    {
+      "delta": 1e-07,
+      "T": 999999900.0,
+      "actual_tau": 0.9999999,
+      "1S0": {
+        "Q": 223444694393546.53,
+        "leading_linear_Tc_prediction": 223444804839618.66,
+        "relative_to_linear": -4.942879392455524e-07
+      },
+      "3P2B": {
+        "Q": 679257838919395.8,
+        "leading_linear_Tc_prediction": 679258343932478.6,
+        "relative_to_linear": -7.434771871484003e-07
+      }
+    },
+    {
+      "delta": 1e-08,
+      "T": 999999990.0,
+      "actual_tau": 0.99999999,
+      "1S0": {
+        "Q": 22344479492952.375,
+        "leading_linear_Tc_prediction": 22344480483961.867,
+        "relative_to_linear": -4.435142242353862e-08
+      },
+      "3P2B": {
+        "Q": 67925829687966.41,
+        "leading_linear_Tc_prediction": 67925834393247.87,
+        "relative_to_linear": -6.927086726449261e-08
+      }
+    },
+    {
+      "delta": 1e-10,
+      "T": 999999999.9,
+      "actual_tau": 0.9999999999,
+      "1S0": {
+        "Q": 223444823217.19617,
+        "leading_linear_Tc_prediction": 223444804839.61868,
+        "relative_to_linear": 8.224660885680635e-08
+      },
+      "3P2B": {
+        "Q": 679258399629.9065,
+        "leading_linear_Tc_prediction": 679258343932.4786,
+        "relative_to_linear": 8.199741441394792e-08
+      }
+    },
+    {
+      "delta": 1e-14,
+      "T": 999999999.99999,
+      "actual_tau": 0.999999999999,
+      "1S0": {
+        "Q": 2234398618.5662856,
+        "leading_linear_Tc_prediction": 22344480.483961865,
+        "relative_to_linear": 98.99778782818709
+      },
+      "3P2B": {
+        "Q": 6792433175.691649,
+        "leading_linear_Tc_prediction": 67925834.39324786,
+        "relative_to_linear": 98.99778782793794
+      }
+    },
+    {
+      "delta": 0.0,
+      "T": 1000000000.0,
+      "actual_tau": 0.999999999999,
+      "1S0": {
+        "Q": 2234398618.5664415,
+        "leading_linear_Tc_prediction": 0.0,
+        "relative_to_linear": null
+      },
+      "3P2B": {
+        "Q": 6792433175.692125,
+        "leading_linear_Tc_prediction": 0.0,
+        "relative_to_linear": null
+      }
+    }
+  ],
+  "qualification": "Linear limit only above tau clamp distance; source deliberately saturates tau at1\u22121e\u221212 including Tc, not a literal exact-zero implementation."
+}

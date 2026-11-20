@@ -1,0 +1,24 @@
+{
+  "pin_sets_unchanged": {
+    "PRE_QUADRATURE_REPAIR_PIN.json": 31,
+    "PRE_SCIPY17_REPAIR_PIN.json": 75,
+    "INITIAL_INDEPENDENT_REVIEW_PIN.json": 20,
+    "INDEPENDENT_QUADRATURE_REVIEW_PIN.json": 15
+  },
+  "exact_baseline_blobs": 71,
+  "candidate_source_sha256": "53518a39d9b4030745285d774e028e8814485ca25d48f8fa45587d5a14e9af9e",
+  "staged_paths": [
+    "README.md",
+    "docs/finite_temperature_leptons.md",
+    "examples/finite_t_leptons.py",
+    "src/nmbackend/reference/finite_t_leptons.py",
+    "tests/test_finite_t_leptons.py"
+  ],
+  "candidate_tests": 82,
+  "cold_tests": 13,
+  "algebra_import_preservation_checks": 259,
+  "momentum_checks": 213,
+  "matched_thermal_rejections_not_forward_passes": 2,
+  "initial_independent_review_sha256": "3fccbef5d2698ce32b1bc225f9a056d987a95e618b85e361bf621c789ac244e9",
+  "quadrature_review_sha256": "5c5b3fafa8227191107cbaf4887fd1f9bf22b232a7f390da207c90aaf159a9b4"
+}

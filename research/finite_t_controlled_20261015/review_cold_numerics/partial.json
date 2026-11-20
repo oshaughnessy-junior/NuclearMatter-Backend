@@ -1,0 +1,266 @@
+{
+  "phase": "point_complete",
+  "checks": [
+    {
+      "name": "forward density Y0.1T0.01 nn",
+      "error": 7.771561172376096e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward density Y0.1T0.01 np",
+      "error": 2.375877272697835e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward density Y0.1T0.01 ne_net",
+      "error": 5.3512749786932545e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "new direct-cos angular/tail refinement Y0.1 log_j",
+      "error": 0.0,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "root Gauss versus independent adaptive/directcos Y0.1 log_j",
+      "error": 1.065814103640156e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent adaptive reported error Y0.1 log_j",
+      "error": 2.1611785735069663e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "new direct-cos angular/tail refinement Y0.1 log_chi",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "root Gauss versus independent adaptive/directcos Y0.1 log_chi",
+      "error": 7.105427357600977e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent adaptive reported error Y0.1 log_chi",
+      "error": 2.1467647382724302e-14,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independently integrated jchi KMS Y0.1",
+      "error": 2.1316282072803006e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "original mapped72 remains failed same3e-6 gate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "forward density Y0.102T0.009 nn",
+      "error": 9.992007221626409e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward density Y0.102T0.009 np",
+      "error": 6.294964549624638e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "forward density Y0.102T0.009 ne_net",
+      "error": 3.674838211509268e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "new direct-cos angular/tail refinement Y0.102 log_j",
+      "error": 3.5527136788004946e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "root Gauss versus independent adaptive/directcos Y0.102 log_j",
+      "error": 2.842170943040441e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent adaptive reported error Y0.102 log_j",
+      "error": 3.5276499308496295e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "new direct-cos angular/tail refinement Y0.102 log_chi",
+      "error": 3.552713678800507e-15,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "root Gauss versus independent adaptive/directcos Y0.102 log_chi",
+      "error": 1.7763568394002662e-14,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "independent adaptive reported error Y0.102 log_chi",
+      "error": 3.5119464658608293e-13,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "independently integrated jchi KMS Y0.102",
+      "error": 3.930189507173054e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "Y": 0.1,
+      "T": 0.01,
+      "E": 0.03,
+      "delta": 54.447018498209374,
+      "mu_e": 61.048544352262255,
+      "affinity": -3.725847059854459e-05,
+      "independent64": {
+        "logs": [
+          -29.577932950095676,
+          -26.574207103035604
+        ],
+        "relative_errors": [
+          2.1467823484566785e-14,
+          2.1416293224811014e-14
+        ],
+        "angle_order": 64,
+        "tail": 100.0,
+        "explicit_budget_y": 3.003725847059968
+      },
+      "independent96": {
+        "logs": [
+          -29.577932950095676,
+          -26.574207103035608
+        ],
+        "relative_errors": [
+          2.1611785735069663e-14,
+          2.1467647382724302e-14
+        ],
+        "angle_order": 96,
+        "tail": 180.0,
+        "explicit_budget_y": 3.003725847059968
+      },
+      "author_Ecos": {
+        "method": "Gauss_E_cosine_kinematic_edges",
+        "log_j": -29.577932950095665,
+        "log_chi": -26.574207103035615,
+        "j": {
+          "log": -29.577932950095665,
+          "value": 1.427141166296085e-13,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "log": -26.574207103035615,
+          "value": 2.8771896820394144e-12,
+          "representable": true,
+          "reason": null
+        },
+        "order": 28,
+        "angle_order": 56,
+        "tail": 180.0,
+        "panel_count_range": [
+          44,
+          44
+        ]
+      },
+      "original_mapped72_logs": [
+        -29.578293240849014,
+        -26.57456739378896
+      ],
+      "old_mapped72_relative_errors": [
+        -0.0003602258564191159,
+        -0.00036022585643332166
+      ]
+    },
+    {
+      "Y": 0.102,
+      "T": 0.009,
+      "E": 0.0234,
+      "delta": 54.89039263239748,
+      "mu_e": 61.45282398510973,
+      "affinity": -2.969855071199845e-05,
+      "independent64": {
+        "logs": [
+          -26.427410532774662,
+          -23.82411069380626
+        ],
+        "relative_errors": [
+          3.526343952203135e-13,
+          3.5118239296304866e-13
+        ],
+        "angle_order": 64,
+        "tail": 100.0,
+        "explicit_budget_y": 2.6032998389682565
+      },
+      "independent96": {
+        "logs": [
+          -26.42741053277466,
+          -23.824110693806265
+        ],
+        "relative_errors": [
+          3.5276499308496295e-13,
+          3.5119464658608293e-13
+        ],
+        "angle_order": 96,
+        "tail": 180.0,
+        "explicit_budget_y": 2.6032998389682565
+      },
+      "author_Ecos": {
+        "method": "Gauss_E_cosine_kinematic_edges",
+        "log_j": -26.42741053277463,
+        "log_chi": -23.824110693806247,
+        "j": {
+          "log": -26.42741053277463,
+          "value": 3.332126148073837e-12,
+          "representable": true,
+          "reason": null
+        },
+        "chi": {
+          "log": -23.824110693806247,
+          "value": 4.5011158339038616e-11,
+          "representable": true,
+          "reason": null
+        },
+        "order": 28,
+        "angle_order": 56,
+        "tail": 180.0,
+        "panel_count_range": [
+          44,
+          44
+        ]
+      }
+    }
+  ],
+  "source_sha256": {
+    "cold_capture/resolved.py": "d988860e717ce3a08d8fc2d59a3bdc91c506be80ffb44250e6c55cd67b5354a1",
+    "urca_threshold/threshold_study.py": "d658eceaf83574971940540fdc7f413cec47df6ba7ce0f955d7c1f5a9b787d1a",
+    "urca_threshold/initial_cold_extension_failure.json": "7cf53b0e10dc201fd2dc59ae7acc9e5ca44b9d0525d38ada4ad9399627fc4b96",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  },
+  "runtime_seconds": 2.5062515418976545
+}

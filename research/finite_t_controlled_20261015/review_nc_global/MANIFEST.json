@@ -1,0 +1,22 @@
+{
+  "status": "accepted_selected_fixedbath_finitebox_global_exchange",
+  "passed": true,
+  "checks": 20,
+  "source_sha256": {
+    "nc_global_exchange/exchange.py": "e591e509a04f577dba73ee36db967b2e09c20c3ab80c22a18edc480914c2eb94",
+    "nc_global_exchange/qualification.json": "0016a7b2a2809487cff91ab6e750221e975afbb1eb8c7d27c15ee53a6889d292",
+    "nc_global_exchange/results_LTE.json": "e760d93aab0200fd3d6d90999594a6bca290c2d794efab345cf8d99f2520c8dd",
+    "nc_global_exchange/initial_budget_stop.txt": "724f86eb260d11e11ef650d084bda8cc1665992c813a2fa551f851211e6cb7df",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2"
+  },
+  "source_unchanged": true,
+  "files_sha256": {
+    "audit_bookkeeping.py": "3703acc32f54757cb07ff9ee3bbcd2fcda24d9f8f01d3e8d825e0aa739278f17",
+    "results.json": "162fe5c82e9cbf7e09626830f44f60fa6dba5ea644084c552fb1d93fd5bc8dad",
+    "bookkeeping.json": "e4bfff896a23bda0ffcd97c4407e562d4b842379b835c9f503672b17222eb9a2",
+    "probe.py": "eae19a37b1ae59769314fa5f3f76f02b7076e327807510cf6bca5ea922615a60",
+    "REVIEW.md": "46c55eff6dc8625b5fc83fd3fa50f41ccc79a0a34a3f35665b198ee4ca874df0"
+  },
+  "scope": "Newwarmheldoutbath, independentlyorderedactualreversefullsquare andboundaryblocks; nohydro/evolution/infiniteenergyclaim"
+}

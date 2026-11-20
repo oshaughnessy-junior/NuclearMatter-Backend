@@ -1,0 +1,1 @@
+Completed cheap time-step replays, but final JSON serialization failed on NumPy bool scalar. Final64-step physical trajectories remain in refined_edge_grid_results.json; replayed16/32 steps after explicit float conversion, not inferred from unfinished output.

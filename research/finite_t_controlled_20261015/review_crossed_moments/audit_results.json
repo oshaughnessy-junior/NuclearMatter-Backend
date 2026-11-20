@@ -1,0 +1,217 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "original24 failed gates still retained",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.json physical masses",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "results.json muons explicitly absent",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.json charge with electron pairs",
+      "error": 4.440892098500626e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "results.jsonunblocked baryon ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonunblocked charge ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonunblocked electron lepton ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonempty baryon ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonempty charge ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonempty electron lepton ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonFD baryon ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonFD charge ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonFD electron lepton ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonLTE baryon ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonLTE charge ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "results.jsonLTE electron lepton ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "new denserFD state distinguishes MB approximation",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.json physical masses",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "denser_results.json muons explicitly absent",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.json charge with electron pairs",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonunblocked baryon ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonunblocked charge ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonunblocked electron lepton ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonempty baryon ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonempty charge ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonempty electron lepton ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonFD baryon ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonFD charge ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonFD electron lepton ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonLTE baryon ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonLTE charge ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "denser_results.jsonLTE electron lepton ledger",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "filename": "results.json",
+      "FD_neutron_density": 1.5870000000019411e-12,
+      "MB_same_mu_density": 1.5870001450132994e-12,
+      "MB_relative_density_excess": 9.137451684182452e-08,
+      "neutron_pair_logratio": -34135.678244549745,
+      "electron_particle_density": 7.131058858172616e-13,
+      "electron_antiparticle_density": 1.0588581726098975e-16
+    },
+    {
+      "filename": "denser_results.json",
+      "FD_neutron_density": 1.586999999999217e-08,
+      "MB_same_mu_density": 1.5884507236660444e-08,
+      "MB_relative_density_excess": 0.0009141295947245887,
+      "neutron_pair_logratio": -34154.09983891435,
+      "electron_particle_density": 7.129999999999999e-09,
+      "electron_antiparticle_density": 7.753024073697304e-25
+    }
+  ]
+}

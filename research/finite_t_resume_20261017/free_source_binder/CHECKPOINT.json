@@ -1,0 +1,25 @@
+{
+  "status": "FROZEN AUTHOR CANDIDATE; independent new-binder review pending",
+  "scientific_check_counts": {
+    "eos_results.json": 72,
+    "binding_ledger_results.json": 84,
+    "source_refinement_results.json": 19,
+    "wheel_result.json": 3
+  },
+  "package_tests": 25,
+  "final_failed_scientific_checks": [],
+  "candidate_paths": 8,
+  "changed_paths_record": "CHANGED_PATHS.json",
+  "diff_sha256": "4e98dd858fc5d369afcb58fb5b78f4822780af810033c271b20a774c1d7f5d43",
+  "package_base": "Explicit unmerged PR51/52/54 union; not main",
+  "modules": {
+    "free_matter.py": "8541366391867d8c7500deea3759c1c05746c40db3642d93d3d29e85a0242d9f",
+    "_free_matter_sources.py": "9b3130d23eb2b8a229cdd1d0dda88df3898f048b069ad8e87d172d49b0320401"
+  },
+  "resource_last_verified": {
+    "used_percent": 92,
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "reset": 1792652325
+  },
+  "no_ODE_no_publication": true
+}

@@ -1,0 +1,43 @@
+{
+  "status": "PRECOMPUTATION_FRESH_INDEPENDENT_VALIDATION_LOCK",
+  "locked_utc": "2026-10-16T01:48:28.693826+00:00",
+  "states": [
+    {
+      "T": 1.6,
+      "nB": 4e-07,
+      "Ye": 0.32
+    },
+    {
+      "T": 2.8,
+      "nB": 8e-07,
+      "Ye": 0.23
+    },
+    {
+      "T": 1.87,
+      "nB": 7e-07,
+      "Ye": 0.41
+    },
+    {
+      "T": 2.37,
+      "nB": 3e-07,
+      "Ye": 0.27
+    }
+  ],
+  "outputs": [
+    "R_EC",
+    "Q_EC",
+    "R_PC",
+    "Q_PC"
+  ],
+  "positive_individual_fractional_gate": 0.01,
+  "reference_refinement": 3e-06,
+  "density_gate": 3e-08,
+  "no_retuning": true,
+  "author_sources": {
+    "approximation.py": "bd7480c670ca7a00b336c234e0d825b38701f26620f4065f719b30893acb91ee",
+    "COEFFICIENT_FREEZE.json": "6e81f38d4538732abc49462331c7277160ba220518747f43aca1b13421d71a12",
+    "MANIFEST.json": "db256f83bf4840d5a3a5985ef22ee993642dc17fc7faa4f97db165968d95f1f4",
+    "LOCK.json": "e5b97f0023a02b8f15d036765082499b6d9705f1037ac75bcc3d3a099dfaf5cd",
+    "REVISED_LOCK2.json": "5b4ee8835a938b499fab0eba8095b04f18ef59b61dba957ee62220acaf7f225d"
+  }
+}

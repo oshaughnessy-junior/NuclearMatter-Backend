@@ -1,0 +1,119 @@
+{
+  "lock_sha256": "cc7a622aa0cd4ea4afdffbbf719a146ff0cb807c49fd61b6b462cb2913685d90",
+  "source_pin_sha256": "576a9a2584a730bab076726cb968ac9d0cc696a741876b55bd3a9e86fe082f50",
+  "candidate_manifest_sha256": "dcfbafe85645caa4ac6f2ea1f4cd3a7cb55775d030eddc0c9c5a8c9211a8b216",
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "model": "fixed physical free fullGuo electronCC",
+  "source": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_weak_spectral_port/test_mirror/src/nmbackend/reference/weak_reference.py",
+  "channel": "EC",
+  "energy_MeV": 30.0,
+  "variation": {
+    "name": "higher_coupled_orders",
+    "changes": {
+      "lepton_order": 16,
+      "angle_order": 20,
+      "energy_order": 20,
+      "phi_order": 8
+    }
+  },
+  "controls": {
+    "lepton_order": 16,
+    "angle_order": 20,
+    "energy_order": 20,
+    "phi_order": 8,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 110.0
+  },
+  "complete": true,
+  "result": {
+    "channel": "EC",
+    "bath": {
+      "T": 2.0,
+      "mu_n": 919.8287578100662,
+      "mu_p": 916.8449303084382,
+      "mu_e": 0.17446333200826397
+    },
+    "energy": 30.0,
+    "j": {
+      "value": 1.493937249602408e-05,
+      "log": -11.111510380746509,
+      "support": "positive_support",
+      "reason": "represented"
+    },
+    "true_chi": {
+      "value": 198.97351075161356,
+      "log": 5.293171704063393,
+      "support": "positive_support",
+      "reason": "represented"
+    },
+    "controls": {
+      "lepton_order": 16,
+      "angle_order": 20,
+      "energy_order": 20,
+      "phi_order": 8,
+      "tail": 70.0,
+      "outer_tail": 40.0,
+      "parent_order": 12,
+      "cone_order": 16,
+      "electron_order": 16,
+      "decay_phi_order": 10,
+      "budget_seconds": 110.0
+    },
+    "geometry": [
+      "El=ME+y\u00b2",
+      [
+        0.51099895069,
+        1.174463332008264,
+        1.5883192648890305,
+        2.174463332008264,
+        3.002175197769797,
+        6.174463332008264,
+        7.293332360000022,
+        8.657598929292863,
+        12.174463332008264,
+        14.327061165430823,
+        17.140734526577464,
+        19.293332360000022,
+        22.81019676271542,
+        24.174463332008266,
+        25.293332360000022,
+        28.46562049423849,
+        29.293332360000022,
+        29.879476427119254,
+        30.293332360000022,
+        31.293332360000022,
+        32.29333236000002,
+        32.70718829288079,
+        33.29333236000002,
+        34.10700572114666,
+        34.12104422576156,
+        37.29333236000002,
+        39.77646795728462,
+        43.29333236000002,
+        48.259603554569225,
+        55.29333236000002,
+        65.22587474913843,
+        111.29333236000002
+      ],
+      "exact q-axis support",
+      9920,
+      0
+    ],
+    "differential_coordinates": null,
+    "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+    "complete": true,
+    "units": "s^-1 per occupation"
+  },
+  "KMS_log_residual": 3.552713678800501e-15,
+  "seconds": 5.194463458145037
+}

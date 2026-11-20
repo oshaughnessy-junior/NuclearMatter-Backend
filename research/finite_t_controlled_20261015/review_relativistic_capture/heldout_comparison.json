@@ -1,0 +1,314 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "capture12 exact fullstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "capture12 exact current immutable source data",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "capture12 beforeafter hashes same",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "capture12 independent inverse KMS",
+      "error": 2.842170943040401e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "capture16 exact fullstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "capture16 exact current immutable source data",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "capture16 beforeafter hashes same",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "capture16 independent inverse KMS",
+      "error": 2.842170943040401e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "events10 exact fullstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "events10 exact current immutable source data",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "events10 beforeafter hashes same",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "events10 independent inverse KMS",
+      "error": 3.907985046680551e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "events10 actual initial FDdensity",
+      "error": 7.240874566605271e-13,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "events10 actualfourmomentum residual",
+      "error": 4.839975386011816e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "events14 exact fullstate",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "events14 exact current immutable source data",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "events14 beforeafter hashes same",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "events14 independent inverse KMS",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "events14 actual initial FDdensity",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "events14 actualfourmomentum residual",
+      "error": 7.259963079017724e-16,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "capture12 versus capture16 j",
+      "error": 1.2551737427123397e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture12 versus capture16 chi",
+      "error": 1.2553513783962775e-11,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "events10 versus events14 j",
+      "error": 2.2421502494577373e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "events10 versus events14 chi",
+      "error": 2.2421504270933813e-07,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture16 versus events14 j",
+      "error": 1.6132872816734424e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "capture16 versus events14 chi",
+      "error": 1.6132339909682516e-10,
+      "tolerance": 3e-06,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "mode": "capture12",
+      "j": {
+        "value": 0.0002442087942855747,
+        "log": -8.317486984300668,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 3357064.412669535,
+        "log": 15.026577463347213,
+        "representable": true,
+        "reason": null
+      },
+      "runtime_seconds": 18.52438687509857
+    },
+    {
+      "mode": "capture16",
+      "j": {
+        "value": 0.00024420879428863995,
+        "log": -8.317486984288117,
+        "representable": true,
+        "reason": null
+      },
+      "chi": {
+        "value": 3357064.412711678,
+        "log": 15.026577463359766,
+        "representable": true,
+        "reason": null
+      },
+      "runtime_seconds": 43.685118208872154
+    },
+    {
+      "mode": "events10",
+      "j": {
+        "log": -8.317487208664495,
+        "value": 0.0002442087394939611,
+        "representable": true,
+        "reason": "represented"
+      },
+      "chi": {
+        "log": 15.026577238983375,
+        "value": 3357063.659465764,
+        "representable": true,
+        "reason": "represented"
+      },
+      "runtime_seconds": 1.4871514160186052
+    },
+    {
+      "mode": "events14",
+      "j": {
+        "log": -8.317486984449445,
+        "value": 0.00024420879424924205,
+        "representable": true,
+        "reason": "represented"
+      },
+      "chi": {
+        "log": 15.026577463198443,
+        "value": 3357064.4121701047,
+        "representable": true,
+        "reason": "represented"
+      },
+      "runtime_seconds": 5.684721624944359
+    }
+  ],
+  "state": {
+    "temperature": 2.7,
+    "nB": 0.00012,
+    "Ye": 0.26,
+    "Ymu": 0.035,
+    "neutron": {
+      "temperature": 2.7,
+      "mass": 939.56542052,
+      "chemical_potential": 930.9020284128333,
+      "kinetic_chemical_potential": -8.663392107166715,
+      "density": 8.459999999999998e-05,
+      "kinetic_energy_density": 0.00034627529455160484,
+      "energy_density": 0.07983350987054358,
+      "pressure": 0.0002300234080390785,
+      "entropy_density": 0.0004848969166136991,
+      "free_energy_density": 0.07852428819568659,
+      "cv_fixed_density": 0.0001273585288465129,
+      "dn_dmu_fixed_temperature": 3.089970047725415e-05,
+      "dn_dtemperature_fixed_mu": 0.0001463162722704404,
+      "dmu_dtemperature_fixed_density": -4.735200342092201,
+      "log_antiparticle_density": -698.9205924713542,
+      "antiparticle_density": 2.9016391424102205e-304,
+      "antiparticle_density_representable": true,
+      "log_antiparticle_to_particle_ratio": -689.5430161800022
+    },
+    "proton": {
+      "temperature": 2.7,
+      "mass": 938.27208816,
+      "chemical_potential": 927.2399435536638,
+      "kinetic_chemical_potential": -11.032144606336146,
+      "density": 3.540000000000054e-05,
+      "kinetic_energy_density": 0.00014430867490375257,
+      "energy_density": 0.033359140595768264,
+      "pressure": 9.586145062285054e-05,
+      "entropy_density": 0.0002335955720707069,
+      "free_energy_density": 0.032728432551177356,
+      "cv_fixed_density": 5.340140317289073e-05,
+      "dn_dmu_fixed_temperature": 1.3034360348468988e-05,
+      "dn_dtemperature_fixed_mu": 7.299554154913823e-05,
+      "dmu_dtemperature_fixed_density": -5.6002396433448505,
+      "log_antiparticle_density": -697.0873115600087,
+      "antiparticle_density": 1.8147933730510844e-303,
+      "antiparticle_density_representable": true,
+      "log_antiparticle_to_particle_ratio": -686.8385128221842
+    },
+    "electron": {
+      "temperature": 2.7,
+      "chemical_potential": 17.978840483356485,
+      "mass": 0.51099895069,
+      "net_density": 3.1200000000000006e-05,
+      "particle_density": 3.120065990885356e-05,
+      "antiparticle_density": 6.599088535538999e-10,
+      "energy_density": 0.0005054580752243948,
+      "pressure": 0.0001682874630447518,
+      "entropy_density": 4.177989451423153e-05,
+      "free_energy_density": 0.0003926523600359697,
+      "cv_fixed_net_density": 3.918101965749879e-05,
+      "dn_dmu_fixed_temperature": 4.5770378965343006e-06,
+      "dn_dtemperature_fixed_mu": 4.211868725841812e-06,
+      "dmu_dtemperature_fixed_net_density": -0.9202171406601217
+    },
+    "muon": {
+      "temperature": 2.7,
+      "chemical_potential": 97.63311085052017,
+      "mass": 105.6583755,
+      "net_density": 4.200000000000005e-06,
+      "particle_density": 4.200000000000005e-06,
+      "antiparticle_density": 1.6682118720896617e-37,
+      "energy_density": 0.0004614592604251075,
+      "pressure": 1.1438353876878458e-05,
+      "entropy_density": 2.3273536566592768e-05,
+      "free_energy_density": 0.000398620711695307,
+      "cv_fixed_net_density": 6.657329906849259e-06,
+      "dn_dmu_fixed_temperature": 1.5290516094473683e-06,
+      "dn_dtemperature_fixed_mu": 6.951442615522079e-06,
+      "dmu_dtemperature_fixed_net_density": -4.546244595389739
+    },
+    "energy_density": 0.11415956780196135,
+    "pressure": 0.0005056106755835592,
+    "entropy_density": 0.0007835459197652302,
+    "free_energy_density": 0.11204399381859523,
+    "cv_fixed_composition": 0.0002265982815837517,
+    "zeta_e": 14.316755624187067,
+    "zeta_mu": 93.97102599135064
+  },
+  "selected_tolerance": 3e-06,
+  "scope": "One additional neutrino-muon capture state and energy only; not a uniform pilot API certificate"
+}

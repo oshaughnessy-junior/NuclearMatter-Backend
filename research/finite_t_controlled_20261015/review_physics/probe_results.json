@@ -1,0 +1,149 @@
+{
+  "scope": "Selected independent physics probes, not domain certification",
+  "checks": [
+    {
+      "name": "momentum density (2.0, 3.0, 0.51099895069)",
+      "measured": 6.341365528224877e-07,
+      "expected": 6.341365528224877e-07,
+      "relative_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "momentum energy (2.0, 3.0, 0.51099895069)",
+      "measured": 4.988172724625474e-06,
+      "expected": 4.988172724625477e-06,
+      "relative_error": 5.094247898069112e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "momentum density (4.0, 110.0, 105.6583755)",
+      "measured": 0.00026131799252921925,
+      "expected": 0.00026131799252921925,
+      "relative_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "momentum energy (4.0, 110.0, 105.6583755)",
+      "measured": 0.02971292393878344,
+      "expected": 0.029712923938783425,
+      "relative_error": 4.670623408321044e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "momentum density (2.0, -3.0, 0.51099895069)",
+      "measured": -6.341365528224877e-07,
+      "expected": -6.341365528224877e-07,
+      "relative_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "momentum energy (2.0, -3.0, 0.51099895069)",
+      "measured": 4.988172724625474e-06,
+      "expected": 4.988172724625477e-06,
+      "relative_error": 5.094247898069112e-16,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "detailed balance electron_capture",
+      "absolute_error": 1.7763568394002505e-15,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "entropy production electron_capture f=0.01",
+      "minimum": 46.85470833957196,
+      "passed": true
+    },
+    {
+      "name": "entropy production electron_capture f=0.2",
+      "minimum": 8.337957517082657,
+      "passed": true
+    },
+    {
+      "name": "entropy production electron_capture f=0.8",
+      "minimum": 9.559741231001457,
+      "passed": true
+    },
+    {
+      "name": "entropy production electron_capture f=0.99",
+      "minimum": 49.95131095110647,
+      "passed": true
+    },
+    {
+      "name": "detailed balance positron_capture",
+      "absolute_error": 1.7763568394002505e-15,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "entropy production positron_capture f=0.01",
+      "minimum": 3.174186413951964,
+      "passed": true
+    },
+    {
+      "name": "entropy production positron_capture f=0.2",
+      "minimum": 0.08840324376856036,
+      "passed": true
+    },
+    {
+      "name": "entropy production positron_capture f=0.8",
+      "minimum": 4.368890037120412,
+      "passed": true
+    },
+    {
+      "name": "entropy production positron_capture f=0.99",
+      "minimum": 13.880364263939233,
+      "passed": true
+    },
+    {
+      "name": "detailed balance neutron_decay",
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "entropy production neutron_decay f=0.01",
+      "minimum": 1.8357916859587768,
+      "passed": true
+    },
+    {
+      "name": "entropy production neutron_decay f=0.2",
+      "minimum": 0.22774327160300006,
+      "passed": true
+    },
+    {
+      "name": "entropy production neutron_decay f=0.8",
+      "minimum": 0.7664950004356059,
+      "passed": true
+    },
+    {
+      "name": "entropy production neutron_decay f=0.99",
+      "minimum": 3.1985866265688663,
+      "passed": true
+    },
+    {
+      "name": "antineutrino disconnected band",
+      "band_MeV": [
+        0.78233340931,
+        1.8043313106899999
+      ],
+      "max_relaxation_s_1": 0.0,
+      "passed": true
+    },
+    {
+      "name": "matter composition energy derivative",
+      "measured": 8.934659132147083,
+      "expected": 8.93465916375892,
+      "relative_error": 3.538113331965125e-09,
+      "tolerance": 2e-07,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

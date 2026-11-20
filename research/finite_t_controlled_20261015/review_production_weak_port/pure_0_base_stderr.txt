@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_port/worker.py", line 32, in <module>
+    stage='PC';p=cp['PC'];rad=[None if r is None else r['mu_antinue']for r in q['radiation'].values()];raw['PC']=O.PC.integral(vars(b),order_n=p[0],order_e=p[1],order_angle=p[2],tail=p[3],budget=105,radiation_mus=rad);ck('PC actualgivenmu neutrondensity',raw['PC']['neutron_density']/forward['neutron']['number']-1,3e-9);ck('PCeventonshell',raw['PC']['max_shell'],2e-10);nofail()
+                                                                                                                                                                                                                                                                                                                                                                                   ^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/review_production_weak_port/worker.py", line 21, in nofail
+    if any(not c['passed']for c in checks):raise ArithmeticError('Initialforward/phasefailurepreserved')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ArithmeticError: Initialforward/phasefailurepreserved

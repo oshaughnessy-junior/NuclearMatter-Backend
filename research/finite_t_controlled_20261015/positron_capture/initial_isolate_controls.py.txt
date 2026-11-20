@@ -1,0 +1,16 @@
+"""Isolate source/outer/tail/angular controls without changing the physics."""
+from pathlib import Path
+import json,math
+import pc_kernel as pc
+H=Path(__file__).parent;old=json.loads((H/'refinement.json').read_text());b=pc.crossed.Bath(**old['rows'][0]['result']['bath']);rows=[];checks=[]
+def gate(name,error,tol):checks.append(dict(name=name,error=float(error),tolerance=tol,passed=bool(math.isfinite(error)and abs(error)<=tol)))
+def save(phase):
+ (H/'isolated_controls.json').write_text(json.dumps(dict(phase=phase,checks=checks,rows=rows,all_pass=all(c['passed']for c in checks)),indent=2)+'\n')
+base=dict(lepton_order=20,angle_order=12,energy_order=20,phi_order=4,tail=50.,outer_tail=24.)
+for name,changes in [('baseline',{}),('outer_tail',dict(outer_tail=32.)),('baryon_tail',dict(tail=70.)),('inner_energy',dict(energy_order=28)),('angular',dict(angle_order=16)),('periodic_phi',dict(phi_order=8))]:
+ c=dict(base);c.update(changes);r=pc.integrate(b,5.,**c);rows.append(dict(label=name,result=r))
+ for key in ['j','chi']:
+  ref=old['rows'][1]['result']if name=='baseline'else rows[0]['result']
+  gate(name+' '+key,r[key]['value']/ref[key]['value']-1,0. if name=='baseline'else3e-6)
+ save(name)
+save('complete');print(json.dumps(dict(checks=len(checks),failed=[c for c in checks if not c['passed']])))

@@ -1,0 +1,22 @@
+{
+  "formula": "Q=4 GF\u00b2 mL pF T^7/(15 pi^5) Nnu a F; Qnatural[MeV^5] -> cgs by MeVerg*1e39/(HC^3*hbar)",
+  "constants": {
+    "GF_MeV_m2": 1.1663785e-11,
+    "HC_MeV_fm": 197.3269804,
+    "hbar_MeV_s": 6.582119569e-22,
+    "kB_MeV_K": 8.617333262145e-11,
+    "MeV_erg": 1.602176634e-06,
+    "Mref_MeV": 940.0
+  },
+  "derived_coefficient": 1.1709801304938587e+21,
+  "legacy_rounded_coefficient": 1.17e+21,
+  "relative_difference": 0.0008377183708194735,
+  "checks": [
+    {
+      "name": "source rounded coefficient vs independent cgs conversion",
+      "tolerance": 0.01,
+      "passed": true
+    }
+  ],
+  "qualification": "Rounded constant check only; does NOT validate weak vertex approximation or total physical PBF accuracy. Legacy kF*197 and mass940 remain untouched."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "AUTHOR_HOLE_BOUND_REPAIR_FROZEN_DIFFERENT_RECHECK_REQUIRED",
+  "base_commit": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "files": {
+    "README.md": "ab0031a2bcf5a2f67dfbad572ff3871498a49457d37a42c53f04003fe3f0b786",
+    "docs/finite_temperature_leptons.md": "d4fc23ce9ed6e6fede4ab0bf580c84795596f23c1c448522e3d98c11d7100794",
+    "examples/finite_t_leptons.py": "9ab591e8de539ba679a0d2d1d97009590dd88db6c897c80282befaa2799c777a",
+    "src/nmbackend/reference/finite_t_leptons.py": "e0c16fc5899d5a9bfe2e8c89ba7255a60e80f0bb620c4f3103a7e4bc68487b90",
+    "tests/test_finite_t_leptons.py": "e8cf1888561ce0542c87a9657b856dbbef36673f2e2ff92a858b4204cffa28ea"
+  },
+  "prior_manifest_sha256": "bdb62cfe3e4192d583d648315ffeaa8219eb1a2d0fea4621396b6c3a4714bb0d",
+  "prior_compatibility_review_sha256": "a3aa12992631504f83811ec569ac9fc044b91246f2cbe5325ed6733e94430f43",
+  "remote_branch_created": false,
+  "production_modified": false
+}

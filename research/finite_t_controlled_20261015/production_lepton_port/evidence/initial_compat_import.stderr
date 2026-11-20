@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_lepton_port/evidence/compat_import_probe.py", line 37, in <module>
+    oldthermal=oldmod.thermal_energy_density(a);newthermal=newmod.thermal_energy_density(b)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_lepton_port/pre_scipy17_repair/staged/src/nmbackend/reference/finite_t_leptons.py", line 299, in thermal_energy_density
+    holes = _restore(float(_integrate(hole_integrand, breaks, rtol, 0.0)),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/production_lepton_port/pre_scipy17_repair/staged/src/nmbackend/reference/finite_t_leptons.py", line 88, in _integrate
+    raise ArithmeticError("Unresolved finite-temperature lepton quadrature")
+ArithmeticError: Unresolved finite-temperature lepton quadrature

@@ -1,0 +1,264 @@
+{
+  "passed": 35,
+  "failed": 0,
+  "source_sha256": "e0c16fc5899d5a9bfe2e8c89ba7255a60e80f0bb620c4f3103a7e4bc68487b90",
+  "rows": [
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.012774973749999998,
+      "mu": 0.0,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.012774973749999998,
+      "mu": 0.0,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.012774973749999998,
+      "mu": 0.0067707360875,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.012774973749999998,
+      "mu": 0.0067707360875,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.012774973749999998,
+      "mu": -0.0067707360875,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.012774973749999998,
+      "mu": -0.0067707360875,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.005109989499999999,
+      "mu": 0.0,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.005109989499999999,
+      "mu": 0.0,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.005109989499999999,
+      "mu": 0.002708294435,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.005109989499999999,
+      "mu": 0.002708294435,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.005109989499999999,
+      "mu": -0.002708294435,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.005109989499999999,
+      "mu": -0.002708294435,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.001703329833333333,
+      "mu": 0.0,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.001703329833333333,
+      "mu": 0.0,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.001703329833333333,
+      "mu": 0.0009027648116666666,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.001703329833333333,
+      "mu": 0.0009027648116666666,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.001703329833333333,
+      "mu": -0.0009027648116666666,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.001703329833333333,
+      "mu": -0.0009027648116666666,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.0008516649166666665,
+      "mu": 0.0,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.0008516649166666665,
+      "mu": 0.0,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.0008516649166666665,
+      "mu": 0.0004513824058333333,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "old_functional_failure_resolved",
+      "old_error": "Unresolved finite-temperature lepton quadrature",
+      "T": 0.0008516649166666665,
+      "mu": 0.0004513824058333333,
+      "m": 0.51099895,
+      "actual": 2.411480764183275e-274,
+      "expected": 2.411480764183335e-274,
+      "relative_error": 2.4868995751603507e-14,
+      "physical_log2_upper_bound": -1490.0,
+      "physical_log_upper_bound": -1032.7892990343184,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.0008516649166666665,
+      "mu": -0.0004513824058333333,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "old_functional_failure_resolved",
+      "old_error": "Unresolved finite-temperature lepton quadrature",
+      "T": 0.0008516649166666665,
+      "mu": -0.0004513824058333333,
+      "m": 0.51099895,
+      "actual": 2.411480764183275e-274,
+      "expected": 2.411480764183335e-274,
+      "relative_error": 2.4868995751603507e-14,
+      "physical_log2_upper_bound": -1490.0,
+      "physical_log_upper_bound": -1032.7892990343184,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.73,
+      "mu": -0.29,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.73,
+      "mu": -0.29,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 13.7,
+      "mu": 91.3,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 13.7,
+      "mu": 91.3,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 1e-30,
+      "mu": 3.7e-31,
+      "m": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 1e-30,
+      "mu": 3.7e-31,
+      "m": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "state_all_fields_bitwise_unchanged",
+      "T": 0.001,
+      "mu": 180.0,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "successful_thermal_bitwise_unchanged",
+      "T": 0.001,
+      "mu": 180.0,
+      "m": 105.6583755,
+      "pass_": true
+    },
+    {
+      "check": "retained_positive_hole_control_bitwise",
+      "T": 1.0,
+      "mu": 0.37,
+      "m": 0.0,
+      "pass_": true
+    },
+    {
+      "check": "retained_positive_hole_control_bitwise",
+      "T": 0.01277497375,
+      "mu": 0.006770736087500001,
+      "m": 0.51099895,
+      "pass_": true
+    },
+    {
+      "check": "retained_positive_hole_control_bitwise",
+      "T": 17.0,
+      "mu": 90.0,
+      "m": 105.6583755,
+      "pass_": true
+    }
+  ]
+}

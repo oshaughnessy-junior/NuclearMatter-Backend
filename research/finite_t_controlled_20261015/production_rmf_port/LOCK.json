@@ -1,0 +1,136 @@
+{
+  "protocol": "preregistered exactGM1 CPU candidate; no candidate source validation before this file",
+  "created_utc": "2026-10-16T04:28:50.803455+00:00",
+  "base": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "model": {
+    "M_MeV": 939,
+    "Cs_fm2": 11.785,
+    "Co_fm2": 7.148,
+    "Cr_fm2": 4.41,
+    "b": 0.002947,
+    "c": -0.00107,
+    "HBARC": 197.3269804,
+    "thermal_antiparticles": true,
+    "vacuum_sea": false,
+    "leptons": false,
+    "extra_couplings": false
+  },
+  "admission": {
+    "T_MeV": [
+      1,
+      50
+    ],
+    "nB_fm3": [
+      0.02,
+      0.4
+    ],
+    "Yp": [
+      0.05,
+      0.5
+    ],
+    "meaning": "bounded numerical request guards, no uniform physicalaccuracycertificate; positiveT,interiorspecies only"
+  },
+  "branch": {
+    "phi_fraction": [
+      0,
+      0.985
+    ],
+    "cold_grid_intervals": 128,
+    "warm_grid_intervals": 48,
+    "temperature_continuation_step_MeV": 5,
+    "policy": "actual firstcoldscalarupcrossing; boundedwarmcontinuation with full3constraint root and independently checked fixed-densityscalarupcrossings on warm endstate; require exactlyonecanonicalupcrossing in scanned interval; ambiguous/no-crossing errors; suppliedseed cannot bypass branchverification"
+  },
+  "numerics": {
+    "rtol": 2e-11,
+    "tail": 60,
+    "root_normalized_residual": 2e-09,
+    "D_min_fm_minus2": 1e-08,
+    "scaled_Fz_condition_max": 100000000.0,
+    "H_sym_relative": 1e-09,
+    "H_eigen_margin_relative": 1e-07,
+    "mass_positive": true,
+    "Cv_positive": true,
+    "gas_relative_error": 2e-09,
+    "density_root_relative": 2e-10
+  },
+  "forward_saved": [
+    [
+      0.16,
+      10,
+      0.1
+    ],
+    [
+      0.24,
+      20,
+      0.3
+    ],
+    [
+      0.19,
+      14,
+      0.22
+    ]
+  ],
+  "fresh_preregistered": [
+    [
+      0.18,
+      7,
+      0.17
+    ],
+    [
+      0.28,
+      25,
+      0.35
+    ]
+  ],
+  "independent_oracle": "originalmomentum scalarquad grandpotential andnestednu/phi brentroots, no candidateimport/seed; sourcecoordinatekineticenergyadaptivevector +3constraintroot",
+  "forward_gate": {
+    "bulk_relative": 2e-09,
+    "absolute_energy_MeVfm3": 1e-10,
+    "fields_MeV_absolute": 2e-07,
+    "tiny_antiparticle": "log-aware separate diagnostics; no relativebulk inference",
+    "tail_rtol_relative": 2e-09
+  },
+  "response_gate": {
+    "gas_moment_FD_relative": 2e-06,
+    "full_response_FD_relative": 3e-06,
+    "H_matrix_relative": 2e-06,
+    "free_energy_secondFD_relative": 0.0001,
+    "FD_relative_steps": [
+      0.002,
+      0.001,
+      0.0005
+    ],
+    "Cv_relative": 3e-06
+  },
+  "spinodal_counterexample": [
+    0.06,
+    1,
+    0.1
+  ],
+  "pair_gas_probes_fm": [
+    [
+      0.5,
+      0,
+      2
+    ],
+    [
+      0.3,
+      0.4,
+      1.5
+    ]
+  ],
+  "budget": {
+    "max_experiment_seconds": 112,
+    "threads": 1
+  },
+  "open_gates": [
+    "DIFFERENTphysicsnumericsreview",
+    "packagingreview",
+    "minimumsupportedruntime",
+    "normalCI",
+    "nativeO2sclforward",
+    "globalphase",
+    "AD"
+  ],
+  "file_limit": 9
+}

@@ -1,0 +1,373 @@
+{
+  "checks": [
+    {
+      "name": "commissioned source SHA",
+      "error": 0.0,
+      "gate": 0,
+      "passed": true
+    },
+    {
+      "name": "original threshold delta (17.0, -0.83)",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "original threshold delta (55.0, 0.37)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "original threshold delta (110.0, -0.29)",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "original threshold delta (190.0, 0.71)",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh trace vs scalar 1.347",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh trace vs reciprocal spinors 1.347",
+      "error": -2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh trace vs scalar 4.71",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh trace vs reciprocal spinors 4.71",
+      "error": 2.220446049250313e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh trace vs scalar 19.31",
+      "error": 0.0,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "fresh trace vs reciprocal spinors 19.31",
+      "error": 6.661338147750939e-16,
+      "gate": 3e-12,
+      "passed": true
+    },
+    {
+      "name": "independent proton density 16",
+      "error": 9.711782622545684e-08,
+      "gate": 3e-08,
+      "passed": false
+    },
+    {
+      "name": "independent proton density 24",
+      "error": -5.905276267981208e-13,
+      "gate": 3e-08,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "scenarios": {
+        "empty": {
+          "F": [
+            3.3088621546832965e-07,
+            3.1603920950033094e-06,
+            3.585422811235821e-06,
+            0.00031146684344891964,
+            0.0003118918741651521,
+            3.1603920950033094e-06
+          ],
+          "B": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "net": [
+            3.3088621546832965e-07,
+            3.1603920950033094e-06,
+            3.585422811235821e-06,
+            0.00031146684344891964,
+            0.0003118918741651521,
+            3.1603920950033094e-06
+          ],
+          "entropy": 0.0
+        },
+        "LTE": {
+          "F": [
+            3.2789815368116345e-07,
+            3.1463726081655367e-06,
+            3.567454582028475e-06,
+            0.00030865426288921935,
+            0.0003090753448630824,
+            3.1463726081655376e-06
+          ],
+          "B": [
+            3.278981536811636e-07,
+            3.1463726081655287e-06,
+            3.567454582028469e-06,
+            0.00030865426288921946,
+            0.00030907534486308207,
+            3.1463726081655312e-06
+          ],
+          "net": [
+            1.8407060323221354e-22,
+            6.0445238420640014e-21,
+            5.375472750050927e-21,
+            1.7674360095432173e-19,
+            1.760745498623098e-19,
+            6.044523842062189e-21
+          ],
+          "entropy": 9.632931305802022e-34
+        },
+        "reverse_heldout": {
+          "F": [
+            3.271591191040976e-07,
+            3.1428518609482677e-06,
+            3.5629571452868938e-06,
+            0.0003079586299315812,
+            0.0003083787352159198,
+            3.142851860948271e-06
+          ],
+          "B": [
+            4.1176247055293643e-07,
+            3.955593383396366e-06,
+            4.484337898436382e-06,
+            0.0003875967346897569,
+            0.0003881254792047964,
+            3.955593383396368e-06
+          ],
+          "net": [
+            -8.460335144883864e-08,
+            -8.127415224480932e-07,
+            -9.213807531494876e-07,
+            -7.963810475817512e-05,
+            -7.974674398887644e-05,
+            -8.127415224480934e-07
+          ],
+          "entropy": 1.9458770833232847e-08
+        }
+      },
+      "density": 3.0000002913534786e-08,
+      "maxfour": 4.60964599824365e-13,
+      "points": 98304,
+      "controls": [
+        16,
+        8,
+        6,
+        50.0
+      ],
+      "seconds": 1.5875427920836955
+    },
+    {
+      "scenarios": {
+        "empty": {
+          "F": [
+            3.3088603486595294e-07,
+            3.1603848360505178e-06,
+            3.5854154436145218e-06,
+            0.00031146667412707945,
+            0.00031189170473464376,
+            3.1603848360505208e-06
+          ],
+          "B": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "net": [
+            3.3088603486595294e-07,
+            3.1603848360505178e-06,
+            3.5854154436145218e-06,
+            0.00031146667412707945,
+            0.00031189170473464376,
+            3.1603848360505208e-06
+          ],
+          "entropy": 0.0
+        },
+        "LTE": {
+          "F": [
+            3.2789797115759214e-07,
+            3.146365232709169e-06,
+            3.567447096741887e-06,
+            0.000308654091752301,
+            0.0003090751736163335,
+            3.146365232709171e-06
+          ],
+          "B": [
+            3.2789797115759187e-07,
+            3.1463652327091654e-06,
+            3.567447096741884e-06,
+            0.0003086540917523004,
+            0.00030907517361633324,
+            3.1463652327091683e-06
+          ],
+          "net": [
+            4.547531926205802e-22,
+            3.788581879739516e-21,
+            5.13272794037664e-21,
+            4.2869590727168595e-19,
+            4.300400533323288e-19,
+            3.788581879737542e-21
+          ],
+          "entropy": 1.0832338238499891e-33
+        },
+        "reverse_heldout": {
+          "F": [
+            3.271589363234351e-07,
+            3.1428444574862833e-06,
+            3.5629496319424105e-06,
+            0.0003079584585509828,
+            0.000308378563725439,
+            3.142844457486284e-06
+          ],
+          "B": [
+            4.117622405051923e-07,
+            3.95558406539904e-06,
+            4.484328442140939e-06,
+            0.0003875965189901329,
+            0.00038812526336687504,
+            3.955584065399039e-06
+          ],
+          "net": [
+            -8.460330418175713e-08,
+            -8.127396079127523e-07,
+            -9.213788101985311e-07,
+            -7.963806043915033e-05,
+            -7.974669964143606e-05,
+            -8.127396079127528e-07
+          ],
+          "entropy": 1.9458759961804044e-08
+        }
+      },
+      "density": 2.999999999998228e-08,
+      "maxfour": 5.400124791776761e-13,
+      "points": 460800,
+      "controls": [
+        24,
+        10,
+        8,
+        70.0
+      ],
+      "seconds": 7.328971583163366
+    }
+  ],
+  "matched_metadata": {
+    "T": 2.0,
+    "nB": 1e-07,
+    "Ye": 0.3,
+    "neutron": {
+      "temperature": 2.0,
+      "mass": 939.56542052,
+      "chemical_potential": 919.8287578100662,
+      "kinetic_chemical_potential": -19.73666270993374,
+      "density": 6.999999999999867e-08,
+      "kinetic_energy_density": 2.1055950732222884e-07,
+      "energy_density": 6.598013894372098e-05,
+      "pressure": 1.4000127913834654e-07,
+      "entropy_density": 8.660635880779551e-07,
+      "free_energy_density": 6.424801176756507e-05,
+      "cv_fixed_density": 1.0555650416858674e-07,
+      "dn_dmu_fixed_temperature": 3.4999360442836035e-08,
+      "dn_dtemperature_fixed_mu": 3.9802468257800983e-07,
+      "dmu_dtemperature_fixed_density": -11.372341595444237,
+      "log_antiparticle_density": -936.3035101315536,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -919.8287395366565
+    },
+    "proton": {
+      "temperature": 2.0,
+      "mass": 938.27208816,
+      "chemical_potential": 916.8449303084382,
+      "kinetic_chemical_potential": -21.427157851561788,
+      "density": 3.000000000000039e-08,
+      "kinetic_energy_density": 9.023964651475486e-08,
+      "energy_density": 2.8238402291315118e-05,
+      "pressure": 6.000023542792139e-08,
+      "entropy_density": 3.9652730874476906e-07,
+      "free_energy_density": 2.744534767382558e-05,
+      "cv_fixed_density": 4.523894800630727e-08,
+      "dn_dmu_fixed_temperature": 1.4999882286989292e-08,
+      "dn_dtemperature_fixed_mu": 1.8326224598480855e-07,
+      "dmu_dtemperature_fixed_density": -12.217578943520637,
+      "log_antiparticle_density": -934.1669909161242,
+      "antiparticle_density": 0.0,
+      "antiparticle_density_representable": false,
+      "log_antiparticle_to_particle_ratio": -916.8449224608399
+    },
+    "electron": {
+      "temperature": 2.0,
+      "chemical_potential": 0.17446333200826397,
+      "mass": 0.51099895069,
+      "net_density": 2.999999999999999e-08,
+      "particle_density": 2.034286367843283e-07,
+      "antiparticle_density": 1.7342863678432833e-07,
+      "energy_density": 2.3941492019342855e-06,
+      "pressure": 7.908453734948221e-07,
+      "entropy_density": 1.5898803377344317e-06,
+      "free_energy_density": -7.856114735345779e-07,
+      "cv_fixed_net_density": 4.776150759539621e-06,
+      "dn_dmu_fixed_temperature": 1.722234521707307e-07,
+      "dn_dtemperature_fixed_mu": 3.027289631070514e-08,
+      "dmu_dtemperature_fixed_net_density": -0.17577685227616174
+    },
+    "muons": "absent"
+  },
+  "author_top_keys": [
+    "checks",
+    "passed",
+    "failed",
+    "rules",
+    "spinor_pilot",
+    "scalar_pilot",
+    "bath",
+    "state",
+    "seconds",
+    "source_sha256",
+    "qualification"
+  ],
+  "before": {
+    "hot_electron_capture_moments/INITIAL_UPSTREAM.json": "6eb92093208fa272f1bf39e842701c31381c5fd548388668ddf94610a80c5180",
+    "hot_electron_capture_moments/controls.py": "3d292233637d01f4ee47564f6b6f94111d4b7fbcd5be16a080a9019c3385ba28",
+    "hot_electron_capture_moments/tail_results.json": "b0dd32935e1c0d34bd9fd868d2aa104a317c1a6ad0d2a1155824f89576eda893",
+    "hot_electron_capture_moments/QUALIFICATION.json": "bb4394c45bea33a456587eebca02d6ef9d6a6c318ba4c5ca0c2b570965dc5c24",
+    "hot_electron_capture_moments/CHECKPOINT.json": "1122957562602131e3e9f4cc3e1fd4875e663a5e911e253b3525f603d4bf274e",
+    "hot_electron_capture_moments/partial_results.json": "e1ad565a8370cdef36f31f95eaf5feacb482a038bdd953919fb52706ba5f1051",
+    "hot_electron_capture_moments/scalar_pilot.json": "a8fa138a7f4250c76549c538f4fee8942045692f3ffd88955528dd8ce3d1508f",
+    "hot_electron_capture_moments/results.json": "5d5118706cfb5f269186d27f29788b1b87a8782718a67ef41fdf5ae02fe44b14",
+    "hot_electron_capture_moments/RESEARCH_NOTE.md": "d1666d4d5840a40cb403b66d5c7d0fd86e80e34a19d303500dc93501ccfe347f",
+    "hot_electron_capture_moments/initial_tail_reporting_failure.txt": "a84b7f72ea94a99b71d72c8f6f0dfbed296af2c74de5a2793c1afc93107c838b",
+    "hot_electron_capture_moments/literal_spinor_pilot.json": "200788607f3fbee25b51dd468bece105fd286f5842cf10801f22b6e19c3c3eb0",
+    "hot_electron_capture_moments/recover_tail_report.py": "e5075c6f2caf414c8ea17cd19c26e2b9738b78304863ed982785eba99390a1a1",
+    "hot_electron_capture_moments/initial_tail_reporting.py.txt": "991df10926050ad0d6f0dff8687d332ca433bcf5b0dbe521329f0183670d8918",
+    "hot_electron_capture_moments/anchors.py": "4b41aa57d33b20dc788487f497a4189fa3d747bcd54209aae6d0f8d29c4e8ab4",
+    "hot_electron_capture_moments/tail_raw.json": "07af00428271e423567fdb1ecda33edc1250d41f158356921eba59be3e932ec5",
+    "hot_electron_capture_moments/controls_results.json": "a235e8e12ccc4c417a7ea533fb29508c4bf814a5d29aa77b165967d1c63b02be",
+    "hot_electron_capture_moments/electron_capture.py": "b9954da0a2324376c19e4277013436b135d1432f9cb9904b03761be30bd1b3d1",
+    "hot_electron_capture_moments/MATCHED_STATE.json": "cff38c6ae765081a3614d65c584acd9e46a6a58ce1dc008945596733bb80d5f8",
+    "hot_electron_capture_moments/initial_amplitude_anchors.json": "09f694730fc7a1155fa13b5b8a3abf7112985d71b77d16f21c48b60ba2bcae5c",
+    "hot_electron_capture_moments/compatibility_results.json": "14e7f6ee2c4899bd329616f78bfb32e50fc56cdb675faa8814cc2c7dcf03e80a",
+    "hot_electron_capture_moments/study.py": "ccd0f0926709d413e4415fec4399064ef96ef7816b1071ad7d67b7c424f55498",
+    "hot_electron_capture_moments/tail_check.py": "13b3dd4cb3a14d8ec97d696490996671468b19bf4df775a61da15482546f63a0"
+  }
+}

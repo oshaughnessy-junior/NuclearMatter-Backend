@@ -1,0 +1,230 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "polynomial/originalangle full support (939.0, 938.0, 53.0, -17.0)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "root support angle endpoint (939.0, 938.0, 53.0, -17.0, 993.574278001341)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "root original energy endpoint (939.0, 938.0, 53.0, -17.0, 993.574278001341)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "polynomial/originalangle full support (700.0, 810.0, 20.0, 105.0)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "root support angle endpoint (700.0, 810.0, 20.0, 105.0, 713.7754135288054)",
+      "error": 1.3100631690576847e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "root original energy endpoint (700.0, 810.0, 20.0, 105.0, 713.7754135288054)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "root support angle endpoint (700.0, 810.0, 20.0, 105.0, 822.6834100006064)",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "root original energy endpoint (700.0, 810.0, 20.0, 105.0, 822.6834100006064)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "polynomial/originalangle full support (810.0, 700.0, 20.0, -105.0)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "root support angle endpoint (810.0, 700.0, 20.0, -105.0, 818.7754135288051)",
+      "error": 5.0182080713057076e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "root original energy endpoint (810.0, 700.0, 20.0, -105.0, 818.7754135288051)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "root support angle endpoint (810.0, 700.0, 20.0, -105.0, 927.6834100006067)",
+      "error": 4.6629367034256575e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "root original energy endpoint (810.0, 700.0, 20.0, -105.0, 927.6834100006067)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "polynomial/originalangle full support (939.0, 939.0, 50.0, 60.0)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "polynomial/originalangle full support (939.0, 939.0, 50.0, -60.0)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "polynomial/originalangle full support (700.0, 810.0, 30.0, 30.0)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "root support angle endpoint (700.0, 810.0, 30.0, 30.0, 1472.667569737106)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "root original energy endpoint (700.0, 810.0, 30.0, 30.0, 1472.667569737106)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "polynomial/originalangle full support (810.0, 700.0, 30.0, -30.0)",
+      "error": 0.0,
+      "tolerance": 0.1,
+      "passed": true
+    },
+    {
+      "name": "root support angle endpoint (810.0, 700.0, 30.0, -30.0, 1502.667569737106)",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "root original energy endpoint (810.0, 700.0, 30.0, -30.0, 1502.667569737106)",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "ma": 939.0,
+      "mb": 938.0,
+      "q": 53.0,
+      "w": -17.0,
+      "transfer": "spacelike",
+      "quadratic_roots": [
+        -989.2365795886424,
+        993.574278001341
+      ],
+      "positive_energy_floor": 955.0,
+      "sampled_support_count": 507,
+      "sampled_min": 996.0156348828125,
+      "sampled_max": 4455.0
+    },
+    {
+      "ma": 700.0,
+      "mb": 810.0,
+      "q": 20.0,
+      "w": 105.0,
+      "transfer": "timelike",
+      "quadratic_roots": [
+        713.7754135288054,
+        822.6834100006064
+      ],
+      "positive_energy_floor": 705.0,
+      "sampled_support_count": 16,
+      "sampled_min": 718.6718849609375,
+      "sampled_max": 821.2109471679687
+    },
+    {
+      "ma": 810.0,
+      "mb": 700.0,
+      "q": 20.0,
+      "w": -105.0,
+      "transfer": "timelike",
+      "quadratic_roots": [
+        818.7754135288051,
+        927.6834100006067
+      ],
+      "positive_energy_floor": 810.0,
+      "sampled_support_count": 16,
+      "sampled_min": 823.6718849609375,
+      "sampled_max": 926.2109471679687
+    },
+    {
+      "ma": 939.0,
+      "mb": 939.0,
+      "q": 50.0,
+      "w": 60.0,
+      "transfer": "timelike",
+      "quadratic_roots": [],
+      "positive_energy_floor": 939.0,
+      "sampled_support_count": 0,
+      "sampled_min": null,
+      "sampled_max": null
+    },
+    {
+      "ma": 939.0,
+      "mb": 939.0,
+      "q": 50.0,
+      "w": -60.0,
+      "transfer": "timelike",
+      "quadratic_roots": [],
+      "positive_energy_floor": 999.0,
+      "sampled_support_count": 0,
+      "sampled_min": null,
+      "sampled_max": null
+    },
+    {
+      "ma": 700.0,
+      "mb": 810.0,
+      "q": 30.0,
+      "w": 30.0,
+      "transfer": "lightlike",
+      "quadratic_roots": [
+        1472.667569737106
+      ],
+      "positive_energy_floor": 780.0,
+      "sampled_support_count": 411,
+      "sampled_min": 1477.2656330078125,
+      "sampled_max": 4280.0
+    },
+    {
+      "ma": 810.0,
+      "mb": 700.0,
+      "q": 30.0,
+      "w": -30.0,
+      "transfer": "lightlike",
+      "quadratic_roots": [
+        1502.667569737106
+      ],
+      "positive_energy_floor": 810.0,
+      "sampled_support_count": 411,
+      "sampled_min": 1507.2656330078125,
+      "sampled_max": 4310.0
+    }
+  ]
+}

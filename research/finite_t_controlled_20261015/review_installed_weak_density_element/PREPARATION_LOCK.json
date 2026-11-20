@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-16T03:54:44.323963+00:00",
+  "candidate_present": false,
+  "candidate_imported": false,
+  "physical_source_calls_made": false,
+  "scope": "Independent review of a short prescribed-density weakON free npe/e\u00b1/LTEphotons trajectory, emptyincomingnue/anti,muonsabsent; no wholeinventory/uncertainty/longtime.",
+  "independent_method": "Integrate specific restinclusive U=e/n andYe with explicitRK4; determineT by a separately solved EOS energyroot at every stage, rather than reuse author Tdot integrator. Actual three event kernels recomputed eachstage. Source-kernel reuse is method agreement within accepted physical model.",
+  "planned_steps": [
+    2,
+    4
+  ],
+  "duration_seconds": 0.002,
+  "prescribed_density": "n=n0 exp(.25t)",
+  "source_controls": "Wait authorLOCK before locking reviewprofile; prefer acceptedbase event profile for path and alternate refined endpoint.",
+  "ledgers": [
+    "dU=P ndot/n\u00b2-Q/n",
+    "dYe=(Rbeta+RPC-REC)/n",
+    "escaping E perbaryon integralQ/n, and separate nue/anti numberperbaryon moments",
+    "Baryon/charge/electronLe stoichiometric ledgers reconstructed from perchannel positive moments",
+    "Entropy perbaryon derivative[-Q-(mup+mue-mun)R]/(nT), mechanicalwork cancels; material entropy maydecrease. No radiation entropyclaim withoutdistribution."
+  ],
+  "normalizations": "Thermal changes, gross actualwork, escapingenergy, total emittednumber; never restmass hiding or closednetzero.",
+  "gating": "No candidate comparison/sourcecalls before explicit authorfreeze. Forward initial material and source before any time/conservation claim. Copy exact authorlock/gates beforecandidate. Preserve coarse failures and any review incomplete.",
+  "quota": {
+    "account": "82f4cfd9-9e20-47cf-9997-761328d89f60",
+    "codex_window_minutes": 10080,
+    "reset": 1792652325,
+    "used": 26
+  }
+}

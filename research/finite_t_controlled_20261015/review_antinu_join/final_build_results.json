@@ -1,0 +1,378 @@
+{
+  "source_sha256": "ef1f166ea0738d40c854dd65279c50f815e647d1a4ae46fe56798024d0b2546d",
+  "checks": [
+    {
+      "name": "physical exact zero empty_support",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "physical exact zero absent_initial_antinu_occupation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "positive floor",
+      "passed": true,
+      "detail": "Finite positive log cannot be a zero floor"
+    },
+    {
+      "name": "positive missing log",
+      "passed": true,
+      "detail": "Positive moment requires a finite log"
+    },
+    {
+      "name": "positive infinite log",
+      "passed": true,
+      "detail": "Positive moment requires a finite log"
+    },
+    {
+      "name": "unexplained zero",
+      "passed": true,
+      "detail": "Finite positive log cannot be a zero floor"
+    },
+    {
+      "name": "actual accepted manifest full build",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "both independent review snapshots present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "private fixture valid baseline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unit mismatch despite private matching hash",
+      "passed": true,
+      "detail": "Moment unit conventions differ"
+    },
+    {
+      "name": "failed coarse report despite private matching hash",
+      "passed": true,
+      "detail": "Qualified report must pass; coarse failed report is not a replacement"
+    }
+  ],
+  "rows": [
+    {
+      "actual_build": {
+        "status": "complete",
+        "scope": "Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.",
+        "matched_state": {
+          "T": 2.0,
+          "nB": 1e-07,
+          "Ye": 0.3,
+          "neutron": {
+            "temperature": 2.0,
+            "mass": 939.56542052,
+            "chemical_potential": 919.8287578100662,
+            "kinetic_chemical_potential": -19.73666270993374,
+            "density": 6.999999999999867e-08,
+            "kinetic_energy_density": 2.1055950732222884e-07,
+            "energy_density": 6.598013894372098e-05,
+            "pressure": 1.4000127913834654e-07,
+            "entropy_density": 8.660635880779551e-07,
+            "free_energy_density": 6.424801176756507e-05,
+            "cv_fixed_density": 1.0555650416858674e-07,
+            "dn_dmu_fixed_temperature": 3.4999360442836035e-08,
+            "dn_dtemperature_fixed_mu": 3.9802468257800983e-07,
+            "dmu_dtemperature_fixed_density": -11.372341595444237,
+            "log_antiparticle_density": -936.3035101315536,
+            "antiparticle_density": 0.0,
+            "antiparticle_density_representable": false,
+            "log_antiparticle_to_particle_ratio": -919.8287395366565
+          },
+          "proton": {
+            "temperature": 2.0,
+            "mass": 938.27208816,
+            "chemical_potential": 916.8449303084382,
+            "kinetic_chemical_potential": -21.427157851561788,
+            "density": 3.000000000000039e-08,
+            "kinetic_energy_density": 9.023964651475486e-08,
+            "energy_density": 2.8238402291315118e-05,
+            "pressure": 6.000023542792139e-08,
+            "entropy_density": 3.9652730874476906e-07,
+            "free_energy_density": 2.744534767382558e-05,
+            "cv_fixed_density": 4.523894800630727e-08,
+            "dn_dmu_fixed_temperature": 1.4999882286989292e-08,
+            "dn_dtemperature_fixed_mu": 1.8326224598480855e-07,
+            "dmu_dtemperature_fixed_density": -12.217578943520637,
+            "log_antiparticle_density": -934.1669909161242,
+            "antiparticle_density": 0.0,
+            "antiparticle_density_representable": false,
+            "log_antiparticle_to_particle_ratio": -916.8449224608399
+          },
+          "electron": {
+            "temperature": 2.0,
+            "chemical_potential": 0.17446333200826397,
+            "mass": 0.51099895069,
+            "net_density": 2.999999999999999e-08,
+            "particle_density": 2.034286367843283e-07,
+            "antiparticle_density": 1.7342863678432833e-07,
+            "energy_density": 2.3941492019342855e-06,
+            "pressure": 7.908453734948221e-07,
+            "entropy_density": 1.5898803377344317e-06,
+            "free_energy_density": -7.856114735345779e-07,
+            "cv_fixed_net_density": 4.776150759539621e-06,
+            "dn_dmu_fixed_temperature": 1.722234521707307e-07,
+            "dn_dtemperature_fixed_mu": 3.027289631070514e-08,
+            "dmu_dtemperature_fixed_net_density": -0.17577685227616174
+          },
+          "muons": "absent"
+        },
+        "qualified_controls": {
+          "beta": {
+            "rest_order": 32,
+            "parent_order": 28,
+            "orient_order": 14,
+            "phi_order": 20,
+            "coordinate": "pair",
+            "parent_coordinate": "laguerre",
+            "tail": 60.0
+          },
+          "positron_capture": {
+            "neutron_order": 28,
+            "positron_order": 56,
+            "initial_order": 12,
+            "outgoing_order": 12,
+            "phi_order": 12,
+            "tail": 40.0,
+            "knmax": 82.80936416961981,
+            "positron_kinetic_max": 81.00503285892978
+          }
+        },
+        "results": {
+          "empty": {
+            "radiation": [
+              "empty"
+            ],
+            "channels": {
+              "neutron_beta": {
+                "forward": {
+                  "number": 4.2587395065654314e-11,
+                  "neutrino_energy": 2.02377424204933e-11,
+                  "material_energy_loss": 2.0237742420492296e-11
+                },
+                "backward": {
+                  "number": 0.0,
+                  "neutrino_energy": 0.0,
+                  "material_energy_loss": 0.0
+                },
+                "net": {
+                  "number": 4.2587395065654295e-11,
+                  "neutrino_energy": 2.0237742420493317e-11,
+                  "material_energy_loss": 2.0237742420492306e-11
+                }
+              },
+              "positron_capture": {
+                "forward": {
+                  "number": 1.117319281268152e-06,
+                  "neutrino_energy": 1.199461556398516e-05,
+                  "material_energy_loss": 1.199461556398516e-05
+                },
+                "backward": {
+                  "number": 0.0,
+                  "neutrino_energy": 0.0,
+                  "material_energy_loss": 0.0
+                },
+                "net": {
+                  "number": 1.1173192812681518e-06,
+                  "neutrino_energy": 1.1994615563985155e-05,
+                  "material_energy_loss": 1.1994615563985148e-05
+                }
+              }
+            },
+            "scope": "Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.",
+            "forward": {
+              "number": 1.1173618686632177e-06,
+              "neutrino_energy": 1.199463580172758e-05,
+              "material_energy_loss": 1.199463580172758e-05
+            },
+            "backward": {
+              "number": 0.0,
+              "neutrino_energy": 0.0,
+              "material_energy_loss": 0.0
+            },
+            "net": {
+              "number": 1.1173618686632175e-06,
+              "neutrino_energy": 1.1994635801727575e-05,
+              "material_energy_loss": 1.1994635801727568e-05
+            },
+            "sources": {
+              "dn_n_dt": -1.1173618686632175e-06,
+              "dn_p_dt": 1.1173618686632175e-06,
+              "dn_e_net_dt": 1.1173618686632175e-06,
+              "dn_antinu_dt": 1.1173618686632175e-06,
+              "matter_Le_dt": 1.1173618686632175e-06,
+              "radiation_Le_dt": -1.1173618686632175e-06,
+              "matter_energy_dt": -1.1994635801727568e-05,
+              "radiation_energy_dt": 1.1994635801727575e-05
+            },
+            "direct_energy_residual": 6.776263578034403e-21,
+            "gross_normalized_net": 0.9999999999999998
+          },
+          "LTE": {
+            "radiation": [
+              "common_material_T_FD",
+              2.8093641696198066
+            ],
+            "channels": {
+              "neutron_beta": {
+                "forward": {
+                  "number": 1.0123482956249626e-11,
+                  "neutrino_energy": 4.916491058299985e-12,
+                  "material_energy_loss": 4.91649105829974e-12
+                },
+                "backward": {
+                  "number": 1.0123482956249555e-11,
+                  "neutrino_energy": 4.916491058299949e-12,
+                  "material_energy_loss": 4.916491058299722e-12
+                },
+                "net": {
+                  "number": 7.118300677956099e-26,
+                  "neutrino_energy": 2.9177131485232786e-26,
+                  "material_energy_loss": 2.9177131485211257e-26
+                }
+              },
+              "positron_capture": {
+                "forward": {
+                  "number": 1.0455981582028755e-06,
+                  "neutrino_energy": 1.1540647258568089e-05,
+                  "material_energy_loss": 1.1540647258568089e-05
+                },
+                "backward": {
+                  "number": 1.0455981582028736e-06,
+                  "neutrino_energy": 1.1540647258568069e-05,
+                  "material_energy_loss": 1.1540647258568069e-05
+                },
+                "net": {
+                  "number": 1.5863595270462967e-21,
+                  "neutrino_energy": 1.977086528210876e-20,
+                  "material_energy_loss": 1.9770865282102845e-20
+                }
+              }
+            },
+            "scope": "Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.",
+            "forward": {
+              "number": 1.0456082816858316e-06,
+              "neutrino_energy": 1.1540652175059147e-05,
+              "material_energy_loss": 1.1540652175059147e-05
+            },
+            "backward": {
+              "number": 1.0456082816858297e-06,
+              "neutrino_energy": 1.1540652175059126e-05,
+              "material_energy_loss": 1.1540652175059126e-05
+            },
+            "net": {
+              "number": 1.5864307100530762e-21,
+              "neutrino_energy": 1.9770894459240247e-20,
+              "material_energy_loss": 1.977089445923433e-20
+            },
+            "sources": {
+              "dn_n_dt": -1.5864307100530762e-21,
+              "dn_p_dt": 1.5864307100530762e-21,
+              "dn_e_net_dt": 1.5864307100530762e-21,
+              "dn_antinu_dt": 1.5864307100530762e-21,
+              "matter_Le_dt": 1.5864307100530762e-21,
+              "radiation_Le_dt": -1.5864307100530762e-21,
+              "matter_energy_dt": -1.977089445923433e-20,
+              "radiation_energy_dt": 1.9770894459240247e-20
+            },
+            "direct_energy_residual": 5.91621604791454e-33,
+            "gross_normalized_net": 7.586161748333129e-16,
+            "affinity_over_T": 0.0,
+            "reservoir_entropy_from_source": 0.0
+          }
+        },
+        "regressions": [
+          {
+            "name": "different_affinity",
+            "rejected": true,
+            "reason": "Radiation occupations differ"
+          },
+          {
+            "name": "different_matter",
+            "rejected": true,
+            "reason": "Material states/species/roots differ"
+          }
+        ],
+        "source_manifest": {
+          "status": "accepted_selected_sources",
+          "reviews": {
+            "hot_beta": "review_hot_beta/REVIEW.md",
+            "positron_capture": "review_pc_moments/REVIEW.md"
+          },
+          "scope": "Two named free electron-antineutrino charged-current channels only; no pair processes, neutrino-sector balance, transparent equilibrium or evolution.",
+          "sha256": {
+            "crossed_thermal_moments/moments.py": "55a84c8eb1d6bf78e3f6247c9f814f1cf72471c92a21c09bbd4028df26dba405",
+            "crossed_thermal_moments/spectrum_anchor.py": "69801c7d01c027021313b4f8d03e6e1e2fe9998b82ca02d92b2def4a46a1e97a",
+            "hot_beta_moments/CHECKPOINT.json": "07c3f9b0294f33f3c440cec464d833a3e90cdaf4a1eedfad9779d59d2f860b67",
+            "hot_beta_moments/RESEARCH_NOTE.md": "31c3b5e1fa5856e7efc4eb8356986201eb43023cb3c76670f355032c4ac18d76",
+            "hot_beta_moments/SOURCES.json": "4039d5cc29b4388304d0d401a0eea226dbdee3f2d0aa4aa61f61799e95228bc8",
+            "hot_beta_moments/bookkeeping.json": "7720571dcb9879430ee9bf53f70d7e781cee67306052956b3d30a4a0e61d0e1c",
+            "hot_beta_moments/bookkeeping.py": "44f163ca70a79052053a5a4759c2cfcaec66b7c7b9125cadca8255ad5989eebb",
+            "hot_beta_moments/conditional.py": "656858a96b77890a2ee9d480a2023484534cfcda500afaeef2aaa1958eaff64c",
+            "hot_beta_moments/controls.json": "dc92226d6a66a2c10df55f3dce88a75d523adfe061d89ef50125fb69f8535696",
+            "hot_beta_moments/controls.py": "222a67fffc4df10163e2321d7f869da4db4d2feacb16f088733c3b8a7bb9e3dd",
+            "hot_beta_moments/hot_moments.py": "73ae01ded717d58536c1d816152bae0b19d3bf425bd2a648c711b5b9942e049a",
+            "hot_beta_moments/hot_spectrum.py": "084a5c50836a4d3617c00245ecf7081f4036cdfc63f801b8db260366f622416b",
+            "hot_beta_moments/initial_study_syntax.py.txt": "ec509804cff12da3b86b257d8898030798bcce5cce74fabea1106fe56ced653a",
+            "hot_beta_moments/initial_syntax_failure.txt": "9474cc5bebab671b6525c328da2906186c2731525251ad4217424c942e6329c5",
+            "hot_beta_moments/results.json": "57e2e89e820b0e80b9d0cd4956d67c54e208cd78d5e2609edcd8e1ef54f94d88",
+            "hot_beta_moments/study.py": "1ad8aef43808ed329b62b6d15474cc41fc68f92b0bce4d2f32cde5ef86982dbd",
+            "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+            "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+            "positron_capture/pc_kernel.py": "6291c802fe8e4b86572c2c7582df28dd9518980500ef67b2d7dec99dc3eeb4e6",
+            "positron_capture_moments/CHECKPOINT.json": "a2393261a628d7ed6223526fccea56519af9dcdacf3fa531b14fb2ed0cdaa507",
+            "positron_capture_moments/MATCHED_STATE.json": "abfb9572ac0ddfa6e52179e03d162ff07648ae3ec15528d98f08f6db1226306e",
+            "positron_capture_moments/RESEARCH_NOTE.md": "d3d0ad2d9f44d0284601637f7700c2681905162858e6a69e63f79c8f2945b226",
+            "positron_capture_moments/check_controls_anchor.py": "71a513e4ecb5309423967b0f3973b7f87cd7c3ffd2dacb001a1600cfed7bb9e7",
+            "positron_capture_moments/check_guard_identity.py": "d4c758d34fdbaa298bccd9fe3ac10ba1f6bb00ad703f2a4fa976b977b3b39f21",
+            "positron_capture_moments/complete_refinement.py": "0ce4b01d57eb39c2fe5912ebe140b4510d403c6ac324e323e90cea5ffd52fa98",
+            "positron_capture_moments/conditional.py": "7d2999d2f1d6e786ed7cfc56df97dc40f86138edf83408a18176bdfd82061991",
+            "positron_capture_moments/controls_anchor.json": "e937a6fef89b8bcc36feca933f6cf7342b8b72bfbfc1f011b960765a8e72e8e1",
+            "positron_capture_moments/guard_identity.json": "a7c7603b7fb3dae047be0856cb3c891d5bc1e2a6c846b880f6ca24915c8e868c",
+            "positron_capture_moments/initial_check_guard_identity.py.txt": "d7f48cf9d677ec7e109364b12d026bfb9592fd9c8ba94041f29d24819e7d3090",
+            "positron_capture_moments/initial_guard_reporting_failure.txt": "b490af77ec93ac3f0851a3f1e5f6f76247b415575c42e012bb1ece2ba850e92a",
+            "positron_capture_moments/initial_refinement_partial.json": "915b0f9a6a47d6e7147cc43bc32ea41b0734cc5b42f350a61493725dc3036588",
+            "positron_capture_moments/initial_refinement_timeout.txt": "9eed5deb7f5e892e199ab3a4357743128aaec10de7c7a3e5932a24c47c3a7994",
+            "positron_capture_moments/moments.py": "376c05dfe75f9788a9d9ab7559db899de9c6c559e48c9a8989dcc45ae8276a12",
+            "positron_capture_moments/refine.py": "b65c92fa7fd443d633ca4adf2b8e69e63539d61600c82a7a2cc07b1118e7d844",
+            "positron_capture_moments/refinement.json": "524488939b55d563977d874f17fb42699f382187814d2dd1c36be95d96e77cf9",
+            "positron_capture_moments/results.json": "03beb7882dc8f89f42a151cf343e4332be6dbc6fa701abcdb28524a73ef48931",
+            "positron_capture_moments/study.py": "c651515821a11729047be837ae0170263e4304df1c74c027ed38e2eca8af060d",
+            "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+            "relativistic_crossed_contract/beta.py": "15fd96d5cbf17adf71f39563a15f2746b03bfecae0cf5ba93bc95c0e10a56971",
+            "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+            "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+            "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+            "review_hot_beta/CHECKPOINT.json": "40546ccc4696e06793b196c1eaf30c8b855cbbd8297ca1965b5872dcbb11ab35",
+            "review_hot_beta/REVIEW.md": "d85adc2c096c37662528c8a40e6e44aabb9060629b10c5b753c4e0893fec060a",
+            "review_hot_beta/inverse_probe.py": "16766c560f2dc565553f9db085a7b5fb1b4f03d245c5d54fcf42fb39b1927d69",
+            "review_hot_beta/inverse_results.json": "feca260074a13c2c61915a68acfbc862a9db9457bfbb9b2542303bfa57b0e9a1",
+            "review_hot_beta/probe.py": "d550ca9113c6e099a32aedc15d19c16b19a8e836ef1c49dcb9a253814ef9e73a",
+            "review_hot_beta/results.json": "f9f432d00aa2ad479cbf9c623f46d608619d5dfd92c5242b19c7c46de9ee1248",
+            "review_hot_beta/spectral_audit.py": "5fff712fd020306c8751473b4491ab13d1e3936d38b064f12659407b266e5e57",
+            "review_hot_beta/spectral_partial.json": "32f9da9014c7a6f48080a7c042f994780122dee705a12ba866998552a7dfefe9",
+            "review_hot_beta/spectral_results.json": "713cef053cee48e2802f035504fbcb677b347e0bc93940f1a869433f60cfeeb7",
+            "review_pc_moments/MANIFEST.json": "7e3830a718c3f6a69f2ce8ac05b387aaadf7520008f5737db5b4fc54b2d4a575",
+            "review_pc_moments/REVIEW.md": "87a52b64c780a8714d1b6c8f99cfd6fb8c02807b063390480c6b2b40786102c1",
+            "review_pc_moments/conditional_results.json": "a954af73a6f7e0fded60aef7fe4fb6ecd376a7652fd174b95e605a3c56bd4697",
+            "review_pc_moments/conditional_review.py": "b52311316aa84a536962b67c35fbcb1062b0ecbf8f6fce8295406f57f08c892e",
+            "review_pc_moments/probe.py": "7413684c86afb2477bba01c35ee5a4c1f3cea4df1183839b31620155eed41f49",
+            "review_pc_moments/qualification.json": "21d9fc7ec23faf30aa6e571874241c1db924f6e4c8ef53411f8ab79c72f760ab",
+            "review_pc_moments/qualification.py": "02aa38ca5fc4db1a5ca9bb4712c02871241121b4fbdded3c380426c8ca4ca7c0",
+            "review_pc_moments/reference.py": "2ca34b181865df529ee0b0d599faa932760190cfc25f97d71d513db6290ef133",
+            "review_pc_moments/results.json": "489838f436a82cd19fe3a5f98bb0720efea2af3e3c1c8e8535f965ec17f8a752",
+            "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+          }
+        }
+      }
+    }
+  ],
+  "all_pass": true
+}

@@ -1,0 +1,36 @@
+{
+  "status": "ACCEPTED selected packaging/scope only; numerical acceptance separate",
+  "candidate_module": "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b",
+  "candidate_manifest": "199716b691d88a4fc9b83ed7f8e8b48e36fbff16fcc9b1e8684d18d0922fc523",
+  "passed": 112,
+  "failed": 0,
+  "initial_fixture_failure_preserved": true,
+  "author_pinned_file_count": 112,
+  "author_changes": [],
+  "files": {
+    "PREPARATION.json": "3a7208f9b63feaad251175075ed1cc4611ffefa326621d3b715e41f6294d635c",
+    "BEFORE_PIN.json": "3cd07ad9065cacb96edf5abb4975a32562707cdd6fa3de6aa754102550806bde",
+    "example_stdout.json": "610199a43dfa7dbd3b74725efae6eb33ef33b201ba8863db31faa7dc459eafde",
+    "build_stdout.txt": "168c65c499fc8467f932e49c36d5bf21d1b954921cbb8b37000b4e1966127e8d",
+    "COMMANDS.md": "469d88b4a6c98177c7b6face79082773272bf3250c174b008607d68278fd5f78",
+    "import_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "wheel_results.json": "bcc4ae9023dfa54d4aa75452e535cea80bddaa1826648efbc1a2c2f9b3c74bae",
+    "initial_fixture_failure.txt": "6d90774c59d1fb3ccd46d7ddabc6138d4f45d92217f51b17245546db18f24f23",
+    "check_wheel.py": "b5fb0d5d929351254ce8d86751a899af3ff7607f6666ebbd93d4b251ed9234f8",
+    "wheel_METADATA.txt": "644eead2ae078331c7b6eaeb20b650f5f5241aaf48e3f9e64904017fde99b92a",
+    "REVIEW.md": "caf831664068bc8ba1ce48999b66668bcc8c61fe7df5097d40e66a842f0d9be5",
+    "build_stderr.txt": "6cf81cd82cb7b55a62f856d488a5d2249f643ccbe57febf4369d7c647bcfc968",
+    "initial_check_wheel.py": "fc5ff86f249b72c2d71f05a7e106594ddbb14dc11c8b49410c01631b3b37c821",
+    "prepare.py": "332721129e70b73f120647364e15580a4f3d791b7665f436f96cf442b5058163",
+    "import_stdout.txt": "4206a30812af59aca16ee4596bf66a2a73fcc87651c19b9f9914343db37c1cdf",
+    "wheels/nmbackend-0.0.1-py3-none-any.whl": "93b273058e1285a6d4cd6ee5fcfcd95bcf02546d91e6c61df14e2e31408f07fd"
+  },
+  "remaining": [
+    "independent numerical acceptance",
+    "full CI",
+    "minimum/supported runtimes",
+    "clean install dependency resolution"
+  ],
+  "quota_used_percent": 25,
+  "quota_reset": 1792652325
+}

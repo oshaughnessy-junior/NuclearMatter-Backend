@@ -1,0 +1,59 @@
+"""Independent invariant-s / boost-axis phase and Dirac trace EC moments."""
+from pathlib import Path
+import json,math,hashlib,importlib.util,sys,time
+import numpy as np
+from numpy.polynomial.legendre import leggauss
+from scipy.special import expit
+from scipy.optimize import brentq
+P=Path(__file__).parent;ROOT=P.parent;A=ROOT/'hot_electron_capture_moments';sys.dont_write_bytecode=True
+sp=importlib.util.spec_from_file_location('review_hot_EC_frozen_function_only',A/'electron_capture.py');C=importlib.util.module_from_spec(sp);sys.modules[sp.name]=C;sp.loader.exec_module(C);E=C.E
+
+def dot(x,y):return x[:,0]*y[:,0]-np.sum(x[:,1:]*y[:,1:],axis=1)
+def slash(p,m=0):return np.einsum('nu,u,uab->nab',p,E.MET,E.G)+m*E.I
+def trace_amp(k,n,l,p):
+ V=E.vertices(p-n,C.MW);AV=E.adj(V);L=E.G@(E.I-E.G5);AL=E.adj(L[None,...])[0]
+ H=np.einsum('nab,nubc,ncd,nvda->nuv',slash(n,C.MN),AV,slash(p,C.MP),V,optimize=True)
+ LT=np.einsum('nab,ubc,ncd,vda->nuv',slash(k),L,slash(l,C.ME),AL,optimize=True)
+ val=np.einsum('nuv,nuv,u,v->n',LT,H,E.MET,E.MET)
+ if max(abs(val.imag))>1e-10*max(abs(val.real)):raise ArithmeticError('Trace imaginary residue')
+ return E.GF**2*E.VUD**2/8*val.real
+
+def integrate(b,order,angular,phi_order,tail):
+ start=time.monotonic();xp,wp=leggauss(order);xx,ww=leggauss(order);ci,wi=leggauss(angular);co,wo=leggauss(angular);ph=2*math.pi*np.arange(phi_order)/phi_order
+ kpmax=tail*b.T;pmax=math.sqrt(kpmax*(kpmax+2*C.MP));rad=(xp+1)*pmax/2;rw=wp*pmax/2;emax=max(C.MN-C.MP,C.ME,b.mu_e)+tail*b.T
+ mu=b.equilibrium_mu_nue;scenarios={'empty':None,'LTE':mu,'reverse_heldout':mu+.23*b.T};acc={k:dict(F=np.zeros(6),B=np.zeros(6),net=np.zeros(6),entropy=0.)for k in scenarios};density=0.;maxfour=0.;points=0
+ for pp,prw in zip(rad,rw):
+  if time.monotonic()-start>110:raise TimeoutError('Independent phase bounded110s')
+  ep=math.hypot(pp,C.MP);aa=ep*ep-pp*pp*ci*ci
+  # Delta-s invariant is parameterized logarithmically, not Ee-threshold squared.
+  smax=C.MP**2+C.ME**2+2*(ep*emax-pp*math.sqrt(emax*emax-C.ME*C.ME)*ci);vmax=(smax-C.MN**2)/(2*C.MP);zmax=np.log1p(vmax/b.T)
+  z=(xx[:,None]+1)*zmax/2;vv=b.T*np.expm1(z);ds=2*C.MP*b.T*np.exp(z)*ww[:,None]*zmax/2;s=C.MN**2+2*C.MP*vv;D=(s-C.MP**2-C.ME**2)/2;rt=np.sqrt(D*D-aa*C.ME*C.ME);ee=(ep*D+pp*ci*rt)/aa;jac=(ep+pp*ci*D/rt)/(2*aa)*ds
+  II,JJ,CC,PH=np.meshgrid(np.arange(order),np.arange(angular),co,ph,indexing='ij');ii=II.astype(int).ravel();jj=JJ.astype(int).ravel();en=ee[ii,jj];ct=ci[jj];cc=CC.ravel();phi=PH.ravel();pe=np.sqrt(en*en-C.ME*C.ME)
+  weights=jac[ii,jj]*wi[jj]*np.tile(np.repeat(wo,phi_order),order*angular)*2*math.pi/phi_order;N=len(en);p=np.tile([ep,0,0,pp],(N,1));l=np.column_stack([en,pe*np.sqrt(1-ct*ct),np.zeros(N),pe*ct]);total=p+l;ss=dot(total,total);root=np.sqrt(ss);pf=(ss-C.MN**2)/(2*root);beta=total[:,1:]/total[:,0,None]
+  # Final sphere referenced to CM boost direction (not incoming electron).
+  axis=beta/np.linalg.norm(beta,axis=1)[:,None];ey=np.tile([0.,1.,0.],(N,1));ex=np.cross(ey,axis);direction=cc[:,None]*axis+np.sqrt(1-cc*cc)[:,None]*(np.cos(phi)[:,None]*ex+np.sin(phi)[:,None]*ey)
+  k=E.boost(np.column_stack([pf,pf[:,None]*direction]),beta);n=E.boost(np.column_stack([(ss+C.MN**2)/(2*root),-pf[:,None]*direction]),beta);amp=trace_amp(k,n,l,p)
+  weight=pp*pp*prw/math.pi**2*pe*en/(2*math.pi**2)*weights*amp*pf/(64*math.pi**2*root*ep*en*C.HBAR*C.HC**3)
+  if np.any(weight<=0):raise ArithmeticError('Nonpositive trace event')
+  fp=expit((b.mu_p-ep)/b.T);fe=expit((b.mu_e-en)/b.T);fn=expit((b.mu_n-n[:,0])/b.T);values=np.column_stack([np.ones(N),k[:,0],en,np.full(N,ep),n[:,0],ep+en-n[:,0]])
+  density+=pp*pp*prw/(math.pi**2*C.HC**3)*fp;maxfour=max(maxfour,float(np.max(abs(p+l-n-k))));points+=N
+  for name,mur in scenarios.items():
+   fr=np.zeros(N)if mur is None else expit((mur-k[:,0])/b.T);F=fp*fe*(1-fn)*(1-fr);B=(1-fp)*(1-fe)*fn*fr;delta=np.zeros(N)if mur is None else np.log(F)-np.log(B);net=weight*(F-B);a=acc[name];a['F']+=(weight*F)@values;a['B']+=(weight*B)@values;a['net']+=net@values
+   if mur is not None:a['entropy']+=float(net@delta)
+ out={k:{a:v.tolist()if isinstance(v,np.ndarray)else v for a,v in z.items()}for k,z in acc.items()};return dict(scenarios=out,density=density,maxfour=maxfour,points=points,controls=[order,angular,phi_order,tail],seconds=time.monotonic()-start)
+
+def main():
+ checks=[];before={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()for p in A.iterdir()if p.is_file()};b,meta=C.matched();rows=[]
+ def ck(name,er,gate):checks.append(dict(name=name,error=float(er),gate=gate,passed=bool(math.isfinite(er)and abs(er)<=gate)))
+ ck('commissioned source SHA',0 if before['hot_electron_capture_moments/electron_capture.py']=='b9954da0a2324376c19e4277013436b135d1432f9cb9904b03761be30bd1b3d1'else 1,0)
+ # New moving-proton threshold original invariant roots and current trace.
+ for P0,c in[(17.,-.83),(55.,.37),(110.,-.29),(190.,.71)]:
+  ep=math.hypot(P0,C.MP);D=(C.MN**2-C.MP**2-C.ME**2)/2;root=brentq(lambda ee:ep*ee-P0*math.sqrt(ee*ee-C.ME*C.ME)*c-D,C.ME+1e-10,5.,xtol=1e-14);ck('original threshold delta '+str((P0,c)),float(C.threshold(ep,P0,c))/root-1,3e-12)
+ for ee,c in[(1.347,-.46),(4.71,.24),(19.31,-.77)]:
+  p=np.array([[C.MP,0,0,0]]);l=np.array([[ee,0,0,math.sqrt(ee*ee-C.ME*C.ME)]]);s=dot(p+l,p+l);pf=(s-C.MN**2)/(2*np.sqrt(s));beta=(p+l)[:,1:]/(p+l)[:,0,None];k=E.boost(np.column_stack([pf,pf*np.sqrt(1-c*c),pf*0,pf*c]),beta);n=p+l-k;v=trace_amp(k,n,l,p);ck('fresh trace vs scalar '+str(ee),v[0]/C.scalar_amplitude(k,n,l,p)[0]-1,3e-12);ck('fresh trace vs reciprocal spinors '+str(ee),v[0]/C.spinor_amplitude(k,n,l,p)[0]-1,3e-12)
+ for order,angle,phi,tail in[(16,8,6,50.),(24,10,8,70.)]:
+  row=integrate(b,order,angle,phi,tail);rows.append(row);ck('independent proton density '+str(order),row['density']/3e-8-1,3e-8);(P/'partial.json').write_text(json.dumps(dict(checks=checks,rows=rows),indent=2));print('phase',order,row['seconds'],row['scenarios']['empty']['F'][:2],flush=True)
+  if row['seconds']>80:break
+ # Author fine reference is read only after independent raw forward computation.
+ raw=json.loads((A/'results.json').read_text());result=dict(checks=checks,rows=rows,matched_metadata=meta,author_top_keys=list(raw),before=before);(P/'results.json').write_text(json.dumps(result,indent=2)+'\n');print('initial forward complete',flush=True)
+if __name__=='__main__':main()

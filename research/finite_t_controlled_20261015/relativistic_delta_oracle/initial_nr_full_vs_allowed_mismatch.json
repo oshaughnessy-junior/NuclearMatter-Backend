@@ -1,0 +1,48 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "M100000.0 heavy-mass absolute allowed limit",
+      "error": -0.00031946824378259464,
+      "tolerance": 0.0002,
+      "passed": false
+    },
+    {
+      "name": "M1000000.0 heavy-mass absolute allowed limit",
+      "error": -0.0006625272568144824,
+      "tolerance": 3e-05,
+      "passed": false
+    },
+    {
+      "name": "M10000000.0 heavy-mass absolute allowed limit",
+      "error": -0.0006968286695470116,
+      "tolerance": 1e-05,
+      "passed": false
+    },
+    {
+      "name": "approach to NR limit",
+      "passed": false
+    }
+  ],
+  "rows": [
+    {
+      "mass": 100000.0,
+      "relativistic": 9487726.67716291,
+      "NR_allowed": 9490758.673168391,
+      "relative_error": -0.00031946824378259464
+    },
+    {
+      "mass": 1000000.0,
+      "relativistic": 948518589.2910626,
+      "NR_allowed": 949147425.3310797,
+      "relative_error": -0.0006625272568144824
+    },
+    {
+      "mass": 10000000.0,
+      "relativistic": 94836168465.62761,
+      "NR_allowed": 94902299108.4523,
+      "relative_error": -0.0006968286695470116
+    }
+  ],
+  "runtime_seconds": 0.10104508395306766
+}

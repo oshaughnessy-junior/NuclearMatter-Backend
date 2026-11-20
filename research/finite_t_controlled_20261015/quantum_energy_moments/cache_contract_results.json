@@ -1,0 +1,283 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "actual tiny physics result exact replay",
+      "passed": true
+    },
+    {
+      "name": "reject changed outer order",
+      "passed": true
+    },
+    {
+      "name": "reject changed internal order",
+      "passed": true
+    },
+    {
+      "name": "reject changed internal tail",
+      "passed": true
+    },
+    {
+      "name": "reject changed edges",
+      "passed": true
+    },
+    {
+      "name": "reject changed length",
+      "passed": true
+    },
+    {
+      "name": "reject flavor",
+      "passed": true
+    },
+    {
+      "name": "reject state T",
+      "passed": true
+    },
+    {
+      "name": "reject state nn",
+      "passed": true
+    },
+    {
+      "name": "reject state np",
+      "passed": true
+    },
+    {
+      "name": "reject state mass",
+      "passed": true
+    },
+    {
+      "name": "reject state offset",
+      "passed": true
+    },
+    {
+      "name": "reject source quantum_slab/fixed_bath.py",
+      "passed": true
+    },
+    {
+      "name": "reject source quantum_slab/guarded_capture.py",
+      "passed": true
+    },
+    {
+      "name": "reject source capture_endpoint/mapped_capture.py",
+      "passed": true
+    },
+    {
+      "name": "reject source crossed_opacity/crossed_decay.py",
+      "passed": true
+    },
+    {
+      "name": "reject source allowed_opacity/allowed_capture.py",
+      "passed": true
+    },
+    {
+      "name": "reject source response_reference/free_density_response.py",
+      "passed": true
+    },
+    {
+      "name": "reject source nr_baryon_eos/free_nucleons.py",
+      "passed": true
+    },
+    {
+      "name": "reject source thermodynamics/lepton_reference.py",
+      "passed": true
+    },
+    {
+      "name": "reject source weak_rates/static_capture.py",
+      "passed": true
+    },
+    {
+      "name": "reject source integrated.py",
+      "passed": true
+    },
+    {
+      "name": "reject source cache_contract.py",
+      "passed": true
+    },
+    {
+      "name": "reject source run_study.py",
+      "passed": true
+    },
+    {
+      "name": "reject environment",
+      "passed": true
+    },
+    {
+      "name": "reject result corruption",
+      "passed": true
+    },
+    {
+      "name": "reject duplicate entries",
+      "passed": true
+    },
+    {
+      "name": "reject missing fingerprint legacy cache",
+      "passed": true
+    },
+    {
+      "name": "reject missing file",
+      "passed": true
+    },
+    {
+      "name": "actual entry rejects legacy before kernel",
+      "passed": true
+    },
+    {
+      "name": "rejected legacy file unchanged",
+      "passed": true
+    }
+  ],
+  "runtime_seconds": 1.9725130000151694,
+  "entry_stdout": "",
+  "entry_stderr": "Traceback (most recent call last):\n  File \"/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/quantum_energy_moments/run_study.py\", line 15, in <module>\n    hits=cache.load(cachefile,expected) if '--resume' in sys.argv[2:] else {}\n         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/quantum_energy_moments/cache_contract.py\", line 44, in load\n    if data.get('cache_schema')!=1 or not isinstance(data.get('records'),list):raise ValueError('Missing exact cache provenance; legacy caches are excluded')\n                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Missing exact cache provenance; legacy caches are excluded\n",
+  "source_sha256": {
+    "quantum_slab/fixed_bath.py": "8e73b2c7d41cce51f8a522b8ba4444599010783be2b8af892c50add7e684ecf3",
+    "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+    "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+    "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+    "integrated.py": "7aa9ec59ac7470a63f233ad11c0fbe733b198546071978be7d69f38424a479bd",
+    "cache_contract.py": "1f40edb4887bfed2052e241f05fc840ea9eb9f78831d5e9e3766c94360357460",
+    "run_study.py": "faf527020caf55a7efae542ecf8eedeb070d02ffdd96bc21d48e6b198b7f9fd5"
+  },
+  "actual_tiny_result": {
+    "flavor": "nue",
+    "values": {
+      "emission_number_cm3_s": 3.2106331029384745e+29,
+      "emission_energy_MeV_cm3_s": 2.4269038216977556e+28,
+      "incoming_left_number_cm2_s": 1.111999664824311e+37,
+      "incoming_right_number_cm2_s": 2.389082713870125e+36,
+      "outgoing_left_number_cm2_s": 2.4027779106614388e+36,
+      "outgoing_right_number_cm2_s": 1.112519688439184e+37,
+      "slab_emission_number_cm2_s": 3.2039371559054927e+34,
+      "slab_absorbed_boundary_number_cm2_s": 1.3143938619009405e+34,
+      "incoming_left_energy_MeV_cm2_s": 8.336612670558242e+35,
+      "incoming_right_energy_MeV_cm2_s": 1.7909374156291153e+35,
+      "outgoing_left_energy_MeV_cm2_s": 1.8012902371563867e+35,
+      "outgoing_right_energy_MeV_cm2_s": 8.340546647181234e+35,
+      "slab_emission_energy_MeV_cm2_s": 2.421808412898709e+33,
+      "slab_absorbed_boundary_energy_MeV_cm2_s": 9.931285978723398e+32,
+      "radiation_number_gain_cm2_s": 1.8895432940045522e+34,
+      "radiation_energy_gain_MeV_cm2_s": 1.4286798150263692e+33,
+      "bath_energy_source_erg_cm2_s": -2.288997417102691e+27,
+      "bath_electron_lepton_source_cm2_s": -1.8895432940045522e+34,
+      "emission_energy_erg_cm3_s": 3.888328596089447e+22
+    },
+    "panels": [
+      {
+        "lo": 0.0,
+        "hi": 0.1,
+        "values": [
+          3.2106331029384745e+29,
+          2.4269038216977556e+28,
+          1.111999664824311e+37,
+          2.389082713870125e+36,
+          2.4027779106614388e+36,
+          1.112519688439184e+37,
+          3.2039371559054927e+34,
+          1.3143938619009405e+34,
+          8.336612670558242e+35,
+          1.7909374156291153e+35,
+          1.8012902371563867e+35,
+          8.340546647181234e+35,
+          2.421808412898709e+33,
+          9.931285978723398e+32
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "E": 0.006943184420297371,
+        "weight": 0.017392742256872675,
+        "values": [
+          4.154842154607553e+28,
+          2.8847835316665925e+26,
+          1.617078213543586e+36,
+          3.4781443287461165e+35,
+          3.495850486712456e+35,
+          1.61774353853989e+36,
+          4.146993923735549e+33,
+          1.7110531307974207e+33,
+          1.1227672258678133e+34,
+          2.4149397514895694e+33,
+          2.4272334635030907e+33,
+          1.1232291732826904e+34,
+          2.879334360234853e+31,
+          1.1880157440053693e+31
+        ],
+        "guard_used": false
+      },
+      {
+        "E": 0.03300094782075719,
+        "weight": 0.03260725774312733,
+        "values": [
+          9.80125861306474e+29,
+          3.2345082406749645e+28,
+          3.6454882853538233e+37,
+          7.837592849518158e+36,
+          7.879376565735881e+36,
+          3.6470646062424203e+37,
+          9.782022451852425e+34,
+          4.0273299414831784e+34,
+          1.2030456868614311e+36,
+          2.5864799266728834e+35,
+          2.6002689490594678e+35,
+          1.2035658876953647e+36,
+          3.2281601251505715e+33,
+          1.3290570525585948e+33
+        ],
+        "guard_used": false
+      },
+      {
+        "E": 0.06699905217924282,
+        "weight": 0.03260725774312733,
+        "values": [
+          4.2681439769037354e+30,
+          2.8596160101709433e+29,
+          1.4984624824695197e+38,
+          3.2197976551206544e+37,
+          3.238001621657209e+37,
+          1.499152805688658e+38,
+          4.259350255428689e+35,
+          1.74863038263497e+35,
+          1.0039556605161308e+37,
+          2.1572339110203238e+36,
+          2.169430396058842e+36,
+          1.0044181705299266e+37,
+          2.8537243001313796e+34,
+          1.1715657824836968e+34
+        ],
+        "guard_used": false
+      },
+      {
+        "E": 0.09305681557970263,
+        "weight": 0.017392742256872675,
+        "values": [
+          8.578807170430862e+30,
+          7.983164767526153e+29,
+          2.8845952811457392e+38,
+          6.19559078625351e+37,
+          6.23219303183895e+37,
+          2.8859888018214922e+38,
+          8.560479600994078e+35,
+          3.506734366697019e+35,
+          2.6843125109965953e+37,
+          5.765419492036977e+36,
+          5.79948037620945e+36,
+          2.685609276961896e+37,
+          7.966109715035124e+34,
+          3.263255332487298e+34
+        ],
+        "guard_used": false
+      }
+    ],
+    "outer_order": 4,
+    "internal_order": 4,
+    "internal_tail": 40.0,
+    "length_cm": 100000.0,
+    "runtime_seconds": 0.006263333139941096
+  }
+}

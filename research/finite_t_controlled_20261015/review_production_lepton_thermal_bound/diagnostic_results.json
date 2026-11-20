@@ -1,0 +1,290 @@
+{
+  "rows": [
+    {
+      "index": 4,
+      "oracle": {
+        "v": 439.2588688799325,
+        "alpha": 0.53,
+        "mass": 105.6583755,
+        "T": 0.24053783084543884,
+        "mu": 0.12748505034808258,
+        "number": 4.031174650103654e-197,
+        "energy": 8.805163154485662e-195,
+        "thermal": 4.545889505618332e-195,
+        "momentum_number": 4.0311746501036536e-197,
+        "momentum_energy": 8.805163154485662e-195,
+        "momentum_thermal": 4.545889505618333e-195,
+        "xc": 8.619671234094106e-128,
+        "log_upper_hole_physical": -747.1332191019409,
+        "log_hole_scaled_integral": -747.1332191019409,
+        "hole_float": 0.0,
+        "skip_bound": true,
+        "log_halfminsubnormal": -745.1332191019411,
+        "FD_relative_correction_bound": 2.9005021637918586e-191
+      },
+      "outcomes": {
+        "old": {
+          "value": null,
+          "exception": "Unresolved finite-temperature lepton quadrature",
+          "trace": [
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "response",
+              "success": true
+            },
+            {
+              "component": "hole_integrand",
+              "success": false,
+              "exception": "Unresolved finite-temperature lepton quadrature"
+            }
+          ]
+        },
+        "new": {
+          "value": null,
+          "exception": "Unresolved finite-temperature lepton quadrature",
+          "trace": [
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "response",
+              "success": true
+            },
+            {
+              "component": "hole_integrand",
+              "success": false,
+              "exception": "Unresolved finite-temperature lepton quadrature"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 5,
+      "oracle": {
+        "v": 438.18255927934814,
+        "alpha": 0.53,
+        "mass": 105.6583755,
+        "T": 0.24112866489658974,
+        "mu": 0.12779819239519258,
+        "number": 1.187051755893352e-196,
+        "energy": 2.5928601857925903e-194,
+        "thermal": 1.3386405841714489e-194,
+        "momentum_number": 1.1870517558933523e-196,
+        "momentum_energy": 2.5928601857925903e-194,
+        "momentum_thermal": 1.3386405841714487e-194,
+        "xc": 1.7665147873663116e-127,
+        "log_upper_hole_physical": -745.3332191019412,
+        "log_hole_scaled_integral": -745.3332191019412,
+        "hole_float": 0.0,
+        "skip_bound": true,
+        "log_halfminsubnormal": -745.1332191019411,
+        "FD_relative_correction_bound": 8.509587614790319e-191
+      },
+      "outcomes": {
+        "old": {
+          "value": null,
+          "exception": "Unresolved finite-temperature lepton quadrature",
+          "trace": [
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "response",
+              "success": true
+            },
+            {
+              "component": "hole_integrand",
+              "success": false,
+              "exception": "Unresolved finite-temperature lepton quadrature"
+            }
+          ]
+        },
+        "new": {
+          "value": null,
+          "exception": "Unresolved finite-temperature lepton quadrature",
+          "trace": [
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "response",
+              "success": true
+            },
+            {
+              "component": "hole_integrand",
+              "success": false,
+              "exception": "Unresolved finite-temperature lepton quadrature"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 6,
+      "oracle": {
+        "v": 437.94338059832603,
+        "alpha": 0.53,
+        "mass": 105.6583755,
+        "T": 0.2412603550615325,
+        "mu": 0.12786798818261225,
+        "number": 1.5090385360670044e-196,
+        "energy": 3.29617748434448e-194,
+        "thermal": 1.7017518814671017e-194,
+        "momentum_number": 1.5090385360670044e-196,
+        "momentum_energy": 3.29617748434448e-194,
+        "momentum_thermal": 1.7017518814671017e-194,
+        "xc": 2.0718927618896855e-127,
+        "log_upper_hole_physical": -744.933219101941,
+        "log_hole_scaled_integral": -744.933219101941,
+        "hole_float": 5e-324,
+        "skip_bound": false,
+        "log_halfminsubnormal": -745.1332191019411,
+        "FD_relative_correction_bound": 1.08089248031576e-190
+      },
+      "outcomes": {
+        "old": {
+          "value": null,
+          "exception": "Unresolved finite-temperature lepton quadrature",
+          "trace": [
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "response",
+              "success": true
+            },
+            {
+              "component": "hole_integrand",
+              "success": false,
+              "exception": "Unresolved finite-temperature lepton quadrature"
+            }
+          ]
+        },
+        "new": {
+          "value": null,
+          "exception": "Unresolved finite-temperature lepton quadrature",
+          "trace": [
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "response",
+              "success": true
+            },
+            {
+              "component": "hole_integrand",
+              "success": false,
+              "exception": "Unresolved finite-temperature lepton quadrature"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 7,
+      "oracle": {
+        "v": 436.86708208985203,
+        "alpha": 0.53,
+        "mass": 105.6583755,
+        "T": 0.2418547421667922,
+        "mu": 0.12818301334839988,
+        "number": 4.443634918926338e-196,
+        "energy": 9.70626852343458e-194,
+        "thermal": 5.0111960549462695e-194,
+        "momentum_number": 4.443634918926335e-196,
+        "momentum_energy": 9.706268523434574e-194,
+        "momentum_thermal": 5.0111960549462665e-194,
+        "xc": 4.246104277961773e-127,
+        "log_upper_hole_physical": -743.1332191019412,
+        "log_hole_scaled_integral": -743.1332191019412,
+        "hole_float": 2e-323,
+        "skip_bound": false,
+        "log_halfminsubnormal": -745.1332191019411,
+        "FD_relative_correction_bound": 3.1711223505132953e-190
+      },
+      "outcomes": {
+        "old": {
+          "value": null,
+          "exception": "Unresolved finite-temperature lepton quadrature",
+          "trace": [
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "response",
+              "success": true
+            },
+            {
+              "component": "hole_integrand",
+              "success": false,
+              "exception": "Unresolved finite-temperature lepton quadrature"
+            }
+          ]
+        },
+        "new": {
+          "value": null,
+          "exception": "Unresolved finite-temperature lepton quadrature",
+          "trace": [
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "integrand",
+              "success": true
+            },
+            {
+              "component": "response",
+              "success": true
+            },
+            {
+              "component": "hole_integrand",
+              "success": false,
+              "exception": "Unresolved finite-temperature lepton quadrature"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "source_sha256": "e0c16fc5899d5a9bfe2e8c89ba7255a60e80f0bb620c4f3103a7e4bc68487b90",
+  "initial_failure_unchanged": true
+}

@@ -1,0 +1,316 @@
+{
+  "created_utc": "2026-10-16T08:09:23.772532+00:00",
+  "before_any_new_physical_outputs": true,
+  "candidate_manifest_sha256": "dcfbafe85645caa4ac6f2ea1f4cd3a7cb55775d030eddc0c9c5a8c9211a8b216",
+  "published_PR55_head": "440094516498eb445ab5de2e6ebf89b361fea212",
+  "source_pin_sha256": "576a9a2584a730bab076726cb968ac9d0cc696a741876b55bd3a9e86fe082f50",
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "current": "fixed physical free fullGuo VA F2 GP, MN939.56542052 MP938.27208816 ME.51099895069; bareMavg; no EOS/root",
+  "panels_MeV": {
+    "EC": [
+      0.05,
+      2.0,
+      6.0,
+      15.0,
+      30.0,
+      60.0
+    ],
+    "PC": [
+      0.05,
+      2.0,
+      6.0,
+      15.0,
+      30.0,
+      60.0
+    ],
+    "NEUTRON_DECAY": [
+      0.001,
+      0.2,
+      0.5,
+      0.8,
+      1.1,
+      1.4
+    ]
+  },
+  "incident_orders": [
+    12,
+    20
+  ],
+  "band_nodes_max": 480,
+  "controls_fine": {
+    "lepton_order": 12,
+    "angle_order": 16,
+    "energy_order": 16,
+    "phi_order": 6,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 110.0
+  },
+  "radiation": [
+    {
+      "name": "empty",
+      "mode": "empty",
+      "T": null,
+      "mu_nue": null,
+      "mu_antinue": null
+    },
+    {
+      "name": "LTE",
+      "mode": "FD",
+      "T": 2.0,
+      "mu_nue": -2.809364169619812,
+      "mu_antinue": 2.809364169619812
+    },
+    {
+      "name": "common_changed_affinity",
+      "mode": "FD",
+      "T": 2.0,
+      "mu_nue": -3.6093641696198118,
+      "mu_antinue": 2.009364169619812
+    }
+  ],
+  "small_inner_controls": [
+    {
+      "channel": "EC",
+      "E": 0.1,
+      "variations": [
+        {
+          "name": "fine",
+          "changes": {}
+        },
+        {
+          "name": "higher_coupled_orders",
+          "changes": {
+            "lepton_order": 16,
+            "angle_order": 20,
+            "energy_order": 20,
+            "phi_order": 8
+          }
+        }
+      ]
+    },
+    {
+      "channel": "EC",
+      "E": 30.0,
+      "variations": [
+        {
+          "name": "fine",
+          "changes": {}
+        },
+        {
+          "name": "higher_coupled_orders",
+          "changes": {
+            "lepton_order": 16,
+            "angle_order": 20,
+            "energy_order": 20,
+            "phi_order": 8
+          }
+        }
+      ]
+    },
+    {
+      "channel": "EC",
+      "E": 55.0,
+      "variations": [
+        {
+          "name": "fine",
+          "changes": {}
+        },
+        {
+          "name": "higher_coupled_orders",
+          "changes": {
+            "lepton_order": 16,
+            "angle_order": 20,
+            "energy_order": 20,
+            "phi_order": 8
+          }
+        }
+      ]
+    },
+    {
+      "channel": "PC",
+      "E": 0.1,
+      "variations": [
+        {
+          "name": "fine",
+          "changes": {}
+        },
+        {
+          "name": "higher_coupled_orders",
+          "changes": {
+            "lepton_order": 16,
+            "angle_order": 20,
+            "energy_order": 20,
+            "phi_order": 8
+          }
+        }
+      ]
+    },
+    {
+      "channel": "PC",
+      "E": 30.0,
+      "variations": [
+        {
+          "name": "fine",
+          "changes": {}
+        },
+        {
+          "name": "higher_coupled_orders",
+          "changes": {
+            "lepton_order": 16,
+            "angle_order": 20,
+            "energy_order": 20,
+            "phi_order": 8
+          }
+        }
+      ]
+    },
+    {
+      "channel": "PC",
+      "E": 55.0,
+      "variations": [
+        {
+          "name": "fine",
+          "changes": {}
+        },
+        {
+          "name": "higher_coupled_orders",
+          "changes": {
+            "lepton_order": 16,
+            "angle_order": 20,
+            "energy_order": 20,
+            "phi_order": 8
+          }
+        }
+      ]
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "E": 0.01,
+      "variations": [
+        {
+          "name": "fine",
+          "changes": {}
+        },
+        {
+          "name": "higher_coupled_orders",
+          "changes": {
+            "parent_order": 16,
+            "cone_order": 20,
+            "electron_order": 20,
+            "decay_phi_order": 14
+          }
+        }
+      ]
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "E": 1.2,
+      "variations": [
+        {
+          "name": "fine",
+          "changes": {}
+        },
+        {
+          "name": "higher_coupled_orders",
+          "changes": {
+            "parent_order": 16,
+            "cone_order": 20,
+            "electron_order": 20,
+            "decay_phi_order": 14
+          }
+        }
+      ]
+    },
+    {
+      "channel": "EC",
+      "E": 0.1,
+      "variations": [
+        {
+          "name": "isolated_inner_tail90",
+          "changes": {
+            "tail": 90.0
+          }
+        }
+      ]
+    },
+    {
+      "channel": "EC",
+      "E": 55.0,
+      "variations": [
+        {
+          "name": "isolated_outer_tail50",
+          "changes": {
+            "outer_tail": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "channel": "PC",
+      "E": 0.1,
+      "variations": [
+        {
+          "name": "isolated_inner_tail90",
+          "changes": {
+            "tail": 90.0
+          }
+        }
+      ]
+    },
+    {
+      "channel": "PC",
+      "E": 55.0,
+      "variations": [
+        {
+          "name": "isolated_outer_tail50",
+          "changes": {
+            "outer_tail": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "channel": "NEUTRON_DECAY",
+      "E": 1.2,
+      "variations": [
+        {
+          "name": "isolated_parent_tail90",
+          "changes": {
+            "tail": 90.0
+          }
+        }
+      ]
+    }
+  ],
+  "spot_coefficient_calls_max": 21,
+  "variation_scope": "Higher profile couples ONLY quadrature orders, tails fixed. Tail variations each isolated at the fine orders. No after-data profile/map/gate retuning.",
+  "event_totals": "Fresh real-package Controls.fine(channel) for each of3channels\u00d73explicitradiations:9callsmaximum. AllF/B actual FD occupation products independent; no savedmoments.",
+  "gates": {
+    "inner_j_and_chi_relative": 3e-06,
+    "incident_panel_FBRQ_relative": 3e-06,
+    "incident_band_FBRQ_relative": 3e-06,
+    "band_vs_fresh_event_positive_FBRQ_relative": 3e-06,
+    "LTE_net_over_positive_gross": 2e-09,
+    "source_Le_energy_entropy_gross": 3e-09
+  },
+  "failure_policy": "Preserve everyfailed guard/inner/order/panel/band/totalcheck. Any unresolved actual coefficient stops thatchannel/order path as INCOMPLETE; do notskip or fillzero. Otherindependent channels/spotchecks/eventtotals may proceed. A returnedpositive coefficient that failsinner/ordergate is still recorded; all affectedband/totalclaimsUNQUALIFIED. No smallnesswaiver without independently rigorous fullweightedbound; no suchbound claimed here.",
+  "resource": {
+    "chunk_nodes_max": 4,
+    "serial": true,
+    "threads": 1,
+    "subprocess_timeout_seconds": 119,
+    "science_new_call_stop_UTC": "2026-10-16T08:50:00Z",
+    "freeze_by_UTC": "2026-10-16T09:00:00Z"
+  },
+  "scope": "Explicitly FINITE spectralband comparison only. Missing captureE<.05/>60 andbetaE<.001/>1.4 nonzero tails OPEN. whole_moment_qualified=False always. Finite-range precursorstudy acceptancePENDING andnotinherited. No production/codechanges/fits/EOS/AD/transport/newranges/orders/plots/papers/Git."
+}

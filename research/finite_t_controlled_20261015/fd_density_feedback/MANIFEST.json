@@ -1,0 +1,44 @@
+{
+  "leaf_files_sha256": {
+    "qualify_feedback.py": "213b2878178bae9b1920077574bf9945d42a05ce78882ff8dd9d2358ef1060b7",
+    "partial_4.json": "fa634a39f556132d71c26b2a054caa8df24df37158f4de06fb8b1bebcc981abd",
+    "qualification.json": "f5a7c1165a9f9c39d02f57acd670e477b28ea66539aa5f7350456d2836d63108",
+    "check_tails_eos.py": "84a64bedd1fdc13a89abb753f5ec807fa9adb072f55ec46ac855fee75f02505e",
+    "tails_eos.json": "a39cc1c0ff9a1c28559e09b34395bbc8a8233b7556f513d1c3dc0c4b0d1292a2",
+    "partial_2.json": "fca708dbff517933eea8c2688dabccd519073adf3bf6abcba25d3e617f6bf966",
+    "qualification_partial.json": "2b8a60aedc940c4b0860684db6cf263fc48ae2ba63c7924367c2bb38c565a4b5",
+    "RESEARCH_NOTE.md": "5ee99964b01f039931c11a1aa167b8a3ad606a094ca5f37c500c9523337fc966",
+    "run_feedback.py": "fd5361a61bab051d3d38fd4cf770961617f985a1a691aad55fbd0dc833e398ee",
+    "results_4.json": "112420c232242c586813866680888b99e1d342aaa986bf8f26e257bc33ed5b2c",
+    "engine.py": "91bad5ddc2fb21a7c81b1bb739fce999924f729a9af6e2134b7e8944d49be810",
+    "tails_partial.json": "a7ff0ecd8a3d9a29af444e245d59d71966b1e684d87f089f5b1af39494791552",
+    "results_2.json": "e9af5f26b947f3cbe3ca71d4dad870d29ed021c1e5cbaea3a3e670a46c13c360"
+  },
+  "physical_provenance": {
+    "source_sha256": {
+      "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+      "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+      "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+      "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+      "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+      "capture_endpoint/mapped_capture.py": "31a6cbaf7ea8ed9debafe282d55a2a14aa7a8a2e3daae602b1f5324a12fc1154",
+      "crossed_opacity/crossed_decay.py": "2654f503a0832da168f57f1e0948ae581d7b6e7cfa24fbcf264f043ddc5e6cb2",
+      "quantum_slab/fixed_bath.py": "8e73b2c7d41cce51f8a522b8ba4444599010783be2b8af892c50add7e684ecf3",
+      "quantum_slab/guarded_capture.py": "12f97c2dcddc6bbbb6ec21cc6c0e2a34e415542c20f6e1e63c90fb44cd1463cf",
+      "fd_fluid_element/element.py": "bf4259bc68cb6ae354ca8a5d45dd832407c43a4e9d5bee6052885be5284a2568",
+      "fd_prescribed_density/density_element.py": "d539c8e2a86cb31c10d459d7f1a5609e8c0c2e1fa737256cb7a67e7ea04309b2",
+      "fd_fluid_element/qualification_contract.py": "92cbb4eede20914741d7c7b51f85c95f130e47bd6aa509f8915206ff3f12a1ff",
+      "fd_fluid_element/qualify_source.py": "115df9db7339a2357a1f2f885447cd7967e31e323b793899cbc93d2c5ada3ea8",
+      "fd_fluid_element/short_evolution.py": "38734cbbecf01d371215721ec1673e524602dfda3289bd1a6658181590a5abd6",
+      "fd_density_feedback/engine.py": "91bad5ddc2fb21a7c81b1bb739fce999924f729a9af6e2134b7e8944d49be810",
+      "fd_density_feedback/run_feedback.py": "fd5361a61bab051d3d38fd4cf770961617f985a1a691aad55fbd0dc833e398ee"
+    },
+    "environment": {
+      "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+      "executable": "/Users/rossma/miniconda3/bin/python",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O"
+    }
+  }
+}

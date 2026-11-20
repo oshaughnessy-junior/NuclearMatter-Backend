@@ -1,0 +1,1 @@
+Independent reviewer trace construction failed before physical comparisons: E.adj expects shape (N,4,4,4), but lepton vertex was shape (4,4,4); ValueError: einstein sum subscripts string contains too many subscripts for operand1. Corrected with explicit singleton batch, no author edits or gate change.

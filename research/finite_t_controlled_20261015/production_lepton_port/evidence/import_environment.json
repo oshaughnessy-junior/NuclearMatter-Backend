@@ -1,0 +1,112 @@
+{
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "executable": "/Users/rossma/miniconda3/envs/junior_tools/bin/python",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "numpy": "2.3.5",
+  "scipy": "1.15.2",
+  "jax": "0.10.1",
+  "diffrax": "0.7.2",
+  "pytest": "9.0.3",
+  "actual_package_import": true,
+  "namespace_stubs": false,
+  "loaded_package_modules": {
+    "nmbackend.constants": {
+      "path": "src/nmbackend/constants.py",
+      "sha256": "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317"
+    },
+    "nmbackend.ejecta": {
+      "path": "src/nmbackend/ejecta.py",
+      "sha256": "84a0c0154566e02e2c54db38c39fcb9ab62147f62d1d64ebef969bd57ff74ce4"
+    },
+    "nmbackend.ipad": {
+      "path": "src/nmbackend/ipad.py",
+      "sha256": "7a2c7ba7819aa183e0bcbe4ae0b2f374d5dcc96e6293fa1eba1daa312ee09eb2"
+    },
+    "nmbackend.postmerger": {
+      "path": "src/nmbackend/postmerger.py",
+      "sha256": "e8afd2ff1e24849ffe8ddfd524a2730924b76c9fb13bf34e1cc7a5c6907e5afe"
+    },
+    "nmbackend.eos.base": {
+      "path": "src/nmbackend/eos/base.py",
+      "sha256": "d8fedfedd8f53c5c1fc2a913d7b8d83126c63ce8249c5e14814780bb84f15a23"
+    },
+    "nmbackend.eos.leptons": {
+      "path": "src/nmbackend/eos/leptons.py",
+      "sha256": "aafaa2bda6af55fd094dd54d2c4cc1b8b14cca45676ac4b730a7d7f79a0960bb"
+    },
+    "nmbackend.eos.crust": {
+      "path": "src/nmbackend/eos/crust.py",
+      "sha256": "f66259afb388ce5747c61e58cf11e23737a78c5b980f3697b7523cff2184afbc"
+    },
+    "nmbackend.eos.metamodel": {
+      "path": "src/nmbackend/eos/metamodel.py",
+      "sha256": "677785f663656c5863612c25bb92f2e9a89c09bc1d9d6700d62e0ed322f0c5ef"
+    },
+    "nmbackend.eos.polytrope": {
+      "path": "src/nmbackend/eos/polytrope.py",
+      "sha256": "04b459dbf277dfa3a695daef52afcdaddb505c590c6fe9382014d1fb55ea222c"
+    },
+    "nmbackend.eos.hybrid": {
+      "path": "src/nmbackend/eos/hybrid.py",
+      "sha256": "c25d43d73970f489d9f5e8c3d3872b6df0173d0043d961cbfaf561668b34287d"
+    },
+    "nmbackend.eos.rmft": {
+      "path": "src/nmbackend/eos/rmft.py",
+      "sha256": "4a717efc9ae79895876e2529c2d2f0325cd5adfb36251bf3c60ea1eac0cc377c"
+    },
+    "nmbackend.eos.ddrmf": {
+      "path": "src/nmbackend/eos/ddrmf.py",
+      "sha256": "b24733c6b454df4d20434bc44e673e8f42beb84d9c9da9f3d0a22416a7df97af"
+    },
+    "nmbackend.eos.skyrme": {
+      "path": "src/nmbackend/eos/skyrme.py",
+      "sha256": "3995fdeb01aaba782da36600b37fcbd400b33befd44255e5330f95790e258e25"
+    },
+    "nmbackend.eos.compose": {
+      "path": "src/nmbackend/eos/compose.py",
+      "sha256": "6e2ff43d76f26dcef72a47be1a38082322ba748d53571eafcc4e93b025d0416e"
+    },
+    "nmbackend.eos": {
+      "path": "src/nmbackend/eos/__init__.py",
+      "sha256": "3a1eaa34c055e9006023966240e849d3d6f1710bbef4e1bac11ab54747cf6df5"
+    },
+    "nmbackend.tov.solver": {
+      "path": "src/nmbackend/tov/solver.py",
+      "sha256": "7dd30ea903024c79fdd42db19006a14dfc5f3b6f09cbe705e1dfe5a4ab1aa5ab"
+    },
+    "nmbackend.tov.family": {
+      "path": "src/nmbackend/tov/family.py",
+      "sha256": "531a050b982f994b61294a8f7495bd6df4a7ae1a49132f7d92ef8dfc28daab44"
+    },
+    "nmbackend.tov.phase_transition": {
+      "path": "src/nmbackend/tov/phase_transition.py",
+      "sha256": "5278e80b8f71e53e178aea51c395f16ed9f40500fba6194a36ac7c6b00b4b6ce"
+    },
+    "nmbackend.tov.central": {
+      "path": "src/nmbackend/tov/central.py",
+      "sha256": "e4b2aafa956941ba549a02e49f6f9a2abea060c906b47fa18f8311d3d13bbe13"
+    },
+    "nmbackend.tov": {
+      "path": "src/nmbackend/tov/__init__.py",
+      "sha256": "3e44195ead076c196cc6e04bfa5f0e2aa02c472a2325e27fc7b78839436b01f5"
+    },
+    "nmbackend": {
+      "path": "src/nmbackend/__init__.py",
+      "sha256": "5f4756d56524e0f8fd7e0020a90f8c2170981345b2a355b3869639dfaec1dc56"
+    },
+    "nmbackend.reference.scipy_tov": {
+      "path": "src/nmbackend/reference/scipy_tov.py",
+      "sha256": "efe497c109e51edd61b869bbbfaa50fc7932f3fbe1ed3cf907b1eaf8304d4434"
+    },
+    "nmbackend.reference": {
+      "path": "src/nmbackend/reference/__init__.py",
+      "sha256": "9d8ccf54846ebde4bc19e76c45b900b1342dd3ebd49aef486070a799b1da0e56"
+    },
+    "nmbackend.reference.finite_t_leptons": {
+      "path": "src/nmbackend/reference/finite_t_leptons.py",
+      "sha256": "5dfe2dc902a2a98feab69981213855ac919b1268f0d16a5a9a4bb693fa2ab0d0"
+    }
+  },
+  "minimum_versions_executed": false,
+  "full_repository_suite_executed": false
+}

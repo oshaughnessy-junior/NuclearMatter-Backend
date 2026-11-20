@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "name": "excluded Fourier outer y28 number",
+      "error": -1.018942912267562e-07,
+      "tolerance": 3e-08,
+      "passed": false,
+      "scope": "coarse cutoff only; fine y40 accepted separately"
+    },
+    {
+      "name": "excluded Fourier outer y28 energy",
+      "error": -6.319594731962752e-07,
+      "tolerance": 3e-08,
+      "passed": false,
+      "scope": "coarse cutoff only; fine y40 accepted separately"
+    }
+  ],
+  "failed_count": 2
+}

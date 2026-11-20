@@ -1,0 +1,67 @@
+{
+  "review_files_sha256": {
+    "refine_review.py": "e898253ba066d5b546bcffd057fc2d887f09b8769860107351c01e68a00d97e5",
+    "initial_report_write_failure.txt": "4a455949690ac9eb36ac647375cc77cbedca466be76b889c65a2c3ee59ec6466",
+    "initial_forward_json_failure.txt": "9775eaad14bbb541975b021e8f450702808c03d426a97ed5f193ad562e323ec9",
+    "results.json": "91b6b2e5957e98a629cb2a081e4129c67b2afb3a33e0bde0b5e8ad20f57d6b1c",
+    "refined_results.json": "528ed6241bb335ac6f29b4c480eaf44529fff49f09ecf34937fa70e7928b326a",
+    "forward_eos.json": "99c47b1cd2fee54e5571d7f4bf66e87957d1eaf0e5aa238653f067ea09a2bf42",
+    "probe.py": "68abfc825c0e7166e0acd91f139f603ca9f085c5d12193952c8c2f6dcc28709e",
+    "initial_check_forward_eos.py": "790a300fc025c585dbadbd509156b5b3b53b02c6402d5bb064864e9985b819e1",
+    "initial_refine_review.py": "c0be6dc8373acf7e64e906c0348c8a6d6413c98728e0de5ff1a834f81eaa7150",
+    "REVIEW.md": "688bde8609a52a17e7edc11a7fb0876c155ec72ad6c4707b0394786145601c50",
+    "check_forward_eos.py": "588606b5a8cdaed9232cd4541c8946a9a71d076b5502dd111833142d252673e1",
+    "overflow_log_evidence.json": "cf119d6660ee75d74d0f8a4f743590aa4f8fd5d470f05edd6380981430ed0172",
+    "initial_results_preserved.json": "91b6b2e5957e98a629cb2a081e4129c67b2afb3a33e0bde0b5e8ad20f57d6b1c"
+  },
+  "author_source_data_hashes_before": {
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "nc_continuum_grid/make_figure.py": "18545d0bab96691bb249ca87ce14d8ad1ca210fd8dfef56d1e96bcb35ca21a9f",
+    "nc_continuum_grid/refine.py": "af0bd533e0773f527de42fb205279060aaa1d3e2f1a8003f0673edcccf8d76fe",
+    "nc_continuum_grid/tail_extension.py": "8ceb5f7fc0363ef33a09ba75dec411087069739bac1fdd77b0ee2e94c9b16296",
+    "nc_continuum_grid/check_controls.py": "b9c97f773f9873e4fa204ce093e9ffcbb610d7c124937489bb37e14fc03bcc0c",
+    "nc_continuum_grid/study.py": "44ecbb5f8843f630eb6645639d1bd575871c5f0e1077c90e18d308d90f848d90",
+    "nc_continuum_grid/refine_dense_grid.py": "2f4890f3ec54ceb5bcce7e5fccfb9830c9842777bc80bf53337e79cb6545bc3c",
+    "nc_continuum_grid/SOURCES.json": "1a053d71d7749da886042a3cd1b6d71ea248cdf889b78f97d6383e9e666cc023",
+    "nc_continuum_grid/refinements.json": "c191090ca05093c31aac8eb07d5bcb620ef86aed8afa14237e76bcb8ce6a0051",
+    "nc_continuum_grid/controls.json": "4f9389bb99b5fa93e0309cba82a180da76403a41d1d7677d07f2b1b6902d3b70",
+    "nc_continuum_grid/CHECKPOINT.json": "c984c6edb7547bff1daf683c1af7a8573dc2b076e096c33943e1ab9625a0a836",
+    "nc_continuum_grid/tail_extension.json": "9f7c4cf5db5fff9ba8f6e2d5cb3fb996f9ee2877690fb1e82e5ce4a78e77a734",
+    "nc_continuum_grid/results.json": "fdc0aa91452d6d91ff85cddfd17ef0a142624988b7210edbb6ddcf333d7a7644",
+    "nc_continuum_grid/dense_grid_refinement.json": "ee091fa8bc4491a0ccb2eeaec7e997aa52907461cd39d6ecff1bbdb2177a9fb7",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c"
+  },
+  "author_source_data_hashes_after": {
+    "nc_continuum_grid/redistribution.py": "0e72e2846e784f8961e5dab95129f4863e3ddb43754114a4c75a7d47d51ab544",
+    "nc_continuum_grid/make_figure.py": "18545d0bab96691bb249ca87ce14d8ad1ca210fd8dfef56d1e96bcb35ca21a9f",
+    "nc_continuum_grid/refine.py": "af0bd533e0773f527de42fb205279060aaa1d3e2f1a8003f0673edcccf8d76fe",
+    "nc_continuum_grid/tail_extension.py": "8ceb5f7fc0363ef33a09ba75dec411087069739bac1fdd77b0ee2e94c9b16296",
+    "nc_continuum_grid/check_controls.py": "b9c97f773f9873e4fa204ce093e9ffcbb610d7c124937489bb37e14fc03bcc0c",
+    "nc_continuum_grid/study.py": "44ecbb5f8843f630eb6645639d1bd575871c5f0e1077c90e18d308d90f848d90",
+    "nc_continuum_grid/refine_dense_grid.py": "2f4890f3ec54ceb5bcce7e5fccfb9830c9842777bc80bf53337e79cb6545bc3c",
+    "nc_continuum_grid/SOURCES.json": "1a053d71d7749da886042a3cd1b6d71ea248cdf889b78f97d6383e9e666cc023",
+    "nc_continuum_grid/refinements.json": "c191090ca05093c31aac8eb07d5bcb620ef86aed8afa14237e76bcb8ce6a0051",
+    "nc_continuum_grid/controls.json": "4f9389bb99b5fa93e0309cba82a180da76403a41d1d7677d07f2b1b6902d3b70",
+    "nc_continuum_grid/CHECKPOINT.json": "c984c6edb7547bff1daf683c1af7a8573dc2b076e096c33943e1ab9625a0a836",
+    "nc_continuum_grid/tail_extension.json": "9f7c4cf5db5fff9ba8f6e2d5cb3fb996f9ee2877690fb1e82e5ce4a78e77a734",
+    "nc_continuum_grid/results.json": "fdc0aa91452d6d91ff85cddfd17ef0a142624988b7210edbb6ddcf333d7a7644",
+    "nc_continuum_grid/dense_grid_refinement.json": "ee091fa8bc4491a0ccb2eeaec7e997aa52907461cd39d6ecff1bbdb2177a9fb7",
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c"
+  },
+  "current_transitive_physical_hashes": {
+    "neutral_current/free_nc.py": "b802b1799188dfb929ff44f2094db3e578009865400a5a548595f9f2c48d126c",
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c"
+  },
+  "status": "SCOPED_ACCEPTANCE_COLDER_OVERFLOW_EXCLUDED",
+  "passing_checks": 110,
+  "failed_independent_coarse_checks": 6,
+  "experiments_seconds": [
+    4.205509207909927,
+    6.4647393331397325,
+    0.16038587503135204
+  ]
+}

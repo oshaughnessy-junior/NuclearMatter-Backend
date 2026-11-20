@@ -1,0 +1,374 @@
+{
+  "base_commit": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "source_package_blob_checks": [
+    {
+      "path": "src/nmbackend/__init__.py",
+      "expected_blob": "a344669a63903f93d7209043c57113f7d0207d26",
+      "actual_blob": "a344669a63903f93d7209043c57113f7d0207d26"
+    },
+    {
+      "path": "src/nmbackend/adapters/__init__.py",
+      "expected_blob": "00386e88796d3671a0e06aa7f2222898fec28f25",
+      "actual_blob": "00386e88796d3671a0e06aa7f2222898fec28f25"
+    },
+    {
+      "path": "src/nmbackend/adapters/rift.py",
+      "expected_blob": "697cf55a95f626ae94195d22a26552b413e696cb",
+      "actual_blob": "697cf55a95f626ae94195d22a26552b413e696cb"
+    },
+    {
+      "path": "src/nmbackend/constants.py",
+      "expected_blob": "cbd0b9009e1f333c6c447930670bcbfedaefd68e",
+      "actual_blob": "cbd0b9009e1f333c6c447930670bcbfedaefd68e"
+    },
+    {
+      "path": "src/nmbackend/cooling/README.md",
+      "expected_blob": "3962060b24e8f243cd92c2f39aa57e025d7b1468",
+      "actual_blob": "3962060b24e8f243cd92c2f39aa57e025d7b1468"
+    },
+    {
+      "path": "src/nmbackend/cooling/__init__.py",
+      "expected_blob": "52bd5d1c9a5b37ad2cca3b24ecb5010982ac72eb",
+      "actual_blob": "52bd5d1c9a5b37ad2cca3b24ecb5010982ac72eb"
+    },
+    {
+      "path": "src/nmbackend/cooling/build_nscool.sh",
+      "expected_blob": "dda621f9b0cdb1e5a89725d256d4faec78c7b52a",
+      "actual_blob": "dda621f9b0cdb1e5a89725d256d4faec78c7b52a"
+    },
+    {
+      "path": "src/nmbackend/cooling/isothermal.py",
+      "expected_blob": "09117faa4af3917d6bbde58d15bb828a82fe5466",
+      "actual_blob": "09117faa4af3917d6bbde58d15bb828a82fe5466"
+    },
+    {
+      "path": "src/nmbackend/cooling/nscool_isothermal_tail.f",
+      "expected_blob": "216ba6b01990fdf4e786232ccc1f555ea5bc3c52",
+      "actual_blob": "216ba6b01990fdf4e786232ccc1f555ea5bc3c52"
+    },
+    {
+      "path": "src/nmbackend/cooling/nscool_nmbackend.patch",
+      "expected_blob": "06dbcbe97f41c9e642f3bd30d7ca4ceb0a1f27a4",
+      "actual_blob": "06dbcbe97f41c9e642f3bd30d7ca4ceb0a1f27a4"
+    },
+    {
+      "path": "src/nmbackend/cooling/runner.py",
+      "expected_blob": "2dcb1f654be601f926283339f482d0dfe707ed66",
+      "actual_blob": "2dcb1f654be601f926283339f482d0dfe707ed66"
+    },
+    {
+      "path": "src/nmbackend/cooling/validate.py",
+      "expected_blob": "c847075c8b7ccfdd24208b41ba6363e354f4f42f",
+      "actual_blob": "c847075c8b7ccfdd24208b41ba6363e354f4f42f"
+    },
+    {
+      "path": "src/nmbackend/data/crust_sly_dh2001.dat",
+      "expected_blob": "c5d185d5e98c2cc1f65caf1efe85d0a84ce1410c",
+      "actual_blob": "c5d185d5e98c2cc1f65caf1efe85d0a84ce1410c"
+    },
+    {
+      "path": "src/nmbackend/data/frib_scenario_ladder.yaml",
+      "expected_blob": "f4ad33869258f62ea9e850f85de1c32432337426",
+      "actual_blob": "f4ad33869258f62ea9e850f85de1c32432337426"
+    },
+    {
+      "path": "src/nmbackend/durca.py",
+      "expected_blob": "7af50ffa6dcf091b6bdc7f665b2646af0f7e0edf",
+      "actual_blob": "7af50ffa6dcf091b6bdc7f665b2646af0f7e0edf"
+    },
+    {
+      "path": "src/nmbackend/ejecta.py",
+      "expected_blob": "e97623ba9b3a31e1271f98887dfabf0ef040f21a",
+      "actual_blob": "e97623ba9b3a31e1271f98887dfabf0ef040f21a"
+    },
+    {
+      "path": "src/nmbackend/eos/__init__.py",
+      "expected_blob": "0d12740d332a13c2ed83f20db15f1086f845c05a",
+      "actual_blob": "0d12740d332a13c2ed83f20db15f1086f845c05a"
+    },
+    {
+      "path": "src/nmbackend/eos/base.py",
+      "expected_blob": "8aa38098f71e06c1936c7efcae90d73b665fc5cc",
+      "actual_blob": "8aa38098f71e06c1936c7efcae90d73b665fc5cc"
+    },
+    {
+      "path": "src/nmbackend/eos/compose.py",
+      "expected_blob": "6ecd0f8de8318175fb55b791c38771f76ab956f9",
+      "actual_blob": "6ecd0f8de8318175fb55b791c38771f76ab956f9"
+    },
+    {
+      "path": "src/nmbackend/eos/coolcomp.py",
+      "expected_blob": "6b5d408ffe3285765ead8604a3cd2a97ce11fa21",
+      "actual_blob": "6b5d408ffe3285765ead8604a3cd2a97ce11fa21"
+    },
+    {
+      "path": "src/nmbackend/eos/crust.py",
+      "expected_blob": "be758bb966a14988ee9aaf6418e129cdd5dc7a21",
+      "actual_blob": "be758bb966a14988ee9aaf6418e129cdd5dc7a21"
+    },
+    {
+      "path": "src/nmbackend/eos/ddrmf.py",
+      "expected_blob": "cbd26b4329523f4ee63d2adf1ea775f05d1f31a8",
+      "actual_blob": "cbd26b4329523f4ee63d2adf1ea775f05d1f31a8"
+    },
+    {
+      "path": "src/nmbackend/eos/hybrid.py",
+      "expected_blob": "d888578b941c5c104d733543cba345fe8d117f9d",
+      "actual_blob": "d888578b941c5c104d733543cba345fe8d117f9d"
+    },
+    {
+      "path": "src/nmbackend/eos/leptons.py",
+      "expected_blob": "7cd4565470dafb48967546897fc99cc3d8935ad8",
+      "actual_blob": "7cd4565470dafb48967546897fc99cc3d8935ad8"
+    },
+    {
+      "path": "src/nmbackend/eos/metamodel.py",
+      "expected_blob": "88fba2de277fb5a98728cfae030e62ab0f32c495",
+      "actual_blob": "88fba2de277fb5a98728cfae030e62ab0f32c495"
+    },
+    {
+      "path": "src/nmbackend/eos/polytrope.py",
+      "expected_blob": "d37db24e20f71c39781ebf55874030f3e9eb2e3d",
+      "actual_blob": "d37db24e20f71c39781ebf55874030f3e9eb2e3d"
+    },
+    {
+      "path": "src/nmbackend/eos/rmft.py",
+      "expected_blob": "1edba14f7422f37f1ae6e4eb58167dc2c2140061",
+      "actual_blob": "1edba14f7422f37f1ae6e4eb58167dc2c2140061"
+    },
+    {
+      "path": "src/nmbackend/eos/skyrme.py",
+      "expected_blob": "cb4e0465262621e3b4e2d2511fdf714644afc8d6",
+      "actual_blob": "cb4e0465262621e3b4e2d2511fdf714644afc8d6"
+    },
+    {
+      "path": "src/nmbackend/inference/__init__.py",
+      "expected_blob": "df013d472ff9b9cbd8be9c59cb0ca30446b0e9c0",
+      "actual_blob": "df013d472ff9b9cbd8be9c59cb0ca30446b0e9c0"
+    },
+    {
+      "path": "src/nmbackend/inference/fisher.py",
+      "expected_blob": "968b35e88b7a793e56561af37f08f01903b95db0",
+      "actual_blob": "968b35e88b7a793e56561af37f08f01903b95db0"
+    },
+    {
+      "path": "src/nmbackend/inference/synthetic.py",
+      "expected_blob": "6904977ee37c6576de06d45aa57dc008fbb41d5c",
+      "actual_blob": "6904977ee37c6576de06d45aa57dc008fbb41d5c"
+    },
+    {
+      "path": "src/nmbackend/ipad.py",
+      "expected_blob": "73614a0a3e5745daeb7fd37e6467e0922c012d97",
+      "actual_blob": "73614a0a3e5745daeb7fd37e6467e0922c012d97"
+    },
+    {
+      "path": "src/nmbackend/lab_likelihood.py",
+      "expected_blob": "50b79f189207062d45848281e6780f2a766cecd8",
+      "actual_blob": "50b79f189207062d45848281e6780f2a766cecd8"
+    },
+    {
+      "path": "src/nmbackend/nscool_io.py",
+      "expected_blob": "3e7ab2e0fdaef5e0041d06ef68c5b5aca89122d1",
+      "actual_blob": "3e7ab2e0fdaef5e0041d06ef68c5b5aca89122d1"
+    },
+    {
+      "path": "src/nmbackend/postmerger.py",
+      "expected_blob": "f42e719afe3d334dca2848527011b7344cadd718",
+      "actual_blob": "f42e719afe3d334dca2848527011b7344cadd718"
+    },
+    {
+      "path": "src/nmbackend/priors/__init__.py",
+      "expected_blob": "8f0024f15e3a68d9ebf7b0ce1fcf211b17f64dd3",
+      "actual_blob": "8f0024f15e3a68d9ebf7b0ce1fcf211b17f64dd3"
+    },
+    {
+      "path": "src/nmbackend/priors/bridge.py",
+      "expected_blob": "73166045ed9e54d5e6a546a2fe2b668ebeccc480",
+      "actual_blob": "73166045ed9e54d5e6a546a2fe2b668ebeccc480"
+    },
+    {
+      "path": "src/nmbackend/priors/gp_pca.py",
+      "expected_blob": "05782a459da45d6794ca7af8c02070c0e31f434a",
+      "actual_blob": "05782a459da45d6794ca7af8c02070c0e31f434a"
+    },
+    {
+      "path": "src/nmbackend/reference/__init__.py",
+      "expected_blob": "0173284afbd37b3670444e6465d6d1142b8c918b",
+      "actual_blob": "0173284afbd37b3670444e6465d6d1142b8c918b"
+    },
+    {
+      "path": "src/nmbackend/reference/reprimand.py",
+      "expected_blob": "375a66f3d0a2a2ce5e0f8580e7d5b43de45c124e",
+      "actual_blob": "375a66f3d0a2a2ce5e0f8580e7d5b43de45c124e"
+    },
+    {
+      "path": "src/nmbackend/reference/scipy_tov.py",
+      "expected_blob": "b1ffe00ea40fd3111fe40f73b70b2335035d71a0",
+      "actual_blob": "b1ffe00ea40fd3111fe40f73b70b2335035d71a0"
+    },
+    {
+      "path": "src/nmbackend/rift/__init__.py",
+      "expected_blob": "44f2bce3c2ea3e9bcc8b88d66ab6a789cf15e8ef",
+      "actual_blob": "44f2bce3c2ea3e9bcc8b88d66ab6a789cf15e8ef"
+    },
+    {
+      "path": "src/nmbackend/rift/compressed.py",
+      "expected_blob": "f91dc77b2a2ed6078eac9f301d37b53b56cb938b",
+      "actual_blob": "f91dc77b2a2ed6078eac9f301d37b53b56cb938b"
+    },
+    {
+      "path": "src/nmbackend/rift/evidence.py",
+      "expected_blob": "00e4fda84d0895fb07f4b17707c8800c0179afab",
+      "actual_blob": "00e4fda84d0895fb07f4b17707c8800c0179afab"
+    },
+    {
+      "path": "src/nmbackend/rift/sequence.py",
+      "expected_blob": "9ad8c90dd8844bec51039328444cd3ce8fe8f9b8",
+      "actual_blob": "9ad8c90dd8844bec51039328444cd3ce8fe8f9b8"
+    },
+    {
+      "path": "src/nmbackend/tov/__init__.py",
+      "expected_blob": "0b79afb0a8d44dce81378389464902f737291666",
+      "actual_blob": "0b79afb0a8d44dce81378389464902f737291666"
+    },
+    {
+      "path": "src/nmbackend/tov/central.py",
+      "expected_blob": "aa13375f3dd65fd894fd79d3b2bf357af0a26a76",
+      "actual_blob": "aa13375f3dd65fd894fd79d3b2bf357af0a26a76"
+    },
+    {
+      "path": "src/nmbackend/tov/family.py",
+      "expected_blob": "918ff56f8e6494a8814c0e77ae1e939693bafbe1",
+      "actual_blob": "918ff56f8e6494a8814c0e77ae1e939693bafbe1"
+    },
+    {
+      "path": "src/nmbackend/tov/phase_transition.py",
+      "expected_blob": "0657c0dbf520c88359af8c5d5845875d5a9739ae",
+      "actual_blob": "0657c0dbf520c88359af8c5d5845875d5a9739ae"
+    },
+    {
+      "path": "src/nmbackend/tov/solver.py",
+      "expected_blob": "e6798201167641f9e5c8b43fc686ee81d986606a",
+      "actual_blob": "e6798201167641f9e5c8b43fc686ee81d986606a"
+    },
+    {
+      "path": "src/nmbackend/validation/__init__.py",
+      "expected_blob": "30932c0633e1dfb4bee2df19dd0df77acb3c7b5b",
+      "actual_blob": "30932c0633e1dfb4bee2df19dd0df77acb3c7b5b"
+    },
+    {
+      "path": "src/nmbackend/validation/model_diagnostic.py",
+      "expected_blob": "f02b3444b2daafc07e116123281cdefc009f3c87",
+      "actual_blob": "f02b3444b2daafc07e116123281cdefc009f3c87"
+    },
+    {
+      "path": "src/nmbackend/validation/reference_matrix.py",
+      "expected_blob": "21eb5acd5506539dc6a5b58a431dfa19d7456d70",
+      "actual_blob": "21eb5acd5506539dc6a5b58a431dfa19d7456d70"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/__init__.py",
+      "expected_blob": "05dd42d5f289004ff294c0cbf9899a6b82c18d5d",
+      "actual_blob": "05dd42d5f289004ff294c0cbf9899a6b82c18d5d"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/_spline.py",
+      "expected_blob": "5a128e57e10aa2250d1079a9fc2c3caa1256a842",
+      "actual_blob": "5a128e57e10aa2250d1079a9fc2c3caa1256a842"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/blanket.py",
+      "expected_blob": "a0f8608b2cd7814f5f4b12173f218d2c14b815f1",
+      "actual_blob": "a0f8608b2cd7814f5f4b12173f218d2c14b815f1"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/conduct.py",
+      "expected_blob": "bcccdf51e465d1b02ae90357c518305a6b73f137",
+      "actual_blob": "bcccdf51e465d1b02ae90357c518305a6b73f137"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/core_conduct.py",
+      "expected_blob": "d85ff36478e629434b8afce3f982a88c089c9fd4",
+      "actual_blob": "d85ff36478e629434b8afce3f982a88c089c9fd4"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/core_nu.py",
+      "expected_blob": "520d3b458c5eddbed1e1e1a5c6270dcc12643eb5",
+      "actual_blob": "520d3b458c5eddbed1e1e1a5c6270dcc12643eb5"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/crust.py",
+      "expected_blob": "538ae82d049bf370f6efb74c4c334d0436f2e19e",
+      "actual_blob": "538ae82d049bf370f6efb74c4c334d0436f2e19e"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/crust_nu.py",
+      "expected_blob": "5e47ba22d693680b960fd1e7c5ccfead5769ef93",
+      "actual_blob": "5e47ba22d693680b960fd1e7c5ccfead5769ef93"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/curve.py",
+      "expected_blob": "23d1883c0fd48c109701c928500495c6e67c6ec1",
+      "actual_blob": "23d1883c0fd48c109701c928500495c6e67c6ec1"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/envelope.py",
+      "expected_blob": "109bdacb4f458c104f72c1f0b6ac14a1fc956b2d",
+      "actual_blob": "109bdacb4f458c104f72c1f0b6ac14a1fc956b2d"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/gaps.py",
+      "expected_blob": "2779571a01ab1571e4f6405de40ac159048a98d0",
+      "actual_blob": "2779571a01ab1571e4f6405de40ac159048a98d0"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/geometry.py",
+      "expected_blob": "28218bb6b89c2bcaa29b84af133a3cbceeed51fa",
+      "actual_blob": "28218bb6b89c2bcaa29b84af133a3cbceeed51fa"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/heat.py",
+      "expected_blob": "a4f2e3e9a21d704a238627f0c1b53b1ca4d0b0f6",
+      "actual_blob": "a4f2e3e9a21d704a238627f0c1b53b1ca4d0b0f6"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/native.py",
+      "expected_blob": "7cdcb17371fbcf54949f7128b3ecbf3b66252ace",
+      "actual_blob": "7cdcb17371fbcf54949f7128b3ecbf3b66252ace"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/reference.py",
+      "expected_blob": "457be9da14a9ab47b6e3d7950a57dcb72ab48e50",
+      "actual_blob": "457be9da14a9ab47b6e3d7950a57dcb72ab48e50"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/star.py",
+      "expected_blob": "9cdd7be4a9b814e0e8b1b6cfb424e6ff1a671d4f",
+      "actual_blob": "9cdd7be4a9b814e0e8b1b6cfb424e6ff1a671d4f"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/superfluid.py",
+      "expected_blob": "e16a07cfa7b92530649822358c552b1fa7069042",
+      "actual_blob": "e16a07cfa7b92530649822358c552b1fa7069042"
+    },
+    {
+      "path": "src/nmbackend/cooling/physics/whole.py",
+      "expected_blob": "0c1e261c4e6122ff4b0acbd1ffa51b2dff5f0390",
+      "actual_blob": "0c1e261c4e6122ff4b0acbd1ffa51b2dff5f0390"
+    }
+  ],
+  "package_source_count": 71,
+  "candidate_paths": {
+    "README.md": "ab0031a2bcf5a2f67dfbad572ff3871498a49457d37a42c53f04003fe3f0b786",
+    "docs/finite_temperature_leptons.md": "493c5de3df04f1892703906afc6267035dc5efb5cf56fb24f083a3f3b3e3aec9",
+    "examples/finite_t_leptons.py": "9ab591e8de539ba679a0d2d1d97009590dd88db6c897c80282befaa2799c777a",
+    "src/nmbackend/reference/finite_t_leptons.py": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+    "tests/test_finite_t_leptons.py": "f72f41a2c63192587d94d6aebd9000c560f6b1a933f9f2d4d9d8ec4c60b19b6a"
+  },
+  "pyproject_git_blob": "e5f006cb9723d77c115402e3a6bb1518e6b377ff",
+  "license_sha256": "27b4dd528d646b7b596cd3b818cddfdfb4f6c9489473327f9bd2c4f85f8a18aa",
+  "license_provenance": "Exact git show old clean pinned5e0208 blob; complete compare toheadhasnoLICENSEchange",
+  "compare_file_count": 89,
+  "source_sha256": "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719",
+  "build": "Existing setuptools.build_meta.build_wheel directly, no isolation/install/network dependencies"
+}

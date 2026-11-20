@@ -1,0 +1,28 @@
+{
+  "snapshot_blob": "520d3b458c5eddbed1e1e1a5c6270dcc12643eb5",
+  "function": "murca",
+  "start_line": 55,
+  "end_line": 78,
+  "signature": [
+    "T",
+    "kfe",
+    "kfm",
+    "kfn",
+    "kfp",
+    "mstn",
+    "mstp",
+    "tcn",
+    "tcp",
+    "i",
+    "isf"
+  ],
+  "source_facts": [
+    "unitsT_K,kF_fm^-1,Landau_mstar/bare; erg_cm^-3_s^-1",
+    "aggregatecoldT9^8plusprescribedpairingsuppression",
+    "qncontainskfe+kfm;qpcontainsonlykfe",
+    "localguardonlykfn*kfp!=0;noexplicitprotonpolygonHeaviside"
+  ],
+  "qualification": "source inspection only; NO runtime/NSCool parity test or production bug/fix claim",
+  "scope_risk": "Do not extrapolate aggregate cold formula as positive arbitrary-composition spectral/muon-complete warm source",
+  "murca_segment_sha256": "25bd0221976996eaa2cb13f4311391b810c286a91fd044f57a739470a78acaa8"
+}

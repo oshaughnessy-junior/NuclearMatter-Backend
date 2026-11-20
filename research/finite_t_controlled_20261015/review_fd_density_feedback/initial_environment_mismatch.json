@@ -1,0 +1,540 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "raw panels sourceF 2:0",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceq 2:0",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw energy ledger 2:0",
+      "error": 0.0,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "raw lepton ledger 2:0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "raw entropy ledger 2:0",
+      "error": 1.1999949645069563e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "request actualstate 2:0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "request fingerprint 2:0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exactinitial only reuse 2:0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceF 2:1",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceq 2:1",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw energy ledger 2:1",
+      "error": 7.105427357601002e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "raw lepton ledger 2:1",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "raw entropy ledger 2:1",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "request actualstate 2:1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "request fingerprint 2:1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exactinitial only reuse 2:1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "signed compression expansion 2",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceF 4:0",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceq 4:0",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw energy ledger 4:0",
+      "error": 8.881784197001252e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "raw lepton ledger 4:0",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "raw entropy ledger 4:0",
+      "error": -1.5135462327897642e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "request actualstate 4:0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "request fingerprint 4:0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exactinitial only reuse 4:0",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceF 4:1",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceq 4:1",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw energy ledger 4:1",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "raw lepton ledger 4:1",
+      "error": 0.0,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "raw entropy ledger 4:1",
+      "error": 6.075868974608767e-16,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "request actualstate 4:1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "request fingerprint 4:1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exactinitial only reuse 4:1",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceF 4:2",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceq 4:2",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw energy ledger 4:2",
+      "error": 1.0658141036401503e-14,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "raw lepton ledger 4:2",
+      "error": 5.551115123125783e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "raw entropy ledger 4:2",
+      "error": 1.0586150012148465e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "request actualstate 4:2",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "request fingerprint 4:2",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exactinitial only reuse 4:2",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceF 4:3",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw panels sourceq 4:3",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "name": "raw energy ledger 4:3",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "raw lepton ledger 4:3",
+      "error": 5.551115123125783e-17,
+      "tolerance": 3e-13,
+      "passed": true
+    },
+    {
+      "name": "raw entropy ledger 4:3",
+      "error": 1.734723475976807e-18,
+      "tolerance": 3e-09,
+      "passed": true
+    },
+    {
+      "name": "request actualstate 4:3",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "request fingerprint 4:3",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exactinitial only reuse 4:3",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "signed compression expansion 4",
+      "error": -6.938893903907228e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "independent Simpson mechanicalwork",
+      "error": 5.480060849549773e-13,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "independent entropyroot endpoint",
+      "error": -8.881784197001252e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "name": "independent path work energy",
+      "error": -2.1660451210436804e-13,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "new peak E7.3 nuelog_j",
+      "error": 1.776356839400252e-15,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new peak E7.3 nuelog_chi",
+      "error": 8.881784197001256e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "peak EOS KMS nue",
+      "error": 8.881784197001252e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new peak E7.3 antinuelog_j",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "new peak E7.3 antinuelog_chi",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "peak EOS KMS antinue",
+      "error": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "new request full solved FDstate",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "physical provenance still frozen",
+      "error": 1.0,
+      "tolerance": 0.0,
+      "passed": false
+    }
+  ],
+  "details": {
+    "mechanical": {
+      "points": [
+        {
+          "x": 0.0,
+          "n": 0.0001010050167084168,
+          "T": 2.0145288365558938,
+          "u": 8.49351667984141,
+          "P": 0.0003576851051319837,
+          "entropy": 6.017546848343915
+        },
+        {
+          "x": 0.0050000000000000565,
+          "n": 0.0001015113064615719,
+          "T": 2.0207029015374594,
+          "u": 8.511245540772398,
+          "P": 0.0003603943359001755,
+          "entropy": 6.017546848343916
+        },
+        {
+          "x": 0.010000000000000113,
+          "n": 0.00010202013400267558,
+          "T": 2.026895313664171,
+          "u": 8.529019596712535,
+          "P": 0.00036312422169929286,
+          "entropy": 6.017546848343916
+        }
+      ],
+      "Simpson_work": 0.03550291687113352,
+      "author_Gauss_work": 0.035502916871114065
+    },
+    "physical_spectral": {
+      "nue": {
+        "state": {
+          "T": 2.026895313664173,
+          "nB": 0.00010202013400267558,
+          "Ye": 0.2973945797515789,
+          "u": 8.529019596712539,
+          "entropy": 6.017546848343916
+        },
+        "coarse": {
+          "flavor": "nue",
+          "energy_MeV": 7.3,
+          "log_j": 8.760299658001635,
+          "log_chi": 4.82333743865144,
+          "j_s": 6376.021917739053,
+          "chi_s": 124.37950782629095,
+          "rate_s": 6500.401425565348,
+          "feq": 0.9808658727848529,
+          "mu_neutrino_MeV": 15.27981027247381,
+          "true_absorption_cm_inv": 4.148853798926821e-09,
+          "relaxation_cm_inv": 2.1683005199434832e-07,
+          "true_over_relaxation": 0.019134127215147102,
+          "channels": {
+            "capture": {
+              "log_j": 8.760299658001635,
+              "log_chi": 4.82333743865144
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        },
+        "fine": {
+          "flavor": "nue",
+          "energy_MeV": 7.3,
+          "log_j": 8.760299658001633,
+          "log_chi": 4.823337438651439,
+          "j_s": 6376.021917739042,
+          "chi_s": 124.37950782629083,
+          "rate_s": 6500.4014255653365,
+          "feq": 0.9808658727848529,
+          "mu_neutrino_MeV": 15.27981027247381,
+          "true_absorption_cm_inv": 4.148853798926818e-09,
+          "relaxation_cm_inv": 2.1683005199434793e-07,
+          "true_over_relaxation": 0.01913412721514712,
+          "channels": {
+            "capture": {
+              "log_j": 8.760299658001633,
+              "log_chi": 4.823337438651439
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      },
+      "antinue": {
+        "state": {
+          "T": 2.026895313664173,
+          "nB": 0.00010202013400267558,
+          "Ye": 0.2973945797515789,
+          "u": 8.529019596712539,
+          "entropy": 6.017546848343916
+        },
+        "coarse": {
+          "flavor": "antinue",
+          "energy_MeV": 7.3,
+          "log_j": -3.1376989594325284,
+          "log_chi": 8.002397976138637,
+          "j_s": 0.04338250805036489,
+          "chi_s": 2988.114830705607,
+          "rate_s": 2988.158213213659,
+          "feq": 1.4518142934509669e-05,
+          "mu_neutrino_MeV": -15.279810272473812,
+          "true_absorption_cm_inv": 9.96727819852495e-08,
+          "relaxation_cm_inv": 9.967422906995409e-08,
+          "true_over_relaxation": 0.9999854818570648,
+          "channels": {
+            "capture": {
+              "log_j": -3.1376989594325284,
+              "log_chi": 8.002397976138637
+            },
+            "crossed_neutron_decay": {
+              "log_j": -180.38264526360066,
+              "log_chi": -169.2425483280295
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        },
+        "fine": {
+          "flavor": "antinue",
+          "energy_MeV": 7.3,
+          "log_j": -3.1376989594325284,
+          "log_chi": 8.002397976138637,
+          "j_s": 0.04338250805036489,
+          "chi_s": 2988.114830705607,
+          "rate_s": 2988.158213213659,
+          "feq": 1.4518142934509669e-05,
+          "mu_neutrino_MeV": -15.279810272473812,
+          "true_absorption_cm_inv": 9.96727819852495e-08,
+          "relaxation_cm_inv": 9.967422906995409e-08,
+          "true_over_relaxation": 0.9999854818570648,
+          "channels": {
+            "capture": {
+              "log_j": -3.1376989594325284,
+              "log_chi": 8.002397976138637
+            },
+            "crossed_neutron_decay": {
+              "log_j": -180.3826452636008,
+              "log_chi": -169.24254832802964
+            }
+          },
+          "capture_panel_guard": {
+            "used": false,
+            "discarded_panels": []
+          }
+        }
+      }
+    },
+    "time_sensitivity": {
+      "escaped_energy_relative": 0.00612484360880039,
+      "escaped_lepton_relative": 0.005616897541837362,
+      "temperature_absolute": -2.3145808825120184e-08
+    }
+  },
+  "runtime_seconds": 5.994303541956469,
+  "source_sha256": {
+    "review_fd_density_feedback/probe.py": "2e713537c5fef7c7fae9ca5bd46d5cd483c1fa42ed8fe9e4950cdc115ee1196f",
+    "fd_density_feedback/engine.py": "91bad5ddc2fb21a7c81b1bb739fce999924f729a9af6e2134b7e8944d49be810",
+    "fd_density_feedback/run_feedback.py": "fd5361a61bab051d3d38fd4cf770961617f985a1a691aad55fbd0dc833e398ee",
+    "fd_density_feedback/results_2.json": "e9af5f26b947f3cbe3ca71d4dad870d29ed021c1e5cbaea3a3e670a46c13c360",
+    "fd_density_feedback/results_4.json": "112420c232242c586813866680888b99e1d342aaa986bf8f26e257bc33ed5b2c"
+  }
+}

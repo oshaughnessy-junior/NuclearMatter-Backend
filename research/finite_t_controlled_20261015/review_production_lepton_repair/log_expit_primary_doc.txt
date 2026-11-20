@@ -1,0 +1,5 @@
+Primary source: https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.log_expit.html
+Read 2026-10-16 UTC during independent repaired-candidate review.
+Official function documentation, Notes: Added in version 1.8.0.
+The staged candidate imports scipy.special.log_expit unconditionally; the unchanged package declares scipy>=1.7.
+This establishes a required-API mismatch. It does not claim that SciPy1.7 was installed or executed in this review.

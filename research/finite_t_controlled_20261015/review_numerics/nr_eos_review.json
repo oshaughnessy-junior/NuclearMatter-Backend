@@ -1,0 +1,452 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "(5.0, 0.0002, 1.29333236) independent momentum n,K",
+      "actual": [
+        0.0001999999999999999,
+        0.0015099675264691847
+      ],
+      "expected": [
+        0.0001999999999999999,
+        0.001509967526469184
+      ],
+      "relative_error": 4.308180752816863e-16,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) prescribed density",
+      "actual": 0.0001999999999999999,
+      "expected": 0.0002,
+      "relative_error": 5.421010862427522e-16,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) covariance positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) Cv h0.002",
+      "actual": 0.0002990053408499869,
+      "expected": 0.0002990053433213069,
+      "relative_error": 8.265136656661542e-09,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) muT h0.002",
+      "actual": -4.786953121263338,
+      "expected": -4.786954104752074,
+      "relative_error": 2.054518834212088e-07,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) canonical e_n h0.002",
+      "actual": 8.89297269174782,
+      "expected": 8.892972691888108,
+      "relative_error": 1.577512787367501e-11,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) canonical s_n h0.002",
+      "actual": 4.786954771399804,
+      "expected": 4.786954104752074,
+      "relative_error": 1.3926344713561704e-07,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) canonical P_n h0.002",
+      "actual": 5.066426887832126,
+      "expected": 5.06642688792541,
+      "relative_error": 1.8412284102037518e-11,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) canonical P_T h0.002",
+      "actual": 0.00019933689389998403,
+      "expected": 0.00019933689554753678,
+      "relative_error": 8.265167115308741e-09,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) Cv h0.001",
+      "actual": 0.00029900534270336544,
+      "expected": 0.0002990053433213069,
+      "relative_error": 2.066656919990059e-09,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) muT h0.001",
+      "actual": -4.786953858879883,
+      "expected": -4.786954104752074,
+      "relative_error": 5.136297229324846e-08,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) canonical e_n h0.001",
+      "actual": 8.892972691847566,
+      "expected": 8.892972691888108,
+      "relative_error": 4.5588571505018646e-12,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) canonical s_n h0.001",
+      "actual": 4.786954271411569,
+      "expected": 4.786954104752074,
+      "relative_error": 3.4815352611772065e-08,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) canonical P_n h0.001",
+      "actual": 5.066426887898804,
+      "expected": 5.06642688792541,
+      "relative_error": 5.251486566192536e-12,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) canonical P_T h0.001",
+      "actual": 0.0001993368951355842,
+      "expected": 0.00019933689554753678,
+      "relative_error": 2.066614858048765e-09,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0002, 1.29333236) refined moments",
+      "actual": [
+        0.001006645017646123,
+        0.0011567277164979517,
+        0.0002990053433213069
+      ],
+      "expected": [
+        0.001006645017646123,
+        0.0011567277164979517,
+        0.0002990053433213069
+      ],
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) independent momentum n,K",
+      "actual": [
+        0.0007999999999999999,
+        0.0012456838123370063
+      ],
+      "expected": [
+        0.0007999999999999999,
+        0.001245683812337006
+      ],
+      "relative_error": 1.7407341441668914e-16,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) prescribed density",
+      "actual": 0.0007999999999999999,
+      "expected": 0.0008,
+      "relative_error": 1.3552527156068805e-16,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) covariance positive",
+      "actual": 1.0,
+      "expected": 1.0,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) Cv h0.002",
+      "actual": 0.0009509269879215013,
+      "expected": 0.0009509273742925255,
+      "relative_error": 4.0630970850565965e-07,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) muT h0.002",
+      "actual": -0.8818700963177305,
+      "expected": -0.8818703142282394,
+      "relative_error": 2.4710040166195615e-07,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) canonical e_n h0.002",
+      "actual": 102.0404668951617,
+      "expected": 102.04046697403146,
+      "relative_error": 7.729262991356416e-10,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) canonical s_n h0.002",
+      "actual": 0.8818709107964494,
+      "expected": 0.8818703142282394,
+      "relative_error": 6.764806575624664e-07,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) canonical P_n h0.002",
+      "actual": 1.3603112634534684,
+      "expected": 1.3603113160209712,
+      "relative_error": 3.8643729693366614e-08,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) canonical P_T h0.002",
+      "actual": 0.0006339513252765608,
+      "expected": 0.0006339515828616836,
+      "relative_error": 4.06316712177102e-07,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) Cv h0.001",
+      "actual": 0.0009509272776946671,
+      "expected": 0.0009509273742925255,
+      "relative_error": 1.0158279276934077e-07,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) muT h0.001",
+      "actual": -0.8818702597425597,
+      "expected": -0.8818703142282394,
+      "relative_error": 6.178423148579735e-08,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) canonical e_n h0.001",
+      "actual": 102.04046695432878,
+      "expected": 102.04046697403146,
+      "relative_error": 1.9308694615705894e-10,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) canonical s_n h0.001",
+      "actual": 0.8818704633702686,
+      "expected": 0.8818703142282394,
+      "relative_error": 1.6912013804726835e-07,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) canonical P_n h0.001",
+      "actual": 1.3603113028790237,
+      "expected": 1.3603113160209712,
+      "relative_error": 9.660985228481805e-09,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) canonical P_T h0.001",
+      "actual": 0.0006339515184655896,
+      "expected": 0.0006339515828616836,
+      "relative_error": 1.0157888358565421e-07,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.0008, 100.0) refined moments",
+      "actual": [
+        0.0008304558748913376,
+        0.0013394478342442751,
+        0.0009509273742925255
+      ],
+      "expected": [
+        0.0008304558748913378,
+        0.0013394478342442756,
+        0.0009509273742925253
+      ],
+      "relative_error": 3.23775855921173e-16,
+      "passed": true
+    },
+    {
+      "name": "(5.0, 0.0006, 0.0002) response-factory densities",
+      "actual": [
+        0.0005999999999999997,
+        0.0001999999999999999
+      ],
+      "expected": [
+        0.0006,
+        0.0002
+      ],
+      "relative_error": 3.6140072416183483e-16,
+      "passed": true
+    },
+    {
+      "name": "factory charge neutrality",
+      "actual": 0.00019999999999999998,
+      "expected": 0.0002,
+      "relative_error": 1.3552527156068805e-16,
+      "passed": true
+    },
+    {
+      "name": "factory offsets",
+      "actual": [
+        1.29333236,
+        0.0
+      ],
+      "expected": [
+        1.29333236,
+        0.0
+      ],
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "factory reverse fields",
+      "actual": [
+        -16.335130191872263,
+        -9.416021912047185
+      ],
+      "expected": [
+        -16.335130191872263,
+        -9.416021912047185
+      ],
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "factory chemical equilibrium conventions",
+      "actual": [
+        26.484274012695924,
+        -26.484274012695924
+      ],
+      "expected": [
+        26.484274012695924,
+        -26.484274012695924
+      ],
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "factory common-offset energy",
+      "actual": 0.08,
+      "expected": 0.07999999999999999,
+      "relative_error": 1.7347234759768073e-16,
+      "passed": true
+    },
+    {
+      "name": "factory common-offset equilibrium invariant",
+      "actual": 26.48427401269592,
+      "expected": 26.484274012695924,
+      "relative_error": 1.3414427282761898e-16,
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.002, 0.0005) response-factory densities",
+      "actual": [
+        0.0019999999999999163,
+        0.0005000000000000228
+      ],
+      "expected": [
+        0.002,
+        0.0005
+      ],
+      "relative_error": 4.185020385794047e-14,
+      "passed": true
+    },
+    {
+      "name": "factory charge neutrality",
+      "actual": 0.0005,
+      "expected": 0.0005,
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "factory offsets",
+      "actual": [
+        1.29333236,
+        0.0
+      ],
+      "expected": [
+        1.29333236,
+        0.0
+      ],
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "factory reverse fields",
+      "actual": [
+        0.8433021799227807,
+        4.303336869400759
+      ],
+      "expected": [
+        0.8433021799227807,
+        4.303336869400759
+      ],
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "factory chemical equilibrium conventions",
+      "actual": [
+        44.96195803507122,
+        -44.96195803507122
+      ],
+      "expected": [
+        44.96195803507122,
+        -44.96195803507122
+      ],
+      "relative_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "factory common-offset energy",
+      "actual": 0.24999999999999387,
+      "expected": 0.25,
+      "relative_error": 2.453592884421596e-14,
+      "passed": true
+    },
+    {
+      "name": "factory common-offset equilibrium invariant",
+      "actual": 44.96195803507125,
+      "expected": 44.96195803507122,
+      "relative_error": 6.321279293093622e-16,
+      "passed": true
+    }
+  ],
+  "sample_states": [
+    {
+      "T": 5.0,
+      "mass": 939.0,
+      "offset": 1.29333236,
+      "kinetic_mu": -16.335130191872263,
+      "density": 0.0001999999999999999,
+      "kinetic_energy_density": 0.0015099675264691847,
+      "energy_density": 0.0017686339984691846,
+      "pressure": 0.001006645017646123,
+      "entropy_density": 0.0011567277164979517,
+      "free_energy_density": -0.004015004584020574,
+      "dn_dmu": 3.94755523812356e-05,
+      "dn_dT_fixed_mu": 0.00018896765750871128,
+      "dmu_dT_fixed_density": -4.786954104752074,
+      "cv_fixed_density": 0.0002990053433213069,
+      "fluctuation_A0": 0.000197377761906178,
+      "fluctuation_A1": 0.004724191437717782,
+      "fluctuation_A2": 0.12054757155512137,
+      "fermi_momentum": 35.70015776971701,
+      "temperature_over_mass": 0.005324813631522897,
+      "fermi_momentum_over_mass": 0.03801933734794144,
+      "mu": -15.041797831872262
+    },
+    {
+      "T": 0.7,
+      "mass": 939.0,
+      "offset": 100.0,
+      "kinetic_mu": 1.4231577540716889,
+      "density": 0.0007999999999999999,
+      "kinetic_energy_density": 0.0012456838123370063,
+      "energy_density": 0.08124568381233699,
+      "pressure": 0.0008304558748913376,
+      "entropy_density": 0.0013394478342442751,
+      "free_energy_density": 0.080308070328366,
+      "dn_dmu": 0.0005881006726754796,
+      "dn_dT_fixed_mu": 0.0005186285250101642,
+      "dmu_dT_fixed_density": -0.8818703142282394,
+      "cv_fixed_density": 0.0009509273742925255,
+      "fluctuation_A0": 0.0004116704708728357,
+      "fluctuation_A1": 0.00025412797725498043,
+      "fluctuation_A2": 0.000622829956812563,
+      "fermi_momentum": 56.670467999079484,
+      "temperature_over_mass": 0.0007454739084132055,
+      "fermi_momentum_over_mass": 0.06035193610125611,
+      "mu": 101.4231577540717
+    }
+  ],
+  "source_sha256": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b"
+}

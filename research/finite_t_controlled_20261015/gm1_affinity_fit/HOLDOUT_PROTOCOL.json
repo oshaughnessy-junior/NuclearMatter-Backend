@@ -1,0 +1,202 @@
+{
+  "points": [
+    [
+      "density",
+      0.2563,
+      0.12,
+      0.203
+    ],
+    [
+      "density",
+      0.2563,
+      0.77,
+      0.203
+    ],
+    [
+      "density",
+      0.2563,
+      0.12,
+      0.293
+    ],
+    [
+      "density",
+      0.2563,
+      0.77,
+      0.293
+    ],
+    [
+      "density",
+      0.2598,
+      0.12,
+      0.203
+    ],
+    [
+      "density",
+      0.2598,
+      0.77,
+      0.203
+    ],
+    [
+      "density",
+      0.2598,
+      0.12,
+      0.293
+    ],
+    [
+      "density",
+      0.2598,
+      0.77,
+      0.293
+    ],
+    [
+      "composition",
+      0.1873,
+      0.12,
+      0.3264
+    ],
+    [
+      "composition",
+      0.1873,
+      1.37,
+      0.3264
+    ],
+    [
+      "composition",
+      0.2371,
+      0.12,
+      0.3264
+    ],
+    [
+      "composition",
+      0.2371,
+      1.37,
+      0.3264
+    ],
+    [
+      "composition",
+      0.1873,
+      0.12,
+      0.3296
+    ],
+    [
+      "composition",
+      0.1873,
+      1.37,
+      0.3296
+    ],
+    [
+      "composition",
+      0.2371,
+      0.12,
+      0.3296
+    ],
+    [
+      "composition",
+      0.2371,
+      1.37,
+      0.3296
+    ],
+    [
+      "temperature",
+      0.2077,
+      0.173,
+      0.2133
+    ],
+    [
+      "temperature",
+      0.2077,
+      2.63,
+      0.2133
+    ],
+    [
+      "temperature",
+      0.2077,
+      0.173,
+      0.2731
+    ],
+    [
+      "temperature",
+      0.2077,
+      2.63,
+      0.2731
+    ],
+    [
+      "temperature",
+      0.2279,
+      0.173,
+      0.2133
+    ],
+    [
+      "temperature",
+      0.2279,
+      2.63,
+      0.2133
+    ],
+    [
+      "temperature",
+      0.2279,
+      0.173,
+      0.2731
+    ],
+    [
+      "temperature",
+      0.2279,
+      2.63,
+      0.2731
+    ],
+    [
+      "joint",
+      0.2597,
+      0.12,
+      0.3297
+    ],
+    [
+      "joint",
+      0.2597,
+      0.43,
+      0.3297
+    ],
+    [
+      "joint",
+      0.2597,
+      2.91,
+      0.3297
+    ],
+    [
+      "endpoint",
+      0.18,
+      0.12,
+      0.33
+    ],
+    [
+      "endpoint",
+      0.26,
+      3.0,
+      0.18
+    ],
+    [
+      "endpoint",
+      0.26,
+      0.12,
+      0.33
+    ]
+  ],
+  "frozen": {
+    "potential.py": "5996a98f69d76f56ab03e5c59361fc7e8b4a75c71d0a877936850c1785806be2",
+    "coefficients.json": "1e03c7e192ab869018c2da575d613026f8be81d75ca7709f8b5de1d8ce59ea8b",
+    "PROTOCOL.json": "bde9c80680b41567774ed4dd8ff361926d54a3c4b6fb84d3528badb7662d446e"
+  },
+  "coefficient_edits_forbidden": true,
+  "reference_Cv": "two decreasing central entropy differences 1e-3T/5e-4T",
+  "gates": {
+    "free": 0.005,
+    "energy": 0.005,
+    "pressure": 0.01,
+    "entropy": 0.01,
+    "Cv": 0.01,
+    "Hessian": 0.02
+  },
+  "balance": 0.01,
+  "root": 2e-09,
+  "Cv_ladder": 2e-06
+}

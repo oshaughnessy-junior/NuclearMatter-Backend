@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "7e-05,3e-05,nue,10.0 coefficient0 relative",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "7e-05,3e-05,nue,10.0 coefficient1 relative",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "7e-05,3e-05,antinue,0.85 coefficient0 relative",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "7e-05,3e-05,antinue,0.85 coefficient1 relative",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.002,0.001,nue,60.0 coefficient0 relative",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "0.002,0.001,nue,60.0 coefficient1 relative",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "original failure has recorded collapsed panels",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "discarded raw widths are unrepresentable scale",
+      "error": 7.105427357601002e-15,
+      "passed": true
+    }
+  ],
+  "discarded_panels": [
+    {
+      "cosine": -0.928954645880918,
+      "lo": 61.293332359999994,
+      "hi": 61.29333236,
+      "width": 7.105427357601002e-15
+    }
+  ]
+}

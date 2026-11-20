@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "exact current physical payload accepted",
+      "passed": true
+    },
+    {
+      "name": "different solved FD density rejected",
+      "passed": true
+    },
+    {
+      "name": "changed upstream source expected hash rejected",
+      "passed": true
+    },
+    {
+      "name": "changed energy panel edges rejected",
+      "passed": true
+    },
+    {
+      "name": "legacy unqualified payload rejected",
+      "passed": true
+    },
+    {
+      "name": "result corruption rejected",
+      "passed": true
+    },
+    {
+      "name": "inconsistent source metadata rejected even with recomputed payload digest",
+      "passed": true
+    },
+    {
+      "name": "missing physical qualification rejected",
+      "passed": true
+    },
+    {
+      "name": "author source unchanged",
+      "passed": true
+    }
+  ],
+  "source_sha256": "92cbb4eede20914741d7c7b51f85c95f130e47bd6aa509f8915206ff3f12a1ff",
+  "scope": "Source reuse provenance only; no new physics quadrature or temporal qualification"
+}

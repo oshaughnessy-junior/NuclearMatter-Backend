@@ -1,0 +1,38 @@
+{
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "checks": 256,
+  "failed": 0,
+  "science": "Selected actual finiteT differential absorption in an identically cold-forbidden occupation window; not total Urca rates, widths or warm beta equilibrium",
+  "external_GM1_forward": "OPEN",
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "sha256": {
+    "gm1_threshold_thermal_probes/make_figure.py": "a62e206ef42d4936029758a871c7eb57bf4deb11a1d0a1742782ae8f755f9999",
+    "gm1_threshold_thermal_probes/partial_results.json": "5f3244793881367f89f88345d4d8e21ede71f81a5058fd1ee1e54952dff8dfbe",
+    "gm1_threshold_thermal_probes/initial_driver_syntax_failure.py": "25a1c119a8a92de8209f22c35f70e893bc5051b8803e0e3ebefebd6e5f90263d",
+    "gm1_threshold_thermal_probes/initial_heldout_scope_failure.py": "6c61bd612ad4a758b7308098d48672a1778b9506e5d45fbacea56751a4547dfc",
+    "gm1_threshold_thermal_probes/results.json": "1a8104d5a3eb5e1d50610c0f720be60c27880d2940f22d014ef1235c6a182246",
+    "gm1_threshold_thermal_probes/selected_thermal_probes.pdf": "b094c8155677542f80b7cf5d4177f2500c994212ffbb4902c96c7e0feb833715",
+    "gm1_threshold_thermal_probes/RESEARCH_NOTE.md": "00e1d70eba22969e04a34a689d6c76351def96db37b9f3b886b16301f6fb1a17",
+    "gm1_threshold_thermal_probes/boltzmann_limit.py": "b0d87322aa9e3bc9ee612cc7524189ec121de6d950efb330f88615bf35d2420b",
+    "gm1_threshold_thermal_probes/selected_thermal_probes.png": "0f1720560f6ec3ada48b46faaa5a8b36afad2d13221e125105ea895567653e2c",
+    "gm1_threshold_thermal_probes/probe.py": "98a1b620c6bc63cb77d8eba70e01bfe291f613b99623a2487af6bfafcf8473ee",
+    "gm1_threshold_thermal_probes/boltzmann_results.json": "1e4279c531d6a6185314a1e7e8ff2ff3226c9d2c1278d8b46984dc5e88857878",
+    "gm1_threshold_thermal_probes/heldout_results.json": "30c8ff2a7f01ec5b1225e76d7942ead6b41653f935be4269537ae5498c8ad1f1",
+    "gm1_threshold_thermal_probes/heldout.py": "b615e68d9ad140b45a1882770796e69ccfd9fc33243367244a8427aa872df36d",
+    "gm1_beta_thresholds/cold_beta.py": "040a52a1b1b787445a2adb4c13fa6742de0643d55908af9fe707e5d57b76042d",
+    "gm1_differential_response/adapter.py": "b0b62b59270d8fd844dc2053c9fd7243590aa358b1646dec2b68bf4efc00ad4f",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "relativistic_tensor/tensor.py": "6fd5feeb66eae2c2685b0803eb27b2496a6f035f570c83d4f4689429e307d975",
+    "relativistic_delta_oracle/oracle.py": "c5bb43e7945347bd6e30b76a18290a3cdfe4d8cd4b9f562e1401c5bd502b163e",
+    "review_gm1_differential/probe.py": "fd7c990cf05246a4d901f9bae1026c4e59744b72c50d16eec0a10928072c25a6",
+    "rmf_reference/gm1_finite_t.py": "e6334efd9c5062fdf36e17a373e2c53688149929b26850df7a55864f7ce9d915",
+    "rmf_phase/stability.py": "4bc09d5af41de9a242ddec9891a791c654c52f3a41b7db88d9b4d916796a106d",
+    "muon_full_current/current.py": "447191554f7e0d239c57f17ab3208f0632dcc51c72b617738785d73d328b2936",
+    "muon_vacuum/vacuum_cc.py": "7f79ba2f60f90b53cd23c7cc19e9191837b99442a5fb95f298d163d20d372dd9",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  }
+}

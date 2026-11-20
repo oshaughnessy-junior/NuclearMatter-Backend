@@ -1,0 +1,26 @@
+{
+  "primary": [
+    {
+      "url": "https://arxiv.org/html/astro-ph/0511555",
+      "pdf": "https://arxiv.org/pdf/astro-ph/0511555",
+      "used": "Eqs6-11 couplings/amplitude/spin,20-25 separatedmassiveFDnormalization",
+      "excluded": "printedEq17 inconsistentwithEq11traceandEqs20-25 atfiniteelectronmass; rawdiagnosticpreserved; noexternalerratumasserted"
+    },
+    {
+      "url": "https://cpc.ihep.ac.cn/article/doi/10.1088/1674-1137/ac62ca",
+      "used": "Eq16 SM masslessFD energyT9 limit only; no nonstandard electromagnetic terms"
+    }
+  ],
+  "additional_search_only": {
+    "url": "https://www.mdpi.com/2218-1997/7/1/7",
+    "note": "searchsnippet contained consistent3Cminus term but fullaccess429/unavailable; NOTusedasverifiedequationanchor"
+  },
+  "sin2w": 0.23129,
+  "convention": "fixedillustrativetreeinput; no running/EW/QED precisionclaim",
+  "upstream": {
+    "relativistic_capture_oracle/events.py": "c2c4afc2797b812c0585cdf09c598553e45c275ff362b64277b31350d49c4a76",
+    "relativistic_crossed_thermal/kernel.py": "2b590e7d145a869f7c909a297c7a227d8ff1a046008baf9fb88e01dece49646a",
+    "relativistic_free_eos/free_baryons.py": "aa5fc335de62dde0aa33e328410560741a55ce9dcd5fcbf8b3f4a625e5ffed5b",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9"
+  }
+}

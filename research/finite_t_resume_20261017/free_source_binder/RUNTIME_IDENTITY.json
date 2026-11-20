@@ -1,0 +1,72 @@
+{
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 13 2025, 14:47:45) [Clang 19.1.7 ]",
+  "nmbackend_version": "0.0.1",
+  "numpy": "2.3.5",
+  "scipy": "1.15.2",
+  "jax": "0.10.1",
+  "origins": {
+    "nmbackend": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/__init__.py",
+    "nmbackend.reference.free_matter": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/free_matter.py",
+    "nmbackend.reference.weak_reference": "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/wheel_unpacked/nmbackend/reference/weak_reference.py"
+  },
+  "staged_component_provenance": [
+    [
+      "nmbackend.constants",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/constants.py",
+      "e4597ebdf07a7700f7e9b7282fca9bf78add2f1343c4c653199e09e916197317"
+    ],
+    [
+      "nmbackend.reference.finite_t_leptons",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/finite_t_leptons.py",
+      "baeef78b174ecc0bcc1ab6016c839a8e8dc6a2ba915541d7fd994d994f01e719"
+    ],
+    [
+      "nmbackend.reference.finite_t_baryons",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/finite_t_baryons.py",
+      "f4c007f400df346811d4ce759ee8d96d6b74170c7ef1d0c4f5bc063f8018f65b"
+    ],
+    [
+      "nmbackend.reference.weak_reference",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/weak_reference.py",
+      "a37508df389901e0f4e57ff028b850a33eb1beccfef79dcb67ce6b0b5f483172"
+    ],
+    [
+      "nmbackend.reference._weak_current",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/_weak_current.py",
+      "2587e7c94bf6ceb86b04e55990faff593e1262444316ed77a920fb630bd7b5bc"
+    ],
+    [
+      "nmbackend.reference._weak_quadrature",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/_weak_quadrature.py",
+      "2d9a016f8ab629209856c40ac2ba4dac132280be1cfba82883586dd66decfd69"
+    ],
+    [
+      "nmbackend.reference._weak_two_body",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/_weak_two_body.py",
+      "8d5c031ebb50de2f84fe6f1942ff70802f12f6bc1af53501729c6010f7401366"
+    ],
+    [
+      "nmbackend.reference._weak_decay",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/_weak_decay.py",
+      "21498bc563c7a4a7ae1d28b87410b3d5f0910bb54549ce86fd0ca20ab1657edc"
+    ],
+    [
+      "free_matter.py",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/free_matter.py",
+      "8541366391867d8c7500deea3759c1c05746c40db3642d93d3d29e85a0242d9f"
+    ],
+    [
+      "_free_matter_sources.py",
+      "/Users/rossma/Genesis_LANL/outputs/nmb-finite-t-resume-20261017/free_source_binder/staged/src/nmbackend/reference/_free_matter_sources.py",
+      "9b3130d23eb2b8a229cdd1d0dda88df3898f048b069ad8e87d172d49b0320401"
+    ]
+  ],
+  "package_base_commit": "ffb5cc72949f2e5401251847aef4c9c7a98dde78",
+  "explicit_dependency_heads": {
+    "51": "11c6d41db14b906168efd2e018aca46d2e8d4d3c",
+    "52": "3125f3c450ddb1759132cf8367b4a649f15a75b3",
+    "54": "c17472b8a84655380ab64973ef883a6cd5fb2346"
+  },
+  "wheel_sha256": "21d1e7bca7ecb001f2abe2051e727ecb06199d89f5a0ad7ade0e16541c089e7c",
+  "qualification": "Offline wheel built with existing backend, unpacked/imported in fresh process from /private/tmp; not a clean dependency installation/minimum-version test"
+}

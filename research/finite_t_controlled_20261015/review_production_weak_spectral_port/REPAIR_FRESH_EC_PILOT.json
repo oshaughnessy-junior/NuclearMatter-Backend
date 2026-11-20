@@ -1,0 +1,242 @@
+{
+  "channel": "EC",
+  "bath": {
+    "T": 2.0,
+    "mu_n": 919.8287578100662,
+    "mu_p": 916.8449303084382,
+    "mu_e": 0.17446333200826397
+  },
+  "radiation": {
+    "mode": "FD",
+    "temperature": 2.0,
+    "mu_nue": -4.209364169619812,
+    "mu_antinue": 4.609364169619812
+  },
+  "rule": {
+    "nodes": [
+      6.011324865405187,
+      6.588675134594813
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lower": 5.8,
+    "upper": 6.8
+  },
+  "controls": {
+    "lepton_order": 12,
+    "angle_order": 16,
+    "energy_order": 16,
+    "phi_order": 6,
+    "tail": 70.0,
+    "outer_tail": 40.0,
+    "parent_order": 12,
+    "cone_order": 16,
+    "electron_order": 16,
+    "decay_phi_order": 10,
+    "budget_seconds": 110.0
+  },
+  "nodes": [
+    {
+      "channel": "EC",
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "energy": 6.011324865405187,
+      "j": {
+        "value": 0.12582622866801443,
+        "log": -2.0728534614715866,
+        "support": "positive_support",
+        "reason": "represented"
+      },
+      "true_chi": {
+        "value": 10.355223268564234,
+        "log": 2.3374910560409106,
+        "support": "positive_support",
+        "reason": "represented"
+      },
+      "controls": {
+        "lepton_order": 12,
+        "angle_order": 16,
+        "energy_order": 16,
+        "phi_order": 6,
+        "tail": 70.0,
+        "outer_tail": 40.0,
+        "parent_order": 12,
+        "cone_order": 16,
+        "electron_order": 16,
+        "decay_phi_order": 10,
+        "budget_seconds": 110.0
+      },
+      "geometry": [
+        "El=ME+y\u00b2",
+        [
+          0.51099895069,
+          0.7880001700679116,
+          1.174463332008264,
+          1.304657225405208,
+          2.0150738461872066,
+          2.174463332008264,
+          3.6234361970473223,
+          3.8556843603661495,
+          5.304657225405208,
+          5.464046711226265,
+          6.174463332008264,
+          6.304657225405208,
+          6.691120387345561,
+          6.997888806375384,
+          7.304657225405208,
+          7.536905388724035,
+          7.611425644435032,
+          7.918194063464855,
+          8.304657225405208,
+          9.14526773958415,
+          9.304657225405208,
+          10.985878253763094,
+          12.174463332008264,
+          13.304657225405208,
+          14.66709928212098,
+          19.304657225405208,
+          24.174463332008266,
+          31.304657225405208,
+          87.30465722540521
+        ],
+        "exact q-axis support",
+        5376,
+        0
+      ],
+      "differential_coordinates": null,
+      "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+      "complete": true,
+      "units": "s^-1 per occupation"
+    },
+    {
+      "channel": "EC",
+      "bath": {
+        "T": 2.0,
+        "mu_n": 919.8287578100662,
+        "mu_p": 916.8449303084382,
+        "mu_e": 0.17446333200826397
+      },
+      "energy": 6.588675134594813,
+      "j": {
+        "value": 0.11064069658599127,
+        "log": -2.2014672956766246,
+        "support": "positive_support",
+        "reason": "represented"
+      },
+      "true_chi": {
+        "value": 12.15271202035826,
+        "log": 2.4975523564306856,
+        "support": "positive_support",
+        "reason": "represented"
+      },
+      "controls": {
+        "lepton_order": 12,
+        "angle_order": 16,
+        "energy_order": 16,
+        "phi_order": 6,
+        "tail": 70.0,
+        "outer_tail": 40.0,
+        "parent_order": 12,
+        "cone_order": 16,
+        "electron_order": 16,
+        "decay_phi_order": 10,
+        "budget_seconds": 110.0
+      },
+      "geometry": [
+        "El=ME+y\u00b2",
+        [
+          0.51099895069,
+          0.8413354609905723,
+          1.174463332008264,
+          1.882007494594859,
+          2.174463332008264,
+          2.175079718955189,
+          3.880774720701009,
+          4.175696105902114,
+          5.881391107647934,
+          5.882007494594859,
+          6.174463332008264,
+          6.882007494594859,
+          7.215135365612551,
+          7.548571430103705,
+          7.882007494594859,
+          8.176928879795964,
+          8.215443559086014,
+          8.548879623577168,
+          8.882007494594859,
+          9.882007494594859,
+          9.882623881541784,
+          11.88324026848871,
+          12.174463332008264,
+          13.882007494594859,
+          15.88447304238256,
+          19.88200749459486,
+          24.174463332008266,
+          31.88200749459486,
+          87.88200749459486
+        ],
+        "exact q-axis support",
+        5376,
+        0
+      ],
+      "differential_coordinates": null,
+      "current_source": "Guo2020-v2-full-free-VA-F2-GP-MV840-MA1000-mpi139.57",
+      "complete": true,
+      "units": "s^-1 per occupation"
+    }
+  ],
+  "forward": [
+    {
+      "value": 3.066256083975053e-08,
+      "log": -17.300223443189275,
+      "reason": "represented"
+    },
+    {
+      "value": 1.9342326186842817e-07,
+      "log": -15.458384982626345,
+      "reason": "represented"
+    }
+  ],
+  "backward": [
+    {
+      "value": 1.5226577089630047e-08,
+      "log": -18.000223443189277,
+      "reason": "represented"
+    },
+    {
+      "value": 9.605114925525849e-08,
+      "log": -16.158384982626348,
+      "reason": "represented"
+    }
+  ],
+  "net": [
+    {
+      "value": 1.543598375012046e-08,
+      "log_abs": -17.986564445997658,
+      "sign": 1
+    },
+    {
+      "value": 9.737211261316958e-08,
+      "log_abs": -16.14472598543473,
+      "sign": 1
+    }
+  ],
+  "entropy_production": {
+    "value": 1.080518862508437e-08,
+    "log": -18.343239389936386,
+    "reason": "represented"
+  },
+  "complete_finite_range": true,
+  "whole_moment_qualified": false,
+  "scope": "finite-range quadrature PILOT; omitted incident-energy tails and continuum convergence OPEN",
+  "units": [
+    "fm^-3 s^-1",
+    "MeV fm^-3 s^-1"
+  ]
+}

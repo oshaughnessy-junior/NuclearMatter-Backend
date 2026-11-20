@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-16T05:31:14.595995+00:00",
+  "physical_validation_started": false,
+  "resource_guard": "at most250000events per radial node, both capture and oriented decay arrays; raises before quadrature",
+  "reason": "bounded local CPU/memory; all immutable LOCK profiles within guard",
+  "model_gates_unchanged": true
+}

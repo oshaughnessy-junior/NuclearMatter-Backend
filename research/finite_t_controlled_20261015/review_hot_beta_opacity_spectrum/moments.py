@@ -1,0 +1,43 @@
+"""Fresh independent incident-energy reconstruction; no saved-node feedback."""
+from reference import *
+from scipy.special import expit
+from scipy.integrate import quad
+if __name__=='__main__':
+ assert not json.loads((P/'pilot_results.json').read_text())['failed']
+ rule=sys.argv[1];assert rule in ['coarse','fine'];start=time.monotonic();checks=[];rows=[]
+ incident=6 if rule=='coarse'else 10;controls=(8,10,10,8,65.)if rule=='coarse'else(12,16,16,12,85.)
+ x,w=leggauss(incident);edges=[0.,.15,.35,.6,ENDPOINT,.88,1.0,1.15,1.4,1.6]
+ for lo,hi in zip(edges[:-1],edges[1:]):
+  for en,weight in zip((lo+hi)/2+(hi-lo)*x/2,w*(hi-lo)/2):
+   if time.monotonic()-start>105:raise TimeoutError('Independent whole spectral experiment bounded105s')
+   v=integral(float(en),*controls,budget=30.);rows.append(dict(Enu=float(en),weight=float(weight),phase=v))
+  (P/f'{rule}_partial.json').write_text(json.dumps(dict(rows=rows,complete=False),indent=2)+'\n');print(rule,'edge',hi,'seconds',time.monotonic()-start,flush=True)
+ b,_=S.matched();eq=b.mu_n-b.mu_p-b.mu_e;results={}
+ for name,mu in [('empty',None),('LTE',eq),('emission',eq-1.6),('inverse',eq+1.6)]:
+  F=np.zeros(2);B=np.zeros(2);entropy=0.;maxkms=0.;above=np.zeros(2);far=np.zeros(2)
+  for row in rows:
+   en=row['Enu'];v=row['phase'];weight=row['weight'];dos=en*en/(2*math.pi**2*HC**3)
+   lf=v['j_log']+(0. if mu is None else float(log_expit((en-mu)/b.T)))
+   lb=None if mu is None else v['chi_log']+float(log_expit((mu-en)/b.T))
+   forward=weight*dos*math.exp(lf);backward=0. if lb is None else weight*dos*math.exp(lb);F+=forward*np.array([1.,en]);B+=backward*np.array([1.,en])
+   if en>ENDPOINT:above+=forward*np.array([1.,en])
+   if en>1.4:far+=forward*np.array([1.,en])
+   if lb is not None:entropy+=(forward-backward)*(lf-lb)
+   maxkms=max(maxkms,abs(v['j_log']-v['chi_log']-(eq-en)/b.T))
+  results[name]=dict(F=F.tolist(),B=B.tolist(),net=(F-B).tolist(),entropy=None if mu is None else entropy,maxkms=maxkms,above_rest_endpoint=above.tolist(),beyond_1p4=far.tolist())
+ # Benchmark is consulted only after fresh integration, never for source feedback.
+ raw=json.loads((ROOT/'hot_beta_moments/results.json').read_text());refs=raw['rows'][-1]['result']['scenarios']
+ for name,out in results.items():
+  other={'empty':'empty','LTE':'LTE','emission':'emission_dominated','inverse':'inverse_dominated'}[name]
+  for branch,direction in [('F','forward'),('B','backward')]:
+   for i,observable in enumerate(['number','neutrino_energy']):
+    ref=refs[other][direction][observable]['value'];v=out[branch][i];error=v/ref-1 if ref else v;gate=3e-6 if ref else 0
+    checks.append(dict(name=f'{rule} fresh whole spectrum {name} {branch} {observable}',error=error,gate=gate,passed=bool(abs(error)<=gate)))
+  checks.append(dict(name=rule+' KMS after both products '+name,error=out['maxkms'],gate=3e-11,passed=bool(out['maxkms']<3e-11)))
+  if name!='empty':
+   checks.append(dict(name=rule+' nonzero occupied F/B '+name,error=0,gate=0,passed=out['F'][0]>0 and out['B'][0]>0))
+   radiation_mu={'LTE':eq,'emission':eq-1.6,'inverse':eq+1.6}[name]
+   expected=out['net'][0]*(eq-radiation_mu)/b.T
+   checks.append(dict(name=rule+' direct entropy '+name,error=(out['entropy']-expected)/(out['F'][0]+out['B'][0]),gate=3e-11,passed=bool(abs(out['entropy']-expected)/(out['F'][0]+out['B'][0])<3e-11 and out['entropy']>=-1e-30)))
+ original_sha=hashlib.sha256((ROOT/'hot_beta_moments/results.json').read_bytes()).hexdigest();assert original_sha==S.HOT_RESULTS_SHA
+ (P/f'{rule}_results.json').write_text(json.dumps(dict(checks=checks,passed=sum(c['passed']for c in checks),failed=[c for c in checks if not c['passed']],rows=rows,results=results,edges=edges,complete=True,seconds=time.monotonic()-start,original_hot_results_sha=original_sha),indent=2)+'\n');print('DONE',rule,len(checks),[c for c in checks if not c['passed']],time.monotonic()-start,results['empty'])

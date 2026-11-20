@@ -1,0 +1,847 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-15T12:08:28.042857+00:00",
+  "command": "/usr/local/bin/python3 /Users/rossma/Genesis_LANL/outputs/nmb-finite-t-20261015/nr_baryon_eos/check_reference.py",
+  "source_sha256": {
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "nr_baryon_eos/check_reference.py": "a77465d283f7e3191ebe5f6c71fff0fb83305382ad216e1a09b34c113e94b9ba",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "end_source_sha256": {
+    "nr_baryon_eos/free_nucleons.py": "06ec7c04349f1ab044d6b44a47f814100ff9204b18a68a94d3874e1483f18d5b",
+    "nr_baryon_eos/check_reference.py": "a77465d283f7e3191ebe5f6c71fff0fb83305382ad216e1a09b34c113e94b9ba",
+    "thermodynamics/lepton_reference.py": "f87ea4bcf8830174995bf9c7061a943052c2d3be8d4386befe3c90215ef97ec9",
+    "response_reference/free_density_response.py": "5d10b55e74d342ce6141e7f8c80f5119e8178d94a5db93f49652451d8110d2b2",
+    "allowed_opacity/allowed_capture.py": "11bfe5b9c8b60f50a6b8d9098564d9290f77318a1bddc9eb35d763096a9ba58c",
+    "weak_rates/static_capture.py": "872fa269b1a2680c03b8cea7186d81429a2cc0515f6bc09e6e70f2bbe069af21"
+  },
+  "python": "3.13.4",
+  "numpy": "2.3.5",
+  "scipy": "1.15.3",
+  "checks": [
+    {
+      "name": "density_inversion",
+      "error": 2.220446049250313e-16,
+      "limit": 1e-09,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "Euler",
+      "error": 4.932212891974368e-16,
+      "limit": 1e-09,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "virial",
+      "error": 0.0,
+      "limit": 1e-14,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "positive_susceptibility_and_Cv",
+      "error": 0.0,
+      "limit": 0.5,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "independent_momentum_density",
+      "error": 4.440892098500626e-16,
+      "limit": 1e-09,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "independent_momentum_energy",
+      "error": 2.220446049250313e-16,
+      "limit": 1e-09,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "quadrature_refinement_kinetic_mu",
+      "error": 7.474080015544756e-16,
+      "limit": 1e-08,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "quadrature_refinement_kinetic_energy_density",
+      "error": 7.058515126768515e-15,
+      "limit": 1e-08,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "quadrature_refinement_entropy_density",
+      "error": 5.290961528221611e-16,
+      "limit": 1e-08,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "quadrature_refinement_cv_fixed_density",
+      "error": 3.3881540534475715e-14,
+      "limit": 1e-08,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "quadrature_refinement_dn_dmu",
+      "error": 1.3235237681493994e-16,
+      "limit": 1e-08,
+      "T": 2.0,
+      "n": 1e-07
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 1.0362104480127155e-12,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0004
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 3.634212171175137e-09,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0004
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 3.009614552610088e-09,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0004
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 5.333523400707918e-08,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0004
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 1.9718339967883607e-06,
+      "limit": 2e-05,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0004
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 1.1696190138672137e-12,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0002
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 9.085832625562379e-10,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0002
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 7.552254799094432e-10,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0002
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 1.3305558432818998e-08,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0002
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 4.929586462339375e-07,
+      "limit": 2e-05,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0002
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 4.565537587020602e-12,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0001
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 2.2752907000961637e-10,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0001
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 1.9177757652647418e-10,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0001
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 3.3048008774017035e-09,
+      "limit": 2e-06,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0001
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 1.2323966959091928e-07,
+      "limit": 2e-05,
+      "T": 2.0,
+      "n": 1e-07,
+      "step": 0.0001
+    },
+    {
+      "name": "density_inversion",
+      "error": 2.6645352591003757e-15,
+      "limit": 1e-09,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "Euler",
+      "error": 2.0834452818161014e-15,
+      "limit": 1e-09,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "virial",
+      "error": 0.0,
+      "limit": 1e-14,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "positive_susceptibility_and_Cv",
+      "error": 0.0,
+      "limit": 0.5,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "independent_momentum_density",
+      "error": 2.4424906541753444e-15,
+      "limit": 1e-09,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "independent_momentum_energy",
+      "error": 2.220446049250313e-16,
+      "limit": 1e-09,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "quadrature_refinement_kinetic_mu",
+      "error": 3.9376533672489476e-15,
+      "limit": 1e-08,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "quadrature_refinement_kinetic_energy_density",
+      "error": 4.470590582870287e-15,
+      "limit": 1e-08,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "quadrature_refinement_entropy_density",
+      "error": 8.99230127292225e-16,
+      "limit": 1e-08,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "quadrature_refinement_cv_fixed_density",
+      "error": 6.88363759340369e-16,
+      "limit": 1e-08,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "quadrature_refinement_dn_dmu",
+      "error": 9.23465677307932e-16,
+      "limit": 1e-08,
+      "T": 1.0,
+      "n": 0.001
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 1.3436649254649886e-08,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0004
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 1.2935893571511198e-08,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0004
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 1.0016599746390083e-08,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0004
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 3.9302384458039796e-08,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0004
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 7.61001377994177e-09,
+      "limit": 2e-05,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0004
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 3.359434045256471e-09,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0002
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 3.234294706733235e-09,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0002
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 2.50363213619486e-09,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0002
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 9.827141989049437e-09,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0002
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 1.901292448725398e-09,
+      "limit": 2e-05,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0002
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 8.383017766723695e-10,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0001
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 8.122080299745461e-10,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0001
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 6.265444417230964e-10,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0001
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 2.454703995624641e-09,
+      "limit": 2e-06,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0001
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 4.745460378762679e-10,
+      "limit": 2e-05,
+      "T": 1.0,
+      "n": 0.001,
+      "step": 0.0001
+    },
+    {
+      "name": "density_inversion",
+      "error": 4.440892098500626e-16,
+      "limit": 1e-09,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "Euler",
+      "error": 0.0,
+      "limit": 1e-09,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "virial",
+      "error": 0.0,
+      "limit": 1e-14,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "positive_susceptibility_and_Cv",
+      "error": 0.0,
+      "limit": 0.5,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "independent_momentum_density",
+      "error": 0.0,
+      "limit": 1e-09,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "independent_momentum_energy",
+      "error": 2.220446049250313e-16,
+      "limit": 1e-09,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "quadrature_refinement_kinetic_mu",
+      "error": 7.654063481788668e-16,
+      "limit": 1e-08,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "quadrature_refinement_kinetic_energy_density",
+      "error": 1.9925155741004815e-15,
+      "limit": 1e-08,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "quadrature_refinement_entropy_density",
+      "error": 4.9721206698453485e-15,
+      "limit": 1e-08,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "quadrature_refinement_cv_fixed_density",
+      "error": 1.1475808025293072e-15,
+      "limit": 1e-08,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "quadrature_refinement_dn_dmu",
+      "error": 5.8718948515653485e-15,
+      "limit": 1e-08,
+      "T": 0.05,
+      "n": 0.005
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 1.174679010546366e-10,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0004
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 5.311019062076858e-10,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0004
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 4.847143572404572e-09,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0004
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 1.1885241457676443e-08,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0004
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 2.0026223244882087e-08,
+      "limit": 2e-05,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0004
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 2.3307044776745524e-09,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0002
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 2.601180099646882e-09,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0002
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 1.2114880952510181e-09,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0002
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 2.972001977852301e-09,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0002
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 5.007252627383257e-09,
+      "limit": 2e-05,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0002
+    },
+    {
+      "name": "fixed_density_Cv_FD",
+      "error": 6.645927577665807e-09,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0001
+    },
+    {
+      "name": "fixed_density_muT_FD",
+      "error": 6.795665917916822e-09,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0001
+    },
+    {
+      "name": "free_energy_density_derivative",
+      "error": 3.024825019715917e-10,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0001
+    },
+    {
+      "name": "pressure_potential_derivative",
+      "error": 7.445291050345304e-10,
+      "limit": 2e-06,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0001
+    },
+    {
+      "name": "Maxwell_entropy_mu",
+      "error": 1.2526693971508556e-09,
+      "limit": 2e-05,
+      "T": 0.05,
+      "n": 0.005,
+      "step": 0.0001
+    },
+    {
+      "name": "classical_mu",
+      "error": 2.6285107423973386e-10,
+      "limit": 1e-07
+    },
+    {
+      "name": "classical_pressure",
+      "error": 1.314262032536817e-10,
+      "limit": 1e-07
+    },
+    {
+      "name": "classical_energy",
+      "error": 1.314262032536817e-10,
+      "limit": 1e-07
+    },
+    {
+      "name": "classical_Cv",
+      "error": 6.572986599451269e-11,
+      "limit": 1e-07
+    },
+    {
+      "name": "classical_susceptibility",
+      "error": 2.6285140730664125e-10,
+      "limit": 1e-07
+    },
+    {
+      "name": "Sommerfeld_mu",
+      "error": 1.2185317543550012e-08,
+      "limit": 5e-08,
+      "T_over_EF": 0.01
+    },
+    {
+      "name": "cold_energy_approach",
+      "error": 0.0004111726032480778,
+      "limit": 0.0005,
+      "T_over_EF": 0.01
+    },
+    {
+      "name": "degenerate_Cv",
+      "error": 0.000296327441527966,
+      "limit": 0.001,
+      "T_over_EF": 0.01
+    },
+    {
+      "name": "Sommerfeld_mu",
+      "error": 9.863732936220018e-11,
+      "limit": 4.0500000000000005e-10,
+      "T_over_EF": 0.003
+    },
+    {
+      "name": "cold_energy_approach",
+      "error": 3.701052333693333e-05,
+      "limit": 4.4999999999999996e-05,
+      "T_over_EF": 0.003
+    },
+    {
+      "name": "degenerate_Cv",
+      "error": 2.6649865728534117e-05,
+      "limit": 8.999999999999999e-05,
+      "T_over_EF": 0.003
+    },
+    {
+      "name": "rest_offset_energy",
+      "error": 0.0,
+      "limit": 1e-10
+    },
+    {
+      "name": "rest_offset_mu",
+      "error": 0.0,
+      "limit": 1e-10
+    },
+    {
+      "name": "rest_offset_Cv",
+      "error": 0.0,
+      "limit": 1e-14
+    },
+    {
+      "name": "factory_neutrality",
+      "error": 1.887379141862766e-15,
+      "limit": 1e-09
+    },
+    {
+      "name": "factory_response_kinetic_mu",
+      "error": 0.0,
+      "limit": 1e-12
+    },
+    {
+      "name": "factory_optical_nue_equilibrium",
+      "error": 0.0,
+      "limit": 1e-12
+    },
+    {
+      "name": "factory_opposite_flavor_mu",
+      "error": 1.7763568394002505e-15,
+      "limit": 1e-12
+    }
+  ],
+  "checks_passed": 96,
+  "sample_species": [
+    {
+      "T": 2.0,
+      "mass": 939.0,
+      "offset": 0.0,
+      "kinetic_mu": -19.01351696214913,
+      "density": 1.0000000000000002e-07,
+      "kinetic_energy_density": 3.0000394277049727e-07,
+      "energy_density": 3.0000394277049727e-07,
+      "pressure": 2.0000262851366484e-07,
+      "entropy_density": 1.2006791337495373e-06,
+      "free_energy_density": -2.1013543247285773e-06,
+      "dn_dmu": 4.999868577862399e-08,
+      "dn_dT_fixed_mu": 5.503254300685158e-07,
+      "dmu_dT_fixed_density": -11.006797908752178,
+      "cv_fixed_density": 1.499990143114797e-07,
+      "fluctuation_A0": 9.999737155724798e-08,
+      "fluctuation_A1": 2.2013017202740633e-06,
+      "fluctuation_A2": 4.905856239973618e-05,
+      "fermi_momentum": 2.833523399953975,
+      "temperature_over_mass": 0.002129925452609159,
+      "fermi_momentum_over_mass": 0.003017596805062806,
+      "mu": -19.01351696214913
+    },
+    {
+      "T": 1.0,
+      "mass": 939.0,
+      "offset": 0.0,
+      "kinetic_mu": 1.4661421891699542,
+      "density": 0.0010000000000000026,
+      "kinetic_energy_density": 0.0020371577490844645,
+      "energy_density": 0.0020371577490844645,
+      "pressure": 0.0013581051660563096,
+      "entropy_density": 0.0019291207259708165,
+      "free_energy_density": 0.000108037023113648,
+      "dn_dmu": 0.000587028949276246,
+      "dn_dT_fixed_mu": 0.0006393320912019902,
+      "dmu_dT_fixed_density": -1.0890980623531927,
+      "cv_fixed_density": 0.0012600339954264312,
+      "fluctuation_A0": 0.000587028949276246,
+      "fluctuation_A1": 0.0006393320912019902,
+      "fluctuation_A2": 0.0019563293371547335,
+      "fermi_momentum": 61.04641107877935,
+      "temperature_over_mass": 0.0010649627263045794,
+      "fermi_momentum_over_mass": 0.06501215237356693,
+      "mu": 1.4661421891699542
+    },
+    {
+      "T": 0.05,
+      "mass": 939.0,
+      "offset": 0.0,
+      "kinetic_mu": 5.802005835288473,
+      "density": 0.005000000000000002,
+      "kinetic_energy_density": 0.017412395652264306,
+      "energy_density": 0.017412395652264306,
+      "pressure": 0.011608263768176204,
+      "entropy_density": 0.00021260487996286833,
+      "free_energy_density": 0.017401765408266164,
+      "dn_dmu": 0.0012924984863063958,
+      "dn_dT_fixed_mu": 1.8324806975980162e-05,
+      "dmu_dT_fixed_density": -0.014177816972418598,
+      "cv_fixed_density": 0.00021257369265116174,
+      "fluctuation_A0": 6.46249243153198e-05,
+      "fluctuation_A1": 4.581201743995042e-08,
+      "fluctuation_A2": 5.314667073478245e-07,
+      "fermi_momentum": 104.38789457565044,
+      "temperature_over_mass": 5.324813631522897e-05,
+      "fermi_momentum_over_mass": 0.1111692168004797,
+      "mu": 5.802005835288473
+    }
+  ],
+  "factory_sample": {
+    "T": 2.0,
+    "nn": 7e-05,
+    "np": 3e-05,
+    "electron_mu": 18.28197936800915,
+    "nue_mu": 15.273044998692248,
+    "antinue_mu": -15.273044998692246,
+    "neutron": {
+      "T": 2.0,
+      "mass": 939.0,
+      "offset": 1.29333236,
+      "kinetic_mu": -5.874636391540794,
+      "density": 6.999999999999998e-05,
+      "kinetic_energy_density": 0.0002119300865803259,
+      "energy_density": 0.0003024633517803259,
+      "pressure": 0.00014128672438688393,
+      "entropy_density": 0.0003822206791875327,
+      "free_energy_density": -0.00046197800659473955,
+      "dn_dmu": 3.436855106301183e-05,
+      "dn_dT_fixed_mu": 0.00015345137039964865,
+      "dmu_dT_fixed_density": -4.464877501478271,
+      "cv_fixed_density": 0.00010451888112608101,
+      "fluctuation_A0": 6.873710212602366e-05,
+      "fluctuation_A1": 0.0006138054815985946,
+      "fluctuation_A2": 0.005899208094651524,
+      "fermi_momentum": 25.15896765850433,
+      "temperature_over_mass": 0.002129925452609159,
+      "fermi_momentum_over_mass": 0.026793362788609512,
+      "mu": -4.581304031540794
+    },
+    "proton": {
+      "T": 2.0,
+      "mass": 939.0,
+      "offset": 0.0,
+      "kinetic_mu": -7.590238400857696,
+      "density": 3.000000000000007e-05,
+      "kinetic_energy_density": 9.035470220136575e-05,
+      "energy_density": 9.035470220136575e-05,
+      "pressure": 6.023646813424383e-05,
+      "entropy_density": 0.0001891491611806705,
+      "free_energy_density": -0.00028794362015997527,
+      "dn_dmu": 1.4882714801847818e-05,
+      "dn_dT_fixed_mu": 7.898167669899932e-05,
+      "dmu_dT_fixed_density": -5.306940148392353,
+      "cv_fixed_density": 4.491143509334928e-05,
+      "fluctuation_A0": 2.9765429603695636e-05,
+      "fluctuation_A1": 0.0003159267067959973,
+      "fluctuation_A2": 0.0035328539888635113,
+      "fermi_momentum": 18.968539287580498,
+      "temperature_over_mass": 0.002129925452609159,
+      "fermi_momentum_over_mass": 0.02020078731371725,
+      "mu": -7.590238400857696
+    }
+  },
+  "scope": "Ideal nonrelativistic FD spin2 common kinetic939MeV nucleons with independent constant rest offsets; exact lepton module reused",
+  "publication_status": "Requires independent review; no fluid integration",
+  "limitations": [
+    "No interactions, antiparticles, pairing, clusters or relativistic dispersion",
+    "T/mass and pF/mass are diagnostics, not a guarantee of omitted-correction accuracy",
+    "Factory matches scalar recoil response/allowed currents only; no claim of crossed optical channel completeness",
+    "Exact vacuum and extreme underflow density are rejected; no log-density interface"
+  ]
+}
