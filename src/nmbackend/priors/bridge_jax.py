@@ -40,6 +40,10 @@ Differences from the NumPy sampler (same prior law, different realization):
   Under a trace it returns NaN arrays and ``info["valid"] = False``.
 * ``Config.min_dlnmu`` exists only here; its default is the value
   :func:`bridge.fractal_refine` uses (draw_bridge_eos does not expose it).
+* n_L and n_term are in units of ``n_sat``, taken from ``nep_names`` when
+  ``"n_sat"`` is one of them, else ``bridge.N_SAT``, as in
+  :func:`bridge.draw_bridge_eos`.  :func:`make_plan` counts bridge rows at the
+  concrete n_sat; under a trace that count stays fixed while n_sat moves.
 
 The checks above, the running maximum on mu, and the truncation at n_term
 make the map piecewise smooth.  Derivatives are exact inside a piece.  Only
@@ -305,10 +309,12 @@ def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
     (``plan_ok``); n, eps and p are then NaN.  Outside a trace this raises
     ValueError instead.  ``info["node_ok"]`` is the per-node mask of the
     refinement tree (heap order; skipped nodes are normal)."""
-    if plan.n_sel != _n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts):
-        raise ValueError(f"plan {plan} was made for other settings than {cfg}")
     nep, corr_frac, ln_X, z = unpack(theta, nep_names, cfg.levels)
-    n_L = cfg.n_L_fac * N_SAT
+    n_sat = nep.get("n_sat", N_SAT)
+    if _is_concrete(n_sat) and plan.n_sel != _n_sel(
+            cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts, float(n_sat)):
+        raise ValueError(f"plan {plan} was made for other settings than {cfg}")
+    n_L = cfg.n_L_fac * n_sat
     n_cut = n_L * (1.0 - 1e-12)
     t = model.eos_table(nep)
     n_lo, eps_lo, p_lo = t.n, t.eps_mevfm3, t.p_mevfm3
@@ -333,7 +339,8 @@ def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
     U = jnp.concatenate([jnp.full((1, 3), 0.5),
                          jnp.clip(ndtr(z), _U_EPS, 1.0 - _U_EPS)])
     pts, node_ok = refine_tree(bL, bH, U, cfg.levels, cfg.min_dlnmu)
-    x = jnp.linspace(math.log(n_L), jnp.log(bH[1]), cfg.n_grid_pts)
+    ln_n_L = math.log(n_L) if _is_concrete(n_L) else jnp.log(n_L)
+    x = jnp.linspace(ln_n_L, jnp.log(bH[1]), cfg.n_grid_pts)
     mu_grid = jnp.exp(_interp(x, jnp.log(pts[:, 1]), jnp.log(pts[:, 0])))
     mu_s = jax.lax.cummax(diffuse_mu_of_n(x, mu_grid, corr_frac, cfg.n_steps))
     grid = jnp.exp(x)
@@ -351,14 +358,14 @@ def bridge_arrays(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
 
 
 @functools.lru_cache(maxsize=None)
-def _n_sel(n_L_fac, n_term_fac, n_grid_pts):
+def _n_sel(n_L_fac, n_term_fac, n_grid_pts, n_sat=N_SAT):
     """Bridge-grid rows at or below n_term for the largest n_H over X in
     [1, 4] (the fewest rows), so one length serves every X."""
     xs = np.linspace(0.0, math.log(4.0), 65)
     n_H = max(float(np.polyval(_C_N, x)) for x in xs)
-    n_L = n_L_fac * N_SAT
+    n_L = n_L_fac * n_sat
     grid = np.exp(np.linspace(math.log(n_L), math.log(n_H), n_grid_pts))
-    return int(np.sum(grid <= n_term_fac * N_SAT))
+    return int(np.sum(grid <= n_term_fac * n_sat))
 
 
 def make_plan(model, theta, nep_names, cfg: Config = Config()):
@@ -369,7 +376,10 @@ def make_plan(model, theta, nep_names, cfg: Config = Config()):
     points while the low-density table keeps the same number of rows below
     n_L, which :func:`bridge_arrays` checks."""
     nep, _, ln_X, _ = unpack(np.asarray(theta), nep_names, cfg.levels)
-    n_L = cfg.n_L_fac * N_SAT
+    n_sat = float(nep.get("n_sat", N_SAT))
+    if not (math.isfinite(n_sat) and n_sat > 0.0):
+        raise ValueError(f"n_sat must be finite and positive, got {n_sat!r}")
+    n_L = cfg.n_L_fac * n_sat
     n_cut = n_L * (1.0 - 1e-12)
     t = model.eos_table({k: float(v) for k, v in nep.items()})
     n_lo, eps_lo, p_lo = (np.asarray(a) for a in (t.n, t.eps_mevfm3, t.p_mevfm3))
@@ -384,7 +394,8 @@ def make_plan(model, theta, nep_names, cfg: Config = Config()):
         raise ValueError(f"anchors inconsistent (mu_L={bL[0]:.1f} MeV)")
     n_keep = int(np.sum(n_lo < n_cut))
     return Plan(n_keep=n_keep,
-                n_sel=_n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts))
+                n_sel=_n_sel(cfg.n_L_fac, cfg.n_term_fac, cfg.n_grid_pts,
+                             n_sat))
 
 
 def bridge_table(model, theta, nep_names, plan: Plan, cfg: Config = Config()):
