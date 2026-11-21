@@ -89,6 +89,18 @@ crust layer's C and L_nu use T_in; `C_core` sums zones i <= icore.
 Accuracy against full NSCool: nmb-papers
 `paper7_cooling_population/notes/RESULTS-C1-isothermal.md`.
 
+## Curve grids
+
+`grid.eos_curve_grid(eos_table, masses, gaps, f_env, t_grid)` takes one NSCool EOS
+file. For each mass it builds the star with NSCool (TOV plus `zone_dump`), then
+evaluates the JAX isothermal curve with the crust blanket at rho_b = rhocore. It
+returns log10 L_gamma^inf on (mass, gap model, envelope, age), with a validity mask.
+Envelopes are physical fractions f, and each star uses eta_PCY = g_s14^2 f.
+`grid.star_curves` does one star. It shares the C and L_nu sums across envelopes,
+runs the crust march on a coarse T_b grid, and gives the same result as
+`physics.isothermal_curve` to 1e-3 dex (`tests/test_cooling_grid.py`). The paper-7
+use and validation are in nmb-papers `paper7_cooling_population/analyses/inference/grid/`.
+
 ## Zone dump
 
 `NSCool.zone_dump(T, ...)` gives each term NSCool sums, per zone, at uniform
