@@ -107,6 +107,9 @@ branches remain work items. See the [evidence and limits](docs/validation.rst),
 MIT-licensed, by R. O'Shaughnessy and the RIT CCRG nuclear-matter group.
 [ATTRIBUTION.md](ATTRIBUTION.md) distinguishes independently implemented methods,
 reused data and optional external software; external licenses remain separate.
+Data products we generate and archive (for example on Zenodo) are released
+under CC-BY-4.0. Third-party data shipped here keep their own licenses, listed
+in ATTRIBUTION.md.
 Foundations include Margueron, Hoffmann Casali & Gulminelli's metamodel
 ([I](https://arxiv.org/abs/1708.06894), [II](https://arxiv.org/abs/1708.06895)),
 [Hinderer's tidal calculation](https://arxiv.org/abs/0711.2420),
