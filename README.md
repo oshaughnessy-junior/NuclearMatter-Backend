@@ -6,7 +6,7 @@ nuclear models and imported tables with an adaptive TOV solver and selected
 automatic-differentiation paths. It extends the preliminary EOS tooling in RIFT's
 `EOSManager.py` and provides implemented RIFT adapters and sequence I/O.
 
-**Status: v0.0.1, research software.** Capabilities have different validation and
+**Status: v0.4.0, research software.** Capabilities have different validation and
 differentiation coverage; inclusion does not establish precision-inference
 readiness. Start with the [documentation index](docs/index.rst),
 [capability guide](docs/capabilities.rst), and [validation guide](docs/validation.rst).
