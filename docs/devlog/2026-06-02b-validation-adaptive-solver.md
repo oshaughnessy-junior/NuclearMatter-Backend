@@ -24,7 +24,7 @@ Switched the default to an **adaptive diffrax (Dopri5 + PID)** backend behind th
 existing `solve_structure` seam.  Result: agrees with the SciPy reference to
 **M<0.05%, R<0.02%, Λ<0.1%** in ~250 adaptive steps; forward-mode AD flows through
 via `diffrax.ForwardMode` (dR/dL_sym matches FD to ~1e-4); `vmap` works.  The
-fixed-step `scan` backend is retained (lightweight; reverse-mode for structure-only)
+fixed-step `scan` backend is retained (lightweight; reverse-mode for structure-only) [2026-10-14: it was still wrong at every h_c; see 2026-10-14-tov-scan-accuracy.md]
 and shown to converge to the reference.
 
 Accurate default numbers (were inflated by under-resolution): M_max 2.11→**2.08**,
