@@ -13,7 +13,7 @@ from . import postmerger
 from .eos import MetaModelEOS, PolytropeEOS, EOSModel, EOSTable
 from .tov import solve_structure, build_family, m_max
 
-__version__ = "0.0.1"
+__version__ = "0.4.0"
 
 __all__ = [
     "constants", "ejecta",
