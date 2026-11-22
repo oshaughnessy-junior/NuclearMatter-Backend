@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "NuclearMatter-Backend (nmbackend)"
+abstract: "Differentiable EOS and TOV tools for neutron-star equation-of-state inference, with adapters for RIFT and gwkokab."
+type: software
+authors:
+  - family-names: "O'Shaughnessy"
+    given-names: "Richard"
+    affiliation: "Rochester Institute of Technology"
+license: MIT
+repository-code: "https://github.com/oshaughnessy-junior/NuclearMatter-Backend"
+version: 0.4.1
+date-released: 2026-11-21
+keywords:
+  - neutron star
+  - equation of state
+  - TOV
+  - tidal deformability
+  - automatic differentiation
+  - JAX

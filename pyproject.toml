@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nmbackend"
-version = "0.4.0"
+version = "0.4.1"
 description = "NuclearMatter-Backend: differentiable EOS + TOV tools for neutron-star EOS inference, interfacing RIFT and gwkokab."
 readme = "README.md"
 requires-python = ">=3.9"
